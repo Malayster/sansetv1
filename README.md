@@ -1,141 +1,212 @@
-# SanityPress (with TypeGen)
+# 🗞️ Suara Anak Negeri
 
-> Zero setup stress. 100% type-safe.
+**Portal berita Malaysia 100% Bahasa Melayu** — Jambatan Suara Rakyat.
 
-An improved successor to the acclaimed Next.js + Sanity.io starter template—now with auto-generated TypeScript types from your Sanity schema and GROQ queries.
+Dibina dengan **Next.js 16 + Sanity v6 + DeepSeek V3 AI** untuk penjanaan dan kelulusan berita automatik sepenuhnya.
 
-[Get started](https://www.sanity.io/get-started?template=sanitypress) | [Read more about TypeGen](https://sanitypress.dev/blog/introducing-sanitypress-with-typegen) | [View on Sanity.io](https://www.sanity.io/templates/sanitypress)
+---
 
-![](https://cdn.sanity.io/images/cyu7k2r0/production/e2d0ef9f4d1d7330056981d86d6c3157de94cca9-2062x1032.png)
+## 📋 Ciri Utama
 
-## Key Features
+| Ciri | Status |
+|------|--------|
+| Portal berita penuh (frontpage, artikel, kategori) | ✅ 60+ artikel BM |
+| Sanity Studio CMS | ✅ Admin panel CMS |
+| Dashboard analitik | ✅ Trafik, KPI, chart, carian trending |
+| AI jana berita (DeepSeek V3) | ✅ RSS rewrite 100% BM |
+| Auto-gambar setiap artikel | ✅ Fetch + upload Sanity CDN |
+| Kelulusan 1-klik | ✅ Dashboard tanpa Sanity login |
+| Sidebar trending + popular | ✅ TERGEMPAR, Berita Popular |
+| Build production | ✅ 139 halaman, 0 errors |
 
-- Next.js 16 (App Router, Server Components, TypeScript) with Tailwind 4
-- Improved successor to the acclaimed [SanityPress](https://sanitypress.dev) starter template (over 400 stars)
-- GROQ TypeGen for your Sanity Schema types
-- [Perfect PageSpeed Insight scores](https://pagespeed.web.dev/analysis/https-typed-sanitypress-dev/78sjwe1x39?form_factor=desktop)
-- Live Content API with Visual Editing
-- Optimized images with Next Image component and Sanity CDN
-- Auto-generated sitemap.xml and blog RSS feed
+---
 
-## File Structure
+## 🏗️ Arkitektur
 
+### Stack Teknologi
+| Layer | Teknologi |
+|-------|-----------|
+| Frontend | Next.js 16, React 19, Tailwind CSS v4 |
+| CMS | Sanity v6.5.0 (headless) |
+| AI | DeepSeek V3 (deepseek-chat) |
+| Analitik | Custom Sanity-based tracking |
+| Charts | Recharts |
+| RSS | rss-parser |
+
+### Struktur Direktori
 ```
-SanityPress
-├─ src/
-│ ├─ app/              # Next.js App Router
-│ │ ├─ (frontend)/     # Public-facing site
-│ │ │ ├─ layout.tsx    # Frontend root layout
-│ │ │ ├─ not-found.tsx # 404 page
-│ │ │ ├─ [[...slug]]/  # Catch-all for all standard pages
-│ │ │ ├─ blog/[slug]/  # Individual blog post pages
-│ │ │ ├─ blog/rss.xml/ # RSS feed endpoint
-│ │ │ └─ api/          # API route handlers
-│ │ │ │ ├─ draft-mode/ # Enable/disable Sanity draft mode
-│ │ │ │ └─ og/         # Open Graph image generation
-│ │ ├─ (studio)/admin/ # Sanity Studio (CMS editor UI)
-│ │ └─ sitemap.ts      # Auto-generated sitemap
-│ ├─ ui/               # React components
-│ │ ├─ modules/        # One component per Sanity module
-│ │ │ ├─ blog/         # Blog-specific components (post list, filters, etc.)
-│ │ │ ├─ prose/        # Rich text components / portable text renderer
-│ │ │ └─ ...           # Modules
-│ │ ├─ header/         # Header, navigation, megamenu
-│ │ ├─ footer/         # Footer and link list
-│ │ └─ ...             # Shared components (CTA, Img, Logo, etc.)
-│ ├─ sanity/           # Sanity CMS configuration
-│ │ ├─ schemaTypes/
-│ │ │ ├─ documents/    # Top-level content types (page, blog.post, site, navigation…)
-│ │ │ ├─ modules/      # Page-building blocks (heroes, grids, prose, search…)
-│ │ │ ├─ objects/      # Reusable field groups (cta, link, metadata…)
-│ │ │ └─ fragments/    # Shared GROQ fragment definitions
-│ │ ├─ lib/            # Queries, fetch helpers, image builder
-│ │ ├─ ui/             # Custom Studio UI components
-│ │ └─ ...             # Sanity files
-│ ├─ lib/              # Shared app utilities and env helpers
-│ ├─ hooks/            # Custom React hooks
-│ └─ types/            # Global TypeScript declarations
-├─ public/             # Static assets (favicon, etc.)
-├─ .env.*              # Environment variable template
-├─ next.config.ts      # Next.js configuration
-├─ sanity.config.ts    # Sanity Studio configuration
-├─ sanity.cli.ts       # Sanity CLI configuration
-└─ package.json
-```
-
-## Getting Started
-
-### 1. Initialize the project
-
-Click the [Sanity template link](https://www.sanity.io/get-started?template=sanitypress) -- OR -- install with the Sanity CLI:
-
-```sh
-npm create sanity@latest -- --template=nuotsu/sanitypress
+src/
+├── app/
+│   ├── (frontend)/        # Halaman awam
+│   ├── (studio)/admin/    # Sanity Studio CMS
+│   ├── admin/dashboard/   # Dashboard analitik + AI
+│   └── api/
+│       ├── analytics/     # API data trafik harian
+│       ├── approve/       # API luluskan artikel
+│       ├── jana-berita/   # API pipeline AI generate
+│       └── track/         # API tracking paparan
+├── lib/
+│   ├── deepseek.ts        # DeepSeek V3 rewrite engine
+│   ├── rss.ts             # RSS parser (4 sumber)
+│   ├── image-upload.ts    # Fetch + upload gambar
+│   └── analytics.ts       # Tracking enjin
+├── sanity/                # 50+ schema types + queries
+└── ui/                    # React komponen
+    ├── header/            # Navigasi utama
+    ├── footer/
+    ├── modules/
+    │   ├── blog/          # Artikel, preview, sidebar
+    │   ├── admin/         # AI trigger
+    │   ├── homepage/
+    │   └── search/
+    └── ...
 ```
 
-### 2. Set environment variables
+---
 
-If initialized via the Sanity template link, the `.env.local` file should be created automatically.
+## 🤖 Pipeline AI Jana Berita
 
-If initialized via the CLI, duplicate the `.env.example` file as `.env.local` and assign the variables to your project:
+### 7 Langkah Auto-Generate
 
-```sh
-# .env.local
-NEXT_PUBLIC_BASE_URL="https://example.com" # your website's domain
+1. **Admin klik** 🔍 Cari Berita Terkini di dashboard
+2. **Fetch RSS** dari 4 sumber: Bernama, Malaysiakini, Utusan, BH
+3. **Filter duplikat** — semak tajuk sedia ada di Sanity
+4. **DeepSeek V3 rewrite** — tajuk BM, 3-5 perenggan, kategori, imageKeywords
+5. **Fetch gambar** dari LoremFlickr (free) → **upload ke Sanity CDN**
+6. **Simpan** ke Sanity: status=pending, aiGenerated=true, metadata.image
+7. **Admin klik** ✅ Luluskan → artikel + gambar muncul di frontpage
 
-NEXT_PUBLIC_SANITY_PROJECT_ID="abcd1234" # Sanity project id
-NEXT_PUBLIC_SANITY_DATASET="production" # Sanity dataset name
+### API Endpoints
 
-SANITY_API_READ_TOKEN="..." # API token with "Viewer" permissions
+| Endpoint | Kegunaan |
+|----------|----------|
+| GET/POST `/api/jana-berita` | Trigger pipeline AI generate |
+| POST `/api/approve` | Luluskan artikel ({id}) |
+| GET `/api/analytics` | Data dashboard |
+| POST `/api/track` | Rekod paparan |
+
+---
+
+## 🛠️ Setup
+
+### Requirements
+- Node.js 18+, Sanity project (ysnx8rnx), DeepSeek API key (sk-...)
+
+### .env.local
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=ysnx8rnx
+NEXT_PUBLIC_SANITY_DATASET=production
+SANITY_API_READ_TOKEN=...
+SANITY_API_WRITE_TOKEN=...
+DEEPSEEK_API_KEY=sk-...
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
-⚠️ **Required**: Set `NEXT_PUBLIC_BASE_URL` to your production domain.
-
-### 3. Install and start local server
-
-Install required packages and dependencies with your desired package manager (e.g. npm, pnpm, deno, bun, etc.).
-
-```sh
-npm install
+### Commands
+```
+npm install          # Install deps
+npm run dev          # localhost:3000 (dev)
+npm run build        # Production build
+npm start            # localhost:3000 (production)
 ```
 
-Once installed, run the development script:
+---
 
-```sh
-npm run dev
+## 🚧 11 Masalah & Halangan Dihadapi
+
+### 1. Sanity Missing keys error (insert)
+Gagal insert artikel ke Sanity. **Fix:** Auto-generate _key untuk setiap block + reference.
+
+### 2. React unique key warning (homepage)
+Kategori sidebar tanpa key. **Fix:** Tambah _id dalam GROQ projection.
+
+### 3. Sanity Studio TextContainer key warning
+Bug internal @sanity/ui v6.5.0. **Status:** Belum selesai — harmless, tunggu Sanity fix.
+
+### 4. Artikel AI tak boleh Publish
+Tiada button publish untuk AI articles. **Fix:** Tukar createOrReplace ke create(). Tambah custom document action.
+
+### 5. Artikel approved tak muncul frontpage
+GROQ hanya filter status=published. **Fix:** Update query ke status in [published, approved].
+
+### 6. Dashboard tunjuk 0 AI Menunggu
+Data dashboard tak refresh. **Fix:** Hard refresh browser.
+
+### 7. Preview artikel crash JSON parse error
+Presentation preview query filter. **Fix:** Buang status filter dari [slug]/page.tsx.
+
+### 8. npm install timeout
+Clean reinstall lambat. **Fix:** Sabar 3-5 minit.
+
+### 9. Dev server Turbopack lambat
+First compile lambat. **Fix:** Guna production mode untuk demo.
+
+### 10. Button Luluskan Sanity tak boleh test
+Studio perlu login. **Fix:** Bina button di dashboard — tanpa Studio login.
+
+### 11. Tiada gambar pada artikel AI
+Pipeline asal tak include gambar. **Fix:** Tambah imageKeywords ke DeepSeek prompt → fetch LoremFlickr → upload Sanity → attach metadata.image.
+
+---
+
+## 📊 Progress
+
+### ✅ Selesai
+Portal berita, Sanity CMS, Dashboard analitik, AI pipeline (RSS→DeepSeek→Sanity), Auto-gambar, Button Luluskan dashboard, Frontpage approved articles, Sidebar, Mobile responsive, 139 halaman 0 errors
+
+### 🔄 Dalam Progress
+- TASK-001: News layout sidebars + PRU election prediction block
+- Sanity TextContainer warning (tunggu upstream fix)
+
+### 📅 Akan Datang
+PRU election block, Komen pembaca, Newsletter, Dark mode, Multi-author
+
+---
+
+## 🗂️ Skema blog.post
+
+| Field | Type | Keterangan |
+|-------|------|------------|
+| title | string | Tajuk artikel |
+| content | block[] | Portable text + inline images |
+| publishDate | date | Tarikh terbit |
+| status | enum | draft/pending/approved/published |
+| aiGenerated | boolean | Dijana AI |
+| categories | reference[] | Kategori |
+| metadata | object | SEO + featured image |
+
+### Status Flow
+draft → pending → approved → published (approved = diluluskan dari dashboard)
+
+---
+
+## 🔑 Kunci API
+
+| Key | Kegunaan |
+|-----|----------|
+| DEEPSEEK_API_KEY | DeepSeek V3 rewrite artikel |
+| SANITY_API_WRITE_TOKEN | Tulis ke Sanity |
+| SANITY_API_READ_TOKEN | Baca dari Sanity |
+
+---
+
+## 👨‍💻 Developer Notes
+
+### Tambah RSS source (src/lib/rss.ts)
+```
+{ name: 'Sumber Baru', url: 'https://example.com/rss' }
 ```
 
-Then open:
-
-- Next.js frontend: http://localhost:3000
-- Sanity Studio: http://localhost:3000/admin
-
-### 4. Add content in your Sanity Studio
-
-Publish the **required** documents: `site` and `page` (with the slug "index"). Otherwise, you’ll just see a blank page on the Next.js frontend.
-
-What you'll need:
-
-| Document        | Slug or Path | Usage              | Required? | Notes                                |
-| --------------- | ------------ | ------------------ | :-------: | ------------------------------------ |
-| `site`          |              | Global settings    |    Yes    |                                      |
-| `page`          | `index`      | Homepage route     |    Yes    |                                      |
-| `page`          | `404`        | Not found route    |           |                                      |
-| `page`          | `blog`       | Blog listing route |           | Add the **Blog index** module        |
-| `global-module` | `blog/`      | Blog post template |           | Add the **Blog post content** module |
-
-Alternatively, you can run the following command to import a demo dataset with the required documents:
-
-```sh
-sanity dataset import demo.tar.gz
+### Debug pipeline
+```
+curl -X POST http://localhost:3000/api/jana-berita
 ```
 
-> 📸 See what the Sanity Studio backend looks like on the [Screenshots page](https://sanitypress.dev/docs/sanity-studio-screenshots).
+### Query Sanity
+```
+curl "https://ysnx8rnx.api.sanity.io/v2025-07-18/data/query/production?query=*[_type==\"blog.post\"&&aiGenerated==true]{_id,title,status}"
+```
 
-### 5. Set up deployments
+---
 
-Add a [Vercel](https://www.sanity.io/plugins/vercel-dashboard-widget) (default) or [Netlify widget](https://www.sanity.io/plugins/sanity-plugin-dashboard-widget-netlify) to enable deployments from the Studio.
-
-### 6. Customize
-
-Adjust frontend styles to your liking, edit or add new schema and modules, etc.
+*Dokumentasi dijana oleh OpenHands AI bagi pihak Suara Anak Negeri — 18 Julai 2026*
