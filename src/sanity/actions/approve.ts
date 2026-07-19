@@ -4,8 +4,10 @@ export const ApproveAction: DocumentActionComponent = (props) => {
 	const client = useClient({ apiVersion: '2025-07-18' })
 	const doc = props.draft || props.published
 
-	if (props.type !== 'blog.post' || !doc?.aiGenerated || doc.status !== 'pending')
-		return undefined as unknown as ReturnType<DocumentActionComponent>
+	if (props.type !== 'blog.post') return null
+	if (!doc) return null
+	if (!doc.aiGenerated) return null
+	if (doc.status !== 'pending') return null
 
 	return {
 		label: '✅ Luluskan',
