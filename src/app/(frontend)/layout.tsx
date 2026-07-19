@@ -1,7 +1,6 @@
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { preconnect } from 'react-dom'
 import Footer from '@/ui/footer'
-import GlassyHeader from '@/ui/glassy-header'
 import Header from '@/ui/header'
 import ReadingProgress from '@/ui/reading-progress'
 import AnalyticsTracker from '@/ui/analytics-tracker'
@@ -42,9 +41,7 @@ export default async function RootLayout({
 			<NuqsAdapter>
 				<body className="bg-background text-foreground antialiased overscroll-none">
 					<ReadingProgress />
-						<GlassyHeader>
-							<Header />
-						</GlassyHeader>
+						<Header />
 					<main>{children}</main>
 					<Footer />
 
