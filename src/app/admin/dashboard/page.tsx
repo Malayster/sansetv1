@@ -74,31 +74,16 @@ export default function Dashboard() {
 
 	return (
 		<div className="min-h-screen bg-[#0a0a0f] text-gray-200">
-			{/* Header — n8n style: kuning-merah gradient, teks hitam, statik, marquee */}
-			<div className="bg-gradient-to-r from-yellow-400 via-amber-500 to-red-500">
-				<div className="max-w-[1600px] mx-auto px-6 py-3 flex items-center justify-between">
-					<div className="flex items-center gap-4">
-						<div className="flex items-center gap-2.5">
-							<div className="size-7 rounded-md bg-black/80 flex items-center justify-center">
-								<span className="text-yellow-400 text-[10px] font-black">SAN</span>
-							</div>
-							<span className="text-black font-bold text-sm tracking-tight">Suara Anak Negeri</span>
-						</div>
-						<div className="h-5 w-px bg-black/20 hidden sm:block" />
-						<nav className="hidden sm:flex items-center gap-1 text-xs">
-							<a href="/admin" className="px-3 py-1.5 rounded-md text-black/70 hover:text-black hover:bg-black/5 transition font-medium">Studio</a>
-							<a href="/" className="px-3 py-1.5 rounded-md text-black/70 hover:text-black hover:bg-black/5 transition font-medium">Laman</a>
-							<a href="/admin/dashboard" className="px-3 py-1.5 rounded-md bg-black/10 text-black font-semibold">Dashboard</a>
-						</nav>
-					</div>
-					<div className="flex items-center gap-4">
-						<span className="text-xs text-black/50 font-medium hidden md:block">
-							{new Date(data.today.date).toLocaleDateString('ms-MY', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' })}
-						</span>
-					</div>
+			{/* Top bar */}
+			<div className="flex items-center justify-between px-6 py-4 border-b border-gray-800">
+				<div className="flex items-center gap-3">
+					<div className="size-8 rounded bg-red-600 flex items-center justify-center text-white text-xs font-bold">SAN</div>
+					<h1 className="font-semibold text-white">Dashboard</h1>
 				</div>
-				{/* Marquee — berita terkini bergerak */}
-				<Marquee data={data} />
+				<div className="flex items-center gap-4 text-xs text-gray-500">
+					<span>{new Date(data.today.date).toLocaleDateString('ms-MY', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
+					<a href="/admin" className="px-3 py-1.5 rounded border border-gray-700 hover:border-gray-500 transition text-gray-400 hover:text-white">← Studio</a>
+				</div>
 			</div>
 
 			<div className="p-6 space-y-4 max-w-[1600px] mx-auto">
@@ -293,26 +278,6 @@ function BarItem({ label, pct, color }: { label: string; pct: number; color: str
 			</div>
 			<div className="h-1.5 bg-gray-800 rounded-full">
 				<div className={`h-full ${color} rounded-full`} style={{ width: `${pct}%` }} />
-			</div>
-		</div>
-	)
-}
-
-function Marquee({ data }: { data: DashboardData }) {
-	const [headlines, setHeadlines] = useState<string[]>([])
-	useEffect(() => {
-		fetch('/api/headlines').then(r => r.json()).then(j => setHeadlines(j.headlines || [])).catch(() => {})
-	}, [])
-	if (!headlines.length) return null
-	return (
-		<div className="bg-black/15 border-t border-black/10 overflow-hidden">
-			<div className="flex animate-marquee whitespace-nowrap py-1.5">
-				{[...headlines, ...headlines].map((h, i) => (
-					<span key={i} className="inline-flex items-center gap-2 mx-4 text-xs text-black/70 font-medium">
-						<span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
-						{h}
-					</span>
-				))}
 			</div>
 		</div>
 	)
