@@ -50,7 +50,14 @@ export default defineConfig({
 	document: {
 		actions: (prev, context) => {
 			if (context.schemaType === 'blog.post') {
-				return [...prev, ApproveAction]
+				// Remove default Publish for AI articles — Luluskan replaces it
+				const filtered = prev.filter((a) => {
+					const isPublish = a.action === 'publish' || a.label === 'Publish'
+					// Keep Publish for non-AI articles
+					const doc = context.draft || context.published
+					return !(isPublish && doc?.aiGenerated)
+				})
+				return [...filtered, ApproveAction]
 			}
 			return prev
 		},
