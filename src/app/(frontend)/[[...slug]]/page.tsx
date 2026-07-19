@@ -19,7 +19,7 @@ import Sidebar from '@/ui/sidebar'
 
 type Props = PageProps<'/[[...slug]]'>
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params, searchParams }: Props) {
 	const { slug } = await params
 	const slugStr = slug ? slug.join('/') : 'index'
 
@@ -29,6 +29,8 @@ export default async function Page({ params }: Props) {
 
 	const page = await getPage(slug)
 	if (!page) notFound()
+
+	const { category } = await searchParams
 
 	const hasSidebar = page.leftSidebar?.position || page.rightSidebar?.position
 
@@ -44,7 +46,7 @@ export default async function Page({ params }: Props) {
 					/>
 				)}
 				<div className="flex-1 min-w-0">
-					<ModulesResolver page={page} />
+					<ModulesResolver page={page} category={category as string | undefined} />
 				</div>
 				{page.rightSidebar?.position && (
 					<Sidebar
@@ -58,7 +60,7 @@ export default async function Page({ params }: Props) {
 		)
 	}
 
-	return <ModulesResolver page={page} />
+	return <ModulesResolver page={page} category={category as string | undefined} />
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

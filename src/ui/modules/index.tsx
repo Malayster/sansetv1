@@ -50,9 +50,11 @@ const MODULES_MAP = {
 export default function ({
 	page,
 	post,
+	category,
 }: {
 	page?: PAGE_QUERY_RESULT
 	post?: BLOG_POST_QUERY_RESULT
+	category?: string
 }) {
 	const modules = [page, post].flatMap((item) => item?.modules ?? [])
 
@@ -82,6 +84,7 @@ export default function ({
 					<Component
 						{...module}
 						{...moduleSpecificProps(module)}
+						{...(module._type === 'blog-post-list' ? { category } : {})}
 						key={`${module._key}-${i}`}
 					/>
 				)

@@ -16,16 +16,23 @@ export default async function ({
 	ctas,
 	limit = 6,
 	_key,
+	category = '',
 	...props
-}: BlogPostList & { _key: string }) {
+}: BlogPostList & { _key: string; category?: string }) {
 	const posts = await sanityFetchLive<BLOG_POST_LIST_QUERY_RESULT>({
-		query: BLOG_POST_LIST_QUERY,
-		params: { limit, blogDir: `/${ROUTES.blog}/` },
+		query: category ? BLOG_POST_LIST_FILTERED_QUERY : BLOG_POST_LIST_QUERY,
+		params: { limit, blogDir: `/${ROUTES.blog}/`, category },
 	})
 
 	return (
 		<Module _key={_key} className="section space-y-8" {...props}>
-			{intro && (
+			{category && (
+				<header className="text-center">
+					<h2 className="text-2xl font-bold text-hitam capitalize">{category}</h2>
+					<p className="text-kelabu-gelap text-sm mt-1">Artikel dalam kategori</p>
+				</header>
+			)}
+			{intro && !category && (
 				<header className="prose text-center">
 					<PortableText value={intro} />
 				</header>
@@ -51,6 +58,14 @@ export default async function ({
 
 export const BLOG_POST_LIST_QUERY = groq`
 	*[_type == 'blog.post' && status in ['published', 'approved']]|order(publishDate desc)[0...$limit]{
+		...,
+		${BLOG_POST_FRAGMENT_QUERY},
+		'slug': $blogDir + metadata.slug.current,
+	}
+`
+
+export const BLOG_POST_LIST_FILTERED_QUERY = groq`
+	*[_type == 'blog.post' && status in ['published', 'approved'] && $category in categories[]->slug.current]|order(publishDate desc)[0...$limit]{
 		...,
 		${BLOG_POST_FRAGMENT_QUERY},
 		'slug': $blogDir + metadata.slug.current,
