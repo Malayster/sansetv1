@@ -15,6 +15,7 @@ import {
 import type { PAGE_QUERY_RESULT } from '@/sanity/types'
 import ModulesResolver from '@/ui/modules'
 import Homepage from '@/ui/modules/homepage'
+import Sidebar from '@/ui/sidebar'
 
 type Props = PageProps<'/[[...slug]]'>
 
@@ -22,13 +23,40 @@ export default async function Page({ params }: Props) {
 	const { slug } = await params
 	const slugStr = slug ? slug.join('/') : 'index'
 
-	// Render custom homepage for root/index
 	if (slugStr === 'index') {
 		return <Homepage />
 	}
 
 	const page = await getPage(slug)
 	if (!page) notFound()
+
+	const hasSidebar = page.leftSidebar?.position || page.rightSidebar?.position
+
+	if (hasSidebar) {
+		return (
+			<div className="section mx-auto flex max-w-7xl gap-8 max-md:flex-col md:items-start">
+				{page.leftSidebar?.position && (
+					<Sidebar
+						modules={page.leftSidebar.modules}
+						position={page.leftSidebar.position}
+						headings={[]}
+						className="md:w-56 shrink-0"
+					/>
+				)}
+				<div className="flex-1 min-w-0">
+					<ModulesResolver page={page} />
+				</div>
+				{page.rightSidebar?.position && (
+					<Sidebar
+						modules={page.rightSidebar.modules}
+						position={page.rightSidebar.position}
+						headings={[]}
+						className="md:w-56 shrink-0"
+					/>
+				)}
+			</div>
+		)
+	}
 
 	return <ModulesResolver page={page} />
 }

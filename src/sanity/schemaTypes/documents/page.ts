@@ -27,6 +27,18 @@ export default defineType({
 			group: 'content',
 		}),
 		defineField({
+			name: 'leftSidebar',
+			title: 'Sidebar Kiri',
+			type: 'sidebar',
+			group: 'content',
+		}),
+		defineField({
+			name: 'rightSidebar',
+			title: 'Sidebar Kanan',
+			type: 'sidebar',
+			group: 'content',
+		}),
+		defineField({
 			name: 'markdown',
 			type: 'code',
 			description:
