@@ -22,7 +22,11 @@ const nextConfig: NextConfig = {
 		]
 	},
 
-	turbopack: {},
+	turbopack: {
+		resolveAlias: {
+			'swr': 'swr/dist/index/index.mjs',
+		},
+	},
 
 	async redirects() {
 		return await client.fetch(
