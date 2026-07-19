@@ -65,6 +65,15 @@ export default defineType({
 			],
 			group: 'info',
 		}),
+
+		defineField({
+			name: 'footerContent',
+			title: 'Footer Content (lama)',
+			type: 'array',
+			of: [{ type: 'block' }],
+			hidden: true,
+			group: 'info',
+		}),
 	],
 	preview: {
 		prepare: () => ({
