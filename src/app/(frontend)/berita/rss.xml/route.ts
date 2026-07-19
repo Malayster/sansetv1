@@ -20,7 +20,7 @@ export async function GET() {
 		<title>${blog?.metadata?.title}</title>
 		<description>${blog?.metadata?.description}</description>
 		<link>${BASE_URL}/${ROUTES.blog}</link>
-		<language>en-US</language>
+		<language>ms-MY</language>
 		<lastBuildDate>${new Date().toISOString()}</lastBuildDate>
 		${posts.map((post) => Item({ post })).join('')}</channel></rss>`
 
@@ -96,7 +96,7 @@ const BLOG_RSS_QUERY = groq`{
 	'blog': *[_type == 'page' && metadata.slug.current == $blogDir][0]{
 		metadata
 	},
-	'posts': *[_type == 'blog.post' && metadata.noIndex != true]|order(publishDate desc){
+	'posts': *[_type == 'blog.post' && status in ['published', 'approved'] && metadata.noIndex != true]|order(publishDate desc){
 		title,
 		content,
 		publishDate,

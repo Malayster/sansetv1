@@ -2,6 +2,7 @@ import type { SchemaPluginOptions } from 'sanity'
 // documents
 import blogCategory from './documents/blog.category'
 import blogPost from './documents/blog.post'
+import analyticsDaily from './documents/analytics.daily'
 import form from './documents/form'
 import globalModule from './documents/global-module'
 import logo from './documents/logo'
@@ -49,6 +50,7 @@ export const schema: SchemaPluginOptions = {
 		page,
 		globalModule,
 		blogPost,
+analyticsDaily,
 		redirect,
 		form,
 		// references

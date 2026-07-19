@@ -1,13 +1,27 @@
 @import 'tailwindcss';
 
 @theme {
-	--font-sans: 'Geist', sans-serif;
+	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
-	--color-background: var(--color-neutral-100);
-	--color-foreground: var(--color-neutral-900);
-	--color-stroke: var(--color-neutral-200);
+	/* 🎨 SUARA ANAK NEGERI — Putih, Merah, Hitam */
+	--color-merah: #CC0000;
+	--color-merah-gelap: #990000;
+	--color-merah-muda: #FFEBEE;
+	--color-hitam: #111111;
+	--color-hitam-muda: #333333;
+	--color-kelabu: #DDDDDD;
+	--color-kelabu-gelap: #999999;
+	--color-putih: #FFFFFF;
+	--color-abu: #F5F5F5;
 
-	--color-primary: LinkText;
+	/* Background = PUTIH, Foreground = HITAM */
+	--color-background: var(--color-putih);
+	--color-foreground: var(--color-hitam);
+	--color-stroke: var(--color-kelabu);
+
+	/* Primary = Merah */
+	--color-primary: var(--color-merah);
+	--color-accent: var(--color-merah);
 
 	--spacing-lh: 1lh;
 	--spacing-ch: 1ch;
@@ -44,7 +58,7 @@
 		0%,
 		50% {
 			background-color: color-mix(in oklab,
-					var(--color-amber-400) 50%,
+					var(--color-yellow-400) 50%,
 					transparent);
 		}
 	}
@@ -55,7 +69,7 @@
 
 	html {
 		scroll-behavior: smooth;
-		@apply accent-primary caret-primary;
+		@apply accent-primary caret-accent;
 	}
 
 	details {
@@ -85,38 +99,38 @@
 	}
 }
 
-/* typography */
+/* typography — mobile-first sizing */
 
 @utility h-base {
-	@apply font-bold;
+	@apply font-bold tracking-tight;
 }
 
 @utility h0 {
-	@apply h-base text-5xl leading-[1.1];
+	@apply h-base text-3xl leading-[1.15] md:text-5xl;
 }
 
 @utility h1 {
-	@apply h-base text-3xl;
+	@apply h-base text-2xl md:text-3xl;
 }
 
 @utility h2 {
-	@apply h-base text-2xl;
+	@apply h-base text-xl md:text-2xl;
 }
 
 @utility h3 {
-	@apply h-base text-xl;
+	@apply h-base text-lg md:text-xl;
 }
 
 @utility h4 {
-	@apply h-base text-lg;
+	@apply h-base text-base md:text-lg;
 }
 
 @utility h5 {
-	@apply h-base text-base;
+	@apply h-base text-sm md:text-base;
 }
 
 @utility h6 {
-	@apply h-base text-base;
+	@apply h-base text-sm;
 }
 
 @utility technical {
@@ -132,39 +146,143 @@
 	justify-content: center;
 	text-align: center;
 	gap: 0.5em;
-	padding: 0.25em 0.5em;
-	@apply active:scale-98 transition-all;
+	padding: 0.5em 1em;
+	min-height: 44px;
+	@apply active:scale-98 transition-all font-semibold;
 }
 
 @utility action {
-	@apply action-base bg-primary text-background;
+	@apply action-base bg-merah text-putih hover:bg-merah-gelap;
 }
 
 @utility action-outline {
-	@apply action-base bg-background border-stroke text-foreground border hover:border-current;
+	@apply action-base bg-putih border-kelabu text-hitam border hover:border-merah hover:text-merah;
 }
 
 @utility ghost {
-	@apply action-base bg-current/2 text-inherit hover:bg-current/5;
+	@apply action-base bg-hitam/5 text-hitam hover:bg-hitam/10;
 }
 
 @utility link {
-	@apply text-primary cursor-pointer underline hover:decoration-2;
+	@apply text-merah cursor-pointer underline decoration-merah/30 hover:decoration-merah hover:decoration-2;
 }
 
 @utility input {
-	padding: 0.25em 0.5em;
-	@apply bg-background border-foreground/10 focus-within:border-foreground/30 border leading-normal;
+	padding: 0.5em 0.75em;
+	min-height: 44px;
+	@apply bg-putih border-kelabu focus-within:border-merah border text-hitam rounded-sm;
+}
+
+@utility badge {
+	@apply inline-flex items-center gap-1 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide;
+}
+
+@utility badge-merah {
+	@apply badge bg-merah text-putih;
+}
+
+@utility badge-kuning {
+	@apply badge bg-amber-500 text-putih;
+}
+
+@utility breaking-news {
+	@apply bg-merah text-putih font-bold px-3 py-2 text-sm;
+}
+
+/* newspaper grid layout */
+@utility news-grid {
+	@apply grid gap-6;
+	grid-template-columns: 1fr 300px;
+	@apply max-lg:grid-cols-1;
+}
+
+@utility news-main {
+	@apply space-y-6;
+}
+
+@utility news-sidebar {
+	@apply space-y-6 max-lg:hidden;
+}
+
+/* featured headline card */
+@utility headline-card {
+	@apply relative overflow-hidden rounded-lg shadow-md bg-putih;
+}
+
+@utility headline-card-image {
+	@apply aspect-video w-full object-cover;
+}
+
+@utility headline-card-body {
+	@apply p-5 space-y-2;
+}
+
+/* category chip */
+@utility category-chip {
+	@apply inline-block px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wider rounded-sm;
+	@apply bg-merah-muda text-merah;
+}
+
+/* article list item */
+@utility article-row {
+	@apply flex gap-4 pb-4 border-b border-kelabu last:border-0;
+}
+
+@utility article-row-image {
+	@apply w-24 h-24 shrink-0 rounded object-cover;
+}
+
+/* popular number */
+@utility popular-number {
+	@apply text-3xl font-bold text-merah/20 leading-none;
+}
+
+/* search input in header */
+@utility search-input {
+	@apply w-full bg-putih border-kelabu text-hitam text-sm py-1.5 px-3 rounded-sm;
+	@apply focus:border-merah focus:outline-none focus:ring-1 focus:ring-merah;
+}
+
+/* section title with red accent */
+@utility section-title {
+	@apply text-lg font-bold border-l-4 border-merah pl-3 mb-4 uppercase tracking-wide text-hitam;
+}
+
+/* tag cloud */
+@utility tag-cloud {
+	@apply flex flex-wrap gap-2;
+}
+
+@utility tag-chip {
+	@apply px-3 py-1 text-xs rounded-sm bg-abu border border-kelabu text-hitam-muda hover:text-merah hover:border-merah transition-colors;
+}
+
+/* carousel dots */
+@utility carousel-dots {
+	@apply flex justify-center gap-2 mt-3;
+}
+
+@utility carousel-dot {
+	@apply w-2.5 h-2.5 rounded-full bg-kelabu cursor-pointer transition-colors;
+}
+
+@utility carousel-dot-active {
+	@apply bg-merah w-6;
 }
 
 /* components */
 
+/* header gradient — hitam ke merah */
+@utility header-gradient {
+	background: linear-gradient(180deg, #111111 0%, #222222 40%, #cc0000 100%);
+}
+
 @utility section {
-	@apply mx-auto w-full max-w-7xl px-4 py-12 md:px-8;
+	@apply mx-auto w-full max-w-7xl px-4 py-8 md:px-8 md:py-12;
 }
 
 @utility prose {
-	@apply space-y-4 leading-relaxed;
+	@apply space-y-4 leading-relaxed text-foreground;
 
 	& h1 {
 		@apply h1;
@@ -208,13 +326,13 @@
 	}
 
 	& blockquote {
-		@apply border-stroke border-l-4 pl-4;
+		@apply border-merah border-l-4 pl-4 italic;
 	}
 
 	& :not(pre)>code {
 		padding-inline: 0.25em;
 		font-size: 0.875em;
-		@apply bg-foreground/5 rounded-sm;
+		@apply bg-abu rounded-sm;
 	}
 
 	& pre {
@@ -235,7 +353,7 @@
 		}
 
 		& tbody tr:nth-child(odd) {
-			@apply bg-foreground/5;
+			@apply bg-hitam-muda;
 		}
 	}
 }
@@ -253,61 +371,7 @@
 	@apply *:md:snap-start *:snap-center;
 }
 
-@utility carousel-scroll-buttons {
-	@supports (position-anchor: var(--anchor-name)) {
-		@apply no-scrollbar;
 
-		&::scroll-button(*) {
-			cursor: pointer;
-			position: absolute;
-			position-anchor: var(--anchor-name);
-			z-index: 1;
-			display: block;
-			aspect-ratio: 1;
-			width: 1.5lh;
-			margin-inline: -100%;
-			background-color: currentColor;
-		}
-
-		&::scroll-button(left) {
-			content: '' / 'Scroll left';
-			position-area: center start;
-			mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48zm62.63 304L296 374.63 177.37 256 296 137.37 318.63 160l-96 96z'/%3E%3C/svg%3E") center / cover;
-		}
-
-		&::scroll-button(right) {
-			content: '' / 'Scroll right';
-			position-area: center end;
-			mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23fff' d='M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48zm-40 326.63L193.37 352l96-96-96-96L216 137.37 334.63 256z'/%3E%3C/svg%3E") center / cover;
-		}
-	}
-}
-
-@utility carousel-scroll-marker {
-	--size: 12px;
-	scroll-marker-group: after;
-
-	&::scroll-marker-group {
-		position: absolute;
-		position-anchor: var(--anchor-name);
-		top: calc(anchor(bottom) + 1rem);
-		justify-self: center;
-		display: flex;
-		align-items: center;
-		gap: 0.5ch;
-	}
-
-	&>* {
-		&::scroll-marker {
-			content: '';
-			@apply bg-foreground/25 block size-1 rounded-full;
-		}
-
-		&::scroll-marker:target-current {
-			@apply bg-foreground w-[2ch] opacity-100;
-		}
-	}
-}
 
 @utility accordion {
 	&>summary {
@@ -337,12 +401,12 @@
 		position-try-fallbacks: end span-start, flip-block;
 		position-try: end span-start, flip-block;
 
-		@apply anim-fade fixed z-1 min-w-max bg-background shadow-lg origin-top starting:-translate-y-1 starting:scale-95;
+		@apply anim-fade fixed z-1 min-w-max bg-hitam-muda shadow-lg origin-top starting:-translate-y-1 starting:scale-95;
 	}
 }
 
 @utility skeleton {
-	@apply bg-foreground/5 block h-lh;
+	@apply bg-hitam-muda block h-lh rounded;
 }
 
 /* utilities */
@@ -388,4 +452,36 @@
 
 @utility anim-fade-to-b {
 	@apply anim-fade starting:-translate-y-4;
+}
+
+@utility card-hover {
+	@apply transition-all duration-300 hover:shadow-lg hover:shadow-hitam/5 hover:-translate-y-0.5;
+}
+
+@utility fade-up {
+	opacity: 0;
+	transform: translateY(20px);
+	animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@utility stagger-1 { animation-delay: 0.1s; }
+@utility stagger-2 { animation-delay: 0.2s; }
+@utility stagger-3 { animation-delay: 0.3s; }
+@utility stagger-4 { animation-delay: 0.4s; }
+@utility stagger-5 { animation-delay: 0.5s; }
+
+@utility animate-marquee-up {
+	animation: marqueeUp 20s linear infinite;
+}
+
+@keyframes marqueeUp {
+	0% { transform: translateY(0); }
+	100% { transform: translateY(-50%); }
 }

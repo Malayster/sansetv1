@@ -4,22 +4,26 @@ import { ImageIcon } from '@sanity/icons/Image'
 
 export default defineType({
 	name: 'blog.post',
-	title: 'Blog post',
+	title: 'Artikel',
 	type: 'document',
 	icon: EditIcon,
 	groups: [
-		{ name: 'content', default: true },
-		{ name: 'markdown' },
-		{ name: 'metadata' },
+		{ name: 'content', default: true, title: 'Kandungan' },
+		{ name: 'markdown', title: 'Markdown' },
+		{ name: 'metadata', title: 'Metadata' },
+		{ name: 'publishing', title: 'Penerbitan' },
 	],
 	fields: [
 		defineField({
 			name: 'title',
+			title: 'Tajuk',
 			type: 'string',
 			group: 'content',
+			validation: (Rule) => Rule.required().min(5).max(200),
 		}),
 		defineField({
 			name: 'content',
+			title: 'Kandungan',
 			type: 'array',
 			of: [
 				{ type: 'block' },
@@ -33,10 +37,12 @@ export default defineType({
 					fields: [
 						defineField({
 							name: 'alt',
+							title: 'Teks Alternatif',
 							type: 'string',
 						}),
 						defineField({
 							name: 'figcaption',
+							title: 'Kapsyen',
 							type: 'array',
 							of: [
 								{
@@ -61,26 +67,71 @@ export default defineType({
 		}),
 		defineField({
 			name: 'publishDate',
+			title: 'Tarikh Terbit',
 			type: 'date',
 			group: 'content',
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
+			name: 'status',
+			title: 'Status',
+			type: 'string',
+			options: {
+				list: [
+					{ title: 'Draf', value: 'draft' },
+					{ title: 'Menunggu Kelulusan', value: 'pending' },
+					{ title: 'Diluluskan', value: 'approved' },
+					{ title: 'Diterbitkan', value: 'published' },
+				],
+			},
+			initialValue: 'draft',
+			group: 'publishing',
+		}),
+		defineField({
+			name: 'aiGenerated',
+			title: 'Dijana AI',
+			description: 'Tandakan jika artikel ini dijana oleh AI',
+			type: 'boolean',
+			initialValue: false,
+			group: 'publishing',
+		}),
+		defineField({
+			name: 'sourceUrl',
+			title: 'URL Sumber',
+			description:
+				'URL artikel asal dari sumber RSS. Kunci dedup utama untuk elak import berulang.',
+			type: 'url',
+			group: 'publishing',
+			validation: (Rule) => Rule.uri({ scheme: ['http', 'https'] }),
+		}),
+		defineField({
+			name: 'sourceName',
+			title: 'Nama Sumber',
+			description: 'Nama portal berita asal (cth: Bernama, Utusan).',
+			type: 'string',
+			group: 'publishing',
 		}),
 		defineField({
 			name: 'categories',
+			title: 'Kategori',
 			type: 'array',
-			of: [{ type: 'reference', to: [{ type: 'blog.category' }] }],
+			of: [{ type: 'reference', to: [{ type: 'blog.category' }], weak: true }],
 			group: 'content',
+			validation: (Rule) => Rule.min(1).warning(),
 		}),
 		defineField({
 			name: 'author',
+			title: 'Penulis',
 			type: 'reference',
 			to: [{ type: 'person' }],
+			weak: true,
 			group: 'content',
 		}),
 		defineField({
 			name: 'markdown',
 			type: 'code',
 			description:
-				'Served at <slug>.md; Leave empty to disable route generation.',
+				'Disediakan di <slug>.md; Kosongkan untuk nyahaktif penjanaan laluan.',
 			options: {
 				language: 'markdown',
 				languageAlternatives: [{ title: 'Markdown', value: 'markdown' }],
@@ -89,8 +140,16 @@ export default defineType({
 		}),
 		defineField({
 			name: 'metadata',
+			title: 'Metadata',
 			type: 'metadata',
 			group: 'metadata',
+			validation: (Rule) =>
+				Rule.custom((metadata: any, context: any) => {
+					if (context.document?.status === 'published' && !metadata?.image) {
+						return 'Gambar wajib dimuat naik sebelum menerbitkan artikel.'
+					}
+					return true
+				}),
 		}),
 	],
 	preview: {
@@ -98,17 +157,24 @@ export default defineType({
 			title: 'title',
 			subtitle: 'publishDate',
 			media: 'metadata.image',
+			status: 'status',
+			ai: 'aiGenerated',
 		},
+		prepare: ({ title, subtitle, media, status, ai }) => ({
+			title,
+			subtitle: `${subtitle ?? 'Tiada tarikh'}${ai ? '  🤖 AI' : ''}  ·  ${status === 'published' ? '✅' : status === 'pending' ? '⏳' : '📝'} ${status}`,
+			media,
+		}),
 	},
 	orderings: [
 		{
 			name: 'publishDate',
-			title: 'Publish date',
+			title: 'Tarikh Terbit',
 			by: [{ field: 'publishDate', direction: 'desc' }],
 		},
 		{
 			name: 'title',
-			title: 'Title',
+			title: 'Tajuk',
 			by: [{ field: 'title', direction: 'asc' }],
 		},
 	],

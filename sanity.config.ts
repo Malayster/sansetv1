@@ -16,6 +16,7 @@ import {
 import { visionTool } from '@sanity/vision'
 import { vercelWidget } from 'sanity-plugin-dashboard-widget-vercel'
 import { media } from 'sanity-plugin-media'
+import { ApproveAction } from './src/sanity/actions/approve'
 import { ROUTES } from './src/lib/env'
 import { apiVersion, dataset, projectId } from './src/sanity/env'
 import icon from './src/sanity/icon'
@@ -24,7 +25,7 @@ import { schema } from './src/sanity/schemaTypes'
 import structure from './src/sanity/structure'
 
 export default defineConfig({
-	title: 'SanityPress',
+	title: 'Suara Anak Negeri',
 	basePath: `/${ROUTES.studio}`,
 	projectId,
 	dataset,
@@ -46,4 +47,12 @@ export default defineConfig({
 		media(),
 		assist(),
 	],
+	document: {
+		actions: (prev, context) => {
+			if (context.schemaType === 'blog.post') {
+				return [...prev, ApproveAction]
+			}
+			return prev
+		},
+	},
 })

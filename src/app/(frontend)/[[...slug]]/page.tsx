@@ -14,11 +14,19 @@ import {
 } from '@/sanity/lib/queries'
 import type { PAGE_QUERY_RESULT } from '@/sanity/types'
 import ModulesResolver from '@/ui/modules'
+import Homepage from '@/ui/modules/homepage'
 
 type Props = PageProps<'/[[...slug]]'>
 
 export default async function Page({ params }: Props) {
 	const { slug } = await params
+	const slugStr = slug ? slug.join('/') : 'index'
+
+	// Render custom homepage for root/index
+	if (slugStr === 'index') {
+		return <Homepage />
+	}
+
 	const page = await getPage(slug)
 	if (!page) notFound()
 
@@ -59,7 +67,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 				}),
 			},
 		},
-		generator: `SanityPress v${pkg.version}`,
+					generator: `Suara Anak Negeri v${pkg.version}`,
 	}
 }
 

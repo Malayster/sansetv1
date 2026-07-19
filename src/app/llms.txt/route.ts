@@ -63,13 +63,13 @@ const LLMS_QUERY = groq`{
 		&& length(markdown.code) > 0
 	] | order(metadata.slug.current != 'index', metadata.slug.current asc) {
 		'title': select(
-			metadata.slug.current == 'index' => coalesce(metadata.title, 'Home'),
+			metadata.slug.current == 'index' => coalesce(metadata.title, 'Beranda'),
 			coalesce(metadata.title, metadata.slug.current)
 		),
 		'slug': metadata.slug.current,
 		'description': metadata.description,
 	},
-	'posts': *[_type == 'blog.post'
+	'posts': *[_type == 'blog.post' && status in ['published', 'approved']
 		&& defined(metadata.slug.current)
 		&& metadata.noIndex != true
 		&& length(markdown.code) > 0

@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
 	reactCompiler: true,
 
 	images: {
+		formats: ['image/webp'],
+		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+		deviceSizes: [640, 750, 828, 1080, 1200],
+		minimumCacheTTL: 31536000,
 		localPatterns: [{ pathname: '/api/og' }],
 		remotePatterns: [{ protocol: 'https', hostname: 'cdn.sanity.io' }],
 	},

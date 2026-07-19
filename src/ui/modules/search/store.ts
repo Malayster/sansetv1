@@ -17,8 +17,8 @@ export const useSearchStore = create<{
 }))
 
 const SCOPE_MAP = {
-	'blog posts': 'blog.post',
-	pages: 'page',
+	'Berita': 'blog.post',
+	'Halaman': 'page',
 }
 
 export async function handleSearch({

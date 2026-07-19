@@ -22,7 +22,7 @@ export default function ({ scope }: Partial<SearchModule>) {
 					id="query"
 					className="grow py-[0.25em] outline-none"
 					type="search"
-					placeholder={scope === 'all' ? 'Search' : `Search ${scope}`}
+					placeholder={scope === 'all' ? 'Cari' : `Cari ${scope}`}
 					defaultValue={query}
 					onChange={debounce((e) => {
 						setQuery(e.target.value)
@@ -43,7 +43,7 @@ export default function ({ scope }: Partial<SearchModule>) {
 				>
 					<div className="bg-background grid max-h-[10lh] gap-4 overflow-y-auto p-4 shadow-lg">
 						{loading ? (
-							<Loading>Searching...</Loading>
+							<Loading>Mencari...</Loading>
 						) : (
 							<>
 								<p className="b flex justify-center text-center whitespace-nowrap">

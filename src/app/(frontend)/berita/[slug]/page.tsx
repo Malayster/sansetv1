@@ -13,7 +13,7 @@ import {
 import type { BLOG_POST_QUERY_RESULT } from '@/sanity/types'
 import ModulesResolver from '@/ui/modules'
 
-type Props = PageProps<'/blog/[slug]'>
+type Props = PageProps<'/berita/[slug]'>
 
 export default async function ({ params }: Props) {
 	const { slug } = await params

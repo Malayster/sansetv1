@@ -3,6 +3,8 @@ import { cn } from '@/lib/utils'
 import { getSite } from '@/sanity/lib/queries'
 import Img from './img'
 
+const DEFAULT_LOGO = 'Suara Anak Negeri'
+
 export default async function ({
 	variant: style = 'default',
 	className,
@@ -16,17 +18,28 @@ export default async function ({
 	return (
 		<Link
 			href="/"
-			className={cn('logo text-foreground inline-block font-bold', className)}
+			className={cn(
+				'logo inline-flex flex-col font-bold leading-tight',
+				style === 'dark' ? 'text-putih' : 'text-foreground',
+				className,
+			)}
 		>
 			{logo ? (
 				<Img
 					image={logo}
 					width={100}
 					className="inline-block h-full w-auto object-contain"
-					alt={site?.title ?? ''}
+					alt={site?.title ?? DEFAULT_LOGO}
 				/>
 			) : (
-				site?.title
+				<>
+					<span className="text-putih text-lg md:text-xl tracking-tight">
+						{site?.title ?? DEFAULT_LOGO}
+					</span>
+					<span className="text-putih/70 text-xs font-normal tracking-wider">
+						Jambatan Suara Rakyat
+					</span>
+				</>
 			)}
 		</Link>
 	)

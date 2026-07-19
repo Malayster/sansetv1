@@ -1,5 +1,6 @@
 import { PortableText } from 'next-sanity'
 import { cn } from '@/lib/utils'
+import { ROUTES } from '@/lib/env'
 import type {
 	BLOG_POST_QUERY_RESULT,
 	BlogCategory,
@@ -8,10 +9,12 @@ import type {
 } from '@/sanity/types'
 import Img from '@/ui/img'
 import CustomHTML from '@/ui/modules/custom-html'
+import AdSlot from '@/ui/adsense'
 import AnchoredHeading from '@/ui/modules/prose/anchored-heading'
 import Code from '@/ui/modules/prose/code'
 import Image from '@/ui/modules/prose/image'
-import Sidebar from '@/ui/sidebar'
+import ArticleSidebar from './article-sidebar'
+import ArticleSidebarRight from './article-sidebar-right'
 import { Module } from '..'
 import AccordionList from '../accordion-list'
 import css from './blog-post-content.module.css'
@@ -22,7 +25,6 @@ import Schema from './schema'
 
 export default function ({
 	post,
-	sidebar,
 	...props
 }: { post: BLOG_POST_QUERY_RESULT } & BlogPostContent) {
 	if (!post) return null
@@ -53,19 +55,21 @@ export default function ({
 								linked
 							/>
 							<Date date={post.publishDate} />
-							<span>{Math.ceil(post.readTime)} min read</span>
+							<span>{Math.ceil(post.readTime)} min bacaan</span>
 						</div>
 					</div>
 				</header>
 
-				<section className="post-content section gap-lh flex max-md:flex-col md:items-start">
-					<Sidebar
-						{...sidebar}
-						headings={post.headings}
-						className="max-md:p-ch max-md:bg-[#ededed] [&_summary]:max-md:bg-[#ededed]"
+				{/* Ad after title */}
+				<AdSlot className="section py-0 max-w-4xl mx-auto" />
+
+				{/* ====== 3-COLUMN PORTAL LAYOUT ====== */}
+				<section className="post-content section gap-6 flex max-md:flex-col md:items-start justify-center">
+					<ArticleSidebar
+						currentCategory={(post.categories as BlogCategory[])?.[0]?.slug?.current}
 					/>
 
-					<div className={cn(css.body, 'prose mx-auto grid w-full max-w-4xl')}>
+					<div className={cn(css.body, 'prose mx-auto grid w-full max-w-3xl flex-1 min-w-0')}>
 						<PortableText
 							value={post.content ?? []}
 							components={{
@@ -93,7 +97,15 @@ export default function ({
 							}}
 						/>
 					</div>
+
+					<ArticleSidebarRight
+						headings={post.headings}
+						currentSlug={`${ROUTES.blog}/${post.metadata?.slug?.current}`}
+					/>
 				</section>
+
+				{/* Ad below article */}
+				<AdSlot className="section py-0 max-w-4xl mx-auto" />
 			</Module>
 
 			<Schema post={post} />

@@ -4,13 +4,16 @@ export default function ({
 }: { date?: string } & React.ComponentProps<'time'>) {
 	if (!date) return null
 
+	const d = new Date(date.replaceAll('-', '/'))
+	if (isNaN(d.getTime())) return null
+
 	return (
 		<time dateTime={date} {...props}>
-			{format(new Date(date.replaceAll('-', '/')))}
+			{format(d)}
 		</time>
 	)
 }
 
-const { format } = new Intl.DateTimeFormat('en-US', {
+const { format } = new Intl.DateTimeFormat('ms-MY', {
 	dateStyle: 'medium',
 })

@@ -22,7 +22,7 @@ export default function ({ query }: { query: string }) {
 								</span>
 
 								<span className="text-foreground/50">
-									{result._type == 'blog.post' ? 'Blog' : 'Page'}
+									{result._type == 'blog.post' ? 'Berita' : 'Halaman'}
 								</span>
 							</a>
 						</li>

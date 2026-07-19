@@ -8,7 +8,7 @@ export default function () {
 				color: 'transparent',
 			}}
 			src="/favicon.ico"
-			alt="SanityPress"
+			alt="Suara Anak Negeri"
 		/>
 	)
 }

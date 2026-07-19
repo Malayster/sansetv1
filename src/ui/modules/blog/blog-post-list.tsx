@@ -50,7 +50,7 @@ export default async function ({
 }
 
 export const BLOG_POST_LIST_QUERY = groq`
-	*[_type == 'blog.post']|order(publishDate desc)[0...$limit]{
+	*[_type == 'blog.post' && status in ['published', 'approved']]|order(publishDate desc)[0...$limit]{
 		...,
 		${BLOG_POST_FRAGMENT_QUERY},
 		'slug': $blogDir + metadata.slug.current,

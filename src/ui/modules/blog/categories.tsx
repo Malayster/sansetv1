@@ -14,7 +14,7 @@ export default function ({
 	if (!categories) return null
 
 	return (
-		<ul className={cn('flex flex-wrap gap-x-[.5ch] p-0', className)}>
+		<ul className={cn('flex flex-wrap gap-1 p-0', className)}>
 			{categories.map((category, key) => (
 				<li className="shrink-0" key={key}>
 					{linked ? (
@@ -23,15 +23,13 @@ export default function ({
 								pathname: `/${ROUTES.blog}`,
 								query: { category: category.slug?.current },
 							}}
-							className="link"
+							className="category-chip"
 						>
 							{category.title}
 						</Link>
 					) : (
-						category.title
+						<span className="category-chip">{category.title}</span>
 					)}
-
-					{key < categories.length - 1 && <>, </>}
 				</li>
 			))}
 		</ul>

@@ -22,6 +22,6 @@ export default async function () {
 const CATEGORIES_QUERY = groq`
 	*[
 		_type == 'blog.category'
-		&& count(*[_type == 'blog.post' && references(^._id)]) > 0
+		&& count(*[_type == 'blog.post' && status in ['published', 'approved'] && references(^._id)]) > 0
 	]|order(title)
 `

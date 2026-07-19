@@ -29,6 +29,7 @@ export default async function (): Promise<MetadataRoute.Sitemap> {
 			},
 			'posts': *[
 				_type == 'blog.post'
+				&& status in ['published', 'approved']
 				&& defined(metadata.slug.current)
 				&& metadata.noIndex != true
 			]|order(publishDate desc){
