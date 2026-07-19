@@ -10,6 +10,9 @@
 import config from '@@/sanity.config'
 import { NextStudio } from 'next-sanity/studio'
 
+// Force Turbopack to bundle document actions (prevent tree-shaking)
+import '@/sanity/actions/approve'
+
 export { metadata, viewport } from 'next-sanity/studio'
 
 export default function () {

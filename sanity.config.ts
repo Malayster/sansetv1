@@ -5,7 +5,7 @@
  * Keep `basePath` in sync with `ROUTES.studio` in `src/lib/env.ts` and the App Router folder name.
  */
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import { defineConfig, useDocumentOperation, type DocumentActionComponent } from 'sanity'
+import { defineConfig, type DocumentActionComponent } from 'sanity'
 import { assist } from '@sanity/assist'
 import { codeInput } from '@sanity/code-input'
 import {
@@ -23,27 +23,7 @@ import presentation from './src/sanity/presentation'
 import { schema } from './src/sanity/schemaTypes'
 import structure from './src/sanity/structure'
 import JanaBeritaTool from './src/sanity/tools/jana-berita'
-
-/** Inlined approve action — must be in this file so Turbopack bundles it for client. */
-const ApproveAction: DocumentActionComponent = (props) => {
-	const doc = props.draft || props.published
-	if (!doc?.aiGenerated) return null
-	if (props.type !== 'blog.post') return null
-
-	const { patch } = useDocumentOperation(props.id, props.type)
-
-	return {
-		label: '✅ Luluskan',
-		tone: 'positive',
-		disabled: doc.status !== 'pending',
-		onHandle: () => {
-			patch.execute([{ set: { status: 'approved' } }])
-			props.onComplete()
-		},
-	}
-}
-ApproveAction.action = 'approve'
-ApproveAction.displayName = 'ApproveAction'
+import ApproveAction from './src/sanity/actions/approve'
 
 /** Tulis Semula AI — hantar artikel ke DeepSeek untuk rewrite penuh. */
 const TulisSemulaAction: DocumentActionComponent = (props) => {
