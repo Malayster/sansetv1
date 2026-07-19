@@ -8,7 +8,8 @@ import { client } from '@/sanity/lib/client'
 import type { BLOG_POST_LIST_QUERY_RESULT } from '@/sanity/types'
 import Date from '@/ui/modules/blog/date'
 import MegaFooterCta from '@/ui/mega-footer-cta'
-import type { BlogCategory } from '@/sanity/types'
+import Sidebar from '@/ui/sidebar'
+import type { BlogCategory, Sidebar as SidebarType } from '@/sanity/types'
 
 const FEATURED_QUERY = groq`*[_type == 'blog.post' && status in ['published', 'approved']]|order(publishDate desc)[0...20]{
   ...,
@@ -20,12 +21,18 @@ const FEATURED_QUERY = groq`*[_type == 'blog.post' && status in ['published', 'a
 
 const CATEGORIES_QUERY = groq`*[_type == 'blog.category']|order(title)`
 
+const PAGE_SIDEBAR_QUERY = groq`*[_type == 'page' && metadata.slug.current == 'index'][0]{leftSidebar, rightSidebar}`
+
 export default async function Homepage() {
   const blogDir = `/${ROUTES.blog}/`
-  const [posts, categories] = await Promise.all([
+  const [posts, categories, page] = await Promise.all([
     client.fetch<BLOG_POST_LIST_QUERY_RESULT>(FEATURED_QUERY, { blogDir }),
     client.fetch<{ _id: string; title: string; slug: { current: string } }[]>(CATEGORIES_QUERY),
+    client.fetch<{ leftSidebar: SidebarType | null; rightSidebar: SidebarType | null } | null>(PAGE_SIDEBAR_QUERY),
   ])
+
+  const leftSidebar = page?.leftSidebar
+  const rightSidebar = page?.rightSidebar
 
   const mainFeature = posts[0]
   const sidebarFeatures = posts.slice(1, 4)
@@ -131,42 +138,46 @@ export default async function Homepage() {
         <div className="grid md:grid-cols-[220px_1fr_300px] gap-6">
 
           {/* ─── LEFT SIDEBAR ─── */}
-          <aside className="hidden md:block space-y-5">
-            {/* Kategori */}
-            <div className="border border-kelabu rounded-lg overflow-hidden">
-              <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
-                📂 Kategori
-              </h4>
-              <div className="divide-y divide-kelabu">
-                {categories.slice(0, 12).map(cat => (
-                  <Link key={cat._id} href={`/${ROUTES.blog}?category=${cat.slug?.current}`}
-                    className="block px-4 py-2 text-xs text-hitam-muda hover:text-merah hover:bg-abu transition-colors">
-                    {cat.title}
-                  </Link>
-                ))}
+          {leftSidebar?.position ? (
+            <Sidebar modules={leftSidebar.modules} position={leftSidebar.position} headings={[]} className="md:w-auto" />
+          ) : (
+            <aside className="hidden md:block space-y-5">
+              {/* Kategori */}
+              <div className="border border-kelabu rounded-lg overflow-hidden">
+                <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
+                  📂 Kategori
+                </h4>
+                <div className="divide-y divide-kelabu">
+                  {categories.slice(0, 12).map(cat => (
+                    <Link key={cat._id} href={`/${ROUTES.blog}?category=${cat.slug?.current}`}
+                      className="block px-4 py-2 text-xs text-hitam-muda hover:text-merah hover:bg-abu transition-colors">
+                      {cat.title}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Berita Terkini */}
-            <div className="border border-kelabu rounded-lg overflow-hidden">
-              <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
-                🕐 Berita Terkini
-              </h4>
-              <div className="divide-y divide-kelabu">
-                {posts.slice(0, 8).map(post => (
-                  <Link key={post._id} href={post.slug}
-                    className="block px-4 py-2 group">
-                    <span className="text-[11px] leading-snug text-hitam-muda group-hover:text-merah transition-colors line-clamp-2">
-                      {post.title}
-                    </span>
-                    <p className="text-[10px] text-kelabu-gelap mt-0.5">
-                      <Date date={post.publishDate} />
-                    </p>
-                  </Link>
-                ))}
+              {/* Berita Terkini */}
+              <div className="border border-kelabu rounded-lg overflow-hidden">
+                <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
+                  🕐 Berita Terkini
+                </h4>
+                <div className="divide-y divide-kelabu">
+                  {posts.slice(0, 8).map(post => (
+                    <Link key={post._id} href={post.slug}
+                      className="block px-4 py-2 group">
+                      <span className="text-[11px] leading-snug text-hitam-muda group-hover:text-merah transition-colors line-clamp-2">
+                        {post.title}
+                      </span>
+                      <p className="text-[10px] text-kelabu-gelap mt-0.5">
+                        <Date date={post.publishDate} />
+                      </p>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-          </aside>
+            </aside>
+          )}
 
           {/* ─── MAIN CONTENT ─── */}
           <div className="min-w-0 space-y-8">
@@ -282,57 +293,61 @@ export default async function Homepage() {
           </div>
 
           {/* ─── RIGHT SIDEBAR ─── */}
-          <aside className="hidden md:block space-y-5">
-            {/* Popular */}
-            <div className="border border-kelabu rounded-lg overflow-hidden">
-              <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
-                🔥 Paling Popular
-              </h4>
-              <ol className="divide-y divide-kelabu">
-                {posts.slice(0, 10).map((post, i) => (
-                  <li key={post._id} className="flex items-start gap-3 px-4 py-2.5">
-                    <span className="text-xl font-bold text-merah/30 leading-none shrink-0 w-6">{i + 1}</span>
-                    <Link href={post.slug} className="text-[11px] leading-snug hover:text-merah transition-colors line-clamp-2">
-                      {post.title}
-                    </Link>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            {/* Gallery Image Preview */}
-            {posts.slice(0, 4).filter(p => p.metadata?.image).length > 0 && (
+          {rightSidebar?.position ? (
+            <Sidebar modules={rightSidebar.modules} position={rightSidebar.position} headings={[]} className="md:w-auto" />
+          ) : (
+            <aside className="hidden md:block space-y-5">
+              {/* Popular */}
               <div className="border border-kelabu rounded-lg overflow-hidden">
                 <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
-                  🖼️ Galeri
+                  🔥 Paling Popular
                 </h4>
-                <div className="grid grid-cols-2 gap-1 p-1">
-                  {posts.slice(0, 4).filter(p => p.metadata?.image).map(post => (
-                    <Link key={post._id} href={post.slug} className="block aspect-square overflow-hidden">
-                      <Image src={urlFor(post.metadata.image!).width(200).height(200).url()}
-                        alt="" width={200} height={200}
-                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+                <ol className="divide-y divide-kelabu">
+                  {posts.slice(0, 10).map((post, i) => (
+                    <li key={post._id} className="flex items-start gap-3 px-4 py-2.5">
+                      <span className="text-xl font-bold text-merah/30 leading-none shrink-0 w-6">{i + 1}</span>
+                      <Link href={post.slug} className="text-[11px] leading-snug hover:text-merah transition-colors line-clamp-2">
+                        {post.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              {/* Gallery Image Preview */}
+              {posts.slice(0, 4).filter(p => p.metadata?.image).length > 0 && (
+                <div className="border border-kelabu rounded-lg overflow-hidden">
+                  <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
+                    🖼️ Galeri
+                  </h4>
+                  <div className="grid grid-cols-2 gap-1 p-1">
+                    {posts.slice(0, 4).filter(p => p.metadata?.image).map(post => (
+                      <Link key={post._id} href={post.slug} className="block aspect-square overflow-hidden">
+                        <Image src={urlFor(post.metadata.image!).width(200).height(200).url()}
+                          alt="" width={200} height={200}
+                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Tag Cloud */}
+              <div className="border border-kelabu rounded-lg overflow-hidden">
+                <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
+                  🏷️ Tag Popular
+                </h4>
+                <div className="flex flex-wrap gap-1.5 p-4">
+                  {categories.slice(0, 18).map(cat => (
+                    <Link key={cat._id} href={`/${ROUTES.blog}?category=${cat.slug?.current}`}
+                      className="px-2.5 py-1 text-[10px] bg-abu border border-kelabu text-hitam-muda hover:text-merah hover:border-merah transition-colors rounded-sm">
+                      {cat.title}
                     </Link>
                   ))}
                 </div>
               </div>
-            )}
-
-            {/* Tag Cloud */}
-            <div className="border border-kelabu rounded-lg overflow-hidden">
-              <h4 className="font-bold text-sm text-putih bg-merah px-4 py-2.5 uppercase tracking-wide">
-                🏷️ Tag Popular
-              </h4>
-              <div className="flex flex-wrap gap-1.5 p-4">
-                {categories.slice(0, 18).map(cat => (
-                  <Link key={cat._id} href={`/${ROUTES.blog}?category=${cat.slug?.current}`}
-                    className="px-2.5 py-1 text-[10px] bg-abu border border-kelabu text-hitam-muda hover:text-merah hover:border-merah transition-colors rounded-sm">
-                    {cat.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </aside>
+            </aside>
+          )}
         </div>
       </section>
 
