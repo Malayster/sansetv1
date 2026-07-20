@@ -31,6 +31,8 @@ export default function Dashboard() {
 	const [loading, setLoading] = useState(true)
 	const [error, setError] = useState('')
 	const [chartView, setChartView] = useState<'week' | 'month'>('week')
+	const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
+	const [approving, setApproving] = useState<string | null>(null)
 
 	function fetchData() {
 		setLoading(true)
@@ -176,7 +178,13 @@ export default function Dashboard() {
 					{data.aiPendingList.length > 0 ? (
 						<div className="space-y-3">
 							{data.aiPendingList.map((a, i) => (
-								<div key={a._id} className="flex items-start gap-3 p-3 bg-putih/5 rounded-lg group">
+								<div
+									key={a._id}
+									onClick={() => setSelectedArticle(selectedArticle === a._id ? null : a._id)}
+									className={`flex items-start gap-3 p-3 rounded-lg group cursor-pointer transition ${
+										selectedArticle === a._id ? 'bg-kuning/10 border border-kuning/30' : 'bg-putih/5 hover:bg-putih/10 border border-transparent'
+									}`}
+								>
 									<span className="text-putih/20 text-sm w-5">{i + 1}.</span>
 									<div className="flex-1 min-w-0">
 										<p className="text-putih/80 text-sm truncate">{a.title}</p>
@@ -187,19 +195,48 @@ export default function Dashboard() {
 											<span className="text-[10px] text-putih/30">{a.publishDate}</span>
 										</div>
 									</div>
-									<button
-										onClick={async () => {
-											await fetch('/api/approve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: a._id }) })
-											fetchData()
-										}}
-										className="shrink-0 px-2.5 py-1 text-xs bg-green-500/15 hover:bg-green-500/25 text-green-400 rounded-lg transition opacity-0 group-hover:opacity-100"
-									>
-										✅ Luluskan
-									</button>
+									{selectedArticle === a._id && (
+										<span className="shrink-0 text-xs text-kuning animate-pulse">📌 dipilih</span>
+									)}
 								</div>
 							))}
 						</div>
 					) : <p className="text-putih/30 text-center py-6">✅ Tiada artikel menunggu kelulusan.</p>}
+
+					{/* Floating Approve Button */}
+					{selectedArticle && (
+						<div className="fixed bottom-8 right-8 z-50">
+							<button
+								onClick={async () => {
+									setApproving(selectedArticle)
+									await fetch('/api/approve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: selectedArticle }) })
+									setApproving(null)
+									setSelectedArticle(null)
+									fetchData()
+								}}
+								disabled={approving === selectedArticle}
+								className="flex items-center gap-2.5 px-5 py-3.5 rounded-full bg-green-500 hover:bg-green-400 text-putih font-semibold text-sm shadow-lg shadow-green-500/30 hover:shadow-green-400/40 transition-all active:scale-95 disabled:opacity-50 disabled:cursor-wait"
+							>
+								{approving === selectedArticle ? (
+									<svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+										<circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
+										<path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+									</svg>
+								) : (
+									<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+									</svg>
+								)}
+								<span>✅ Terbitkan Berita</span>
+							</button>
+							<button
+								onClick={(e) => { e.stopPropagation(); setSelectedArticle(null) }}
+								className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-putih/20 hover:bg-putih/40 text-putih/60 hover:text-putih text-xs flex items-center justify-center transition"
+							>
+								✕
+							</button>
+						</div>
+					)}
 				</div>
 
 				{/* Search + Demographics */}
