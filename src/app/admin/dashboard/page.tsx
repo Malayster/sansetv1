@@ -202,41 +202,6 @@ export default function Dashboard() {
 							))}
 						</div>
 					) : <p className="text-putih/30 text-center py-6">✅ Tiada artikel menunggu kelulusan.</p>}
-
-					{/* Floating Approve Button */}
-					{selectedArticle && (
-						<div className="fixed bottom-8 right-8 z-50">
-							<button
-								onClick={async () => {
-									setApproving(selectedArticle)
-									await fetch('/api/approve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: selectedArticle }) })
-									setApproving(null)
-									setSelectedArticle(null)
-									fetchData()
-								}}
-								disabled={approving === selectedArticle}
-								className="flex items-center gap-2.5 px-5 py-3.5 rounded-full bg-green-500 hover:bg-green-400 text-putih font-semibold text-sm shadow-lg shadow-green-500/30 hover:shadow-green-400/40 transition-all active:scale-95 disabled:opacity-50 disabled:cursor-wait"
-							>
-								{approving === selectedArticle ? (
-									<svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
-										<circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
-										<path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
-									</svg>
-								) : (
-									<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-										<path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
-									</svg>
-								)}
-								<span>✅ Terbitkan Berita</span>
-							</button>
-							<button
-								onClick={(e) => { e.stopPropagation(); setSelectedArticle(null) }}
-								className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-putih/20 hover:bg-putih/40 text-putih/60 hover:text-putih text-xs flex items-center justify-center transition"
-							>
-								✕
-							</button>
-						</div>
-					)}
 				</div>
 
 				{/* Search + Demographics */}
@@ -318,6 +283,61 @@ export default function Dashboard() {
 				<p className="text-center text-putih/20 text-xs pb-8">Dashboard dikemaskini secara langsung • Data tracking bermula dari hari ini</p>
 			</div>
 		</div>
+
+		{/* Floating Action Buttons */}
+		{selectedArticle && !approving && (
+			<div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-3">
+				<button
+					onClick={() => setSelectedArticle(null)}
+					className="w-10 h-10 rounded-full bg-putih/10 hover:bg-putih/25 text-putih/60 hover:text-putih text-sm flex items-center justify-center transition shadow-lg backdrop-blur-sm border border-putih/10"
+					title="Batal"
+				>
+					✕
+				</button>
+
+				<button
+					onClick={async () => {
+						setApproving(selectedArticle)
+						await fetch('/api/approve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: selectedArticle }) })
+						setApproving(null)
+						setSelectedArticle(null)
+						fetchData()
+					}}
+					className="flex items-center gap-2.5 px-5 py-3 rounded-full bg-kuning hover:bg-kuning/90 text-hitam font-semibold text-sm shadow-lg shadow-kuning/20 hover:shadow-kuning/30 transition-all active:scale-95"
+				>
+					<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+						<path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+					</svg>
+					<span>✅ Luluskan</span>
+				</button>
+
+				<button
+					onClick={async () => {
+						setApproving(selectedArticle)
+						await fetch('/api/publish', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: selectedArticle }) })
+						setApproving(null)
+						setSelectedArticle(null)
+						fetchData()
+					}}
+					className="flex items-center gap-2.5 px-5 py-3 rounded-full bg-green-500 hover:bg-green-400 text-putih font-semibold text-sm shadow-lg shadow-green-500/30 hover:shadow-green-400/40 transition-all active:scale-95"
+				>
+					<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+						<path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m0 0l6.75-6.75M12 19.5l-6.75-6.75"/>
+					</svg>
+					<span>📤 Terbitkan</span>
+				</button>
+			</div>
+		)}
+
+		{approving && (
+			<div className="fixed bottom-8 right-8 z-50 flex items-center gap-3 px-5 py-3 rounded-full bg-putih/10 backdrop-blur-sm border border-putih/10 shadow-lg">
+				<svg className="animate-spin h-5 w-5 text-kuning" viewBox="0 0 24 24">
+					<circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"/>
+					<path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+				</svg>
+				<span className="text-putih/70 text-sm">Memproses...</span>
+			</div>
+		)}
 	)
 }
 
