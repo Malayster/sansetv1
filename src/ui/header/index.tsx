@@ -6,7 +6,7 @@ export default async function Header() {
 const site = await getSite()
 
 return (
-<header role="banner" className="bg-gradient-to-r from-yellow-400 via-amber-500 to-red-500">
+<header role="banner" className="sticky top-0 z-50 bg-gradient-to-r from-red-700 via-red-600 to-amber-500">
 <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between py-3">
 <div className="flex items-center gap-6">
 <Logo className="shrink-0 [&_*]:text-black" />
@@ -33,17 +33,17 @@ async function MarqueeBar() {
 const { client } = await import('@/sanity/lib/client')
 const { groq } = await import('next-sanity')
 const headlines = await client.fetch<string[]>(
-groq`*[_type == 'blog.post' && status in ['published', 'approved']]|order(publishDate desc)[0...15].title`
+groq`*[_type == 'blog.post' && status in ['published', 'approved']]|order(publishDate desc)[0...3].title`
 ).catch(() => [] as string[])
 
 if (!headlines.length) return null
 
 return (
-<div className="bg-black/10 border-t border-black/10 overflow-hidden">
-<div className="flex animate-marquee whitespace-nowrap py-1.5 text-xs text-black/60 font-medium">
+<div className="bg-black/20 border-t border-white/10 overflow-hidden">
+<div className="flex animate-marquee whitespace-nowrap py-1.5 text-xs text-white/80 font-medium">
 {[...headlines, ...headlines].map((h, i) => (
 <span key={i} className="inline-flex items-center gap-2 mx-4">
-<span className="inline-block w-1 h-1 rounded-full bg-black/30" />
+<span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-300" />
 {h}
 </span>
 ))}
