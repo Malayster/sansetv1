@@ -4,9 +4,11 @@ import blogCategory from './documents/blog.category'
 import blogPost from './documents/blog.post'
 import analyticsDaily from './documents/analytics.daily'
 import form from './documents/form'
+import formSubmission from './documents/form.submission'
 import globalModule from './documents/global-module'
 import logo from './documents/logo'
 import navigation from './documents/navigation'
+import newsletterSubscriber from './documents/newsletter.subscriber'
 import page from './documents/page'
 import person from './documents/person'
 import quote from './documents/quote'
@@ -52,7 +54,9 @@ export const schema: SchemaPluginOptions = {
 		blogPost,
 analyticsDaily,
 		redirect,
-		form,
+					form,
+			formSubmission,
+			newsletterSubscriber,
 		// references
 		blogCategory,
 		logo,

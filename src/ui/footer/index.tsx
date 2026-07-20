@@ -2,6 +2,7 @@ import { PortableText } from 'next-sanity'
 import { getSite } from '@/sanity/lib/queries'
 import Logo from '@/ui/logo'
 import CustomHTML from '@/ui/modules/custom-html'
+import NewsletterForm from '@/ui/newsletter-form'
 import SocialNavigation from '@/ui/social-navigation'
 import Navigation from './navigation'
 
@@ -54,7 +55,20 @@ export default async function () {
 					</div>
 				</div>
 
-				{/* Bottom bar */}
+									{/* Newsletter */}
+					<div className="border-t border-putih/10 pt-8 mb-8">
+						<div className="max-w-md mx-auto text-center space-y-3">
+							<h4 className="text-merah text-sm font-bold uppercase">
+								📬 Langgan Newsletter
+							</h4>
+							<p className="text-putih/50 text-xs">
+								Dapatkan berita terkini terus ke inbox anda. Tiada spam.
+							</p>
+							<NewsletterForm source="footer" />
+						</div>
+					</div>
+
+					{/* Bottom bar */}
 				<div className="border-t border-putih/10 pt-6 text-center text-xs text-putih/40">
 					<div className="flex flex-wrap items-center justify-center gap-3 mb-1">
 						<a href="/" className="hover:text-merah transition-colors">Beranda</a>

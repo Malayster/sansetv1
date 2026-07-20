@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { stegaClean } from 'next-sanity'
 import { ROUTES } from '@/lib/env'
 import { client } from '@/sanity/lib/client'
+import NewsletterForm from '@/ui/newsletter-form'
 import type { ToCHeadings } from '@/ui/table-of-contents'
 
 const TRENDING_QUERY = groq`*[_type == 'blog.post' && status in ['published', 'approved']]|order(publishDate desc)[0...6]{
@@ -84,6 +85,16 @@ export default async function ArticleSidebarRight({
         >
           WhatsApp Kami
         </a>
+      </div>
+
+      {/* ====== NEWSLETTER ====== */}
+      <div className="border border-merah/20 bg-gradient-to-b from-merah/5 to-white rounded-lg p-4">
+        <div className="text-2xl mb-2 text-center">📬</div>
+        <h4 className="font-bold text-sm mb-1 text-hitam text-center">Langgan Newsletter</h4>
+        <p className="text-[11px] text-hitam-muda mb-3 text-center">
+          Dapatkan berita terus ke inbox anda.
+        </p>
+        <NewsletterForm source="sidebar" />
       </div>
 
       {/* ====== IKLAN ====== */}
