@@ -1,7 +1,6 @@
 import { getSite } from '@/sanity/lib/queries'
 import Logo from '@/ui/logo'
-import MobileToggle from './mobile-toggle'
-import Navigation from './navigation'
+import NavBar from './navbar'
 
 export default async function Header() {
 const site = await getSite()
@@ -11,11 +10,10 @@ return (
 <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between py-3">
 <div className="flex items-center gap-6">
 <Logo className="shrink-0 [&_*]:text-black" />
-<MobileToggle />
 </div>
 
-<div className="hidden md:flex items-center gap-1">
-<Navigation />
+<div className="flex items-center gap-1">
+<NavBar />
 </div>
 
 <div className="hidden md:flex items-center gap-3">
