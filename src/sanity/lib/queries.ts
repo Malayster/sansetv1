@@ -1,54 +1,15 @@
 import { groq } from 'next-sanity'
 import type { SITE_QUERY_RESULT } from '@/sanity/types'
+import {
+	LINK_QUERY,
+	NAVIGATION_QUERY,
+	MODULES_QUERY,
+} from '@/sanity/queries'
 import { sanityFetchLive } from './live'
 
 /* fragments */
 
-// @sanity-typegen-ignore
-const LINK_QUERY = groq`
-	...,
-	type == 'internal' => {
-		internal->{
-			_type,
-			title,
-			'slug': select(
-				metadata.slug.current == 'index' => '/',
-				'/' + metadata.slug.current
-			)
-		}
-	}
-`
-
-// @sanity-typegen-ignore
-const NAVIGATION_QUERY = groq`
-	...,
-	items[]{
-		${LINK_QUERY},
-		defined(link) => { link{ ${LINK_QUERY} } },
-		defined(links[]) => { links[]{ ${LINK_QUERY} } },
-		_type == 'megamenu' => {
-			defined(link) => { link{ ${LINK_QUERY} } },
-			items[]{
-				...,
-				_type == 'link' => { ${LINK_QUERY} },
-				_type == 'link.list' => {
-					defined(link) => { link{ ${LINK_QUERY} } },
-					links[]{ ${LINK_QUERY} }
-				},
-				_type == 'link.card' => {
-					defined(link) => { link{ ${LINK_QUERY} } },
-					image{
-						...,
-						asset->{
-							...,
-							metadata
-						}
-					}
-				}
-			}
-		}
-	}
-`
+export { LINK_QUERY, NAVIGATION_QUERY, MODULES_QUERY } from '@/sanity/queries'
 
 const SITE_QUERY = groq`*[_type == 'site'][0]{
 	...,
@@ -74,20 +35,6 @@ export const GLOBAL_MODULE_PATH_QUERY = groq`
 `
 
 // @sanity-typegen-ignore
-const SIDEBAR_QUERY = groq`
-	...,
-	modules[]{
-		...,
-		_type == 'callout' => {
-			ctas[]{
-				...,
-				link{ ${LINK_QUERY} }
-			}
-		}
-	}
-`
-
-// @sanity-typegen-ignore
 export const BLOG_POST_FRAGMENT_QUERY = groq`
 	'readTime': length(string::split(pt::text(content), ' ')) / 200,
 	categories[]->{
@@ -103,74 +50,6 @@ export const BLOG_POST_FRAGMENT_QUERY = groq`
 	}
 `
 
-// @sanity-typegen-ignore
-export const MODULES_QUERY = groq`
-	...,
-	ctas[]{
-		...,
-		link{ ${LINK_QUERY} }
-	},
-	sidebar{ ${SIDEBAR_QUERY} },
-	_type == 'form-module' => {
-		form->
-	},
-	_type == 'breadcrumbs' => {
-		crumbs[]{ ${LINK_QUERY} }
-	},
-	_type == 'card-list' => {
-		cards[]{
-			...,
-			ctas[]{
-				...,
-				link{ ${LINK_QUERY} }
-			}
-		}
-	},
-	_type == 'logo-list' => {
-		logos[]->
-	},
-	_type == 'person-list' => {
-		people[]->
-	},
-	_type == 'prose' => {
-		content[]{
-			...,
-			_type == 'image' => {
-				...,
-				asset->{
-					...,
-					metadata
-				}
-			}
-		},
-		'headings': content[style in ['h2', 'h3', 'h4', 'h5', 'h6']]{
-			style,
-			'text': pt::text(@)
-		}
-	},
-	_type == 'quote-list' => {
-		quotes[]->
-	},
-	_type == 'tabbed-content' => {
-		tabs[]{
-			...,
-			content[]{
-				...,
-				_type == 'image' => {
-					...,
-					asset->{
-						...,
-						metadata
-					}
-				}
-		},
-		ctas[]{
-			...,
-			link{ ${LINK_QUERY} }
-			}
-		}
-	},
-`
 
 /* queries */
 

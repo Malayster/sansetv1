@@ -11,7 +11,9 @@ export default function AnalyticsTracker() {
 		if (tracked.current.has(pathname)) return
 		tracked.current.add(pathname)
 
-		const slug = pathname.startsWith('/berita/') ? pathname.replace('/berita/', '') : pathname
+		const slug = pathname.startsWith('/berita/')
+			? pathname.replace('/berita/', '')
+			: pathname
 
 		fetch('/api/track', {
 			method: 'POST',

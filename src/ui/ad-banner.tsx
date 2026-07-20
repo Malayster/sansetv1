@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import type { AdCampaign } from '@/lib/ad-server'
 
 export default function AdBanner({
@@ -59,7 +60,7 @@ export default function AdBanner({
 					rel="noopener noreferrer sponsored"
 					onClick={handleClick}
 				>
-					<img
+					<Image
 						src={`${imgUrl}?w=728&h=90&fit=max&auto=format`}
 						alt={ad.title}
 						className="mx-auto rounded max-w-full h-auto"
@@ -84,7 +85,7 @@ export default function AdBanner({
 						rel="noopener noreferrer sponsored"
 						onClick={handleClick}
 					>
-						<img
+						<Image
 							src={`${imgUrl}?w=300&h=250&fit=max&auto=format`}
 							alt={ad.title}
 							className="mx-auto rounded"
@@ -109,7 +110,7 @@ export default function AdBanner({
 					rel="noopener noreferrer sponsored"
 					onClick={handleClick}
 				>
-					<img
+					<Image
 						src={`${imgUrl}?w=600&h=200&fit=max&auto=format`}
 						alt={ad.title}
 						className="mx-auto rounded max-w-full h-auto"
@@ -140,7 +141,7 @@ export default function AdBanner({
 					onClick={handleClick}
 					className="block"
 				>
-					<img
+					<Image
 						src={`${imgUrl}?w=320&h=50&fit=max&auto=format`}
 						alt={ad.title}
 						className="mx-auto"
