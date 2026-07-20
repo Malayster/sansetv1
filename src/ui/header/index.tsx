@@ -24,30 +24,6 @@ return (
 </div>
 </div>
 
-<MarqueeBar />
-</header>
-)
-}
-
-async function MarqueeBar() {
-const { client } = await import('@/sanity/lib/client')
-const { groq } = await import('next-sanity')
-const headlines = await client.fetch<string[]>(
-groq`*[_type == 'blog.post' && status in ['published', 'approved']]|order(publishDate desc)[0...3].title`
-).catch(() => [] as string[])
-
-if (!headlines.length) return null
-
-return (
-<div className="bg-black/20 border-t border-white/10 overflow-hidden">
-<div className="flex animate-marquee whitespace-nowrap py-1.5 text-xs text-white/80 font-medium">
-{[...headlines, ...headlines].map((h, i) => (
-<span key={i} className="inline-flex items-center gap-2 mx-4">
-<span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-300" />
-{h}
-</span>
-))}
-</div>
-</div>
-)
+	</header>
+	)
 }
