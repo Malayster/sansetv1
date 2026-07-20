@@ -6,7 +6,8 @@ import { sanityFetchLive } from '@/sanity/lib/live'
 import { getSite } from '@/sanity/lib/queries'
 import type { OG_QUERY_RESULT } from '@/sanity/types'
 
-const { hostname } = new URL(process.env.NEXT_PUBLIC_BASE_URL!)
+const OG_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || `http://${process.env.VERCEL_URL || 'localhost:3000'}`
+const { hostname } = new URL(OG_BASE_URL)
 const blogDir = `${ROUTES.blog}/`
 
 const OG_QUERY = groq`*[_type == $type && metadata.slug.current == $slug][0]{
