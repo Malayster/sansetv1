@@ -34,7 +34,8 @@ const SYSTEM_PROMPT = `Anda seorang wartawan profesional Malaysia menulis untuk 
 }
 
 Kategori yang sah: nasional, politik, ekonomi, dunia, teknologi, sukan, pendidikan, hiburan, kesihatan, gaya-hidup, bisnes, alam-sekitar. Pilih 2-3 paling sesuai.
-Tulis 3-5 perenggan sahaja.
+Tulis artikel penuh sekurang-kurangnya 500 patah perkataan (7-10 perenggan).
+Setiap perenggan minimum 3-4 ayat. Kembangkan idea dengan analisis, konteks, dan impak.
 Untuk imageKeywords, berikan kata kunci carian gambar dalam Bahasa Inggeris (contoh: "malaysia economy growth" atau "football world cup final").`;
 
 export async function rewriteArticle(
@@ -62,7 +63,7 @@ export async function rewriteArticle(
 				},
 			],
 			temperature: 0.7,
-			max_tokens: 2048,
+			max_tokens: 4096,
 		}),
 	})
 

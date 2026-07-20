@@ -23,7 +23,7 @@ export async function POST(req: Request) {
 		const bodyText = content
 			.map((b: any) => b.children?.map((c: any) => c.text).join(' ') || '')
 			.join('\n')
-			.slice(0, 3000)
+			.slice(0, 5000)
 
 		const rewritten = await rewriteArticle(title, bodyText, 'Tulis Semula AI')
 
