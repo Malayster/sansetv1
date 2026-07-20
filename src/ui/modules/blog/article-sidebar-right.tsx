@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { stegaClean } from 'next-sanity'
 import { ROUTES } from '@/lib/env'
 import { client } from '@/sanity/lib/client'
+import AdBanner from '@/ui/ad-banner'
 import NewsletterForm from '@/ui/newsletter-form'
 import type { ToCHeadings } from '@/ui/table-of-contents'
 
@@ -98,14 +99,7 @@ export default async function ArticleSidebarRight({
       </div>
 
       {/* ====== IKLAN ====== */}
-      <div className="border border-kelabu/60 rounded-lg overflow-hidden bg-abu/30">
-        <div className="text-center py-6 px-4">
-          <span className="text-[10px] text-kelabu-gelap uppercase tracking-widest">Iklan</span>
-          <div className="mt-2 h-[250px] bg-white border border-dashed border-kelabu rounded flex items-center justify-center">
-            <span className="text-xs text-kelabu-gelap">AdSense 300x250</span>
-          </div>
-        </div>
-      </div>
+      <AdBanner position="sidebar" />
     </aside>
   )
 }

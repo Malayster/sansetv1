@@ -2,6 +2,7 @@ import type { SchemaPluginOptions } from 'sanity'
 // documents
 import blogCategory from './documents/blog.category'
 import blogPost from './documents/blog.post'
+import adCampaign from './documents/ad.campaign'
 import analyticsDaily from './documents/analytics.daily'
 import form from './documents/form'
 import formSubmission from './documents/form.submission'
