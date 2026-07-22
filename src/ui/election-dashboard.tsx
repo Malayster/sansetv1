@@ -21,15 +21,11 @@ export default function ElectionDashboard({
 
   return (
     <div>
-      <div className="mb-6">
-        <h1 className="font-serif text-[28px] font-bold text-[#111]">{election.electionName}</h1>
-        {election.summary && <p className="text-[13px] text-gray-500 mt-1">{election.summary}</p>}
-        {election.electionDate && (
-          <p className="text-[11px] text-gray-400 mt-1">
-            Tarikh: {new Date(election.electionDate).toLocaleDateString('ms')}
-          </p>
-        )}
-      </div>
+      {election.electionDate && (
+        <p className="text-[11px] text-gray-400 -mt-3 mb-4">
+          Tarikh mengundi: {new Date(election.electionDate).toLocaleDateString('ms', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      )}
 
       {/* State Summary Bar */}
       {election.states && election.states.length > 0 && (

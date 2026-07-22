@@ -38,6 +38,10 @@ const mockSentiment: Record<string, any> = {
   'P002': { score: 45, label: 'neutral', summary: 'Sentimen bercampur — isu kos sara hidup membimbangkan pengundi.', updatedAt: '2026-07-21T08:00:00Z' },
   'P003': { score: 28, label: 'negatif', summary: 'Sentimen negatif akibat skandal rasuah tempatan.', updatedAt: '2026-07-20T14:00:00Z' },
   'P004': { score: 85, label: 'positif', summary: 'Populariti tinggi calon penyandang di kawasan ini.', updatedAt: '2026-07-22T09:00:00Z' },
+  'N01': { score: 65, label: 'positif', summary: 'Projek pembangunan luar bandar meningkatkan keyakinan pengundi.', updatedAt: '2026-07-22T10:00:00Z' },
+  'N02': { score: 48, label: 'neutral', summary: 'Sentimen bercampur — isu kos sara hidup di kawasan luar bandar.', updatedAt: '2026-07-21T08:00:00Z' },
+  'N03': { score: 38, label: 'negatif', summary: 'Janji-janji tidak ditunaikan menyebabkan kekecewaan penduduk.', updatedAt: '2026-07-20T14:00:00Z' },
+  'N04': { score: 71, label: 'positif', summary: 'Populariti calon penyandang kekal kukuh di kawasan ini.', updatedAt: '2026-07-22T09:00:00Z' },
 }
 
 const mockPredictions: Record<string, any[]> = {
@@ -57,16 +61,34 @@ const mockPredictions: Record<string, any[]> = {
     { candidateName: 'Noraini Hassan', party: 'BN', winRate: 80, factors: 'Populariti penyandang', generatedAt: '2026-07-22T00:00:00Z' },
     { candidateName: 'Zulkifli Ahmad', party: 'Bebas', winRate: 20, factors: 'Undi protes', generatedAt: '2026-07-22T00:00:00Z' },
   ],
+  'N01': [
+    { candidateName: 'Ahmad Razak', party: 'BN', winRate: 60, factors: 'Pengalaman, luar bandar', generatedAt: '2026-07-22T00:00:00Z' },
+    { candidateName: 'Farid Iskandar', party: 'PH', winRate: 40, factors: 'Sokongan belia', generatedAt: '2026-07-22T00:00:00Z' },
+  ],
+  'N02': [
+    { candidateName: 'Siti Aminah', party: 'BN', winRate: 55, factors: 'Populariti penyandang', generatedAt: '2026-07-21T00:00:00Z' },
+    { candidateName: 'Chong Wei Keat', party: 'PH', winRate: 45, factors: 'Isu kos sara hidup', generatedAt: '2026-07-21T00:00:00Z' },
+  ],
+  'N03': [
+    { candidateName: 'Ismail bin Kassim', party: 'PN', winRate: 58, factors: 'Gelombang perubahan', generatedAt: '2026-07-20T00:00:00Z' },
+    { candidateName: 'Halimah Yusof', party: 'BN', winRate: 42, factors: 'Skandal rasuah', generatedAt: '2026-07-20T00:00:00Z' },
+  ],
+  'N04': [
+    { candidateName: 'Noraini Hassan', party: 'BN', winRate: 75, factors: 'Populariti penyandang', generatedAt: '2026-07-22T00:00:00Z' },
+    { candidateName: 'Azlan Shah', party: 'Bebas', winRate: 25, factors: 'Undi protes', generatedAt: '2026-07-22T00:00:00Z' },
+  ],
 }
 
 function getMockValue(key: string) {
   if (key.startsWith('sentiment:')) {
     const code = key.split(':')[1]
-    return mockSentiment[code] || { score: 50, label: 'neutral', summary: 'Tiada data sentimen tersedia.', updatedAt: new Date().toISOString() }
+    if (mockSentiment[code]) return mockSentiment[code]
+    return { score: 50, label: 'neutral', summary: 'Tiada data sentimen tersedia.', updatedAt: new Date().toISOString() }
   }
   if (key.startsWith('prediction:')) {
     const code = key.split(':')[1]
-    return mockPredictions[code] || []
+    if (mockPredictions[code]) return mockPredictions[code]
+    return [{ candidateName: 'N/A', party: '-', winRate: 0, factors: 'Data belum tersedia', generatedAt: new Date().toISOString() }]
   }
   return null
 }
