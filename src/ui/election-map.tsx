@@ -5,10 +5,15 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { RegionWithData } from '@/types/election'
 
-// === Roblox Cartoon Palette (bold, saturated, kid-friendly) ===
+// === n8n-inspired palette — muted, sophisticated, works on dark bg ===
 const partyColors: Record<string, string> = {
-  BN: '#4FC3F7', PH: '#FF6B6B', PN: '#81C784', GPS: '#FFD54F',
-  WARISAN: '#7986CB', GRS: '#FF8A65', Bebas: '#B0BEC5',
+  BN: '#60a5fa',    // blue-400
+  PH: '#f87171',    // red-400
+  PN: '#34d399',    // emerald-400
+  GPS: '#fbbf24',   // amber-400
+  WARISAN: '#a78bfa', // violet-400
+  GRS: '#fb923c',   // orange-400
+  Bebas: '#9ca3af',  // gray-400
 }
 
 function regionColor(r: RegionWithData): string {
@@ -21,17 +26,17 @@ function regionColor(r: RegionWithData): string {
         const v = c.lastElection?.votes ?? c.lastElection?.percentage ?? -1
         if (v > best) { best = v; winner = c }
       }
-      return partyColors[winner.party] || '#CE93D8'
+      return partyColors[winner.party] || '#a78bfa'
     }
-    return '#CFD8DC'
+    return '#1e293b'
   }
   if (r.sentiment?.score != null) {
     const s = r.sentiment.score
-    if (s >= 60) return '#81C784'
-    if (s >= 40) return '#FFD54F'
-    return '#FF6B6B'
+    if (s >= 60) return '#34d399'
+    if (s >= 40) return '#fbbf24'
+    return '#f87171'
   }
-  return '#CFD8DC'
+  return '#1e293b'
 }
 
 function polygonPath(geoJsonFile: string): string {
@@ -52,6 +57,7 @@ const ElectionMap = memo(function ElectionMap({
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<L.Map | null>(null)
   const layerRef = useRef<L.GeoJSON | null>(null)
+  const selectedLayerRef = useRef<L.Path | null>(null)
   const [geoData, setGeoData] = useState<any>(null)
   const geoUrl = useMemo(() => `/geojson/${polygonPath(geoJsonFile)}`, [geoJsonFile])
   const [hoveredCode, setHoveredCode] = useState<string | null>(null)
@@ -68,7 +74,7 @@ const ElectionMap = memo(function ElectionMap({
     return m
   }, [regions])
 
-  // Initialise Leaflet map — NO tiles, just solid background
+  // Initialise Leaflet map
   useEffect(() => {
     if (!containerRef.current || !geoData || mapRef.current) return
 
@@ -82,25 +88,33 @@ const ElectionMap = memo(function ElectionMap({
       zoomDelta: 0.5,
     })
 
-    // Set solid pastel background (no tiles)
+    // Dark background (matching n8n deep bg)
     const bgDiv = document.createElement('div')
-    bgDiv.style.cssText = 'position:absolute;inset:0;background:#bae8ff;z-index:-1'
+    bgDiv.style.cssText = 'position:absolute;inset:0;background:#0a0a0f;z-index:-1'
     containerRef.current.appendChild(bgDiv)
 
-    // Custom zoom control
+    // Subtle dot-grid overlay
+    const gridDiv = document.createElement('div')
+    gridDiv.style.cssText = `
+      position:absolute;inset:0;z-index:-1;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 24px 24px;
+    `
+    containerRef.current.appendChild(gridDiv)
+
+    // Clean zoom control
     L.control.zoom({ position: 'bottomright' }).addTo(map)
 
     const geoJsonLayer = L.geoJSON(geoData, {
       style: (feature) => {
         const code = feature?.properties?.code as string
-        const fill = colorMap[code] || '#CFD8DC'
+        const fill = colorMap[code] || '#1e293b'
         return {
           fillColor: fill,
-          fillOpacity: 1,
-          color: '#000',
-          weight: 5,
+          fillOpacity: 0.65,
+          color: 'rgba(255,255,255,0.12)',
+          weight: 1.5,
           opacity: 1,
-          lineJoin: 'round',
         }
       },
       onEachFeature: (feature, layer) => {
@@ -120,9 +134,10 @@ const ElectionMap = memo(function ElectionMap({
           setTooltipPos({ x: e.originalEvent.clientX, y: e.originalEvent.clientY })
           pathLayer.setStyle({
             fillOpacity: 0.85,
-            color: '#000',
-            weight: 6,
+            color: 'rgba(255,255,255,0.6)',
+            weight: 2,
           })
+          pathLayer.bringToFront()
         })
 
         pathLayer.on('mousemove', (e: L.LeafletMouseEvent) => {
@@ -131,21 +146,32 @@ const ElectionMap = memo(function ElectionMap({
 
         pathLayer.on('mouseout', () => {
           setHoveredCode(null)
-          pathLayer.setStyle({ fillOpacity: 1, color: '#000', weight: 5 })
+          const isSelected = selected?.code === code || clickedRegion?.code === code
+          if (isSelected) {
+            pathLayer.setStyle({
+              fillOpacity: 0.85,
+              color: '#a78bfa',
+              weight: 2.5,
+            })
+          } else {
+            pathLayer.setStyle({
+              fillOpacity: 0.65,
+              color: 'rgba(255,255,255,0.12)',
+              weight: 1.5,
+            })
+          }
         })
       },
     }).addTo(map)
 
-    // Add labels via Leaflet tooltips (always-on)
+    // Subtle labels on polygons
     geoJsonLayer.eachLayer((layer: any) => {
-      const feature = layer.feature
-      const code = feature?.properties?.code as string
-      const name = feature?.properties?.name || code
+      const code = layer.feature?.properties?.code as string
       if (layer.getBounds) {
         const center = layer.getBounds().getCenter()
         const labelIcon = L.divIcon({
-          className: 'cartoon-label',
-          html: `<div class="cartoon-label-text">${code}</div>`,
+          className: 'n8n-label',
+          html: `<span class="n8n-label-text">${code.replace('P', '')}</span>`,
           iconSize: [0, 0],
           iconAnchor: [0, 0],
         })
@@ -157,29 +183,38 @@ const ElectionMap = memo(function ElectionMap({
     mapRef.current = map
     layerRef.current = geoJsonLayer
 
+    // If there was a pre-selected region, highlight it
+    if (selected) {
+      geoJsonLayer.eachLayer((layer: any) => {
+        if (layer.feature?.properties?.code === selected.code) {
+          selectedLayerRef.current = layer as L.Path
+          layer.setStyle({ fillOpacity: 0.85, color: '#a78bfa', weight: 2.5 })
+        }
+      })
+    }
+
     return () => {
       map.remove()
       mapRef.current = null
       layerRef.current = null
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [geoData])
 
-  // Update styles when selected changes
+  // Update highlight when selected or clickedRegion changes
   useEffect(() => {
     if (!layerRef.current) return
-    layerRef.current.setStyle(((feature: any) => {
-      const code = feature?.properties?.code as string
-      const fill = colorMap[code] || '#CFD8DC'
-      return {
-        fillColor: fill,
-        fillOpacity: 1,
-        color: '#000',
-        weight: 5,
-        opacity: 1,
-        lineJoin: 'round',
-      }
-    }) as L.StyleFunction)
-  }, [colorMap])
+    const targetCode = clickedRegion?.code || selected?.code
+    layerRef.current.eachLayer((layer: any) => {
+      const code = layer.feature?.properties?.code as string
+      const isHighlighted = code === targetCode
+      layer.setStyle({
+        fillOpacity: isHighlighted ? 0.85 : 0.65,
+        color: isHighlighted ? '#a78bfa' : 'rgba(255,255,255,0.12)',
+        weight: isHighlighted ? 2.5 : 1.5,
+      })
+    })
+  }, [clickedRegion, selected])
 
   const hoveredRegion = hoveredCode ? regions.find(r => r.code === hoveredCode) : null
 
@@ -189,147 +224,227 @@ const ElectionMap = memo(function ElectionMap({
       {hoveredRegion && (
         <div style={{
           position: 'fixed', zIndex: 9999, pointerEvents: 'none',
-          left: tooltipPos.x + 12 + 'px', top: tooltipPos.y - 10 + 'px',
-          background: '#000', color: '#fff', padding: '6px 14px',
-          borderRadius: '12px', fontFamily: "'Nunito', sans-serif",
-          fontWeight: 900, fontSize: '0.85rem',
-          border: '3px solid #fff', boxShadow: '4px 4px 0px #000',
+          left: tooltipPos.x + 14 + 'px', top: tooltipPos.y - 12 + 'px',
+          background: 'rgba(15,15,25,0.95)', color: '#e2e8f0',
+          padding: '8px 14px', borderRadius: '8px',
+          fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
+          fontWeight: 500, fontSize: '0.8rem',
+          border: '1px solid rgba(255,255,255,0.1)',
+          backdropFilter: 'blur(8px)',
+          boxShadow: '0 12px 32px rgba(0,0,0,0.5)',
+          lineHeight: 1.4,
+          whiteSpace: 'nowrap',
         }}>
-          {hoveredRegion.name}
+          <div style={{ fontWeight: 600, color: '#fff', marginBottom: 2 }}>
+            {hoveredRegion.code} — {hoveredRegion.name}
+          </div>
+          <div style={{ color: colorMap[hoveredRegion.code] || '#9ca3af', fontSize: '0.75rem' }}>
+            {hoveredRegion.state}
+            {hoveredRegion.candidates?.[0] && ` · ${hoveredRegion.candidates[0].party}`}
+          </div>
         </div>
       )}
 
       {/* Map card */}
       <div style={{
-        background: '#fff', border: '6px solid #000',
-        boxShadow: '10px 10px 0px #000', borderRadius: '24px',
-        overflow: 'hidden', maxWidth: '900px',
+        background: '#0d0d14',
+        border: '1px solid rgba(255,255,255,0.06)',
+        borderRadius: '16px',
+        overflow: 'hidden',
+        boxShadow: '0 25px 50px -12px rgba(0,0,0,0.8)',
       }}>
-        {/* Map panel */}
+        {/* Header bar */}
         <div style={{
-          background: '#bae8ff', borderBottom: '6px solid #000',
-          padding: '25px 25px 10px', position: 'relative', overflow: 'hidden',
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '16px 24px',
+          borderBottom: '1px solid rgba(255,255,255,0.06)',
         }}>
           <h2 style={{
-            fontFamily: "'Fredoka One', cursive", fontSize: '1.8rem',
-            marginBottom: '12px', textShadow: '3px 3px 0px #fff',
-            color: '#000', display: 'flex', alignItems: 'center', gap: '10px',
+            fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
+            fontSize: '1rem', fontWeight: 600, color: '#e2e8f0',
+            display: 'flex', alignItems: 'center', gap: '10px',
+            letterSpacing: '-0.01em',
+            margin: 0,
           }}>
-            📍 Peta Kawasan PRU
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Peta Kawasan PRU
           </h2>
-
-          <div ref={containerRef} style={{ width: '100%', height: '480px', position: 'relative' }} />
-
-          {/* Floating decorations */}
           <div style={{
-            position: 'absolute', top: '15px', right: '20px',
-            fontSize: '2rem', opacity: 0.6, pointerEvents: 'none',
-            lineHeight: 1.4, textAlign: 'right',
+            fontSize: '0.75rem', color: '#64748b',
+            fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
+            fontWeight: 400, letterSpacing: '0.01em',
           }}>
-            ☁️<br />⭐<br />☁️
+            {regions.length} kawasan
           </div>
+        </div>
 
-          <div style={{
-            fontWeight: 900, marginTop: '12px', padding: '10px',
-            background: '#ffeaa7', border: '4px solid #000',
-            borderRadius: '14px', textAlign: 'center',
-            boxShadow: '4px 4px 0px #000', fontFamily: "'Nunito', sans-serif",
-          }}>
-            🖱️ Klik mana-mana kawasan untuk lihat maklumat
-          </div>
+        {/* Map container */}
+        <div ref={containerRef} style={{ width: '100%', height: '500px', position: 'relative' }} />
+
+        {/* Info bar */}
+        <div style={{
+          padding: '12px 24px',
+          borderTop: '1px solid rgba(255,255,255,0.04)',
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
+          fontSize: '0.78rem', color: '#64748b',
+        }}>
+          <span>🖱️ Klik kawasan untuk lihat maklumat</span>
+          {clickedRegion && (
+            <span style={{ color: '#94a3b8' }}>
+              Dipilih: <strong style={{ color: colorMap[clickedRegion.code] || '#a78bfa' }}>{clickedRegion.code}</strong>
+            </span>
+          )}
         </div>
 
         {/* Info panel (shown when region selected) */}
         {clickedRegion && (
           <div style={{
-            margin: '15px 25px', padding: '15px',
-            background: '#fff', border: '5px solid #000',
-            borderRadius: '16px', boxShadow: '5px 5px 0px #000',
-            fontFamily: "'Nunito', sans-serif",
+            margin: '0 24px 20px',
+            padding: '20px',
+            background: 'rgba(15,15,25,0.8)',
+            border: '1px solid rgba(255,255,255,0.06)',
+            borderRadius: '12px',
+            backdropFilter: 'blur(12px)',
+            fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
           }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontFamily: "'Fredoka One', cursive", fontSize: '1.4rem' }}>
-                {clickedRegion.code} — {clickedRegion.name}
-              </span>
-              <span style={{
-                width: '30px', height: '30px',
-                border: '4px solid #000', borderRadius: '8px',
-                display: 'inline-block',
-                background: colorMap[clickedRegion.code] || '#CFD8DC',
-              }} />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                <span style={{
+                  width: '32px', height: '32px', borderRadius: '8px',
+                  background: colorMap[clickedRegion.code] || '#1e293b',
+                  display: 'inline-block', flexShrink: 0,
+                  border: '1px solid rgba(255,255,255,0.1)',
+                }} />
+                <div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 600, color: '#e2e8f0', lineHeight: 1.3 }}>
+                    {clickedRegion.code} — {clickedRegion.name}
+                  </div>
+                  <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: 2 }}>
+                    {clickedRegion.state}
+                  </div>
+                </div>
+              </div>
+              <button onClick={() => setClickedRegion(null)} style={{
+                background: 'rgba(255,255,255,0.04)',
+                border: '1px solid rgba(255,255,255,0.06)',
+                borderRadius: '8px',
+                padding: '6px 12px',
+                color: '#94a3b8',
+                cursor: 'pointer',
+                fontSize: '0.78rem',
+                fontWeight: 500,
+                transition: 'all 0.15s',
+              }}
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = '#e2e8f0' }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.color = '#94a3b8' }}
+              >
+                Tutup
+              </button>
             </div>
             {clickedRegion.candidates?.[0] && (
-              <p style={{ fontWeight: 700, marginTop: '8px', fontSize: '1rem' }}>
-                {clickedRegion.candidates[0].party} · {clickedRegion.candidates[0].name}
-              </p>
+              <div style={{
+                marginTop: '16px', padding: '12px 14px',
+                background: 'rgba(255,255,255,0.03)',
+                borderRadius: '10px',
+                border: '1px solid rgba(255,255,255,0.04)',
+                display: 'flex', alignItems: 'center', gap: '12px',
+              }}>
+                <div style={{
+                  width: '28px', height: '28px', borderRadius: '50%',
+                  background: `${colorMap[clickedRegion.code] || '#a78bfa'}20`,
+                  border: `2px solid ${colorMap[clickedRegion.code] || '#a78bfa'}`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '0.7rem', fontWeight: 700,
+                  color: colorMap[clickedRegion.code] || '#a78bfa',
+                }}>
+                  {clickedRegion.candidates[0].party.slice(0, 2)}
+                </div>
+                <div>
+                  <div style={{ fontWeight: 500, color: '#e2e8f0', fontSize: '0.88rem' }}>
+                    {clickedRegion.candidates[0].name}
+                  </div>
+                  <div style={{ fontSize: '0.75rem', color: colorMap[clickedRegion.code] || '#a78bfa' }}>
+                    {clickedRegion.candidates[0].party}
+                  </div>
+                </div>
+              </div>
             )}
-            <button onClick={() => setClickedRegion(null)} style={{
-              marginTop: '10px', background: '#ff6b6b', border: '4px solid #000',
-              borderRadius: '12px', padding: '6px 18px', fontWeight: 900,
-              cursor: 'pointer', boxShadow: '3px 3px 0px #000',
-              fontFamily: "'Nunito', sans-serif",
-            }}>
-              Tutup ✕
-            </button>
           </div>
         )}
 
         {/* Legend */}
         <div style={{
-          display: 'flex', gap: '20px', justifyContent: 'center',
-          flexWrap: 'wrap', padding: '15px 25px 20px',
-          fontFamily: "'Nunito', sans-serif", fontWeight: 900,
+          display: 'flex', gap: '6px', justifyContent: 'center',
+          flexWrap: 'wrap', padding: '0 24px 20px',
+          fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
         }}>
-          {Object.entries(partyColors).slice(0, 5).map(([party, color]) => (
-            <div key={party} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {Object.entries(partyColors).map(([party, color]) => (
+            <div key={party} style={{
+              display: 'flex', alignItems: 'center', gap: '6px',
+              padding: '4px 10px',
+              background: 'rgba(255,255,255,0.03)',
+              border: '1px solid rgba(255,255,255,0.04)',
+              borderRadius: '20px',
+              fontSize: '0.72rem', fontWeight: 500,
+              color: '#94a3b8',
+            }}>
               <span style={{
-                width: '24px', height: '24px',
-                background: color, border: '3px solid #000', borderRadius: '6px',
-                display: 'inline-block',
+                width: '8px', height: '8px', borderRadius: '2px',
+                background: color, display: 'inline-block',
               }} />
-              <span>{party}</span>
+              {party}
             </div>
           ))}
         </div>
       </div>
 
-      {/* Cartoon label styles injected once */}
+      {/* Global styles */}
       <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700;900&display=swap');
-
-        .cartoon-label {
+        .n8n-label {
           background: none !important;
           border: none !important;
         }
-        .cartoon-label-text {
-          font-family: 'Fredoka One', cursive;
-          font-size: 11px;
-          color: #000;
-          text-shadow: 1px 1px 0px rgba(255,255,255,0.8);
+        .n8n-label-text {
+          font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif;
+          font-size: 10px;
+          font-weight: 600;
+          color: rgba(255,255,255,0.25);
           white-space: nowrap;
           pointer-events: none;
           transform: translate(-50%, -50%);
-        }
-        .leaflet-control-zoom a {
-          background: #fff !important;
-          color: #000 !important;
-          border: 3px solid #000 !important;
-          border-radius: 10px !important;
-          width: 32px !important;
-          height: 32px !important;
-          line-height: 28px !important;
-          font-size: 18px !important;
-          font-weight: 900 !important;
-          font-family: 'Nunito', sans-serif !important;
-          box-shadow: 3px 3px 0px #000 !important;
-          margin-bottom: 6px !important;
-        }
-        .leaflet-control-zoom a:hover {
-          background: #ffeaa7 !important;
+          letter-spacing: 0.02em;
         }
         .leaflet-control-zoom {
           border: none !important;
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 4px !important;
         }
+        .leaflet-control-zoom a {
+          background: rgba(15,15,25,0.85) !important;
+          color: #94a3b8 !important;
+          border: 1px solid rgba(255,255,255,0.08) !important;
+          border-radius: 8px !important;
+          width: 34px !important;
+          height: 34px !important;
+          line-height: 34px !important;
+          font-size: 16px !important;
+          font-weight: 400 !important;
+          text-align: center !important;
+          backdrop-filter: blur(8px) !important;
+          transition: all 0.15s !important;
+        }
+        .leaflet-control-zoom a:hover {
+          background: rgba(30,30,50,0.9) !important;
+          color: #fff !important;
+          border-color: rgba(167,139,250,0.3) !important;
+        }
+        /* Hide leaflet tile attribution */
+        .leaflet-control-attribution { display: none !important; }
       `}</style>
     </div>
   )
