@@ -25,7 +25,7 @@ const Q = groq`*[_type=='blog.post' && status in ['published','approved']]|order
 }`
 const CQ = groq`*[_type=='blog.category']|order(title)[0...12]{_id,title,'slug':slug.current,color}`
 
-const Div = () => <div className="border-t border-gray-200 my-3" />
+const Div = () => <div className="border-t border-gray-200 my-2" />
 
 export default async function Homepage() {
   const [posts, cats] = await Promise.all([
@@ -66,7 +66,7 @@ export default async function Homepage() {
 
       {/* RIGHT COLUMN: Market Data + Most Read + Ad */}
       <aside className="hidden lg:block">
-        <div className="sticky top-[120px] space-y-4">
+        <div className="sticky top-[130px] space-y-3">
           <MarketData />
           <Div />
           <MostRead posts={posts} />

@@ -7,7 +7,7 @@ export function Hero({ posts }: { posts: P[] }) {
   const [a, ...rest] = posts
   if (!a) return null
 
-  return <section className="grid lg:grid-cols-[1fr_300px_300px] gap-5 py-4">
+  return <section className="grid lg:grid-cols-[1fr_300px_300px] gap-5 py-3">
     {/* COL 1: Main hero article */}
     <article>
       <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-2"><NImg p={a} w={620} h={349} prio /></Link>
