@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { getActiveElections, getElectionRegions } from '@/lib/election'
-import { getKVValue } from '@/lib/kv'
+import { getKVValue, getMockDemographics } from '@/lib/kv'
 import ElectionPageClient from './ElectionPageClient'
 import type { ElectionInfo, RegionWithData } from '@/types/election'
 
@@ -15,11 +15,18 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
   const regions = await getElectionRegions(election.geoJsonFile)
   return Promise.all(
     regions.map(async (region) => {
-      const [sentiment, predictions] = await Promise.all([
+      const [sentiment, candidates, comments] = await Promise.all([
         getKVValue(process.env.CF_KV_NAMESPACE_ID || 'mock', `sentiment:${region.code}`),
-        getKVValue(process.env.CF_KV_NAMESPACE_ID_PREDICTIONS || 'mock', `prediction:${region.code}`),
+        getKVValue(process.env.CF_KV_NAMESPACE_ID || 'mock', `candidates:${region.code}`),
+        getKVValue(process.env.CF_KV_NAMESPACE_ID || 'mock', `comments:${region.code}`),
       ])
-      return { ...region, sentiment, predictions }
+      return {
+        ...region,
+        sentiment,
+        candidates: candidates || [],
+        comments,
+        demographics: getMockDemographics(region.code),
+      }
     }),
   )
 }

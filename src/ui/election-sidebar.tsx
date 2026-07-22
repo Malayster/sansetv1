@@ -3,7 +3,60 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { getRegionNews } from '@/lib/election'
-import type { RegionWithData } from '@/types/election'
+import type { RegionWithData, CandidateData } from '@/types/election'
+
+const partyNames: Record<string, string> = {
+  BN: 'Barisan Nasional', PH: 'Pakatan Harapan', PN: 'Perikatan Nasional',
+  GPS: 'GPS', GRS: 'GRS', WARISAN: 'Warisan', Bebas: 'Bebas',
+}
+
+const platformIcon = (p: string) => {
+  switch (p) {
+    case 'tiktok': return '🎵'
+    case 'twitter': return '𝕏'
+    case 'facebook': return '📘'
+    default: return '💬'
+  }
+}
+
+function CandidateCard({ c }: { c: CandidateData }) {
+  const isIncumbent = c.role === 'penyandang'
+  return (
+    <div className="flex gap-3 items-start">
+      <img
+        src={c.photo}
+        alt={c.name}
+        className="w-[60px] h-[60px] rounded-full object-cover border-2 border-gray-200 flex-shrink-0 bg-gray-100"
+        onError={(e) => { (e.target as HTMLImageElement).src = '/candidates/default.png' }}
+      />
+      <div className="flex-1 min-w-0">
+        <p className="text-[14px] font-bold text-gray-800 leading-tight">{c.name}</p>
+        <div className="flex items-center gap-1.5 mt-0.5">
+          <img
+            src={c.partyFlag}
+            alt={c.party}
+            className="w-[16px] h-[10px] object-cover"
+            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+          />
+          <span className="text-[11px] text-gray-500">{partyNames[c.party] || c.party}</span>
+          <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${isIncumbent ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'}`}>
+            {isIncumbent ? 'Penyandang' : 'Pencabar'}
+          </span>
+        </div>
+        {isIncumbent && c.lastElection && (
+          <div className="mt-1.5 grid grid-cols-2 gap-x-3 gap-y-0.5 text-[10px] text-gray-400 bg-gray-50 rounded p-1.5">
+            <div><span className="text-gray-500">PRU {c.lastElection.year}</span></div>
+            <div><span className="font-bold text-gray-700">{c.lastElection.percentage}%</span></div>
+            <div>Undi: <span className="text-gray-600">{c.lastElection.votes.toLocaleString()}</span></div>
+            <div>Majoriti: <span className="text-gray-600">{c.lastElection.majority.toLocaleString()}</span></div>
+            <div>Pengundi: <span className="text-gray-600">{c.lastElection.totalVoters.toLocaleString()}</span></div>
+            <div>Keluar: <span className="text-gray-600">{c.lastElection.turnout}%</span></div>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
 
 export default function ElectionSidebar({ region }: { region: RegionWithData | null }) {
   const [news, setNews] = useState<any[]>([])
@@ -32,7 +85,11 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
     )
   }
 
-  const { sentiment, predictions, name, code, state } = region
+  const { sentiment, candidates, comments, demographics, name, code, state } = region
+  const sortedCandidates = [...candidates].sort((a, b) =>
+    a.role === 'penyandang' ? -1 : b.role === 'penyandang' ? 1 : 0,
+  )
+  const { malay, chinese, indian, others } = demographics
 
   return (
     <div className="border border-gray-200 bg-white rounded">
@@ -42,68 +99,114 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
         <p className="text-[10px] text-white/70">{code} — {state}</p>
       </div>
 
-      <div className="p-4 space-y-4">
-        {/* Sentiment */}
-        {sentiment ? (
-          <div>
-            <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-2">Sentimen Pengundi</h3>
-            <div className="flex items-center gap-3">
-              <div className="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
-                <div
-                  className="h-full rounded-full transition-all"
-                  style={{
-                    width: `${sentiment.score}%`,
-                    backgroundColor: sentiment.score >= 60 ? '#22c55e' : sentiment.score >= 40 ? '#eab308' : '#ef4444',
-                  }}
-                />
-              </div>
-              <span className="text-[14px] font-bold text-gray-700">{sentiment.score}%</span>
-            </div>
-            <div className="flex items-center gap-1 mt-1">
-              <span className={`text-[10px] font-bold uppercase ${
-                sentiment.label === 'positif' ? 'text-emerald-600' : sentiment.label === 'negatif' ? 'text-red-600' : 'text-amber-600'
-              }`}>
-                {sentiment.label}
-              </span>
-            </div>
-            <p className="text-[11px] text-gray-500 mt-1 leading-snug">{sentiment.summary}</p>
-            <p className="text-[9px] text-gray-400 mt-1">
-              Dikemaskini: {new Date(sentiment.updatedAt).toLocaleString('ms')}
-            </p>
+      <div className="divide-y divide-gray-100">
+        {/* ── 1. Calon Bertanding ── */}
+        <div className="p-4">
+          <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-3">Calon Bertanding</h3>
+          <div className="space-y-3">
+            {sortedCandidates.map((c, i) => <CandidateCard key={i} c={c} />)}
           </div>
-        ) : (
-          <div className="text-[11px] text-gray-400 italic py-2">Data sentimen belum tersedia.</div>
-        )}
+        </div>
 
-        {/* Predictions */}
-        {predictions && predictions.length > 0 && (
-          <div className="border-t border-gray-100 pt-4">
-            <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-2">Ramalan Calon</h3>
-            <div className="space-y-2">
-              {predictions.map((p, i) => (
-                <div key={i}>
-                  <div className="flex items-center justify-between mb-0.5">
-                    <div>
-                      <span className="text-[12px] font-bold text-gray-800">{p.candidateName}</span>
-                      <span className="text-[9px] text-gray-400 ml-1">({p.party})</span>
-                    </div>
-                    <span className="text-[12px] font-bold text-gray-700">{p.winRate}%</span>
-                  </div>
-                  <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-[#C41E3A] rounded-full"
-                      style={{ width: `${p.winRate}%` }}
-                    />
-                  </div>
-                  <p className="text-[9px] text-gray-400 mt-0.5">{p.factors}</p>
+        {/* ── 2. Demografi Kawasan ── */}
+        <div className="p-4">
+          <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-2">Demografi Kawasan</h3>
+          <div className="space-y-1.5">
+            {[
+              { label: 'Melayu', value: malay, color: 'bg-[#C41E3A]' },
+              { label: 'Cina', value: chinese, color: 'bg-[#1E3A8A]' },
+              { label: 'India', value: indian, color: 'bg-[#EA580C]' },
+              { label: 'Lain-lain', value: others, color: 'bg-gray-400' },
+            ].map((d) => (
+              <div key={d.label} className="flex items-center gap-2">
+                <span className="text-[10px] text-gray-500 w-16 text-right">{d.label}</span>
+                <div className="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
+                  <div className={`h-full rounded-full ${d.color}`} style={{ width: `${d.value}%` }} />
                 </div>
-              ))}
-            </div>
+                <span className="text-[10px] font-bold text-gray-600 w-8">{d.value}%</span>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
 
-        {/* Related News */}
-        <div className="border-t border-gray-100 pt-4">
+        {/* ── 3. Sentimen Semasa ── */}
+        <div className="p-4">
+          <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-2">Sentimen Semasa</h3>
+          {sentiment ? (
+            <>
+              <div className="flex items-center gap-3">
+                <div className="flex-1 h-3 bg-gray-100 rounded-full overflow-hidden">
+                  <div
+                    className="h-full rounded-full transition-all"
+                    style={{
+                      width: `${sentiment.score}%`,
+                      backgroundColor: sentiment.score >= 60 ? '#22c55e' : sentiment.score >= 40 ? '#eab308' : '#ef4444',
+                    }}
+                  />
+                </div>
+                <span className="text-[14px] font-bold text-gray-700">{sentiment.score}%</span>
+              </div>
+              <div className="flex items-center gap-2 mt-1">
+                <span className={`text-[10px] font-bold uppercase ${
+                  sentiment.label === 'positif' ? 'text-emerald-600' : sentiment.label === 'negatif' ? 'text-red-600' : 'text-amber-600'
+                }`}>
+                  {sentiment.label}
+                </span>
+                <span className="text-[9px] text-gray-400">· {sentiment.source}</span>
+              </div>
+              <p className="text-[11px] text-gray-500 mt-1 leading-snug">{sentiment.summary}</p>
+              <p className="text-[9px] text-gray-400 mt-1">
+                Dikemaskini: {new Date(sentiment.updatedAt).toLocaleString('ms')}
+              </p>
+            </>
+          ) : (
+            <div className="text-[11px] text-gray-400 italic py-2">Data sentimen belum tersedia.</div>
+          )}
+        </div>
+
+        {/* ── 4. Apa Kata Rakyat ── */}
+        <div className="p-4">
+          <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-2">Apa Kata Rakyat</h3>
+          {comments ? (
+            <>
+              <div className="flex items-center gap-3 mb-3 text-[10px]">
+                <span className="text-emerald-600">🟢 {comments.sentimentSummary.positif}%</span>
+                <span className="text-amber-600">🟡 {comments.sentimentSummary.neutral}%</span>
+                <span className="text-red-600">🔴 {comments.sentimentSummary.negatif}%</span>
+              </div>
+              <div className="space-y-2">
+                {comments.items.slice(0, 5).map((c, i) => (
+                  <div key={i} className="border border-gray-100 rounded p-2">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <span className="text-[11px]">{platformIcon(c.platform)}</span>
+                      <span className="text-[10px] font-bold text-gray-700">@{c.username}</span>
+                      <span className={`text-[9px] font-bold ml-auto ${
+                        c.sentiment === 'positif' ? 'text-emerald-600' : c.sentiment === 'negatif' ? 'text-red-600' : 'text-amber-600'
+                      }`}>
+                        {c.sentiment === 'positif' ? '🟢' : c.sentiment === 'negatif' ? '🔴' : '🟡'}
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-gray-600 leading-snug line-clamp-2">
+                      {c.comment.length > 80 ? c.comment.slice(0, 77) + '...' : c.comment}
+                    </p>
+                    <div className="flex items-center gap-2 mt-1 text-[9px] text-gray-400">
+                      <span>❤️ {c.likes}</span>
+                      <span>{new Date(c.timestamp).toLocaleDateString('ms')}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-[9px] text-gray-400 mt-2">
+                {comments.totalComments} komen dikumpul setakat ini.
+              </p>
+            </>
+          ) : (
+            <div className="text-[11px] text-gray-400 italic py-2">Komen media sosial belum tersedia.</div>
+          )}
+        </div>
+
+        {/* ── 5. Berita Berkaitan ── */}
+        <div className="p-4">
           <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-2">Berita Berkaitan</h3>
           {loading ? (
             <div className="space-y-2">

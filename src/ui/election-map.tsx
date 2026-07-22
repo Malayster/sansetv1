@@ -9,8 +9,8 @@ const partyColors: Record<string, string> = {
 }
 
 function regionColor(r: RegionWithData): string {
-  if (r.predictions && r.predictions.length > 0) {
-    return partyColors[r.predictions[0].party] || '#C41E3A'
+  if (r.candidates && r.candidates.length > 0) {
+    return partyColors[r.candidates[0].party] || '#C41E3A'
   }
   if (r.sentiment?.score != null) {
     const s = r.sentiment.score
