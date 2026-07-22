@@ -9,6 +9,10 @@ const Q = groq`*[_type=='blog.post' && status in ['published','approved']]|order
   _id,title,excerpt,publishDate,'img':metadata.image,'slug':metadata.slug.current,
   'cat':categories[0]->{title,color}
 }`
+const PQ = groq`*[_type=='blog.post' && status in ['published','approved'] && 'Podcast' in categories[]->title]|order(publishDate desc)[0]{
+  _id,title,excerpt,publishDate,'img':metadata.image,'slug':metadata.slug.current,
+  'cat':categories[0]->{title,color}
+}`
 const CQ = groq`*[_type=='blog.category']|order(title)[0...12]{_id,title,'slug':slug.current,color}`
 const bp = `/${ROUTES.blog}/`
 type P = any
@@ -38,7 +42,7 @@ const Hr = () => <div className="border-t border-gray-200" />
 const MKT = [{ n:'FBMKLCI',v:'1,583.42',c:'+2.18',p:'+0.14%',u:true },{ n:'KLSE Emas',v:'12,488.30',c:'+18.05',p:'+0.14%',u:true },{ n:'USD/MYR',v:'4.28',c:'+0.01',p:'+0.23%',u:true },{ n:'SGD/MYR',v:'3.18',c:'-0.005',p:'-0.16%',u:false },{ n:'Brent Crude',v:'$78.42',c:'-0.85',p:'-1.07%',u:false },{ n:'Emas 999.9',v:'RM 384.50',c:'+1.20',p:'+0.31%',u:true }]
 
 export default async function Homepage() {
-  const [posts, cats] = await Promise.all([client.fetch<P[]>(Q, {}, { next: { revalidate: 60 } }), client.fetch<any[]>(CQ, {}, { next: { revalidate: 300 } })])
+  const [posts, cats, pod] = await Promise.all([client.fetch<P[]>(Q, {}, { next: { revalidate: 60 } }), client.fetch<any[]>(CQ, {}, { next: { revalidate: 300 } }), client.fetch<P|null>(PQ, {}, { next: { revalidate: 300 } })])
   if (!posts.length) return <div className="max-w-[1180px] mx-auto px-4 py-16 text-center text-gray-400">Tiada Berita</div>
   const p = posts
   return <div className="max-w-[1180px] mx-auto px-0">
@@ -85,6 +89,13 @@ export default async function Homepage() {
             <div className="min-w-0"><Link href={`${bp}${a.slug}`} className="text-[11px] text-gray-800 leading-snug line-clamp-0 hover:text-[#C41E3A] transition-colors">{a.title}</Link><Tim p={a} /></div>
           </div>
         ))}
+        {pod && <div className="mt-2 bg-black text-white p-3 flex gap-2 items-center">
+          {pod.img && <Link href={`${bp}${pod.slug}`} className="shrink-0"><Img p={pod} w={80} h={80} /></Link>}
+          <div className="min-w-0">
+            <span className="text-[8px] font-bold uppercase text-[#F5C842]">Podcast</span>
+            <Link href={`${bp}${pod.slug}`} className="text-[10px] leading-snug text-white hover:text-[#F5C842] transition-colors line-clamp-2 block mt-0.5">{pod.title}</Link>
+          </div>
+        </div>}
       </div>
     </section>
 
