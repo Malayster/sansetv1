@@ -33,7 +33,7 @@ function Head({ p, sz }: { p: P; sz?: string }) {
   return <Link href={`${bp}${p.slug}`}><h4 className={`font-serif font-bold leading-snug text-[#111] hover:text-[#C41E3A] transition-colors line-clamp-3 ${sz||'text-[13px]'}`}>{p.title}</h4></Link>
 }
 function Tim({ p }: { p: P }) { const d = A(p.publishDate); if (!d) return null; return <p className="text-[10px] text-gray-400">{d}</p> }
-function Sec({ t, h }: { t: string; h?: string }) { return h ? <Link href={h} className="font-serif text-[14px] font-bold text-[#C41E3A] hover:opacity-80">{t}</Link> : <h2 className="font-serif text-[14px] font-bold text-gray-800">{t}</h2> }
+function Sec({ t, h }: { t: string; h?: string }) { return h ? <Link href={h} className="bg-[#C41E3A] text-white px-4 py-2 font-serif text-[22px] font-bold tracking-wide hover:bg-[#A01830] transition-colors inline-block">{t}</Link> : <h2 className="bg-[#C41E3A] text-white px-4 py-2 font-serif text-[22px] font-bold tracking-wide inline-block">{t}</h2> }
 const Hr = () => <div className="border-t border-gray-200" />
 const MKT = [{ n:'FBMKLCI',v:'1,583.42',c:'+2.18',p:'+0.14%',u:true },{ n:'KLSE Emas',v:'12,488.30',c:'+18.05',p:'+0.14%',u:true },{ n:'USD/MYR',v:'4.28',c:'+0.01',p:'+0.23%',u:true },{ n:'SGD/MYR',v:'3.18',c:'-0.005',p:'-0.16%',u:false },{ n:'Brent Crude',v:'$78.42',c:'-0.85',p:'-1.07%',u:false },{ n:'Emas 999.9',v:'RM 384.50',c:'+1.20',p:'+0.31%',u:true }]
 
