@@ -151,6 +151,57 @@ export default defineType({
 					return true
 				}),
 		}),
+				defineField({
+			name: 'language',
+			title: 'Bahasa',
+			type: 'string',
+			options: {
+				list: [
+					{ title: 'Bahasa Melayu', value: 'bm' },
+					{ title: 'English', value: 'en' },
+				],
+			},
+			initialValue: 'bm',
+			group: 'content',
+		}),
+		defineField({
+			name: 'featured',
+			title: 'Artikel Utama (Featured)',
+			description: 'Tandakan untuk paparan di hero halaman utama',
+			type: 'boolean',
+			initialValue: false,
+			group: 'publishing',
+		}),
+		defineField({
+			name: 'isBreakingNews',
+			title: 'Berita Tergempar',
+			type: 'boolean',
+			initialValue: false,
+			group: 'publishing',
+		}),
+		defineField({
+			name: 'tags',
+			title: 'Tag',
+			type: 'array',
+			of: [{ type: 'string' }],
+			options: { layout: 'tags' },
+			group: 'content',
+		}),
+		defineField({
+			name: 'readTime',
+			title: 'Masa Bacaan (minit)',
+			description: 'Biarkan kosong untuk kiraan automatik',
+			type: 'number',
+			group: 'content',
+		}),
+		defineField({
+			name: 'electionRegion',
+			title: 'Kawasan Pilihan Raya',
+			type: 'reference',
+			to: [{ type: 'region' }],
+			description: 'Pautkan artikel ke kawasan pilihan raya (untuk dashboard)',
+			group: 'content',
+		}),
 	],
 	preview: {
 		select: {

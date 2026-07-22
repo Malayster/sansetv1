@@ -74,6 +74,42 @@ export default defineType({
 			hidden: true,
 			group: 'info',
 		}),
+		defineField({
+			name: 'portalLogo',
+			title: 'Logo Portal (Header)',
+			description: 'Muat naik PNG lutsinar untuk header frontend',
+			type: 'image',
+			options: { hotspot: true },
+			group: 'branding',
+		}),
+		defineField({
+			name: 'defaultLanguage',
+			title: 'Bahasa Default',
+			type: 'string',
+			options: {
+				list: [
+					{ title: 'Bahasa Melayu', value: 'bm' },
+					{ title: 'English', value: 'en' },
+				],
+			},
+			initialValue: 'bm',
+			group: 'branding',
+		}),
+		defineField({
+			name: 'tickerItems',
+			title: 'Item Ticker',
+			description: 'Pilih data ekonomi untuk paparan di ticker header',
+			type: 'array',
+			of: [{ type: 'reference', to: [{ type: 'economicData' }] }],
+			group: 'info',
+		}),
+		defineField({
+			name: 'footerText',
+			title: 'Teks Footer (Penafian)',
+			description: 'Teks ringkas di bahagian atas footer. Guna copyright untuk teks berformat.',
+			type: 'text',
+			group: 'info',
+		}),
 	],
 	preview: {
 		prepare: () => ({

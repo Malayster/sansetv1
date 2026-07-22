@@ -68,6 +68,34 @@ export default structureTool({
 
 				S.divider(),
 
+				// DATA EKONOMI
+				S.listItem()
+					.title('📊 Data Ekonomi')
+					.icon(CogIcon)
+					.child(
+						S.list()
+							.title('Data Ekonomi')
+							.items([
+								S.documentTypeListItem('economicData').title('Data Ekonomi'),
+								S.documentTypeListItem('governmentAchievement').title('Pencapaian Kerajaan'),
+							]),
+					),
+
+				// PILIHAN RAYA
+				S.listItem()
+					.title('🗳️ Pilihan Raya')
+					.icon(CogIcon)
+					.child(
+						S.list()
+							.title('Pilihan Raya')
+							.items([
+								S.documentTypeListItem('electionInfo').title('Maklumat Pilihan Raya'),
+								S.documentTypeListItem('region').title('Kawasan'),
+							]),
+					),
+
+				S.divider(),
+
 				// HALAMAN
 				S.listItem()
 					.title('📄 Halaman')
@@ -109,6 +137,7 @@ export default structureTool({
 					(item) =>
 						!['site', 'global-module', 'skill', 'page', 'blog.post', 'blog.category',
 							'navigation', 'redirect', 'form', 'logo', 'person', 'quote',
+							'economicData', 'governmentAchievement', 'electionInfo', 'region',
 							'analytics.daily', 'module-attributes', 'metadata', 'cta', 'link', 'link.list', 'megamenu', 'sidebar',
 						].includes(String(item.getId() ?? '')),
 				),

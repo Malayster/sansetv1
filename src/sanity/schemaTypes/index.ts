@@ -15,6 +15,10 @@ import person from './documents/person'
 import quote from './documents/quote'
 import redirect from './documents/redirect'
 import site from './documents/site'
+import economicData from './documents/economicData'
+import governmentAchievement from './documents/governmentAchievement'
+import electionInfo from './documents/electionInfo'
+import region from './documents/region'
 import skill from './documents/skill'
 // modules
 import accordionList from './modules/accordion-list'
@@ -53,11 +57,15 @@ export const schema: SchemaPluginOptions = {
 		page,
 		globalModule,
 		blogPost,
-analyticsDaily,
+		analyticsDaily,
 		redirect,
-					form,
-			formSubmission,
-			newsletterSubscriber,
+		form,
+		formSubmission,
+		newsletterSubscriber,
+		economicData,
+		governmentAchievement,
+		electionInfo,
+		region,
 		// references
 		blogCategory,
 		logo,
