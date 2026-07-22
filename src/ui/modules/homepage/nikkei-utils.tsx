@@ -29,15 +29,17 @@ export function NTag({ p, sz, link }: { p: P; sz?: string; link?: boolean }) {
 }
 
 /* ── Headline link ── */
-export function NHead({ p, sz, cls }: { p: P; sz?: string; cls?: string }) {
-  return <Link href={`${bp}${p.slug}`}><h3 className={`font-serif font-bold leading-snug text-[#111] hover:text-[#C41E3A] transition-colors line-clamp-3 ${sz || 'text-[13px]'} ${cls || ''}`}>{p.title}</h3></Link>
+export function NHead({ p, sz, cls, plain }: { p: P; sz?: string; cls?: string; plain?: boolean }) {
+  const h = <h3 className={`font-serif font-bold leading-snug text-[#111] hover:text-[#C41E3A] transition-colors line-clamp-3 ${sz || 'text-[13px]'} ${cls || ''}`}>{p.title}</h3>
+  if (plain) return h
+  return <Link href={`${bp}${p.slug}`}>{h}</Link>
 }
 
 /* ── Timestamp with clock icon ── */
 export function NTime({ p }: { p: P }) {
   return <div className="flex items-center gap-1 mt-0.5">
     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" className="text-gray-400"><path fill="currentColor" d="M6.5 0a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13zm0 1a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/><path fill="currentColor" d="M7 3H6v4h4v-.976L7 6z"/></svg>
-    <time className="text-[11px] text-gray-400">{A(p.publishDate)}</time>
+    <time className="text-[11px] text-gray-400" suppressHydrationWarning>{A(p.publishDate)}</time>
   </div>
 }
 

@@ -26,7 +26,7 @@ export function Datawatch({ posts }: { posts: P[] }) {
         {rest.slice(0, 3).map(p => (
           <Link key={p._id} href={`${bp}${p.slug}`} className="group flex gap-3 items-start py-1.5 border-b border-gray-100 last:border-b-0">
             <div className="flex-1 min-w-0">
-              <NHead p={p} sz="text-[13px]" />
+              <NHead p={p} sz="text-[13px]" plain />
               <p className="text-[10px] text-gray-500 mt-0.5 line-clamp-1">{p.excerpt}</p>
             </div>
           </Link>
