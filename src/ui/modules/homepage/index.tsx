@@ -83,39 +83,36 @@ export default async function Homepage() {
       </div>
     </section>
 
-    {/* ═══════ EDITOR'S PICKS ═══════ */}
+    {/* ═══════ EDITOR'S PICKS + BISNES (merged) ═══════ */}
     <div className="grid lg:grid-cols-[1fr_300px] gap-0.5 py-0.5">
-      <div className="border border-gray-200 p-2">
-        <Sec t="Pilihan Editor" h={bp} />
-        <div className="grid md:grid-cols-4 gap-1 mt-1">
-          {p.slice(5,9).map(a => (
-            <article key={a._id} className="border border-gray-100 p-1.5">
-              <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={293} h={165} /></Link>
-              <Tag p={a} lk={false} /><Head p={a} sz="text-[12px]" /><Tim p={a} />
-            </article>
-          ))}
+      <div className="border border-gray-200 p-2 flex flex-col gap-2">
+        <div>
+          <Sec t="Pilihan Editor" h={bp} />
+          <div className="grid md:grid-cols-4 gap-1 mt-1">
+            {p.slice(5,9).map(a => (
+              <article key={a._id} className="border border-gray-100 p-1.5">
+                <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={293} h={165} /></Link>
+                <Tag p={a} lk={false} /><Head p={a} sz="text-[12px]" /><Tim p={a} />
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="border-t border-gray-200 pt-2">
+          <Sec t="Berita Bisnes Terkini" h={bp} />
+          <div className="grid md:grid-cols-4 gap-1 mt-1">
+            {p.slice(9,13).map(a => (
+              <article key={a._id} className="border border-gray-100 p-1.5">
+                <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={293} h={165} /></Link>
+                <Tag p={a} lk={false} /><Head p={a} sz="text-[12px]" /><Tim p={a} />
+              </article>
+            ))}
+          </div>
         </div>
       </div>
       <aside className="border border-gray-200 p-2">
         <h3 className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1 pb-0.5 border-b-2 border-[#C41E3A] inline-block">Terkini</h3>
-        {p.slice(9,18).map(a => (<div key={a._id} className="py-[3px] border-b border-gray-100"><Tag p={a} sz="text-[9px]" /><Link href={`${bp}${a.slug}`} className="text-[11px] text-gray-800 leading-snug line-clamp-2 hover:text-[#C41E3A] transition-colors block">{a.title}</Link></div>))}
+        {p.slice(13,22).map(a => (<div key={a._id} className="py-[3px] border-b border-gray-100"><Tag p={a} sz="text-[9px]" /><Link href={`${bp}${a.slug}`} className="text-[11px] text-gray-800 leading-snug line-clamp-2 hover:text-[#C41E3A] transition-colors block">{a.title}</Link></div>))}
       </aside>
-    </div>
-
-    {/* ═══════ LATEST BUSINESS ═══════ */}
-    <div className="grid lg:grid-cols-[1fr_300px] gap-0.5 py-0.5">
-      <div className="border border-gray-200 p-2">
-        <Sec t="Berita Bisnes Terkini" h={bp} />
-        <div className="grid md:grid-cols-4 gap-1 mt-1">
-          {p.slice(9,13).map(a => (
-            <article key={a._id} className="border border-gray-100 p-1.5">
-              <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={293} h={165} /></Link>
-              <Tag p={a} lk={false} /><Head p={a} sz="text-[12px]" /><Tim p={a} />
-            </article>
-          ))}
-        </div>
-      </div>
-      <aside className="border border-gray-200 p-2 flex items-center justify-center"><span className="text-[10px] text-gray-400 uppercase tracking-widest">Iklan</span></aside>
     </div>
 
     {/* ═══════ #teknologiAsia + SPOTLIGHT ═══════ */}
