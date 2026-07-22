@@ -15,16 +15,14 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
   const regions = await getElectionRegions(election.geoJsonFile)
   return Promise.all(
     regions.map(async (region) => {
-      const [sentiment, candidates, comments] = await Promise.all([
+      const [sentiment, candidates] = await Promise.all([
         getKVValue(process.env.CF_KV_NAMESPACE_ID || 'mock', `sentiment:${region.code}`),
         getKVValue(process.env.CF_KV_NAMESPACE_ID || 'mock', `candidates:${region.code}`),
-        getKVValue(process.env.CF_KV_NAMESPACE_ID || 'mock', `comments:${region.code}`),
       ])
       return {
         ...region,
         sentiment,
         candidates: candidates || [],
-        comments,
         demographics: getMockDemographics(region.code),
       }
     }),

@@ -10,15 +10,6 @@ const partyNames: Record<string, string> = {
   GPS: 'GPS', GRS: 'GRS', WARISAN: 'Warisan', Bebas: 'Bebas',
 }
 
-const platformIcon = (p: string) => {
-  switch (p) {
-    case 'tiktok': return '🎵'
-    case 'twitter': return '𝕏'
-    case 'facebook': return '📘'
-    default: return '💬'
-  }
-}
-
 function CandidateCard({ c }: { c: CandidateData }) {
   const isIncumbent = c.role === 'penyandang'
   return (
@@ -82,7 +73,7 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
     )
   }
 
-  const { sentiment, candidates, comments, demographics, name, code, state } = region
+  const { sentiment, candidates, demographics, name, code, state } = region
   const sortedCandidates = [...candidates].sort((a, b) =>
     a.role === 'penyandang' ? -1 : b.role === 'penyandang' ? 1 : 0,
   )
@@ -192,58 +183,7 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
           )}
         </div>
 
-        {/* ── 4. Apa Kata Rakyat ── */}
-        <div className="p-4">
-          <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-2">Apa Kata Rakyat</h3>
-          {comments ? (
-            <>
-              <div className="flex items-center gap-3 mb-3 text-[10px]">
-                {comments.totalComments > 0 && (
-                  <>
-                    <span className="text-emerald-600">
-                      🟢 {Math.round((comments.sentimentSummary.positif / comments.totalComments) * 100)}%
-                    </span>
-                    <span className="text-amber-600">
-                      🟡 {Math.round((comments.sentimentSummary.neutral / comments.totalComments) * 100)}%
-                    </span>
-                    <span className="text-red-600">
-                      🔴 {Math.round((comments.sentimentSummary.negatif / comments.totalComments) * 100)}%
-                    </span>
-                  </>
-                )}
-              </div>
-              <div className="space-y-2">
-                {comments.items.slice(0, 5).map((c, i) => (
-                  <div key={i} className="border border-gray-100 rounded p-2">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <span className="text-[11px]">{platformIcon(c.platform)}</span>
-                      <span className="text-[10px] font-bold text-gray-700">@{c.username}</span>
-                      <span className={`text-[9px] font-bold ml-auto ${
-                        c.sentiment === 'positif' ? 'text-emerald-600' : c.sentiment === 'negatif' ? 'text-red-600' : 'text-amber-600'
-                      }`}>
-                        {c.sentiment === 'positif' ? '🟢' : c.sentiment === 'negatif' ? '🔴' : '🟡'}
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-gray-600 leading-snug line-clamp-2">
-                      {c.comment}
-                    </p>
-                    <div className="flex items-center gap-2 mt-1 text-[9px] text-gray-400">
-                      <span>❤️ {c.likes}</span>
-                      <span>{new Date(c.timestamp).toLocaleDateString('ms')}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="text-[9px] text-gray-400 mt-2">
-                {comments.totalComments} komen dikumpul setakat ini.
-              </p>
-            </>
-          ) : (
-            <div className="text-[11px] text-gray-400 italic py-2">Komen media sosial belum tersedia.</div>
-          )}
-        </div>
-
-        {/* ── 5. Berita Berkaitan ── */}
+        {/* ── 4. Berita Berkaitan ── */}
         <div className="p-4">
           <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-2">Berita Berkaitan</h3>
           {loading ? (

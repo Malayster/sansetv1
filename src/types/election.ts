@@ -76,7 +76,7 @@ export interface SocialCommentsData {
 export interface RegionWithData extends ElectionRegion {
   candidates: CandidateData[]
   sentiment: SentimentData | null
-  comments: SocialCommentsData | null
+  comments?: SocialCommentsData | null
   demographics: {
     malay: number
     chinese: number
