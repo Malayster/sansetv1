@@ -1,29 +1,31 @@
-const CF_BASE = `https://api.cloudflare.com/client/v4/accounts/${process.env.CF_ACCOUNT_ID}/storage/kv/namespaces`
+const ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID || process.env.CF_ACCOUNT_ID
+const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN || process.env.CF_API_TOKEN
+const CF_BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/storage/kv/namespaces`
 
 export async function getKVValue(namespaceId: string, key: string) {
-  if (!process.env.CF_ACCOUNT_ID || !process.env.CF_API_TOKEN) {
+  if (!ACCOUNT_ID || !API_TOKEN) {
     return getMockValue(key)
   }
   const res = await fetch(`${CF_BASE}/${namespaceId}/values/${encodeURIComponent(key)}`, {
-    headers: { Authorization: `Bearer ${process.env.CF_API_TOKEN}` },
+    headers: { Authorization: `Bearer ${API_TOKEN}` },
   })
   if (!res.ok) return null
   return res.json()
 }
 
 export async function setKVValue(namespaceId: string, key: string, value: any) {
-  if (!process.env.CF_ACCOUNT_ID || !process.env.CF_API_TOKEN) return
+  if (!ACCOUNT_ID || !API_TOKEN) return
   await fetch(`${CF_BASE}/${namespaceId}/values/${encodeURIComponent(key)}`, {
     method: 'PUT',
-    headers: { Authorization: `Bearer ${process.env.CF_API_TOKEN}` },
+    headers: { Authorization: `Bearer ${API_TOKEN}` },
     body: JSON.stringify(value),
   })
 }
 
 export async function listKVKeys(namespaceId: string, prefix: string) {
-  if (!process.env.CF_ACCOUNT_ID || !process.env.CF_API_TOKEN) return []
+  if (!ACCOUNT_ID || !API_TOKEN) return []
   const res = await fetch(`${CF_BASE}/${namespaceId}/keys?prefix=${encodeURIComponent(prefix)}`, {
-    headers: { Authorization: `Bearer ${process.env.CF_API_TOKEN}` },
+    headers: { Authorization: `Bearer ${API_TOKEN}` },
   })
   if (!res.ok) return []
   const data = await res.json()
