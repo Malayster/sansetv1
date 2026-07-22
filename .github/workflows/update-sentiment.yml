@@ -1,14 +1,14 @@
-name: Update Sentiment & Predictions
+name: Update Sentiment & Issues
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
+    - cron: '0 */6 * * *'   # Every 6 hours
+  workflow_dispatch:          # Manual trigger via GitHub UI
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
@@ -16,12 +16,38 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
       - run: npm ci
 
-      - name: Run KV update script
+      - name: Fetch Google Trends
+        run: npx tsx scripts/fetch-google-trends.ts
+
+      - name: Fetch RSS News
+        run: npx tsx scripts/fetch-rss-berita.ts
+
+      - name: Fetch Social Media Comments
+        run: npx tsx scripts/fetch-social-media.ts
+
+      - name: Generate Survey Template (manual input structure)
+        run: npx tsx scripts/input-survey.ts
+
+      - name: Analyze Composite Sentiment
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: npx tsx scripts/analyze-sentiment.ts
+
+      - name: Push to Cloudflare KV
+        if: env.CF_KV_NAMESPACE_ID != ''
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
-        run: npx tsx scripts/update-sentiment.ts
+        run: echo "KV push — requires KV upload script."
+
+      - name: Upload sentiment artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentiment-data
+          path: data/*-output.json
+          retention-days: 7

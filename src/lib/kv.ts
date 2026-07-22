@@ -34,14 +34,14 @@ export async function listKVKeys(namespaceId: string, prefix: string) {
 
 // ─── MOCK DATA ────────────────────────────────────
 const mockSentiment: Record<string, any> = {
-  'P001': { score: 72, label: 'positif', source: 'Ilham Center', summary: 'Sentimen majoritinya positif disebabkan projek pembangunan terkini.', updatedAt: '2026-07-22T10:00:00Z' },
-  'P002': { score: 45, label: 'neutral', source: 'Merdeka Center', summary: 'Sentimen bercampur — isu kos sara hidup membimbangkan pengundi.', updatedAt: '2026-07-21T08:00:00Z' },
-  'P003': { score: 28, label: 'negatif', source: 'Ilham Center', summary: 'Sentimen negatif akibat skandal rasuah tempatan.', updatedAt: '2026-07-20T14:00:00Z' },
-  'P004': { score: 85, label: 'positif', source: 'Merdeka Center', summary: 'Populariti tinggi calon penyandang di kawasan ini.', updatedAt: '2026-07-22T09:00:00Z' },
-  'N01': { score: 65, label: 'positif', source: 'Ilham Center', summary: 'Projek pembangunan luar bandar meningkatkan keyakinan pengundi.', updatedAt: '2026-07-22T10:00:00Z' },
-  'N02': { score: 48, label: 'neutral', source: 'Merdeka Center', summary: 'Sentimen bercampur — isu kos sara hidup di kawasan luar bandar.', updatedAt: '2026-07-21T08:00:00Z' },
-  'N03': { score: 38, label: 'negatif', source: 'Ilham Center', summary: 'Janji-janji tidak ditunaikan menyebabkan kekecewaan penduduk.', updatedAt: '2026-07-20T14:00:00Z' },
-  'N04': { score: 71, label: 'positif', source: 'Merdeka Center', summary: 'Populariti calon penyandang kekal kukuh di kawasan ini.', updatedAt: '2026-07-22T09:00:00Z' },
+  'P001': { score: 58, label: 'neutral', source: 'Composite AI', summary: 'Sentimen di Padang Besar neutral dengan kecenderungan positif terhadap BN. Isu air menjadi kebimbangan utama pengundi namun projek pembangunan diterima baik.', topIssue: 'Isu air & infrastruktur', partySentiment: { BN: 65, PH: 45, PN: 35 }, updatedAt: new Date().toISOString() },
+  'P002': { score: 62, label: 'neutral', source: 'Composite AI', summary: 'Kangar mencatatkan sentimen neutral-positif. Isu kesihatan dan harga rumah menjadi topik utama perbincangan.', topIssue: 'Kesihatan & perumahan', partySentiment: { PN: 60, PH: 45, BN: 40 }, updatedAt: new Date().toISOString() },
+  'P003': { score: 55, label: 'neutral', source: 'Composite AI', summary: 'Arau kekal sebagai kubu kuat PN dengan penyandang berpengaruh. Golongan muda mahukan perubahan.', topIssue: 'Belia & pendidikan tinggi', partySentiment: { PN: 62, PH: 42, BN: 30 }, updatedAt: new Date().toISOString() },
+  'P004': { score: 72, label: 'positif', source: 'Composite AI', summary: 'Langkawi mencatatkan sentimen positif tertinggi. Pemulihan pelancongan menjadi pemangkin utama.', topIssue: 'Pelancongan & kos sara hidup', partySentiment: { PN: 70, PH: 35, BN: 25 }, updatedAt: new Date().toISOString() },
+  'N01': { score: 65, label: 'positif', source: 'Composite AI', summary: 'Projek pembangunan luar bandar meningkatkan keyakinan pengundi.', updatedAt: new Date().toISOString() },
+  'N02': { score: 48, label: 'neutral', source: 'Composite AI', summary: 'Sentimen bercampur — isu kos sara hidup di kawasan luar bandar.', updatedAt: new Date().toISOString() },
+  'N03': { score: 38, label: 'negatif', source: 'Composite AI', summary: 'Janji-janji tidak ditunaikan menyebabkan kekecewaan penduduk.', updatedAt: new Date().toISOString() },
+  'N04': { score: 71, label: 'positif', source: 'Composite AI', summary: 'Populariti calon penyandang kekal kukuh di kawasan ini.', updatedAt: new Date().toISOString() },
 }
 
 const mockCandidates: Record<string, any[]> = {

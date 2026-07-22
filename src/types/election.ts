@@ -48,6 +48,8 @@ export interface SentimentData {
   label: string
   source: string
   summary: string
+  topIssue?: string
+  partySentiment?: Record<string, number>
   updatedAt: string
 }
 

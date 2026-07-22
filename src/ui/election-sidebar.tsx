@@ -170,6 +170,19 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
                 <span className="text-[9px] text-gray-400">· {sentiment.source}</span>
               </div>
               <p className="text-[11px] text-gray-500 mt-1 leading-snug">{sentiment.summary}</p>
+              {sentiment.topIssue && (
+                <p className="text-[10px] text-gray-400 mt-1">🔍 Isu hangat: <span className="font-medium text-gray-600">{sentiment.topIssue}</span></p>
+              )}
+              {sentiment.partySentiment && (
+                <div className="mt-2 pt-2 border-t border-gray-100 grid grid-cols-3 gap-2 text-center">
+                  {Object.entries(sentiment.partySentiment).map(([party, score]) => (
+                    <div key={party} className="text-[9px]">
+                      <div className="font-bold text-gray-700">{party}</div>
+                      <div className="text-gray-400">{score}%</div>
+                    </div>
+                  ))}
+                </div>
+              )}
               <p className="text-[9px] text-gray-400 mt-1">
                 Dikemaskini: {new Date(sentiment.updatedAt).toLocaleString('ms')}
               </p>
