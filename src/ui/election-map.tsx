@@ -53,11 +53,12 @@ const ElectionMap = memo(function ElectionMap({
 
   return (
     <div className="border border-gray-200 bg-white rounded overflow-hidden">
-      <ComposableMap
-        projection="geoMercator"
-        projectionConfig={{ center: [centerLng, centerLat], scale: regions.length <= 36 ? 2800 : 800 }}
-        style={{ width: '100%', height: '500px', backgroundColor: '#f1f5f9' }}
-      >
+      <div style={{ backgroundColor: '#f1f5f9' }}>
+        <ComposableMap
+          projection="geoMercator"
+          projectionConfig={{ center: [centerLng, centerLat], scale: regions.length <= 36 ? 2800 : 800 }}
+          style={{ width: '100%', height: '500px' }}
+        >
         <ZoomableGroup zoom={1} maxZoom={4}>
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
@@ -88,6 +89,7 @@ const ElectionMap = memo(function ElectionMap({
           </Geographies>
         </ZoomableGroup>
       </ComposableMap>
+      </div>
 
       {/* Quick-select buttons */}
       <div className="flex flex-wrap gap-2 p-2">
