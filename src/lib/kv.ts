@@ -3,14 +3,14 @@ const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN || process.env.CF_API_TOKEN
 const CF_BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}/storage/kv/namespaces`
 
 export async function getKVValue(namespaceId: string, key: string) {
-  if (!ACCOUNT_ID || !API_TOKEN) {
-    return getMockValue(key)
-  }
-  const res = await fetch(`${CF_BASE}/${namespaceId}/values/${encodeURIComponent(key)}`, {
-    headers: { Authorization: `Bearer ${API_TOKEN}` },
-  })
-  if (!res.ok) return null
-  return res.json()
+  if (!ACCOUNT_ID || !API_TOKEN) return getMockValue(key)
+  try {
+    const res = await fetch(`${CF_BASE}/${namespaceId}/values/${encodeURIComponent(key)}`, {
+      headers: { Authorization: `Bearer ${API_TOKEN}` },
+    })
+    if (!res.ok) return getMockValue(key)
+    return res.json()
+  } catch { return getMockValue(key) }
 }
 
 export async function setKVValue(namespaceId: string, key: string, value: any) {
