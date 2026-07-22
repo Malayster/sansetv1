@@ -9,6 +9,11 @@ interface ElectionWithRegions {
   regions: RegionWithData[]
 }
 
+/** Map PRN state election names to their flag image paths */
+const STATE_FLAGS: Record<string, string> = {
+  'PRN Negeri Sembilan': '/flags/negeri-sembilan.svg',
+}
+
 export default function ElectionPageClient({
   electionsWithRegions,
 }: {
@@ -16,16 +21,33 @@ export default function ElectionPageClient({
 }) {
   const [index, setIndex] = useState(0)
   const current = electionsWithRegions[index]
+  const flagPath = STATE_FLAGS[current.election.electionName]
 
   return (
     <div>
       {/* Header with dropdown */}
       <div className="flex justify-between items-center mb-6">
-        <div>
-          <h1 className="font-serif text-[28px] font-bold text-[#111]">{current.election.electionName}</h1>
-          {current.election.summary && (
-            <p className="text-[13px] text-gray-500 mt-1">{current.election.summary}</p>
+        <div className="flex items-center gap-4">
+          {flagPath && (
+            <img
+              src={flagPath}
+              alt={current.election.electionName}
+              className="w-12 h-8 rounded object-cover border border-gray-200 shadow-sm"
+            />
           )}
+          <div>
+            <h1 className="font-serif text-[28px] font-bold text-[#111]">
+              {current.election.electionName}
+              {current.election.electionType === 'prn' && (
+                <span className="ml-2 text-xs font-semibold text-white bg-emerald-600 px-2 py-0.5 rounded align-middle">
+                  PRN
+                </span>
+              )}
+            </h1>
+            {current.election.summary && (
+              <p className="text-[13px] text-gray-500 mt-1">{current.election.summary}</p>
+            )}
+          </div>
         </div>
         {electionsWithRegions.length > 1 && (
           <select

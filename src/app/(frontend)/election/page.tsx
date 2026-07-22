@@ -44,12 +44,19 @@ export default async function ElectionPage() {
   }
 
   // Pre-load regions for all active elections
-  const electionsWithRegions = await Promise.all(
+  let electionsWithRegions = await Promise.all(
     elections.map(async (el) => ({
       election: el,
       regions: await loadRegionsWithData(el),
     })),
   )
+
+  // Sort: PRN (state elections) before PRU (general elections) so Negeri Sembilan is default
+  electionsWithRegions.sort((a, b) => {
+    if (a.election.electionType === 'prn' && b.election.electionType !== 'prn') return -1
+    if (a.election.electionType !== 'prn' && b.election.electionType === 'prn') return 1
+    return 0
+  })
 
   return (
     <main className="max-w-[1180px] mx-auto px-4 py-6">

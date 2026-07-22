@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="80" viewBox="0 0 120 80">
+  <!-- Yellow background -->
+  <rect width="120" height="80" fill="#FFD700"/>
+  <!-- Black triangle (canton pointing right) -->
+  <polygon points="0,0 50,0 50,80 0,80" fill="#1a1a1a"/>
+  <!-- Red stripe on the hoist edge -->
+  <rect width="5" height="80" fill="#C41E3A"/>
+</svg>
