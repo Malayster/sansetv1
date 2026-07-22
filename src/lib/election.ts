@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import { groq } from 'next-sanity'
 import { client } from '@/sanity/lib/client'
 import type { ElectionInfo, ElectionRegion } from '@/types/election'
@@ -50,21 +52,58 @@ const FALLBACK_PRU16_REGIONS: ElectionRegion[] = [
   { code: 'P032', name: 'Gua Musang', state: 'Kelantan', lat: 4.88, lng: 101.96 },
 ]
 
+/** Compute centroid of a Polygon/MultiPolygon geometry */
+function centroid(coords: any): [number, number] {
+  if (typeof coords[0] === 'number') return [coords[0], coords[1]] // Point
+  if (Array.isArray(coords[0][0][0])) {
+    // MultiPolygon: flatten all rings
+    const all = coords.flat(2) as number[][]
+    const lng = all.reduce((s, c) => s + c[0], 0) / all.length
+    const lat = all.reduce((s, c) => s + c[1], 0) / all.length
+    return [lng, lat]
+  }
+  // Polygon: first ring (exterior)
+  const ring = (Array.isArray(coords[0][0][0]) ? coords[0] : coords) as number[][]
+  const lng = ring.reduce((s, c) => s + c[0], 0) / ring.length
+  const lat = ring.reduce((s, c) => s + c[1], 0) / ring.length
+  return [lng, lat]
+}
+
 export async function getElectionRegions(geoJsonFile?: string): Promise<ElectionRegion[]> {
   if (!geoJsonFile) return FALLBACK_PRU16_REGIONS
+
+  // Read polygon GeoJSON from filesystem (works in both dev and production)
+  const isoFile = geoJsonFile.replace('.json', '_polygon.json')
   try {
-    const res = await fetch(`/geojson/${geoJsonFile}`)
-    const data = await res.json()
-    if (data?.features) {
-      return data.features.map((f: any) => ({
-        code: f.properties.code,
-        name: f.properties.name,
-        state: f.properties.state,
-        lat: f.geometry.coordinates[1],
-        lng: f.geometry.coordinates[0],
-      }))
+    const filePath = path.join(process.cwd(), 'public', 'geojson', isoFile)
+    if (!fs.existsSync(filePath)) {
+      // Fallback to non-polygon version
+      const altPath = path.join(process.cwd(), 'public', 'geojson', geoJsonFile)
+      if (!fs.existsSync(altPath)) return FALLBACK_PRU16_REGIONS
+      const raw = fs.readFileSync(altPath, 'utf-8')
+      const data = JSON.parse(raw)
+      if (!data?.features) return FALLBACK_PRU16_REGIONS
+      return data.features.map((f: any) => {
+        const [clng, clat] = centroid(f.geometry.coordinates)
+        return {
+          code: f.properties.code,
+          name: f.properties.name,
+          state: f.properties.state,
+          lat: f.properties.lat ?? clat,
+          lng: f.properties.lng ?? clng,
+        }
+      })
     }
-    return FALLBACK_PRU16_REGIONS
+    const raw = fs.readFileSync(filePath, 'utf-8')
+    const data = JSON.parse(raw)
+    if (!data?.features) return FALLBACK_PRU16_REGIONS
+    return data.features.map((f: any) => ({
+      code: f.properties.code,
+      name: f.properties.name,
+      state: f.properties.state,
+      lat: f.properties.lat ?? centroid(f.geometry.coordinates)[1],
+      lng: f.properties.lng ?? centroid(f.geometry.coordinates)[0],
+    }))
   } catch { return FALLBACK_PRU16_REGIONS }
 }
 

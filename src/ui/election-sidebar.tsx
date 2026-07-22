@@ -27,7 +27,7 @@ function CandidateCard({ c }: { c: CandidateData }) {
         src={c.partyLogo}
         alt={c.party}
         className="w-[40px] h-[40px] rounded-full object-cover border-2 border-gray-200 flex-shrink-0 bg-gray-100"
-        onError={(e) => { (e.target as HTMLImageElement).src = '/flags/bebas.png' }}
+        onError={(e) => { (e.target as HTMLImageElement).src = '/flags/bebas.svg' }}
       />
       <div className="flex-1 min-w-0">
         <p className="text-[14px] font-bold text-gray-800 leading-tight">{c.name}</p>
@@ -198,9 +198,19 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
           {comments ? (
             <>
               <div className="flex items-center gap-3 mb-3 text-[10px]">
-                <span className="text-emerald-600">🟢 {comments.sentimentSummary.positif}%</span>
-                <span className="text-amber-600">🟡 {comments.sentimentSummary.neutral}%</span>
-                <span className="text-red-600">🔴 {comments.sentimentSummary.negatif}%</span>
+                {comments.totalComments > 0 && (
+                  <>
+                    <span className="text-emerald-600">
+                      🟢 {Math.round((comments.sentimentSummary.positif / comments.totalComments) * 100)}%
+                    </span>
+                    <span className="text-amber-600">
+                      🟡 {Math.round((comments.sentimentSummary.neutral / comments.totalComments) * 100)}%
+                    </span>
+                    <span className="text-red-600">
+                      🔴 {Math.round((comments.sentimentSummary.negatif / comments.totalComments) * 100)}%
+                    </span>
+                  </>
+                )}
               </div>
               <div className="space-y-2">
                 {comments.items.slice(0, 5).map((c, i) => (
@@ -215,7 +225,7 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
                       </span>
                     </div>
                     <p className="text-[11px] text-gray-600 leading-snug line-clamp-2">
-                      {c.comment.length > 80 ? c.comment.slice(0, 77) + '...' : c.comment}
+                      {c.comment}
                     </p>
                     <div className="flex items-center gap-2 mt-1 text-[9px] text-gray-400">
                       <span>❤️ {c.likes}</span>

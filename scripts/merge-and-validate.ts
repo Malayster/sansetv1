@@ -36,13 +36,13 @@ interface TindakByCode {
 }
 
 const PARTY_LOGO: Record<string, string> = {
-  'BN': '/flags/bn.png',
-  'PH': '/flags/ph.png',
-  'PN': '/flags/pn.png',
-  'GPS': '/flags/gps.png',
-  'GRS': '/flags/grs.png',
-  'WARISAN': '/flags/warisan.png',
-  'BEBAS': '/flags/bebas.png',
+  'BN': '/flags/bn.svg',
+  'PH': '/flags/ph.svg',
+  'PN': '/flags/pn.svg',
+  'GPS': '/flags/gps.svg',
+  'GRS': '/flags/grs.svg',
+  'WARISAN': '/flags/warisan.svg',
+  'BEBAS': '/flags/bebas.svg',
 }
 
 function getPartyLogo(rawParty: string): string {
@@ -50,7 +50,7 @@ function getPartyLogo(rawParty: string): string {
   for (const [k, v] of Object.entries(PARTY_LOGO)) {
     if (u.includes(k)) return v
   }
-  return '/flags/bebas.png'
+  return '/flags/bebas.svg'
 }
 
 function mapParty(rawParty: string): string {
@@ -128,10 +128,10 @@ function merge(wiki: WikiRaw[], tindak: TindakByCode): Record<string, { candidat
     // Ensure at least 2 candidates
     if (candidates.length < 2) {
       if (!candidates.find(c => c.party === 'PH')) {
-        candidates.push({ name: 'N/A', party: 'PH', partyLogo: '/flags/ph.png', role: 'pencabar', lastElection: { year: 2022, votes: 0, majority: 0, percentage: 0, totalVoters: 45000, turnout: 78.5 } })
+        candidates.push({ name: 'N/A', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar', lastElection: { year: 2022, votes: 0, majority: 0, percentage: 0, totalVoters: 45000, turnout: 78.5 } })
       }
       if (!candidates.find(c => c.party === 'PN')) {
-        candidates.push({ name: 'N/A', party: 'PN', partyLogo: '/flags/pn.png', role: 'pencabar', lastElection: { year: 2022, votes: 0, majority: 0, percentage: 0, totalVoters: 45000, turnout: 78.5 } })
+        candidates.push({ name: 'N/A', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar', lastElection: { year: 2022, votes: 0, majority: 0, percentage: 0, totalVoters: 45000, turnout: 78.5 } })
       }
     }
 
