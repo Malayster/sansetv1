@@ -73,8 +73,8 @@ export default async function Homepage() {
         ))}
       </div>
       <div className="p-2">
-        <div className="flex items-center gap-1 mb-1"><Sec t="Tajuk Utama Terkini" h={bp} /></div>
-        {p.slice(5,19).map((a,i) => (
+        <div className="flex items-center gap-1 mb-1"><Sec t="BERITA TERKINI" h={bp} /></div>
+        {p.slice(5,15).map((a,i) => (
           <div key={a._id} className="flex items-start gap-0 py-[3px] border-b border-gray-100">
             <span className="text-[11px] font-bold text-gray-400 w-4">{i+1}</span>
             <div className="min-w-0"><Link href={`${bp}${a.slug}`} className="text-[11px] text-gray-800 leading-snug line-clamp-0 hover:text-[#C41E3A] transition-colors">{a.title}</Link><Tim p={a} /></div>
@@ -83,11 +83,10 @@ export default async function Homepage() {
       </div>
     </section>
 
-    {/* ═══════ EDITOR'S PICKS + BISNES (merged) ═══════ */}
-    <div className="grid lg:grid-cols-[1fr_300px] gap-5 py-3">
-      <div className="p-0 flex flex-col gap-2">
-        <div>
-          <Sec t="Pilihan Editor" h={bp} />
+    {/* ═══════ EDITOR'S PICKS + BISNES ═══════ */}
+    <div className="flex flex-col gap-2">
+      <div>
+        <Sec t="Pilihan Editor" h={bp} />
           <div className="grid md:grid-cols-4 gap-1 mt-1">
             {p.slice(5,9).map(a => (
               <article key={a._id} className="p-0">
@@ -108,11 +107,6 @@ export default async function Homepage() {
             ))}
           </div>
         </div>
-      </div>
-      <aside className="p-2">
-        <h3 className="text-[11px] font-bold text-gray-500 uppercase tracking-wider mb-1 pb-0.5 border-b-2 border-[#C41E3A] inline-block">Terkini</h3>
-        {p.slice(13,22).map(a => (<div key={a._id} className="py-[3px] border-b border-gray-100"><Tag p={a} sz="text-[9px]" /><Link href={`${bp}${a.slug}`} className="text-[11px] text-gray-800 leading-snug line-clamp-0 hover:text-[#C41E3A] transition-colors block">{a.title}</Link></div>))}
-      </aside>
     </div>
 
     {/* ═══════ SPOTLIGHT + OPINION (merged) ═══════ */}
