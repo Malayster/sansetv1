@@ -52,11 +52,12 @@ export default async function Homepage() {
         {p[0].excerpt && <p className="text-[12px] text-gray-500 mt-0.5 line-clamp-2">{p[0].excerpt}</p>}
         <Tim p={p[0]} />
       </article>
-      <div className="flex flex-col gap-0.5">
-        {p.slice(1,5).map(a => (
+      <div className="flex flex-col gap-1">
+        {p.slice(1,3).map(a => (
           <article key={a._id} className="border border-gray-200 p-1.5">
-            <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={294} h={165} /></Link>
-            <Tag p={a} lk={false} /><Head p={a} sz="text-[12px]" /><Tim p={a} />
+            <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-1"><Img p={a} w={294} h={200} /></Link>
+            <Tag p={a} lk={false} /><Head p={a} sz="text-[14px]" /><Tim p={a} />
+            {a.excerpt && <p className="text-[11px] text-gray-500 mt-0.5 line-clamp-2">{a.excerpt}</p>}
           </article>
         ))}
       </div>
