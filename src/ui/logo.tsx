@@ -33,10 +33,10 @@ export default async function ({
 				/>
 			) : (
 				<>
-					<span className="text-putih text-lg md:text-xl tracking-tight">
+					<span className={cn("text-lg md:text-xl tracking-tight", style === "dark" ? "text-putih" : "text-[#1A1A1A]")}>
 						{site?.title ?? DEFAULT_LOGO}
 					</span>
-					<span className="text-putih/70 text-xs font-normal tracking-wider">
+					<span className={cn("text-xs font-normal tracking-wider", style === "dark" ? "text-putih/70" : "text-gray-500")}>
 						Jambatan Suara Rakyat
 					</span>
 				</>
