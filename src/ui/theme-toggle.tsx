@@ -1,6 +1,6 @@
 'use client'
 
-import { useTheme } from 'next-themes'
+import { useTheme } from '@/ui/theme-provider'
 import { useEffect, useState } from 'react'
 
 export default function ThemeToggle() {
@@ -10,7 +10,7 @@ export default function ThemeToggle() {
 	useEffect(() => setMounted(true), [])
 
 	if (!mounted) {
-		return <div className="w-9 h-9" /> // placeholder to prevent layout shift
+		return <div className="w-9 h-9" />
 	}
 
 	return (

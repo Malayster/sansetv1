@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { getActiveElections, getElectionRegions } from '@/lib/election'
+import { getActiveElections, getElectionRegions } from '@/lib/election-server'
 import { getKVValue, getMockDemographics } from '@/lib/kv'
 import ElectionPageClient from './ElectionPageClient'
 import type { ElectionInfo, RegionWithData } from '@/types/election'
