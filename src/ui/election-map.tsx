@@ -56,7 +56,7 @@ const ElectionMap = memo(function ElectionMap({
       <ComposableMap
         projection="geoMercator"
         projectionConfig={{ center: [centerLng, centerLat], scale: regions.length <= 36 ? 2800 : 800 }}
-        style={{ width: '100%', height: '500px' }}
+        style={{ width: '100%', height: '500px', backgroundColor: '#f1f5f9' }}
       >
         <ZoomableGroup zoom={1} maxZoom={4}>
           <Geographies geography={geoUrl}>
