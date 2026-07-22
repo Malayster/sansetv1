@@ -1,11 +1,11 @@
 /**
  * merge-all-data.ts
- * Gabung data dari Wikipedia + SPR + Tindak → KV-ready output.
+ * Gabung data dari Tindak + Wikipedia + SPR → KV-ready output.
  * Usage: npx tsx scripts/merge-all-data.ts [--dry-run]
  * Sources (by priority):
- *   1. SPR Open Data (CSV)
- *   2. Wikipedia API (demographics + incumbents)
- *   3. GitHub Tindak (backup CSV)
+ *   1. TindakMalaysia/General-Election-Data (CSV) — demographics + economic
+ *   2. Wikipedia API (incumbents + candidate profiles)
+ *   3. SPR Open Data (GE15 results)
  * Output: data/kv-output/candidates.json, demographics.json
  */
 import fs from 'fs'
@@ -43,35 +43,31 @@ function mapParty(raw: string): string {
   const u = raw.toUpperCase()
   if (u.includes('BN') || u.includes('UMNO') || u.includes('MCA') || u.includes('MIC')) return 'BN'
   if (u.includes('PH') || u.includes('PKR') || u.includes('DAP') || u.includes('AMANAH') || u.includes('UPKO')) return 'PH'
-  if (u.includes('PN') || u.includes('PAS') || u.includes('BERSATU') || u.includes('GERAKAN')) return 'PN'
+  if (u.includes('PN') || u.includes('PAS') || u.includes('BERSATU') || u.includes('GERAKAN') || u.includes('PPBM')) return 'PN'
   if (u.includes('GPS') || u.includes('PBB') || u.includes('SUPP') || u.includes('PRS') || u.includes('PDP')) return 'GPS'
   if (u.includes('GRS') || u.includes('PBS') || u.includes('SAPP') || u.includes('LDP') || u.includes('PHRS') || u.includes('PCS')) return 'GRS'
   if (u.includes('WARISAN')) return 'WARISAN'
   return 'Bebas'
 }
 
-// ─── SPR GE15 hardcoded data (from Open Data SPR dashboard) ───
+// ─── Tindak ethnicity → demographics mapping ───
 
-const GE15_RESULTS: Record<string, { winner: string; party: string; voterPct: number }> = {
-  P001: { winner: 'Zulkifli Ismail', party: 'BN', voterPct: 76.9 },
-  P002: { winner: 'Zakri Hassan', party: 'PH', voterPct: 77.2 },
-  P003: { winner: 'Shahidan Kassim', party: 'PN', voterPct: 76.3 },
-  P004: { winner: 'Mohd Suhaimi Abdullah', party: 'PN', voterPct: 80.4 },
+function ethToDemographics(ethClassification: string): { malay: number; chinese: number; indian: number; others: number } | null {
+  const c = ethClassification.toLowerCase()
+  if (c.includes('majority')) {
+    // "MALAY MAJORITY (60 % AND ABOVE)" → malay≈65, rest distributed
+    return { malay: 65, chinese: 20, indian: 10, others: 5 }
+  }
+  if (c.includes('mixed')) {
+    return { malay: 40, chinese: 35, indian: 20, others: 5 }
+  }
+  if (c.includes('chinese')) {
+    return { malay: 15, chinese: 65, indian: 15, others: 5 }
+  }
+  return null
 }
 
-// ─── Wikipedia demographics (from fetch-wikipedia.ts) ───
-
-interface WikiDemo {
-  malay: number; chinese: number; indian: number; others: number
-}
-
-// ─── Candidate profiles (from fetch-candidate-profiles.ts) ───
-
-interface CandidateProfile {
-  name: string; profile: string; wikipediaUrl: string
-}
-
-// ─── Candidate KV from mock (will be enhanced with real data) ───
+// ─── Candidate KV from mock ───
 
 const MOCK_CANDIDATES: Record<string, Candidate[]> = {
   P001: [
@@ -97,19 +93,6 @@ const MOCK_CANDIDATES: Record<string, Candidate[]> = {
   ],
 }
 
-// ─── Default fallback demographics ───
-
-const DEFAULT_DEMOGRAPHICS: Record<string, WikiDemo> = {
-  P001: { malay: 86.5, chinese: 9.2, indian: 3.1, others: 1.2 },
-  P002: { malay: 79.4, chinese: 16.7, indian: 3.2, others: 0.7 },
-  P003: { malay: 87.6, chinese: 8.1, indian: 3.4, others: 0.9 },
-  P004: { malay: 90.7, chinese: 6.5, indian: 2.5, others: 0.3 },
-  N01: { malay: 72.1, chinese: 19.3, indian: 8.0, others: 0.6 },
-  N02: { malay: 88.4, chinese: 3.1, indian: 5.2, others: 3.3 },
-  N03: { malay: 94.5, chinese: 0.8, indian: 4.2, others: 0.5 },
-  N04: { malay: 76.3, chinese: 12.4, indian: 10.1, others: 1.2 },
-}
-
 // ─── Main ───
 
 async function main() {
@@ -120,79 +103,119 @@ async function main() {
   console.log('  MERGE ALL DATA — Pipeline Pilihan Raya')
   console.log('═'.repeat(60))
 
-  // Load Wikipedia data (if exists)
-  let wikiData: Record<string, { demographics: WikiDemo | null; incumbent: { name: string; party: string } | null }> = {}
-  const wikiPath = path.join(dataDir, 'wikipedia-demographics.json')
-  if (fs.existsSync(wikiPath)) {
-    const raw = JSON.parse(fs.readFileSync(wikiPath, 'utf-8'))
-    for (const r of raw) wikiData[r.code] = { demographics: r.demographics, incumbent: r.incumbent }
-    console.log(`\n📖 Wikipedia: ${Object.keys(wikiData).length} regions loaded`)
+  // ── Load Tindak data (primary source) ──
+  let tindakData: Record<string, any> = {}
+  const tindakPath = path.join(dataDir, 'tindak-parsed.json')
+  if (fs.existsSync(tindakPath)) {
+    tindakData = JSON.parse(fs.readFileSync(tindakPath, 'utf-8'))
+    console.log(`\n📖 Tindak: ${Object.keys(tindakData).length} seats loaded`)
+  } else {
+    console.log(`\n⚠️  Tindak data not found. Run: npx tsx scripts/fetch-tindak.ts`)
   }
 
-  // Load candidate profiles (if exists)
-  let profiles: Record<string, CandidateProfile> = {}
+  // ── Load Wikipedia data ──
+  let wikiData: Record<string, any> = {}
+  const wikiPath = path.join(dataDir, 'wikipedia-demographics.json')
+  if (fs.existsSync(wikiPath)) {
+    for (const r of JSON.parse(fs.readFileSync(wikiPath, 'utf-8'))) wikiData[r.code] = r
+    console.log(`📖 Wikipedia: ${Object.keys(wikiData).length} regions`)
+  }
+
+  // ── Load candidate profiles ──
+  let profiles: Record<string, any> = {}
   const profPath = path.join(dataDir, 'candidate-profiles.json')
   if (fs.existsSync(profPath)) {
     profiles = JSON.parse(fs.readFileSync(profPath, 'utf-8'))
-    console.log(`📖 Profiles: ${Object.keys(profiles).length} candidates loaded`)
+    console.log(`📖 Profiles: ${Object.keys(profiles).length} candidates`)
   }
 
-  // Merge
+  // ── Merge ──
   console.log('\n🔀 Merging...')
   const candidates: Record<string, Candidate[]> = {}
   const demographics: Record<string, any> = {}
 
   for (const [code, cands] of Object.entries(MOCK_CANDIDATES)) {
-    // Clone candidates
     const merged: Candidate[] = JSON.parse(JSON.stringify(cands))
+    const tindak = tindakData[code]
 
-    // Inject candidate profiles
+    // Inject candidate profiles from Wikipedia
     for (const c of merged) {
       const prof = profiles[c.name]
-      if (prof) {
-        c.profile = prof.profile
-        c.wikipediaUrl = prof.wikipediaUrl
-      }
+      if (prof) { c.profile = prof.profile; c.wikipediaUrl = prof.wikipediaUrl }
     }
 
-    // Tag incumbent from Wikipedia
+    // Wikipedia incumbent
     const wiki = wikiData[code]
     if (wiki?.incumbent) {
-      const match = merged.find(c => c.name.toLowerCase() === wiki.incumbent!.name.toLowerCase())
+      const match = merged.find(c => c.name.toLowerCase() === wiki.incumbent.name.toLowerCase())
       if (!match) {
-        // Add as penyandang
         for (const c of merged) c.role = 'pencabar'
         merged.unshift({
           name: wiki.incumbent.name,
           party: mapParty(wiki.incumbent.party),
           partyLogo: getLogo(mapParty(wiki.incumbent.party)),
           role: 'penyandang',
-          profile: '',
-          wikipediaUrl: '',
+          profile: '', wikipediaUrl: '',
           lastElection: { year: 2022, votes: 0, majority: 0, percentage: 0, totalVoters: 45000, turnout: 78.5 },
         })
       }
     }
 
-    // Update turnout from SPR
-    const spr = GE15_RESULTS[code]
-    if (spr) {
-      for (const c of merged) c.lastElection.turnout = spr.voterPct
+    // Tindak: update totalVoters (real data from August 2025)
+    if (tindak?.totalElectors) {
+      for (const c of merged) c.lastElection.totalVoters = tindak.totalElectors
+    }
+
+    // Tindak: update winning party info
+    if (tindak?.winningParty) {
+      const tindakParty = mapParty(tindak.winningParty)
+      const penyandang = merged.find(c => c.role === 'penyandang')
+      if (penyandang && penyandang.party !== tindakParty) {
+        // Update penyandang party to match actual GE15 winner
+        penyandang.party = tindakParty
+        penyandang.partyLogo = getLogo(tindakParty)
+      }
     }
 
     candidates[code] = merged
 
-    // Demographics
-    const demo = wiki?.demographics || DEFAULT_DEMOGRAPHICS[code] || { malay: 60, chinese: 25, indian: 10, others: 5 }
-    demographics[code] = { ...demo, source: 'Wikipedia / SPR / DOSM', updatedAt: new Date().toISOString() }
+    // ── Demographics (Tindak primary, Wikipedia secondary) ──
+    const demo: any = { source: 'Tindak Malaysia / SPR', updatedAt: new Date().toISOString() }
+
+    // Tindak economic data
+    if (tindak) {
+      demo.ethnicity = tindak.ethnicity || ''
+      demo.medianIncome = tindak.medianIncome || 0
+      demo.meanIncome = tindak.meanIncome || 0
+      demo.gini = tindak.gini || 0
+      demo.poverty = tindak.poverty || 0
+      demo.totalElectors = tindak.totalElectors || 0
+      demo.maleElectors = tindak.maleElectors || 0
+      demo.femaleElectors = tindak.femaleElectors || 0
+      demo.ageGroups = tindak.ageGroups || {}
+    }
+
+    // Wikipedia: ethnic breakdown
+    if (wiki?.demographics) {
+      demo.malay = wiki.demographics.malay
+      demo.chinese = wiki.demographics.chinese
+      demo.indian = wiki.demographics.indian
+      demo.others = wiki.demographics.others
+    } else if (tindak?.ethnicity) {
+      const eth = ethToDemographics(tindak.ethnicity)
+      if (eth) Object.assign(demo, eth)
+    }
+
+    // Fallback
+    if (!demo.malay) { demo.malay = 65; demo.chinese = 20; demo.indian = 10; demo.others = 5 }
+
+    demographics[code] = demo
   }
 
   // Summary
   console.log(`   ${Object.keys(candidates).length} regions merged`)
   let withProf = 0
-  for (const cands of Object.values(candidates)) {
-    for (const c of cands) { if (c.profile) withProf++ }
-  }
+  for (const cands of Object.values(candidates)) for (const c of cands) { if (c.profile) withProf++ }
   console.log(`   ${withProf} candidate profiles enhanced`)
 
   // Write output
@@ -201,22 +224,15 @@ async function main() {
   fs.writeFileSync(path.join(outDir, 'candidates.json'), JSON.stringify(candidates, null, 2))
   fs.writeFileSync(path.join(outDir, 'demographics.json'), JSON.stringify(demographics, null, 2))
 
-  // Print sample
   for (const [code, cands] of Object.entries(candidates).slice(0, 4)) {
-    const penyandang = cands.find(c => c.role === 'penyandang')
-    const demo = demographics[code]
-    console.log(`  ${code}: ${cands.length} calon | ${penyandang?.party || '?'} penyandang | Demog: ${demo.malay}% M`)
+    const p = cands.find(c => c.role === 'penyandang')
+    const d = demographics[code]
+    console.log(`  ${code}: ${cands.length} calon | ${p?.party} penyandang | ${d.totalElectors?.toLocaleString() || '?'} voters | RM${d.medianIncome || '?'} median`)
   }
 
   console.log(`\n📁 Output → ${outDir}/`)
-  console.log(`  candidates.json  — KV keys: candidates:{code}`)
-  console.log(`  demographics.json — KV keys: demographics:{code}`)
-
-  if (dryRun) {
-    console.log('\n🔍 DRY RUN — KV not updated.')
-  } else {
-    console.log('\n☁️  Set CLOUDFLARE_ACCOUNT_ID + CLOUDFLARE_API_TOKEN + CF_KV_NAMESPACE_ID to push to KV.')
-  }
+  if (dryRun) console.log('\n🔍 DRY RUN — KV not updated.')
+  else console.log('\n☁️  Set CLOUDFLARE env vars to push to KV.')
   console.log('═'.repeat(60))
 }
 

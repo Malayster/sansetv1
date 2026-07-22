@@ -130,10 +130,10 @@ const defaultComments = (code: string) => ({
 })
 
 const mockDemographics: Record<string, any> = {
-  'P001': { malay: 78, chinese: 15, indian: 5, others: 2 },
-  'P002': { malay: 82, chinese: 12, indian: 4, others: 2 },
-  'P003': { malay: 85, chinese: 10, indian: 3, others: 2 },
-  'P004': { malay: 90, chinese: 5, indian: 3, others: 2 },
+  'P001': { malay: 78, chinese: 15, indian: 5, others: 2, medianIncome: 4389, poverty: 3.7, gini: 0.299 },
+  'P002': { malay: 82, chinese: 12, indian: 4, others: 2, medianIncome: 4998, poverty: 4.3, gini: 0.349 },
+  'P003': { malay: 85, chinese: 10, indian: 3, others: 2, medianIncome: 4802, poverty: 3.9, gini: 0.0 },
+  'P004': { malay: 90, chinese: 5, indian: 3, others: 2, medianIncome: 5250, poverty: 5.7, gini: 0.0 },
   'N01': { malay: 55, chinese: 28, indian: 14, others: 3 },
   'N02': { malay: 72, chinese: 18, indian: 8, others: 2 },
   'N03': { malay: 80, chinese: 12, indian: 5, others: 3 },

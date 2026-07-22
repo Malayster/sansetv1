@@ -80,5 +80,13 @@ export interface RegionWithData extends ElectionRegion {
     chinese: number
     indian: number
     others: number
+    medianIncome?: number
+    meanIncome?: number
+    gini?: number
+    poverty?: number
+    totalElectors?: number
+    maleElectors?: number
+    femaleElectors?: number
+    ethnicity?: string
   }
 }
