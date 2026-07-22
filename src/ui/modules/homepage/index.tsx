@@ -73,6 +73,11 @@ export default async function Homepage() {
         ))}
       </div>
       <div className="p-2">
+        <div className="mb-2 bg-[#C41E3A] p-4 text-center">
+          <span className="font-bold text-[20px] text-white"><span className="text-[#F5C842]">#PILIHAN</span>RAYA</span>
+          <p className="text-[10px] text-white/80 mt-1">Liputan eksklusif pilihan raya di Malaysia</p>
+          <Link href={`${bp}?category=PilihanRaya`} className="text-[10px] font-bold text-[#F5C842] hover:underline">Ikuti ›</Link>
+        </div>
         <div className="flex items-center gap-1 mb-1"><Sec t="BERITA TERKINI" h={bp} /></div>
         {p.slice(5,15).map((a,i) => (
           <div key={a._id} className="flex items-start gap-0 py-[3px] border-b border-gray-100">
@@ -80,11 +85,6 @@ export default async function Homepage() {
             <div className="min-w-0"><Link href={`${bp}${a.slug}`} className="text-[11px] text-gray-800 leading-snug line-clamp-0 hover:text-[#C41E3A] transition-colors">{a.title}</Link><Tim p={a} /></div>
           </div>
         ))}
-        <div className="mt-2 bg-[#C41E3A] p-2 text-center">
-          <span className="font-bold text-[14px] text-white"><span className="text-[#F5C842]">#PILIHAN</span>RAYA</span>
-          <p className="text-[8px] text-white/80 mt-0.5">Liputan eksklusif pilihan raya</p>
-          <Link href={`${bp}?category=PilihanRaya`} className="text-[9px] font-bold text-[#F5C842] hover:underline">Ikuti ›</Link>
-        </div>
       </div>
     </section>
 
