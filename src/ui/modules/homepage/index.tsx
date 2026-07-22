@@ -63,9 +63,9 @@ export default async function Homepage() {
           ))}
         </div>
       </div>
-      {/* COL 2 — 4 thumbnails */}
+      {/* COL 2 — 2 thumbnails */}
       <div className="flex flex-col gap-0.5">
-        {p.slice(3,7).map(a => (
+        {p.slice(3,5).map(a => (
           <article key={a._id} className="border border-gray-200 p-1.5">
             <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={294} h={165} /></Link>
             <Tag p={a} lk={false} /><Head p={a} sz="text-[12px]" /><Tim p={a} />
