@@ -3,16 +3,19 @@
 @theme {
 	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
-	/* 🎨 SUARA ANAK NEGERI — Putih, Merah, Hitam */
-	--color-merah: #CC0000;
+	/* 🎨 SUARA ANAK NEGERI — Merah, Emas, Hijau, Gelap */
+	--color-merah: #C41E3A;
 	--color-merah-gelap: #990000;
 	--color-merah-muda: #FFEBEE;
+	--color-emas: #B8860B;
+	--color-hijau-zamrud: #046A38;
 	--color-hitam: #111111;
 	--color-hitam-muda: #333333;
 	--color-kelabu: #DDDDDD;
 	--color-kelabu-gelap: #999999;
 	--color-putih: #FFFFFF;
 	--color-abu: #F5F5F5;
+	--color-bg-dark: #0F0F0F;
 
 	/* Background = PUTIH, Foreground = HITAM */
 	--color-background: var(--color-putih);
