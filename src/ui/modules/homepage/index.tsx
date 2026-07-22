@@ -45,19 +45,30 @@ export default async function Homepage() {
 
     {/* ═══════ HERO 3-COL ═══════ */}
     <section className="grid lg:grid-cols-[1fr_300px_300px] gap-0.5 py-0.5">
-      <article className="border border-gray-200 p-2">
-        <Link href={`${bp}${p[0].slug}`} className="block overflow-hidden mb-1"><Img p={p[0]} w={620} h={349} prio /></Link>
-        <Tag p={p[0]} sz="text-[11px]" />
-        <Link href={`${bp}${p[0].slug}`}><h1 className="font-serif text-[22px] md:text-[26px] font-bold leading-tight text-[#111] hover:text-[#C41E3A] transition-colors line-clamp-3 mt-0.5">{p[0].title}</h1></Link>
-        {p[0].excerpt && <p className="text-[12px] text-gray-500 mt-0.5 line-clamp-2">{p[0].excerpt}</p>}
-        <Tim p={p[0]} />
-      </article>
-      <div className="flex flex-col gap-1">
-        {p.slice(1,3).map(a => (
+      <div className="border border-gray-200 p-2 flex flex-col">
+        <article>
+          <Link href={`${bp}${p[0].slug}`} className="block overflow-hidden mb-1"><Img p={p[0]} w={620} h={349} prio /></Link>
+          <Tag p={p[0]} sz="text-[11px]" />
+          <Link href={`${bp}${p[0].slug}`}><h1 className="font-serif text-[22px] md:text-[26px] font-bold leading-tight text-[#111] hover:text-[#C41E3A] transition-colors line-clamp-3 mt-0.5">{p[0].title}</h1></Link>
+          {p[0].excerpt && <p className="text-[12px] text-gray-500 mt-0.5 line-clamp-2">{p[0].excerpt}</p>}
+          <Tim p={p[0]} />
+        </article>
+        {/* 2 articles below main headline */}
+        <div className="grid grid-cols-2 gap-2 mt-2 pt-2 border-t border-gray-100">
+          {p.slice(1,3).map(a => (
+            <article key={a._id}>
+              <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-1"><Img p={a} w={294} h={165} /></Link>
+              <Tag p={a} lk={false} /><Head p={a} sz="text-[13px]" /><Tim p={a} />
+            </article>
+          ))}
+        </div>
+      </div>
+      {/* COL 2 — 4 thumbnails */}
+      <div className="flex flex-col gap-0.5">
+        {p.slice(3,7).map(a => (
           <article key={a._id} className="border border-gray-200 p-1.5">
-            <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-1"><Img p={a} w={294} h={200} /></Link>
-            <Tag p={a} lk={false} /><Head p={a} sz="text-[14px]" /><Tim p={a} />
-            {a.excerpt && <p className="text-[11px] text-gray-500 mt-0.5 line-clamp-2">{a.excerpt}</p>}
+            <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={294} h={165} /></Link>
+            <Tag p={a} lk={false} /><Head p={a} sz="text-[12px]" /><Tim p={a} />
           </article>
         ))}
       </div>
