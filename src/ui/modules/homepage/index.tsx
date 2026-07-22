@@ -115,34 +115,31 @@ export default async function Homepage() {
       </aside>
     </div>
 
-    {/* ═══════ #teknologiAsia + SPOTLIGHT ═══════ */}
+    {/* ═══════ SPOTLIGHT + OPINION (merged) ═══════ */}
     <div className="grid lg:grid-cols-[1fr_300px] gap-0.5 py-0.5">
-      <div className="border border-gray-200 p-2">
-        <div className="flex items-center gap-2 mb-1"><span className="bg-[#C41E3A] px-2 py-0.5 text-[10px] text-white uppercase font-bold">Sorotan</span><Sec t="Konflik Global" /></div>
-        <div className="grid md:grid-cols-4 gap-1">
-          {p.slice(14,18).map(a => (
-            <article key={a._id} className="border border-gray-100 p-1.5">
-              <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={293} h={165} /></Link>
-              <Link href={`${bp}${a.slug}`} className="text-[12px] text-gray-800 leading-snug line-clamp-2 hover:text-[#C41E3A] transition-colors">{a.title}</Link><Tim p={a} />
-            </article>
-          ))}
+      <div className="border border-gray-200 p-2 flex flex-col gap-2">
+        <div>
+          <div className="flex items-center gap-2 mb-1"><span className="bg-[#C41E3A] px-2 py-0.5 text-[10px] text-white uppercase font-bold">Sorotan</span><Sec t="Konflik Global" /></div>
+          <div className="grid md:grid-cols-4 gap-1">
+            {p.slice(14,18).map(a => (
+              <article key={a._id} className="border border-gray-100 p-1.5">
+                <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={293} h={165} /></Link>
+                <Link href={`${bp}${a.slug}`} className="text-[12px] text-gray-800 leading-snug line-clamp-2 hover:text-[#C41E3A] transition-colors">{a.title}</Link><Tim p={a} />
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-      <aside className="border border-gray-200 p-2 flex items-center justify-center"><span className="text-[10px] text-gray-400 uppercase tracking-widest">Iklan</span></aside>
-    </div>
-
-    {/* ═══════ OPINION ═══════ */}
-    <div className="grid lg:grid-cols-[1fr_300px] gap-0.5 py-0.5">
-      <div className="border border-gray-200 p-2">
-        <Sec t="Opini" h={bp} />
-        <div className="grid md:grid-cols-4 gap-1 mt-1">
-          {p.slice(18,22).map(a => (
-            <article key={a._id} className="border border-gray-100 p-1.5">
-              <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={293} h={165} /></Link>
-              <Tag p={a} sz="text-[10px]" lk={false} />
-              <Link href={`${bp}${a.slug}`}><h4 className="font-serif font-bold leading-snug text-[13px] text-[#111] hover:text-[#C41E3A] transition-colors">{a.title}</h4></Link>
-            </article>
-          ))}
+        <div className="border-t border-gray-200 pt-2">
+          <Sec t="Opini" h={bp} />
+          <div className="grid md:grid-cols-4 gap-1 mt-1">
+            {p.slice(18,22).map(a => (
+              <article key={a._id} className="border border-gray-100 p-1.5">
+                <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={293} h={165} /></Link>
+                <Tag p={a} sz="text-[10px]" lk={false} />
+                <Link href={`${bp}${a.slug}`}><h4 className="font-serif font-bold leading-snug text-[13px] text-[#111] hover:text-[#C41E3A] transition-colors">{a.title}</h4></Link>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
       <aside className="border border-gray-200 p-2">
