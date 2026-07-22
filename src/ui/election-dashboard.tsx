@@ -43,7 +43,7 @@ export default function ElectionDashboard({
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="lg:col-span-2">
-          <ElectionMap regions={regions} selected={selected} onSelect={setSelected} />
+          <ElectionMap regions={regions} selected={selected} onSelect={setSelected} geoJsonFile={election.geoJsonFile || 'pru_parlimen.json'} />
         </div>
         <ElectionSidebar region={selected} />
       </div>
