@@ -5,13 +5,22 @@ import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simp
 import type { RegionWithData } from '@/types/election'
 
 const partyColors: Record<string, string> = {
-  BN: '#000080', PH: '#E21118', PN: '#031F73', GPS: '#FFD700',
+  BN: '#0033A0', PH: '#E21118', PN: '#0F4C2E', GPS: '#FFD700',
   WARISAN: '#1E90FF', GRS: '#FF4500', Bebas: '#808080',
 }
-
 function regionColor(r: RegionWithData): string {
   if (r.candidates && r.candidates.length > 0) {
-    return partyColors[r.candidates[0].party] || '#C41E3A'
+    const hasResults = r.candidates.some(c => c.lastElection?.votes || c.lastElection?.percentage)
+    if (hasResults) {
+      let winner = r.candidates[0]
+      let best = winner.lastElection?.votes ?? winner.lastElection?.percentage ?? -1
+      for (const c of r.candidates) {
+        const v = c.lastElection?.votes ?? c.lastElection?.percentage ?? -1
+        if (v > best) { best = v; winner = c }
+      }
+      return partyColors[winner.party] || '#C41E3A'
+    }
+    return '#94a3b8'
   }
   if (r.sentiment?.score != null) {
     const s = r.sentiment.score
