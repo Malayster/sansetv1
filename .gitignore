@@ -52,3 +52,4 @@ dist/
 
 # unlighthouse
 .unlighthouse/
+data/

@@ -47,6 +47,9 @@ function CandidateCard({ c }: { c: CandidateData }) {
             <div>Keluar: <span className="text-gray-600">{c.lastElection.turnout}%</span></div>
           </div>
         )}
+        {c.profile && (
+          <p className="text-[10px] text-gray-400 mt-1 leading-relaxed border-l-2 border-gray-200 pl-2">{c.profile}</p>
+        )}
       </div>
     </div>
   )

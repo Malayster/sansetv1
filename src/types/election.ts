@@ -31,6 +31,8 @@ export interface CandidateData {
   party: string
   partyLogo: string
   role: 'penyandang' | 'pencabar'
+  profile?: string
+  wikipediaUrl?: string
   lastElection?: {
     year: number
     votes: number
