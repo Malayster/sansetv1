@@ -7,7 +7,7 @@ export function EditorsPicks({ posts }: { posts: P[] }) {
   return <section>
     <NSec title="Pilihan Editor" href={`${bp}`} />
     {/* Spotlight card + 3 grid */}
-    <article className="flex flex-col sm:flex-row gap-4 mb-3">
+    <article className="flex flex-col sm:flex-row gap-3 mb-3">
       <div className="sm:w-[304px] shrink-0">
         <Link href={`${bp}${posts[0].slug}`} className="block overflow-hidden"><NImg p={posts[0]} w={304} h={171} /></Link>
       </div>
@@ -18,7 +18,7 @@ export function EditorsPicks({ posts }: { posts: P[] }) {
         <NTime p={posts[0]} />
       </div>
     </article>
-    <div className="grid md:grid-cols-3 gap-4">
+    <div className="grid md:grid-cols-3 gap-3">
       {posts.slice(1, 4).map(p => (
         <article key={p._id} className="group">
           <Link href={`${bp}${p.slug}`} className="block overflow-hidden mb-1"><NImg p={p} w={293} h={165} /></Link>

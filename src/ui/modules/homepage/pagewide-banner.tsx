@@ -6,8 +6,8 @@ export function PageWideBanner({ title, tag, subtag, href, posts }: { title: str
   if (!p) return null
 
   return <>
-    <section className="py-4 grid lg:grid-cols-[1fr_300px] gap-5 items-center">
-      <div className="flex flex-col sm:flex-row gap-4">
+    <section className="py-2 grid lg:grid-cols-[1fr_300px] gap-5 items-center">
+      <div className="flex flex-col sm:flex-row gap-3">
         <div className="sm:w-[304px] shrink-0">
           <Link href={`${bp}${p.slug}`} className="block overflow-hidden"><NImg p={p} w={304} h={171} /></Link>
         </div>
@@ -30,11 +30,11 @@ export function PageWideBanner({ title, tag, subtag, href, posts }: { title: str
 export function LifeArts({ posts }: { posts: P[] }) {
   if (posts.length < 4) return null
   return <>
-    <section className="py-4">
+    <section className="py-2">
       <NSec title="Gaya Hidup" href={`${bp}?category=Hiburan`} />
       <div className="grid lg:grid-cols-[1fr_280px] gap-5">
         <div>
-          <article className="flex flex-col sm:flex-row gap-4 mb-5">
+          <article className="flex flex-col sm:flex-row gap-3 mb-3">
             <div className="sm:w-[304px] shrink-0">
               <Link href={`${bp}${posts[0].slug}`} className="block overflow-hidden"><NImg p={posts[0]} w={304} h={171} /></Link>
             </div>
@@ -43,7 +43,7 @@ export function LifeArts({ posts }: { posts: P[] }) {
               {posts[0].excerpt && <p className="text-[13px] text-gray-500 mt-1.5 line-clamp-2">{posts[0].excerpt}</p>}
             </div>
           </article>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-3">
             {posts.slice(1, 4).map(p => (
               <article key={p._id} className="group">
                 <Link href={`${bp}${p.slug}`} className="block overflow-hidden mb-1.5"><NImg p={p} w={293} h={165} /></Link>

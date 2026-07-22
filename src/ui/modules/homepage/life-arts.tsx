@@ -5,9 +5,9 @@ import { P, bp, NHead, NTime, NSec } from './nikkei-utils'
 
 export function LifeArts({ posts }: { posts: P[] }) {
   if (!posts[0]) return null
-  return <section className="mb-4">
+  return <section className="mb-2">
     <NSec title="Gaya Hidup & Seni" href={`${bp}?category=Hiburan`} />
-    <div className="grid md:grid-cols-4 gap-4">
+    <div className="grid md:grid-cols-4 gap-3">
       {posts.slice(0, 4).map(p => (
         <article key={p._id} className="group">
           <Link href={`${bp}${p.slug}`} className="block overflow-hidden mb-2">

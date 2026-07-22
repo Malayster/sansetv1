@@ -6,7 +6,7 @@ import { P, bp, NHead } from './nikkei-utils'
 export function Datawatch({ posts }: { posts: P[] }) {
   const [main, ...rest] = posts
   if (!main) return null
-  return <section className="mb-4">
+  return <section className="mb-2">
     <div className="flex items-baseline justify-between border-b border-[#13334f] pb-1 mb-3">
       <h2 className="font-serif text-[#13334f] font-bold text-base">Datawatch</h2>
       <span className="text-[10px] text-gray-400 uppercase tracking-wider">Analisis mendalam</span>

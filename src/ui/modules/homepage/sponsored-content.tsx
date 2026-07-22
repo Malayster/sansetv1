@@ -5,14 +5,14 @@ import { P, bp, NHead, NTag } from './nikkei-utils'
 
 export function SponsoredContent({ posts }: { posts: P[] }) {
   if (!posts.length) return null
-  return <section className="mb-4 border border-gray-200">
+  return <section className="mb-2 border border-gray-200">
     {/* Label bar */}
     <div className="bg-gray-50 px-3 py-1.5 flex items-center justify-between border-b border-gray-200 flex-wrap gap-1">
       <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Kandungan Tajaan</span>
       <span className="text-[9px] text-gray-400 hidden sm:block">Tentang Kandungan Tajaan — Kandungan ini dipesan oleh Biro Perniagaan Global Nikkei</span>
     </div>
     {/* 3-col card grid */}
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 p-4">
       {posts.slice(0, 3).map(p => (
         <article key={p._id} className="group">
           <Link href={`${bp}${p.slug}`} className="block overflow-hidden mb-2">

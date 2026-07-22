@@ -29,9 +29,9 @@ function TopicBlock({ cat, posts }: { cat: any; posts: P[] }) {
 
 export function TrendingTopics({ posts, cats }: { posts: P[]; cats: any[] }) {
   if (!cats.length) return null
-  return <section className="py-4">
+  return <section className="py-2">
     <NSec title="Topik Trending" />
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
       {cats.slice(0, 8).map(c => <TopicBlock key={c._id} cat={c} posts={posts} />)}
     </div>
   </section>

@@ -19,9 +19,9 @@ const LOCATIONS = [
 ]
 
 export function NewsByLocation({ posts }: { posts: P[] }) {
-  return <section className="py-4">
+  return <section className="py-2">
     <NSec title="Berita Mengikut Negeri" />
-    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
       {LOCATIONS.map(loc => {
         const items = posts.filter(p =>
           (p.location && (p.location === loc.name || p.location?.current === loc.slug)) ||

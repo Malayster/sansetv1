@@ -5,7 +5,7 @@ import { P, bp, NTag, NHead, NTime, NSec } from './nikkei-utils'
 
 export function LatestBusiness({ posts }: { posts: P[] }) {
   if (!posts[0]) return null
-  return <section className="mb-4">
+  return <section className="mb-2">
     <NSec title="Berita Bisnes Terkini" href={`${bp}?category=Ekonomi`} />
     <div className="grid lg:grid-cols-[1fr_1fr_300px] gap-5">
       {/* Large lead */}

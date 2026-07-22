@@ -5,12 +5,12 @@ import { P, bp, NHead } from './nikkei-utils'
 
 export function Infographics({ posts }: { posts: P[] }) {
   if (!posts[0]) return null
-  return <section className="mb-4 bg-[#f7f5f0] p-4 -mx-4 md:mx-0 md:rounded">
+  return <section className="mb-2 bg-[#f7f5f0] p-4 -mx-4 md:mx-0 md:rounded">
     <div className="flex items-baseline justify-between border-b border-[#13334f] pb-1 mb-3">
       <h2 className="font-serif text-[#13334f] font-bold text-base">Infografik</h2>
       <span className="text-[10px] text-gray-400 uppercase tracking-wider">Analisis sepintas lalu</span>
     </div>
-    <div className="grid md:grid-cols-3 gap-4">
+    <div className="grid md:grid-cols-3 gap-3">
       {posts.slice(0, 3).map(p => (
         <article key={p._id} className="group">
           <Link href={`${bp}${p.slug}`} className="block overflow-hidden mb-2">

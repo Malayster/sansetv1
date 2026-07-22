@@ -4,11 +4,11 @@ import { P, bp, NImg, NTag, NHead, NTime, NSec, NDiv, NSideH } from './nikkei-ut
 export function TopicPromotion({ title, posts }: { title: string; posts: P[] }) {
   if (posts.length < 4) return null
   return <>
-    <section className="py-4">
+    <section className="py-2">
       <NSec title={title} />
       <div className="grid lg:grid-cols-[1fr_280px] gap-5">
         <div>
-          <article className="flex flex-col sm:flex-row gap-4 mb-5">
+          <article className="flex flex-col sm:flex-row gap-3 mb-3">
             <div className="sm:w-[304px] shrink-0">
               <Link href={`${bp}${posts[0].slug}`} className="block overflow-hidden"><NImg p={posts[0]} w={304} h={171} /></Link>
             </div>
@@ -19,7 +19,7 @@ export function TopicPromotion({ title, posts }: { title: string; posts: P[] }) 
               <NTime p={posts[0]} />
             </div>
           </article>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-3">
             {posts.slice(1, 4).map(p => (
               <article key={p._id} className="group">
                 <Link href={`${bp}${p.slug}`} className="block overflow-hidden mb-1.5"><NImg p={p} w={293} h={165} /></Link>

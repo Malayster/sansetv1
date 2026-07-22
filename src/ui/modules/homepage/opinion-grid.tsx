@@ -9,13 +9,13 @@ function Avatar({ author }: { author?: string }) {
 export function OpinionGrid({ posts }: { posts: P[] }) {
   if (posts.length < 4) return null
   return <>
-    <section className="py-4">
+    <section className="py-2">
       <NSec title="Opini" href={`${bp}?category=Opini`} />
       <div className="grid lg:grid-cols-[1fr_280px] gap-5">
         {/* ── Main ── */}
         <div>
           {/* Spotlight opinion */}
-          <article className="mb-5">
+          <article className="mb-3">
             <Link href={`${bp}${posts[0].slug}`} className="block overflow-hidden mb-2"><NImg p={posts[0]} w={512} h={288} /></Link>
             <div className="flex items-center gap-2 mb-1">
               <Avatar author={posts[0].author?.name || posts[0].category?.title} />
@@ -29,7 +29,7 @@ export function OpinionGrid({ posts }: { posts: P[] }) {
           {/* 3 opinion base cards */}
           <div className="divide-y divide-gray-100">
             {posts.slice(1, 4).map(p => (
-              <article key={p._id} className="flex gap-3 py-4 first:pt-0 last:pb-0 group">
+              <article key={p._id} className="flex gap-3 py-2 first:pt-0 last:pb-0 group">
                 <Avatar author={p.author?.name || p.category?.title} />
                 <div className="min-w-0">
                   <span className="text-[11px] font-bold text-gray-500">{p.author?.name || 'Pengarang'}</span>

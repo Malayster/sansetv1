@@ -5,8 +5,8 @@ import { P, bp, NHead, NTime } from './nikkei-utils'
 
 export function SpotlightSection({ title = 'Spotlight', tag = 'Sorotan', posts }: { title?: string; tag?: string; posts: P[] }) {
   if (!posts[0]) return null
-  return <section className="bg-[#0a0a0a] text-white py-6 px-4 md:px-6 mb-4 -mx-4 md:mx-0 md:rounded">
-    <div className="flex items-center gap-2 mb-4">
+  return <section className="bg-[#0a0a0a] text-white py-3 px-4 md:px-6 mb-2 -mx-4 md:mx-0 md:rounded">
+    <div className="flex items-center gap-2 mb-2">
       <span className="bg-[#C41E3A] px-2 py-0.5 text-[10px] uppercase font-bold tracking-widest">{tag}</span>
       <h2 className="font-serif text-xl font-bold">{title}</h2>
     </div>

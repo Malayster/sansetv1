@@ -15,7 +15,7 @@ const colors = (d: 'up' | 'down') => d === 'up' ? 'text-emerald-700' : 'text-red
 export function MarketData({ full }: { full?: boolean }) {
   const T = full ? 'text-[13px]' : 'text-[12px]'
   const grid = full
-    ? 'grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 border-t border-b border-gray-200 py-3'
+    ? 'grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-3 border-t border-b border-gray-200 py-3'
     : 'divide-y divide-gray-100 border border-gray-200'
 
   return <section>

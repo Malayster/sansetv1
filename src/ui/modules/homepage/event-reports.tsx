@@ -5,12 +5,12 @@ import { P, bp, NHead } from './nikkei-utils'
 
 export function EventReports({ posts }: { posts: P[] }) {
   if (!posts[0]) return null
-  return <section className="mb-4 bg-[#13334f] text-white p-4 -mx-4 md:mx-0 md:rounded">
+  return <section className="mb-2 bg-[#13334f] text-white p-4 -mx-4 md:mx-0 md:rounded">
     <div className="flex items-baseline justify-between border-b border-white/20 pb-2 mb-3">
       <h2 className="font-serif text-lg font-bold">Laporan Acara</h2>
       <span className="text-[10px] text-white/60 uppercase tracking-wider">Sorotan & wawasan dari acara Nikkei</span>
     </div>
-    <div className="grid md:grid-cols-3 gap-4">
+    <div className="grid md:grid-cols-3 gap-3">
       {posts.slice(0, 3).map(p => (
         <article key={p._id} className="group">
           <Link href={`${bp}${p.slug}`} className="block overflow-hidden mb-2">

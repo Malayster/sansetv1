@@ -45,7 +45,7 @@ export function NTime({ p }: { p: P }) {
 
 /* ── Section header (red title + optional chevron link) ── */
 export function NSec({ title, href }: { title: string; href?: string }) {
-  return <div className="flex items-center gap-2 mb-3">
+  return <div className="flex items-center gap-2 mb-2">
     {href ? <Link href={href} className="font-serif text-[#C41E3A] font-bold text-base hover:opacity-80">{title}</Link>
     : <h2 className="font-serif text-[#C41E3A] font-bold text-base">{title}</h2>}
     {href && <Link href={href}><svg className="w-3 h-3 text-[#C41E3A]" viewBox="0 0 332 610"><path fill="currentColor" d="M332 305L59 0 0 50 141 305 0 560l59 50 273-305z"/></svg></Link>}
@@ -53,7 +53,7 @@ export function NSec({ title, href }: { title: string; href?: string }) {
 }
 
 /* ── Divider ── */
-export function NDiv() { return <div className="border-t border-gray-200 my-4" /> }
+export function NDiv() { return <div className="border-t border-gray-200 my-2" /> }
 
 /* ── Sidebar header (underline accent) ── */
 export function NSideH({ title, href }: { title: string; href?: string }) {

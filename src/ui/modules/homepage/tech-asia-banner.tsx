@@ -6,9 +6,9 @@ import { P, bp, NHead } from './nikkei-utils'
 export function TechAsiaBanner({ posts }: { posts: P[] }) {
   const [main, ...rest] = posts
   if (!main) return null
-  return <section className="bg-[#13334f] text-white py-8 mb-4 -mx-4 md:mx-0 md:rounded">
+  return <section className="bg-[#13334f] text-white py-4 mb-2 -mx-4 md:mx-0 md:rounded">
     <div className="max-w-7xl md:mx-0 px-4 md:px-6">
-      <div className="flex items-baseline gap-3 mb-5">
+      <div className="flex items-baseline gap-3 mb-3">
         <h2 className="font-serif text-2xl font-bold">#teknologiAsia</h2>
         <p className="text-[11px] text-white/70 uppercase tracking-wider">Dekod transformasi teknologi Asia</p>
       </div>
