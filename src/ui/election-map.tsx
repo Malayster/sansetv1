@@ -1,7 +1,8 @@
 'use client'
 
-import { memo, useEffect, useState } from 'react'
-import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simple-maps'
+import { memo, useEffect, useMemo, useRef, useState } from 'react'
+import L from 'leaflet'
+import 'leaflet/dist/leaflet.css'
 import type { RegionWithData } from '@/types/election'
 
 const partyColors: Record<string, string> = {
@@ -46,59 +47,101 @@ const ElectionMap = memo(function ElectionMap({
   onSelect: (r: RegionWithData) => void
   geoJsonFile: string
 }) {
-  const [geoUrl, setGeoUrl] = useState(`/geojson/${polygonPath(geoJsonFile)}`)
-  const colorMap: Record<string, string> = {}
-  for (const r of regions) colorMap[r.code] = regionColor(r)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const mapRef = useRef<L.Map | null>(null)
+  const layerRef = useRef<L.GeoJSON | null>(null)
+  const [geoData, setGeoData] = useState<any>(null)
+  const geoUrl = useMemo(() => `/geojson/${polygonPath(geoJsonFile)}`, [geoJsonFile])
 
+  // Fetch GeoJSON
   useEffect(() => {
-    setGeoUrl(`/geojson/${polygonPath(geoJsonFile)}`)
-  }, [geoJsonFile])
+    fetch(geoUrl).then(r => r.json()).then(setGeoData).catch(() => setGeoData(null))
+  }, [geoUrl])
 
-  // Compute center for the selected region's geo
-  const allLngs = regions.map(r => r.lng)
-  const allLats = regions.map(r => r.lat)
-  const centerLng = (Math.min(...allLngs) + Math.max(...allLngs)) / 2
-  const centerLat = (Math.min(...allLats) + Math.max(...allLats)) / 2
+  // Colour lookup
+  const colorMap = useMemo(() => {
+    const m: Record<string, string> = {}
+    for (const r of regions) m[r.code] = regionColor(r)
+    return m
+  }, [regions])
+
+  // Initialise Leaflet map
+  useEffect(() => {
+    if (!containerRef.current || !geoData || mapRef.current) return
+
+    const map = L.map(containerRef.current, {
+      attributionControl: false,
+      zoomControl: true,
+      scrollWheelZoom: true,
+    })
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 13,
+      subdomains: 'abcd',
+    }).addTo(map)
+
+    const geoJsonLayer = L.geoJSON(geoData, {
+      style: (feature) => {
+        const code = feature?.properties?.code as string
+        const isSel = selected?.code === code
+        return {
+          fillColor: colorMap[code] || '#94a3b8',
+          fillOpacity: 0.7,
+          color: isSel ? '#000' : '#fff',
+          weight: isSel ? 2 : 0.5,
+        }
+      },
+      onEachFeature: (feature, layer) => {
+        const code = feature.properties.code as string
+        const pathLayer = layer as L.Path
+        pathLayer.on('click', () => {
+          const region = regions.find(r => r.code === code)
+          if (region) onSelect(region)
+        })
+        pathLayer.on('mouseover', () => {
+          pathLayer.setStyle({ fillColor: '#C41E3A', fillOpacity: 0.85 })
+        })
+        pathLayer.on('mouseout', () => {
+          const isSel = selected?.code === code
+          pathLayer.setStyle({
+            fillColor: colorMap[code] || '#94a3b8',
+            fillOpacity: 0.7,
+            color: isSel ? '#000' : '#fff',
+            weight: isSel ? 2 : 0.5,
+          })
+        })
+      },
+    }).addTo(map)
+
+    map.fitBounds(geoJsonLayer.getBounds(), { padding: [10, 10] })
+    mapRef.current = map
+    layerRef.current = geoJsonLayer
+
+    return () => {
+      map.remove()
+      mapRef.current = null
+      layerRef.current = null
+    }
+  }, [geoData])
+
+  // Update styles when selected or colorMap changes
+  useEffect(() => {
+    if (!layerRef.current) return
+    layerRef.current.setStyle(((feature: any) => {
+      const code = feature?.properties?.code as string
+      const isSel = selected?.code === code
+      return {
+        fillColor: colorMap[code] || '#94a3b8',
+        fillOpacity: 0.7,
+        color: isSel ? '#000' : '#fff',
+        weight: isSel ? 2 : 0.5,
+      }
+    }) as L.StyleFunction)
+  }, [selected, colorMap])
 
   return (
     <div className="border border-gray-200 bg-white rounded overflow-hidden">
-      <div style={{ backgroundColor: '#f1f5f9' }}>
-        <ComposableMap
-          projection="geoMercator"
-          projectionConfig={{ center: [centerLng, centerLat], scale: regions.length <= 36 ? 2800 : 800 }}
-          style={{ width: '100%', height: '500px' }}
-        >
-        <ZoomableGroup zoom={1} maxZoom={4}>
-          <Geographies geography={geoUrl}>
-            {({ geographies }) =>
-              geographies.map((geo) => {
-                const code = geo.properties.code as string
-                const isSel = selected?.code === code
-                const fill = colorMap[code] || '#94a3b8'
-                return (
-                  <Geography
-                    key={code}
-                    geography={geo}
-                    fill={fill}
-                    stroke={isSel ? '#000' : '#fff'}
-                    strokeWidth={isSel ? 1.5 : 0.5}
-                    style={{
-                      default: { outline: 'none' },
-                      hover: { fill: '#C41E3A', outline: 'none', cursor: 'pointer' },
-                      pressed: { outline: 'none' },
-                    }}
-                    onClick={() => {
-                      const region = regions.find(r => r.code === code)
-                      if (region) onSelect(region)
-                    }}
-                  />
-                )
-              })
-            }
-          </Geographies>
-        </ZoomableGroup>
-      </ComposableMap>
-      </div>
+      <div ref={containerRef} style={{ width: '100%', height: '500px' }} />
 
       {/* Quick-select buttons */}
       <div className="flex flex-wrap gap-2 p-2">
