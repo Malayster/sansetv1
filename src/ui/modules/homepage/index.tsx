@@ -25,9 +25,7 @@ const Q = groq`*[_type=='blog.post' && status in ['published','approved']]|order
 }`
 const CQ = groq`*[_type=='blog.category']|order(title)[0...12]{_id,title,'slug':slug.current,color}`
 
-const Sec = ({ children }: { children: React.ReactNode }) => (
-  <section className="max-w-[1180px] mx-auto px-4 md:px-0">{children}</section>
-)
+const Div = () => <div className="border-t border-gray-200 my-3" />
 
 export default async function Homepage() {
   const [posts, cats] = await Promise.all([
@@ -36,73 +34,64 @@ export default async function Homepage() {
   ])
   if (!posts.length) return <div className="max-w-[1180px] mx-auto px-4 py-16 text-center text-gray-400">Tiada Berita</div>
 
-  return <div>
-    {/* Hero: 3-col — main article + 4 thumbs + Latest Headlines in column 3 */}
-    <Sec><Hero posts={posts} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
+  return <div className="max-w-[1180px] mx-auto px-4 md:px-0">
 
-    {/* Editor's Picks */}
-    <Sec><EditorsPicks posts={posts.slice(4, 10)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
+    {/* ═══ HERO ROW: 3-col full-width ═══ */}
+    <Hero posts={posts} />
+    <Div />
 
-    {/* Latest Headlines — standalone full-width section */}
-    <Sec><LatestHeadlines posts={posts.slice(5)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
+    {/* ═══ MAIN BODY: 2-col grid [780px content | 320px right rail] ═══ */}
+    <div className="grid lg:grid-cols-[780px_320px] gap-8">
 
-    {/* Latest Business News */}
-    <Sec><LatestBusiness posts={posts.slice(0, 10)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
+      {/* LEFT COLUMN: all main sections */}
+      <div className="min-w-0">
+        <EditorsPicks posts={posts.slice(4, 10)} />
+        <Div />
+        <LatestHeadlines posts={posts.slice(5)} />
+        <Div />
+        <LatestBusiness posts={posts.slice(0, 10)} />
+        <Div />
+        <TechAsiaBanner posts={posts.slice(10, 14)} />
+        <Div />
+        <SpotlightSection title="Konflik Global" tag="Sorotan" posts={posts.slice(14, 18)} />
+        <Div />
+        <Datawatch posts={posts.slice(18, 22)} />
+        <Div />
+        <OpinionGrid posts={posts.slice(10, 16)} />
+        <Div />
+        <Infographics posts={posts.slice(15, 20)} />
+        <Div />
+        <LifeArts posts={posts.slice(2, 8)} />
+      </div>
 
-    {/* #techAsia banner */}
-    <Sec><TechAsiaBanner posts={posts.slice(10, 14)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
+      {/* RIGHT COLUMN: Market Data + Most Read + Ad */}
+      <aside className="hidden lg:block">
+        <div className="sticky top-[120px] space-y-4">
+          <MarketData />
+          <Div />
+          <MostRead posts={posts} />
+          <Div />
+          <div className="bg-gray-100 border border-gray-200 h-[250px] flex items-center justify-center">
+            <span className="text-[10px] text-gray-400 uppercase tracking-widest">Iklan 300×250</span>
+          </div>
+        </div>
+      </aside>
+    </div>
 
-    {/* Spotlight */}
-    <Sec><SpotlightSection title="Konflik Global" tag="Sorotan" posts={posts.slice(14, 18)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
+    <Div />
 
-    {/* Datawatch */}
-    <Sec><Datawatch posts={posts.slice(18, 22)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* Opinion */}
-    <Sec><OpinionGrid posts={posts.slice(10, 16)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* Most Read — full-width, big numbers */}
-    <Sec><MostRead posts={posts} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* Infographics */}
-    <Sec><Infographics posts={posts.slice(15, 20)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* Life & Arts */}
-    <Sec><LifeArts posts={posts.slice(2, 8)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* Market Data — full-width table */}
-    <Sec><MarketData full /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* Trending Topics */}
-    <Sec><TrendingTopics posts={posts} cats={cats} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* News By Location */}
-    <Sec><NewsByLocation posts={posts} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* Event Reports */}
-    <Sec><EventReports posts={posts.slice(20, 24)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
-
-    {/* Sponsored Content */}
-    <Sec><SponsoredContent posts={posts.slice(22, 25)} /></Sec>
-    <div className="border-t border-gray-200 my-3 max-w-[1180px] mx-auto" />
+    {/* ═══ FULL-WIDTH BOTTOM SECTIONS ═══ */}
+    <TrendingTopics posts={posts} cats={cats} />
+    <Div />
+    <NewsByLocation posts={posts} />
+    <Div />
+    <EventReports posts={posts.slice(20, 24)} />
+    <Div />
+    <SponsoredContent posts={posts.slice(22, 25)} />
+    <Div />
 
     {/* CTA */}
-    <section className="max-w-[1180px] mx-auto px-4 md:px-0 py-4 text-center">
+    <section className="py-4 text-center">
       <h2 className="font-serif text-[15px] font-bold text-[#111] mb-1">Suara Rakyat, Disampaikan Tanpa Tapisan</h2>
       <p className="text-[11px] text-gray-500 mb-2.5 max-w-md mx-auto">Ikuti berita terkini, analisis mendalam, dan laporan eksklusif dari seluruh pelosok negeri.</p>
       <div className="flex items-center justify-center gap-2">

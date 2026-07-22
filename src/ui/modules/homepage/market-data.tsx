@@ -13,18 +13,33 @@ type Mkt = { name: string; value: string; change: string; pct: string; dir: 'up'
 const colors = (d: 'up' | 'down') => d === 'up' ? 'text-emerald-700' : 'text-red-600'
 
 export function MarketData({ full }: { full?: boolean }) {
+  const T = full ? 'text-[13px]' : 'text-[12px]'
+  const grid = full
+    ? 'grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 border-t border-b border-gray-200 py-3'
+    : 'divide-y divide-gray-100 border border-gray-200'
+
   return <section>
     <div className="flex items-center justify-between mb-2">
-      <h3 className="text-[13px] font-bold text-gray-800 font-serif">Data Pasaran</h3>
+      <h3 className={`font-bold text-gray-800 font-serif ${full ? 'text-[13px]' : 'text-[12px]'}`}>Data Pasaran</h3>
       <Link href="/pasaran" className="text-[10px] text-[#C41E3A] font-bold hover:underline">Lihat semua ›</Link>
     </div>
-    <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 border-t border-b border-gray-200 py-3">
-      {DUMMY.map(m => (
+    <div className={grid}>
+      {DUMMY.map(m => full ? (
         <div key={m.name} className="text-center">
           <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wide mb-1">{m.name}</div>
           <div className="text-[13px] font-bold text-gray-900">{m.value}</div>
           <div className={`text-[10px] font-semibold mt-0.5 ${colors(m.dir)}`}>
             {m.change} ({m.pct})
+          </div>
+        </div>
+      ) : (
+        <div key={m.name} className="flex items-center justify-between py-1.5">
+          <span className="text-[11px] text-gray-700">{m.name}</span>
+          <div className="text-right">
+            <div className="text-[11px] font-semibold text-gray-900">{m.value}</div>
+            <div className={`text-[10px] font-medium ${colors(m.dir)}`}>
+              {m.change} ({m.pct})
+            </div>
           </div>
         </div>
       ))}
