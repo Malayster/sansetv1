@@ -43,7 +43,7 @@ export default function Footer() {
     <footer className="bg-[#001f3f] text-white mt-16">
       {/* Newsletter registration bar */}
       <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-[1180px] mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
             <h3 className="font-serif text-lg font-bold">Daftar Buletin</h3>
             <p className="text-sm text-white/60">Berita terkini terus ke inbox anda.</p>
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-10">
+      <div className="max-w-[1180px] mx-auto px-4 md:px-6 py-10">
         {/* Logo + Social */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
           <div>

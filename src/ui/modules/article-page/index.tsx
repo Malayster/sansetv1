@@ -37,7 +37,7 @@ export async function ArticleShell({ post, children }: { post: Post; children: R
     if (!related.length) related = await client.fetch<any[]>(FALLBACK_Q, { id: post?._id ?? '' }, { next: { revalidate: 60 } })
   } catch { related = [] }
 
-  return <article className="max-w-7xl mx-auto px-4 md:px-6 py-6">
+  return <article className="max-w-[1180px] mx-auto px-4 md:px-6 py-6">
     {/* Breadcrumb */}
     <nav className="flex items-center gap-1.5 text-[11px] mb-4">
       <Link href="/" className="text-gray-500 hover:text-[#C41E3A]">Utama</Link>

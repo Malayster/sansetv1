@@ -32,67 +32,56 @@ export default async function Homepage() {
     client.fetch<any[]>(Q, {}, { next: { revalidate: 60 } }),
     client.fetch<any[]>(CQ, {}, { next: { revalidate: 300 } }),
   ])
-  if (!posts.length) return <div className="max-w-7xl mx-auto px-4 py-16 text-center text-gray-400">Tiada Berita</div>
+  if (!posts.length) return <div className="max-w-[1180px] mx-auto px-4 py-16 text-center text-gray-400">Tiada Berita</div>
 
-  return <div className="max-w-7xl mx-auto px-4 md:px-6">
-    {/* 1. HERO (3-column: main + 4 thumbs + latest headlines) */}
-    <Hero posts={posts} />
+  return <div className="max-w-[1180px] mx-auto px-4 md:px-0">
+    {/* HERO ROW: 2-column (main content 780px + sticky right rail 320px) */}
+    <div className="grid lg:grid-cols-[780px_320px] gap-8 pt-4">
+      {/* LEFT: all main sections */}
+      <div className="min-w-0">
+        <Hero posts={posts} />
+        <Div />
+        <EditorsPicks posts={posts.slice(4, 10)} />
+        <Div />
+        <LatestBusiness posts={posts.slice(0, 10)} />
+        <Div />
+        <TechAsiaBanner posts={posts.slice(10, 14)} />
+        <Div />
+        <SpotlightSection title="Konflik Global" tag="Sorotan" posts={posts.slice(14, 18)} />
+        <Div />
+        <Datawatch posts={posts.slice(18, 22)} />
+        <Div />
+        <OpinionGrid posts={posts.slice(10, 16)} />
+        <Div />
+        <Infographics posts={posts.slice(15, 20)} />
+        <Div />
+        <LifeArts posts={posts.slice(2, 8)} />
+      </div>
 
-    {/* 2. LATEST HEADLINES + MARKET DATA rail (below hero, 2-column) */}
-    <section className="grid lg:grid-cols-[1fr_300px] gap-5 py-4">
-      <LatestHeadlines posts={posts.slice(5)} />
-      <MarketData />
-    </section>
+      {/* RIGHT: sticky rail — Latest Headlines + Market Data + Most Read + Ad */}
+      <aside className="hidden lg:block">
+        <div className="sticky top-[120px] space-y-4">
+          <LatestHeadlines posts={posts.slice(5)} />
+          <Div />
+          <MarketData />
+          <Div />
+          <MostRead posts={posts} />
+          {/* Ad slot dummy */}
+          <div className="bg-gray-100 border border-gray-200 h-[250px] flex items-center justify-center">
+            <span className="text-[10px] text-gray-400 uppercase tracking-widest">Iklan 300×250</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    {/* Full-width sections below the 2-col grid */}
     <Div />
-
-    {/* 3. EDITOR'S PICKS */}
-    <EditorsPicks posts={posts.slice(4, 10)} />
-    <Div />
-
-    {/* 4. LATEST BUSINESS NEWS (3-column: lead + list + bullet) */}
-    <LatestBusiness posts={posts.slice(0, 10)} />
-    <Div />
-
-    {/* 5. #TECHASIA BANNER (black bg) */}
-    <TechAsiaBanner posts={posts.slice(10, 14)} />
-    <Div />
-
-    {/* 6. SPOTLIGHT (dark black, Iran-tensions style) */}
-    <SpotlightSection title="Konflik Global" tag="Sorotan" posts={posts.slice(14, 18)} />
-    <Div />
-
-    {/* 7. DATAWATCH */}
-    <Datawatch posts={posts.slice(18, 22)} />
-    <Div />
-
-    {/* 8. OPINION GRID */}
-    <OpinionGrid posts={posts.slice(10, 16)} />
-    <Div />
-
-    {/* 9. MOST READ + INFOGRAPHICS (2-column) */}
-    <section className="grid lg:grid-cols-[300px_1fr] gap-5 py-4">
-      <MostRead posts={posts} />
-      <Infographics posts={posts.slice(15, 20)} />
-    </section>
-    <Div />
-
-    {/* 10. LIFE & ARTS (4-col grid) */}
-    <LifeArts posts={posts.slice(2, 8)} />
-    <Div />
-
-    {/* 11. TRENDING TOPICS */}
     <TrendingTopics posts={posts} cats={cats} />
     <Div />
-
-    {/* 12. NEWS BY LOCATION (Malaysian states) */}
     <NewsByLocation posts={posts} />
     <Div />
-
-    {/* 13. EVENT REPORTS (dark blue) */}
     <EventReports posts={posts.slice(20, 24)} />
     <Div />
-
-    {/* 14. SPONSORED CONTENT */}
     <SponsoredContent posts={posts.slice(22, 25)} />
     <Div />
 

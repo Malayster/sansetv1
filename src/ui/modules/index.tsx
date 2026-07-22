@@ -82,15 +82,13 @@ export default function ({
 		}
 	}
 
-	// For blog posts, wrap Sanity modules in Nikkei-style article shell (breadcrumb, title, share, sidebar)
+	// For blog posts: ONLY render Sanity body content inside Nikkei ArticleShell.
+	// Suppress ALL legacy modules (breadcrumbs, hero.featured, etc.) to prevent double header.
 	if (post) {
+		const bodyModule = modules?.find(m => m._type === 'blog-post-content')
+		const Body = bodyModule ? (MODULES_MAP['blog-post-content'] as React.ComponentType<any>) : null
 		return <ArticleShell post={post}>
-			{modules?.map((module, i) => {
-				if (!module) return null
-				const Component = MODULES_MAP[module._type as keyof typeof MODULES_MAP] as React.ComponentType
-				if (!Component) return null
-				return <Component {...module} {...moduleSpecificProps(module)} key={`${module._key}-${i}`} />
-			})}
+			{Body ? <Body {...bodyModule} {...moduleSpecificProps(bodyModule)} /> : null}
 		</ArticleShell>
 	}
 
