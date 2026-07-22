@@ -29,8 +29,7 @@ export interface ElectionRegion {
 export interface CandidateData {
   name: string
   party: string
-  partyFlag: string
-  photo: string
+  partyLogo: string
   role: 'penyandang' | 'pencabar'
   lastElection?: {
     year: number

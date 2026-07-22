@@ -46,44 +46,44 @@ const mockSentiment: Record<string, any> = {
 
 const mockCandidates: Record<string, any[]> = {
   'P001': [
-    { name: 'Ahmad Razak', party: 'BN', partyFlag: '/flags/bn.png', photo: '/candidates/ahmad_razak.jpg', role: 'penyandang', lastElection: { year: 2022, votes: 18456, majority: 2341, percentage: 52.3, totalVoters: 45000, turnout: 78.5 } },
-    { name: 'Siti Noraini', party: 'PH', partyFlag: '/flags/ph.png', photo: '/candidates/siti_noraini.jpg', role: 'pencabar' },
-    { name: 'Muhammad Faisal', party: 'PN', partyFlag: '/flags/pn.png', photo: '/candidates/muhammad_faisal.jpg', role: 'pencabar' },
+    { name: 'Zulkifli Ismail', party: 'BN', partyLogo: '/flags/bn.png', role: 'penyandang', lastElection: { year: 2022, votes: 16230, majority: 4172, percentage: 52.3, totalVoters: 45000, turnout: 78.5 } },
+    { name: 'Mohd Saat Musa', party: 'PH', partyLogo: '/flags/ph.png', role: 'pencabar', lastElection: { year: 2022, votes: 12058, majority: 0, percentage: 38.9, totalVoters: 45000, turnout: 78.5 } },
+    { name: 'Rohaizat Zainal', party: 'PN', partyLogo: '/flags/pn.png', role: 'pencabar', lastElection: { year: 2022, votes: 2341, majority: 0, percentage: 7.5, totalVoters: 45000, turnout: 78.5 } },
   ],
   'P002': [
-    { name: 'Kumar a/l Muthu', party: 'PH', partyFlag: '/flags/ph.png', photo: '/candidates/default.png', role: 'penyandang', lastElection: { year: 2022, votes: 22100, majority: 3150, percentage: 48.7, totalVoters: 58000, turnout: 82.1 } },
-    { name: 'Rashid bin Ali', party: 'PN', partyFlag: '/flags/pn.png', photo: '/candidates/default.png', role: 'pencabar' },
+    { name: 'Zakri Hassan', party: 'PH', partyLogo: '/flags/ph.png', role: 'penyandang', lastElection: { year: 2022, votes: 22100, majority: 3150, percentage: 48.7, totalVoters: 58000, turnout: 82.1 } },
+    { name: 'Abdul Rashid', party: 'PN', partyLogo: '/flags/pn.png', role: 'pencabar', lastElection: { year: 2022, votes: 18950, majority: 0, percentage: 41.7, totalVoters: 58000, turnout: 82.1 } },
   ],
   'P003': [
-    { name: 'Ismail bin Kassim', party: 'PN', partyFlag: '/flags/pn.png', photo: '/candidates/default.png', role: 'penyandang', lastElection: { year: 2022, votes: 19800, majority: 1200, percentage: 44.1, totalVoters: 52000, turnout: 76.3 } },
-    { name: 'Lim Wei Chen', party: 'PH', partyFlag: '/flags/ph.png', photo: '/candidates/default.png', role: 'pencabar' },
+    { name: 'Shahidan Kassim', party: 'PN', partyLogo: '/flags/pn.png', role: 'penyandang', lastElection: { year: 2022, votes: 19800, majority: 1200, percentage: 44.1, totalVoters: 52000, turnout: 76.3 } },
+    { name: 'Fathin Amelina', party: 'PH', partyLogo: '/flags/ph.png', role: 'pencabar', lastElection: { year: 2022, votes: 18600, majority: 0, percentage: 41.4, totalVoters: 52000, turnout: 76.3 } },
   ],
   'P004': [
-    { name: 'Noraini Hassan', party: 'BN', partyFlag: '/flags/bn.png', photo: '/candidates/default.png', role: 'penyandang', lastElection: { year: 2022, votes: 25400, majority: 5600, percentage: 61.2, totalVoters: 48000, turnout: 80.4 } },
-    { name: 'Zulkifli Ahmad', party: 'Bebas', partyFlag: '/flags/bebas.png', photo: '/candidates/default.png', role: 'pencabar' },
+    { name: 'Mohd Suhaimi Abdullah', party: 'PN', partyLogo: '/flags/pn.png', role: 'penyandang', lastElection: { year: 2022, votes: 25400, majority: 5600, percentage: 61.2, totalVoters: 48000, turnout: 80.4 } },
+    { name: 'Zambry Abd Kadir', party: 'BN', partyLogo: '/flags/bn.png', role: 'pencabar', lastElection: { year: 2022, votes: 19800, majority: 0, percentage: 37.0, totalVoters: 48000, turnout: 80.4 } },
   ],
   'N01': [
-    { name: 'Ahmad Razak', party: 'BN', partyFlag: '/flags/bn.png', photo: '/candidates/ahmad_razak.jpg', role: 'penyandang', lastElection: { year: 2023, votes: 12340, majority: 1890, percentage: 54.1, totalVoters: 32000, turnout: 76.2 } },
-    { name: 'Farid Iskandar', party: 'PH', partyFlag: '/flags/ph.png', photo: '/candidates/default.png', role: 'pencabar' },
+    { name: 'Ahmad Razak', party: 'BN', partyLogo: '/flags/bn.png', role: 'penyandang', lastElection: { year: 2023, votes: 12340, majority: 1890, percentage: 54.1, totalVoters: 32000, turnout: 76.2 } },
+    { name: 'Farid Iskandar', party: 'PH', partyLogo: '/flags/ph.png', role: 'pencabar' },
   ],
   'N02': [
-    { name: 'Siti Aminah', party: 'BN', partyFlag: '/flags/bn.png', photo: '/candidates/default.png', role: 'penyandang', lastElection: { year: 2023, votes: 9870, majority: 2340, percentage: 58.3, totalVoters: 28000, turnout: 74.1 } },
-    { name: 'Chong Wei Keat', party: 'PH', partyFlag: '/flags/ph.png', photo: '/candidates/default.png', role: 'pencabar' },
+    { name: 'Siti Aminah', party: 'BN', partyLogo: '/flags/bn.png', role: 'penyandang', lastElection: { year: 2023, votes: 9870, majority: 2340, percentage: 58.3, totalVoters: 28000, turnout: 74.1 } },
+    { name: 'Chong Wei Keat', party: 'PH', partyLogo: '/flags/ph.png', role: 'pencabar' },
   ],
   'N03': [
-    { name: 'Ismail bin Kassim', party: 'PN', partyFlag: '/flags/pn.png', photo: '/candidates/default.png', role: 'penyandang', lastElection: { year: 2023, votes: 7650, majority: 870, percentage: 41.2, totalVoters: 22000, turnout: 72.8 } },
-    { name: 'Halimah Yusof', party: 'BN', partyFlag: '/flags/bn.png', photo: '/candidates/default.png', role: 'pencabar' },
+    { name: 'Ismail bin Kassim', party: 'PN', partyLogo: '/flags/pn.png', role: 'penyandang', lastElection: { year: 2023, votes: 7650, majority: 870, percentage: 41.2, totalVoters: 22000, turnout: 72.8 } },
+    { name: 'Halimah Yusof', party: 'BN', partyLogo: '/flags/bn.png', role: 'pencabar' },
   ],
   'N04': [
-    { name: 'Noraini Hassan', party: 'BN', partyFlag: '/flags/bn.png', photo: '/candidates/default.png', role: 'penyandang', lastElection: { year: 2023, votes: 11200, majority: 3400, percentage: 62.1, totalVoters: 26000, turnout: 78.9 } },
-    { name: 'Azlan Shah', party: 'Bebas', partyFlag: '/flags/bebas.png', photo: '/candidates/default.png', role: 'pencabar' },
+    { name: 'Noraini Hassan', party: 'BN', partyLogo: '/flags/bn.png', role: 'penyandang', lastElection: { year: 2023, votes: 11200, majority: 3400, percentage: 62.1, totalVoters: 26000, turnout: 78.9 } },
+    { name: 'Azlan Shah', party: 'Bebas', partyLogo: '/flags/bebas.png', role: 'pencabar' },
   ],
 }
 
 const defaultCandidates = [
-  { name: 'Calon A', party: 'BN', partyFlag: '/flags/bn.png', photo: '/candidates/default.png', role: 'penyandang' as const },
-  { name: 'Calon B', party: 'PH', partyFlag: '/flags/ph.png', photo: '/candidates/default.png', role: 'pencabar' as const },
-  { name: 'Calon C', party: 'PN', partyFlag: '/flags/pn.png', photo: '/candidates/default.png', role: 'pencabar' as const },
+  { name: 'Calon A', party: 'BN', partyLogo: '/flags/bn.png', role: 'penyandang' as const },
+  { name: 'Calon B', party: 'PH', partyLogo: '/flags/ph.png', role: 'pencabar' as const },
+  { name: 'Calon C', party: 'PN', partyLogo: '/flags/pn.png', role: 'pencabar' as const },
 ]
 
 const mockComments: Record<string, any> = {

@@ -24,20 +24,14 @@ function CandidateCard({ c }: { c: CandidateData }) {
   return (
     <div className="flex gap-3 items-start">
       <img
-        src={c.photo}
-        alt={c.name}
-        className="w-[60px] h-[60px] rounded-full object-cover border-2 border-gray-200 flex-shrink-0 bg-gray-100"
-        onError={(e) => { (e.target as HTMLImageElement).src = '/candidates/default.png' }}
+        src={c.partyLogo}
+        alt={c.party}
+        className="w-[40px] h-[40px] rounded-full object-cover border-2 border-gray-200 flex-shrink-0 bg-gray-100"
+        onError={(e) => { (e.target as HTMLImageElement).src = '/flags/bebas.png' }}
       />
       <div className="flex-1 min-w-0">
         <p className="text-[14px] font-bold text-gray-800 leading-tight">{c.name}</p>
         <div className="flex items-center gap-1.5 mt-0.5">
-          <img
-            src={c.partyFlag}
-            alt={c.party}
-            className="w-[16px] h-[10px] object-cover"
-            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-          />
           <span className="text-[11px] text-gray-500">{partyNames[c.party] || c.party}</span>
           <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${isIncumbent ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'}`}>
             {isIncumbent ? 'Penyandang' : 'Pencabar'}
