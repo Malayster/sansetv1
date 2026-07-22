@@ -10,6 +10,7 @@ import BlogIndex from './blog/blog-index'
 import BlogPostContent from './blog/blog-post-content'
 import BlogPostList from './blog/blog-post-list'
 import Breadcrumbs from './breadcrumbs'
+import { ArticleShell } from './article-page'
 import Callout from './callout'
 import CardList from './card-list'
 import CategoryCards from './category.cards'
@@ -79,6 +80,18 @@ export default function ({
 			default:
 				return {}
 		}
+	}
+
+	// For blog posts, wrap Sanity modules in Nikkei-style article shell (breadcrumb, title, share, sidebar)
+	if (post) {
+		return <ArticleShell post={post}>
+			{modules?.map((module, i) => {
+				if (!module) return null
+				const Component = MODULES_MAP[module._type as keyof typeof MODULES_MAP] as React.ComponentType
+				if (!Component) return null
+				return <Component {...module} {...moduleSpecificProps(module)} key={`${module._key}-${i}`} />
+			})}
+		</ArticleShell>
 	}
 
 	return (
