@@ -30,8 +30,14 @@ import callout from './modules/callout'
 import cardList from './modules/card-list'
 import customHtml from './modules/custom-html'
 import formModule from './modules/form-module'
+import categoryCards from './modules/category.cards'
+import economyBoxes from './modules/economy.boxes'
+import electionWidget from './modules/election.widget'
+import governmentAchievements from './modules/government.achievements'
 import heroCover from './modules/hero.cover'
+import heroFeatured from './modules/hero.featured'
 import heroSplit from './modules/hero.split'
+import newsGrid from './modules/blog.grid'
 import logoList from './modules/logo-list'
 import personList from './modules/person-list'
 import prose from './modules/prose'
@@ -92,9 +98,15 @@ export const schema: SchemaPluginOptions = {
 		cardList,
 		customHtml,
 		formModule,
+		categoryCards,
+		economyBoxes,
+		electionWidget,
+		governmentAchievements,
 		heroCover,
+		heroFeatured,
 		heroSplit,
 		logoList,
+		newsGrid,
 		personList,
 		prose,
 		quoteList,

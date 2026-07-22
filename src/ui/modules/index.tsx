@@ -12,11 +12,17 @@ import BlogPostList from './blog/blog-post-list'
 import Breadcrumbs from './breadcrumbs'
 import Callout from './callout'
 import CardList from './card-list'
+import CategoryCards from './category.cards'
 import CustomHTML from './custom-html'
+import EconomyBoxes from './economy.boxes'
+import ElectionWidget from './election.widget'
 import FormModule from './form-module'
+import GovernmentAchievements from './government.achievements'
 import HeroCover from './hero.cover'
+import HeroFeatured from './hero.featured'
 import HeroSplit from './hero.split'
 import LogoList from './logo-list'
+import NewsGrid from './blog.grid'
 import PersonList from './person-list'
 import Prose from './prose'
 import QuoteList from './quote-list'
@@ -33,11 +39,17 @@ const MODULES_MAP = {
 	breadcrumbs: Breadcrumbs,
 	callout: Callout,
 	'card-list': CardList,
+	'category.cards': CategoryCards,
 	'custom-html': CustomHTML,
+	'economy.boxes': EconomyBoxes,
+	'election.widget': ElectionWidget,
 	'form-module': FormModule,
+	'government.achievements': GovernmentAchievements,
 	'hero.cover': HeroCover,
+	'hero.featured': HeroFeatured,
 	'hero.split': HeroSplit,
 	'logo-list': LogoList,
+	'blog.grid': NewsGrid,
 	'person-list': PersonList,
 	prose: Prose,
 	'quote-list': QuoteList,
