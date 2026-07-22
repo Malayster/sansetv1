@@ -2,8 +2,6 @@ import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { preconnect } from 'react-dom'
 import Footer from '@/ui/footer'
 import Header from '@/ui/header'
-import CategoryPills from '@/ui/category-pills'
-import TickerBar from '@/ui/ticker-bar'
 import ReadingProgress from '@/ui/reading-progress'
 import AnalyticsTracker from '@/ui/analytics-tracker'
 import VisualEditing from '@/ui/modules/visual-editing'
@@ -42,12 +40,10 @@ export default async function RootLayout({
 			</head>
 			<NuqsAdapter>
 				<ThemeProvider>
-					<body className="bg-background dark:bg-bg-dark text-foreground dark:text-putih/90 antialiased overscroll-none">
+					<body className="bg-white text-[#1A1A1A] antialiased overscroll-none">
 						<ReadingProgress />
 						<Header />
-						<CategoryPills />
-						<TickerBar />
-						<main>{children}</main>
+						<main className="min-h-screen">{children}</main>
 						<Footer />
 
 						<AnalyticsTracker />

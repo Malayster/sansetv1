@@ -8,85 +8,56 @@ import Navigation from './navigation'
 
 export default async function Footer() {
   const site = await getSite()
-  const blurb = site?.footer?.blurb
-
   return (
-    <footer className="bg-[#000000] text-white border-t-[3px] border-[#F5A623] mt-auto">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-        {/* 4 columns */}
-        <div className="grid gap-8 max-md:grid-cols-1 md:grid-cols-4">
-          {/* Col 1: Tentang Kami */}
-          <div className="flex flex-col items-center gap-3 max-md:text-center md:items-start">
-            <Logo className="[&_img]:h-[2lh]" variant="dark" />
-            {blurb && (
-              <div className="prose text-sm text-white/70">
-                <PortableText
-                  value={blurb}
-                  components={{
-                    types: {
-                      'custom-html': ({ value }) => <CustomHTML {...value} />,
-                    },
-                  }}
-                />
+    <footer className="bg-[#1A1A1A] text-white mt-16">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
+        <div className="grid gap-8 md:grid-cols-4">
+          {/* Col 1 — Logo + blurb */}
+          <div className="max-md:text-center md:col-span-2">
+            <Logo className="[&_img]:h-[2lh] mb-3" variant="dark" />
+            {site?.footer?.blurb && (
+              <div className="prose text-sm text-gray-400 max-w-sm">
+                <PortableText value={site.footer.blurb} components={{ types: { 'custom-html': ({ value }) => <CustomHTML {...value} /> } }} />
               </div>
             )}
-            <SocialNavigation className="social [&_svg]:size-lh link flex items-center gap-4 max-md:justify-center [&_a]:text-[#C41E3A] [&_a]:hover:text-[#F5A623]" />
+            <SocialNavigation className="social [&_svg]:size-lh link flex items-center gap-4 mt-4 max-md:justify-center [&_a]:text-gray-400 [&_a]:hover:text-white" />
           </div>
-
-          {/* Col 2: Kategori */}
+          {/* Col 2 — Kategori */}
           <div className="max-md:text-center">
-            <h4 className="text-[#F5A623] text-sm font-bold uppercase mb-4 tracking-wide">Kategori</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Kategori</h4>
             <Navigation />
           </div>
-
-          {/* Col 3: Hubungi */}
-          <div className="max-md:text-center space-y-3">
-            <h4 className="text-[#F5A623] text-sm font-bold uppercase mb-4 tracking-wide">Hubungi</h4>
-            <div className="flex flex-col items-center gap-2 md:items-start text-sm text-white/60">
-              <a href="mailto:redaksi@suara-anaknegeri.com" className="hover:text-[#F5A623] transition-colors">redaksi@suara-anaknegeri.com</a>
-              <a href="tel:+60312345678" className="hover:text-[#F5A623] transition-colors">+603-1234 5678</a>
-              <span>No. 1, Jalan Media, 50000 Kuala Lumpur</span>
-            </div>
-          </div>
-
-          {/* Col 4: Ikuti Kami */}
-          <div className="max-md:text-center space-y-3">
-            <h4 className="text-[#F5A623] text-sm font-bold uppercase mb-4 tracking-wide">Ikuti Kami</h4>
-            <div className="flex flex-col items-center gap-2 md:items-start text-sm">
-              <a href="/tentang" className="text-white/60 hover:text-[#F5A623] transition-colors">Tentang Kami</a>
-              <a href="/redaksi" className="text-white/60 hover:text-[#F5A623] transition-colors">Redaksi</a>
-              <a href="/pedoman-media-siber" className="text-white/60 hover:text-[#F5A623] transition-colors">Pedoman Media Siber</a>
-              <a href="/dasar-privasi" className="text-white/60 hover:text-[#F5A623] transition-colors">Dasar Privasi</a>
-              <a href="/iklan" className="text-white/60 hover:text-[#F5A623] transition-colors">Pengiklanan</a>
+          {/* Col 3 — Hubungi */}
+          <div className="max-md:text-center">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Hubungi</h4>
+            <div className="space-y-2 text-sm text-gray-400">
+              <a href="mailto:redaksi@suara-anaknegeri.com" className="block hover:text-white transition-colors">redaksi@suara-anaknegeri.com</a>
+              <a href="tel:+60312345678" className="block hover:text-white transition-colors">+603-1234 5678</a>
+              <p>No. 1, Jalan Media, 50000 KL</p>
             </div>
           </div>
         </div>
 
-        {/* Footer text disclaimer */}
-        {site?.footerText && (
-          <div className="border-t border-white/10 mt-10 pt-6 text-center">
-            <p className="text-white/40 text-xs italic">{site.footerText}</p>
-          </div>
-        )}
-
         {/* Newsletter */}
-        <div className="border-t border-white/10 mt-8 pt-8">
+        <div className="border-t border-gray-800 mt-10 pt-8">
           <div className="max-w-md mx-auto text-center space-y-3">
-            <h4 className="text-[#F5A623] text-sm font-bold uppercase tracking-wide">{'\U0001F4EC'} Langgan Newsletter</h4>
-            <p className="text-white/50 text-xs">Dapatkan berita terkini terus ke inbox anda. Tiada spam.</p>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-gray-500">Langgan Newsletter</h4>
+            <p className="text-gray-500 text-xs">Dapatkan berita terkini terus ke inbox anda.</p>
             <NewsletterForm source="footer" />
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-white/10 mt-8 pt-6 text-center text-xs text-white/40">
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-2">
-            <a href="/" className="hover:text-[#F5A623] transition-colors">Beranda</a>
-            <a href="/tentang" className="hover:text-[#F5A623] transition-colors">Tentang</a>
-            <a href="/redaksi" className="hover:text-[#F5A623] transition-colors">Redaksi</a>
-            <a href="/pedoman-media-siber" className="hover:text-[#F5A623] transition-colors">Pedoman Media Siber</a>
+        {/* Footer text + copyright */}
+        <div className="border-t border-gray-800 mt-8 pt-6">
+          {site?.footerText && <p className="text-gray-600 text-xs text-center mb-4 italic">{site.footerText}</p>}
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-gray-500">
+            <a href="/" className="hover:text-white transition-colors">Beranda</a>
+            <a href="/tentang" className="hover:text-white transition-colors">Tentang</a>
+            <a href="/redaksi" className="hover:text-white transition-colors">Redaksi</a>
+            <a href="/pedoman-media-siber" className="hover:text-white transition-colors">Pedoman Media Siber</a>
+            <a href="/dasar-privasi" className="hover:text-white transition-colors">Privasi</a>
           </div>
-          <div className="[&_a]:link text-center mt-3 [&_a]:text-[#C41E3A]/70 [&_a]:hover:text-[#F5A623]">
+          <div className="[&_a]:link text-center mt-4 text-xs text-gray-600 [&_a]:text-gray-500 [&_a]:hover:text-white">
             <PortableText value={site?.copyright ?? []} />
           </div>
         </div>
