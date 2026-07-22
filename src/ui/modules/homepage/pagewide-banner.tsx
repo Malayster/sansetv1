@@ -31,7 +31,7 @@ export function LifeArts({ posts }: { posts: P[] }) {
   if (posts.length < 4) return null
   return <>
     <section className="py-4">
-      <NSec title="Gaya Hidup" href={`/${bp}?category=Hiburan`} />
+      <NSec title="Gaya Hidup" href={`${bp}?category=Hiburan`} />
       <div className="grid lg:grid-cols-[1fr_280px] gap-5">
         <div>
           <article className="flex flex-col sm:flex-row gap-4 mb-5">

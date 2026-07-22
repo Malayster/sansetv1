@@ -10,7 +10,7 @@ export function OpinionGrid({ posts }: { posts: P[] }) {
   if (posts.length < 4) return null
   return <>
     <section className="py-4">
-      <NSec title="Opini" href={`/${bp}?category=Opini`} />
+      <NSec title="Opini" href={`${bp}?category=Opini`} />
       <div className="grid lg:grid-cols-[1fr_280px] gap-5">
         {/* ── Main ── */}
         <div>

@@ -6,7 +6,7 @@ export function EditorsPicks({ posts }: { posts: P[] }) {
 
   return <>
     <section className="py-4">
-      <NSec title="Pilihan Editor" href={`/${bp}`} />
+      <NSec title="Pilihan Editor" href={`${bp}`} />
       <div className="grid lg:grid-cols-[1fr_280px] gap-5">
         {/* ── Main: 1 spotlight + 3 cards ── */}
         <div>
@@ -37,7 +37,7 @@ export function EditorsPicks({ posts }: { posts: P[] }) {
 
         {/* ── Sidebar: Latest Headlines ── */}
         <aside>
-          <NSideH title="Berita Terkini" href={`/${bp}`} />
+          <NSideH title="Berita Terkini" href={`${bp}`} />
           <div className="divide-y divide-gray-100">
             {posts.slice(4, 13).map(p => (
               <Link key={p._id} href={`${bp}${p.slug}`} className="block py-2 text-[12px] text-gray-700 hover:text-[#C41E3A] transition-colors leading-snug">{p.title}</Link>

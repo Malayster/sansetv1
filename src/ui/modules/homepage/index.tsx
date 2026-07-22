@@ -34,7 +34,7 @@ export default async function Homepage() {
     <TopicPromotion title="Berita Bisnes" posts={posts.slice(9, 13)} />
 
     {/* 4. TECH BANNER */}
-    <PageWideBanner title="Sorotan Teknologi" tag="#teknologi" subtag="Transformasi digital Asia" href={`/${bp}?category=Teknologi`} posts={posts.slice(13, 14)} />
+    <PageWideBanner title="Sorotan Teknologi" tag="#teknologi" subtag="Transformasi digital Asia" href={`${bp}?category=Teknologi`} posts={posts.slice(13, 14)} />
 
     {/* 5. TOPIC PROMOTION: Nasional */}
     <TopicPromotion title="Nasional" posts={posts.slice(14, 18)} />
