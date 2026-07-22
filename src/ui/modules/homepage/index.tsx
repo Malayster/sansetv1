@@ -83,6 +83,19 @@ export default async function Homepage() {
       </div>
     </section>
 
+    {/* ═══ #PILIHANRAYA BANNER ═══ */}
+    <section className="bg-black text-white py-4 px-4 -mx-4 md:mx-0">
+      <div className="flex items-center justify-between">
+        <div>
+          <span className="font-bold text-[28px] tracking-tight">
+            <span className="text-[#C41E3A]">#</span><span className="text-[#F5C842]">PILIHAN</span><span className="text-[#C41E3A]">RAYA</span>
+          </span>
+          <p className="text-[12px] text-white/70 mt-1">Liputan eksklusif pilihan raya di Malaysia</p>
+        </div>
+        <Link href={`${bp}?category=PilihanRaya`} className="text-[11px] font-bold uppercase text-[#F5C842] hover:underline">Ikuti ›</Link>
+      </div>
+    </section>
+
     {/* ═══════ EDITOR'S PICKS + BISNES ═══════ */}
     <div className="flex flex-col gap-2">
       <div>
