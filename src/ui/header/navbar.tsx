@@ -46,37 +46,39 @@ export default function NavBar() {
   }, [active])
 
   return (
-    <nav ref={navRef} className="hidden md:flex items-center h-full gap-0">
-      {menuItems.map((item, i) => (
-        <div key={item.label} className="relative h-full flex items-center" onMouseEnter={() => item.columns && setActive(i)} onMouseLeave={() => setActive(null)}>
-          {item.href ? (
-            <Link href={item.href} className="flex items-center px-2.5 h-full text-[12px] text-gray-700 hover:text-[#C41E3A] font-medium transition-colors">{item.label}</Link>
-          ) : (
-            <button className="flex items-center gap-0.5 px-2.5 h-full text-[12px] text-gray-700 hover:text-[#C41E3A] font-medium transition-colors">
-              {item.label}
-              <svg className="w-2.5 h-2.5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6"/></svg>
-            </button>
-          )}
-          {item.columns && active === i && (
-            <div className="absolute left-0 top-full pt-1 z-50">
-              <div className="bg-white shadow-2xl border border-gray-200 rounded-sm min-w-[480px]">
-                <div className="flex p-5 gap-6">
-                  {item.columns.map(col => (
-                    <div key={col.title} className="flex-1">
-                      <h4 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">{col.title}</h4>
-                      <ul className="space-y-0.5">
-                        {col.items.map(sub => (
-                          <li key={sub.label}><Link href={sub.href} className="block text-xs text-gray-700 hover:text-[#C41E3A] py-1" onClick={() => setActive(null)}>{sub.label}</Link></li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+    <nav ref={navRef} className="bg-[#001f3f] border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center h-9 overflow-x-auto">
+        {menuItems.map((item, i) => (
+          <div key={item.label} className="relative h-full flex items-center shrink-0" onMouseEnter={() => item.columns && setActive(i)} onMouseLeave={() => setActive(null)}>
+            {item.href ? (
+              <Link href={item.href} className="flex items-center px-3 h-full text-[12px] text-white/80 hover:text-white font-medium transition-colors whitespace-nowrap">{item.label}</Link>
+            ) : (
+              <button className="flex items-center gap-1 px-3 h-full text-[12px] text-white/80 hover:text-white font-medium transition-colors whitespace-nowrap">
+                {item.label}
+                <svg className="w-2.5 h-2.5 text-white/40" viewBox="0 0 15 15"><path fill="currentColor" fillRule="evenodd" d="M1.913 11.288L7.5 5.701l5.587 5.587 1.326-1.326L7.5 3.125.587 9.962z"/></svg>
+              </button>
+            )}
+            {item.columns && active === i && (
+              <div className="absolute left-0 top-full pt-0.5 z-50">
+                <div className="bg-white shadow-2xl border border-gray-200 min-w-[480px]">
+                  <div className="flex p-5 gap-6">
+                    {item.columns.map(col => (
+                      <div key={col.title} className="flex-1">
+                        <h4 className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">{col.title}</h4>
+                        <ul className="space-y-0.5">
+                          {col.items.map(sub => (
+                            <li key={sub.label}><Link href={sub.href} className="block text-xs text-gray-700 hover:text-[#C41E3A] py-1" onClick={() => setActive(null)}>{sub.label}</Link></li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-        </div>
-      ))}
+            )}
+          </div>
+        ))}
+      </div>
     </nav>
   )
 }
