@@ -67,8 +67,8 @@ export default async function Homepage() {
       <div className="flex flex-col gap-0.5">
         {p.slice(3,5).map(a => (
           <article key={a._id} className="border border-gray-200 p-1.5">
-            <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-0.5"><Img p={a} w={294} h={165} /></Link>
-            <Tag p={a} lk={false} /><Head p={a} sz="text-[12px]" /><Tim p={a} />
+            <Link href={`${bp}${a.slug}`} className="block overflow-hidden mb-1"><Img p={a} w={294} h={260} /></Link>
+            <Tag p={a} lk={false} /><Head p={a} sz="text-[13px]" /><Tim p={a} />
           </article>
         ))}
       </div>
