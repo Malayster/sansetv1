@@ -94,9 +94,9 @@ import realDemographicsData from '../../data/kv-output/demographics-real.json'
 import realHistoricalResults from '../../data/kv-output/historical-results.json'
 
 const defaultCandidates = [
-  { name: 'Calon A', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang' as const },
-  { name: 'Calon B', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar' as const },
-  { name: 'Calon C', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' as const },
+  { name: 'Calon A', party: 'BN', partyLogo: '/flags/bn.webp', role: 'penyandang' as const },
+  { name: 'Calon B', party: 'PH', partyLogo: '/flags/ph.webp', role: 'pencabar' as const },
+  { name: 'Calon C', party: 'PN', partyLogo: '/flags/pn.webp', role: 'pencabar' as const },
 ]
 
 const mockComments: Record<string, any> = {

@@ -33,8 +33,9 @@ interface Candidate {
 // ─── Party mapping ───
 
 const PARTY_LOGO: Record<string, string> = {
-  BN: '/flags/bn.svg', PH: '/flags/ph.svg', PN: '/flags/pn.svg',
-  GPS: '/flags/gps.svg', GRS: '/flags/grs.svg', WARISAN: '/flags/warisan.svg',
+  BN: '/flags/bn.webp', PH: '/flags/ph.webp', PN: '/flags/pn.webp',
+  BERSATU: '/flags/bersatu.webp',
+  GPS: '/flags/gps.webp', GRS: '/flags/grs.webp', WARISAN: '/flags/warisan.webp',
 }
 
 function getLogo(party: string): string { return PARTY_LOGO[party] || '/flags/bebas.svg' }
@@ -71,25 +72,25 @@ function ethToDemographics(ethClassification: string): { malay: number; chinese:
 
 const MOCK_CANDIDATES: Record<string, Candidate[]> = {
   P001: [
-    { name: 'Zulkifli Ismail', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 16230, majority: 4172, percentage: 52.3, totalVoters: 45000, turnout: 78.5 } },
-    { name: 'Mohd Saat Musa', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 12058, majority: 0, percentage: 38.9, totalVoters: 45000, turnout: 78.5 } },
-    { name: 'Rohaizat Zainal', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 2341, majority: 0, percentage: 7.5, totalVoters: 45000, turnout: 78.5 } },
+    { name: 'Zulkifli Ismail', party: 'BN', partyLogo: '/flags/bn.webp', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 16230, majority: 4172, percentage: 52.3, totalVoters: 45000, turnout: 78.5 } },
+    { name: 'Mohd Saat Musa', party: 'PH', partyLogo: '/flags/ph.webp', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 12058, majority: 0, percentage: 38.9, totalVoters: 45000, turnout: 78.5 } },
+    { name: 'Rohaizat Zainal', party: 'PN', partyLogo: '/flags/pn.webp', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 2341, majority: 0, percentage: 7.5, totalVoters: 45000, turnout: 78.5 } },
   ],
   P002: [
-    { name: 'Zakri Hassan', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 22100, majority: 3150, percentage: 48.7, totalVoters: 58000, turnout: 82.1 } },
-    { name: 'Abdul Rashid', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 18950, majority: 0, percentage: 41.7, totalVoters: 58000, turnout: 82.1 } },
+    { name: 'Zakri Hassan', party: 'PH', partyLogo: '/flags/ph.webp', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 22100, majority: 3150, percentage: 48.7, totalVoters: 58000, turnout: 82.1 } },
+    { name: 'Abdul Rashid', party: 'PN', partyLogo: '/flags/pn.webp', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 18950, majority: 0, percentage: 41.7, totalVoters: 58000, turnout: 82.1 } },
   ],
   P003: [
-    { name: 'Shahidan Kassim', party: 'PN', partyLogo: '/flags/pn.svg', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 19800, majority: 1200, percentage: 44.1, totalVoters: 52000, turnout: 76.3 } },
-    { name: 'Fathin Amelina', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 18600, majority: 0, percentage: 41.4, totalVoters: 52000, turnout: 76.3 } },
+    { name: 'Shahidan Kassim', party: 'PN', partyLogo: '/flags/pn.webp', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 19800, majority: 1200, percentage: 44.1, totalVoters: 52000, turnout: 76.3 } },
+    { name: 'Fathin Amelina', party: 'PH', partyLogo: '/flags/ph.webp', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 18600, majority: 0, percentage: 41.4, totalVoters: 52000, turnout: 76.3 } },
   ],
   P004: [
-    { name: 'Mohd Suhaimi Abdullah', party: 'PN', partyLogo: '/flags/pn.svg', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 25400, majority: 5600, percentage: 61.2, totalVoters: 48000, turnout: 80.4 } },
-    { name: 'Zambry Abd Kadir', party: 'BN', partyLogo: '/flags/bn.svg', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 19800, majority: 0, percentage: 37.0, totalVoters: 48000, turnout: 80.4 } },
+    { name: 'Mohd Suhaimi Abdullah', party: 'PN', partyLogo: '/flags/pn.webp', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 25400, majority: 5600, percentage: 61.2, totalVoters: 48000, turnout: 80.4 } },
+    { name: 'Zambry Abd Kadir', party: 'BN', partyLogo: '/flags/bn.webp', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2022, votes: 19800, majority: 0, percentage: 37.0, totalVoters: 48000, turnout: 80.4 } },
   ],
   N01: [
-    { name: 'Ahmad Razak', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2023, votes: 12340, majority: 1890, percentage: 54.1, totalVoters: 32000, turnout: 76.2 } },
-    { name: 'Farid Iskandar', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2023, votes: 0, majority: 0, percentage: 0, totalVoters: 32000, turnout: 76.2 } },
+    { name: 'Ahmad Razak', party: 'BN', partyLogo: '/flags/bn.webp', role: 'penyandang', profile: '', wikipediaUrl: '', lastElection: { year: 2023, votes: 12340, majority: 1890, percentage: 54.1, totalVoters: 32000, turnout: 76.2 } },
+    { name: 'Farid Iskandar', party: 'PH', partyLogo: '/flags/ph.webp', role: 'pencabar', profile: '', wikipediaUrl: '', lastElection: { year: 2023, votes: 0, majority: 0, percentage: 0, totalVoters: 32000, turnout: 76.2 } },
   ],
 }
 

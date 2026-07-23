@@ -10,10 +10,15 @@ const PARTY_COLORS: Record<string, string> = {
   'WARISAN': 'text-yellow-600', 'Bebas': 'text-gray-500',
 }
 
-const PARTY_BADGE: Record<string, string> = {
-  'BN': 'bg-red-500', 'PH': 'bg-blue-500', 'PN': 'bg-green-500',
-  'BERSATU': 'bg-orange-500',
-  'Bebas': 'bg-gray-400', 'GPS': 'bg-purple-500', 'GRS': 'bg-orange-500',
+const PARTY_FLAGS: Record<string, string> = {
+  'BN': '/flags/bn.webp',
+  'PH': '/flags/ph.webp',
+  'PN': '/flags/pn.webp',
+  'BERSATU': '/flags/bersatu.webp',
+  'GPS': '/flags/gps.webp',
+  'GRS': '/flags/grs.webp',
+  'WARISAN': '/flags/warisan.webp',
+  'Bebas': '/flags/bebas.svg',
 }
 
 const NSN_DUN_NAMES: Record<string, string> = {
@@ -28,11 +33,17 @@ const NSN_DUN_NAMES: Record<string, string> = {
   'N33': 'Sri Tanjung', 'N34': 'Gemas', 'N35': 'Gemencheh', 'N36': 'Repah',
 }
 
-function PartyDot({ party }: { party: string }) {
+function PartyFlag({ party, size = 18 }: { party: string; size?: number }) {
+  const src = PARTY_FLAGS[party] || '/flags/bebas.svg'
   return (
-    <span
-      className={`inline-block w-2 h-2 rounded-full ${PARTY_BADGE[party] || 'bg-gray-300'}`}
+    <img
+      src={src}
+      alt={party}
       title={party}
+      width={size}
+      height={Math.round(size * 0.67)}
+      className="inline-block rounded-sm border border-gray-300 object-cover"
+      loading="lazy"
     />
   )
 }
@@ -44,7 +55,7 @@ function HistoryCell({ history, year }: { history?: SeatHistory; year: number })
   }
   return (
     <div className="flex flex-col items-center gap-0.5" title={`${election.winner} (${election.winnerParty}) — ${election.majority.toLocaleString()} majoriti`}>
-      <PartyDot party={election.winnerParty} />
+      <PartyFlag party={election.winnerParty} size={16} />
       <span className={`text-[10px] font-bold ${PARTY_COLORS[election.winnerParty] || 'text-gray-500'}`}>
         {election.winnerParty}
       </span>
@@ -99,7 +110,7 @@ function CandidateRow({ region }: { region: RegionWithData }) {
       <td className="text-center px-3 py-2.5 align-top">
         {incParty ? (
           <div className="flex flex-col items-center gap-0.5">
-            <PartyDot party={incParty} />
+            <PartyFlag party={incParty} size={18} />
             <span className={`font-bold text-[11px] ${PARTY_COLORS[incParty] || 'text-gray-500'}`}>
               {incParty}
             </span>
@@ -127,7 +138,7 @@ function ExpandedRow({ region }: { region: RegionWithData }) {
             <div className="space-y-1">
               {candidates.map((c, i) => (
                 <div key={i} className="flex items-center gap-2 text-[12px]">
-                  <PartyDot party={c.party} />
+                  <PartyFlag party={c.party} size={16} />
                   <span className={c.role === 'penyandang' ? 'font-semibold' : ''}>{c.name}</span>
                   <span className={`font-bold ${PARTY_COLORS[c.party] || 'text-gray-500'}`}>{c.party}</span>
                   {c.role === 'penyandang' && <span className="text-[10px] text-amber-600 bg-amber-50 px-1 rounded">Penyandang</span>}
@@ -143,7 +154,7 @@ function ExpandedRow({ region }: { region: RegionWithData }) {
               {hist.elections.filter(e => e.year < 2026).map((e) => (
                 <div key={e.year} className="flex items-center gap-2 text-[12px]">
                   <span className="text-gray-400 w-8">{e.year}</span>
-                  <PartyDot party={e.winnerParty} />
+                  <PartyFlag party={e.winnerParty} size={16} />
                   <span className="font-medium">{e.winner}</span>
                   <span className={`font-bold ${PARTY_COLORS[e.winnerParty] || 'text-gray-500'}`}>{e.winnerParty}</span>
                   <span className="text-gray-400 text-[10px]">
@@ -213,7 +224,7 @@ export default function ElectionDunList({
         <div className="flex gap-3 text-[11px]">
           {Object.entries(partyTotals).sort().map(([party, count]) => (
             <span key={party} className="flex items-center gap-1">
-              <PartyDot party={party} />
+              <PartyFlag party={party} size={14} />
               <span className={`font-semibold ${PARTY_COLORS[party] || ''}`}>{party}</span>
               <span className="text-gray-500">{count}</span>
             </span>
@@ -264,7 +275,7 @@ export default function ElectionDunList({
 
       <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
         Data calon dari SPR (ElectionData.MY). Klik baris untuk butiran penuh calon, sejarah, dan demografi.
-        ★ = Penyandang. Bulatan warna = parti menang dalam pilihan raya tersebut.
+        ★ = Penyandang. Logo parti dari <a href="https://spr.gov.my/parti-parti-yang-berdaftar/" className="underline hover:text-gray-600" target="_blank" rel="noopener">SPR</a>.
       </p>
     </div>
   )

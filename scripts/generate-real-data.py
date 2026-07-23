@@ -28,10 +28,10 @@ PARTY_MAP = {
 }
 
 PARTY_LOGO = {
-    'BN': '/flags/bn.svg', 'PH': '/flags/ph.svg', 'PN': '/flags/pn.svg',
-    'BERSATU': '/flags/bersatu.svg',
-    'GPS': '/flags/gps.svg', 'GRS': '/flags/grs.svg',
-    'WARISAN': '/flags/warisan.svg', 'Bebas': '/flags/bebas.svg',
+    'BN': '/flags/bn.webp', 'PH': '/flags/ph.webp', 'PN': '/flags/pn.webp',
+    'BERSATU': '/flags/bersatu.webp',
+    'GPS': '/flags/gps.webp', 'GRS': '/flags/grs.webp',
+    'WARISAN': '/flags/warisan.webp', 'Bebas': '/flags/bebas.svg',
 }
 
 def short_party(raw):
