@@ -24,8 +24,8 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
     }))
   }, [regionA, regionB, a, b])
 
-  const incA = regionA?.candidates?.find(c => c.role === 'penyandang')
-  const incB = regionB?.candidates?.find(c => c.role === 'penyandang')
+  const incA = regionA?.candidates?.find(c => c.role === 'penyandang') || (regionA?.history?.elections?.slice().reverse().find(e => e.winnerParty) ? { party: regionA!.history!.elections!.slice().reverse().find(e => e.winnerParty)!.winnerParty!, name: regionA.history!.elections!.slice().reverse().find(e => e.winnerParty)!.winner || '' } as any : undefined)
+  const incB = regionB?.candidates?.find(c => c.role === 'penyandang') || (regionB?.history?.elections?.slice().reverse().find(e => e.winnerParty) ? { party: regionB!.history!.elections!.slice().reverse().find(e => e.winnerParty)!.winnerParty!, name: regionB.history!.elections!.slice().reverse().find(e => e.winnerParty)!.winner || '' } as any : undefined)
   const lastA = regionA?.history?.elections?.slice(-1)[0]
   const lastB = regionB?.history?.elections?.slice(-1)[0]
 

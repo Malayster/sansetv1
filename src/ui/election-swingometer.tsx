@@ -20,7 +20,7 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
     for (const r of regions) {
       const last = r.history?.elections?.slice(-1)[0]
       const inc = r.candidates?.find(c => c.role === 'penyandang')
-      const currParty = inc?.party || ''
+      const currParty = inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
 
       if (!last || !currParty) {
         counts[currParty] = (counts[currParty] || 0) + 1

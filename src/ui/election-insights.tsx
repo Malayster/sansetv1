@@ -10,14 +10,18 @@ const hex = PARTY_COLOR_HEX
 export function ExecutiveSummary({ regions }: { regions: RegionWithData[] }) {
   const stats = useMemo(() => {
     const total = regions.length
-    const parties = new Set(regions.map(r => r.candidates?.find(c => c.role === 'penyandang')?.party).filter(Boolean) as string[])
+    const parties = new Set(regions.map(r => {
+      const inc = r.candidates?.find(c => c.role === 'penyandang')
+      return inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
+    }).filter(Boolean))
     const counts: Record<string, number> = {}
     let topParty = '', topCount = 0, topTotalVotes = 0, topMajority = 0
     for (const r of regions) {
       const inc = r.candidates?.find(c => c.role === 'penyandang')
-      if (inc) {
-        counts[inc.party] = (counts[inc.party] || 0) + 1
-        if (counts[inc.party] > topCount) { topCount = counts[inc.party]; topParty = inc.party }
+      const party = inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
+      if (party) {
+        counts[party] = (counts[party] || 0) + 1
+        if (counts[party] > topCount) { topCount = counts[party]; topParty = party }
       }
       const last = r.history?.elections?.slice(-1)[0]
       if (last) { topTotalVotes += last.majority || 0; topMajority++ }
@@ -55,7 +59,8 @@ export function MajorityTracker({ regions }: { regions: RegionWithData[] }) {
     const counts: Record<string, number> = {}
     for (const r of regions) {
       const inc = r.candidates?.find(c => c.role === 'penyandang')
-      if (inc) counts[inc.party] = (counts[inc.party] || 0) + 1
+      const party = inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty
+      if (party) counts[party] = (counts[party] || 0) + 1
     }
     const t = regions.length
     const n = Math.floor(t / 2) + 1
@@ -110,15 +115,18 @@ export function KeyRaces({ regions }: { regions: RegionWithData[] }) {
       .map(r => {
         const last = r.history?.elections?.slice(-1)[0]
         const inc = r.candidates?.find(c => c.role === 'penyandang')
-        if (!last || !inc) return null
+        const fallbackParty = r.history?.elections?.slice().reverse().find(e => e.winnerParty)
+        const party = inc?.party || fallbackParty?.winnerParty || ''
+        const incumbent = inc?.name || fallbackParty?.winner || ''
+        if (!last || !party) return null
         return {
           code: r.code,
           name: r.name,
-          party: inc.party,
-          incumbent: inc.name,
+          party,
+          incumbent,
           majority: last.majority || 0,
           year: last.year,
-          flag: PARTY_FLAGS[inc.party] || '/flags/bebas.svg',
+          flag: PARTY_FLAGS[party] || '/flags/bebas.svg',
         }
       })
       .filter((s): s is NonNullable<typeof s> => s !== null)

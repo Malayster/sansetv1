@@ -15,6 +15,9 @@ function regionColor(r: RegionWithData, year?: number | null): string {
   }
   const inc = r.candidates?.find(c => c.role === 'penyandang')
   if (inc) return partyColors[inc.party] || '#6b7280'
+  // Fallback: use last historical winner
+  const lastElection = r.history?.elections?.slice(-1)[0]
+  if (lastElection?.winnerParty) return partyColors[lastElection.winnerParty] || '#6b7280'
   return '#e5e7eb'
 }
 

@@ -27,8 +27,8 @@ function arrangeSeats(count: number): { row: number; col: number }[] {
 export default function SemiCircleView({ regions }: { regions: RegionWithData[] }) {
   const seatData = useMemo(() => {
     const sorted = [...regions].sort((a, b) => {
-      const aP = a.candidates?.find(c => c.role === 'penyandang')?.party || ''
-      const bP = b.candidates?.find(c => c.role === 'penyandang')?.party || ''
+      const aP = a.candidates?.find(c => c.role === 'penyandang')?.party || a.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
+      const bP = b.candidates?.find(c => c.role === 'penyandang')?.party || b.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
       // Group by party, then by code
       if (aP !== bP) return aP.localeCompare(bP)
       return a.code.localeCompare(b.code)
@@ -37,7 +37,7 @@ export default function SemiCircleView({ regions }: { regions: RegionWithData[] 
     return sorted.map((r, i) => ({
       ...r,
       ...positions[i] || { row: 0, col: 0 },
-      party: r.candidates?.find(c => c.role === 'penyandang')?.party || 'Bebas',
+      party: r.candidates?.find(c => c.role === 'penyandang')?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || 'Bebas',
     }))
   }, [regions])
 

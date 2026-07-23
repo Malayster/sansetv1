@@ -31,7 +31,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
       return {
         code: r.code,
         name: r.name,
-        party: inc?.party || '',
+        party: inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || '',
         changes: changes.slice(0, 3),
         lastYear: sorted[sorted.length - 1]?.year || 2023,
         totalChange: changes.reduce((sum, c) => sum + Math.abs(c.change), 0),

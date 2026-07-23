@@ -73,10 +73,13 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
     )
   }
 
-  const { sentiment, candidates, demographics, name, code, state } = region
+  const { sentiment, candidates, demographics, name, code, state, history } = region
   const sortedCandidates = [...candidates].sort((a, b) =>
     a.role === 'penyandang' ? -1 : b.role === 'penyandang' ? 1 : 0,
   )
+  const hasIncumbent = candidates.some(c => c.role === 'penyandang')
+  // Fallback: use last historical winner if no incumbent
+  const lastWinner = !hasIncumbent ? history?.elections?.slice().reverse().find(e => e.winnerParty) : null
   const { malay, chinese, indian, others, medianIncome, gini, poverty } = demographics
 
   return (
@@ -91,6 +94,11 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
         {/* ── 1. Calon Bertanding ── */}
         <div className="p-4">
           <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-3">Calon Bertanding</h3>
+          {lastWinner && (
+            <div className="text-[10px] text-gray-500 bg-amber-50 border border-amber-200 rounded px-2.5 py-1.5 mb-3">
+              ⚠️ Tiada data penyandang. Pemenang PRN 2023: <span className="font-bold text-gray-700">{lastWinner.winnerParty}</span> ({lastWinner.winner})
+            </div>
+          )}
           <div className="space-y-3">
             {sortedCandidates.map((c, i) => <CandidateCard key={i} c={c} />)}
           </div>
