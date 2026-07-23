@@ -1,0 +1,594 @@
+{
+  "meta": {
+    "electionName": "PRN Negeri Sembilan 2026",
+    "state": "Negeri Sembilan",
+    "totalSeats": 36,
+    "totalVoters": 889490,
+    "pollingCenters": 1140,
+    "nominationDate": "2026-07-18",
+    "earlyVoteDate": "2026-07-28",
+    "electionDate": "2026-08-01",
+    "dissolutionDate": "2026-06-05"
+  },
+  "parties": [
+    {
+      "code": "PH",
+      "name": "Pakatan Harapan",
+      "nameMy": "Pakatan Harapan",
+      "coalition": "PH",
+      "color": "#DC2626",
+      "founded": "2015",
+      "leader": "Anwar Ibrahim",
+      "description": "Gabungan parti pembaharuan — PKR, DAP, Amanah"
+    },
+    {
+      "code": "PKR",
+      "name": "People's Justice Party",
+      "nameMy": "Parti Keadilan Rakyat",
+      "coalition": "PH",
+      "color": "#DC2626",
+      "leader": "Anwar Ibrahim",
+      "description": "16 kerusi di N. Sembilan"
+    },
+    {
+      "code": "DAP",
+      "name": "Democratic Action Party",
+      "nameMy": "Parti Tindakan Demokratik",
+      "coalition": "PH",
+      "color": "#DC2626",
+      "leader": "Anthony Loke",
+      "description": "11 kerusi di N. Sembilan"
+    },
+    {
+      "code": "AMANAH",
+      "name": "National Trust Party",
+      "nameMy": "Parti Amanah Negara",
+      "coalition": "PH",
+      "color": "#DC2626",
+      "leader": "Mohamad Sabu",
+      "description": "9 kerusi di N. Sembilan"
+    },
+    {
+      "code": "BN",
+      "name": "Barisan Nasional",
+      "nameMy": "Barisan Nasional",
+      "coalition": "BN",
+      "color": "#3B82F6",
+      "founded": "1973",
+      "leader": "Ahmad Zahid Hamidi",
+      "description": "25 kerusi di N. Sembilan"
+    },
+    {
+      "code": "UMNO",
+      "name": "United Malays National Organisation",
+      "nameMy": "Pertubuhan Kebangsaan Melayu Bersatu",
+      "coalition": "BN",
+      "color": "#3B82F6",
+      "leader": "Ahmad Zahid Hamidi",
+      "description": "16 kerusi di N. Sembilan"
+    },
+    {
+      "code": "MCA",
+      "name": "Malaysian Chinese Association",
+      "nameMy": "Persatuan Cina Malaysia",
+      "coalition": "BN",
+      "color": "#3B82F6",
+      "leader": "Wee Ka Siong",
+      "description": "7 kerusi di N. Sembilan"
+    },
+    {
+      "code": "MIC",
+      "name": "Malaysian Indian Congress",
+      "nameMy": "Kongres India Malaysia",
+      "coalition": "BN",
+      "color": "#3B82F6",
+      "leader": "Vigneswaran Sanasee",
+      "description": "2 kerusi di N. Sembilan"
+    },
+    {
+      "code": "PN",
+      "name": "Perikatan Nasional",
+      "nameMy": "Perikatan Nasional",
+      "coalition": "PN",
+      "color": "#1E3A5F",
+      "founded": "2020",
+      "leader": "Muhyiddin Yassin",
+      "description": "11 kerusi — PAS 5, Wawasan 4, Gerakan 1, MIPP 1"
+    },
+    {
+      "code": "PAS",
+      "name": "Pan-Malaysian Islamic Party",
+      "nameMy": "Parti Islam Se-Malaysia",
+      "coalition": "PN",
+      "color": "#1E3A5F",
+      "leader": "Hadi Awang",
+      "description": "5 kerusi di N. Sembilan"
+    },
+    {
+      "code": "WAWASAN",
+      "name": "Parti Wawasan Negara",
+      "nameMy": "Parti Wawasan Negara",
+      "coalition": "PN",
+      "color": "#1E3A5F",
+      "founded": "2026-07-06",
+      "leader": "Hamzah Zainudin",
+      "description": "Komponen PN baharu — penjenamaan semula PCM; 4 kerusi"
+    },
+    {
+      "code": "GERAKAN",
+      "name": "Gerakan",
+      "nameMy": "Parti Gerakan Rakyat Malaysia",
+      "coalition": "PN",
+      "color": "#1E3A5F",
+      "leader": "Dominic Lau",
+      "description": "1 kerusi di N. Sembilan"
+    },
+    {
+      "code": "MIPP",
+      "name": "Malaysian Indian People's Party",
+      "nameMy": "Parti Rakyat India Malaysia",
+      "coalition": "PN",
+      "color": "#1E3A5F",
+      "description": "1 kerusi di N. Sembilan"
+    },
+    {
+      "code": "BERSATU",
+      "name": "Malaysian United Indigenous Party",
+      "nameMy": "Parti Pribumi Bersatu Malaysia",
+      "coalition": "PN",
+      "color": "#9333EA",
+      "leader": "Muhyiddin Yassin",
+      "description": "Bertanding 24 kerusi guna logo sendiri — tanda perpecahan PN"
+    },
+    {
+      "code": "URIMAI",
+      "name": "Urimai",
+      "nameMy": "Parti Urimai",
+      "coalition": "BERSATU",
+      "color": "#9333EA",
+      "description": "2 kerusi di bawah BERSATU di N. Sembilan"
+    },
+    {
+      "code": "BERSAMA",
+      "name": "Parti Bersama Malaysia",
+      "nameMy": "Parti Bersama Malaysia",
+      "coalition": "BEBAS",
+      "color": "#F59E0B",
+      "founded": "2026",
+      "leader": "Rafizi Ramli",
+      "description": "Gagal total di PRN Johor — 15 calon hilang deposit; 52 hari pada PRN Johor"
+    },
+    {
+      "code": "ASLI",
+      "name": "Parti Bangsa Malaysia",
+      "nameMy": "Parti Bangsa Malaysia",
+      "coalition": "BEBAS",
+      "color": "#84CC16",
+      "description": "1 kerusi"
+    },
+    {
+      "code": "PSM",
+      "name": "Parti Sosialis Malaysia",
+      "nameMy": "Parti Sosialis Malaysia",
+      "coalition": "BEBAS",
+      "color": "#EF4444",
+      "description": "1 kerusi"
+    },
+    {
+      "code": "BERJASA",
+      "name": "Barisan Jemaah Islamiah",
+      "nameMy": "Barisan Jemaah Islamiah",
+      "coalition": "BEBAS",
+      "color": "#6B7280",
+      "description": "1 kerusi"
+    },
+    {
+      "code": "BEBAS",
+      "name": "Bebas",
+      "nameMy": "Bebas",
+      "coalition": "BEBAS",
+      "color": "#9CA3AF",
+      "description": "4 calon bebas"
+    }
+  ],
+  "alliances": [
+    {
+      "name": "Pakatan Harapan",
+      "members": [
+        "PH"
+      ],
+      "seatCount": 36,
+      "type": "coalition",
+      "description": "Gabungan kerajaan — PKR 16, DAP 11, Amanah 9"
+    },
+    {
+      "name": "Perikatan Nasional",
+      "members": [
+        "PN"
+      ],
+      "seatCount": 11,
+      "type": "coalition",
+      "description": "PAS 5, Wawasan 4, Gerakan 1, MIPP 1"
+    },
+    {
+      "name": "Barisan Nasional",
+      "members": [
+        "BN"
+      ],
+      "seatCount": 25,
+      "type": "coalition",
+      "description": "UMNO 16, MCA 7, MIC 2. Persefahaman strategik dengan PN (BUKAN gabungan)"
+    },
+    {
+      "name": "Persefahaman BN-PN",
+      "members": [
+        "BN",
+        "PN"
+      ],
+      "seatCount": 36,
+      "type": "understanding",
+      "description": "Strategi sementara elak pecah undi Melayu — masing-masing guna logo sendiri. \"Rakan di Putrajaya, lawan di Seremban\""
+    },
+    {
+      "name": "BERSATU + Urimai",
+      "members": [
+        "BERSATU",
+        "URIMAI"
+      ],
+      "seatCount": 24,
+      "type": "independent",
+      "description": "Bertanding luar dari tiket PN — 22 BERSATU + 2 Urimai. Tanda perpecahan serius PN"
+    }
+  ],
+  "contest": {
+    "totalCandidates": 103,
+    "threeCornered": 21,
+    "oneOnOne": 11,
+    "fourCornered": 2,
+    "fiveCornered": 2,
+    "oldestCandidate": {
+      "name": "Abd Latif A Tambi",
+      "party": "PH",
+      "dun": "Gemencheh",
+      "age": 70
+    },
+    "youngestCandidate": {
+      "name": "Leevineshwaraan Murugan",
+      "party": "BERSATU",
+      "dun": "Sri Tanjung",
+      "age": 23
+    }
+  },
+  "keyRaces": [
+    {
+      "code": "N10",
+      "name": "Juasseh",
+      "bnMajority2023": 78,
+      "status": "very tight",
+      "incumbent": "BN"
+    },
+    {
+      "code": "N13",
+      "name": "Kota",
+      "bnMajority2023": 135,
+      "status": "very tight",
+      "incumbent": "BN"
+    },
+    {
+      "code": "N22",
+      "name": "Seri Menanti",
+      "bnMajority2023": 370,
+      "status": "very tight",
+      "incumbent": "BN"
+    },
+    {
+      "code": "N03",
+      "name": "Sungai Lui",
+      "bnMajority2023": 535,
+      "status": "tight",
+      "incumbent": "BN"
+    },
+    {
+      "code": "N06",
+      "name": "Palong",
+      "bnMajority2023": 564,
+      "status": "tight",
+      "incumbent": "BN"
+    },
+    {
+      "code": "N12",
+      "name": "Senaling",
+      "bnMajority2023": 662,
+      "status": "tight",
+      "incumbent": "BN"
+    },
+    {
+      "code": "N09",
+      "name": "Lenggeng",
+      "bnMajority2023": 685,
+      "status": "tight",
+      "incumbent": "BN"
+    },
+    {
+      "code": "N07",
+      "name": "Jeram Padang",
+      "bnMajority2023": 693,
+      "status": "tight",
+      "incumbent": "BN"
+    }
+  ],
+  "johorComparison": {
+    "date": "2026-07-11",
+    "turnout": 68.73,
+    "totalVoters": 1874918,
+    "seats": [
+      {
+        "name": "BN",
+        "party": "BN",
+        "seats": 48,
+        "result": "🏆 Kemenangan Besar"
+      },
+      {
+        "name": "PH",
+        "party": "PH",
+        "seats": 8,
+        "result": "Kekalahan"
+      },
+      {
+        "name": "PN",
+        "party": "PN",
+        "seats": 0,
+        "result": "Hilang semua 3 kerusi 2022"
+      },
+      {
+        "name": "BERSAMA",
+        "party": "BERSAMA",
+        "seats": 0,
+        "result": "Gagal total — 15 calon hilang deposit"
+      },
+      {
+        "name": "MUDA",
+        "party": "BEBAS",
+        "seats": 0,
+        "result": "0 kerusi"
+      }
+    ],
+    "popularVote": [
+      {
+        "party": "BN",
+        "percentage": 60
+      },
+      {
+        "party": "PH",
+        "percentage": 32.6
+      }
+    ],
+    "lostDeposits": 55,
+    "highestMajority": {
+      "seat": "Permas",
+      "party": "BN",
+      "majority": 29505
+    },
+    "lowestMajority": {
+      "seat": "Simpang Jeram",
+      "party": "PH",
+      "majority": 170
+    }
+  },
+  "bnPnUnderstanding": {
+    "type": "Persefahaman Strategik (BUKAN Gabungan)",
+    "description": "BN dan PN bersetuju untuk tidak bertanding antara satu sama lain di N. Sembilan — BN 25 kerusi, PN 11 kerusi. Arahan PN: semua ahli PN mengundi calon BN.",
+    "federalLevel": "BN + PH = Kerajaan Perpaduan (rakan)",
+    "stateLevel": "BN + PN = Persefahaman strategik menentang PH (lawan)",
+    "keyQuotes": [
+      {
+        "speaker": "Ahmad Zahid Hamidi (BN)",
+        "quote": "Ini bukan perjanjian tetapi persefahaman... Insya-Allah, 1 Ogos adalah hari penentu."
+      },
+      {
+        "speaker": "Mohamad Hasan (BN)",
+        "quote": "BN tidak berhasrat membentuk gabungan baharu. Apa yang dibincangkan ialah persefahaman supaya kita dapat masuk pilihan raya bersama dan mengelakkan undi Melayu terus berpecah."
+      },
+      {
+        "speaker": "Hadi Awang (PAS)",
+        "quote": "Kerjasama ini bukan permainan politik tetapi berdasarkan tuntutan agama untuk perpaduan umat."
+      }
+    ],
+    "challenges": [
+      "Pemindahan undi tidak automatik — penyokong BN mungkin tolak calon disokong PN",
+      "Penyokong PN mungkin tidak sanggup mengundi BN",
+      "Persefahaman pucuk pimpinan tidak semestinya menyatukan pengundi akar umbi"
+    ]
+  },
+  "pnInternalSplit": {
+    "crisisStart": "2026",
+    "cause": "PAS berunding dengan BN tanpa persetujuan Majlis Tertinggi PN",
+    "muhyiddinReaction": "🔥 Tindakan PAS bertentangan dengan kepentingan PN... PN tersasar daripada matlamat dan perjuangan asas",
+    "hadiResponse": "Menolak dakwaan, menyifatkan BERSATU sebagai punca perpecahan",
+    "bersatuStatus": "BERTANDING SENDIRI — 24 kerusi guna logo sendiri di N. Sembilan",
+    "analystPredictions": [
+      {
+        "analyst": "Dr Mohammad Tawfik Yaakub",
+        "affiliation": "UM",
+        "prediction": "PN mungkin terus wujud secara formal tetapi tidak lagi beroperasi sebagai pakatan pilihan raya terkoordinasi"
+      },
+      {
+        "analyst": "Prof Madya Dr Mazlan Ali",
+        "affiliation": "UTM",
+        "prediction": "PAS berkemungkinan keluar atau dikeluarkan daripada PN; dua blok pembangkang menjelang PRU-16"
+      }
+    ]
+  },
+  "sentiment": {
+    "model": "Model Tiga Lapisan (Berita Harian)",
+    "layers": [
+      {
+        "name": "Persepsi",
+        "description": "Apa yang dibincangkan di media sosial",
+        "factors": "Facebook, TikTok, X, WhatsApp"
+      },
+      {
+        "name": "Percaturan",
+        "description": "Strategi parti & konfigurasi pertandingan",
+        "factors": "Kerusi, calon, pakatan"
+      },
+      {
+        "name": "Pertimbangan",
+        "description": "Keputusan sebenar di fikiran pengundi",
+        "factors": "Hubungan peribadi, kepercayaan, isu tempatan"
+      }
+    ],
+    "urbanMalay": "Menolak persefahaman BN-PN sebagai politik belakang tabir",
+    "ruralMalay": "Masih terbuka tetapi keliru dengan strategi tanpa logo",
+    "chinese": "Kembali menyokong PH; tawar hati dengan prestasi PH tetapi tiada alternatif meyakinkan",
+    "indian": "Kekal setia kepada PH; MIC berjaya tarik sebahagian di Johor",
+    "keyInsight": "Media sosial membentuk persepsi tetapi tidak mengesahkan realiti. 30.7% penduduk N. Sembilan masih tinggal di kawasan luar bandar — hubungan peribadi mengatasi kempen digital."
+  },
+  "manifesto": {
+    "coalition": "PH",
+    "tagline": "Stabil, Makmur, Inklusif",
+    "pledges": [
+      {
+        "category": "Pekerjaan",
+        "items": [
+          "30,000 peluang pekerjaan bergaji tinggi"
+        ]
+      },
+      {
+        "category": "Perumahan",
+        "items": [
+          "20,000 rumah mampu milik"
+        ]
+      },
+      {
+        "category": "Infrastruktur",
+        "items": [
+          "Hospital Bandar Enstek",
+          "Pelabuhan Antarabangsa Port Dickson",
+          "Seremban Sentral",
+          "Bypass Senawang–Port Klang"
+        ]
+      },
+      {
+        "category": "Ekonomi",
+        "items": [
+          "Hab semikonduktor",
+          "Pusat data",
+          "Ekonomi digital",
+          "Logistik"
+        ]
+      },
+      {
+        "category": "Pendidikan",
+        "items": [
+          "TVET percuma di Kolej YNS",
+          "Literasi digital & AI"
+        ]
+      },
+      {
+        "category": "Kebajikan",
+        "items": [
+          "Skim Sejahtera Rakyat (SSR)",
+          "Bantuan warga emas",
+          "Bantuan ibu tunggal",
+          "Bantuan OKU"
+        ]
+      }
+    ]
+  },
+  "topIssues": [
+    {
+      "issue": "Kos sara hidup",
+      "percentage": 55
+    },
+    {
+      "issue": "Pekerjaan & gaji",
+      "percentage": 34
+    },
+    {
+      "issue": "Kemampuan memiliki rumah",
+      "percentage": 26
+    }
+  ],
+  "projection": {
+    "source": "Vodus Research",
+    "date": "2026-07-22",
+    "phSeats": 17,
+    "bnSeats": 15,
+    "pnSeats": 2,
+    "undecided": 2,
+    "simpleMajority": 19,
+    "phPopularVote": 42,
+    "bnPopularVote": 35,
+    "pnPopularVote": 7,
+    "bnNetTrust": 45,
+    "phNetTrust": 19
+  },
+  "integrity": {
+    "moneyPoliticsReports": 27,
+    "policeReferrals": 6,
+    "votersOutsideArea": 15000
+  },
+  "pru16Impact": {
+    "bn": "Tunjang utama Kerajaan Perpaduan; dijangka kekal dominan",
+    "ph": "Perlu menarik lebih ramai pengundi Melayu; nilai semula strategi",
+    "pn": "Berisiko hilang relevansi jika perpecahan berterusan",
+    "bersatu": "Akan meneroka gabungan politik baharu selepas PRN",
+    "pas": "Mungkin membentuk blok pembangkang baharu"
+  },
+  "timeline": [
+    {
+      "date": "2026-07-06",
+      "event": "Parti Wawasan Negara (Wawasan) diluluskan ROS — komponen PN baharu",
+      "category": "announcement"
+    },
+    {
+      "date": "2026-07-11",
+      "event": "PRN Johor — BN menang 48 kerusi, PH 8, PN 0",
+      "category": "result"
+    },
+    {
+      "date": "2026-07-11",
+      "event": "Bersama Malaysia gagal total — 15 calon hilang deposit",
+      "category": "result"
+    },
+    {
+      "date": "2026-07-18",
+      "event": "Penamaan calon PRN N. Sembilan — 103 calon",
+      "category": "election"
+    },
+    {
+      "date": "2026-07-22",
+      "event": "Vodus Research keluarkan unjuran — PH 17, BN 15, PN 2",
+      "category": "announcement"
+    },
+    {
+      "date": "2026-07-28",
+      "event": "Undi awal PRN N. Sembilan",
+      "category": "election"
+    },
+    {
+      "date": "2026-08-01",
+      "event": "🌤️ Hari Mengundi PRN N. Sembilan",
+      "category": "election"
+    }
+  ],
+  "executiveOverview": {
+    "johorWinner": "BN — Tsunami Biru (48 kerusi)",
+    "nsProjectedWinner": "PH mendahului tipis (17 kerusi unjuran), tetapi 2 kerusi belum pasti",
+    "keyNarrative": "Persaingan mengecil kepada dua blok utama (BN-PN vs PH). PN dalam krisis perpecahan. BERSATU bertanding sendiri.",
+    "voterSentiment": "Pengundi Melayu bandar menolak BN-PN. Luar bandar masih terbuka. Cina kembali ke PH. India setia PH.",
+    "stabilityAssessment": "Kerajaan Perpaduan kekal stabil. BN komited. \"Tiada Langkah Bangkok, tiada Langkah Dubai.\" — Ahmad Zahid"
+  },
+  "postalVote": {
+    "cat1A": 12669,
+    "cat1B": 343,
+    "cat1C": 251,
+    "total": 13263,
+    "source": "TindakMalaysia / SPR",
+    "lastUpdated": "2026-07-20",
+    "notes": "Cat1A: Petugas SPR, Polis, Tentera. Cat1B: Pengundi Luar Negara. Cat1C: Agensi Kerajaan. \"N/A\" untuk Absent Voter dalam data 2026."
+  },
+  "lastUpdated": "2026-07-18T01:46:55+08:00",
+  "generatedAt": "2026-07-23T13:09:59.862Z"
+}
