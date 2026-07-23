@@ -17,9 +17,30 @@ Before fetching or modifying any election data, read `DATA_SOURCES.md` in the pr
   - `HISTORICAL-ELECTION-RESULTS`: complete election results 1955-2026 (1,962 commits!)
   - `Negeri-Sembilan-Maps`: DUN/Parliament GeoJSON boundaries
 - **ElectionData.MY** — Data lake with Parquet/CSV for all PRU + PRN results
+- **Wikipedia (ms)** — Demografi etnik per-DUN via `action=raw`, pie chart parsing
 - **Open Data SPR** — `opendata.spr.gov.my` (Next.js app, CSV download)
 
 Data pipeline: `scripts/generate-real-data.py` → `data/kv-output/*.json` → `src/lib/kv.ts` (imported via resolveJsonModule)
+
+## Demografi Terkini per-DUN
+
+Demografi etnik per DUN (34/36 seat) datang dari **Wikipedia Bahasa Melayu**:
+- `scripts/fetch-dun-wiki.py` → `data/kv-output/dun-wiki-demographics.json`
+- Scrapes `action=raw` wikitext → extracts Pie Chart label/value → ethnic %
+- Juga dapat pemilih berdaftar per tahun dari `{{MASelec/total|Pemilih berdaftar|X}}`
+- Ekonomi (medianIncome, gini, poverty) dari Tindak Parliament-level → mapping DUN→P
+
+**Nota:** Seats N13 (Sikamat) & N16 (Seri Menanti) tiada pie chart — guna fallback 55/25/15/5.
+
+## Cara Update Demografi
+
+```bash
+# 1. Scrape semula dari Wikipedia
+python3 scripts/fetch-dun-wiki.py
+
+# 2. Regenerate data pipeline
+python3 scripts/generate-real-data.py
+```
 
 <!-- END:election-data-sources -->
 

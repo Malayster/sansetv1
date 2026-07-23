@@ -415,80 +415,78 @@ def build_historical_results(nsn_rows):
 
 
 def build_historical_demographics(history):
-    """Attach estimated demographics per election period for each seat."""
-    # Typical demographic profiles for NSN DUN seats by region type
-    REGION_PROFILES = {
-        'N01': [('2008-2018', 55, 28, 14, 3, 18500), ('2023', 55, 28, 14, 3, 21800)],
-        'N02': [('2008-2018', 72, 18, 8, 2, 16800), ('2023', 72, 18, 8, 2, 19800)],
-        'N03': [('2008-2018', 80, 12, 5, 3, 22000), ('2023', 80, 12, 5, 3, 26000)],
-        'N04': [('2008-2018', 65, 22, 10, 3, 19000), ('2023', 65, 22, 10, 3, 22400)],
-        'N05': [('2008-2018', 78, 14, 6, 2, 23500), ('2023', 78, 14, 6, 2, 27500)],
-        'N06': [('2008-2018', 85, 10, 3, 2, 21000), ('2023', 85, 10, 3, 2, 24500)],
-        'N07': [('2008-2018', 75, 16, 7, 2, 19800), ('2023', 75, 16, 7, 2, 23200)],
-        'N08': [('2008-2018', 48, 35, 14, 3, 22500), ('2023', 48, 35, 14, 3, 26200)],
-        'N09': [('2008-2018', 52, 30, 15, 3, 21000), ('2023', 52, 30, 15, 3, 24800)],
-        'N10': [('2008-2018', 42, 38, 17, 3, 25500), ('2023', 42, 38, 17, 3, 29800)],
-        'N11': [('2008-2018', 38, 42, 17, 3, 21500), ('2023', 38, 42, 17, 3, 25200)],
-        'N12': [('2008-2018', 40, 40, 17, 3, 22000), ('2023', 40, 40, 17, 3, 25800)],
-        'N13': [('2008-2018', 55, 28, 14, 3, 24000), ('2023', 55, 28, 14, 3, 28200)],
-        'N14': [('2008-2018', 58, 25, 14, 3, 22500), ('2023', 58, 25, 14, 3, 26500)],
-        'N15': [('2008-2018', 82, 10, 6, 2, 17500), ('2023', 82, 10, 6, 2, 20500)],
-        'N16': [('2008-2018', 85, 8, 5, 2, 16500), ('2023', 85, 8, 5, 2, 19500)],
-        'N17': [('2008-2018', 80, 12, 6, 2, 15500), ('2023', 80, 12, 6, 2, 18500)],
-        'N18': [('2008-2018', 78, 14, 6, 2, 18500), ('2023', 78, 14, 6, 2, 21800)],
-        'N19': [('2008-2018', 85, 8, 5, 2, 16000), ('2023', 85, 8, 5, 2, 19000)],
-        'N20': [('2008-2018', 60, 25, 12, 3, 21000), ('2023', 60, 25, 12, 3, 24800)],
-        'N21': [('2008-2018', 35, 45, 17, 3, 23000), ('2023', 35, 45, 17, 3, 27000)],
-        'N22': [('2008-2018', 40, 42, 15, 3, 22000), ('2023', 40, 42, 15, 3, 25800)],
-        'N23': [('2008-2018', 50, 32, 15, 3, 28000), ('2023', 50, 32, 15, 3, 32500)],
-        'N24': [('2008-2018', 78, 14, 6, 2, 19000), ('2023', 78, 14, 6, 2, 22500)],
-        'N25': [('2008-2018', 72, 18, 8, 2, 20500), ('2023', 72, 18, 8, 2, 24000)],
-        'N26': [('2008-2018', 75, 16, 7, 2, 18500), ('2023', 75, 16, 7, 2, 21800)],
-        'N27': [('2008-2018', 65, 22, 10, 3, 20000), ('2023', 65, 22, 10, 3, 23500)],
-        'N28': [('2008-2018', 45, 38, 14, 3, 24000), ('2023', 45, 38, 14, 3, 28200)],
-        'N29': [('2008-2018', 72, 18, 8, 2, 17500), ('2023', 72, 18, 8, 2, 20800)],
-        'N30': [('2008-2018', 68, 20, 10, 2, 19000), ('2023', 68, 20, 10, 2, 22500)],
-        'N31': [('2008-2018', 62, 24, 11, 3, 20000), ('2023', 62, 24, 11, 3, 23800)],
-        'N32': [('2008-2018', 58, 26, 13, 3, 21000), ('2023', 58, 26, 13, 3, 24800)],
-        'N33': [('2008-2018', 45, 38, 14, 3, 23500), ('2023', 45, 38, 14, 3, 27500)],
-        'N34': [('2008-2018', 50, 35, 12, 3, 22000), ('2023', 50, 35, 12, 3, 25800)],
-        'N35': [('2008-2018', 55, 28, 14, 3, 19500), ('2023', 55, 28, 14, 3, 23000)],
-        'N36': [('2008-2018', 42, 40, 15, 3, 25000), ('2023', 42, 40, 15, 3, 29200)],
-    }
+    """Attach demographics per election year using Wikipedia + Tindak data."""
+    # Load Wikipedia demographic data (real ethnic breakdown per DUN)
+    wiki_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'kv-output', 'dun-wiki-demographics.json')
+    wiki_data = {}
+    if os.path.exists(wiki_path):
+        with open(wiki_path) as f:
+            wiki_data = json.load(f)
+        print(f'   📊 Loaded {len(wiki_data)} DUN demographics from Wikipedia')
+    
+    # Load Tindak economic data mapped to parliament seats
+    tindak_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'tindak-parsed.json')
+    tindak_data = {}
+    if os.path.exists(tindak_path):
+        with open(tindak_path) as f:
+            tindak_data = json.load(f)
+    
+    # Map DUN to Parliament for economic data
+    DUN_TO_P = {'N01':'P126','N02':'P126','N03':'P126','N04':'P126',
+        'N05':'P127','N06':'P127','N07':'P127','N08':'P127',
+        'N09':'P128','N10':'P128','N11':'P128','N12':'P128','N13':'P128','N14':'P128',
+        'N15':'P129','N16':'P129','N17':'P129','N18':'P129','N19':'P129',
+        'N20':'P130','N21':'P130','N22':'P130','N23':'P130','N24':'P130',
+        'N25':'P131','N26':'P131','N27':'P131','N28':'P131',
+        'N29':'P132','N30':'P132','N31':'P132','N32':'P132','N33':'P132',
+        'N34':'P133','N35':'P133','N36':'P133'}
     
     for code, seat in history.items():
         demogs = []
-        profile = REGION_PROFILES.get(code, [('2008-2018', 55, 25, 15, 5, 20000), ('2023', 55, 25, 15, 5, 24000)])
+        wiki = wiki_data.get(code, {})
         
-        for period, malay, chinese, indian, others, electors in profile:
-            yr = 2008 if '2008' in period else 2023
-            demogs.append({
-                'year': yr,
-                'malay': malay,
-                'chinese': chinese,
-                'indian': indian,
-                'others': others,
-                'totalElectors': electors,
-                'medianIncome': 3500 + (code[1:] < '18' and 800 or 1500),
-                'gini': 0.32 + (code[1:] < '18' and 0.04 or 0.0),
-                'poverty': 4.0 + (code[1:] < '18' and 1.0 or 0.0),
-            })
+        # Use Wikipedia ethnic data (2023 latest) as base
+        base_malay = wiki.get('malay', 55) or 55
+        base_chinese = wiki.get('chinese', 25) or 25
+        base_indian = wiki.get('indian', 15) or 15
+        base_others = wiki.get('others', 5) or 5
         
-        # Add per-election year demographics based on actual election data
+        # Voters per election year from Wikipedia
+        pemilih_per_year = wiki.get('pemilih_per_year', {})
+        
+        # Economic data from Tindak (parliament level)
+        parl = DUN_TO_P.get(code)
+        if parl and parl in tindak_data:
+            t = tindak_data[parl]
+            median_income = t.get('medianIncome')
+            gini = t.get('gini')
+            poverty = t.get('poverty')
+        else:
+            median_income = None
+            gini = None
+            poverty = None
+        
         election_years = sorted(set(e['year'] for e in seat['elections']))
-        existing_years = set(d['year'] for d in demogs)
         
         for yr in election_years:
-            if yr not in existing_years:
-                base = demogs[-1] if demogs else {'malay': 55, 'chinese': 25, 'indian': 15, 'others': 5, 'totalElectors': 20000}
-                demogs.append({
-                    'year': yr,
-                    'malay': base['malay'],
-                    'chinese': base['chinese'],
-                    'indian': base['indian'],
-                    'others': base['others'],
-                    'totalElectors': int(base['totalElectors'] * (1 + (yr - 2013) * 0.015)),
-                })
+            # Use actual voter count if available from Wikipedia
+            electors = pemilih_per_year.get(str(yr))
+            if not electors:
+                # Fallback: use 2023 value scaled
+                electors = wiki.get('totalElectors', 20000)
+            
+            demo_entry = {
+                'year': yr,
+                'malay': base_malay,
+                'chinese': base_chinese,
+                'indian': base_indian,
+                'others': base_others,
+                'totalElectors': electors,
+            }
+            if median_income: demo_entry['medianIncome'] = median_income
+            if gini: demo_entry['gini'] = gini
+            if poverty: demo_entry['poverty'] = poverty
+            demogs.append(demo_entry)
         
         demogs.sort(key=lambda d: d['year'])
         seat['demographics'] = demogs
