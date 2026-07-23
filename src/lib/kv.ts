@@ -228,10 +228,15 @@ export function getMockDemographics(code: string) {
     // P133 Tampin: N31-N36
     N31: 'P133', N32: 'P133', N33: 'P133', N34: 'P133', N35: 'P133', N36: 'P133',
   }
+  // DUNs per parliament (for per-DUN elector estimate)
+  const dunCountPerParlimen: Record<string, number> = {
+    P126: 4, P127: 4, P128: 6, P129: 5, P130: 3, P131: 4, P132: 4, P133: 6,
+  }
 
-  const lookupCode = dunToParlimen[code] || code
-  const realData = (realDemographicsData as Record<string, any>)[lookupCode]
+  const parlCode = dunToParlimen[code] || code
+  const realData = (realDemographicsData as Record<string, any>)[parlCode]
   if (realData) {
+    const dunCount = dunCountPerParlimen[parlCode] || 1
     return {
       malay: realData.malay || 55,
       chinese: realData.chinese || 25,
@@ -240,7 +245,9 @@ export function getMockDemographics(code: string) {
       medianIncome: realData.medianIncome,
       gini: realData.gini,
       poverty: realData.poverty,
-      totalElectors: realData.totalElectors,
+      totalElectors: realData.totalElectors ? Math.round(realData.totalElectors / dunCount) : undefined,
+      // Pass through parlCode for chart grouping
+      _parlCode: parlCode,
     }
   }
   return mockDemographics[code] || defaultDemographics
