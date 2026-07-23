@@ -31,8 +31,6 @@ const TABS: { key: Tab; label: string; icon: string }[] = [
   { key: 'simulasi', label: 'Simulasi', icon: '🎯' },
 ]
 
-const TIMELINE_YEARS = [2008, 2013, 2018, 2023, 2026]
-
 export default function ElectionDashboard({
   election, regions,
 }: {
@@ -40,7 +38,6 @@ export default function ElectionDashboard({
 }) {
   const [selected, setSelected] = useState<RegionWithData | null>(null)
   const [tab, setTab] = useState<Tab>('senarai')
-  const [timelineYear, setTimelineYear] = useState<number | null>(null)
   const searchParams = useSearchParams()
   const { theme } = useTheme()
 
@@ -80,44 +77,9 @@ export default function ElectionDashboard({
       {/* ═══════ Peta Kawasan — ATAS SEKALI ═══════ */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
         <div className="lg:col-span-2">
-          <ElectionMap regions={regions} selected={selected} onSelect={setSelected} geoJsonFile={election.geoJsonFile || 'pru_parlimen.json'} activeYear={timelineYear} />
+          <ElectionMap regions={regions} selected={selected} onSelect={setSelected} geoJsonFile={election.geoJsonFile || 'pru_parlimen.json'} />
         </div>
         <ElectionSidebar region={selected} />
-      </div>
-
-      {/* ═══════ Timeline Slider ═══════ */}
-      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-3 mb-4 shadow-sm">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-            📈 Garis Masa Pilihan Raya
-          </h3>
-          <span className="text-[10px] text-gray-400 dark:text-gray-500">
-            {timelineYear ? `Peta menunjukkan pemenang PRU ${timelineYear}` : 'Peta: Penyandang Semasa'}
-          </span>
-        </div>
-        <div className="flex gap-2">
-          {TIMELINE_YEARS.map(y => {
-            const isHistorical = y < 2026
-            const isActive = timelineYear === y
-            const isCurrent = !timelineYear && y === 2026
-            const isSelected = isActive || isCurrent
-            return (
-              <button key={y} onClick={() => setTimelineYear(isActive ? null : y)}
-                className={`flex-1 text-center py-2 px-3 rounded-lg text-[11px] font-medium transition-all ${
-                  isSelected
-                    ? 'bg-[#C41E3A] text-white shadow-sm'
-                    : isHistorical
-                      ? 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-                      : 'bg-gray-50 dark:bg-gray-750 text-gray-400 dark:text-gray-500'
-                }`}
-              >
-                {y}
-                {y === 2026 && !timelineYear && <span className="ml-1 text-[9px] opacity-70">(kini)</span>}
-                {isActive && <span className="ml-1">✓</span>}
-              </button>
-            )
-          })}
-        </div>
       </div>
 
       {/* ═══════ Tab Navigation ═══════ */}
