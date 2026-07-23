@@ -2,6 +2,7 @@
 
 import { useMemo } from 'react'
 import { PARTY_COLORS, PARTY_COLOR_HEX, PARTY_FLAGS } from './party-vars'
+import { AnimatedCounter } from './animated-counter'
 import type { RegionWithData } from '@/types/election'
 
 const hex = PARTY_COLOR_HEX
@@ -9,7 +10,7 @@ const hex = PARTY_COLOR_HEX
 export function ExecutiveSummary({ regions }: { regions: RegionWithData[] }) {
   const stats = useMemo(() => {
     const total = regions.length
-    const parties = new Set(regions.map(r => r.candidates?.find(c => c.role === 'penyandang')?.party).filter(Boolean))
+    const parties = new Set(regions.map(r => r.candidates?.find(c => c.role === 'penyandang')?.party).filter(Boolean) as string[])
     const counts: Record<string, number> = {}
     let topParty = '', topCount = 0, topTotalVotes = 0, topMajority = 0
     for (const r of regions) {
@@ -25,20 +26,24 @@ export function ExecutiveSummary({ regions }: { regions: RegionWithData[] }) {
   }, [regions])
 
   const cards = [
-    { label: 'Jumlah DUN', value: stats.total, icon: '🗳️', color: 'from-blue-500 to-blue-600' },
-    { label: 'Parti Bertanding', value: stats.partyCount, icon: '🏛️', color: 'from-purple-500 to-purple-600' },
-    { label: 'Parti Terbesar', value: stats.topParty, sub: `${stats.topCount} kerusi`, icon: '👑', color: 'from-amber-500 to-orange-600' },
-    { label: 'Purata Majoriti', value: `RM${(stats.avgMajority / 1000).toFixed(1)}k`, icon: '📊', color: 'from-emerald-500 to-emerald-600' },
-  ]
+    { label: 'Jumlah DUN', plain: String(stats.total), icon: '🗳️', color: 'from-blue-500 to-blue-600', animValue: stats.total, animDecimals: 0 },
+    { label: 'Parti Bertanding', plain: String(stats.partyCount), icon: '🏛️', color: 'from-purple-500 to-purple-600', animValue: stats.partyCount, animDecimals: 0 },
+    { label: 'Parti Terbesar', plain: stats.topParty, sub: `${stats.topCount} kerusi`, icon: '👑', color: 'from-amber-500 to-orange-600' },
+    { label: 'Purata Majoriti', plain: `RM${(stats.avgMajority / 1000).toFixed(1)}k`, icon: '📊', color: 'from-emerald-500 to-emerald-600', animValue: stats.avgMajority / 1000, animDecimals: 1, animPrefix: 'RM', animSuffix: 'k' },
+  ] as any[]
 
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
       {cards.map(c => (
-        <div key={c.label} className={`relative overflow-hidden rounded-xl bg-gradient-to-br ${c.color} p-4 text-white shadow-lg`}>
-          <div className="absolute top-0 right-0 text-4xl opacity-20 select-none">{c.icon}</div>
-          <div className="text-[10px] font-medium uppercase tracking-wider opacity-80">{c.label}</div>
-          <div className="text-[26px] font-bold mt-0.5 leading-tight">{c.value}</div>
-          {c.sub && <div className="text-[11px] opacity-80 mt-0.5">{c.sub}</div>}
+        <div key={c.label} className={`relative overflow-hidden rounded-xl bg-gradient-to-br ${c.color} p-3 sm:p-4 text-white shadow-lg`}>
+          <div className="absolute top-0 right-0 text-3xl sm:text-4xl opacity-20 select-none">{c.icon}</div>
+          <div className="text-[9px] sm:text-[10px] font-medium uppercase tracking-wider opacity-80">{c.label}</div>
+          <div className="text-[20px] sm:text-[26px] font-bold mt-0.5 leading-tight">
+            {c.animValue != null ? (
+              <AnimatedCounter value={c.animValue} decimals={c.animDecimals} prefix={c.animPrefix} suffix={c.animSuffix} />
+            ) : c.plain}
+          </div>
+          {c.sub && <div className="text-[10px] sm:text-[11px] opacity-80 mt-0.5">{c.sub}</div>}
         </div>
       ))}
     </div>
@@ -59,7 +64,7 @@ export function MajorityTracker({ regions }: { regions: RegionWithData[] }) {
   }, [regions])
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
       <div className="flex items-center justify-between mb-3">
         <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
           🏛️ Matematik Dewan
@@ -87,7 +92,7 @@ export function MajorityTracker({ regions }: { regions: RegionWithData[] }) {
           )
         })}
       </div>
-      <div className="mt-2 pt-2 border-t border-gray-100 flex items-center gap-2 text-[10px] text-gray-500">
+      <div className="mt-2 pt-2 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-[10px] text-gray-500">
         <div className="h-2 flex-1 bg-gray-100 rounded-full overflow-hidden flex">
           <div className="h-full bg-emerald-500 rounded-l-full" style={{ width: `${(maxCount / total) * 100}%` }} />
           <div className="h-full bg-gray-300" style={{ width: `${((needed - maxCount) / total) * 100}%` }} />
@@ -124,7 +129,7 @@ export function KeyRaces({ regions }: { regions: RegionWithData[] }) {
   if (!hotSeats.length) return null
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
       <div className="flex items-center justify-between mb-3">
         <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
           🔥 Kerusi Panas
@@ -136,7 +141,7 @@ export function KeyRaces({ regions }: { regions: RegionWithData[] }) {
           const isTight = s.majority < 1000
           const isWarning = s.majority < 3000
           return (
-            <div key={s.code} className={`rounded-lg border p-2.5 ${isTight ? 'border-red-200 bg-red-50/50' : isWarning ? 'border-amber-200 bg-amber-50/30' : 'border-gray-100 bg-gray-50/50'}`}>
+            <div key={s.code} className={`rounded-lg border p-2.5 ${isTight ? 'border-red-200 bg-red-50/50' : isWarning ? 'border-amber-200 bg-amber-50/30' : 'border-gray-100 bg-gray-50/50 dark:bg-gray-900/50'}`}>
               <div className="flex items-center justify-between mb-1">
                 <span className="font-bold text-[11px] text-gray-800">{s.code}</span>
                 {isTight && <span className="text-[9px] bg-red-100 text-red-600 font-bold px-1 py-0.5 rounded">TIGHT</span>}

@@ -43,8 +43,8 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
   const selected = selectedDun ? swingData.find(d => d.code === selectedDun) : swingData[0]
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 dark:border-gray-700">
         <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
           🔄 Aliran Undi (Swing)
         </h3>
@@ -89,7 +89,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
                   if (!active || !payload?.[0]) return null
                   const d = payload[0].payload
                   return (
-                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg px-3 py-2 text-[11px]">
+                    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-2 text-[11px]">
                       <div className="font-bold">{d.party}</div>
                       <div className="text-gray-500">2018: {d.from}% → 2023: {d.to}%</div>
                       <div className={`font-bold ${d.change >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>
@@ -115,7 +115,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
       )}
 
       {/* Swing legend */}
-      <div className="flex flex-wrap gap-1.5 px-4 py-2.5 border-t border-gray-100 bg-gray-50/30">
+      <div className="flex flex-wrap gap-1.5 px-4 py-2.5 border-t border-gray-100 dark:border-gray-700 bg-gray-50/30 dark:bg-gray-900/30">
         <span className="text-[10px] text-gray-500 font-medium mr-1">🔍 Klik DUN untuk lihat aliran undi:</span>
         {swingData.slice(0, 6).map(d => {
           const top = d.changes[0]

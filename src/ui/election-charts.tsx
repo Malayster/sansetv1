@@ -67,7 +67,7 @@ export default function ElectionCharts({ regions }: Props) {
     if (!active || !payload?.[0]) return null
     const d = payload[0].payload
     return (
-      <div className="bg-white border border-gray-200 rounded-lg shadow-lg px-3 py-2 text-[11px] leading-relaxed">
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-2 text-[11px] leading-relaxed">
         <div className="font-bold text-gray-800">{d.code} — {d.name}</div>
         <div className="text-gray-500">Penyandang: {d.party}</div>
         <div className="text-gray-600">Pendapatan: RM{d.income?.toLocaleString() || '-'}</div>
@@ -78,9 +78,9 @@ export default function ElectionCharts({ regions }: Props) {
   }
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm overflow-hidden">
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100">
+      <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100 dark:border-gray-700">
         <h2 className="font-serif text-[15px] font-bold text-gray-800 flex items-center gap-2">
           <svg className="w-4 h-4 text-[#C41E3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
@@ -91,7 +91,7 @@ export default function ElectionCharts({ regions }: Props) {
       </div>
 
       {/* Chart tabs */}
-      <div className="flex gap-1 px-4 pt-3 pb-1 border-b border-gray-100 overflow-x-auto">
+      <div className="flex gap-1 px-4 pt-3 pb-1 border-b border-gray-100 dark:border-gray-700 overflow-x-auto">
         {(Object.entries(CHART_LABELS) as [ChartView, string][]).map(([key, label]) => (
           <button key={key} onClick={() => setView(key)}
             className={`text-[10px] font-medium whitespace-nowrap px-3 py-1.5 rounded-full transition-colors ${
@@ -153,11 +153,11 @@ export default function ElectionCharts({ regions }: Props) {
       </div>
 
       {/* Legend */}
-      <div className="flex flex-wrap gap-1.5 px-4 py-2.5 border-t border-gray-100 bg-gray-50/30">
+      <div className="flex flex-wrap gap-1.5 px-4 py-2.5 border-t border-gray-100 dark:border-gray-700 bg-gray-50/30 dark:bg-gray-900/30">
         {[...new Set(scatterData.map(d => d.party))].filter(Boolean).map(party => {
           const count = scatterData.filter(d => d.party === party).length
           return (
-            <div key={party} className="flex items-center gap-1.5 px-2.5 py-1 bg-white border border-gray-200 rounded-full text-[10px] font-medium text-gray-600">
+            <div key={party} className="flex items-center gap-1.5 px-2.5 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-[10px] font-medium text-gray-600">
               <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ background: partyHex[party] || '#6b7280' }} />
               {party} <span className="text-gray-400">{count}</span>
             </div>

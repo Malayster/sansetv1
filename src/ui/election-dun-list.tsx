@@ -248,7 +248,7 @@ export default function ElectionDunList({ regions }: { regions: RegionWithData[]
               displayed.map((region) => (
                 <React.Fragment key={region.code}>
                   <tr
-                    className={`border-b border-gray-100 hover:bg-gray-50/80 cursor-pointer transition-colors ${expanded === region.code ? 'bg-amber-50/30' : ''}`}
+                    className={`border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50/80 cursor-pointer transition-colors ${expanded === region.code ? 'bg-amber-50/30' : ''}`}
                     onClick={() => setExpanded(expanded === region.code ? null : region.code)}
                   >
                     <CandidateRow region={region} />

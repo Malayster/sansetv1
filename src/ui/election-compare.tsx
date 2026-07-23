@@ -30,8 +30,8 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
   const lastB = regionB?.history?.elections?.slice(-1)[0]
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 dark:border-gray-700">
         <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
           ⚖️ Perbandingan DUN
         </h3>
@@ -70,7 +70,7 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
                   <span className={`font-bold text-[10px] ${PARTY_COLORS[incA?.party || ''] || 'text-gray-500'}`}>{incA?.party || '-'}</span>
                 </div>
               </div>
-              <div className="border-t border-gray-100 pt-2 grid grid-cols-2 gap-1">
+              <div className="border-t border-gray-100 dark:border-gray-700 pt-2 grid grid-cols-2 gap-1">
                 <div className="text-gray-500">Majoriti</div>
                 <div className="font-bold text-right">{lastA?.majority?.toLocaleString() || '-'}</div>
                 <div className="text-gray-500">Keluar Undi</div>
@@ -78,7 +78,7 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
                 <div className="text-gray-500">Pengundi</div>
                 <div className="font-bold text-right">{regionA?.demographics.totalElectors?.toLocaleString() || '-'}</div>
               </div>
-              <div className="border-t border-gray-100 pt-2">
+              <div className="border-t border-gray-100 dark:border-gray-700 pt-2">
                 <div className="text-[9px] text-gray-400 mb-1">Demografi</div>
                 <div className="flex gap-2 text-[10px]">
                   <span className="text-red-500">M: {regionA?.demographics.malay}%</span>
@@ -103,7 +103,7 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
                   <span className={`font-bold text-[10px] ${PARTY_COLORS[incB?.party || ''] || 'text-gray-500'}`}>{incB?.party || '-'}</span>
                 </div>
               </div>
-              <div className="border-t border-gray-100 pt-2 grid grid-cols-2 gap-1">
+              <div className="border-t border-gray-100 dark:border-gray-700 pt-2 grid grid-cols-2 gap-1">
                 <div className="text-gray-500">Majoriti</div>
                 <div className="font-bold text-right">{lastB?.majority?.toLocaleString() || '-'}</div>
                 <div className="text-gray-500">Keluar Undi</div>
@@ -111,7 +111,7 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
                 <div className="text-gray-500">Pengundi</div>
                 <div className="font-bold text-right">{regionB?.demographics.totalElectors?.toLocaleString() || '-'}</div>
               </div>
-              <div className="border-t border-gray-100 pt-2">
+              <div className="border-t border-gray-100 dark:border-gray-700 pt-2">
                 <div className="text-[9px] text-gray-400 mb-1">Demografi</div>
                 <div className="flex gap-2 text-[10px]">
                   <span className="text-red-500">M: {regionB?.demographics.malay}%</span>

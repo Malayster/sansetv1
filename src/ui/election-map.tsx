@@ -8,7 +8,11 @@ import type { RegionWithData } from '@/types/election'
 
 const partyColors = PARTY_COLOR_HEX
 
-function regionColor(r: RegionWithData): string {
+function regionColor(r: RegionWithData, year?: number | null): string {
+  if (year && r.history?.elections) {
+    const election = r.history.elections.find(e => e.year === year)
+    if (election?.winnerParty) return partyColors[election.winnerParty] || '#6b7280'
+  }
   const inc = r.candidates?.find(c => c.role === 'penyandang')
   if (inc) return partyColors[inc.party] || '#6b7280'
   return '#e5e7eb'
@@ -19,9 +23,9 @@ function polygonPath(f: string): string {
 }
 
 const ElectionMap = memo(function ElectionMap({
-  regions, selected, onSelect, geoJsonFile,
+  regions, selected, onSelect, geoJsonFile, activeYear,
 }: {
-  regions: RegionWithData[]; selected: RegionWithData | null; onSelect: (r: RegionWithData) => void; geoJsonFile: string
+  regions: RegionWithData[]; selected: RegionWithData | null; onSelect: (r: RegionWithData) => void; geoJsonFile: string; activeYear?: number | null
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<L.Map | null>(null)
@@ -36,9 +40,9 @@ const ElectionMap = memo(function ElectionMap({
 
   const colorMap = useMemo(() => {
     const m: Record<string, string> = {}
-    for (const r of regions) m[r.code] = regionColor(r)
+    for (const r of regions) m[r.code] = regionColor(r, activeYear)
     return m
-  }, [regions])
+  }, [regions, activeYear])
 
   useEffect(() => {
     if (!containerRef.current || !geoData || mapRef.current) return
@@ -136,7 +140,7 @@ const ElectionMap = memo(function ElectionMap({
         <span className="text-[11px] text-gray-400">{regions.length} DUN · Klik untuk detail</span>
       </div>
 
-      <div ref={containerRef} style={{ width: '100%', height: '480px', position: 'relative' }} />
+      <div ref={containerRef} style={{ width: '100%', height: '400px', position: 'relative' }} />
 
       {clickedRegion && (
         <div className="border-t border-gray-100 px-4 py-3 flex items-center justify-between bg-gray-50/50">

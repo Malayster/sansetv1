@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Suspense } from 'react'
 import { getActiveElections, getElectionRegions } from '@/lib/election-server'
 import { getKVValue, getMockDemographics, getHistoricalResults } from '@/lib/kv'
 import ElectionPageClient from './ElectionPageClient'
@@ -36,7 +37,7 @@ export default async function ElectionPage() {
 
   if (elections.length === 0) {
     return (
-      <main className="max-w-[1180px] mx-auto px-4 py-6">
+      <main className="max-w-[1180px] mx-auto px-3 sm:px-4 py-4 sm:py-6">
         <div className="text-center py-20">
           <h1 className="font-serif text-[28px] font-bold text-[#C41E3A] mb-4">Pusat Pilihan Raya</h1>
           <p className="text-gray-500">Tiada pilihan raya aktif buat masa ini. Sila semak semula nanti.</p>
@@ -61,8 +62,8 @@ export default async function ElectionPage() {
   })
 
   return (
-    <main className="max-w-[1180px] mx-auto px-4 py-6">
-      <ElectionPageClient electionsWithRegions={electionsWithRegions} />
+    <main className="max-w-[1180px] mx-auto px-3 sm:px-4 py-4 sm:py-6">
+      <Suspense fallback={<div className="text-center py-10 text-[13px] text-gray-400">Memuatkan dashboard...</div>}><ElectionPageClient electionsWithRegions={electionsWithRegions} /></Suspense>
     </main>
   )
 }
