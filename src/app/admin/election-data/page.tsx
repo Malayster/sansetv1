@@ -47,6 +47,10 @@ export default function ElectionDataAdmin() {
   const [saving, setSaving] = useState(false)
   const [notification, setNotification] = useState<{ type: 'success' | 'error'; msg: string } | null>(null)
   const [kvStatus, setKvStatus] = useState<{ enabled: boolean; namespaces: any } | null>(null)
+  const [syncOpen, setSyncOpen] = useState(false)
+  const [syncRunning, setSyncRunning] = useState(false)
+  const [syncLog, setSyncLog] = useState('')
+  const [syncOpts, setSyncOpts] = useState({ state: '', type: '', seats: '', noBallots: false })
 
   // Load list of states
   useEffect(() => { fetchStates() }, [])
@@ -126,6 +130,47 @@ export default function ElectionDataAdmin() {
     }
   }
 
+  // ─── Sync from ElectionData.MY ────────────────────────
+  async function startSync() {
+    try {
+      const opts: any = {}
+      if (syncOpts.state)      opts.state = syncOpts.state
+      if (syncOpts.type)       opts.type = syncOpts.type
+      if (syncOpts.seats)      opts.seats = parseInt(syncOpts.seats, 10)
+      if (syncOpts.noBallots)  opts.noBallots = true
+
+      const res = await fetch('/api/admin/sync', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(opts),
+      })
+      const json = await res.json()
+      if (!res.ok) throw new Error(json.error || 'Sync failed')
+      notify('success', `🔄 Sync bermula (PID ${json.pid})`)
+      setSyncRunning(true)
+      pollSync()
+    } catch (e: any) {
+      notify('error', `Sync gagal: ${e.message}`)
+    }
+  }
+
+  async function pollSync() {
+    try {
+      const res = await fetch('/api/admin/sync')
+      const json = await res.json()
+      setSyncLog(json.tail || '')
+      if (json.running) {
+        setTimeout(pollSync, 3000)
+      } else {
+        setSyncRunning(false)
+        if (selectedState) fetchRegions(selectedState)
+        notify('success', '✅ Sync selesai. Muat semula data kawasan.')
+      }
+    } catch {
+      setTimeout(pollSync, 5000)
+    }
+  }
+
   const filteredRegions = regions.filter(r =>
     !search ||
     r.code.toLowerCase().includes(search.toLowerCase()) ||
@@ -151,9 +196,81 @@ export default function ElectionDataAdmin() {
                 {kvStatus.enabled ? '☁️ KV Aktif' : '💾 Local JSON'}
               </span>
             )}
+            <button
+              onClick={() => { setSyncOpen(true); pollSync() }}
+              className="text-xs px-3 py-1.5 bg-kuning/10 hover:bg-kuning/20 border border-kuning/30 text-kuning rounded-lg transition flex items-center gap-1.5"
+              title="Sync data dari ElectionData.MY API"
+            >
+              🔄 Sync ElectionData.MY
+            </button>
             <a href="/admin" className="text-putih/60 hover:text-merah text-sm transition">← Sanity Studio</a>
           </div>
         </div>
+
+        {/* Sync Modal */}
+        {syncOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70">
+            <div className="bg-hitam border border-kuning/30 rounded-2xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold text-putih">🔄 Sync ElectionData.MY</h2>
+                <button onClick={() => setSyncOpen(false)} className="text-putih/60 hover:text-merah text-xl">✕</button>
+              </div>
+              <p className="text-putih/50 text-xs mb-4">
+                Pull data terkini dari api.electiondata.my/v1 ke local JSON. Key disimpan server-side.
+              </p>
+
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                <label className="text-xs text-putih/60">
+                  Negeri (opsyenal)
+                  <input type="text" placeholder="Selangor" value={syncOpts.state}
+                    onChange={e => setSyncOpts({ ...syncOpts, state: e.target.value })}
+                    className="mt-1 w-full bg-putih/5 border border-putih/15 rounded px-2 py-1.5 text-putih text-sm" />
+                </label>
+                <label className="text-xs text-putih/60">
+                  Jenis
+                  <select value={syncOpts.type}
+                    onChange={e => setSyncOpts({ ...syncOpts, type: e.target.value })}
+                    className="mt-1 w-full bg-putih/5 border border-putih/15 rounded px-2 py-1.5 text-putih text-sm">
+                    <option value="">Semua</option>
+                    <option value="parlimen">Parlimen sahaja</option>
+                    <option value="dun">DUN sahaja</option>
+                  </select>
+                </label>
+                <label className="text-xs text-putih/60">
+                  Limit kerusi (untuk test)
+                  <input type="number" placeholder="— " value={syncOpts.seats}
+                    onChange={e => setSyncOpts({ ...syncOpts, seats: e.target.value })}
+                    className="mt-1 w-full bg-putih/5 border border-putih/15 rounded px-2 py-1.5 text-putih text-sm" />
+                </label>
+                <label className="text-xs text-putih/60 flex items-center gap-2 mt-5">
+                  <input type="checkbox" checked={syncOpts.noBallots}
+                    onChange={e => setSyncOpts({ ...syncOpts, noBallots: e.target.checked })} />
+                  Skip ballots (cepat — winner sahaja)
+                </label>
+              </div>
+
+              <div className="flex gap-2 mb-4">
+                <button onClick={startSync} disabled={syncRunning}
+                  className="px-4 py-2 bg-kuning text-hitam font-bold rounded-lg disabled:opacity-50 hover:bg-kuning/80">
+                  {syncRunning ? '⏳ Berjalan...' : '▶ Mula Sync'}
+                </button>
+                <a href="/api/admin/sync" target="_blank"
+                  className="px-4 py-2 bg-putih/5 hover:bg-putih/10 text-putih rounded-lg text-sm">
+                  📄 Lihat log
+                </a>
+              </div>
+
+              {syncLog && (
+                <div>
+                  <p className="text-xs text-putih/50 mb-1">Log (60 baris terakhir):</p>
+                  <pre className="bg-hitam border border-putih/10 rounded-lg p-3 text-xs text-putih/70 max-h-72 overflow-y-auto whitespace-pre-wrap font-mono">
+{syncLog}
+                  </pre>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Notification */}
         {notification && (

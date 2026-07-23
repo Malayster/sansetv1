@@ -225,9 +225,9 @@ export async function GET(req: NextRequest) {
         state: p.state || p.state_name || config.state,
         parCode: p.code_parlimen || '',
         parName: p.parlimen || '',
-        candidates: candidates[c] || candidates[storeKey] || [],
-        demographics: demographics[c] || demographics[storeKey] || {},
-        history: historical[c] || historical[storeKey] || null,
+        candidates: candidates[storeKey] || candidates[c] || [],
+        demographics: demographics[storeKey] || demographics[c] || {},
+        history: historical[storeKey] || historical[c] || null,
         lat: p.lat || 0,
         lng: p.lng || 0,
       }
