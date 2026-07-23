@@ -100,9 +100,14 @@ export default function Dashboard() {
 							})}
 						</p>
 					</div>
-					<a href="/admin" className="text-putih/60 hover:text-merah text-sm transition flex items-center gap-1">
-						← Sanity Studio
-					</a>
+					<div className="flex items-center gap-3">
+						<a href="/admin/election-data" className="px-3 py-1.5 bg-merah/15 hover:bg-merah/25 text-putih text-sm rounded-lg transition border border-merah/30">
+							🗳️ Admin Data PRN
+						</a>
+						<a href="/admin" className="text-putih/60 hover:text-merah text-sm transition flex items-center gap-1">
+							← Sanity Studio
+						</a>
+					</div>
 				</div>
 
 				{/* KPI Cards */}

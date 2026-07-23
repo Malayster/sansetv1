@@ -137,6 +137,36 @@ data/elections/
 **Missing data (not yet uploaded by Tindak Malaysia):**
 - PRU 2008, 2004, 1999 DUN results (PARLIMEN saja tersedia)
 
+## Admin Panel (T7)
+
+**URL:** `/admin/election-data` (linked from `/admin/dashboard`)
+
+**API:** `GET/PUT /api/admin/election`
+- `GET /api/admin/election` → list all negeri + DUN/PAR counts
+- `GET /api/admin/election?state=nsn` → all DUN regions + existing data
+- `GET /api/admin/election?code=P001` → single region
+- `PUT /api/admin/election` → simpan calon/peratusan/demografi
+
+**Validation guardrails (server-side):**
+- Nama calon & parti diperlukan
+- Parti tak boleh duplikat dalam sama election
+- Jumlah peratusan undi mesti ~100% (jika ada percentage)
+- Calon `won` mesti undi tertinggi (jika ada `votes`)
+
+**UI alur:**
+1. Pick negeri → lihat senarai DUN (dengan search)
+2. Klik DUN → lihat calon sedia + Edit
+3. Histori pilihan raya terkini
+4. Simpan → validation → JSON static
+
+**Mode simpan:** Local JSON (`data/kv-output/*.json` — gitignored)
+- `candidates-real.json` → senarai calon per code
+- `historical-results.json` → sejarah undi (anti-duplikat)
+- `economic-demographics.json` → demografi & ekonomi
+
+> Admin panel menulis ke fail JSON local. Untuk deployment Vercel,
+> perlu integrate KV (T8) atau gunakan write endpoint di Sanity.
+
 ## Cara Setup PRN Baru
 
 ### 1. Buat Election Pack folder
