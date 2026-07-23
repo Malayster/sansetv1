@@ -174,10 +174,26 @@ python3 scripts/generate-real-data.py
 # 3. Data diguna automatik oleh src/lib/kv.ts
 ```
 
+### Untuk update data calon dengan profil dari portal berita:
+
+```bash
+# 🚨 KEUTAMAAN MUTLAK 🚨
+# Cari calon semasa dari semua parti melalui portal berita
+npx tsx scripts/fetch-candidates-news.ts --merge
+```
+
+Skrip ini akan:
+1. Search **6 portal berita**: Malaysiakini, Utusan Malaysia, Sinar Harian, Harakahdaily, BH Online, Astro Awani
+2. Guna **27 search queries** merangkumi semua parti (BN, PH, PN) dan specific seat
+3. Extract nama calon, parti, kod kerusi dari tajuk berita
+4. Ambil kandungan artikel untuk profil calon
+5. **--merge**: Update `data/kv-output/candidates-real.json` dengan profil + sumber
+
 ### Untuk update data sedia ada:
 - **Jangan edit `src/lib/kv.ts` `mockCandidates` lagi** (ia telah digantikan dengan import JSON)
 - Kalau nak tambah election baru, update `scripts/generate-real-data.py`
 - Untuk N-series demographics, edit `mockDemographics` di `src/lib/kv.ts`
+- Untuk dapatkan profil calon terkini: `npx tsx scripts/fetch-candidates-news.ts --merge`
 
 ---
 
