@@ -16,7 +16,7 @@ export default function ThemeToggle() {
 	return (
 		<button
 			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-			className="w-9 h-9 flex items-center justify-center rounded-full bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60 hover:bg-black/20 dark:hover:bg-white/20 transition-colors"
+			className="w-9 h-9 flex items-center justify-center rounded-full bg-black/10 text-black/60 hover:bg-black/20:bg-white/20 transition-colors"
 			aria-label="Tukar tema"
 			title={theme === 'dark' ? 'Mod Terang' : 'Mod Gelap'}
 		>

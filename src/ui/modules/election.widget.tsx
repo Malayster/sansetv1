@@ -53,68 +53,68 @@ export default async function ElectionWidget({ heading }: { heading?: string; _k
   const countdown = data.electionDate ? daysUntil(data.electionDate) : null
 
   return (
-    <section className="section">
-      {heading && <h2 className="text-xl font-bold border-l-4 border-emas pl-3 mb-4 uppercase tracking-wide text-foreground">{heading}</h2>}
-      <div className="border border-kelabu dark:border-putih/10 rounded-sm p-6 bg-putih dark:bg-hitam-muda max-w-md">
-        <h3 className="font-bold text-lg text-foreground">{data.electionName}</h3>
-        {countdown != null && (
-          <p className="text-xl font-bold text-merah mt-2">{countdown} hari lagi</p>
-        )}
-        {data.electionDate && (
-          <p className="text-xs text-kelabu-gelap dark:text-putih/50 mt-1">
-            {new Date(data.electionDate).toLocaleDateString('ms-MY', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </p>
-        )}
+  <section className="section">
+  {heading && <h2 className="text-xl font-bold border-l-4 border-emas pl-3 mb-4 uppercase tracking-wide text-foreground">{heading}</h2>}
+  <div className="border border-kelabu rounded-sm p-6 bg-putih max-w-md">
+  <h3 className="font-bold text-lg text-foreground">{data.electionName}</h3>
+  {countdown != null && (
+  <p className="text-xl font-bold text-merah mt-2">{countdown} hari lagi</p>
+  )}
+  {data.electionDate && (
+  <p className="text-xs text-kelabu-gelap mt-1">
+  {new Date(data.electionDate).toLocaleDateString('ms-MY', { year: 'numeric', month: 'long', day: 'numeric' })}
+  </p>
+  )}
 
-        {/* Malaysia SVG Map */}
-        <svg viewBox="0 0 80 84" className="w-full mt-4" style={{ maxWidth: '320px' }}>
-          {states.map((st) => {
-            const path = STATE_PATHS[st.name]
-            if (!path) return null
-            return (
-              <g key={st.name}>
-                <title>{st.name} — {PARTY_NAMES[st.party] || st.party} ({st.seats} kerusi)</title>
-                <path d={path} fill={PARTY_COLORS[st.party] || '#808080'} stroke="#fff" strokeWidth="0.5" className="hover:opacity-80 transition-opacity cursor-pointer" />
-                {/* Label text for larger states */}
-                {['Selangor', 'Johor', 'Pahang', 'Perak', 'Kelantan', 'Terengganu', 'Sarawak', 'Sabah'].includes(st.name) && (
-                  <text x={0} y={0} fontSize="2.5" fill="#fff" fontWeight="bold" dominantBaseline="middle" textAnchor="middle"
-                    className="pointer-events-none"
-                    {...(st.name === 'Selangor' ? { x: 22, y: 54 } : {})}
-                    {...(st.name === 'Johor' ? { x: 22, y: 72 } : {})}
-                    {...(st.name === 'Pahang' ? { x: 32, y: 42 } : {})}
-                    {...(st.name === 'Perak' ? { x: 18, y: 38 } : {})}
-                    {...(st.name === 'Kelantan' ? { x: 30, y: 14 } : {})}
-                    {...(st.name === 'Terengganu' ? { x: 34, y: 22 } : {})}
-                    {...(st.name === 'Sarawak' ? { x: 58, y: 62 } : {})}
-                    {...(st.name === 'Sabah' ? { x: 60, y: 38 } : {})}
-                  >
-                    {st.seats}
-                  </text>
-                )}
-              </g>
-            )
-          })}
-        </svg>
+  {/* Malaysia SVG Map */}
+  <svg viewBox="0 0 80 84" className="w-full mt-4" style={{ maxWidth: '320px' }}>
+  {states.map((st) => {
+  const path = STATE_PATHS[st.name]
+  if (!path) return null
+  return (
+  <g key={st.name}>
+  <title>{st.name} — {PARTY_NAMES[st.party] || st.party} ({st.seats} kerusi)</title>
+  <path d={path} fill={PARTY_COLORS[st.party] || '#808080'} stroke="#fff" strokeWidth="0.5" className="hover:opacity-80 transition-opacity cursor-pointer" />
+  {/* Label text for larger states */}
+  {['Selangor', 'Johor', 'Pahang', 'Perak', 'Kelantan', 'Terengganu', 'Sarawak', 'Sabah'].includes(st.name) && (
+  <text x={0} y={0} fontSize="2.5" fill="#fff" fontWeight="bold" dominantBaseline="middle" textAnchor="middle"
+  className="pointer-events-none"
+  {...(st.name === 'Selangor' ? { x: 22, y: 54 } : {})}
+  {...(st.name === 'Johor' ? { x: 22, y: 72 } : {})}
+  {...(st.name === 'Pahang' ? { x: 32, y: 42 } : {})}
+  {...(st.name === 'Perak' ? { x: 18, y: 38 } : {})}
+  {...(st.name === 'Kelantan' ? { x: 30, y: 14 } : {})}
+  {...(st.name === 'Terengganu' ? { x: 34, y: 22 } : {})}
+  {...(st.name === 'Sarawak' ? { x: 58, y: 62 } : {})}
+  {...(st.name === 'Sabah' ? { x: 60, y: 38 } : {})}
+  >
+  {st.seats}
+  </text>
+  )}
+  </g>
+  )
+  })}
+  </svg>
 
-        {/* Legend */}
-        <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-kelabu dark:border-putih/10">
-          {[...new Set(states.map((s) => s.party))].map((p) => (
-            <span key={p} className="inline-flex items-center gap-1 text-xs text-kelabu-gelap dark:text-putih/50">
-              <span className="w-3 h-3 rounded-sm" style={{ backgroundColor: PARTY_COLORS[p] || '#808080' }} />
-              {p}
-            </span>
-          ))}
-        </div>
+  {/* Legend */}
+  <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-kelabu">
+  {[...new Set(states.map((s) => s.party))].map((p) => (
+  <span key={p} className="inline-flex items-center gap-1 text-xs text-kelabu-gelap">
+  <span className="w-3 h-3 rounded-sm" style={{ backgroundColor: PARTY_COLORS[p] || '#808080' }} />
+  {p}
+  </span>
+  ))}
+  </div>
 
-        <div className="text-xs text-kelabu-gelap dark:text-putih/50 mt-2">
-          Jumlah: <span className="font-bold text-foreground">{totalSeats} kerusi</span>
-        </div>
+  <div className="text-xs text-kelabu-gelap mt-2">
+  Jumlah: <span className="font-bold text-foreground">{totalSeats} kerusi</span>
+  </div>
 
-        <Link href="/election"
-          className="inline-block mt-4 px-5 py-2 text-sm font-semibold text-merah border-2 border-merah rounded-sm hover:bg-merah hover:text-white transition-colors">
-          Pusat Pilihan Raya &rarr;
-        </Link>
-      </div>
-    </section>
+  <Link href="/election"
+  className="inline-block mt-4 px-5 py-2 text-sm font-semibold text-merah border-2 border-merah rounded-sm hover:bg-merah hover:text-white transition-colors">
+  Pusat Pilihan Raya &rarr;
+  </Link>
+  </div>
+  </section>
   )
 }
