@@ -33,7 +33,7 @@ export function ExecutiveSummary({ regions }: { regions: RegionWithData[] }) {
   { label: 'Jumlah DUN', plain: String(stats.total), icon: '🗳️', color: 'from-red-600 to-red-700', animValue: stats.total, animDecimals: 0 },
   { label: 'Parti Bertanding', plain: String(stats.partyCount), icon: '🏛️', color: 'from-gray-800 to-gray-900', animValue: stats.partyCount, animDecimals: 0 },
   { label: 'Parti Terbesar', plain: stats.topParty, sub: `${stats.topCount} kerusi`, icon: '👑', color: 'from-amber-500 to-yellow-600' },
-  { label: 'Purata Majoriti', plain: `${(stats.avgMajority / 1000).toFixed(1)}k`, icon: '📊', color: 'from-red-500 to-amber-500', animValue: stats.avgMajority / 1000, animDecimals: 1, animPrefix: '', animSuffix: 'k' },
+  { label: 'Purata Majoriti', plain: stats.avgMajority.toLocaleString(), icon: '📊', color: 'from-red-500 to-amber-500', animValue: stats.avgMajority, animDecimals: 0 },
   ] as any[]
 
   return (
