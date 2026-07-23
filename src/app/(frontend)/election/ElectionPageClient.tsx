@@ -42,7 +42,7 @@ export default function ElectionPageClient({
               <h1 className="font-serif text-[28px] font-bold text-gray-800 dark:text-gray-100">
                 {current.election.electionName}
                 {current.election.electionType === 'prn' && (
-                  <span className="ml-2 text-xs font-semibold text-white bg-emerald-600 px-2 py-0.5 rounded align-middle">
+                  <span className="ml-2 text-xs font-semibold text-white bg-red-600 px-2 py-0.5 rounded align-middle">
                     PRN
                   </span>
                 )}
