@@ -12,7 +12,9 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
 
   const swingData = useMemo(() => {
   return regions.map(r => {
-  const elections = r.history?.elections?.filter(e => e.year >= 2018) || []
+  const elections = r.history?.elections?.filter(e =>
+    e.year >= 2018 && e.candidates?.some(c => (c.votes || 0) > 0)
+  ) || []
   const sorted = [...elections].sort((a, b) => a.year - b.year)
   if (sorted.length < 2) return { code: r.code, name: r.name, changes: [], firstYear: 0, lastYear: 0, totalChange: 0 }
 

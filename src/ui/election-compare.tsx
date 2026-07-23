@@ -26,8 +26,8 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
 
   const incA = regionA?.candidates?.find(c => c.role === 'penyandang') || (regionA?.history?.elections?.slice().reverse().find(e => e.winnerParty) ? { party: regionA!.history!.elections!.slice().reverse().find(e => e.winnerParty)!.winnerParty!, name: regionA.history!.elections!.slice().reverse().find(e => e.winnerParty)!.winner || '' } as any : undefined)
   const incB = regionB?.candidates?.find(c => c.role === 'penyandang') || (regionB?.history?.elections?.slice().reverse().find(e => e.winnerParty) ? { party: regionB!.history!.elections!.slice().reverse().find(e => e.winnerParty)!.winnerParty!, name: regionB.history!.elections!.slice().reverse().find(e => e.winnerParty)!.winner || '' } as any : undefined)
-  const lastA = regionA?.history?.elections?.slice(-1)[0]
-  const lastB = regionB?.history?.elections?.slice(-1)[0]
+  const lastA = regionA?.history?.elections?.filter(e => e.candidates?.some(c => (c.votes || 0) > 0)).slice(-1)[0]
+  const lastB = regionB?.history?.elections?.filter(e => e.candidates?.some(c => (c.votes || 0) > 0)).slice(-1)[0]
 
   return (
   <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">

@@ -20,8 +20,8 @@ export function ExecutiveSummary({ regions }: { regions: RegionWithData[] }) {
   counts[party] = (counts[party] || 0) + 1
   if (counts[party] > topCount) { topCount = counts[party]; topParty = party }
   }
-  const last = r.history?.elections?.slice(-1)[0]
-  if (last) { topTotalVotes += last.majority || 0; topMajority++ }
+  const lastWithVotes = r.history?.elections?.filter(e => e.candidates?.some(c => (c.votes || 0) > 0)).slice(-1)[0]
+  if (lastWithVotes) { topTotalVotes += lastWithVotes.majority || 0; topMajority++ }
   }
   return { total, partyCount: parties.size, topParty, topCount, avgMajority: topMajority > 0 ? Math.round(topTotalVotes / topMajority) : 0 }
   }, [regions])
@@ -110,7 +110,7 @@ export function KeyRaces({ regions }: { regions: RegionWithData[] }) {
   const hotSeats = useMemo(() => {
   return regions
   .map(r => {
-  const last = r.history?.elections?.slice(-1)[0]
+  const last = r.history?.elections?.filter(e => e.candidates?.some(c => (c.votes || 0) > 0)).slice(-1)[0]
   const inc = r.candidates?.find(c => c.role === 'penyandang')
   const fallbackParty = r.history?.elections?.slice().reverse().find(e => e.winnerParty)
   const party = inc?.party || fallbackParty?.winnerParty || ''

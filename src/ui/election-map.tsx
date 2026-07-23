@@ -16,7 +16,7 @@ function regionColor(r: RegionWithData, year?: number | null): string {
   const inc = r.candidates?.find(c => c.role === 'penyandang')
   if (inc) return partyColors[inc.party] || '#6b7280'
   // Fallback: use last historical winner
-  const lastElection = r.history?.elections?.slice(-1)[0]
+  const lastElection = r.history?.elections?.filter(e => e.winnerParty).slice(-1)[0]
   if (lastElection?.winnerParty) return partyColors[lastElection.winnerParty] || '#6b7280'
   return '#e5e7eb'
 }
@@ -175,7 +175,7 @@ const ElectionMap = memo(function ElectionMap({
   // Also count historical fallback
   const histCount = regions.filter(r => {
   if (r.candidates?.find(x => x.role === 'penyandang')?.party === party) return false
-  const last = r.history?.elections?.slice(-1)[0]
+  const last = r.history?.elections?.filter(e => e.winnerParty).slice(-1)[0]
   return last?.winnerParty === party
   }).length
   const total = count + histCount

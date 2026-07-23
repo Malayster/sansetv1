@@ -17,9 +17,13 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
   const details: { code: string; name: string; from: string; to: string; flipped: boolean }[] = []
 
   for (const r of regions) {
-    const last = r.history?.elections?.slice(-1)[0]
+    // Get the most recent election with actual vote data (skip 2026 placeholder)
+    const electionsWithVotes = r.history?.elections?.filter(e =>
+      e.candidates?.some(c => (c.votes || 0) > 0)
+    ) || []
+    const last = electionsWithVotes.slice(-1)[0]
     const inc = r.candidates?.find(c => c.role === 'penyandang')
-    const currParty = inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
+    const currParty = inc?.party || last?.winnerParty || ''
 
     if (!last || !currParty || !last.candidates?.length) {
       counts[currParty] = (counts[currParty] || 0) + 1
