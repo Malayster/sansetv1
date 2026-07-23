@@ -30,10 +30,10 @@ export function ExecutiveSummary({ regions }: { regions: RegionWithData[] }) {
   }, [regions])
 
   const cards = [
-    { label: 'Jumlah DUN', plain: String(stats.total), icon: '🗳️', color: 'from-blue-500 to-blue-600', animValue: stats.total, animDecimals: 0 },
-    { label: 'Parti Bertanding', plain: String(stats.partyCount), icon: '🏛️', color: 'from-purple-500 to-purple-600', animValue: stats.partyCount, animDecimals: 0 },
-    { label: 'Parti Terbesar', plain: stats.topParty, sub: `${stats.topCount} kerusi`, icon: '👑', color: 'from-amber-500 to-orange-600' },
-    { label: 'Purata Majoriti', plain: `RM${(stats.avgMajority / 1000).toFixed(1)}k`, icon: '📊', color: 'from-emerald-500 to-emerald-600', animValue: stats.avgMajority / 1000, animDecimals: 1, animPrefix: 'RM', animSuffix: 'k' },
+    { label: 'Jumlah DUN', plain: String(stats.total), icon: '🗳️', color: 'from-red-600 to-red-700', animValue: stats.total, animDecimals: 0 },
+    { label: 'Parti Bertanding', plain: String(stats.partyCount), icon: '🏛️', color: 'from-gray-800 to-gray-900', animValue: stats.partyCount, animDecimals: 0 },
+    { label: 'Parti Terbesar', plain: stats.topParty, sub: `${stats.topCount} kerusi`, icon: '👑', color: 'from-amber-500 to-yellow-600' },
+    { label: 'Purata Majoriti', plain: `${(stats.avgMajority / 1000).toFixed(1)}k`, icon: '📊', color: 'from-red-500 to-amber-500', animValue: stats.avgMajority / 1000, animDecimals: 1, animPrefix: '', animSuffix: 'k' },
   ] as any[]
 
   return (
@@ -74,7 +74,7 @@ export function MajorityTracker({ regions }: { regions: RegionWithData[] }) {
         <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
           🏛️ Matematik Dewan
         </h3>
-        <span className="text-[10px] bg-amber-100 text-amber-700 font-semibold px-2 py-0.5 rounded-full">
+        <span className="text-[10px] bg-red-600 text-white font-semibold px-2 py-0.5 rounded-full">
           {maxCount}/{total} — perlu {needed - maxCount > 0 ? `${needed - maxCount} lagi` : '✅ Capai'}
         </span>
       </div>
@@ -99,9 +99,9 @@ export function MajorityTracker({ regions }: { regions: RegionWithData[] }) {
       </div>
       <div className="mt-2 pt-2 border-t border-gray-100 dark:border-gray-700 flex items-center gap-2 text-[10px] text-gray-500">
         <div className="h-2 flex-1 bg-gray-100 rounded-full overflow-hidden flex">
-          <div className="h-full bg-emerald-500 rounded-l-full" style={{ width: `${(maxCount / total) * 100}%` }} />
-          <div className="h-full bg-gray-300" style={{ width: `${((needed - maxCount) / total) * 100}%` }} />
-          <div className="h-full bg-red-200 rounded-r-full" style={{ width: `${((total - needed) / total) * 100}%` }} />
+          <div className="h-full bg-red-600 rounded-l-full" style={{ width: `${(maxCount / total) * 100}%` }} />
+          <div className="h-full bg-amber-400" style={{ width: `${((needed - maxCount) / total) * 100}%` }} />
+          <div className="h-full bg-gray-300 rounded-r-full" style={{ width: `${((total - needed) / total) * 100}%` }} />
         </div>
         <span className="font-medium">{needed - maxCount > 0 ? `Perlu ${needed - maxCount} lagi untuk majoriti mudah` : 'Sudah capai majoriti'}</span>
       </div>
@@ -149,11 +149,11 @@ export function KeyRaces({ regions }: { regions: RegionWithData[] }) {
           const isTight = s.majority < 1000
           const isWarning = s.majority < 3000
           return (
-            <div key={s.code} className={`rounded-lg border p-2.5 ${isTight ? 'border-red-200 bg-red-50/50' : isWarning ? 'border-amber-200 bg-amber-50/30' : 'border-gray-100 bg-gray-50/50 dark:bg-gray-900/50'}`}>
+            <div key={s.code} className={`rounded-lg border p-2.5 ${isTight ? 'border-red-300 bg-red-50/60' : isWarning ? 'border-amber-300 bg-amber-50/40' : 'border-gray-100 bg-gray-50/50 dark:bg-gray-900/50'}`}>
               <div className="flex items-center justify-between mb-1">
                 <span className="font-bold text-[11px] text-gray-800">{s.code}</span>
-                {isTight && <span className="text-[9px] bg-red-100 text-red-600 font-bold px-1 py-0.5 rounded">TIGHT</span>}
-                {!isTight && isWarning && <span className="text-[9px] bg-amber-100 text-amber-600 font-bold px-1 py-0.5 rounded">WATCH</span>}
+                {isTight && <span className="text-[9px] bg-red-600 text-white font-bold px-1.5 py-0.5 rounded">TIGHT</span>}
+                {!isTight && isWarning && <span className="text-[9px] bg-amber-500 text-white font-bold px-1.5 py-0.5 rounded">WATCH</span>}
               </div>
               <div className="text-[11px] font-medium text-gray-700 truncate">{s.name}</div>
               <div className="flex items-center gap-1.5 mt-1.5">

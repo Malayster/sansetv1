@@ -58,7 +58,7 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
         <div className="grid grid-cols-2 gap-4">
           {/* DUN A */}
           <div className="rounded-xl border border-gray-200 overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-2">
+            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white px-3 py-2">
               <div className="font-bold text-[13px]">{a}</div>
               <div className="text-[11px] opacity-80">{regionA?.name}</div>
             </div>
@@ -81,9 +81,9 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
               <div className="border-t border-gray-100 dark:border-gray-700 pt-2">
                 <div className="text-[9px] text-gray-400 mb-1">Demografi</div>
                 <div className="flex gap-2 text-[10px]">
-                  <span className="text-red-500">M: {regionA?.demographics.malay}%</span>
-                  <span className="text-blue-500">C: {regionA?.demographics.chinese}%</span>
-                  <span className="text-orange-500">I: {regionA?.demographics.indian}%</span>
+                  <span className="text-red-600">M: {regionA?.demographics.malay}%</span>
+                  <span className="text-amber-600">C: {regionA?.demographics.chinese}%</span>
+                  <span className="text-gray-600">I: {regionA?.demographics.indian}%</span>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
 
           {/* DUN B */}
           <div className="rounded-xl border border-gray-200 overflow-hidden">
-            <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-3 py-2">
+            <div className="bg-gradient-to-r from-amber-500 to-yellow-600 text-white px-3 py-2">
               <div className="font-bold text-[13px]">{b}</div>
               <div className="text-[11px] opacity-80">{regionB?.name}</div>
             </div>
@@ -114,9 +114,9 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
               <div className="border-t border-gray-100 dark:border-gray-700 pt-2">
                 <div className="text-[9px] text-gray-400 mb-1">Demografi</div>
                 <div className="flex gap-2 text-[10px]">
-                  <span className="text-red-500">M: {regionB?.demographics.malay}%</span>
-                  <span className="text-blue-500">C: {regionB?.demographics.chinese}%</span>
-                  <span className="text-orange-500">I: {regionB?.demographics.indian}%</span>
+                  <span className="text-red-600">M: {regionB?.demographics.malay}%</span>
+                  <span className="text-amber-600">C: {regionB?.demographics.chinese}%</span>
+                  <span className="text-gray-600">I: {regionB?.demographics.indian}%</span>
                 </div>
               </div>
             </div>
