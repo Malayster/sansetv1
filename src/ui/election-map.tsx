@@ -1,72 +1,38 @@
 'use client'
 
 import { memo, useEffect, useMemo, useRef, useState } from 'react'
+import { PARTY_FLAGS, PARTY_COLORS, PARTY_COLOR_HEX } from './party-vars'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import type { RegionWithData } from '@/types/election'
 
-// === n8n-inspired palette — muted, sophisticated, works on dark bg ===
-const partyColors: Record<string, string> = {
-  BN: '#60a5fa',    // blue-400
-  PH: '#f87171',    // red-400
-  PN: '#34d399',    // emerald-400
-  GPS: '#fbbf24',   // amber-400
-  WARISAN: '#a78bfa', // violet-400
-  GRS: '#fb923c',   // orange-400
-  Bebas: '#9ca3af',  // gray-400
-}
+const partyColors = PARTY_COLOR_HEX
 
 function regionColor(r: RegionWithData): string {
-  if (r.candidates && r.candidates.length > 0) {
-    const hasResults = r.candidates.some(c => c.lastElection?.votes || c.lastElection?.percentage)
-    if (hasResults) {
-      let winner = r.candidates[0]
-      let best = winner.lastElection?.votes ?? winner.lastElection?.percentage ?? -1
-      for (const c of r.candidates) {
-        const v = c.lastElection?.votes ?? c.lastElection?.percentage ?? -1
-        if (v > best) { best = v; winner = c }
-      }
-      return partyColors[winner.party] || '#a78bfa'
-    }
-    return '#1e293b'
-  }
-  if (r.sentiment?.score != null) {
-    const s = r.sentiment.score
-    if (s >= 60) return '#34d399'
-    if (s >= 40) return '#fbbf24'
-    return '#f87171'
-  }
-  return '#1e293b'
+  const inc = r.candidates?.find(c => c.role === 'penyandang')
+  if (inc) return partyColors[inc.party] || '#6b7280'
+  return '#e5e7eb'
 }
 
-function polygonPath(geoJsonFile: string): string {
-  return geoJsonFile.replace('.json', '_polygon.json')
+function polygonPath(f: string): string {
+  return f.replace('.json', '_polygon.json')
 }
 
 const ElectionMap = memo(function ElectionMap({
-  regions,
-  selected,
-  onSelect,
-  geoJsonFile,
+  regions, selected, onSelect, geoJsonFile,
 }: {
-  regions: RegionWithData[]
-  selected: RegionWithData | null
-  onSelect: (r: RegionWithData) => void
-  geoJsonFile: string
+  regions: RegionWithData[]; selected: RegionWithData | null; onSelect: (r: RegionWithData) => void; geoJsonFile: string
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<L.Map | null>(null)
   const layerRef = useRef<L.GeoJSON | null>(null)
-  const selectedLayerRef = useRef<L.Path | null>(null)
   const [geoData, setGeoData] = useState<any>(null)
   const geoUrl = useMemo(() => `/geojson/${polygonPath(geoJsonFile)}`, [geoJsonFile])
   const [hoveredCode, setHoveredCode] = useState<string | null>(null)
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 })
   const [clickedRegion, setClickedRegion] = useState<RegionWithData | null>(null)
 
-  useEffect(() => {
-    fetch(geoUrl).then(r => r.json()).then(setGeoData).catch(() => setGeoData(null))
-  }, [geoUrl])
+  useEffect(() => { fetch(geoUrl).then(r => r.json()).then(setGeoData).catch(() => setGeoData(null)) }, [geoUrl])
 
   const colorMap = useMemo(() => {
     const m: Record<string, string> = {}
@@ -74,376 +40,136 @@ const ElectionMap = memo(function ElectionMap({
     return m
   }, [regions])
 
-  // Initialise Leaflet map
   useEffect(() => {
     if (!containerRef.current || !geoData || mapRef.current) return
-
     const map = L.map(containerRef.current, {
-      attributionControl: false,
-      zoomControl: false,
-      scrollWheelZoom: true,
-      doubleClickZoom: true,
-      dragging: true,
-      zoomSnap: 0.5,
-      zoomDelta: 0.5,
+      attributionControl: false, zoomControl: false,
+      scrollWheelZoom: true, doubleClickZoom: true, dragging: true,
+      zoomSnap: 0.5, zoomDelta: 0.5,
     })
-
-    // Dark background (matching n8n deep bg)
-    const bgDiv = document.createElement('div')
-    bgDiv.style.cssText = 'position:absolute;inset:0;background:#0a0a0f;z-index:-1'
-    containerRef.current.appendChild(bgDiv)
-
-    // Subtle dot-grid overlay
-    const gridDiv = document.createElement('div')
-    gridDiv.style.cssText = `
-      position:absolute;inset:0;z-index:-1;
-      background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 24px 24px;
-    `
-    containerRef.current.appendChild(gridDiv)
-
-    // Clean zoom control
+    const bg = document.createElement('div')
+    bg.style.cssText = 'position:absolute;inset:0;background:#f1f5f9;z-index:-1'
+    containerRef.current.appendChild(bg)
     L.control.zoom({ position: 'bottomright' }).addTo(map)
 
-    const geoJsonLayer = L.geoJSON(geoData, {
-      style: (feature) => {
-        const code = feature?.properties?.code as string
-        const fill = colorMap[code] || '#1e293b'
-        return {
-          fillColor: fill,
-          fillOpacity: 0.65,
-          color: 'rgba(255,255,255,0.12)',
-          weight: 1.5,
-          opacity: 1,
-        }
-      },
-      onEachFeature: (feature, layer) => {
-        const code = feature.properties.code as string
-        const pathLayer = layer as L.Path
-
-        pathLayer.on('click', (e: L.LeafletMouseEvent) => {
+    const layer = L.geoJSON(geoData, {
+      style: (f) => ({
+        fillColor: colorMap[f?.properties?.code as string] || '#f3f4f6',
+        fillOpacity: 0.7, color: '#cbd5e1', weight: 1.2,
+      }),
+      onEachFeature: (f, l) => {
+        const code = f.properties.code as string
+        const p = l as L.Path
+        p.on('click', () => {
           const r = regions.find(x => x.code === code)
-          if (r) {
-            setClickedRegion(r)
-            onSelect(r)
-          }
+          if (r) { setClickedRegion(r); onSelect(r) }
         })
-
-        pathLayer.on('mouseover', (e: L.LeafletMouseEvent) => {
+        p.on('mouseover', (e: L.LeafletMouseEvent) => {
           setHoveredCode(code)
           setTooltipPos({ x: e.originalEvent.clientX, y: e.originalEvent.clientY })
-          pathLayer.setStyle({
-            fillOpacity: 0.85,
-            color: 'rgba(255,255,255,0.6)',
-            weight: 2,
-          })
-          pathLayer.bringToFront()
+          p.setStyle({ fillOpacity: 0.92, color: '#C41E3A', weight: 2.5 }); p.bringToFront()
         })
-
-        pathLayer.on('mousemove', (e: L.LeafletMouseEvent) => {
-          setTooltipPos({ x: e.originalEvent.clientX, y: e.originalEvent.clientY })
-        })
-
-        pathLayer.on('mouseout', () => {
+        p.on('mousemove', (e: L.LeafletMouseEvent) => setTooltipPos({ x: e.originalEvent.clientX, y: e.originalEvent.clientY }))
+        p.on('mouseout', () => {
           setHoveredCode(null)
-          const isSelected = selected?.code === code || clickedRegion?.code === code
-          if (isSelected) {
-            pathLayer.setStyle({
-              fillOpacity: 0.85,
-              color: '#a78bfa',
-              weight: 2.5,
-            })
-          } else {
-            pathLayer.setStyle({
-              fillOpacity: 0.65,
-              color: 'rgba(255,255,255,0.12)',
-              weight: 1.5,
-            })
-          }
+          const sel = selected?.code === code || clickedRegion?.code === code
+          p.setStyle({ fillOpacity: sel ? 0.92 : 0.7, color: sel ? '#C41E3A' : '#cbd5e1', weight: sel ? 2.5 : 1.2 })
         })
       },
     }).addTo(map)
 
-    // Subtle labels on polygons
-    geoJsonLayer.eachLayer((layer: any) => {
-      const code = layer.feature?.properties?.code as string
-      if (layer.getBounds) {
-        const center = layer.getBounds().getCenter()
-        const labelIcon = L.divIcon({
-          className: 'n8n-label',
-          html: `<span class="n8n-label-text">${code.replace('P', '')}</span>`,
-          iconSize: [0, 0],
-          iconAnchor: [0, 0],
-        })
-        L.marker(center, { icon: labelIcon, interactive: false }).addTo(map)
+    layer.eachLayer((ly: any) => {
+      const code = ly.feature?.properties?.code as string
+      if (ly.getBounds) {
+        const c = ly.getBounds().getCenter()
+        L.marker(c, {
+          icon: L.divIcon({ className: '', html: `<span style="font-family:Inter,sans-serif;font-size:8px;font-weight:700;color:rgba(0,0,0,0.25);white-space:nowrap;pointer-events:none;transform:translate(-50%,-50%);letter-spacing:0.3px">${code}</span>`, iconSize: [0, 0], iconAnchor: [0, 0] }),
+          interactive: false,
+        }).addTo(map)
       }
     })
 
-    map.fitBounds(geoJsonLayer.getBounds(), { padding: [20, 20], maxZoom: 8 })
-    mapRef.current = map
-    layerRef.current = geoJsonLayer
-
-    // If there was a pre-selected region, highlight it
-    if (selected) {
-      geoJsonLayer.eachLayer((layer: any) => {
-        if (layer.feature?.properties?.code === selected.code) {
-          selectedLayerRef.current = layer as L.Path
-          layer.setStyle({ fillOpacity: 0.85, color: '#a78bfa', weight: 2.5 })
-        }
-      })
-    }
-
-    return () => {
-      map.remove()
-      mapRef.current = null
-      layerRef.current = null
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    map.fitBounds(layer.getBounds(), { padding: [20, 20], maxZoom: 10 })
+    mapRef.current = map; layerRef.current = layer
+    return () => { map.remove(); mapRef.current = null; layerRef.current = null }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [geoData])
 
-  // Update highlight when selected or clickedRegion changes
   useEffect(() => {
     if (!layerRef.current) return
-    const targetCode = clickedRegion?.code || selected?.code
-    layerRef.current.eachLayer((layer: any) => {
-      const code = layer.feature?.properties?.code as string
-      const isHighlighted = code === targetCode
-      layer.setStyle({
-        fillOpacity: isHighlighted ? 0.85 : 0.65,
-        color: isHighlighted ? '#a78bfa' : 'rgba(255,255,255,0.12)',
-        weight: isHighlighted ? 2.5 : 1.5,
-      })
+    const target = clickedRegion?.code || selected?.code
+    layerRef.current.eachLayer((ly: any) => {
+      const c = ly.feature?.properties?.code as string
+      const h = c === target
+      ly.setStyle({ fillOpacity: h ? 0.92 : 0.7, color: h ? '#C41E3A' : '#cbd5e1', weight: h ? 2.5 : 1.2 })
     })
   }, [clickedRegion, selected])
 
   const hoveredRegion = hoveredCode ? regions.find(r => r.code === hoveredCode) : null
+  const incParty = clickedRegion?.candidates?.find(c => c.role === 'penyandang')?.party
+  const flagSrc = incParty ? PARTY_FLAGS[incParty] : null
 
   return (
-    <div>
-      {/* Tooltip */}
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
       {hoveredRegion && (
         <div style={{
           position: 'fixed', zIndex: 9999, pointerEvents: 'none',
           left: tooltipPos.x + 14 + 'px', top: tooltipPos.y - 12 + 'px',
-          background: 'rgba(15,15,25,0.95)', color: '#e2e8f0',
-          padding: '8px 14px', borderRadius: '8px',
-          fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
-          fontWeight: 500, fontSize: '0.8rem',
-          border: '1px solid rgba(255,255,255,0.1)',
-          backdropFilter: 'blur(8px)',
-          boxShadow: '0 12px 32px rgba(0,0,0,0.5)',
-          lineHeight: 1.4,
-          whiteSpace: 'nowrap',
+          background: '#fff', color: '#1e293b', padding: '10px 16px', borderRadius: '10px',
+          fontSize: '0.85rem', fontWeight: 500, border: '1px solid #e2e8f0',
+          boxShadow: '0 12px 32px rgba(0,0,0,0.12)', lineHeight: 1.4, whiteSpace: 'nowrap',
         }}>
-          <div style={{ fontWeight: 600, color: '#fff', marginBottom: 2 }}>
-            {hoveredRegion.code} — {hoveredRegion.name}
-          </div>
-          <div style={{ color: colorMap[hoveredRegion.code] || '#9ca3af', fontSize: '0.75rem' }}>
-            {hoveredRegion.state}
-            {hoveredRegion.candidates?.[0] && ` · ${hoveredRegion.candidates[0].party}`}
+          <div style={{ fontWeight: 600, color: '#0f172a' }}>{hoveredRegion.code} — {hoveredRegion.name}</div>
+          <div style={{ fontSize: '0.75rem', color: '#64748b', marginTop: 2 }}>
+            {hoveredRegion.candidates?.find(c => c.role === 'penyandang')?.party || 'Tiada data'}
           </div>
         </div>
       )}
 
-      {/* Map card */}
-      <div style={{
-        background: '#0d0d14',
-        border: '1px solid rgba(255,255,255,0.06)',
-        borderRadius: '16px',
-        overflow: 'hidden',
-        boxShadow: '0 25px 50px -12px rgba(0,0,0,0.8)',
-      }}>
-        {/* Header bar */}
-        <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '16px 24px',
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
-        }}>
-          <h2 style={{
-            fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
-            fontSize: '1rem', fontWeight: 600, color: '#e2e8f0',
-            display: 'flex', alignItems: 'center', gap: '10px',
-            letterSpacing: '-0.01em',
-            margin: 0,
-          }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            Peta Kawasan PRU
-          </h2>
-          <div style={{
-            fontSize: '0.75rem', color: '#64748b',
-            fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
-            fontWeight: 400, letterSpacing: '0.01em',
-          }}>
-            {regions.length} kawasan
-          </div>
-        </div>
-
-        {/* Map container */}
-        <div ref={containerRef} style={{ width: '100%', height: '500px', position: 'relative' }} />
-
-        {/* Info bar */}
-        <div style={{
-          padding: '12px 24px',
-          borderTop: '1px solid rgba(255,255,255,0.04)',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
-          fontSize: '0.78rem', color: '#64748b',
-        }}>
-          <span>🖱️ Klik kawasan untuk lihat maklumat</span>
-          {clickedRegion && (
-            <span style={{ color: '#94a3b8' }}>
-              Dipilih: <strong style={{ color: colorMap[clickedRegion.code] || '#a78bfa' }}>{clickedRegion.code}</strong>
-            </span>
-          )}
-        </div>
-
-        {/* Info panel (shown when region selected) */}
-        {clickedRegion && (
-          <div style={{
-            margin: '0 24px 20px',
-            padding: '20px',
-            background: 'rgba(15,15,25,0.8)',
-            border: '1px solid rgba(255,255,255,0.06)',
-            borderRadius: '12px',
-            backdropFilter: 'blur(12px)',
-            fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
-          }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-                <span style={{
-                  width: '32px', height: '32px', borderRadius: '8px',
-                  background: colorMap[clickedRegion.code] || '#1e293b',
-                  display: 'inline-block', flexShrink: 0,
-                  border: '1px solid rgba(255,255,255,0.1)',
-                }} />
-                <div>
-                  <div style={{ fontSize: '1.1rem', fontWeight: 600, color: '#e2e8f0', lineHeight: 1.3 }}>
-                    {clickedRegion.code} — {clickedRegion.name}
-                  </div>
-                  <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: 2 }}>
-                    {clickedRegion.state}
-                  </div>
-                </div>
-              </div>
-              <button onClick={() => setClickedRegion(null)} style={{
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px solid rgba(255,255,255,0.06)',
-                borderRadius: '8px',
-                padding: '6px 12px',
-                color: '#94a3b8',
-                cursor: 'pointer',
-                fontSize: '0.78rem',
-                fontWeight: 500,
-                transition: 'all 0.15s',
-              }}
-                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.08)'; e.currentTarget.style.color = '#e2e8f0' }}
-                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.color = '#94a3b8' }}
-              >
-                Tutup
-              </button>
-            </div>
-            {clickedRegion.candidates?.[0] && (
-              <div style={{
-                marginTop: '16px', padding: '12px 14px',
-                background: 'rgba(255,255,255,0.03)',
-                borderRadius: '10px',
-                border: '1px solid rgba(255,255,255,0.04)',
-                display: 'flex', alignItems: 'center', gap: '12px',
-              }}>
-                <div style={{
-                  width: '28px', height: '28px', borderRadius: '50%',
-                  background: `${colorMap[clickedRegion.code] || '#a78bfa'}20`,
-                  border: `2px solid ${colorMap[clickedRegion.code] || '#a78bfa'}`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '0.7rem', fontWeight: 700,
-                  color: colorMap[clickedRegion.code] || '#a78bfa',
-                }}>
-                  {clickedRegion.candidates[0].party.slice(0, 2)}
-                </div>
-                <div>
-                  <div style={{ fontWeight: 500, color: '#e2e8f0', fontSize: '0.88rem' }}>
-                    {clickedRegion.candidates[0].name}
-                  </div>
-                  <div style={{ fontSize: '0.75rem', color: colorMap[clickedRegion.code] || '#a78bfa' }}>
-                    {clickedRegion.candidates[0].party}
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Legend */}
-        <div style={{
-          display: 'flex', gap: '6px', justifyContent: 'center',
-          flexWrap: 'wrap', padding: '0 24px 20px',
-          fontFamily: "'Inter', 'SF Pro Display', -apple-system, sans-serif",
-        }}>
-          {Object.entries(partyColors).map(([party, color]) => (
-            <div key={party} style={{
-              display: 'flex', alignItems: 'center', gap: '6px',
-              padding: '4px 10px',
-              background: 'rgba(255,255,255,0.03)',
-              border: '1px solid rgba(255,255,255,0.04)',
-              borderRadius: '20px',
-              fontSize: '0.72rem', fontWeight: 500,
-              color: '#94a3b8',
-            }}>
-              <span style={{
-                width: '8px', height: '8px', borderRadius: '2px',
-                background: color, display: 'inline-block',
-              }} />
-              {party}
-            </div>
-          ))}
-        </div>
+      <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100">
+        <h2 className="font-serif text-[15px] font-bold text-gray-800 flex items-center gap-2">
+          <svg className="w-4 h-4 text-[#C41E3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+          Peta Kawasan
+        </h2>
+        <span className="text-[11px] text-gray-400">{regions.length} DUN · Klik untuk detail</span>
       </div>
 
-      {/* Global styles */}
+      <div ref={containerRef} style={{ width: '100%', height: '480px', position: 'relative' }} />
+
+      {clickedRegion && (
+        <div className="border-t border-gray-100 px-4 py-3 flex items-center justify-between bg-gray-50/50">
+          <div className="flex items-center gap-3">
+            {flagSrc && <img src={flagSrc} alt={incParty || ''} className="w-8 h-auto rounded object-cover border border-gray-300" />}
+            <div>
+              <span className="font-bold text-[14px] text-gray-800">{clickedRegion.code}</span>
+              <span className="text-gray-500 mx-1.5">—</span>
+              <span className="font-medium text-[13px] text-gray-700">{clickedRegion.name}</span>
+              {incParty && <span className={`ml-2 text-[11px] font-bold ${PARTY_COLORS[incParty] || 'text-gray-500'}`}>({incParty})</span>}
+            </div>
+          </div>
+          <button onClick={() => setClickedRegion(null)} className="text-[11px] text-gray-400 hover:text-gray-600 font-medium">Tutup ✕</button>
+        </div>
+      )}
+
+      <div className="flex flex-wrap gap-1.5 px-4 py-2.5 border-t border-gray-100 bg-gray-50/30">
+        {Object.entries(partyColors).map(([party, c]) => {
+          const count = regions.filter(r => r.candidates?.find(x => x.role === 'penyandang')?.party === party).length
+          if (!count) return null
+          return (
+            <div key={party} className="flex items-center gap-1.5 px-2.5 py-1 bg-white border border-gray-200 rounded-full text-[10px] font-medium text-gray-600">
+              <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ background: c }} />
+              {party} <span className="text-gray-400">{count}</span>
+            </div>
+          )
+        })}
+      </div>
+
       <style jsx global>{`
-        .n8n-label {
-          background: none !important;
-          border: none !important;
-        }
-        .n8n-label-text {
-          font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif;
-          font-size: 10px;
-          font-weight: 600;
-          color: rgba(255,255,255,0.25);
-          white-space: nowrap;
-          pointer-events: none;
-          transform: translate(-50%, -50%);
-          letter-spacing: 0.02em;
-        }
-        .leaflet-control-zoom {
-          border: none !important;
-          display: flex !important;
-          flex-direction: column !important;
-          gap: 4px !important;
-        }
-        .leaflet-control-zoom a {
-          background: rgba(15,15,25,0.85) !important;
-          color: #94a3b8 !important;
-          border: 1px solid rgba(255,255,255,0.08) !important;
-          border-radius: 8px !important;
-          width: 34px !important;
-          height: 34px !important;
-          line-height: 34px !important;
-          font-size: 16px !important;
-          font-weight: 400 !important;
-          text-align: center !important;
-          backdrop-filter: blur(8px) !important;
-          transition: all 0.15s !important;
-        }
-        .leaflet-control-zoom a:hover {
-          background: rgba(30,30,50,0.9) !important;
-          color: #fff !important;
-          border-color: rgba(167,139,250,0.3) !important;
-        }
-        /* Hide leaflet tile attribution */
+        .leaflet-control-zoom { border: none !important; display: flex !important; flex-direction: column !important; gap: 4px !important; }
+        .leaflet-control-zoom a { background: #fff !important; color: #64748b !important; border: 1px solid #e2e8f0 !important; border-radius: 8px !important; width: 34px !important; height: 34px !important; line-height: 34px !important; font-size: 16px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important; }
+        .leaflet-control-zoom a:hover { background: #f8fafc !important; color: #0f172a !important; }
         .leaflet-control-attribution { display: none !important; }
       `}</style>
     </div>
