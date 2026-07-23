@@ -26,17 +26,17 @@ export default function PostalVotePanel() {
       </h3>
 
       <div className="grid grid-cols-3 gap-3 mb-3">
-        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg px-3 py-2.5 text-center">
-          <div className="text-[18px] font-bold text-blue-700 dark:text-blue-300">{ns.cat1A.toLocaleString()}</div>
-          <div className="text-[9px] text-blue-500 dark:text-blue-400 mt-0.5 leading-tight">Kategori 1A<br/><span className="text-[8px] opacity-70">Petugas SPR/Polis/Tentera</span></div>
-        </div>
-        <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg px-3 py-2.5 text-center">
-          <div className="text-[18px] font-bold text-emerald-700 dark:text-emerald-300">{ns.cat1B.toLocaleString()}</div>
-          <div className="text-[9px] text-emerald-500 dark:text-emerald-400 mt-0.5 leading-tight">Kategori 1B<br/><span className="text-[8px] opacity-70">Pengundi Luar Negara</span></div>
+        <div className="bg-red-50 dark:bg-red-900/20 rounded-lg px-3 py-2.5 text-center">
+          <div className="text-[18px] font-bold text-red-700 dark:text-red-300">{ns.cat1A.toLocaleString()}</div>
+          <div className="text-[9px] text-red-500 dark:text-red-400 mt-0.5 leading-tight">Kategori 1A<br/><span className="text-[8px] opacity-70">Petugas SPR/Polis/Tentera</span></div>
         </div>
         <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg px-3 py-2.5 text-center">
-          <div className="text-[18px] font-bold text-amber-700 dark:text-amber-300">{ns.cat1C.toLocaleString()}</div>
-          <div className="text-[9px] text-amber-500 dark:text-amber-400 mt-0.5 leading-tight">Kategori 1C<br/><span className="text-[8px] opacity-70">Agensi Kerajaan</span></div>
+          <div className="text-[18px] font-bold text-amber-700 dark:text-amber-300">{ns.cat1B.toLocaleString()}</div>
+          <div className="text-[9px] text-amber-500 dark:text-amber-400 mt-0.5 leading-tight">Kategori 1B<br/><span className="text-[8px] opacity-70">Pengundi Luar Negara</span></div>
+        </div>
+        <div className="bg-gray-100 dark:bg-gray-700 rounded-lg px-3 py-2.5 text-center">
+          <div className="text-[18px] font-bold text-gray-700 dark:text-gray-300">{ns.cat1C.toLocaleString()}</div>
+          <div className="text-[9px] text-gray-500 dark:text-gray-400 mt-0.5 leading-tight">Kategori 1C<br/><span className="text-[8px] opacity-70">Agensi Kerajaan</span></div>
         </div>
       </div>
 
