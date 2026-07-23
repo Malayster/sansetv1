@@ -18,7 +18,9 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 PARTY_MAP = {
     'BN': 'BN', 'UMNO': 'BN', 'MCA': 'BN', 'MIC': 'BN', 'GERAKAN': 'BN',
     'PH': 'PH', 'PKR': 'PH', 'DAP': 'PH', 'AMANAH': 'PH', 'UPKO': 'PH',
-    'PN': 'PN', 'PAS': 'PN', 'BERSATU': 'PN', 'PPBM': 'PN',
+    'PN': 'PN', 'PAS': 'PN',
+    'BERSATU': 'BERSATU',  # PRN 2026: Bersatu tiket sendiri (bukan PN)
+    'PPBM': 'BERSATU',     # Legacy name for same party
     'GPS': 'GPS', 'PBB': 'GPS', 'SUPP': 'GPS', 'PRS': 'GPS', 'PDP': 'GPS',
     'GRS': 'GRS', 'PBS': 'GRS', 'SAPP': 'GRS',
     'WARISAN': 'WARISAN',
@@ -27,6 +29,7 @@ PARTY_MAP = {
 
 PARTY_LOGO = {
     'BN': '/flags/bn.svg', 'PH': '/flags/ph.svg', 'PN': '/flags/pn.svg',
+    'BERSATU': '/flags/bersatu.svg',
     'GPS': '/flags/gps.svg', 'GRS': '/flags/grs.svg',
     'WARISAN': '/flags/warisan.svg', 'Bebas': '/flags/bebas.svg',
 }

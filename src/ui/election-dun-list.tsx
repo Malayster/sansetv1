@@ -5,12 +5,14 @@ import type { RegionWithData, SeatHistory, HistoricalElectionResult, HistoricalD
 
 const PARTY_COLORS: Record<string, string> = {
   'BN': 'text-red-600', 'PH': 'text-blue-600', 'PN': 'text-green-600',
+  'BERSATU': 'text-orange-600',
   'GPS': 'text-purple-600', 'GRS': 'text-orange-600',
   'WARISAN': 'text-yellow-600', 'Bebas': 'text-gray-500',
 }
 
 const PARTY_BADGE: Record<string, string> = {
   'BN': 'bg-red-500', 'PH': 'bg-blue-500', 'PN': 'bg-green-500',
+  'BERSATU': 'bg-orange-500',
   'Bebas': 'bg-gray-400', 'GPS': 'bg-purple-500', 'GRS': 'bg-orange-500',
 }
 
