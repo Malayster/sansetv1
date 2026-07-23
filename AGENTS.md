@@ -108,6 +108,35 @@ data/elections/
 
 > **Note:** DUN counts from DM (Daerah Mengundi) data may differ slightly from official SPR numbers due to boundary reclassification. The DM data is authoritative from SPR/EC.
 
+## Status Historical Results (Tindak Malaysia HISTORICAL-ELECTION-RESULTS)
+
+| Pilihan Raya | Year | Level | Coverage | Source File |
+|---|---|---|---|---|
+| PRU | 2022 | PARLIMEN | 222 | MALAYSIA_2022_PARLIAMENT_RESULTS.csv |
+| PRU | 2022 | DUN | 117 (4 negeri) | MALAYSIA_2022_DUN_RESULTS.csv |
+| PRN6 | 2023 | DUN | 245 (6 negeri) | MALAYSIA_PRN6_2023_ELECTION_RESULTS.csv |
+| PRN Johor | 2022 & 2026 | DUN | 56 | JOHOR_2022 + 2026_JOHOR_DUN_RESULTS.csv |
+| PRN Melaka | 2021 | DUN | 28 | MELAKA_2021_ELECTION_RESULTS.csv |
+| PRN Sarawak | 2021 | DUN | 82 | SARAWAK_2021_ELECTION_RESULTS.csv |
+| PRN Sabah | 2020 & 2025 | DUN | 73 | SABAH_2020 + 2025_SABAH_DUN_RESULTS.csv |
+| PRU | 2018 | PAR + DUN | 727 | MALAYSIA_2018_*.csv |
+| PRU | 2013 | PAR + DUN | 726 | MALAYSIA_2013_*.csv |
+| PRU | 2008 | PARLIMEN | 214 | MALAYSIA_2008_PARLIAMENT_RESULTS.csv |
+| PRU | 2004 | PARLIMEN | 202 | MALAYSIA_2004_PARLIAMENT_RESULTS.csv |
+| PRU | 1999 | PARLIMEN | 192 | MALAYSIA_1999_PARLIAMENT_RESULTS.csv |
+| PRU | 1995 | PAR + DUN | 565 | MALAYSIA_1995_*.csv |
+
+**Script:** `python3 scripts/fetch-historical-results.py` (idempotent, re-runnable)
+
+**Storage format** — Data keyed by code in `historical-results.json`:
+- PARLIMEN: `P001`, `P002`, ... `P222`
+- DUN (single-state files): `N01`, ... (Johor/Sarawak/dll)
+- DUN (multi-state files): `{STATE_SHORT}_N01`, e.g., `KDH_N01`, `SGR_N01`
+- NS original data: `NSN_N01`, ... `NSN_N36`
+
+**Missing data (not yet uploaded by Tindak Malaysia):**
+- PRU 2008, 2004, 1999 DUN results (PARLIMEN saja tersedia)
+
 ## Cara Setup PRN Baru
 
 ### 1. Buat Election Pack folder
