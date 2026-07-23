@@ -11,8 +11,8 @@ import ElectionCompare from '@/ui/election-compare'
 import SemiCircleView from '@/ui/election-semicycle'
 import Swingometer from '@/ui/election-swingometer'
 import { ExecutiveSummary, MajorityTracker, KeyRaces } from '@/ui/election-insights'
-import { AnimatedCounter } from '@/ui/animated-counter'
 import { useTheme } from '@/ui/dark-mode'
+import PostalVotePanel from '@/ui/election-postal-vote'
 import type { ElectionInfo, RegionWithData } from '@/types/election'
 
 const ElectionMap = dynamic(() => import('@/ui/election-map'), {
@@ -149,7 +149,16 @@ export default function ElectionDashboard({
       )}
 
       {tab === 'senarai' && <ElectionDunList regions={dunRegions} />}
-      {tab === 'analisis' && <ElectionCharts regions={dunRegions} />}
+      {tab === 'analisis' && (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="lg:col-span-2 space-y-4">
+            <ElectionCharts regions={dunRegions} />
+          </div>
+          <div className="space-y-4">
+            <PostalVotePanel />
+          </div>
+        </div>
+      )}
       {tab === 'swing' && <ElectionSwing regions={dunRegions} />}
       {tab === 'banding' && <ElectionCompare regions={dunRegions} />}
       {tab === 'dewan' && <SemiCircleView regions={dunRegions} />}
