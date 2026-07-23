@@ -19,14 +19,13 @@ const PARTY_BADGE: Record<string, string> = {
 const NSN_DUN_NAMES: Record<string, string> = {
   'N01': 'Chennah', 'N02': 'Pertang', 'N03': 'Sungai Lui', 'N04': 'Klawang',
   'N05': 'Serting', 'N06': 'Palong', 'N07': 'Jeram Padang', 'N08': 'Bahau',
-  'N09': 'Gemas', 'N10': 'Nilai', 'N11': 'Lobak', 'N12': 'Mantin',
+  'N09': 'Lenggeng', 'N10': 'Nilai', 'N11': 'Lobak', 'N12': 'Temiang',
   'N13': 'Sikamat', 'N14': 'Ampangan', 'N15': 'Juasseh', 'N16': 'Seri Menanti',
   'N17': 'Senaling', 'N18': 'Pilah', 'N19': 'Johol', 'N20': 'Labu',
-  'N21': 'Temiang', 'N22': 'Rahang', 'N23': 'Mambau', 'N24': 'Seremban Jaya',
-  'N25': 'Paroi', 'N26': 'Chembong', 'N27': 'Rantau', 'N28': 'Bukit Kepayang',
-  'N29': 'Bagan Pinang', 'N30': 'Linggi', 'N31': 'Sri Tanjung',
-  'N32': 'Gemenceh', 'N33': 'Repah', 'N34': 'Gemencheh', 'N35': 'Kuala Pilah',
-  'N36': 'Lenggeng',
+  'N21': 'Bukit Kepayang', 'N22': 'Rahang', 'N23': 'Mambau', 'N24': 'Seremban Jaya',
+  'N25': 'Paroi', 'N26': 'Chembong', 'N27': 'Rantau', 'N28': 'Kota',
+  'N29': 'Chuah', 'N30': 'Lukut', 'N31': 'Bagan Pinang', 'N32': 'Linggi',
+  'N33': 'Sri Tanjung', 'N34': 'Gemas', 'N35': 'Gemencheh', 'N36': 'Repah',
 }
 
 function PartyDot({ party }: { party: string }) {

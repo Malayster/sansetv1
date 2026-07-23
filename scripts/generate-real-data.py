@@ -266,21 +266,20 @@ def build_demographics(tindak_data, candidate_data):
 NSN_SEAT_NAMES = {
     'N01': ('Chennah', 2008), 'N02': ('Pertang', 2008), 'N03': ('Sungai Lui', 2008),
     'N04': ('Klawang', 2008), 'N05': ('Serting', 2008), 'N06': ('Palong', 2008),
-    'N07': ('Jeram Padang', 2008), 'N08': ('Bahau', 2008), 'N09': ('Gemas', 2008),
-    'N10': ('Nilai', 2008), 'N11': ('Lobak', 2008), 'N12': ('Mantin', 2008),
+    'N07': ('Jeram Padang', 2008), 'N08': ('Bahau', 2008), 'N09': ('Lenggeng', 2008),
+    'N10': ('Nilai', 2008), 'N11': ('Lobak', 2008), 'N12': ('Temiang', 2008),
     'N13': ('Sikamat', 2008), 'N14': ('Ampangan', 2008),
     'N15': ('Juasseh', 2008), 'N16': ('Seri Menanti', 2008),
     'N17': ('Senaling', 2008), 'N18': ('Pilah', 2008),
     'N19': ('Johol', 2008), 'N20': ('Labu', 2008),
-    'N21': ('Temiang', 2008), 'N22': ('Rahang', 2008),
+    'N21': ('Bukit Kepayang', 2008), 'N22': ('Rahang', 2008),
     'N23': ('Mambau', 2018), 'N24': ('Seremban Jaya', 2018),
     'N25': ('Paroi', 2008), 'N26': ('Chembong', 2008),
-    'N27': ('Rantau', 2008), 'N28': ('Bukit Kepayang', 2018),
-    'N29': ('Bagan Pinang', 2008), 'N30': ('Linggi', 2008),
-    'N31': ('Sri Tanjung', 2018), 'N32': ('Gemenceh', 2008),
-    'N33': ('Repah', 2008), 'N34': ('Gemencheh', 2008),
-    'N35': ('Kuala Pilah', 2004),  # slightly older delim
-    'N36': ('Lenggeng', 2018),  # newer seat, only from 2018
+    'N27': ('Rantau', 2008), 'N28': ('Kota', 2008),
+    'N29': ('Chuah', 2008), 'N30': ('Lukut', 2008),
+    'N31': ('Bagan Pinang', 2008), 'N32': ('Linggi', 2008),
+    'N33': ('Sri Tanjung', 2008), 'N34': ('Gemas', 2008),
+    'N35': ('Gemencheh', 2008), 'N36': ('Repah', 2008),
 }
 
 # Map old seat codes to current ones for cross-reference
