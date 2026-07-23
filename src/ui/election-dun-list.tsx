@@ -33,7 +33,7 @@ const NSN_DUN_NAMES: Record<string, string> = {
   'N33': 'Sri Tanjung', 'N34': 'Gemas', 'N35': 'Gemencheh', 'N36': 'Repah',
 }
 
-function PartyFlag({ party, size = 18 }: { party: string; size?: number }) {
+function PartyFlag({ party, size = 36 }: { party: string; size?: number }) {
   const src = PARTY_FLAGS[party] || '/flags/bebas.svg'
   return (
     <img
@@ -42,7 +42,7 @@ function PartyFlag({ party, size = 18 }: { party: string; size?: number }) {
       title={party}
       width={size}
       height={Math.round(size * 0.67)}
-      className="inline-block rounded-sm border border-gray-300 object-cover"
+      className="inline-block rounded border-2 border-gray-300 object-cover"
       loading="lazy"
     />
   )
@@ -54,12 +54,12 @@ function HistoryCell({ history, year }: { history?: SeatHistory; year: number })
     return <span className="text-gray-200">—</span>
   }
   return (
-    <div className="flex flex-col items-center gap-0.5" title={`${election.winner} (${election.winnerParty}) — ${election.majority.toLocaleString()} majoriti`}>
-      <PartyFlag party={election.winnerParty} size={16} />
-      <span className={`text-[10px] font-bold ${PARTY_COLORS[election.winnerParty] || 'text-gray-500'}`}>
+    <div className="flex flex-col items-center gap-2" title={`${election.winner} (${election.winnerParty}) — ${election.majority.toLocaleString()} majoriti`}>
+      <PartyFlag party={election.winnerParty} size={32} />
+      <span className={`text-[20px] font-bold ${PARTY_COLORS[election.winnerParty] || 'text-gray-500'}`}>
         {election.winnerParty}
       </span>
-      <span className="text-[9px] text-gray-400">
+      <span className="text-[18px] text-gray-400">
         {election.majority > 0 ? `${(election.majority / 1000).toFixed(1)}k` : '-'}
       </span>
     </div>
@@ -75,25 +75,25 @@ function CandidateRow({ region }: { region: RegionWithData }) {
 
   return (
     <>
-      <td className="px-3 py-2.5 font-mono text-[11px] text-gray-400 font-bold align-top">
+      <td className="px-6 py-5 font-mono text-[44px] text-gray-400 font-bold align-top">
         {region.code}
       </td>
-      <td className="px-3 py-2.5 font-medium text-gray-800 whitespace-nowrap align-top">
+      <td className="px-6 py-5 font-medium text-gray-800 whitespace-nowrap align-top">
         {sdn}
       </td>
-      <td className="px-3 py-2.5 align-top">
-        <div className="flex flex-wrap gap-1 max-w-[280px]">
+      <td className="px-6 py-5 align-top">
+        <div className="flex flex-wrap gap-8 max-w-[560px]">
           {candidates.map((c, i) => (
             <span
               key={i}
-              className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-medium border ${
+              className={`inline-flex items-center gap-8 px-3 py-1 rounded text-[20px] font-medium border ${
                 c.role === 'penyandang'
                   ? 'bg-amber-50 border-amber-200 text-amber-800'
                   : 'bg-gray-50 border-gray-200 text-gray-600'
               }`}
             >
-              {c.role === 'penyandang' && <span className="text-amber-500 text-[9px]">★</span>}
-              <span className="max-w-[100px] truncate" title={c.name}>
+              {c.role === 'penyandang' && <span className="text-amber-500 text-[18px]">★</span>}
+              <span className="max-w-[200px] truncate" title={c.name}>
                 {c.name.split(' ').slice(0, 2).join(' ')}
               </span>
               <span className={`font-bold ${PARTY_COLORS[c.party] || 'text-gray-500'}`}>
@@ -103,15 +103,15 @@ function CandidateRow({ region }: { region: RegionWithData }) {
           ))}
         </div>
       </td>
-      <td className="text-center px-2 py-2.5 align-top"><HistoryCell history={hist} year={2008} /></td>
-      <td className="text-center px-2 py-2.5 align-top"><HistoryCell history={hist} year={2013} /></td>
-      <td className="text-center px-2 py-2.5 align-top"><HistoryCell history={hist} year={2018} /></td>
-      <td className="text-center px-2 py-2.5 align-top"><HistoryCell history={hist} year={2023} /></td>
-      <td className="text-center px-3 py-2.5 align-top">
+      <td className="text-center px-4 py-5 align-top"><HistoryCell history={hist} year={2008} /></td>
+      <td className="text-center px-4 py-5 align-top"><HistoryCell history={hist} year={2013} /></td>
+      <td className="text-center px-4 py-5 align-top"><HistoryCell history={hist} year={2018} /></td>
+      <td className="text-center px-4 py-5 align-top"><HistoryCell history={hist} year={2023} /></td>
+      <td className="text-center px-6 py-5 align-top">
         {incParty ? (
-          <div className="flex flex-col items-center gap-0.5">
-            <PartyFlag party={incParty} size={18} />
-            <span className={`font-bold text-[11px] ${PARTY_COLORS[incParty] || 'text-gray-500'}`}>
+          <div className="flex flex-col items-center gap-2">
+            <PartyFlag party={incParty} size={36} />
+            <span className={`font-bold text-[44px] ${PARTY_COLORS[incParty] || 'text-gray-500'}`}>
               {incParty}
             </span>
           </div>
@@ -130,18 +130,18 @@ function ExpandedRow({ region }: { region: RegionWithData }) {
 
   return (
     <tr className="bg-gray-50 border-b border-gray-200">
-      <td colSpan={8} className="px-6 py-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <td colSpan={8} className="px-12 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Candidates detail */}
           <div>
-            <h4 className="text-[11px] font-semibold text-gray-500 mb-2 uppercase tracking-wider">Calon PRN 2026</h4>
-            <div className="space-y-1">
+            <h4 className="text-[44px] font-semibold text-gray-500 mb-4 uppercase tracking-wider">Calon PRN 2026</h4>
+            <div className="space-y-2">
               {candidates.map((c, i) => (
-                <div key={i} className="flex items-center gap-2 text-[12px]">
-                  <PartyFlag party={c.party} size={16} />
+                <div key={i} className="flex items-center gap-8 text-[24px]">
+                  <PartyFlag party={c.party} size={32} />
                   <span className={c.role === 'penyandang' ? 'font-semibold' : ''}>{c.name}</span>
                   <span className={`font-bold ${PARTY_COLORS[c.party] || 'text-gray-500'}`}>{c.party}</span>
-                  {c.role === 'penyandang' && <span className="text-[10px] text-amber-600 bg-amber-50 px-1 rounded">Penyandang</span>}
+                  {c.role === 'penyandang' && <span className="text-[20px] text-amber-600 bg-amber-50 px-2 rounded">Penyandang</span>}
                 </div>
               ))}
             </div>
@@ -149,15 +149,15 @@ function ExpandedRow({ region }: { region: RegionWithData }) {
 
           {/* Historical results */}
           <div>
-            <h4 className="text-[11px] font-semibold text-gray-500 mb-2 uppercase tracking-wider">Sejarah Pilihan Raya</h4>
-            <div className="space-y-1">
+            <h4 className="text-[44px] font-semibold text-gray-500 mb-4 uppercase tracking-wider">Sejarah Pilihan Raya</h4>
+            <div className="space-y-2">
               {hist.elections.filter(e => e.year < 2026).map((e) => (
-                <div key={e.year} className="flex items-center gap-2 text-[12px]">
-                  <span className="text-gray-400 w-8">{e.year}</span>
-                  <PartyFlag party={e.winnerParty} size={16} />
+                <div key={e.year} className="flex items-center gap-8 text-[24px]">
+                  <span className="text-gray-400 w-16">{e.year}</span>
+                  <PartyFlag party={e.winnerParty} size={32} />
                   <span className="font-medium">{e.winner}</span>
                   <span className={`font-bold ${PARTY_COLORS[e.winnerParty] || 'text-gray-500'}`}>{e.winnerParty}</span>
-                  <span className="text-gray-400 text-[10px]">
+                  <span className="text-gray-400 text-[20px]">
                     ({(e.majority / 1000).toFixed(1)}k majority)
                   </span>
                 </div>
@@ -167,19 +167,19 @@ function ExpandedRow({ region }: { region: RegionWithData }) {
 
           {/* Demographics */}
           <div>
-            <h4 className="text-[11px] font-semibold text-gray-500 mb-2 uppercase tracking-wider">Demografi Terkini</h4>
-            <div className="text-[12px] space-y-1">
+            <h4 className="text-[44px] font-semibold text-gray-500 mb-4 uppercase tracking-wider">Demografi Terkini</h4>
+            <div className="text-[24px] space-y-2">
               <div className="flex items-center gap-2">
-                <span className="text-gray-400 w-20">Jumlah Pengundi:</span>
+                <span className="text-gray-400 w-40">Jumlah Pengundi:</span>
                 <span className="font-semibold">{region.demographics.totalElectors?.toLocaleString() || '-'}</span>
               </div>
-              <div className="flex gap-3 text-[11px]">
+              <div className="flex gap-6 text-[44px]">
                 <span className="text-red-500">Melayu: {region.demographics.malay}%</span>
                 <span className="text-orange-500">Cina: {region.demographics.chinese}%</span>
                 <span className="text-green-600">India: {region.demographics.indian}%</span>
                 <span className="text-gray-400">Lain: {region.demographics.others}%</span>
               </div>
-              <div className="flex gap-3 text-[11px]">
+              <div className="flex gap-6 text-[44px]">
                 <span>Median Income: <span className="font-semibold">RM{region.demographics.medianIncome?.toLocaleString() || '-'}</span></span>
                 <span>GINI: <span className="font-semibold">{region.demographics.gini?.toFixed(3) || '-'}</span></span>
               </div>
@@ -214,17 +214,17 @@ export default function ElectionDunList({
   }
 
   return (
-    <div className="mt-8">
-      <div className="flex items-center justify-between mb-3">
-        <h2 className="font-serif text-[22px] font-bold text-[#111] flex items-center gap-2">
-          <span className="w-1.5 h-6 bg-emerald-600 rounded-full inline-block" />
+    <div className="mt-16">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="font-serif text-[44px] font-bold text-[#111] flex items-center gap-2">
+          <span className="w-3 h-12 bg-emerald-600 rounded-full inline-block" />
           Senarai DUN N. Sembilan (N01–N36)
-          <span className="text-sm font-normal text-gray-400 ml-1">PRN 2026</span>
+          <span className="text-[28px] font-normal text-gray-400 ml-2">PRN 2026</span>
         </h2>
-        <div className="flex gap-3 text-[11px]">
+        <div className="flex gap-6 text-[44px]">
           {Object.entries(partyTotals).sort().map(([party, count]) => (
-            <span key={party} className="flex items-center gap-1">
-              <PartyFlag party={party} size={14} />
+            <span key={party} className="flex items-center gap-2">
+              <PartyFlag party={party} size={28} />
               <span className={`font-semibold ${PARTY_COLORS[party] || ''}`}>{party}</span>
               <span className="text-gray-500">{count}</span>
             </span>
@@ -233,17 +233,17 @@ export default function ElectionDunList({
       </div>
 
       <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
-        <table className="w-full text-[12px] border-collapse min-w-[950px]">
+        <table className="w-full text-[24px] border-collapse min-w-[1900px]">
           <thead>
-            <tr className="bg-gray-100 border-b border-gray-200 text-[11px]">
-              <th className="text-left px-3 py-2 font-semibold text-gray-500 w-[60px]">Kod</th>
-              <th className="text-left px-3 py-2 font-semibold text-gray-500 w-[130px]">Nama DUN</th>
-              <th className="text-left px-3 py-2 font-semibold text-gray-500">Calon PRN 2026</th>
-              <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRU 2008</th>
-              <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRU 2013</th>
-              <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRU 2018</th>
-              <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRN 2023</th>
-              <th className="text-center px-3 py-2 font-semibold text-gray-500 w-[65px]">Penyandang</th>
+            <tr className="bg-gray-100 border-b border-gray-200 text-[44px]">
+              <th className="text-left px-6 py-4 font-semibold text-gray-500 w-[120px]">Kod</th>
+              <th className="text-left px-6 py-4 font-semibold text-gray-500 w-[260px]">Nama DUN</th>
+              <th className="text-left px-6 py-4 font-semibold text-gray-500">Calon PRN 2026</th>
+              <th className="text-center px-4 py-4 font-semibold text-gray-500 w-[144px]">PRU 2008</th>
+              <th className="text-center px-4 py-4 font-semibold text-gray-500 w-[144px]">PRU 2013</th>
+              <th className="text-center px-4 py-4 font-semibold text-gray-500 w-[144px]">PRU 2018</th>
+              <th className="text-center px-4 py-4 font-semibold text-gray-500 w-[144px]">PRN 2023</th>
+              <th className="text-center px-6 py-4 font-semibold text-gray-500 w-[130px]">Penyandang</th>
             </tr>
           </thead>
           <tbody>
@@ -267,13 +267,13 @@ export default function ElectionDunList({
       {dunRegions.length > 18 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className="mt-2 text-[11px] text-emerald-600 hover:text-emerald-700 font-medium"
+          className="mt-4 text-[44px] text-emerald-600 hover:text-emerald-700 font-medium"
         >
           {showAll ? '▲ Ringkaskan' : `▼ Lihat semua ${dunRegions.length} DUN`}
         </button>
       )}
 
-      <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
+      <p className="text-[20px] text-gray-400 mt-4 leading-relaxed">
         Data calon dari SPR (ElectionData.MY). Klik baris untuk butiran penuh calon, sejarah, dan demografi.
         ★ = Penyandang. Logo parti dari <a href="https://spr.gov.my/parti-parti-yang-berdaftar/" className="underline hover:text-gray-600" target="_blank" rel="noopener">SPR</a>.
       </p>
