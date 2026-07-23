@@ -87,6 +87,27 @@ data/elections/
   - `lat/lng`: centroid purata
   - Tuang semua candidates ke PAR level
 
+## Status GeoJSON & Election Pack
+
+| State | DUN | PAR | GeoJSON ✅ | Config Template ✅ |
+|---|---|---|---|---|
+| Perlis | 15 | 3 | 2026-07-24 | prn-perlis-template |
+| Kedah | 37 | 16 | 2026-07-24 | prn-kedah-template |
+| Kelantan | 45 | 14 | 2026-07-24 | prn-kelantan-template |
+| Terengganu | 33 | 9 | 2026-07-24 | prn-terengganu-template |
+| Penang | 41 | 14 | 2026-07-24 | prn-penang-template |
+| Perak | 59 | 24 | 2026-07-24 | prn-perak-template |
+| Pahang | 43 | 15 | 2026-07-24 | prn-pahang-template |
+| Selangor | 56 | 22 | 2026-07-24 | prn-selangor-template |
+| **Negeri Sembilan** | **36** | **8** | **2026-07-23** | **prn-ns-2026 ✅ ACTIVE** |
+| Melaka | 28 | 6 | 2026-07-24 | prn-melaka-template |
+| Johor | 58 | 29 | 2026-07-24 | prn-johor-template |
+| Sabah | 75 | 27 | 2026-07-24 | prn-sabah-template |
+| Sarawak | ❌ | ❌ | 404 Not Found | ❌ |
+| WP KL/Putra/Labuan | 1 | 1 | 2026-07-24 | prn-wp-template |
+
+> **Note:** DUN counts from DM (Daerah Mengundi) data may differ slightly from official SPR numbers due to boundary reclassification. The DM data is authoritative from SPR/EC.
+
 ## Cara Setup PRN Baru
 
 ### 1. Buat Election Pack folder
