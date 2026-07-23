@@ -44,6 +44,139 @@ python3 scripts/generate-real-data.py
 
 <!-- END:election-data-sources -->
 
+<!-- BEGIN:architecture-election-pack -->
+
+# 🏗️ Architecture: Election Pack + RegionService
+
+## Konsep
+
+Setiap pilihan raya (PRN/PRU) ada **Election Pack** — satu folder dalam `data/elections/{id}/`:
+
+```
+data/elections/
+  prn-ns-2026/
+    config.json       ← mapping DUN→PAR, GeoJSON, metadata
+    (future: results.json, candidates.json)
+```
+
+**RegionService** (`src/lib/region-service.ts`) — abstraction layer yang auto-handle DUN↔PAR:
+
+```
+┌──────────────────────────────────────┐
+│    UI Components                     │
+│  (map, swing, compare, charts...)    │
+├──────────────────────────────────────┤
+│         RegionService                │
+│  .getRegions('dun')                  │  ← DUN-level (N01-N36)
+│  .getRegions('parlimen')             │  ← PAR-level, auto-aggregated
+│  .loadConfig() → ElectionPackConfig  │
+├──────────────────────────────────────┤
+│  data/elections/{id}/config.json     │
+│  data/kv-output/*.json               │
+│  Sanity (future adapter)             │
+└──────────────────────────────────────┘
+```
+
+## Level Switcher (Client-side)
+
+`election-dashboard.tsx` ada toggle **DUN** ↔ **Parlimen**:
+- **DUN**: data asal per-DUN (N01-N36)
+- **Parlimen**: aggregation dari DUN → kumpul ikut parlimen
+  - `seatCounts`: parti dengan penyandang terbanyak
+  - `dominantParty`: parti dominan
+  - `lat/lng`: centroid purata
+  - Tuang semua candidates ke PAR level
+
+## Cara Setup PRN Baru
+
+### 1. Buat Election Pack folder
+
+```bash
+# Copy template dari PRN sedia ada
+cp -r data/elections/prn-ns-2026 data/elections/prn-selangor-2027
+```
+
+### 2. Edit config.json
+
+```json
+{
+  "electionId": "prn-selangor-2027",
+  "name": "PRN Selangor 2027",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_selangor_dun.json",
+  "state": "Selangor",
+  "dunToParlimen": {
+    "N01": "P092", ...
+  },
+  "parlimenInfo": {
+    "P092": { "name": "Sabak Bernam", "dunCount": 2 },
+    ...
+  },
+  "demographicsSource": "parlimen",
+  "dataSources": {
+    "demographics": "Tindak Malaysia / DOSM",
+    "historicalResults": "ElectionData.MY"
+  }
+}
+```
+
+### 3. Sediakan GeoJSON
+
+Letak file dalam `public/geojson/`:
+- `prn_selangor_dun.json` + `prn_selangor_dun_polygon.json`
+
+### 4. Data Pipeline
+
+```bash
+# Kalau perlu regenerate data
+python3 scripts/generate-real-data.py
+
+# Verify
+npx tsx scripts/verify-election.ts prn-selangor-2027
+```
+
+### 5. Activate dalam Sanity
+
+Buat dokumen `electionInfo`:
+- `electionName`: PRN Selangor 2027
+- `electionType`: prn
+- `regionType`: dun
+- `geoJsonFile`: prn_selangor_dun.json
+- `isActive`: true
+
+Dashboard auto-load data dari Sanity + Election Pack.
+
+## Agent Tips
+
+### Agent boleh buat PRN baru dalam 5 minit:
+
+```bash
+# 1. Copy folder
+cp -r data/elections/prn-ns-2026 data/elections/prn-negeri-baru
+
+# 2. Edit config — update mapping & state name
+# (refer Wikipedia / SPR untuk senarai DUN)
+
+# 3. Cari GeoJSON — guna data dari Tindak Malaysia GitHub
+# https://github.com/TindakMalaysia/Negeri-Sembilan-Maps
+
+# 4. Activate — create Sanity document via API atau manual
+```
+
+## Cronjobs / Automation
+
+Guna OpenHands Automation (port 18001) untuk schedule:
+- `GET /api/automation/docs` — automation API spec
+- Auth: header `X-Session-API-Key: $OPENHANDS_AUTOMATION_API_KEY`
+
+Cadangan automations:
+- **setiap-6-jam**: Refresh data (regenerate pipeline) → rebuild
+- **setiap-hari**: Fetch candidate news → merge candidates data
+- **semasa-PRN**: Update sentiment analysis
+
+<!-- END:architecture-election-pack -->
+
 <!-- BEGIN:priority-candidate-news -->
 
 # 🚨 KEUTAMAAN MUTLAK: Cari Calon Semasa dari Portal Berita

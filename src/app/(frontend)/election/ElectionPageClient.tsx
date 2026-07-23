@@ -5,10 +5,12 @@ import { ThemeProvider, ThemeToggle } from '@/ui/dark-mode'
 import { AnimatedCounter } from '@/ui/animated-counter'
 import ElectionDashboard from '@/ui/election-dashboard'
 import type { ElectionInfo, RegionWithData } from '@/types/election'
+import type { ElectionPackConfig } from '@/lib/region-service'
 
 interface ElectionWithRegions {
   election: ElectionInfo
   regions: RegionWithData[]
+  electionPack: ElectionPackConfig | null
 }
 
 /** Map PRN state election names to their flag image paths */
@@ -73,7 +75,7 @@ export default function ElectionPageClient({
   </div>
   </div>
 
-  <ElectionDashboard election={current.election} regions={current.regions} />
+  <ElectionDashboard election={current.election} regions={current.regions} electionPack={current.electionPack} />
   </div>
   </ThemeProvider>
   )

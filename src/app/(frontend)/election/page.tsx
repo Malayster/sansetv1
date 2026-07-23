@@ -1,9 +1,12 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
+import fs from 'fs'
+import path from 'path'
 import { getActiveElections, getElectionRegions } from '@/lib/election-server'
 import { getKVValue, getMockDemographics, getHistoricalResults } from '@/lib/kv'
 import ElectionPageClient from './ElectionPageClient'
 import type { ElectionInfo, RegionWithData } from '@/types/election'
+import type { ElectionPackConfig } from '@/lib/region-service'
 
 export const metadata: Metadata = {
   title: 'Pusat Pilihan Raya — Suara Anak Negeri',
@@ -11,6 +14,15 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 120
+
+/** Load Election Pack config if available */
+function loadElectionPackConfig(election: ElectionInfo): ElectionPackConfig | null {
+  try {
+    const fp = path.join(process.cwd(), 'data', 'elections', `${election.electionType}-${(election.electionName.match(/[a-z]/gi) || []).join('').toLowerCase()}-${new Date(election.electionDate).getFullYear()}`, 'config.json')
+    if (fs.existsSync(fp)) return JSON.parse(fs.readFileSync(fp, 'utf-8'))
+  } catch {}
+  return null
+}
 
 async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithData[]> {
   const regions = await getElectionRegions(election.geoJsonFile)
@@ -51,6 +63,7 @@ export default async function ElectionPage() {
     elections.map(async (el) => ({
       election: el,
       regions: await loadRegionsWithData(el),
+      electionPack: loadElectionPackConfig(el),
     })),
   )
 
