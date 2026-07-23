@@ -167,6 +167,29 @@ data/elections/
 > Admin panel menulis ke fail JSON local. Untuk deployment Vercel,
 > perlu integrate KV (T8) atau gunakan write endpoint di Sanity.
 
+## KV Integration (T8)
+
+**Read-through:** API baca dari KV dulu; kalau gagal/empty, fallback ke JSON static.
+**Write-mirror:** PUT request → validation → tulis JSON → mirror ke KV.
+
+**Env vars untuk enable KV:**
+```
+CLOUDFLARE_ACCOUNT_ID=...   (atau CF_ACCOUNT_ID)
+CLOUDFLARE_API_TOKEN=...    (atau CF_API_TOKEN)
+CF_KV_CANDIDATES=ns_id      (namespace ID untuk calon)
+CF_KV_RESULTS=ns_id         (namespace ID untuk historical results)
+CF_KV_DEMOGRAPHICS=ns_id   (namespace ID untuk demografi)
+```
+
+Tanpa env vars, sistem berfungsi dalam **mode local JSON** (cost-efficient).
+
+**KV key:** `{prefix}:__index__` menyimpan keseluruhan ledger sebagai satu value.
+3 bacaan instead of N. Untuk per-key granularity, pecah ke `candidates:P001` etc.
+
+**UI badge:**
+- "☁️ KV Aktif" (hijau) kalau env vars aktif
+- "💾 Local JSON" (kelabu) kalau env vars kosong
+
 ## Cara Setup PRN Baru
 
 ### 1. Buat Election Pack folder
