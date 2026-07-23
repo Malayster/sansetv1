@@ -37,7 +37,12 @@ export async function listKVKeys(namespaceId: string, prefix: string) {
   return data.result || []
 }
 
-// ─── MOCK DATA ────────────────────────────────────
+// ─── REAL / MOCK DATA ────────────────────────────
+// Candidates come from ElectionData.MY (SPR Open Data)
+// Demographics come from Tindak Malaysia / DOSM
+// Sentiment is AI-generated via Composite AI
+// Run 'scripts/generate-real-data.py' to regenerate
+
 const mockSentiment: Record<string, any> = {
   'P001': { score: 58, label: 'neutral', source: 'Composite AI', summary: 'Sentimen di Padang Besar neutral dengan kecenderungan positif terhadap BN. Isu air menjadi kebimbangan utama pengundi namun projek pembangunan diterima baik.', topIssue: 'Isu air & infrastruktur', partySentiment: { BN: 65, PH: 45, PN: 35 }, updatedAt: new Date().toISOString() },
   'P002': { score: 62, label: 'neutral', source: 'Composite AI', summary: 'Kangar mencatatkan sentimen neutral-positif. Isu kesihatan dan harga rumah menjadi topik utama perbincangan.', topIssue: 'Kesihatan & perumahan', partySentiment: { PN: 60, PH: 45, BN: 40 }, updatedAt: new Date().toISOString() },
@@ -82,179 +87,10 @@ const mockSentiment: Record<string, any> = {
   'N36': { score: 48, label: 'neutral', source: 'Composite AI', summary: 'Repah — kawasan campuran, BN vs PN. PH berpotensi jadi kingmaker.', topIssue: 'Guna tanah & industri', partySentiment: { BN: 46, PN: 40, PH: 32 }, updatedAt: new Date().toISOString() },
 }
 
-const mockCandidates: Record<string, any[]> = {
-  'P001': [
-    { name: 'Zulkifli Ismail', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2022, votes: 16230, majority: 4172, percentage: 52.3, totalVoters: 45000, turnout: 78.5 } },
-    { name: 'Mohd Saat Musa', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar', lastElection: { year: 2022, votes: 12058, majority: 0, percentage: 38.9, totalVoters: 45000, turnout: 78.5 } },
-    { name: 'Rohaizat Zainal', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar', lastElection: { year: 2022, votes: 2341, majority: 0, percentage: 7.5, totalVoters: 45000, turnout: 78.5 } },
-  ],
-  'P002': [
-    { name: 'Zakri Hassan', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2022, votes: 22100, majority: 3150, percentage: 48.7, totalVoters: 58000, turnout: 82.1 } },
-    { name: 'Abdul Rashid', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar', lastElection: { year: 2022, votes: 18950, majority: 0, percentage: 41.7, totalVoters: 58000, turnout: 82.1 } },
-  ],
-  'P003': [
-    { name: 'Shahidan Kassim', party: 'PN', partyLogo: '/flags/pn.svg', role: 'penyandang', lastElection: { year: 2022, votes: 19800, majority: 1200, percentage: 44.1, totalVoters: 52000, turnout: 76.3 } },
-    { name: 'Fathin Amelina', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar', lastElection: { year: 2022, votes: 18600, majority: 0, percentage: 41.4, totalVoters: 52000, turnout: 76.3 } },
-  ],
-  'P004': [
-    { name: 'Mohd Suhaimi Abdullah', party: 'PN', partyLogo: '/flags/pn.svg', role: 'penyandang', lastElection: { year: 2022, votes: 25400, majority: 5600, percentage: 61.2, totalVoters: 48000, turnout: 80.4 } },
-    { name: 'Zambry Abd Kadir', party: 'BN', partyLogo: '/flags/bn.svg', role: 'pencabar', lastElection: { year: 2022, votes: 19800, majority: 0, percentage: 37.0, totalVoters: 48000, turnout: 80.4 } },
-  ],
-  // ─── PRN 2023 Negeri Sembilan (36 DUN) — Keputusan lepas + Calon PRN 2026 ───
-  // PH (Pakatan Harapan) menang 17 kerusi, BN (Barisan Nasional) menang 14, PN (Perikatan Nasional) menang 5
-  'N01': [
-    { name: 'Yap Seong Fook', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 8240, majority: 2340, percentage: 52.8, totalVoters: 21800, turnout: 76.2 } },
-    { name: 'Roslan Md Desa', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar', profile: 'Bekas pegawai daerah, bertanding atas tiket PN.' },
-  ],
-  'N02': [
-    { name: 'Jalaluddin Alias', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 6870, majority: 1640, percentage: 48.3, totalVoters: 19800, turnout: 74.1 } },
-    { name: 'Osman Idris', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-    { name: 'Mohd Fadli Harun', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar' },
-  ],
-  'N03': [
-    { name: 'Mohammad Rizam Abdul Rahman', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 7650, majority: 520, percentage: 41.2, totalVoters: 26000, turnout: 72.8 } },
-    { name: 'Razali Mansor', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar', lastElection: { year: 2023, votes: 7130, majority: 0, percentage: 38.4, totalVoters: 26000, turnout: 72.8 } },
-  ],
-  'N04': [
-    { name: 'Bakri Jamaluddin', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 9120, majority: 3120, percentage: 56.1, totalVoters: 22400, turnout: 78.9 } },
-    { name: 'Iskandar Abdul Rahman', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N05': [
-    { name: 'Mohd Isam Mohd Isa', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 10450, majority: 2890, percentage: 54.8, totalVoters: 27500, turnout: 75.6 } },
-    { name: 'Siti Zaleha Hashim', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-    { name: 'Ramasamy Muthu', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar' },
-  ],
-  'N06': [
-    { name: 'Mustafa Mohamad', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 8230, majority: 1450, percentage: 47.2, totalVoters: 24500, turnout: 73.4 } },
-    { name: 'Kamaruddin Ahmad', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-    { name: 'Zulkifli Salleh', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar' },
-  ],
-  'N07': [
-    { name: 'Lokman Abdul Aziz', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 7210, majority: 980, percentage: 43.5, totalVoters: 23200, turnout: 72.1 } },
-    { name: 'Faizal Ramli', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N08': [
-    { name: 'Teo Kok Seong', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 11540, majority: 4560, percentage: 61.3, totalVoters: 26200, turnout: 76.8 } },
-    { name: 'Lim Chin Yee', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N09': [
-    { name: 'Asna Amin', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 9830, majority: 3210, percentage: 55.2, totalVoters: 24800, turnout: 77.3 } },
-    { name: 'Mohd Razali Harun', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N10': [
-    { name: 'Arul Kumar Jambunathan', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 14230, majority: 6780, percentage: 65.4, totalVoters: 29800, turnout: 79.2 } },
-    { name: 'Leong Kim Wah', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N11': [
-    { name: 'Ketrina Tan Su Mei', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 12540, majority: 5890, percentage: 68.1, totalVoters: 25200, turnout: 77.9 } },
-    { name: 'Wong Chee Meng', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N12': [
-    { name: 'Ng Chin Tsai', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 11230, majority: 4230, percentage: 62.7, totalVoters: 24500, turnout: 76.4 } },
-    { name: 'Lee Kok Keong', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N13': [
-    { name: 'Aminuddin Harun', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 13240, majority: 4560, percentage: 58.9, totalVoters: 31200, turnout: 78.2 } },
-    { name: 'Mohd Rasyid Zainal', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N14': [
-    { name: 'Mohamad Rafie Abdul Malek', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 10890, majority: 3450, percentage: 54.2, totalVoters: 27800, turnout: 75.6 } },
-    { name: 'Ahmad Faizal Hassan', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N15': [
-    { name: 'Ismail Ahmad', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 7230, majority: 1120, percentage: 44.6, totalVoters: 22400, turnout: 73.8 } },
-    { name: 'Razali Abd Kadir', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-    { name: 'Hassanuddin Karim', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar' },
-  ],
-  'N16': [
-    { name: 'Abdul Rahim Othman', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 6890, majority: 1340, percentage: 45.3, totalVoters: 20800, turnout: 72.4 } },
-    { name: 'Mohd Nasir Ismail', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N17': [
-    { name: 'Ismail Lasim', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 6540, majority: 890, percentage: 42.8, totalVoters: 21400, turnout: 71.9 } },
-    { name: 'Zainal Abidin Mohd', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N18': [
-    { name: 'Nor Azman Mohamad', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 9450, majority: 2780, percentage: 51.6, totalVoters: 25600, turnout: 74.9 } },
-    { name: 'Mohd Ali Yusof', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-    { name: 'Osman Bakar', party: 'BN', partyLogo: '/flags/bn.svg', role: 'pencabar' },
-  ],
-  'N19': [
-    { name: 'Saiful Yazan Sulaiman', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 8120, majority: 1670, percentage: 46.2, totalVoters: 24000, turnout: 73.2 } },
-    { name: 'Md Nasir Hashim', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N20': [
-    { name: 'Mohd Faizal Ramli', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 10230, majority: 3120, percentage: 53.4, totalVoters: 26800, turnout: 76.1 } },
-    { name: 'Abdul Halim Samad', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N21': [
-    { name: 'Jimmy Lim Chee Yong', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 13450, majority: 5670, percentage: 64.8, totalVoters: 28600, turnout: 78.5 } },
-    { name: 'Ooi Chee Seng', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N22': [
-    { name: 'Siah Foo Cheng', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 11980, majority: 4560, percentage: 60.1, totalVoters: 27400, turnout: 77.3 } },
-    { name: 'Chong Wai Keat', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N23': [
-    { name: 'Yap Wee Leong', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 15230, majority: 7890, percentage: 72.3, totalVoters: 29200, turnout: 79.8 } },
-    { name: 'Koh Kim Swee', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N24': [
-    { name: 'Gunasekaran Ramasamy', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 12450, majority: 5120, percentage: 62.4, totalVoters: 27800, turnout: 77.6 } },
-    { name: 'Lee Hang Seng', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N25': [
-    { name: 'Tamat Ahmad', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 11230, majority: 2340, percentage: 48.7, totalVoters: 31800, turnout: 75.2 } },
-    { name: 'Zamri Omar', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar', lastElection: { year: 2023, votes: 8890, majority: 0, percentage: 38.5, totalVoters: 31800, turnout: 75.2 } },
-    { name: 'Syed Ibrahim', party: 'BN', partyLogo: '/flags/bn.svg', role: 'pencabar' },
-  ],
-  'N26': [
-    { name: 'Zaifulbahri Jaafar', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 7650, majority: 1230, percentage: 43.8, totalVoters: 24200, turnout: 72.9 } },
-    { name: 'Abdul Aziz Hassan', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N27': [
-    { name: 'Mohamad Hasan', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 11240, majority: 3450, percentage: 51.2, totalVoters: 30400, turnout: 74.8 } },
-    { name: 'Rosman Arifin', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-    { name: 'Azman Idris', party: 'PH', partyLogo: '/flags/ph.svg', role: 'pencabar' },
-  ],
-  'N28': [
-    { name: 'Ahmad Shukri Abdul Wahab', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 7230, majority: 980, percentage: 41.5, totalVoters: 23800, turnout: 71.4 } },
-    { name: 'Mohd Saiful Aziz', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N29': [
-    { name: 'Yap Yee Vong', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 10560, majority: 3890, percentage: 58.9, totalVoters: 24800, turnout: 76.5 } },
-    { name: 'Khoo Seng Hooi', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N30': [
-    { name: 'Ean Yong Hian Wah', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 12890, majority: 5340, percentage: 63.2, totalVoters: 28200, turnout: 78.1 } },
-    { name: 'Wong Soon Heng', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N31': [
-    { name: 'Abdul Razak Abdul Rahman', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 8450, majority: 1560, percentage: 46.1, totalVoters: 25200, turnout: 73.5 } },
-    { name: 'Mohd Azhar Ibrahim', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N32': [
-    { name: 'Mohan Rajagopal', party: 'PH', partyLogo: '/flags/ph.svg', role: 'penyandang', lastElection: { year: 2023, votes: 11230, majority: 3450, percentage: 52.8, totalVoters: 29600, turnout: 75.9 } },
-    { name: 'Zainal Abidin Latif', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-    { name: 'Vijay Kumar', party: 'BN', partyLogo: '/flags/bn.svg', role: 'pencabar' },
-  ],
-  'N33': [
-    { name: 'Mohd Rashid Mohamad', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 7890, majority: 1120, percentage: 43.4, totalVoters: 24800, turnout: 72.6 } },
-    { name: 'Mokhtar Ismail', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N34': [
-    { name: 'Abdul Samad Ibrahim', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 8340, majority: 1780, percentage: 45.6, totalVoters: 25400, turnout: 73.1 } },
-    { name: 'Ibrahim Din', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N35': [
-    { name: 'Abdul Razak Abdul', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 7560, majority: 1340, percentage: 44.2, totalVoters: 23600, turnout: 72.4 } },
-    { name: 'Mohd Shukri Ahmad', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-  'N36': [
-    { name: 'Mustafa Daud', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang', lastElection: { year: 2023, votes: 8120, majority: 1560, percentage: 45.8, totalVoters: 24400, turnout: 72.8 } },
-    { name: 'Haron Jantan', party: 'PN', partyLogo: '/flags/pn.svg', role: 'pencabar' },
-  ],
-}
+// Real candidate data from ElectionData.MY (SPR Open Data)
+// PRU 2022 (GE15) + PRN 2023 results + PRN 2026 candidates
+import realCandidatesData from '../../data/kv-output/candidates-real.json'
+import realDemographicsData from '../../data/kv-output/demographics-real.json'
 
 const defaultCandidates = [
   { name: 'Calon A', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang' as const },
@@ -359,7 +195,10 @@ function getMockValue(key: string) {
   }
   if (key.startsWith('candidates:')) {
     const code = key.split(':')[1]
-    return mockCandidates[code] || defaultCandidates
+    // Try real data first, fall back to defaults
+    const realData = (realCandidatesData as Record<string, any[]>)[code]
+    if (realData) return realData
+    return defaultCandidates
   }
   if (key.startsWith('comments:')) {
     const code = key.split(':')[1]
@@ -369,5 +208,19 @@ function getMockValue(key: string) {
 }
 
 export function getMockDemographics(code: string) {
+  // Try real data first, fall back to mock
+  const realData = (realDemographicsData as Record<string, any>)[code]
+  if (realData) {
+    return {
+      malay: realData.malay || 55,
+      chinese: realData.chinese || 25,
+      indian: realData.indian || 15,
+      others: realData.others || 5,
+      medianIncome: realData.medianIncome,
+      gini: realData.gini,
+      poverty: realData.poverty,
+      totalElectors: realData.totalElectors,
+    }
+  }
   return mockDemographics[code] || defaultDemographics
 }

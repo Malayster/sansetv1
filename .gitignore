@@ -53,3 +53,4 @@ dist/
 # unlighthouse
 .unlighthouse/
 data/
+data/*.csv
