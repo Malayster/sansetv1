@@ -14,17 +14,22 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
   return regions.map(r => {
   const elections = r.history?.elections?.filter(e => e.year >= 2018) || []
   const sorted = [...elections].sort((a, b) => a.year - b.year)
-  const swings: Record<string, { from: number; to: number }> = {}
-  for (const e of sorted) {
-  for (const c of e.candidates || []) {
-  if (!swings[c.party]) swings[c.party] = { from: 0, to: 0 }
-  swings[c.party].to = c.percentage || 0
-  }
-  }
-  // Calculate change from first to last
+  if (sorted.length < 2) return { code: r.code, name: r.name, changes: [], firstYear: 0, lastYear: 0, totalChange: 0 }
+
+  const first = sorted[0]
+  const last = sorted[sorted.length - 1]
+  const firstMap: Record<string, number> = {}
+  const lastMap: Record<string, number> = {}
+  for (const c of first.candidates || []) firstMap[c.party] = c.percentage || 0
+  for (const c of last.candidates || []) lastMap[c.party] = c.percentage || 0
+
+  // Only parties contesting in BOTH elections
   const changes: { party: string; from: number; to: number; change: number }[] = []
-  for (const [party, data] of Object.entries(swings)) {
-  changes.push({ party, ...data, change: Math.round((data.to - data.from) * 10) / 10 })
+  for (const [party, to] of Object.entries(lastMap)) {
+    if (firstMap[party] != null && firstMap[party] !== to) {
+      const from = firstMap[party]
+      changes.push({ party, from, to, change: Math.round((to - from) * 10) / 10 })
+    }
   }
   changes.sort((a, b) => Math.abs(b.change) - Math.abs(a.change))
   const inc = r.candidates?.find(c => c.role === 'penyandang')
@@ -32,8 +37,9 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
   code: r.code,
   name: r.name,
   party: inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || '',
-  changes: changes.slice(0, 3),
-  lastYear: sorted[sorted.length - 1]?.year || 2023,
+  changes: changes.slice(0, 5),
+  firstYear: first.year,
+  lastYear: last.year,
   totalChange: changes.reduce((sum, c) => sum + Math.abs(c.change), 0),
   }
   }).filter(d => d.changes.length > 0 && d.totalChange > 0)
@@ -41,6 +47,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
   }, [regions])
 
   const selected = selectedDun ? swingData.find(d => d.code === selectedDun) : swingData[0]
+  const xMax = selected ? Math.ceil(Math.max(...selected.changes.map(c => Math.abs(c.change)), 5) / 5) * 5 : 30
 
   return (
   <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
@@ -48,7 +55,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
   <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
   🔄 Aliran Undi (Swing)
   </h3>
-  <span className="text-[10px] text-gray-400">Perubahan % dari PRU 2018 → PRN 2023</span>
+  <span className="text-[10px] text-gray-400">Perubahan % dari {selected?.firstYear || '—'} → {selected?.lastYear || '—'}</span>
   </div>
 
   {/* DUN selector chips */}
@@ -74,15 +81,15 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
   <span className="font-bold text-[13px] text-gray-800">{selected.code}</span>
   <span className="text-gray-500 text-[11px]">—</span>
   <span className="text-gray-600 text-[11px]">{selected.name}</span>
-  <span className={`text-[10px] font-bold ${PARTY_COLORS[selected.party] || 'text-gray-500'}`}>
-  <img src={PARTY_FLAGS[selected.party] || '/flags/bebas.svg'} className="w-5 h-auto inline-block rounded border border-gray-300 mr-1" />
+  <span className={`text-[10px] font-bold ${PARTY_COLORS[selected.party || ''] || 'text-gray-500'}`}>
+  <img src={PARTY_FLAGS[selected.party || ''] || '/flags/bebas.svg'} className="w-5 h-auto inline-block rounded border border-gray-300 mr-1" />
   {selected.party}
   </span>
   </div>
   <ResponsiveContainer width="100%" height="100%">
   <BarChart data={selected.changes} layout="vertical" margin={{ top: 5, right: 60, left: 40, bottom: 5 }}>
   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" horizontal={false} />
-  <XAxis type="number" tick={{ fontSize: 10 }} tickFormatter={v => `${v > 0 ? '+' : ''}${v}%`} domain={[-30, 30]} />
+  <XAxis type="number" tick={{ fontSize: 10 }} tickFormatter={v => `${v > 0 ? '+' : ''}${v}%`} domain={[-xMax, xMax]} />
   <YAxis type="category" dataKey="party" tick={{ fontSize: 11, fontWeight: 600 }} width={50} />
   <Tooltip
   content={({ active, payload }) => {
@@ -91,7 +98,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
   return (
   <div className="bg-white border border-gray-200 rounded-lg shadow-lg px-3 py-2 text-[11px]">
   <div className="font-bold">{d.party}</div>
-  <div className="text-gray-500">2018: {d.from}% → 2023: {d.to}%</div>
+  <div className="text-gray-500">{selected.firstYear}: {d.from}% → {selected.lastYear}: {d.to}%</div>
   <div className={`font-bold ${d.change >= 0 ? 'text-red-600' : 'text-gray-600'}`}>
   {d.change >= 0 ? '+' : ''}{d.change}%
   </div>
@@ -99,17 +106,17 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
   )
   }}
   />
-  <Bar dataKey="from" fill="#e5e7eb" stackId="a" name="PRU 2018" />
-  <Bar dataKey="to" stackId="a" name="PRN 2023">
+  <Bar dataKey="change" name="Perubahan %" radius={[0, 4, 4, 0]}>
   {selected.changes.map((entry, idx) => (
-  <Cell key={idx} fill={hex[entry.party] || '#6b7280'} />
+  <Cell key={idx} fill={entry.change >= 0 ? (hex[entry.party] || '#6b7280') : '#d1d5db'} />
   ))}
   </Bar>
   </BarChart>
   </ResponsiveContainer>
   <div className="flex justify-center gap-4 text-[10px] text-gray-400 mt-1">
-  <span><span className="inline-block w-3 h-2 bg-gray-200 rounded mr-1" />PRU 2018</span>
-  <span><span className="inline-block w-3 h-2 bg-red-600 rounded mr-1" />PRN 2023</span>
+  <span className="text-red-600 font-medium">+ naik</span>
+  <span className="text-gray-400">— tiada perubahan</span>
+  <span className="text-gray-400 font-medium">▼ turun (kelabu)</span>
   </div>
   </div>
   )}
