@@ -20,10 +20,9 @@ const ElectionMap = dynamic(() => import('@/ui/election-map'), {
   loading: () => <div className="w-full h-[480px] bg-gray-100 dark:bg-gray-800 animate-pulse rounded-xl flex items-center justify-center text-gray-400 text-[12px]">Memuatkan peta...</div>,
 })
 
-type Tab = 'peta' | 'senarai' | 'analisis' | 'swing' | 'banding' | 'dewan' | 'simulasi'
+type Tab = 'senarai' | 'analisis' | 'swing' | 'banding' | 'dewan' | 'simulasi'
 
 const TABS: { key: Tab; label: string; icon: string }[] = [
-  { key: 'peta', label: 'Peta', icon: '🗺️' },
   { key: 'senarai', label: 'DUN', icon: '📋' },
   { key: 'analisis', label: 'Analisis', icon: '📊' },
   { key: 'swing', label: 'Swing', icon: '🔄' },
@@ -40,7 +39,7 @@ export default function ElectionDashboard({
   election: ElectionInfo; regions: RegionWithData[]
 }) {
   const [selected, setSelected] = useState<RegionWithData | null>(null)
-  const [tab, setTab] = useState<Tab>('peta')
+  const [tab, setTab] = useState<Tab>('senarai')
   const [timelineYear, setTimelineYear] = useState<number | null>(null)
   const searchParams = useSearchParams()
   const { theme } = useTheme()
@@ -50,17 +49,17 @@ export default function ElectionDashboard({
     const dun = searchParams?.get('dun')
     if (dun) {
       const r = regions.find(x => x.code === dun.toUpperCase())
-      if (r) { setSelected(r); setTab('peta') }
+      if (r) setSelected(r)
     }
   }, [searchParams, regions])
 
   useEffect(() => {
-    if (selected && tab === 'peta') {
+    if (selected) {
       const url = new URL(window.location.href)
       url.searchParams.set('dun', selected.code)
       window.history.replaceState({}, '', url.toString())
     }
-  }, [selected, tab])
+  }, [selected])
 
   const dunRegions = useMemo(() =>
     regions.filter(r => r.code.startsWith('N')).sort((a, b) => a.code.localeCompare(b.code)),
@@ -78,13 +77,12 @@ export default function ElectionDashboard({
         </p>
       )}
 
-      {/* ═══════ Executive Summary ═══════ */}
-      <ExecutiveSummary regions={dunRegions} />
-
-      {/* ═══════ Insights Row ═══════ */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <MajorityTracker regions={dunRegions} />
-        <KeyRaces regions={dunRegions} />
+      {/* ═══════ Peta Kawasan — ATAS SEKALI ═══════ */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
+        <div className="lg:col-span-2">
+          <ElectionMap regions={regions} selected={selected} onSelect={setSelected} geoJsonFile={election.geoJsonFile || 'pru_parlimen.json'} activeYear={timelineYear} />
+        </div>
+        <ElectionSidebar region={selected} />
       </div>
 
       {/* ═══════ Timeline Slider ═══════ */}
@@ -138,16 +136,16 @@ export default function ElectionDashboard({
         ))}
       </div>
 
-      {/* ═══════ Tab Content ═══════ */}
-      {tab === 'peta' && (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2">
-            <ElectionMap regions={regions} selected={selected} onSelect={setSelected} geoJsonFile={election.geoJsonFile || 'pru_parlimen.json'} activeYear={timelineYear} />
-          </div>
-          <ElectionSidebar region={selected} />
-        </div>
-      )}
+      {/* ═══════ Executive Summary ═══════ */}
+      <ExecutiveSummary regions={dunRegions} />
 
+      {/* ═══════ Insights Row ═══════ */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+        <MajorityTracker regions={dunRegions} />
+        <KeyRaces regions={dunRegions} />
+      </div>
+
+      {/* ═══════ Tab Content ═══════ */}
       {tab === 'senarai' && <ElectionDunList regions={dunRegions} />}
       {tab === 'analisis' && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
