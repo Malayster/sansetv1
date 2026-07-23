@@ -13,51 +13,58 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
   const [target, setTarget] = useState<SwingTarget>('all')
 
   const result = useMemo(() => {
-  // Simulate: swing% of votes move FROM the target party TO the next-largest competitor
   const counts: Record<string, number> = {}
   const details: { code: string; name: string; from: string; to: string; flipped: boolean }[] = []
 
   for (const r of regions) {
-  const last = r.history?.elections?.slice(-1)[0]
-  const inc = r.candidates?.find(c => c.role === 'penyandang')
-  const currParty = inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
+    const last = r.history?.elections?.slice(-1)[0]
+    const inc = r.candidates?.find(c => c.role === 'penyandang')
+    const currParty = inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
 
-  if (!last || !currParty) {
-  counts[currParty] = (counts[currParty] || 0) + 1
-  continue
-  }
+    if (!last || !currParty || !last.candidates?.length) {
+      counts[currParty] = (counts[currParty] || 0) + 1
+      continue
+    }
 
-  // Find the swing effect on this DUN
-  let newParty = currParty
-  let flipped = false
+    // Total votes in this DUN
+    const totalVotes = last.candidates.reduce((sum, c) => sum + (c.votes || 0), 0)
+    if (totalVotes === 0) {
+      counts[currParty] = (counts[currParty] || 0) + 1
+      continue
+    }
 
-  if (target === 'all' || target === currParty) {
-  // Find the closest competitor
-  const sorted = [...last.candidates].sort((a, b) => (b.votes || 0) - (a.votes || 0))
-  const winner = sorted[0]
-  const runnerUp = sorted[1]
-  if (winner && runnerUp && runnerUp.party !== currParty) {
-  const margin = ((winner.votes || 0) - (runnerUp.votes || 0)) / (winner.votes || 1) * 100
-  if (swing > margin) {
-  newParty = runnerUp.party
-  flipped = true
-  }
-  }
-  }
+    let newParty = currParty
+    let flipped = false
 
-  counts[newParty] = (counts[newParty] || 0) + 1
-  if (flipped) {
-  details.push({ code: r.code, name: r.name, from: currParty, to: newParty, flipped })
-  }
+    if (target === 'all' || target === currParty) {
+      // Find target candidate and best competitor (not the target)
+      const targetCandidate = last.candidates.find(c => c.party === currParty)
+      const competitors = last.candidates.filter(c => c.party !== currParty)
+      const bestCompetitor = competitors.sort((a, b) => (b.votes || 0) - (a.votes || 0))[0]
+
+      if (targetCandidate && bestCompetitor && (targetCandidate.votes || 0) > 0) {
+        const voteGap = (targetCandidate.votes || 0) - (bestCompetitor.votes || 0)
+        const swingVotes = totalVotes * (swing / 100)
+        if (swingVotes > voteGap) {
+          newParty = bestCompetitor.party
+          flipped = true
+        }
+      }
+    }
+
+    counts[newParty] = (counts[newParty] || 0) + 1
+    if (flipped) {
+      details.push({ code: r.code, name: r.name, from: currParty, to: newParty, flipped })
+    }
   }
 
   const sorted = Object.entries(counts).sort(([, a], [, b]) => b - a)
   return {
-  seats: counts,
-  flipped: details.sort((a, b) => a.code.localeCompare(b.code)),
-  maxParty: sorted[0]?.[0] || '',
-  maxCount: sorted[0]?.[1] || 0,
-  total: regions.length,
+    seats: counts,
+    flipped: details.sort((a, b) => a.code.localeCompare(b.code)),
+    maxParty: sorted[0]?.[0] || '',
+    maxCount: sorted[0]?.[1] || 0,
+    total: regions.length,
   }
   }, [regions, swing, target])
 
@@ -69,7 +76,7 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
   <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
   🎯 Swingometer
   </h3>
-  <span className="text-[10px] text-gray-400">Simulasi peralihan undi</span>
+  <span className="text-[10px] text-gray-400">Simulasi: {swing}% undi beralih dari parti sasaran</span>
   </div>
 
   <div className="p-4 space-y-4">
