@@ -77,6 +77,20 @@ export default function ElectionCharts({ regions }: Props) {
   )
   }
 
+  const incomeDomain = useMemo(() => {
+    const vals = scatterData.map(d => d.income).filter(Boolean)
+    if (!vals.length) return [0, 10000]
+    const min = Math.floor(Math.min(...vals) / 500) * 500
+    const max = Math.ceil(Math.max(...vals) / 500) * 500
+    return [min, max]
+  }, [scatterData])
+
+  const povDomain = useMemo(() => {
+    const vals = scatterData.map(d => d.poverty).filter(v => v != null && v > 0)
+    if (!vals.length) return [0, 10]
+    return [0, Math.ceil(Math.max(...vals))]
+  }, [scatterData])
+
   return (
   <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
   {/* Header */}
@@ -113,17 +127,17 @@ export default function ElectionCharts({ regions }: Props) {
   <YAxis tick={{ fontSize: 10 }} domain={[0, 100]} tickFormatter={v => `${v}%`} />
   <Tooltip content={<CustomTooltip />} />
   <Legend wrapperStyle={{ fontSize: '10px', paddingTop: '8px' }} />
-  <Bar dataKey="Melayu" stackId="a" fill="#dc2626" />
-  <Bar dataKey="Cina" stackId="a" fill="#2563eb" />
-  <Bar dataKey="India" stackId="a" fill="#ea580c" />
+  <Bar dataKey="Melayu" stackId="a" fill="#C41E3A" />
+  <Bar dataKey="Cina" stackId="a" fill="#FFC107" />
+  <Bar dataKey="India" stackId="a" fill="#1a1a1a" />
   </BarChart>
   </ResponsiveContainer>
   ) : view === 'poverty' ? (
   <ResponsiveContainer width="100%" height="100%">
   <ScatterChart margin={{ top: 10, right: 20, left: 0, bottom: 30 }}>
   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-  <XAxis dataKey="income" name="Pendapatan" tick={{ fontSize: 10 }} domain={[3000, 7500]} tickFormatter={v => `RM${v/1000}k`} label={{ value: 'Median Income (RM)', position: 'bottom', fontSize: 10, offset: 10 }} />
-  <YAxis dataKey="poverty" name="Kemiskinan" tick={{ fontSize: 10 }} domain={[0, 8]} tickFormatter={v => `${v}%`} label={{ value: 'Kadar Kemiskinan (%)', angle: -90, position: 'insideLeft', fontSize: 10, offset: 0 }} />
+  <XAxis dataKey="income" name="Pendapatan" tick={{ fontSize: 10 }} domain={incomeDomain} tickFormatter={v => `RM${(v/1000).toFixed(0)}k`} label={{ value: 'Median Income (RM)', position: 'bottom', fontSize: 10, offset: 10 }} />
+  <YAxis dataKey="poverty" name="Kemiskinan" tick={{ fontSize: 10 }} domain={povDomain} tickFormatter={v => `${v}%`} label={{ value: 'Kadar Kemiskinan (%)', angle: -90, position: 'insideLeft', fontSize: 10, offset: 0 }} />
   <ZAxis dataKey="totalElectors" range={[40, 400]} />
   <Tooltip content={<CustomTooltip />} />
   <Scatter data={scatterData.filter(d => d.poverty > 0)}>
@@ -138,7 +152,7 @@ export default function ElectionCharts({ regions }: Props) {
   <ResponsiveContainer width="100%" height="100%">
   <ScatterChart margin={{ top: 10, right: 20, left: 0, bottom: 30 }}>
   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-  <XAxis dataKey="income" name="Pendapatan" tick={{ fontSize: 10 }} domain={[3000, 7500]} tickFormatter={v => `RM${v/1000}k`} label={{ value: 'Median Income (RM)', position: 'bottom', fontSize: 10, offset: 10 }} />
+  <XAxis dataKey="income" name="Pendapatan" tick={{ fontSize: 10 }} domain={incomeDomain} tickFormatter={v => `RM${(v/1000).toFixed(0)}k`} label={{ value: 'Median Income (RM)', position: 'bottom', fontSize: 10, offset: 10 }} />
   <YAxis dataKey={view === 'income-malay' ? 'malay' : 'chinese'} name={view === 'income-malay' ? 'Melayu' : 'Cina'} tick={{ fontSize: 10 }} domain={[0, 100]} tickFormatter={v => `${v}%`} label={{ value: `${view === 'income-malay' ? '% Melayu' : '% Cina'}`, angle: -90, position: 'insideLeft', fontSize: 10, offset: 0 }} />
   <ZAxis dataKey="totalElectors" range={[40, 400]} />
   <Tooltip content={<CustomTooltip />} />

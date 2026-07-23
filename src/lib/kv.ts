@@ -209,8 +209,28 @@ function getMockValue(key: string) {
 }
 
 export function getMockDemographics(code: string) {
-  // Try real data first, fall back to mock
-  const realData = (realDemographicsData as Record<string, any>)[code]
+  // Map DUN codes to parent Parliament codes for demographics lookup
+  const dunToParlimen: Record<string, string> = {
+    // P126 Jelebu: N01-N04
+    N01: 'P126', N02: 'P126', N03: 'P126', N04: 'P126',
+    // P127 Jempol: N05-N08
+    N05: 'P127', N06: 'P127', N07: 'P127', N08: 'P127',
+    // P128 Seremban: N09-N14
+    N09: 'P128', N10: 'P128', N11: 'P128', N12: 'P128', N13: 'P128', N14: 'P128',
+    // P129 Kuala Pilah: N15-N19
+    N15: 'P129', N16: 'P129', N17: 'P129', N18: 'P129', N19: 'P129',
+    // P130 Rasah: N20-N22
+    N20: 'P130', N21: 'P130', N22: 'P130',
+    // P131 Rembau: N23-N26
+    N23: 'P131', N24: 'P131', N25: 'P131', N26: 'P131',
+    // P132 Port Dickson: N27-N30
+    N27: 'P132', N28: 'P132', N29: 'P132', N30: 'P132',
+    // P133 Tampin: N31-N36
+    N31: 'P133', N32: 'P133', N33: 'P133', N34: 'P133', N35: 'P133', N36: 'P133',
+  }
+
+  const lookupCode = dunToParlimen[code] || code
+  const realData = (realDemographicsData as Record<string, any>)[lookupCode]
   if (realData) {
     return {
       malay: realData.malay || 55,
