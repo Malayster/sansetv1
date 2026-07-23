@@ -53,7 +53,102 @@ election-sidebar.tsx / election-map.tsx
 |------|--------|-----------|
 | `data/electiondata-federal-ballots.csv` | lake.electiondata.my | All PRU results 1955-2022 (6,937 rows) |
 | `data/electiondata-nsn-ballots.csv` | lake.electiondata.my | All NSN DUN results 1959-2026 (1,183 rows) |
-| `data/tindak-parsed.json` | GitHub TindakMalaysia | Demographics + economic for all 222 parl. seats |
+| `data/tindak-parsed.json` | TindakMalaysia/General-Election-Data | Demographics + economic for all 222 parl. seats |
+
+---
+
+## SUMBER UTAMA: Tindak Malaysia @ GitHub
+
+**Organisasi:** https://github.com/TindakMalaysia
+**25 repositories** — semua data pilihan raya Malaysia dari 1955 hingga kini.
+
+### 1. General-Election-Data ⭐
+**URL:** https://github.com/TindakMalaysia/General-Election-Data
+**Isi:** Dataset demografi & ekonomi BUKAN keputusan pilihan raya per kawasan.
+- Demografi pengikut (2024, 2025) — umur, jantina, etnik
+- Data ekonomi per kawasan (Pendapatan, GINI, kemiskinan)
+- Saiz kawasan (Parlimen & DUN)
+- Peratusan keluar mengundi (2008-2018)
+- Undi pos
+- **Negeri Sembilan postal voting data added 20 Jul 2026**
+- **Format:** CSV
+- **Cara guna:** `scripts/fetch-tindak.ts` (existing) atau `scripts/generate-real-data.py`
+
+### 2. HISTORICAL-ELECTION-RESULTS ⭐ (22 stars, updated 22 Jul 2026!)
+**URL:** https://github.com/TindakMalaysia/HISTORICAL-ELECTION-RESULTS
+**Isi:** Keputusan pilihan raya Malaysia LENGKAP — semua tahun.
+- **1,962 commits** — sangat aktif, maintainer utama: daneshchacko
+- Liputan: 1955, 1959, 1964, 1969, 1974, 1978, 1982, 1986, 1990, 1995, 1999, 2004, 2008, 2013, 2018, 2022 (Federal)
+- Semua PRN negeri: 2023-PRN6 (6 negeri), 2022-Johor, 2021-Melaka, 2021-Sarawak, 2025-Sabah
+- **2026-JOHOR-STATE-ELECTIONS** + **2026-NEGERI-SEMBILAN-STATE-ELECTIONS**
+- Fail utama untuk PRN 2023 (6 negeri):
+  - `MALAYSIA_PRN6_2023_ELECTION_RESULTS.csv` (57 KB) — keputusan penuh
+  - `MALAYSIA_PRN6_2023_WINNING_CANDIDATES.csv` (22 KB) — calon menang
+  - `MALAYSIA_PRN6_2023_DUN_COMPOSITION.csv` (43 KB) — komposisi DUN
+  - `MALAYSIA_PRN6_2023_DUN_CANDIDATE_SEX_BREAKDOWN.csv` — jantina calon
+- **Format:** CSV
+- **Cara guna:** Muat turun CSV terus dari GitHub, kemudian proses dengan `scripts/generate-real-data.py`
+
+### 3. Peta & Sempadan (Shapefiles/GeoJSON)
+Tindak Malaysia ada repositori **per-state** untuk sempadan pilihan raya:
+
+| Negeri | Repo | GeoJSON |
+|--------|------|---------|
+| **Negeri Sembilan** | [Negeri-Sembilan-Maps](https://github.com/TindakMalaysia/Negeri-Sembilan-Maps) | `Negeri_Sembilan_DUN_2015.geojson` ✅ |
+| Selangor | [Selangor-Maps](https://github.com/TindakMalaysia/Selangor-Maps) ⭐22 | |
+| Johor | [Johor-Maps](https://github.com/TindakMalaysia/Johor-Maps) | |
+| Kedah | [Kedah-Maps](https://github.com/TindakMalaysia/Kedah-Maps) | |
+| Kelantan | [Kelantan-Maps](https://github.com/TindakMalaysia/Kelantan-Maps) | |
+| Melaka | [Malacca-Maps](https://github.com/TindakMalaysia/Malacca-Maps) | |
+| Pahang | [Pahang-Maps](https://github.com/TindakMalaysia/Pahang-Maps) | |
+| Penang | [Penang-Maps](https://github.com/TindakMalaysia/Penang-Maps) ⭐5 | |
+| Perak | [Perak-Maps](https://github.com/TindakMalaysia/Perak-Maps) | |
+| Perlis | [Perlis-Maps](https://github.com/TindakMalaysia/Perlis-Maps) | |
+| Sabah | [Sabah-Maps](https://github.com/TindakMalaysia/Sabah-Maps) | |
+| Terengganu | [Terengganu-Maps](https://github.com/TindakMalaysia/Terengganu-Maps) | |
+| WP KL/Putrajaya/Labuan | [Federal-Territories-Maps](https://github.com/TindakMalaysia/Federal-Territories-Maps) ⭐10 | |
+
+Setiap repositori mengandungi:
+- `*_DUN_2015.geojson` — Sempadan DUN (2015 delimitation)
+- `*_PAR_2015.geojson` — Sempadan Parlimen (2015 delimitation)
+- `*_DM_2015.geojson` — Daerah Mengundi (DM)
+- `*_PBT_2015.geojson` — Pihak Berkuasa Tempatan
+- Metadata dalam CSV
+
+### 4. Repositori Lain (berguna)
+
+| Repo | Tujuan |
+|------|--------|
+| [LOCAL-GOVERNMENT-ELECTIONS](https://github.com/TindakMalaysia/LOCAL-GOVERNMENT-ELECTIONS) | Pilihan Raya Kerajaan Tempatan |
+| [Historical-Electoral-Demographic-Data](https://github.com/TindakMalaysia/Historical-Electoral-Demographic-Data) | Data demografi pilihan raya bersejarah |
+| [Redelineation-Exercises](https://github.com/TindakMalaysia/Redelineation-Exercises) | Dataset persempadanan semula (untuk ERA) |
+| [Historical-Redelineation-Exercises-of-Malaysia](https://github.com/TindakMalaysia/Historical-Redelineation-Exercises-of-Malaysia) | Persempadanan semula bersejarah |
+| [Historical-Election-Boundaries-ARCHIVED-](https://github.com/TindakMalaysia/Historical-Election-Boundaries-ARCHIVED-) | Sempadan pilihan raya lama 1955-2018 (Unlicense) |
+| [National-Election-Results](https://github.com/TindakMalaysia/National-Election-Results) | Score sheets keputusan (Bahasa Melayu) |
+| [Election-Results](https://github.com/TindakMalaysia/Election-Results) | Laman web hasil pilihan raya (HTML) |
+| [By-Elections](https://github.com/TindakMalaysia/By-Elections) | Keputusan PRK (akan datang) |
+| [EC-Redelineation-Proposal-2016](https://github.com/TindakMalaysia/EC-Redelineation-Proposal-2016) | PDF cadangan persempadanan SPR 2016 |
+
+### Cara Muat Turun dari Tindak Malaysia
+
+```bash
+# Demografi terkini (raw GitHub)
+curl -sL "https://raw.githubusercontent.com/TindakMalaysia/General-Election-Data/master/2025%20ELECTORAL%20DEMOGRAPHICS/MALAYSIA_AUGUST_2025_PARLIAMENT_COMPOSITION.csv" -o data/tindak-2025-demographics.csv
+
+# Ekonomi
+curl -sL "https://raw.githubusercontent.com/TindakMalaysia/General-Election-Data/master/ECONOMIC_DATA_BY_CONSTITUENCY/KEY%20ECONOMIC%20DATA%20BY%20PARLIAMENTARY%20SEAT%20(2022).csv" -o data/tindak-2022-economic.csv
+
+# PRN 2023 results (6 negeri)
+curl -sL "https://raw.githubusercontent.com/TindakMalaysia/HISTORICAL-ELECTION-RESULTS/main/2023-PRN6-STATE-ELECTIONS/MALAYSIA_PRN6_2023_ELECTION_RESULTS.csv" -o data/tindak-prn6-2023-results.csv
+curl -sL "https://raw.githubusercontent.com/TindakMalaysia/HISTORICAL-ELECTION-RESULTS/main/2023-PRN6-STATE-ELECTIONS/MALAYSIA_PRN6_2023_WINNING_CANDIDATES.csv" -o data/tindak-prn6-2023-winners.csv
+curl -sL "https://raw.githubusercontent.com/TindakMalaysia/HISTORICAL-ELECTION-RESULTS/main/2023-PRN6-STATE-ELECTIONS/MALAYSIA_PRN6_2023_DUN_COMPOSITION.csv" -o data/tindak-prn6-2023-composition.csv
+
+# GeoJSON Negeri Sembilan (sempadan DUN)
+curl -sL "https://raw.githubusercontent.com/TindakMalaysia/Negeri-Sembilan-Maps/main/Negeri-Sembilan_DUN_2015/Negeri_Sembilan_DUN_2015.geojson" -o public/geojson/tindak-ns-dun-2015.geojson
+
+# GE15/PRU 2022 Parlimen results
+curl -sL "https://raw.githubusercontent.com/TindakMalaysia/HISTORICAL-ELECTION-RESULTS/main/2022-ELECTION-RESULTS/MALAYSIA_2022_PARLIAMENT_RESULTS.csv" -o data/tindak-ge15-results.csv
+```
 
 ---
 
