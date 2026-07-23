@@ -16,6 +16,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
+import { getKVValue, setKVValue } from '@/lib/kv'
+
+// KV namespace IDs — configure via env
+const NS_CANDIDATES = process.env.CF_KV_CANDIDATES || ''
+const NS_RESULTS = process.env.CF_KV_RESULTS || ''
+const NS_DEMOGRAPHICS = process.env.CF_KV_DEMOGRAPHICS || ''
+
+const KV_ENABLED = !!(process.env.CLOUDFLARE_ACCOUNT_ID && process.env.CLOUDFLARE_API_TOKEN)
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kv-output')
 const HIST_FILE = path.join(DATA_DIR, 'historical-results.json')
@@ -46,6 +54,34 @@ function writeJSON(filePath: string, data: any) {
   const dir = path.dirname(filePath)
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
+}
+
+// ─── KV read-through cache (falls back to static JSON) ───
+async function readLedger(file: string, nsId: string, kvPrefix: string): Promise<any> {
+  // 1. Try KV first (live data) when enabled
+  if (KV_ENABLED && nsId) {
+    try {
+      const all = await getKVValue(nsId, `${kvPrefix}:__index__`)
+      if (all && typeof all === 'object' && Object.keys(all).length > 0) {
+        return all
+      }
+    } catch { /* fall through */ }
+  }
+  // 2. Fall back to static JSON (default + pre-validated)
+  return readJSON(file)
+}
+
+// ─── Write path: validate → write KV → mirror to local JSON ───
+async function persistJSON(file: string, data: any, nsId: string, kvPrefix: string) {
+  // 1. Write to local JSON first (roll-back source of truth)
+  writeJSON(file, data)
+  // 2. Mirror to KV when configured
+  if (KV_ENABLED && nsId) {
+    try {
+      const res = await setKVValue(nsId, `${kvPrefix}:__index__`, data)
+      if (!res.ok) console.warn('KV write failed:', res.error)
+    } catch (e) { console.warn('KV write error:', e) }
+  }
 }
 
 interface ValidationError { field: string; message: string }
@@ -159,7 +195,7 @@ export async function GET(req: NextRequest) {
       }
     }).filter(c => c.dunCount > 0)
 
-    return NextResponse.json({ states: configs })
+    return NextResponse.json({ states: configs, kv: { enabled: KV_ENABLED, namespaces: { candidates: !!NS_CANDIDATES, results: !!NS_RESULTS, demographics: !!NS_DEMOGRAPHICS } } })
   }
 
   // Get all DUN regions for a state
@@ -175,9 +211,9 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'No GeoJSON found for ' + stateShort }, { status: 404 })
     }
 
-    const candidates = readJSON(CANDIDATES_FILE)
-    const demographics = readJSON(DEMOGRAPHICS_FILE)
-    const historical = readJSON(HIST_FILE)
+    const candidates = await readLedger(CANDIDATES_FILE, NS_CANDIDATES, 'candidates')
+    const demographics = await readLedger(DEMOGRAPHICS_FILE, NS_DEMOGRAPHICS, 'demographics')
+    const historical = await readLedger(HIST_FILE, NS_RESULTS, 'results')
 
     const regions = features.map((f: any) => {
       const p = f.properties
@@ -202,9 +238,9 @@ export async function GET(req: NextRequest) {
 
   // Get single region by code
   if (code) {
-    const candidates = readJSON(CANDIDATES_FILE)
-    const demographics = readJSON(DEMOGRAPHICS_FILE)
-    const historical = readJSON(HIST_FILE)
+    const candidates = await readLedger(CANDIDATES_FILE, NS_CANDIDATES, 'candidates')
+    const demographics = await readLedger(DEMOGRAPHICS_FILE, NS_DEMOGRAPHICS, 'demographics')
+    const historical = await readLedger(HIST_FILE, NS_RESULTS, 'results')
     return NextResponse.json({
       code,
       candidates: candidates[code] || [],
@@ -231,13 +267,13 @@ export async function PUT(req: NextRequest) {
     }
 
     if (candidates) {
-      const allCandidates = readJSON(CANDIDATES_FILE)
+      const allCandidates = await readLedger(CANDIDATES_FILE, NS_CANDIDATES, 'candidates')
       allCandidates[code] = candidates
-      writeJSON(CANDIDATES_FILE, allCandidates)
+      await persistJSON(CANDIDATES_FILE, allCandidates, NS_CANDIDATES, 'candidates')
     }
 
     if (election) {
-      const allHistorical = readJSON(HIST_FILE)
+      const allHistorical = await readLedger(HIST_FILE, NS_RESULTS, 'results')
       if (!allHistorical[code]) {
         allHistorical[code] = {
           code,
@@ -263,13 +299,13 @@ export async function PUT(req: NextRequest) {
         allHistorical[code].elections.push(entry)
       }
       allHistorical[code].elections.sort((a: any, b: any) => a.year - b.year)
-      writeJSON(HIST_FILE, allHistorical)
+      await persistJSON(HIST_FILE, allHistorical, NS_RESULTS, 'results')
     }
 
     if (demographics) {
-      const allDemographics = readJSON(DEMOGRAPHICS_FILE)
+      const allDemographics = await readLedger(DEMOGRAPHICS_FILE, NS_DEMOGRAPHICS, 'demographics')
       allDemographics[code] = { ...allDemographics[code], ...demographics }
-      writeJSON(DEMOGRAPHICS_FILE, allDemographics)
+      await persistJSON(DEMOGRAPHICS_FILE, allDemographics, NS_DEMOGRAPHICS, 'demographics')
     }
 
     return NextResponse.json({ ok: true, code })

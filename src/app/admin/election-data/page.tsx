@@ -46,6 +46,7 @@ export default function ElectionDataAdmin() {
   const [error, setError] = useState('')
   const [saving, setSaving] = useState(false)
   const [notification, setNotification] = useState<{ type: 'success' | 'error'; msg: string } | null>(null)
+  const [kvStatus, setKvStatus] = useState<{ enabled: boolean; namespaces: any } | null>(null)
 
   // Load list of states
   useEffect(() => { fetchStates() }, [])
@@ -58,6 +59,7 @@ export default function ElectionDataAdmin() {
       const json = await res.json()
       if (json.error) throw new Error(json.error)
       setStates(json.states || [])
+      setKvStatus(json.kv || null)
     } catch (e: any) {
       setError(e.message || 'Gagal memuat senarai negeri')
     } finally {
@@ -140,7 +142,17 @@ export default function ElectionDataAdmin() {
             <h1 className="text-3xl font-bold text-putih">🗳️ Admin Data Pilihan Raya</h1>
             <p className="text-putih/40 text-sm mt-1">Tambah / edit calon, undi & demografi untuk semua negeri</p>
           </div>
-          <a href="/admin" className="text-putih/60 hover:text-merah text-sm transition">← Sanity Studio</a>
+          <div className="flex items-center gap-3">
+            {kvStatus && (
+              <span className={`text-xs px-2.5 py-1 rounded-full border ${kvStatus.enabled
+                ? 'bg-green-500/15 border-green-500/30 text-green-400'
+                : 'bg-putih/5 border-putih/20 text-putih/50'}`}
+                  title={kvStatus.enabled ? 'Cloudflare KV aktif — write-through enabled' : 'Local mode: JSON static only'}>
+                {kvStatus.enabled ? '☁️ KV Aktif' : '💾 Local JSON'}
+              </span>
+            )}
+            <a href="/admin" className="text-putih/60 hover:text-merah text-sm transition">← Sanity Studio</a>
+          </div>
         </div>
 
         {/* Notification */}
