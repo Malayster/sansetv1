@@ -74,15 +74,7 @@ export default function ElectionDashboard({
         </p>
       )}
 
-      {/* ═══════ Peta Kawasan — ATAS SEKALI ═══════ */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
-        <div className="lg:col-span-2">
-          <ElectionMap regions={regions} selected={selected} onSelect={setSelected} geoJsonFile={election.geoJsonFile || 'pru_parlimen.json'} />
-        </div>
-        <ElectionSidebar region={selected} />
-      </div>
-
-      {/* ═══════ Tab Navigation ═══════ */}
+      {/* ═══════ Tab Navigation + Content ═══════ */}
       <div className="flex gap-1 mb-4 bg-gray-100/80 dark:bg-gray-800/80 backdrop-blur-sm p-1 rounded-xl w-fit shadow-sm border border-gray-200/50 dark:border-gray-700/50 overflow-x-auto">
         {TABS.map(t => (
           <button key={t.key} onClick={() => setTab(t.key)}
@@ -98,31 +90,40 @@ export default function ElectionDashboard({
         ))}
       </div>
 
-      {/* ═══════ Executive Summary ═══════ */}
-      <ExecutiveSummary regions={dunRegions} />
-
-      {/* ═══════ Insights Row ═══════ */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        <MajorityTracker regions={dunRegions} />
-        <KeyRaces regions={dunRegions} />
-      </div>
-
-      {/* ═══════ Tab Content ═══════ */}
-      {tab === 'senarai' && <ElectionDunList regions={dunRegions} />}
-      {tab === 'analisis' && (
+      {/* ═══════ Content mengikut Tab ═══════ */}
+      <div className="space-y-4">
+        {/* Semua tab papar Peta Kawasan & Sidebar */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div className="lg:col-span-2 space-y-4">
-            <ElectionCharts regions={dunRegions} />
+          <div className="lg:col-span-2">
+            <ElectionMap regions={regions} selected={selected} onSelect={setSelected} geoJsonFile={election.geoJsonFile || 'pru_parlimen.json'} />
           </div>
-          <div className="space-y-4">
-            <PostalVotePanel />
-          </div>
+          <ElectionSidebar region={selected} />
         </div>
-      )}
-      {tab === 'swing' && <ElectionSwing regions={dunRegions} />}
-      {tab === 'banding' && <ElectionCompare regions={dunRegions} />}
-      {tab === 'dewan' && <SemiCircleView regions={dunRegions} />}
-      {tab === 'simulasi' && <Swingometer regions={dunRegions} />}
+
+        {/* Insights + Tab Content */}
+        <ExecutiveSummary regions={dunRegions} />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <MajorityTracker regions={dunRegions} />
+          <KeyRaces regions={dunRegions} />
+        </div>
+
+        {tab === 'senarai' && <ElectionDunList regions={dunRegions} />}
+        {tab === 'analisis' && (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="lg:col-span-2 space-y-4">
+              <ElectionCharts regions={dunRegions} />
+            </div>
+            <div className="space-y-4">
+              <PostalVotePanel />
+            </div>
+          </div>
+        )}
+        {tab === 'swing' && <ElectionSwing regions={dunRegions} />}
+        {tab === 'banding' && <ElectionCompare regions={dunRegions} />}
+        {tab === 'dewan' && <SemiCircleView regions={dunRegions} />}
+        {tab === 'simulasi' && <Swingometer regions={dunRegions} />}
+      </div>
     </div>
   )
 }
