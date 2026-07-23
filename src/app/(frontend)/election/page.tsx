@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { getActiveElections, getElectionRegions } from '@/lib/election-server'
-import { getKVValue, getMockDemographics } from '@/lib/kv'
+import { getKVValue, getMockDemographics, getHistoricalResults } from '@/lib/kv'
 import ElectionPageClient from './ElectionPageClient'
 import type { ElectionInfo, RegionWithData } from '@/types/election'
 
@@ -13,6 +13,7 @@ export const revalidate = 120
 
 async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithData[]> {
   const regions = await getElectionRegions(election.geoJsonFile)
+  const historicalData = getHistoricalResults()
   return Promise.all(
     regions.map(async (region) => {
       const [sentiment, candidates] = await Promise.all([
@@ -24,6 +25,7 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
         sentiment,
         candidates: candidates || [],
         demographics: getMockDemographics(region.code),
+        history: (historicalData as Record<string, any>)[region.code] || undefined,
       }
     }),
   )

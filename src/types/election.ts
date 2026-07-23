@@ -33,6 +33,8 @@ export interface CandidateData {
   role: 'penyandang' | 'pencabar'
   profile?: string
   wikipediaUrl?: string
+  newsSource?: string
+  newsUrl?: string
   lastElection?: {
     year: number
     votes: number
@@ -41,6 +43,45 @@ export interface CandidateData {
     totalVoters: number
     turnout: number
   }
+}
+
+export interface HistoricalElectionResult {
+  year: number
+  electionName: string
+  candidates: {
+    name: string
+    party: string
+    votes: number
+    percentage: number
+    result: string
+  }[]
+  winner: string
+  winnerParty: string
+  majority: number
+  totalVoters?: number
+  turnout?: number
+}
+
+export interface HistoricalDemographics {
+  year: number
+  malay: number
+  chinese: number
+  indian: number
+  others: number
+  totalElectors: number
+  maleElectors?: number
+  femaleElectors?: number
+  medianIncome?: number
+  gini?: number
+  poverty?: number
+}
+
+export interface SeatHistory {
+  code: string
+  name: string
+  state: string
+  elections: HistoricalElectionResult[]
+  demographics: HistoricalDemographics[]
 }
 
 export interface SentimentData {
@@ -91,4 +132,5 @@ export interface RegionWithData extends ElectionRegion {
     femaleElectors?: number
     ethnicity?: string
   }
+  history?: SeatHistory
 }

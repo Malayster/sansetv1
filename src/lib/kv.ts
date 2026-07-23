@@ -91,6 +91,7 @@ const mockSentiment: Record<string, any> = {
 // PRU 2022 (GE15) + PRN 2023 results + PRN 2026 candidates
 import realCandidatesData from '../../data/kv-output/candidates-real.json'
 import realDemographicsData from '../../data/kv-output/demographics-real.json'
+import realHistoricalResults from '../../data/kv-output/historical-results.json'
 
 const defaultCandidates = [
   { name: 'Calon A', party: 'BN', partyLogo: '/flags/bn.svg', role: 'penyandang' as const },
@@ -223,4 +224,8 @@ export function getMockDemographics(code: string) {
     }
   }
   return mockDemographics[code] || defaultDemographics
+}
+
+export function getHistoricalResults() {
+  return realHistoricalResults as Record<string, any>
 }

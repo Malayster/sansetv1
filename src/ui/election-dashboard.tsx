@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import ElectionSidebar from '@/ui/election-sidebar'
+import ElectionDunList from '@/ui/election-dun-list'
 import type { ElectionInfo, RegionWithData } from '@/types/election'
 
 const ElectionMap = dynamic(() => import('@/ui/election-map'), {
@@ -74,6 +75,11 @@ export default function ElectionDashboard({
         </div>
         <ElectionSidebar region={selected} />
       </div>
+
+      {/* DUN List — full width below the map */}
+      {election.electionType === 'prn' && (
+        <ElectionDunList regions={regions} />
+      )}
     </div>
   )
 }
