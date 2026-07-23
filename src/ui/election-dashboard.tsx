@@ -92,7 +92,7 @@ export default function ElectionDashboard({
 
       {/* ═══════ Content mengikut Tab ═══════ */}
       <div className="space-y-4">
-        {/* Semua tab papar Peta Kawasan & Sidebar */}
+        {/* 🗺️ Peta Kawasan + Sidebar — semua tab */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="lg:col-span-2">
             <ElectionMap regions={regions} selected={selected} onSelect={setSelected} geoJsonFile={election.geoJsonFile || 'pru_parlimen.json'} />
@@ -100,14 +100,7 @@ export default function ElectionDashboard({
           <ElectionSidebar region={selected} />
         </div>
 
-        {/* Insights + Tab Content */}
-        <ExecutiveSummary regions={dunRegions} />
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <MajorityTracker regions={dunRegions} />
-          <KeyRaces regions={dunRegions} />
-        </div>
-
+        {/* 📋 Content khusus tab */}
         {tab === 'senarai' && <ElectionDunList regions={dunRegions} />}
         {tab === 'analisis' && (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -123,6 +116,14 @@ export default function ElectionDashboard({
         {tab === 'banding' && <ElectionCompare regions={dunRegions} />}
         {tab === 'dewan' && <SemiCircleView regions={dunRegions} />}
         {tab === 'simulasi' && <Swingometer regions={dunRegions} />}
+
+        {/* 📊 Insights — semua tab */}
+        <ExecutiveSummary regions={dunRegions} />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <MajorityTracker regions={dunRegions} />
+          <KeyRaces regions={dunRegions} />
+        </div>
       </div>
     </div>
   )
