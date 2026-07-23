@@ -24,7 +24,7 @@ function CandidateCard({ c }: { c: CandidateData }) {
         <p className="text-[14px] font-bold text-gray-800 leading-tight">{c.name}</p>
         <div className="flex items-center gap-1.5 mt-0.5">
           <span className="text-[11px] text-gray-500">{partyNames[c.party] || c.party}</span>
-          <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${isIncumbent ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-500'}`}>
+          <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${isIncumbent ? 'bg-red-100 text-red-700' : 'bg-gray-100 text-gray-500'}`}>
             {isIncumbent ? 'Penyandang' : 'Pencabar'}
           </span>
         </div>
@@ -110,8 +110,8 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
           <div className="space-y-1.5">
             {[
               { label: 'Melayu', value: malay, color: 'bg-[#C41E3A]' },
-              { label: 'Cina', value: chinese, color: 'bg-[#1E3A8A]' },
-              { label: 'India', value: indian, color: 'bg-[#EA580C]' },
+              { label: 'Cina', value: chinese, color: 'bg-amber-500' },
+              { label: 'India', value: indian, color: 'bg-gray-500' },
               { label: 'Lain-lain', value: others, color: 'bg-gray-400' },
             ].map((d) => (
               <div key={d.label} className="flex items-center gap-2">
@@ -154,7 +154,7 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
                     className="h-full rounded-full transition-all"
                     style={{
                       width: `${sentiment.score}%`,
-                      backgroundColor: sentiment.score >= 60 ? '#22c55e' : sentiment.score >= 40 ? '#eab308' : '#ef4444',
+                      backgroundColor: sentiment.score >= 60 ? '#DC2626' : sentiment.score >= 40 ? '#EAB308' : '#6B7280',
                     }}
                   />
                 </div>
@@ -162,7 +162,7 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
               </div>
               <div className="flex items-center gap-2 mt-1">
                 <span className={`text-[10px] font-bold uppercase ${
-                  sentiment.label === 'positif' ? 'text-emerald-600' : sentiment.label === 'negatif' ? 'text-red-600' : 'text-amber-600'
+                  sentiment.label === 'positif' ? 'text-red-600' : sentiment.label === 'negatif' ? 'text-gray-600' : 'text-amber-600'
                 }`}>
                   {sentiment.label}
                 </span>

@@ -125,9 +125,9 @@ function ExpandedRow({ region }: { region: RegionWithData }) {
                 <span className="font-semibold">{region.demographics.totalElectors?.toLocaleString() || '-'}</span>
               </div>
               <div className="flex gap-3 text-[11px]">
-                <span className="text-red-500">Melayu: {region.demographics.malay}%</span>
-                <span className="text-orange-500">Cina: {region.demographics.chinese}%</span>
-                <span className="text-green-600">India: {region.demographics.indian}%</span>
+                <span className="text-red-600">Melayu: {region.demographics.malay}%</span>
+                <span className="text-amber-600">Cina: {region.demographics.chinese}%</span>
+                <span className="text-gray-600">India: {region.demographics.indian}%</span>
                 <span className="text-gray-400">Lain: {region.demographics.others}%</span>
               </div>
               <div className="flex gap-3 text-[11px]">
@@ -184,7 +184,7 @@ export default function ElectionDunList({ regions }: { regions: RegionWithData[]
       {/* Header + Party Totals */}
       <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
         <h2 className="font-serif text-[22px] font-bold text-[#111] flex items-center gap-2">
-          <span className="w-1.5 h-6 bg-emerald-600 rounded-full inline-block" />
+          <span className="w-1.5 h-6 bg-red-600 rounded-full inline-block" />
           Senarai DUN N. Sembilan (N01–N36)
           <span className="text-sm font-normal text-gray-400 ml-1">PRN 2026</span>
           <span className="text-[11px] text-gray-400 font-normal ml-1">({filtered.length} dipaparkan)</span>
@@ -209,12 +209,12 @@ export default function ElectionDunList({ regions }: { regions: RegionWithData[]
           <input
             type="text" value={search} onChange={e => { setSearch(e.target.value); setShowAll(false) }}
             placeholder="Cari DUN atau nama calon..."
-            className="w-full pl-8 pr-3 py-1.5 text-[12px] border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500"
+            className="w-full pl-8 pr-3 py-1.5 text-[12px] border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
           />
         </div>
         <select
           value={partyFilter} onChange={e => { setPartyFilter(e.target.value); setShowAll(false) }}
-          className="text-[12px] border border-gray-300 rounded-md px-2.5 py-1.5 bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500"
+          className="text-[12px] border border-gray-300 rounded-md px-2.5 py-1.5 bg-white focus:outline-none focus:ring-1 focus:ring-red-500"
         >
           <option value="all">Semua Parti</option>
           {partyList.map(p => <option key={p} value={p}>{p}</option>)}
@@ -263,7 +263,7 @@ export default function ElectionDunList({ regions }: { regions: RegionWithData[]
 
       {filtered.length > 18 && (
         <button onClick={() => setShowAll(!showAll)}
-          className="mt-2 text-[11px] text-emerald-600 hover:text-emerald-700 font-medium"
+          className="mt-2 text-[11px] text-red-600 hover:text-red-700 font-medium"
         >
           {showAll ? '▲ Ringkaskan' : `▼ Lihat semua ${filtered.length} DUN`}
         </button>

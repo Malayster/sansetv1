@@ -109,14 +109,14 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
             const isGov = party === result.maxParty && count >= needed
             return (
               <div key={party} className={`rounded-lg border p-3 text-center ${
-                isGov ? 'border-emerald-300 bg-emerald-50' : 'border-gray-200 bg-gray-50'
+                isGov ? 'border-red-300 bg-red-50' : 'border-gray-200 bg-gray-50'
               }`}>
                 <div className="flex justify-center mb-1">
                   <img src={PARTY_FLAGS[party] || '/flags/bebas.svg'} className="w-6 h-auto rounded border border-gray-300" />
                 </div>
                 <div className="font-bold text-[14px]" style={{ color: hex[party] || '#6b7280' }}>{count}</div>
                 <div className="text-[10px] text-gray-500">{party}</div>
-                {isGov && <div className="text-[9px] text-emerald-600 font-bold mt-0.5">MAJORITI</div>}
+                {isGov && <div className="text-[9px] text-red-600 font-bold mt-0.5">MAJORITI</div>}
               </div>
             )
           })}
@@ -125,7 +125,7 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
         {/* Status */}
         <div className="text-center text-[11px] text-gray-500 bg-gray-50 rounded-lg py-2">
           {result.maxCount >= needed ? (
-            <span className="text-emerald-600 font-bold">
+            <span className="text-red-600 font-bold">
               ✅ {result.maxParty} capai majoriti dengan {result.maxCount}/{result.total} kerusi
             </span>
           ) : (

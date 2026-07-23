@@ -92,7 +92,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
                     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg px-3 py-2 text-[11px]">
                       <div className="font-bold">{d.party}</div>
                       <div className="text-gray-500">2018: {d.from}% → 2023: {d.to}%</div>
-                      <div className={`font-bold ${d.change >= 0 ? 'text-emerald-600' : 'text-red-600'}`}>
+                      <div className={`font-bold ${d.change >= 0 ? 'text-red-600' : 'text-gray-600'}`}>
                         {d.change >= 0 ? '+' : ''}{d.change}%
                       </div>
                     </div>
@@ -109,7 +109,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
           </ResponsiveContainer>
           <div className="flex justify-center gap-4 text-[10px] text-gray-400 mt-1">
             <span><span className="inline-block w-3 h-2 bg-gray-200 rounded mr-1" />PRU 2018</span>
-            <span><span className="inline-block w-3 h-2 bg-blue-500 rounded mr-1" />PRN 2023</span>
+            <span><span className="inline-block w-3 h-2 bg-red-600 rounded mr-1" />PRN 2023</span>
           </div>
         </div>
       )}
@@ -121,7 +121,7 @@ export default function ElectionSwing({ regions }: { regions: RegionWithData[] }
           const top = d.changes[0]
           return (
             <span key={d.code} className="text-[9px] bg-white px-2 py-0.5 border border-gray-200 rounded-full text-gray-500">
-              {d.code} <span className={top?.change >= 0 ? 'text-emerald-600' : 'text-red-600'}>{top?.change >= 0 ? '▲' : '▼'} {Math.abs(top?.change || 0)}%</span>
+              {d.code} <span className={top?.change >= 0 ? 'text-red-600' : 'text-gray-600'}>{top?.change >= 0 ? '▲' : '▼'} {Math.abs(top?.change || 0)}%</span>
             </span>
           )
         })}
