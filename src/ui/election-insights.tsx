@@ -10,10 +10,7 @@ const hex = PARTY_COLOR_HEX
 export function ExecutiveSummary({ regions }: { regions: RegionWithData[] }) {
   const stats = useMemo(() => {
   const total = regions.length
-  const parties = new Set(regions.map(r => {
-  const inc = r.candidates?.find(c => c.role === 'penyandang')
-  return inc?.party || r.history?.elections?.slice().reverse().find(e => e.winnerParty)?.winnerParty || ''
-  }).filter(Boolean))
+  const parties = new Set(regions.flatMap(r => (r.candidates || []).map(c => c.party)).filter(Boolean))
   const counts: Record<string, number> = {}
   let topParty = '', topCount = 0, topTotalVotes = 0, topMajority = 0
   for (const r of regions) {
