@@ -1,6 +1,7 @@
 import { groq } from 'next-sanity'
 import Link from 'next/link'
 import { client } from '@/sanity/lib/client'
+import { PARTY_COLOR_HEX } from '@/ui/party-vars'
 
 const QUERY = groq`*[_type == 'electionInfo' && isActive == true][0]{
   electionName, electionDate, states, 'slug': slug.current
@@ -13,10 +14,7 @@ type Election = {
   states?: State[]
 }
 
-const PARTY_COLORS: Record<string, string> = {
-  PH: '#1E40AF', BN: '#1E3A8A', PN: '#166534', GPS: '#EA580C',
-  GRS: '#00BFFF', WARISAN: '#FF1493', BEBAS: '#808080',
-}
+const PARTY_COLORS = PARTY_COLOR_HEX
 
 const PARTY_NAMES: Record<string, string> = {
   PH: 'Pakatan Harapan', BN: 'Barisan Nasional', PN: 'Perikatan Nasional',

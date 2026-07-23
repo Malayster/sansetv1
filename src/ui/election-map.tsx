@@ -160,17 +160,74 @@ const ElectionMap = memo(function ElectionMap({
         </div>
       )}
 
-      <div className="flex flex-wrap gap-1.5 px-4 py-2.5 border-t border-gray-100 bg-gray-50/30">
-        {Object.entries(partyColors).map(([party, c]) => {
-          const count = regions.filter(r => r.candidates?.find(x => x.role === 'penyandang')?.party === party).length
-          if (!count) return null
-          return (
-            <div key={party} className="flex items-center gap-1.5 px-2.5 py-1 bg-white border border-gray-200 rounded-full text-[10px] font-medium text-gray-600">
-              <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ background: c }} />
-              {party} <span className="text-gray-400">{count}</span>
-            </div>
-          )
-        })}
+      {/* ═══════ Legend — All Contesting Parties ═══════ */}
+      <div className="border-t border-gray-100 bg-gray-50/30">
+        {/* Incumbent / Map-fill legend */}
+        <div className="px-4 pt-2.5 pb-1">
+          <span className="text-[9px] font-semibold text-gray-400 uppercase tracking-wider">Penyandang</span>
+        </div>
+        <div className="flex flex-wrap gap-1.5 px-4 pb-1">
+          {Object.entries(partyColors).map(([party, c]) => {
+            const count = regions.filter(r => {
+              const inc = r.candidates?.find(x => x.role === 'penyandang')
+              return inc?.party === party
+            }).length
+            // Also count historical fallback
+            const histCount = regions.filter(r => {
+              if (r.candidates?.find(x => x.role === 'penyandang')?.party === party) return false
+              const last = r.history?.elections?.slice(-1)[0]
+              return last?.winnerParty === party
+            }).length
+            const total = count + histCount
+            if (!total) return null
+            return (
+              <div key={party} className="flex items-center gap-1.5 px-2.5 py-1 bg-white border border-gray-200 rounded-full text-[10px] font-medium text-gray-600">
+                <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ background: c }} />
+                {party} <span className="text-gray-400">{total}</span>
+              </div>
+            )
+          })}
+        </div>
+
+        {/* All contesting parties */}
+        <div className="px-4 pb-1">
+          <span className="text-[9px] font-semibold text-gray-400 uppercase tracking-wider">Bertanding</span>
+        </div>
+        <div className="flex flex-wrap gap-1.5 px-4 pb-2.5">
+          {(() => {
+            const contestMap = new Map<string, number>()
+            for (const r of regions) {
+              for (const c of (r.candidates || [])) {
+                const p = c.party
+                contestMap.set(p, (contestMap.get(p) || 0) + 1)
+              }
+            }
+            const sorted = [...contestMap.entries()].sort((a, b) => b[1] - a[1])
+            // Group by coalition colors
+            const priorityParties = ['PH', 'BN', 'PN', 'BERSATU', 'BERSAMA', 'ASLI', 'PSM', 'BERJASA', 'Bebas']
+            const priority: [string, number][] = []
+            const rest: [string, number][] = []
+            const seen = new Set<string>()
+            for (const p of priorityParties) {
+              if (contestMap.has(p)) {
+                priority.push([p, contestMap.get(p)!])
+                seen.add(p)
+              }
+            }
+            for (const [p, n] of sorted) {
+              if (!seen.has(p)) rest.push([p, n])
+            }
+            return [...priority, ...rest].map(([party, count]) => {
+              const c = partyColors[party] || '#6b7280'
+              return (
+                <div key={party} className="flex items-center gap-1.5 px-2.5 py-1 bg-white border border-gray-200 rounded-full text-[10px] font-medium text-gray-600">
+                  <span className="w-2.5 h-2.5 rounded-sm inline-block" style={{ background: c }} />
+                  {party} <span className="text-gray-400">{count}</span>
+                </div>
+              )
+            })
+          })()}
+        </div>
       </div>
 
       <style jsx global>{`
