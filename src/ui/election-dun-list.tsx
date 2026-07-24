@@ -234,9 +234,9 @@ export default function ElectionDunList({ regions }: { regions: RegionWithData[]
   <th className="text-left px-3 py-2 font-semibold text-gray-500 w-[60px]">Kod</th>
   <th className="text-left px-3 py-2 font-semibold text-gray-500 w-[130px]">Nama DUN</th>
   <th className="text-left px-3 py-2 font-semibold text-gray-500">Calon PRN 2026</th>
-  <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRU 2008</th>
-  <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRU 2013</th>
-  <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRU 2018</th>
+  <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRN 2008</th>
+  <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRN 2013</th>
+  <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRN 2018</th>
   <th className="text-center px-2 py-2 font-semibold text-gray-500 w-[72px]">PRN 2023</th>
   <th className="text-center px-3 py-2 font-semibold text-gray-500 w-[65px]">Penyandang</th>
   </tr>
