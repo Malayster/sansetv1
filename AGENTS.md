@@ -105,24 +105,29 @@ data/elections/
 
 ## Status GeoJSON & Election Pack
 
-| State | DUN | PAR | GeoJSON ✅ | Config Template ✅ |
-|---|---|---|---|---|
-| Perlis | 15 | 3 | 2026-07-24 | prn-perlis-template |
-| Kedah | 37 | 16 | 2026-07-24 | prn-kedah-template |
-| Kelantan | 45 | 14 | 2026-07-24 | prn-kelantan-template |
-| Terengganu | 33 | 9 | 2026-07-24 | prn-terengganu-template |
-| Penang | 41 | 14 | 2026-07-24 | prn-penang-template |
-| Perak | 59 | 24 | 2026-07-24 | prn-perak-template |
-| Pahang | 43 | 15 | 2026-07-24 | prn-pahang-template |
-| Selangor | 56 | 22 | 2026-07-24 | prn-selangor-template |
-| **Negeri Sembilan** | **36** | **8** | **2026-07-23** | **prn-ns-2026 ✅ ACTIVE** |
-| Melaka | 28 | 6 | 2026-07-24 | prn-melaka-template |
-| Johor | 58 | 29 | 2026-07-24 | prn-johor-template |
-| Sabah | 75 | 27 | 2026-07-24 | prn-sabah-template |
-| Sarawak | ❌ | ❌ | 404 Not Found | ❌ |
-| WP KL/Putra/Labuan | 1 | 1 | 2026-07-24 | prn-wp-template |
+| State | DUN | PAR | GeoJSON ✅ | Config Active ✅ | Demografi (GE-15 Voter Roll) |
+|---|---|---|---|---|---|
+| **Negeri Sembilan** | **36** | **8** | **prn_negeri9_dun.json** | **prn-ns-2026 🟢 AKTIF** | ✅ SE-16 (889,490 voters) |
+| **Selangor** | **56** | **22** | **prn_sgr_dun.json** | **prn-selangor-2026** | ✅ 56 DUNs |
+| **Pulau Pinang** | **40** | **14** | **prn_png_dun.json** | **prn-penang-2026** | ✅ 40 DUNs |
+| **Perak** | **59** | **24** | **prn_prk_dun.json** | **prn-perak-2026** | ✅ 59 DUNs |
+| **Pahang** | **42** | **15** | **prn_phg_dun.json** | **prn-pahang-2026** | ✅ 42 DUNs |
+| **Kedah** | **36** | **16** | **prn_kdh_dun.json** | **prn-kedah-2026** | ✅ 36 DUNs |
+| **Kelantan** | **45** | **14** | **prn_ktn_dun.json** | **prn-kelantan-2026** | ✅ 45 DUNs |
+| **Terengganu** | **32** | **9** | **prn_trg_dun.json** | **prn-terengganu-2026** | ✅ 32 DUNs |
+| Perlis | 15 | 3 | prn_pls_dun.json | prn-perlis-template | ✅ 15 DUNs |
+| Melaka | 28 | 6 | prn_mlk_dun.json | prn-melaka-template | — |
+| Johor | 58 | 29 | prn_jhr_dun.json | prn-johor-template | — |
+| Sabah | 75 | 27 | prn_sbh_dun.json | prn-sabah-template | — |
+| Sarawak | ❌ | ❌ | 404 Not Found | ❌ | — |
+| WP KL/Putra/Labuan | 1 | 1 | prn_wpk_dun.json | prn-wp-template | — |
 
-> **Note:** DUN counts from DM (Daerah Mengundi) data may differ slightly from official SPR numbers due to boundary reclassification. The DM data is authoritative from SPR/EC.
+**Data Location:**
+- `data/kv-output/demographics-dun.json` — 325 DUNs (Perlis to Terengganu), keyed by `{STATE_SHORT}_{CODE}`
+- `data/kv-output/demographics-parlimen.json` — 178 parliament seats (12 states)
+- `data/elections/prn-{state}-2026/config.json` — per-state election pack configs
+
+**Note:** Configs are gitignored (`data/` in .gitignore) — use `git add -f` to stage. DUN counts may differ from official SPR numbers due to boundary reclassification.
 
 ## Status Historical Results (Tindak Malaysia HISTORICAL-ELECTION-RESULTS)
 
