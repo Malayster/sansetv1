@@ -148,7 +148,7 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
   )}
   <div className="mt-3 pt-2 border-t border-gray-100 grid grid-cols-2 gap-x-4 gap-y-1 text-[10px] text-gray-500">
   <div>Pendapatan Median</div>
-  <div className="text-right font-bold text-gray-700">RM{medianIncome.toLocaleString()}</div>
+  <div className="text-right font-bold text-gray-700">RM{medianIncome != null ? medianIncome.toLocaleString() : '—'}</div>
   {poverty != null && (
   <>
   <div>Kadar Kemiskinan</div>
@@ -162,7 +162,6 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
   </>
   )}
   </div>
-  )}
   </div>
 
   {/* ── 3. Sentimen Semasa ── */}

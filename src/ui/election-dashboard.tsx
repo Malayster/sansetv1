@@ -18,7 +18,7 @@ import type { ElectionPackConfig } from '@/lib/region-service'
 
 const ElectionMap = dynamic(() => import('@/ui/election-map'), {
   ssr: false,
-  loading: () => <div className="w-full h-[420px] bg-gray-100 animate-pulse rounded-lg flex items-center justify-center text-gray-400 text-[12px]">Memuatkan peta...</div>,
+  loading: () => <div className="w-full h-[420px] bg-gray-100 animate-pulse rounded flex items-center justify-center text-gray-400 text-[12px]">Memuatkan peta...</div>,
 })
 
 export default function ElectionDashboard({
@@ -29,7 +29,6 @@ export default function ElectionDashboard({
   const [selected, setSelected] = useState<RegionWithData | null>(null)
   const searchParams = useSearchParams()
 
-  // Shareable DUN link
   useEffect(() => {
     const dun = searchParams?.get('dun')
     if (dun) {
@@ -78,63 +77,66 @@ export default function ElectionDashboard({
       <span className="text-[11px] text-gray-400 ml-auto">{regions.length} DUN</span>
     </div>
 
-    {/* SVG Map — full width, static */}
-    <ElectionMap
-      regions={regions}
-      selected={selected}
-      onSelect={setSelected}
-      geoJsonFile={election.geoJsonFile || ''}
-    />
+    {/* ═══════ Map + Panel layout (electiondata.my style) ═══════ */}
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-6">
+      {/* Map — left 40% */}
+      <div className="lg:col-span-2">
+        <ElectionMap
+          regions={regions}
+          selected={selected}
+          onSelect={setSelected}
+          geoJsonFile={election.geoJsonFile || ''}
+        />
+      </div>
 
-    {/* ═══════ KLIK DUN → Extra components ═══════ */}
-    {selected && (
-      <div className="mt-4 space-y-4">
-        {/* Close button */}
-        <div className="flex items-center justify-between">
-          <h2 className="text-[13px] font-bold text-gray-800 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#C41E3A]" />
-            {selected.code} — {selected.name}
-          </h2>
-          <button
-            onClick={() => setSelected(null)}
-            className="text-[11px] px-3 py-1.5 rounded-lg bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors"
-          >
-            ✕ Tutup
-          </button>
-        </div>
-
-        {/* Sidebar + Charts */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      {/* Panel — right 60%, always visible */}
+      {selected ? (
+        <div className="lg:col-span-3">
           <ElectionSidebar region={selected} />
-          <div className="lg:col-span-2 space-y-4">
-            <ElectionCharts regions={[selected]} />
-            <PostalVotePanel />
+        </div>
+      ) : (
+        <div className="lg:col-span-3 border border-gray-200 rounded bg-white p-6 flex flex-col items-center justify-center text-center">
+          <div className="text-4xl mb-3">🗳️</div>
+          <p className="text-[13px] font-semibold text-gray-600">Klik mana-mana DUN pada peta</p>
+          <p className="text-[11px] text-gray-400 mt-1">untuk melihat analisa terperinci</p>
+          <div className="mt-4">
+            <ElectionDunList regions={regions} />
           </div>
         </div>
+      )}
+    </div>
 
-        {/* Swing + Banding */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <ElectionSwing regions={[selected]} />
-          <ElectionCompare regions={[selected]} />
+    {/* ═══════ Komponen tambahan (sentiasa nampak, scroll) ═══════ */}
+    <div className="space-y-4">
+      {/* Charts + PostalVote */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="lg:col-span-2 space-y-4">
+          <ElectionCharts regions={regions} />
         </div>
-
-        {/* SemiCircle + Swingometer */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <SemiCircleView regions={[selected]} />
-          <Swingometer regions={[selected]} />
+        <div className="space-y-4">
+          <PostalVotePanel />
         </div>
-
-        {/* Insights */}
-        <ExecutiveSummary regions={[selected]} />
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <MajorityTracker regions={[selected]} />
-          <KeyRaces regions={[selected]} />
-        </div>
-
-        {/* DUN List — filtered to selected DUN */}
-        <ElectionDunList regions={[selected]} />
       </div>
-    )}
+
+      {/* Swing + Banding */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <ElectionSwing regions={regions} />
+        <ElectionCompare regions={regions} />
+      </div>
+
+      {/* SemiCircle + Swingometer */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <SemiCircleView regions={regions} />
+        <Swingometer regions={regions} />
+      </div>
+
+      {/* Insights */}
+      <ExecutiveSummary regions={regions} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <MajorityTracker regions={regions} />
+        <KeyRaces regions={regions} />
+      </div>
+    </div>
   </div>
   )
 }
