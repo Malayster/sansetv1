@@ -120,17 +120,19 @@ data/elections/
 | **Johor** | **55¹** | **26** | **prn_jhr_dun.json** | **prn-johor-2026** | ✅ |
 | **Sabah** | **73** | **25** | **prn_sbh_dun.json** | **prn-sabah-2026** | ✅ |
 | **Sarawak** | **82** | **31** | **prn_swk_dun.json** | **prn-sarawak-2026** | ✅ |
-| WP KL/Putra/Labuan | 1 | 1 | prn_wpk_dun.json | prn-wp-template | — |
+| **WP** | **1** | **1** | **prn_wpk_dun.json** | **prn-wp-2026** | ✅ |
 
 **Notes:**
 - ¹Johor: 55 GeoJSON features (N31/Semerah tiada — source data limitation); demographics-dun.json ada 56 JHR entries.
-- All GeoJSON anomalous 3-digit codes (N006, N020, N028, N036, N035, N040, N051, N024, N047) have been purged — config & GeoJSON DUN counts now match for all 13 states.
+- All GeoJSON anomalous 3-digit codes (N006, N020, N028, N036, N035, N040, N051, N024, N047) have been purged — config & GeoJSON DUN counts now **match for all 14 states**.
+- `code.startsWith('N')` filter **removed** (commit 3ece234) — WP uses `WPK01`, future states with non-N codes now supported.
 
 **Data Location:**
-- `data/kv-output/demographics-dun.json` — **600 DUNs** (all 13 states), keyed by `{STATE_SHORT}_{CODE}`
+- `data/kv-output/demographics-dun.json` — **601 DUNs** (14 state/territory), keyed by `{STATE_SHORT}_{CODE}`
 - `data/kv-output/demographics-parlimen.json` — **222 parliament seats**, keys in P-code format (e.g. `P092`, not `P092SabakBernam`)
-- `data/kv-output/hot-seats.json` — 600 DUN classified: 53 sangat_panas, 115 panas, 173 marginal, 259 selamat
-- `data/elections/prn-{state}-2026/config.json` — per-state election pack configs
+- `data/kv-output/hot-seats.json` — **601 entries** (600 DUN + WPK01) classified: 53 sangat_panas, 115 panas, 173 marginal, 260 selamat
+- `data/kv-output/candidates-real.json` — **1126 entries** indexed by `{STATE}_{CODE}` and simple code
+- `data/elections/prn-{state}-2026/config.json` — per-state election pack configs (14 active)
 
 **Note:** Configs are gitignored (`data/` in .gitignore) — use `git add -f` to stage.
 
