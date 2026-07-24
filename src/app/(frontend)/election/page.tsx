@@ -102,7 +102,7 @@ function loadHotSeats(): Record<string, any> {
 }
 
 async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithData[]> {
-  const regions = await getElectionRegions(election.geoJsonFile)
+  const regions = await getElectionRegions(election.geoJsonFile, election.electionName)
   const historicalData = getHistoricalResults()
   const dunDemo = loadDunDemographics()
   const parlDemo = loadParlimenDemographics()

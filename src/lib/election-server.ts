@@ -67,14 +67,33 @@ function centroid(coords: any): [number, number] {
   return [lng, lat]
 }
 
-export async function getElectionRegions(geoJsonFile?: string): Promise<ElectionRegion[]> {
-  if (!geoJsonFile) return FALLBACK_PRU16_REGIONS
+// ─── State election → GeoJSON mapping (fallback when Sanity geoJsonFile is null) ───
+const STATE_GEOJSON_FALLBACK: Record<string, string> = {
+  'PRN Negeri Sembilan': 'prn_nsn_dun.json',
+  'PRN Selangor':        'prn_sgr_dun.json',
+  'PRN Pulau Pinang':    'prn_png_dun.json',
+  'PRN Perak':           'prn_prk_dun.json',
+  'PRN Pahang':          'prn_phg_dun.json',
+  'PRN Kedah':           'prn_kdh_dun.json',
+  'PRN Kelantan':        'prn_ktn_dun.json',
+  'PRN Terengganu':      'prn_trg_dun.json',
+  'PRN Perlis':          'prn_pls_dun.json',
+  'PRN Melaka':          'prn_mlk_dun.json',
+  'PRN Johor':           'prn_jhr_dun.json',
+  'PRN Sabah':           'prn_sbh_dun.json',
+  'PRN Sarawak':         'prn_swk_dun.json',
+  'PRN Wilayah Persekutuan': 'prn_wpk_dun.json',
+}
 
-  const isoFile = geoJsonFile.replace('.json', '_polygon.json')
+export async function getElectionRegions(geoJsonFile?: string, electionName?: string): Promise<ElectionRegion[]> {
+  const file = geoJsonFile || (electionName ? STATE_GEOJSON_FALLBACK[electionName] : undefined)
+  if (!file) return FALLBACK_PRU16_REGIONS
+
+  const isoFile = file.replace('.json', '_polygon.json')
   try {
     const filePath = path.join(process.cwd(), 'public', 'geojson', isoFile)
     if (!fs.existsSync(filePath)) {
-      const altPath = path.join(process.cwd(), 'public', 'geojson', geoJsonFile)
+      const altPath = path.join(process.cwd(), 'public', 'geojson', file)
       if (!fs.existsSync(altPath)) return FALLBACK_PRU16_REGIONS
       const raw = fs.readFileSync(altPath, 'utf-8')
       const data = JSON.parse(raw)
