@@ -24,13 +24,29 @@ Data pipeline: `scripts/generate-real-data.py` → `data/kv-output/*.json` → `
 
 ## Demografi Terkini per-DUN
 
-Demografi etnik per DUN (34/36 seat) datang dari **Wikipedia Bahasa Melayu**:
-- `scripts/fetch-dun-wiki.py` → `data/kv-output/dun-wiki-demographics.json`
-- Scrapes `action=raw` wikitext → extracts Pie Chart label/value → ethnic %
-- Juga dapat pemilih berdaftar per tahun dari `{{MASelec/total|Pemilih berdaftar|X}}`
-- Ekonomi (medianIncome, gini, poverty) dari Tindak Parliament-level → mapping DUN→P
+**Sumber RASMI:** ElectionData.MY SE-16 Voter Roll (SPR-DOSM, 889,490 voters)
+- Dimuat turun dari `https://lake.electiondata.my/voter_rolls/nsn_se16_2026.csv`
+- Diaggregate per DUN oleh script ad-hoc → `src/lib/kv.ts` mockDemographics
+- Data mengandungi: Melayu, Cina, India, Orang Asli, Others (%)
+- Nota: medianIncome/gini/poverty masih guna fallback parliament-level
 
-**Nota:** Seats N13 (Sikamat) & N16 (Seri Menanti) tiada pie chart — guna fallback 55/25/15/5.
+**Cara update:**
+```bash
+python3 -c "
+import csv, urllib.request, json
+from collections import Counter
+url = 'https://lake.electiondata.my/voter_rolls/nsn_se16_2026.csv'
+req = urllib.request.Request(url)
+resp = urllib.request.urlopen(req)
+# process CSV, group by DUN, count ethnicity
+# output → update mockDemographics in src/lib/kv.ts
+"
+```
+
+**Sumber lama (Wikipedia):**
+- `scripts/fetch-dun-wiki.py` → `data/kv-output/dun-wiki-demographics.json`
+- Hanya 34/36 DUN available, pie chart parsing tidak tepat
+- **JANGAN GUNA** untuk data rasmi — Rujuk ElectionData.MY Voter Roll
 
 ## Cara Update Demografi
 
