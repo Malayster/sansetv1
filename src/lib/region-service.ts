@@ -27,8 +27,17 @@ function loadJSON<T>(relPath: string, fallback: T): T {
   }
 }
 const realHistoricalResults = loadJSON<Record<string, any>>('data/kv-output/historical-results.json', {})
-const realDemographicsData   = loadJSON<Record<string, any>>('data/kv-output/demographics-real.json', {})
+const realDemographicsData   = loadJSON<Record<string, any>>('data/kv-output/demographics-parlimen.json', {})
+const realDunDemographics    = loadJSON<Record<string, any>>('data/kv-output/demographics-dun.json', {})
 const realCandidatesData     = loadJSON<Record<string, any[]>>('data/kv-output/candidates-real.json', {})
+
+// ─── State prefix lookup for demographics-dun.json keys ───
+const STATE_PREFIX: Record<string, string> = {
+  'Negeri Sembilan': 'NSN', 'Selangor': 'SGR', 'Pulau Pinang': 'PNG',
+  'Perak': 'PRK', 'Pahang': 'PHG', 'Kedah': 'KDH', 'Kelantan': 'KTN',
+  'Terengganu': 'TRG', 'Perlis': 'PLS', 'Melaka': 'MLK', 'Johor': 'JHR',
+  'Sabah': 'SBH', 'Sarawak': 'SWK', 'Wilayah Persekutuan': 'WPK',
+}
 
 // ─── Types ─────────────────────────────────────────────
 
@@ -85,23 +94,32 @@ export class RegionService {
 
     const candidatesMap = realCandidatesData as Record<string, CandidateData[]>
     const histMap = realHistoricalResults as Record<string, { elections: HistoricalElectionResult[] }>
-    const demoMap = realDemographicsData as Record<string, any>
+    const parlDemoMap = realDemographicsData as Record<string, any>
+    const dunDemoMap = realDunDemographics as Record<string, any>
+    const prefix = STATE_PREFIX[cfg.state] || ''
 
     return data.features.map((f: any) => {
       const code: string = f.properties.code
       const parlCode = cfg.dunToParlimen[code] || code
-      const parlDemo = demoMap[parlCode]
       const dunCount = cfg.parlimenInfo[parlCode]?.dunCount || 1
 
-      return {
-        code,
-        name: f.properties.name,
-        state: f.properties.state || cfg.state,
-        lat: f.properties.lat ?? 0,
-        lng: f.properties.lng ?? 0,
-        candidates: candidatesMap[code] || [],
-        sentiment: null,
-        demographics: {
+      // Try DUN-level demographics first
+      const dunKey = prefix ? `${prefix}_${code}` : null
+      const dunData = dunKey ? dunDemoMap[dunKey] : null
+
+      let demographics: RegionWithData['demographics']
+      if (dunData) {
+        demographics = {
+          malay: dunData.malay ?? 55,
+          chinese: dunData.chinese ?? 25,
+          indian: dunData.indian ?? 10,
+          others: (dunData.orang_asli ?? 0) + (dunData.others ?? 5),
+          totalElectors: dunData.total_voters ?? undefined,
+        }
+      } else {
+        // Fallback: parliament-level data (split per DUN)
+        const parlDemo = parlDemoMap[parlCode]
+        demographics = {
           malay: parlDemo?.malay ?? 55,
           chinese: parlDemo?.chinese ?? 25,
           indian: parlDemo?.indian ?? 12,
@@ -112,13 +130,18 @@ export class RegionService {
           totalElectors: parlDemo?.totalElectors
             ? Math.round(parlDemo.totalElectors / dunCount)
             : undefined,
-          maleElectors: parlDemo?.maleElectors
-            ? Math.round(parlDemo.maleElectors / dunCount)
-            : undefined,
-          femaleElectors: parlDemo?.femaleElectors
-            ? Math.round(parlDemo.femaleElectors / dunCount)
-            : undefined,
-        },
+        }
+      }
+
+      return {
+        code,
+        name: f.properties.name,
+        state: f.properties.state || cfg.state,
+        lat: f.properties.lat ?? 0,
+        lng: f.properties.lng ?? 0,
+        candidates: candidatesMap[code] || [],
+        sentiment: null,
+        demographics,
         history: histMap[code],
       }
     })

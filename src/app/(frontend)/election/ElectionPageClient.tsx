@@ -16,6 +16,18 @@ interface ElectionWithRegions {
 /** Map PRN state election names to their flag image paths */
 const STATE_FLAGS: Record<string, string> = {
   'PRN Negeri Sembilan': '/flags/negeri-sembilan.svg',
+  'PRN Selangor':        '/flags/selangor.svg',
+  'PRN Pulau Pinang':    '/flags/pulau-pinang.svg',
+  'PRN Perak':           '/flags/perak.svg',
+  'PRN Pahang':          '/flags/pahang.svg',
+  'PRN Kedah':           '/flags/kedah.svg',
+  'PRN Kelantan':        '/flags/kelantan.svg',
+  'PRN Terengganu':      '/flags/terengganu.svg',
+  'PRN Perlis':          '/flags/perlis.svg',
+  'PRN Melaka':          '/flags/melaka.svg',
+  'PRN Johor':           '/flags/johor.svg',
+  'PRN Sabah':           '/flags/sabah.svg',
+  'PRN Sarawak':         '/flags/sarawak.svg',
 }
 
 export default function ElectionPageClient({
@@ -25,7 +37,11 @@ export default function ElectionPageClient({
 }) {
   const [index, setIndex] = useState(0)
   const current = electionsWithRegions[index]
+
+  // Resolve flag: try exact name first, then strip year suffix
   const flagPath = STATE_FLAGS[current.election.electionName]
+    || STATE_FLAGS[current.election.electionName.replace(/\s+\d{4}$/, '')]
+    || undefined
 
   return (
   <ThemeProvider>
