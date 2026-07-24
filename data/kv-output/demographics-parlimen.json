@@ -10,7 +10,12 @@
     "others": 1.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.4,
+    "age_30_39": 24.7,
+    "age_40_49": 19.6,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.0
   },
   "P141": {
     "state": "Johor",
@@ -23,7 +28,12 @@
     "others": 1.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.4,
+    "age_30_39": 24.2,
+    "age_40_49": 20.0,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.6
   },
   "P142": {
     "state": "Johor",
@@ -36,7 +46,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.4,
+    "age_30_39": 24.2,
+    "age_40_49": 20.0,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.6
   },
   "P143": {
     "state": "Johor",
@@ -49,7 +64,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.9,
+    "age_30_39": 24.5,
+    "age_40_49": 19.8,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.3
   },
   "P144": {
     "state": "Johor",
@@ -62,7 +82,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.9,
+    "age_30_39": 24.4,
+    "age_40_49": 19.8,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.3
   },
   "P145": {
     "state": "Johor",
@@ -75,7 +100,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.0,
+    "age_30_39": 24.5,
+    "age_40_49": 19.8,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.2
   },
   "P146": {
     "state": "Johor",
@@ -88,7 +118,12 @@
     "others": 0.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.6,
+    "age_30_39": 25.3,
+    "age_40_49": 19.2,
+    "age_50_59": 13.7,
+    "age_60_plus": 9.2
   },
   "P147": {
     "state": "Johor",
@@ -101,7 +136,12 @@
     "others": 0.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.5,
+    "age_30_39": 24.3,
+    "age_40_49": 20.0,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.5
   },
   "P148": {
     "state": "Johor",
@@ -114,7 +154,12 @@
     "others": 1.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.2,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.0
   },
   "P149": {
     "state": "Johor",
@@ -127,7 +172,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.2,
+    "age_30_39": 25.1,
+    "age_40_49": 19.3,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.5
   },
   "P150": {
     "state": "Johor",
@@ -140,7 +190,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 20.1,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.7
   },
   "P151": {
     "state": "Johor",
@@ -153,7 +208,12 @@
     "others": 2.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.4,
+    "age_30_39": 24.7,
+    "age_40_49": 19.6,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.0
   },
   "P152": {
     "state": "Johor",
@@ -166,7 +226,12 @@
     "others": 2.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.3,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.3
   },
   "P153": {
     "state": "Johor",
@@ -179,7 +244,12 @@
     "others": 1.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.7,
+    "age_30_39": 25.3,
+    "age_40_49": 19.1,
+    "age_50_59": 13.7,
+    "age_60_plus": 9.2
   },
   "P154": {
     "state": "Johor",
@@ -192,7 +262,12 @@
     "others": 1.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.5,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "P155": {
     "state": "Johor",
@@ -205,7 +280,12 @@
     "others": 3.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.6,
+    "age_30_39": 25.3,
+    "age_40_49": 19.1,
+    "age_50_59": 13.7,
+    "age_60_plus": 9.3
   },
   "P156": {
     "state": "Johor",
@@ -218,7 +298,12 @@
     "others": 1.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.1,
+    "age_30_39": 24.1,
+    "age_40_49": 20.2,
+    "age_50_59": 15.0,
+    "age_60_plus": 10.6
   },
   "P157": {
     "state": "Johor",
@@ -231,7 +316,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 19.9,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.5
   },
   "P158": {
     "state": "Johor",
@@ -244,7 +334,12 @@
     "others": 4.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 20.1,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.7
   },
   "P159": {
     "state": "Johor",
@@ -257,7 +352,12 @@
     "others": 7.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.8,
+    "age_30_39": 24.4,
+    "age_40_49": 19.8,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.4
   },
   "P160": {
     "state": "Johor",
@@ -270,7 +370,12 @@
     "others": 3.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.8,
+    "age_30_39": 24.4,
+    "age_40_49": 19.8,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.4
   },
   "P161": {
     "state": "Johor",
@@ -283,7 +388,12 @@
     "others": 2.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.0,
+    "age_30_39": 25.0,
+    "age_40_49": 19.3,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.7
   },
   "P162": {
     "state": "Johor",
@@ -296,7 +406,12 @@
     "others": 2.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.1,
+    "age_30_39": 25.0,
+    "age_40_49": 19.3,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.6
   },
   "P163": {
     "state": "Johor",
@@ -309,7 +424,12 @@
     "others": 2.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.0,
+    "age_30_39": 25.0,
+    "age_40_49": 19.4,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.6
   },
   "P164": {
     "state": "Johor",
@@ -322,7 +442,12 @@
     "others": 2.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.1,
+    "age_30_39": 24.5,
+    "age_40_49": 19.8,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.1
   },
   "P165": {
     "state": "Johor",
@@ -335,7 +460,12 @@
     "others": 1.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.3,
+    "age_30_39": 25.1,
+    "age_40_49": 19.3,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.4
   },
   "P004": {
     "state": "Kedah",
@@ -348,7 +478,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.4,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "P005": {
     "state": "Kedah",
@@ -361,7 +496,12 @@
     "others": 2.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "P006": {
     "state": "Kedah",
@@ -374,7 +514,12 @@
     "others": 1.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.5,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.6
   },
   "P007": {
     "state": "Kedah",
@@ -387,7 +532,12 @@
     "others": 6.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 26.3,
+    "age_30_39": 22.2,
+    "age_40_49": 21.2,
+    "age_50_59": 16.9,
+    "age_60_plus": 13.4
   },
   "P008": {
     "state": "Kedah",
@@ -400,7 +550,12 @@
     "others": 0.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.3,
+    "age_30_39": 23.6,
+    "age_40_49": 20.0,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "P009": {
     "state": "Kedah",
@@ -413,7 +568,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.6,
+    "age_60_plus": 12.0
   },
   "P010": {
     "state": "Kedah",
@@ -426,7 +586,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 20.9,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.1
   },
   "P011": {
     "state": "Kedah",
@@ -439,7 +604,12 @@
     "others": 6.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.6,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.7
   },
   "P012": {
     "state": "Kedah",
@@ -452,7 +622,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.4,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.4
   },
   "P013": {
     "state": "Kedah",
@@ -465,7 +640,12 @@
     "others": 5.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.4,
+    "age_30_39": 22.7,
+    "age_40_49": 20.7,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.9
   },
   "P014": {
     "state": "Kedah",
@@ -478,7 +658,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.7,
+    "age_30_39": 22.8,
+    "age_40_49": 20.6,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.7
   },
   "P015": {
     "state": "Kedah",
@@ -491,7 +676,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.3,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.3
   },
   "P016": {
     "state": "Kedah",
@@ -504,7 +694,12 @@
     "others": 1.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "P017": {
     "state": "Kedah",
@@ -517,7 +712,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 26.3,
+    "age_30_39": 22.2,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.6
   },
   "P018": {
     "state": "Kedah",
@@ -530,7 +730,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.6,
+    "age_30_39": 22.8,
+    "age_40_49": 20.7,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.7
   },
   "P019": {
     "state": "Kelantan",
@@ -543,7 +748,12 @@
     "others": 3.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.3,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.3
   },
   "P020": {
     "state": "Kelantan",
@@ -556,7 +766,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.4,
+    "age_30_39": 23.6,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.7
   },
   "P021": {
     "state": "Kelantan",
@@ -569,7 +784,12 @@
     "others": 1.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.5,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.8
   },
   "P022": {
     "state": "Kelantan",
@@ -582,7 +802,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 26.7,
+    "age_30_39": 22.4,
+    "age_40_49": 20.9,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.4
   },
   "P023": {
     "state": "Kelantan",
@@ -595,7 +820,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.6,
+    "age_60_plus": 12.0
   },
   "P024": {
     "state": "Kelantan",
@@ -608,7 +838,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.5,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.7
   },
   "P025": {
     "state": "Kelantan",
@@ -621,7 +856,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.8,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.9
   },
   "P026": {
     "state": "Kelantan",
@@ -634,7 +874,12 @@
     "others": 1.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.5,
+    "age_30_39": 23.2,
+    "age_40_49": 20.2,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.4
   },
   "P027": {
     "state": "Kelantan",
@@ -647,7 +892,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.5,
+    "age_30_39": 23.2,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.3
   },
   "P028": {
     "state": "Kelantan",
@@ -660,7 +910,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.6,
+    "age_60_plus": 12.0
   },
   "P029": {
     "state": "Kelantan",
@@ -673,7 +928,12 @@
     "others": 0.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.9,
+    "age_30_39": 22.9,
+    "age_40_49": 20.5,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.6
   },
   "P030": {
     "state": "Kelantan",
@@ -686,7 +946,12 @@
     "others": 1.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.5,
+    "age_30_39": 22.7,
+    "age_40_49": 20.7,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.8
   },
   "P031": {
     "state": "Kelantan",
@@ -699,7 +964,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 20.8,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.2
   },
   "P032": {
     "state": "Kelantan",
@@ -712,7 +982,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 26.2,
+    "age_30_39": 22.2,
+    "age_40_49": 21.1,
+    "age_50_59": 16.9,
+    "age_60_plus": 13.6
   },
   "P134": {
     "state": "Melaka",
@@ -725,7 +1000,12 @@
     "others": 2.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.8,
+    "age_30_39": 25.4,
+    "age_40_49": 19.3,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.9
   },
   "P135": {
     "state": "Melaka",
@@ -738,7 +1018,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.8,
+    "age_30_39": 24.5,
+    "age_40_49": 20.0,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.1
   },
   "P136": {
     "state": "Melaka",
@@ -751,7 +1036,12 @@
     "others": 4.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.2,
+    "age_30_39": 25.6,
+    "age_40_49": 19.0,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.8
   },
   "P137": {
     "state": "Melaka",
@@ -764,7 +1054,12 @@
     "others": 1.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.1,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.9
   },
   "P138": {
     "state": "Melaka",
@@ -777,7 +1072,12 @@
     "others": 2.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.1,
+    "age_30_39": 26.0,
+    "age_40_49": 18.8,
+    "age_50_59": 13.0,
+    "age_60_plus": 8.1
   },
   "P139": {
     "state": "Melaka",
@@ -790,7 +1090,12 @@
     "others": 0.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.4,
+    "age_30_39": 24.7,
+    "age_40_49": 19.7,
+    "age_50_59": 14.3,
+    "age_60_plus": 9.9
   },
   "P126": {
     "state": "Negeri Sembilan",
@@ -803,7 +1108,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.5,
+    "age_30_39": 23.8,
+    "age_40_49": 20.3,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.2
   },
   "P127": {
     "state": "Negeri Sembilan",
@@ -816,7 +1126,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.2,
+    "age_30_39": 23.7,
+    "age_40_49": 20.4,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.3
   },
   "P128": {
     "state": "Negeri Sembilan",
@@ -829,7 +1144,12 @@
     "others": 2.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.9,
+    "age_30_39": 24.9,
+    "age_40_49": 19.4,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "P129": {
     "state": "Negeri Sembilan",
@@ -842,7 +1162,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.7,
+    "age_30_39": 23.9,
+    "age_40_49": 20.3,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.0
   },
   "P130": {
     "state": "Negeri Sembilan",
@@ -855,7 +1180,12 @@
     "others": 2.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 20.0,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.8
   },
   "P131": {
     "state": "Negeri Sembilan",
@@ -868,7 +1198,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.2,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.0
   },
   "P132": {
     "state": "Negeri Sembilan",
@@ -881,7 +1216,12 @@
     "others": 3.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.2,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.0
   },
   "P133": {
     "state": "Negeri Sembilan",
@@ -894,7 +1234,12 @@
     "others": 2.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.7,
+    "age_30_39": 24.3,
+    "age_40_49": 19.9,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.4
   },
   "P078": {
     "state": "Pahang",
@@ -907,7 +1252,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.5,
+    "age_30_39": 22.8,
+    "age_40_49": 20.7,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.8
   },
   "P079": {
     "state": "Pahang",
@@ -920,7 +1270,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.4,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "P080": {
     "state": "Pahang",
@@ -933,7 +1288,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "P081": {
     "state": "Pahang",
@@ -946,7 +1306,12 @@
     "others": 0.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.4,
+    "age_30_39": 24.1,
+    "age_40_49": 19.6,
+    "age_50_59": 14.8,
+    "age_60_plus": 11.1
   },
   "P082": {
     "state": "Pahang",
@@ -959,7 +1324,12 @@
     "others": 1.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.4,
+    "age_30_39": 22.7,
+    "age_40_49": 20.8,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.8
   },
   "P083": {
     "state": "Pahang",
@@ -972,7 +1342,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.4,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.4
   },
   "P084": {
     "state": "Pahang",
@@ -985,7 +1360,12 @@
     "others": 1.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 19.9,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.3
   },
   "P085": {
     "state": "Pahang",
@@ -998,7 +1378,12 @@
     "others": 3.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.2,
+    "age_30_39": 22.6,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.9
   },
   "P086": {
     "state": "Pahang",
@@ -1011,7 +1396,12 @@
     "others": 1.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.5,
+    "age_30_39": 23.2,
+    "age_40_49": 20.3,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "P087": {
     "state": "Pahang",
@@ -1024,7 +1414,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.3,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.9
   },
   "P088": {
     "state": "Pahang",
@@ -1037,7 +1432,12 @@
     "others": 3.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.0,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.9
   },
   "P089": {
     "state": "Pahang",
@@ -1050,7 +1450,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.7,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.6
   },
   "P090": {
     "state": "Pahang",
@@ -1063,7 +1468,12 @@
     "others": 1.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.6,
+    "age_30_39": 22.8,
+    "age_40_49": 20.7,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.7
   },
   "P091": {
     "state": "Pahang",
@@ -1076,7 +1486,12 @@
     "others": 1.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.9,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.8
   },
   "P054": {
     "state": "Perak",
@@ -1089,7 +1504,12 @@
     "others": 4.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.2,
+    "age_30_39": 25.0,
+    "age_40_49": 19.2,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.7
   },
   "P055": {
     "state": "Perak",
@@ -1102,7 +1522,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 20.0,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.8
   },
   "P056": {
     "state": "Perak",
@@ -1115,7 +1540,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.6,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.7
   },
   "P057": {
     "state": "Perak",
@@ -1128,7 +1558,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 20.0,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.8
   },
   "P058": {
     "state": "Perak",
@@ -1141,7 +1576,12 @@
     "others": 0.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.1,
+    "age_30_39": 25.0,
+    "age_40_49": 19.2,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.7
   },
   "P059": {
     "state": "Perak",
@@ -1154,7 +1594,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.6,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.6
   },
   "P060": {
     "state": "Perak",
@@ -1167,7 +1612,12 @@
     "others": 1.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.2,
+    "age_30_39": 25.1,
+    "age_40_49": 19.3,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.5
   },
   "P061": {
     "state": "Perak",
@@ -1180,7 +1630,12 @@
     "others": 0.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.4,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.8
   },
   "P062": {
     "state": "Perak",
@@ -1193,7 +1648,12 @@
     "others": 0.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.5,
+    "age_30_39": 23.8,
+    "age_40_49": 20.2,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.2
   },
   "P063": {
     "state": "Perak",
@@ -1206,7 +1666,12 @@
     "others": 1.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.6,
+    "age_30_39": 24.8,
+    "age_40_49": 19.5,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.9
   },
   "P064": {
     "state": "Perak",
@@ -1219,7 +1684,12 @@
     "others": 0.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.0,
+    "age_30_39": 24.5,
+    "age_40_49": 19.6,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.4
   },
   "P065": {
     "state": "Perak",
@@ -1232,7 +1702,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.6,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.7
   },
   "P066": {
     "state": "Perak",
@@ -1245,7 +1720,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.3,
+    "age_30_39": 23.7,
+    "age_40_49": 20.3,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.4
   },
   "P067": {
     "state": "Perak",
@@ -1258,7 +1738,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.1,
+    "age_30_39": 24.5,
+    "age_40_49": 19.7,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.2
   },
   "P068": {
     "state": "Perak",
@@ -1271,7 +1756,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.9,
+    "age_30_39": 24.5,
+    "age_40_49": 19.8,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.3
   },
   "P069": {
     "state": "Perak",
@@ -1284,7 +1774,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.5,
+    "age_30_39": 23.7,
+    "age_40_49": 20.2,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.3
   },
   "P070": {
     "state": "Perak",
@@ -1297,7 +1792,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.6,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.6
   },
   "P071": {
     "state": "Perak",
@@ -1310,7 +1810,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.6,
+    "age_30_39": 24.8,
+    "age_40_49": 19.4,
+    "age_50_59": 14.2,
+    "age_60_plus": 10.0
   },
   "P072": {
     "state": "Perak",
@@ -1323,7 +1828,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.1,
+    "age_30_39": 23.6,
+    "age_40_49": 20.4,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.5
   },
   "P073": {
     "state": "Perak",
@@ -1336,7 +1846,12 @@
     "others": 0.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.3,
+    "age_30_39": 24.7,
+    "age_40_49": 19.6,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.1
   },
   "P074": {
     "state": "Perak",
@@ -1349,7 +1864,12 @@
     "others": 2.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 19.9,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.9
   },
   "P075": {
     "state": "Perak",
@@ -1362,7 +1882,12 @@
     "others": 1.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.1,
+    "age_30_39": 23.6,
+    "age_40_49": 20.4,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.4
   },
   "P076": {
     "state": "Perak",
@@ -1375,7 +1900,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.9,
+    "age_30_39": 24.5,
+    "age_40_49": 19.7,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.4
   },
   "P077": {
     "state": "Perak",
@@ -1388,7 +1918,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.0,
+    "age_30_39": 24.0,
+    "age_40_49": 20.0,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.0
   },
   "P001": {
     "state": "Perlis",
@@ -1401,7 +1936,12 @@
     "others": 4.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.4,
+    "age_30_39": 22.8,
+    "age_40_49": 20.9,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.6
   },
   "P002": {
     "state": "Perlis",
@@ -1414,7 +1954,12 @@
     "others": 2.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.8,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.5
   },
   "P003": {
     "state": "Perlis",
@@ -1427,7 +1972,12 @@
     "others": 3.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.9,
+    "age_30_39": 23.4,
+    "age_40_49": 20.3,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.8
   },
   "P041": {
     "state": "Pulau Pinang",
@@ -1440,7 +1990,12 @@
     "others": 0.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 18.9,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.8
   },
   "P042": {
     "state": "Pulau Pinang",
@@ -1453,7 +2008,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.4,
+    "age_30_39": 25.7,
+    "age_40_49": 19.2,
+    "age_50_59": 13.3,
+    "age_60_plus": 8.4
   },
   "P043": {
     "state": "Pulau Pinang",
@@ -1466,7 +2026,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.4,
+    "age_30_39": 26.7,
+    "age_40_49": 18.4,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.2
   },
   "P044": {
     "state": "Pulau Pinang",
@@ -1479,7 +2044,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.6,
+    "age_30_39": 24.9,
+    "age_40_49": 19.9,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.4
   },
   "P045": {
     "state": "Pulau Pinang",
@@ -1492,7 +2062,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.3,
+    "age_30_39": 25.7,
+    "age_40_49": 19.3,
+    "age_50_59": 13.3,
+    "age_60_plus": 8.4
   },
   "P046": {
     "state": "Pulau Pinang",
@@ -1505,7 +2080,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 18.9,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.8
   },
   "P047": {
     "state": "Pulau Pinang",
@@ -1518,7 +2098,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.7,
+    "age_30_39": 26.3,
+    "age_40_49": 18.7,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.6
   },
   "P048": {
     "state": "Pulau Pinang",
@@ -1531,7 +2116,12 @@
     "others": 1.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.8,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.4
   },
   "P049": {
     "state": "Pulau Pinang",
@@ -1544,7 +2134,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.8,
+    "age_30_39": 26.3,
+    "age_40_49": 18.6,
+    "age_50_59": 12.6,
+    "age_60_plus": 7.7
   },
   "P050": {
     "state": "Pulau Pinang",
@@ -1557,7 +2152,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 18.8,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.9
   },
   "P051": {
     "state": "Pulau Pinang",
@@ -1570,7 +2170,12 @@
     "others": 0.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 18.8,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.9
   },
   "P052": {
     "state": "Pulau Pinang",
@@ -1583,7 +2188,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.8,
+    "age_30_39": 26.4,
+    "age_40_49": 18.6,
+    "age_50_59": 12.6,
+    "age_60_plus": 7.6
   },
   "P053": {
     "state": "Pulau Pinang",
@@ -1596,7 +2206,12 @@
     "others": 0.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.2,
+    "age_30_39": 26.1,
+    "age_40_49": 18.8,
+    "age_50_59": 12.9,
+    "age_60_plus": 8.0
   },
   "P167": {
     "state": "Sabah",
@@ -1609,7 +2224,12 @@
     "others": 89.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "P168": {
     "state": "Sabah",
@@ -1622,7 +2242,12 @@
     "others": 95.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.8,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.8
   },
   "P169": {
     "state": "Sabah",
@@ -1635,7 +2260,12 @@
     "others": 96.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.9,
+    "age_30_39": 23.9,
+    "age_40_49": 19.8,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.4
   },
   "P170": {
     "state": "Sabah",
@@ -1648,7 +2278,12 @@
     "others": 91.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.6,
+    "age_30_39": 24.2,
+    "age_40_49": 19.6,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.9
   },
   "P171": {
     "state": "Sabah",
@@ -1661,7 +2296,12 @@
     "others": 69.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "P172": {
     "state": "Sabah",
@@ -1674,7 +2314,12 @@
     "others": 34.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.7,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "P173": {
     "state": "Sabah",
@@ -1687,7 +2332,12 @@
     "others": 68.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.4
   },
   "P174": {
     "state": "Sabah",
@@ -1700,7 +2350,12 @@
     "others": 68.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.5,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.0
   },
   "P175": {
     "state": "Sabah",
@@ -1713,7 +2368,12 @@
     "others": 84.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "P176": {
     "state": "Sabah",
@@ -1726,7 +2386,12 @@
     "others": 88.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.9,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.0
   },
   "P177": {
     "state": "Sabah",
@@ -1739,7 +2404,12 @@
     "others": 87.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.4,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.8
   },
   "P178": {
     "state": "Sabah",
@@ -1752,7 +2422,12 @@
     "others": 88.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.2,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.6
   },
   "P179": {
     "state": "Sabah",
@@ -1765,7 +2440,12 @@
     "others": 96.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.3,
+    "age_30_39": 24.1,
+    "age_40_49": 19.7,
+    "age_50_59": 14.8,
+    "age_60_plus": 11.1
   },
   "P180": {
     "state": "Sabah",
@@ -1778,7 +2458,12 @@
     "others": 87.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.9,
+    "age_30_39": 23.9,
+    "age_40_49": 19.9,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "P181": {
     "state": "Sabah",
@@ -1791,7 +2476,12 @@
     "others": 85.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.5,
+    "age_30_39": 22.8,
+    "age_40_49": 20.9,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.6
   },
   "P182": {
     "state": "Sabah",
@@ -1804,7 +2494,12 @@
     "others": 97.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.8,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "P183": {
     "state": "Sabah",
@@ -1817,7 +2512,12 @@
     "others": 93.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.5,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.3
   },
   "P184": {
     "state": "Sabah",
@@ -1830,7 +2530,12 @@
     "others": 56.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "P185": {
     "state": "Sabah",
@@ -1843,7 +2548,12 @@
     "others": 58.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "P186": {
     "state": "Sabah",
@@ -1856,7 +2566,12 @@
     "others": 42.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "P187": {
     "state": "Sabah",
@@ -1869,7 +2584,12 @@
     "others": 84.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 21.0,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.0
   },
   "P188": {
     "state": "Sabah",
@@ -1882,7 +2602,12 @@
     "others": 64.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.4,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.0
   },
   "P189": {
     "state": "Sabah",
@@ -1895,7 +2620,12 @@
     "others": 92.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 11.9
   },
   "P190": {
     "state": "Sabah",
@@ -1908,7 +2638,12 @@
     "others": 36.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.9,
+    "age_30_39": 24.4,
+    "age_40_49": 19.5,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.6
   },
   "P191": {
     "state": "Sabah",
@@ -1921,7 +2656,12 @@
     "others": 42.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.9,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.9
   },
   "P192": {
     "state": "Sarawak",
@@ -1934,7 +2674,12 @@
     "others": 77.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.4,
+    "age_30_39": 24.1,
+    "age_40_49": 19.8,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.9
   },
   "P193": {
     "state": "Sarawak",
@@ -1947,7 +2692,12 @@
     "others": 13.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.2,
+    "age_30_39": 24.6,
+    "age_40_49": 19.5,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.3
   },
   "P194": {
     "state": "Sarawak",
@@ -1960,7 +2710,12 @@
     "others": 16.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.1,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.5
   },
   "P195": {
     "state": "Sarawak",
@@ -1973,7 +2728,12 @@
     "others": 9.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.8,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.2
   },
   "P196": {
     "state": "Sarawak",
@@ -1986,7 +2746,12 @@
     "others": 23.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.0,
+    "age_30_39": 24.0,
+    "age_40_49": 19.9,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "P197": {
     "state": "Sarawak",
@@ -1999,7 +2764,12 @@
     "others": 30.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.4,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.8
   },
   "P198": {
     "state": "Sarawak",
@@ -2012,7 +2782,12 @@
     "others": 70.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "P199": {
     "state": "Sarawak",
@@ -2025,7 +2800,12 @@
     "others": 82.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.2,
+    "age_30_39": 24.6,
+    "age_40_49": 19.5,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.3
   },
   "P200": {
     "state": "Sarawak",
@@ -2038,7 +2818,12 @@
     "others": 24.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 19.8,
+    "age_50_59": 14.9,
+    "age_60_plus": 11.0
   },
   "P201": {
     "state": "Sarawak",
@@ -2051,7 +2836,12 @@
     "others": 24.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "P202": {
     "state": "Sarawak",
@@ -2064,7 +2854,12 @@
     "others": 72.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "P203": {
     "state": "Sarawak",
@@ -2077,7 +2872,12 @@
     "others": 90.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.8,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.5
   },
   "P204": {
     "state": "Sarawak",
@@ -2090,7 +2890,12 @@
     "others": 48.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "P205": {
     "state": "Sarawak",
@@ -2103,7 +2908,12 @@
     "others": 56.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.5,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.4
   },
   "P206": {
     "state": "Sarawak",
@@ -2116,7 +2926,12 @@
     "others": 70.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.3,
+    "age_30_39": 23.2,
+    "age_40_49": 20.6,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "P207": {
     "state": "Sarawak",
@@ -2129,7 +2944,12 @@
     "others": 90.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 31.1,
+    "age_30_39": 24.5,
+    "age_40_49": 19.5,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.5
   },
   "P208": {
     "state": "Sarawak",
@@ -2142,7 +2962,12 @@
     "others": 34.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.7,
+    "age_30_39": 24.3,
+    "age_40_49": 19.6,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.7
   },
   "P209": {
     "state": "Sarawak",
@@ -2155,7 +2980,12 @@
     "others": 94.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.7,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.3
   },
   "P210": {
     "state": "Sarawak",
@@ -2168,7 +2998,12 @@
     "others": 86.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "P211": {
     "state": "Sarawak",
@@ -2181,7 +3016,12 @@
     "others": 30.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "P212": {
     "state": "Sarawak",
@@ -2194,7 +3034,12 @@
     "others": 27.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 20.0,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "P213": {
     "state": "Sarawak",
@@ -2207,7 +3052,12 @@
     "others": 86.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.1,
+    "age_30_39": 23.6,
+    "age_40_49": 20.3,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.5
   },
   "P214": {
     "state": "Sarawak",
@@ -2220,7 +3070,12 @@
     "others": 95.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.8,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.4
   },
   "P215": {
     "state": "Sarawak",
@@ -2233,7 +3088,12 @@
     "others": 88.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.9,
+    "age_30_39": 24.4,
+    "age_40_49": 19.6,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.5
   },
   "P216": {
     "state": "Sarawak",
@@ -2246,7 +3106,12 @@
     "others": 97.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.5,
+    "age_30_39": 24.2,
+    "age_40_49": 19.8,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.7
   },
   "P217": {
     "state": "Sarawak",
@@ -2259,7 +3124,12 @@
     "others": 65.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.3,
+    "age_30_39": 24.1,
+    "age_40_49": 19.8,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.9
   },
   "P218": {
     "state": "Sarawak",
@@ -2272,7 +3142,12 @@
     "others": 58.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.7,
+    "age_30_39": 23.9,
+    "age_40_49": 20.1,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "P219": {
     "state": "Sarawak",
@@ -2285,7 +3160,12 @@
     "others": 36.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.7,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "P220": {
     "state": "Sarawak",
@@ -2298,7 +3178,12 @@
     "others": 88.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.8,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "P221": {
     "state": "Sarawak",
@@ -2311,7 +3196,12 @@
     "others": 56.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.1,
+    "age_30_39": 23.6,
+    "age_40_49": 20.2,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "P222": {
     "state": "Sarawak",
@@ -2324,7 +3214,12 @@
     "others": 54.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 30.4,
+    "age_30_39": 24.2,
+    "age_40_49": 19.7,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.9
   },
   "P092": {
     "state": "Selangor",
@@ -2337,7 +3232,12 @@
     "others": 0.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.7,
+    "age_30_39": 26.3,
+    "age_40_49": 18.8,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.5
   },
   "P093": {
     "state": "Selangor",
@@ -2350,7 +3250,12 @@
     "others": 1.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.1,
+    "age_30_39": 25.6,
+    "age_40_49": 19.3,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.6
   },
   "P094": {
     "state": "Selangor",
@@ -2363,7 +3268,12 @@
     "others": 2.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.5,
+    "age_30_39": 26.7,
+    "age_40_49": 18.5,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.0
   },
   "P095": {
     "state": "Selangor",
@@ -2376,7 +3286,12 @@
     "others": 1.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.2,
+    "age_30_39": 26.6,
+    "age_40_49": 18.6,
+    "age_50_59": 12.4,
+    "age_60_plus": 7.2
   },
   "P096": {
     "state": "Selangor",
@@ -2389,7 +3304,12 @@
     "others": 1.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.5,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.5
   },
   "P097": {
     "state": "Selangor",
@@ -2402,7 +3322,12 @@
     "others": 3.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.2,
+    "age_30_39": 26.6,
+    "age_40_49": 18.6,
+    "age_50_59": 12.4,
+    "age_60_plus": 7.2
   },
   "P098": {
     "state": "Selangor",
@@ -2415,7 +3340,12 @@
     "others": 7.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.8,
+    "age_30_39": 26.4,
+    "age_40_49": 18.7,
+    "age_50_59": 12.6,
+    "age_60_plus": 7.5
   },
   "P099": {
     "state": "Selangor",
@@ -2428,7 +3358,12 @@
     "others": 6.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.4,
+    "age_30_39": 26.7,
+    "age_40_49": 18.5,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.1
   },
   "P100": {
     "state": "Selangor",
@@ -2441,7 +3376,12 @@
     "others": 4.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.0,
+    "age_30_39": 26.5,
+    "age_40_49": 18.7,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.3
   },
   "P101": {
     "state": "Selangor",
@@ -2454,7 +3394,12 @@
     "others": 3.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.6,
+    "age_30_39": 26.7,
+    "age_40_49": 18.4,
+    "age_50_59": 12.2,
+    "age_60_plus": 7.1
   },
   "P102": {
     "state": "Selangor",
@@ -2467,7 +3412,12 @@
     "others": 3.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.6,
+    "age_30_39": 26.8,
+    "age_40_49": 18.4,
+    "age_50_59": 12.2,
+    "age_60_plus": 7.0
   },
   "P103": {
     "state": "Selangor",
@@ -2480,7 +3430,12 @@
     "others": 2.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.6,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.0
   },
   "P104": {
     "state": "Selangor",
@@ -2493,7 +3448,12 @@
     "others": 2.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.7,
+    "age_30_39": 25.4,
+    "age_40_49": 19.5,
+    "age_50_59": 13.7,
+    "age_60_plus": 8.7
   },
   "P105": {
     "state": "Selangor",
@@ -2506,7 +3466,12 @@
     "others": 3.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.8,
+    "age_30_39": 26.4,
+    "age_40_49": 18.7,
+    "age_50_59": 12.6,
+    "age_60_plus": 7.5
   },
   "P106": {
     "state": "Selangor",
@@ -2519,7 +3484,12 @@
     "others": 3.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.6,
+    "age_30_39": 26.8,
+    "age_40_49": 18.4,
+    "age_50_59": 12.2,
+    "age_60_plus": 7.0
   },
   "P107": {
     "state": "Selangor",
@@ -2532,7 +3502,12 @@
     "others": 6.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.8,
+    "age_30_39": 26.9,
+    "age_40_49": 18.4,
+    "age_50_59": 12.1,
+    "age_60_plus": 6.8
   },
   "P108": {
     "state": "Selangor",
@@ -2545,7 +3520,12 @@
     "others": 1.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.4,
+    "age_30_39": 26.2,
+    "age_40_49": 18.8,
+    "age_50_59": 12.8,
+    "age_60_plus": 7.8
   },
   "P109": {
     "state": "Selangor",
@@ -2558,7 +3538,12 @@
     "others": 2.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 32.9,
+    "age_30_39": 25.5,
+    "age_40_49": 19.5,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.6
   },
   "P110": {
     "state": "Selangor",
@@ -2571,7 +3556,12 @@
     "others": 2.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.1,
+    "age_30_39": 26.1,
+    "age_40_49": 18.9,
+    "age_50_59": 12.9,
+    "age_60_plus": 8.0
   },
   "P111": {
     "state": "Selangor",
@@ -2584,7 +3574,12 @@
     "others": 3.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.4,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.6
   },
   "P112": {
     "state": "Selangor",
@@ -2597,7 +3592,12 @@
     "others": 2.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.4,
+    "age_30_39": 25.7,
+    "age_40_49": 19.3,
+    "age_50_59": 13.3,
+    "age_60_plus": 8.3
   },
   "P113": {
     "state": "Selangor",
@@ -2610,7 +3610,12 @@
     "others": 2.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.1,
+    "age_30_39": 26.5,
+    "age_40_49": 18.6,
+    "age_50_59": 12.4,
+    "age_60_plus": 7.4
   },
   "P033": {
     "state": "Terengganu",
@@ -2623,7 +3628,12 @@
     "others": 0.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.5,
+    "age_30_39": 23.7,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.7
   },
   "P034": {
     "state": "Terengganu",
@@ -2636,7 +3646,12 @@
     "others": 0.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "P035": {
     "state": "Terengganu",
@@ -2649,7 +3664,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 26.1,
+    "age_30_39": 22.1,
+    "age_40_49": 21.2,
+    "age_50_59": 16.9,
+    "age_60_plus": 13.7
   },
   "P036": {
     "state": "Terengganu",
@@ -2662,7 +3682,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.1
   },
   "P037": {
     "state": "Terengganu",
@@ -2675,7 +3700,12 @@
     "others": 0.5,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.3,
+    "age_30_39": 23.6,
+    "age_40_49": 20.0,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "P038": {
     "state": "Terengganu",
@@ -2688,7 +3718,12 @@
     "others": 0.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.1
   },
   "P039": {
     "state": "Terengganu",
@@ -2701,7 +3736,12 @@
     "others": 0.9,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 28.7,
+    "age_30_39": 23.3,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.0
   },
   "P040": {
     "state": "Terengganu",
@@ -2714,7 +3754,12 @@
     "others": 1.0,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 19.8,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.5
   },
   "P114": {
     "state": "W.P. Kuala Lumpur",
@@ -2727,7 +3772,12 @@
     "others": 1.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 36.1,
+    "age_30_39": 27.0,
+    "age_40_49": 18.3,
+    "age_50_59": 12.0,
+    "age_60_plus": 6.6
   },
   "P115": {
     "state": "W.P. Kuala Lumpur",
@@ -2740,7 +3790,12 @@
     "others": 3.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.5,
+    "age_30_39": 26.3,
+    "age_40_49": 19.0,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.5
   },
   "P116": {
     "state": "W.P. Kuala Lumpur",
@@ -2753,7 +3808,12 @@
     "others": 4.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.0,
+    "age_30_39": 25.6,
+    "age_40_49": 19.5,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.4
   },
   "P117": {
     "state": "W.P. Kuala Lumpur",
@@ -2766,7 +3826,12 @@
     "others": 4.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.9,
+    "age_30_39": 26.5,
+    "age_40_49": 18.8,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.3
   },
   "P118": {
     "state": "W.P. Kuala Lumpur",
@@ -2779,7 +3844,12 @@
     "others": 3.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.1,
+    "age_30_39": 26.6,
+    "age_40_49": 18.7,
+    "age_50_59": 12.4,
+    "age_60_plus": 7.2
   },
   "P119": {
     "state": "W.P. Kuala Lumpur",
@@ -2792,7 +3862,12 @@
     "others": 7.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.6,
+    "age_30_39": 26.8,
+    "age_40_49": 18.5,
+    "age_50_59": 12.2,
+    "age_60_plus": 6.9
   },
   "P120": {
     "state": "W.P. Kuala Lumpur",
@@ -2805,7 +3880,12 @@
     "others": 2.8,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 36.5,
+    "age_30_39": 27.2,
+    "age_40_49": 18.2,
+    "age_50_59": 11.7,
+    "age_60_plus": 6.4
   },
   "P121": {
     "state": "W.P. Kuala Lumpur",
@@ -2818,7 +3898,12 @@
     "others": 4.4,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.1,
+    "age_30_39": 26.1,
+    "age_40_49": 19.2,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.7
   },
   "P122": {
     "state": "W.P. Kuala Lumpur",
@@ -2831,7 +3916,12 @@
     "others": 2.1,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.1,
+    "age_30_39": 26.6,
+    "age_40_49": 18.7,
+    "age_50_59": 12.4,
+    "age_60_plus": 7.2
   },
   "P123": {
     "state": "W.P. Kuala Lumpur",
@@ -2844,7 +3934,12 @@
     "others": 1.6,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 34.7,
+    "age_30_39": 26.4,
+    "age_40_49": 18.8,
+    "age_50_59": 12.6,
+    "age_60_plus": 7.5
   },
   "P124": {
     "state": "W.P. Kuala Lumpur",
@@ -2857,7 +3952,12 @@
     "others": 2.2,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.9,
+    "age_30_39": 26.0,
+    "age_40_49": 19.2,
+    "age_50_59": 13.0,
+    "age_60_plus": 7.9
   },
   "P166": {
     "state": "W.P. Labuan",
@@ -2870,7 +3970,12 @@
     "others": 48.7,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 33.9,
+    "age_30_39": 26.0,
+    "age_40_49": 19.1,
+    "age_50_59": 13.0,
+    "age_60_plus": 8.0
   },
   "P125": {
     "state": "W.P. Putrajaya",
@@ -2883,6 +3988,11 @@
     "others": 2.3,
     "medianIncome": 5000,
     "gini": 0.35,
-    "poverty": 3.0
+    "poverty": 3.0,
+    "age_18_29": 35.3,
+    "age_30_39": 26.7,
+    "age_40_49": 18.6,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.1
   }
 }

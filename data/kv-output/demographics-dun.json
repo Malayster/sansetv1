@@ -5,7 +5,12 @@
     "indian": 2.6,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 32521
+    "total_voters": 32521,
+    "age_18_29": 26.7,
+    "age_30_39": 22.4,
+    "age_40_49": 21.1,
+    "age_50_59": 16.7,
+    "age_60_plus": 13.1
   },
   "KDH_N02": {
     "malay": 84.6,
@@ -13,7 +18,12 @@
     "indian": 2.1,
     "orang_asli": 0.0,
     "others": 1.4,
-    "total_voters": 34256
+    "total_voters": 34256,
+    "age_18_29": 26.9,
+    "age_30_39": 22.5,
+    "age_40_49": 20.9,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.1
   },
   "KDH_N03": {
     "malay": 91.6,
@@ -21,7 +31,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.4,
-    "total_voters": 29785
+    "total_voters": 29785,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "KDH_N04": {
     "malay": 90.2,
@@ -29,7 +44,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 3.1,
-    "total_voters": 37816
+    "total_voters": 37816,
+    "age_18_29": 27.2,
+    "age_30_39": 22.7,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.8
   },
   "KDH_N05": {
     "malay": 89.1,
@@ -37,7 +57,12 @@
     "indian": 2.1,
     "orang_asli": 0.0,
     "others": 2.1,
-    "total_voters": 45801
+    "total_voters": 45801,
+    "age_18_29": 26.4,
+    "age_30_39": 22.2,
+    "age_40_49": 21.2,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.4
   },
   "KDH_N06": {
     "malay": 83.8,
@@ -45,7 +70,12 @@
     "indian": 4.3,
     "orang_asli": 0.0,
     "others": 1.8,
-    "total_voters": 62416
+    "total_voters": 62416,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.5,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.7
   },
   "KDH_N07": {
     "malay": 96.8,
@@ -53,7 +83,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 1.5,
-    "total_voters": 31329
+    "total_voters": 31329,
+    "age_18_29": 26.4,
+    "age_30_39": 22.2,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.5
   },
   "KDH_N08": {
     "malay": 86.0,
@@ -61,7 +96,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 12.9,
-    "total_voters": 28477
+    "total_voters": 28477,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.1
   },
   "KDH_N09": {
     "malay": 89.9,
@@ -69,7 +109,12 @@
     "indian": 1.9,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 40563
+    "total_voters": 40563,
+    "age_18_29": 28.1,
+    "age_30_39": 23.1,
+    "age_40_49": 20.4,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.5
   },
   "KDH_N10": {
     "malay": 93.1,
@@ -77,7 +122,12 @@
     "indian": 0.9,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 36667
+    "total_voters": 36667,
+    "age_18_29": 26.8,
+    "age_30_39": 22.5,
+    "age_40_49": 21.1,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.0
   },
   "KDH_N11": {
     "malay": 60.9,
@@ -85,7 +135,12 @@
     "indian": 4.6,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 37608
+    "total_voters": 37608,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.1,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.5
   },
   "KDH_N12": {
     "malay": 72.2,
@@ -93,7 +148,12 @@
     "indian": 4.0,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 41917
+    "total_voters": 41917,
+    "age_18_29": 26.7,
+    "age_30_39": 22.4,
+    "age_40_49": 21.0,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.3
   },
   "KDH_N13": {
     "malay": 35.6,
@@ -101,7 +161,12 @@
     "indian": 6.7,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 26102
+    "total_voters": 26102,
+    "age_18_29": 28.3,
+    "age_30_39": 23.1,
+    "age_40_49": 20.5,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.2
   },
   "KDH_N14": {
     "malay": 72.6,
@@ -109,7 +174,12 @@
     "indian": 2.7,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 37975
+    "total_voters": 37975,
+    "age_18_29": 26.1,
+    "age_30_39": 22.1,
+    "age_40_49": 21.2,
+    "age_50_59": 16.9,
+    "age_60_plus": 13.7
   },
   "KDH_N15": {
     "malay": 88.7,
@@ -117,7 +187,12 @@
     "indian": 1.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 36325
+    "total_voters": 36325,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "KDH_N16": {
     "malay": 70.4,
@@ -125,7 +200,12 @@
     "indian": 1.0,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 50078
+    "total_voters": 50078,
+    "age_18_29": 29.5,
+    "age_30_39": 23.7,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.5
   },
   "KDH_N17": {
     "malay": 72.1,
@@ -133,7 +213,12 @@
     "indian": 1.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 46097
+    "total_voters": 46097,
+    "age_18_29": 30.0,
+    "age_30_39": 23.9,
+    "age_40_49": 19.8,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.3
   },
   "KDH_N18": {
     "malay": 91.5,
@@ -141,7 +226,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 45265
+    "total_voters": 45265,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.4,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.4
   },
   "KDH_N19": {
     "malay": 85.7,
@@ -149,7 +239,12 @@
     "indian": 0.7,
     "orang_asli": 0.0,
     "others": 11.6,
-    "total_voters": 49282
+    "total_voters": 49282,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "KDH_N20": {
     "malay": 94.0,
@@ -157,7 +252,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.2,
-    "total_voters": 34312
+    "total_voters": 34312,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "KDH_N21": {
     "malay": 89.8,
@@ -165,7 +265,12 @@
     "indian": 0.6,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 29983
+    "total_voters": 29983,
+    "age_18_29": 26.8,
+    "age_30_39": 22.5,
+    "age_40_49": 21.0,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.1
   },
   "KDH_N22": {
     "malay": 62.4,
@@ -173,7 +278,12 @@
     "indian": 14.9,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 40706
+    "total_voters": 40706,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 20.9,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.1
   },
   "KDH_N23": {
     "malay": 93.1,
@@ -181,7 +291,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 5.2,
-    "total_voters": 28147
+    "total_voters": 28147,
+    "age_18_29": 26.6,
+    "age_30_39": 22.3,
+    "age_40_49": 21.0,
+    "age_50_59": 16.7,
+    "age_60_plus": 13.4
   },
   "KDH_N24": {
     "malay": 92.2,
@@ -189,7 +304,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 6.5,
-    "total_voters": 34979
+    "total_voters": 34979,
+    "age_18_29": 26.8,
+    "age_30_39": 22.4,
+    "age_40_49": 20.9,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.3
   },
   "KDH_N25": {
     "malay": 61.1,
@@ -197,7 +317,12 @@
     "indian": 20.3,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 78353
+    "total_voters": 78353,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "KDH_N26": {
     "malay": 81.0,
@@ -205,7 +330,12 @@
     "indian": 5.7,
     "orang_asli": 0.0,
     "others": 1.4,
-    "total_voters": 54091
+    "total_voters": 54091,
+    "age_18_29": 26.9,
+    "age_30_39": 22.5,
+    "age_40_49": 20.9,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.2
   },
   "KDH_N27": {
     "malay": 91.1,
@@ -213,7 +343,12 @@
     "indian": 2.4,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 51218
+    "total_voters": 51218,
+    "age_18_29": 29.5,
+    "age_30_39": 23.7,
+    "age_40_49": 19.9,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "KDH_N28": {
     "malay": 47.5,
@@ -221,7 +356,12 @@
     "indian": 14.6,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 57589
+    "total_voters": 57589,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.6,
+    "age_60_plus": 12.0
   },
   "KDH_N29": {
     "malay": 48.7,
@@ -229,7 +369,12 @@
     "indian": 18.9,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 60040
+    "total_voters": 60040,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.2,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.2
   },
   "KDH_N30": {
     "malay": 92.9,
@@ -237,7 +382,12 @@
     "indian": 0.7,
     "orang_asli": 0.4,
     "others": 2.4,
-    "total_voters": 47471
+    "total_voters": 47471,
+    "age_18_29": 27.3,
+    "age_30_39": 22.6,
+    "age_40_49": 20.7,
+    "age_50_59": 16.4,
+    "age_60_plus": 13.0
   },
   "KDH_N31": {
     "malay": 92.3,
@@ -245,7 +395,12 @@
     "indian": 2.5,
     "orang_asli": 0.0,
     "others": 1.8,
-    "total_voters": 42615
+    "total_voters": 42615,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.1,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.5
   },
   "KDH_N32": {
     "malay": 82.3,
@@ -253,7 +408,12 @@
     "indian": 11.1,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 42013
+    "total_voters": 42013,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "KDH_N33": {
     "malay": 76.4,
@@ -261,7 +421,12 @@
     "indian": 16.0,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 52601
+    "total_voters": 52601,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.4
   },
   "KDH_N34": {
     "malay": 53.2,
@@ -269,7 +434,12 @@
     "indian": 21.4,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 81266
+    "total_voters": 81266,
+    "age_18_29": 26.1,
+    "age_30_39": 22.1,
+    "age_40_49": 21.2,
+    "age_50_59": 16.9,
+    "age_60_plus": 13.7
   },
   "KDH_N35": {
     "malay": 63.2,
@@ -277,7 +447,12 @@
     "indian": 16.6,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 54003
+    "total_voters": 54003,
+    "age_18_29": 27.1,
+    "age_30_39": 22.6,
+    "age_40_49": 20.9,
+    "age_50_59": 16.5,
+    "age_60_plus": 12.9
   },
   "KDH_N36": {
     "malay": 79.8,
@@ -285,7 +460,12 @@
     "indian": 6.4,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 36138
+    "total_voters": 36138,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 19.9,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.7
   },
   "KTN_N01": {
     "malay": 92.7,
@@ -293,7 +473,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 6.3,
-    "total_voters": 36278
+    "total_voters": 36278,
+    "age_18_29": 27.5,
+    "age_30_39": 22.8,
+    "age_40_49": 20.7,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.7
   },
   "KTN_N02": {
     "malay": 92.5,
@@ -301,7 +486,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 5.3,
-    "total_voters": 38082
+    "total_voters": 38082,
+    "age_18_29": 27.4,
+    "age_30_39": 22.7,
+    "age_40_49": 20.7,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.9
   },
   "KTN_N03": {
     "malay": 97.1,
@@ -309,7 +499,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 38876
+    "total_voters": 38876,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.5,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "KTN_N04": {
     "malay": 86.8,
@@ -317,7 +512,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 3.6,
-    "total_voters": 36135
+    "total_voters": 36135,
+    "age_18_29": 26.3,
+    "age_30_39": 22.2,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.6
   },
   "KTN_N05": {
     "malay": 95.3,
@@ -325,7 +525,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 2.0,
-    "total_voters": 30265
+    "total_voters": 30265,
+    "age_18_29": 26.8,
+    "age_30_39": 22.4,
+    "age_40_49": 20.9,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.3
   },
   "KTN_N06": {
     "malay": 98.7,
@@ -333,7 +538,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 34385
+    "total_voters": 34385,
+    "age_18_29": 29.2,
+    "age_30_39": 23.5,
+    "age_40_49": 20.0,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.9
   },
   "KTN_N07": {
     "malay": 96.8,
@@ -341,7 +551,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 42332
+    "total_voters": 42332,
+    "age_18_29": 26.4,
+    "age_30_39": 22.2,
+    "age_40_49": 21.0,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.6
   },
   "KTN_N08": {
     "malay": 90.4,
@@ -349,7 +564,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 1.4,
-    "total_voters": 45385
+    "total_voters": 45385,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.4,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "KTN_N09": {
     "malay": 66.1,
@@ -357,7 +577,12 @@
     "indian": 1.4,
     "orang_asli": 0.0,
     "others": 1.3,
-    "total_voters": 33114
+    "total_voters": 33114,
+    "age_18_29": 25.3,
+    "age_30_39": 21.7,
+    "age_40_49": 21.4,
+    "age_50_59": 17.3,
+    "age_60_plus": 14.3
   },
   "KTN_N10": {
     "malay": 93.8,
@@ -365,7 +590,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 36951
+    "total_voters": 36951,
+    "age_18_29": 27.5,
+    "age_30_39": 22.7,
+    "age_40_49": 20.6,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.9
   },
   "KTN_N11": {
     "malay": 97.9,
@@ -373,7 +603,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 31645
+    "total_voters": 31645,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.6,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.7
   },
   "KTN_N12": {
     "malay": 95.4,
@@ -381,7 +616,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 33033
+    "total_voters": 33033,
+    "age_18_29": 26.6,
+    "age_30_39": 22.3,
+    "age_40_49": 20.9,
+    "age_50_59": 16.7,
+    "age_60_plus": 13.5
   },
   "KTN_N13": {
     "malay": 99.1,
@@ -389,7 +629,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 29866
+    "total_voters": 29866,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.4,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "KTN_N14": {
     "malay": 95.1,
@@ -397,7 +642,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 28976
+    "total_voters": 28976,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.5
   },
   "KTN_N15": {
     "malay": 97.2,
@@ -405,7 +655,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.5,
-    "total_voters": 35814
+    "total_voters": 35814,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.4,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.8
   },
   "KTN_N16": {
     "malay": 98.0,
@@ -413,7 +668,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.6,
-    "total_voters": 28458
+    "total_voters": 28458,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.5,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "KTN_N17": {
     "malay": 98.1,
@@ -421,7 +681,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 36133
+    "total_voters": 36133,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.5,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.7
   },
   "KTN_N18": {
     "malay": 98.1,
@@ -429,7 +694,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 37175
+    "total_voters": 37175,
+    "age_18_29": 26.8,
+    "age_30_39": 22.4,
+    "age_40_49": 20.8,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.4
   },
   "KTN_N19": {
     "malay": 96.1,
@@ -437,7 +707,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 40332
+    "total_voters": 40332,
+    "age_18_29": 29.2,
+    "age_30_39": 23.5,
+    "age_40_49": 20.0,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.9
   },
   "KTN_N20": {
     "malay": 98.8,
@@ -445,7 +720,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 43101
+    "total_voters": 43101,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.8,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.8
   },
   "KTN_N21": {
     "malay": 97.4,
@@ -453,7 +733,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 40216
+    "total_voters": 40216,
+    "age_18_29": 26.4,
+    "age_30_39": 22.2,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.5
   },
   "KTN_N22": {
     "malay": 98.6,
@@ -461,7 +746,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 39866
+    "total_voters": 39866,
+    "age_18_29": 29.5,
+    "age_30_39": 23.7,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.7
   },
   "KTN_N23": {
     "malay": 97.2,
@@ -469,7 +759,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 28285
+    "total_voters": 28285,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.5,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.7
   },
   "KTN_N24": {
     "malay": 97.9,
@@ -477,7 +772,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 21636
+    "total_voters": 21636,
+    "age_18_29": 26.5,
+    "age_30_39": 22.3,
+    "age_40_49": 21.1,
+    "age_50_59": 16.7,
+    "age_60_plus": 13.4
   },
   "KTN_N25": {
     "malay": 95.4,
@@ -485,7 +785,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 2.0,
-    "total_voters": 35360
+    "total_voters": 35360,
+    "age_18_29": 28.1,
+    "age_30_39": 23.1,
+    "age_40_49": 20.4,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.5
   },
   "KTN_N26": {
     "malay": 90.9,
@@ -493,7 +798,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 1.4,
-    "total_voters": 49934
+    "total_voters": 49934,
+    "age_18_29": 28.1,
+    "age_30_39": 23.1,
+    "age_40_49": 20.5,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.4
   },
   "KTN_N27": {
     "malay": 97.4,
@@ -501,7 +811,12 @@
     "indian": 1.4,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 25687
+    "total_voters": 25687,
+    "age_18_29": 26.4,
+    "age_30_39": 22.2,
+    "age_40_49": 21.0,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.6
   },
   "KTN_N28": {
     "malay": 98.7,
@@ -509,7 +824,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 23161
+    "total_voters": 23161,
+    "age_18_29": 28.6,
+    "age_30_39": 23.2,
+    "age_40_49": 20.1,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.4
   },
   "KTN_N29": {
     "malay": 99.1,
@@ -517,7 +837,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 28573
+    "total_voters": 28573,
+    "age_18_29": 29.4,
+    "age_30_39": 23.6,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.7
   },
   "KTN_N30": {
     "malay": 97.3,
@@ -525,7 +850,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 35270
+    "total_voters": 35270,
+    "age_18_29": 25.7,
+    "age_30_39": 21.9,
+    "age_40_49": 21.3,
+    "age_50_59": 17.1,
+    "age_60_plus": 14.0
   },
   "KTN_N31": {
     "malay": 97.5,
@@ -533,7 +863,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 2.0,
-    "total_voters": 26580
+    "total_voters": 26580,
+    "age_18_29": 29.8,
+    "age_30_39": 23.8,
+    "age_40_49": 19.8,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.5
   },
   "KTN_N32": {
     "malay": 98.6,
@@ -541,7 +876,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 22647
+    "total_voters": 22647,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 20.8,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.2
   },
   "KTN_N33": {
     "malay": 97.0,
@@ -549,7 +889,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 28088
+    "total_voters": 28088,
+    "age_18_29": 28.0,
+    "age_30_39": 22.9,
+    "age_40_49": 20.4,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.7
   },
   "KTN_N34": {
     "malay": 94.9,
@@ -557,7 +902,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 25935
+    "total_voters": 25935,
+    "age_18_29": 26.6,
+    "age_30_39": 22.3,
+    "age_40_49": 21.0,
+    "age_50_59": 16.7,
+    "age_60_plus": 13.4
   },
   "KTN_N35": {
     "malay": 97.0,
@@ -565,7 +915,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 34802
+    "total_voters": 34802,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.5,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.8
   },
   "KTN_N36": {
     "malay": 98.2,
@@ -573,7 +928,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.5,
-    "total_voters": 21748
+    "total_voters": 21748,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.1,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.3
   },
   "KTN_N37": {
     "malay": 96.8,
@@ -581,7 +941,12 @@
     "indian": 0.1,
     "orang_asli": 2.1,
     "others": 0.8,
-    "total_voters": 22382
+    "total_voters": 22382,
+    "age_18_29": 26.4,
+    "age_30_39": 22.2,
+    "age_40_49": 21.0,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.6
   },
   "KTN_N38": {
     "malay": 98.6,
@@ -589,7 +954,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 15668
+    "total_voters": 15668,
+    "age_18_29": 28.5,
+    "age_30_39": 23.2,
+    "age_40_49": 20.3,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "KTN_N39": {
     "malay": 96.0,
@@ -597,7 +967,12 @@
     "indian": 1.3,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 26774
+    "total_voters": 26774,
+    "age_18_29": 26.5,
+    "age_30_39": 22.3,
+    "age_40_49": 21.0,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.4
   },
   "KTN_N40": {
     "malay": 86.0,
@@ -605,7 +980,12 @@
     "indian": 2.1,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 27781
+    "total_voters": 27781,
+    "age_18_29": 28.9,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.9
   },
   "KTN_N41": {
     "malay": 98.9,
@@ -613,7 +993,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 22546
+    "total_voters": 22546,
+    "age_18_29": 27.6,
+    "age_30_39": 22.8,
+    "age_40_49": 20.6,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.8
   },
   "KTN_N42": {
     "malay": 98.7,
@@ -621,7 +1006,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 15234
+    "total_voters": 15234,
+    "age_18_29": 26.0,
+    "age_30_39": 22.0,
+    "age_40_49": 21.1,
+    "age_50_59": 17.0,
+    "age_60_plus": 13.9
   },
   "KTN_N43": {
     "malay": 86.1,
@@ -629,7 +1019,12 @@
     "indian": 0.0,
     "orang_asli": 13.1,
     "others": 0.5,
-    "total_voters": 19968
+    "total_voters": 19968,
+    "age_18_29": 27.7,
+    "age_30_39": 22.8,
+    "age_40_49": 20.5,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.8
   },
   "KTN_N44": {
     "malay": 97.3,
@@ -637,7 +1032,12 @@
     "indian": 0.0,
     "orang_asli": 2.2,
     "others": 0.4,
-    "total_voters": 21064
+    "total_voters": 21064,
+    "age_18_29": 26.2,
+    "age_30_39": 22.1,
+    "age_40_49": 21.1,
+    "age_50_59": 16.9,
+    "age_60_plus": 13.7
   },
   "KTN_N45": {
     "malay": 59.6,
@@ -645,7 +1045,12 @@
     "indian": 1.1,
     "orang_asli": 24.7,
     "others": 0.9,
-    "total_voters": 29222
+    "total_voters": 29222,
+    "age_18_29": 27.5,
+    "age_30_39": 22.7,
+    "age_40_49": 20.6,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.9
   },
   "PHG_N01": {
     "malay": 15.2,
@@ -653,7 +1058,12 @@
     "indian": 20.0,
     "orang_asli": 17.6,
     "others": 1.2,
-    "total_voters": 26838
+    "total_voters": 26838,
+    "age_18_29": 29.3,
+    "age_30_39": 23.6,
+    "age_40_49": 20.0,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "PHG_N02": {
     "malay": 52.9,
@@ -661,7 +1071,12 @@
     "indian": 0.8,
     "orang_asli": 45.1,
     "others": 0.7,
-    "total_voters": 19182
+    "total_voters": 19182,
+    "age_18_29": 27.1,
+    "age_30_39": 22.6,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 13.0
   },
   "PHG_N03": {
     "malay": 91.8,
@@ -669,7 +1084,12 @@
     "indian": 2.9,
     "orang_asli": 1.6,
     "others": 0.8,
-    "total_voters": 19407
+    "total_voters": 19407,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.3,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.3
   },
   "PHG_N04": {
     "malay": 72.4,
@@ -677,7 +1097,12 @@
     "indian": 4.9,
     "orang_asli": 1.4,
     "others": 0.9,
-    "total_voters": 16822
+    "total_voters": 16822,
+    "age_18_29": 26.4,
+    "age_30_39": 22.3,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.4
   },
   "PHG_N05": {
     "malay": 63.6,
@@ -685,7 +1110,12 @@
     "indian": 8.7,
     "orang_asli": 0.1,
     "others": 0.7,
-    "total_voters": 10895
+    "total_voters": 10895,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "PHG_N06": {
     "malay": 76.3,
@@ -693,7 +1123,12 @@
     "indian": 4.2,
     "orang_asli": 10.8,
     "others": 0.5,
-    "total_voters": 19683
+    "total_voters": 19683,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.0,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.8
   },
   "PHG_N07": {
     "malay": 27.7,
@@ -701,7 +1136,12 @@
     "indian": 8.8,
     "orang_asli": 1.6,
     "others": 0.9,
-    "total_voters": 38329
+    "total_voters": 38329,
+    "age_18_29": 27.5,
+    "age_30_39": 22.8,
+    "age_40_49": 20.8,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.7
   },
   "PHG_N08": {
     "malay": 79.1,
@@ -709,7 +1149,12 @@
     "indian": 2.6,
     "orang_asli": 3.3,
     "others": 0.9,
-    "total_voters": 17052
+    "total_voters": 17052,
+    "age_18_29": 27.4,
+    "age_30_39": 22.7,
+    "age_40_49": 20.7,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.9
   },
   "PHG_N09": {
     "malay": 92.9,
@@ -717,7 +1162,12 @@
     "indian": 0.7,
     "orang_asli": 4.8,
     "others": 0.9,
-    "total_voters": 20895
+    "total_voters": 20895,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.5,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "PHG_N10": {
     "malay": 61.4,
@@ -725,7 +1175,12 @@
     "indian": 5.1,
     "orang_asli": 3.4,
     "others": 1.3,
-    "total_voters": 34967
+    "total_voters": 34967,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "PHG_N11": {
     "malay": 98.4,
@@ -733,7 +1188,12 @@
     "indian": 0.6,
     "orang_asli": 0.5,
     "others": 0.4,
-    "total_voters": 31189
+    "total_voters": 31189,
+    "age_18_29": 27.4,
+    "age_30_39": 22.8,
+    "age_40_49": 20.9,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.6
   },
   "PHG_N12": {
     "malay": 74.4,
@@ -741,7 +1201,12 @@
     "indian": 2.7,
     "orang_asli": 0.1,
     "others": 1.9,
-    "total_voters": 59370
+    "total_voters": 59370,
+    "age_18_29": 27.5,
+    "age_30_39": 22.8,
+    "age_40_49": 20.7,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.7
   },
   "PHG_N13": {
     "malay": 60.9,
@@ -749,7 +1214,12 @@
     "indian": 8.3,
     "orang_asli": 0.1,
     "others": 1.1,
-    "total_voters": 61179
+    "total_voters": 61179,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.7,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.5
   },
   "PHG_N14": {
     "malay": 37.6,
@@ -757,7 +1227,12 @@
     "indian": 5.9,
     "orang_asli": 0.1,
     "others": 1.1,
-    "total_voters": 30854
+    "total_voters": 30854,
+    "age_18_29": 27.6,
+    "age_30_39": 22.8,
+    "age_40_49": 20.6,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.8
   },
   "PHG_N15": {
     "malay": 83.6,
@@ -765,7 +1240,12 @@
     "indian": 2.1,
     "orang_asli": 0.2,
     "others": 1.1,
-    "total_voters": 38185
+    "total_voters": 38185,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.8,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.8
   },
   "PHG_N16": {
     "malay": 92.6,
@@ -773,7 +1253,12 @@
     "indian": 1.0,
     "orang_asli": 0.5,
     "others": 1.5,
-    "total_voters": 18558
+    "total_voters": 18558,
+    "age_18_29": 29.4,
+    "age_30_39": 23.6,
+    "age_40_49": 19.9,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.8
   },
   "PHG_N17": {
     "malay": 86.7,
@@ -781,7 +1266,12 @@
     "indian": 0.3,
     "orang_asli": 2.7,
     "others": 0.6,
-    "total_voters": 19130
+    "total_voters": 19130,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "PHG_N18": {
     "malay": 80.8,
@@ -789,7 +1279,12 @@
     "indian": 2.3,
     "orang_asli": 2.6,
     "others": 1.1,
-    "total_voters": 25728
+    "total_voters": 25728,
+    "age_18_29": 26.6,
+    "age_30_39": 22.4,
+    "age_40_49": 21.1,
+    "age_50_59": 16.7,
+    "age_60_plus": 13.2
   },
   "PHG_N19": {
     "malay": 85.1,
@@ -797,7 +1292,12 @@
     "indian": 2.5,
     "orang_asli": 0.2,
     "others": 2.2,
-    "total_voters": 34886
+    "total_voters": 34886,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.8,
+    "age_50_59": 14.9,
+    "age_60_plus": 11.2
   },
   "PHG_N20": {
     "malay": 90.4,
@@ -805,7 +1305,12 @@
     "indian": 0.7,
     "orang_asli": 1.9,
     "others": 4.8,
-    "total_voters": 30113
+    "total_voters": 30113,
+    "age_18_29": 30.4,
+    "age_30_39": 24.2,
+    "age_40_49": 19.7,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.9
   },
   "PHG_N21": {
     "malay": 90.5,
@@ -813,7 +1318,12 @@
     "indian": 1.0,
     "orang_asli": 2.4,
     "others": 3.3,
-    "total_voters": 41915
+    "total_voters": 41915,
+    "age_18_29": 27.5,
+    "age_30_39": 22.8,
+    "age_40_49": 20.8,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.7
   },
   "PHG_N22": {
     "malay": 62.4,
@@ -821,7 +1331,12 @@
     "indian": 0.8,
     "orang_asli": 32.4,
     "others": 3.6,
-    "total_voters": 21294
+    "total_voters": 21294,
+    "age_18_29": 27.1,
+    "age_30_39": 22.6,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 13.0
   },
   "PHG_N23": {
     "malay": 88.1,
@@ -829,7 +1344,12 @@
     "indian": 0.1,
     "orang_asli": 10.9,
     "others": 0.7,
-    "total_voters": 26121
+    "total_voters": 26121,
+    "age_18_29": 26.4,
+    "age_30_39": 22.3,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.4
   },
   "PHG_N24": {
     "malay": 81.0,
@@ -837,7 +1357,12 @@
     "indian": 1.5,
     "orang_asli": 3.5,
     "others": 1.7,
-    "total_voters": 16279
+    "total_voters": 16279,
+    "age_18_29": 29.8,
+    "age_30_39": 23.8,
+    "age_40_49": 19.8,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.5
   },
   "PHG_N25": {
     "malay": 89.7,
@@ -845,7 +1370,12 @@
     "indian": 1.9,
     "orang_asli": 2.2,
     "others": 0.7,
-    "total_voters": 17434
+    "total_voters": 17434,
+    "age_18_29": 28.9,
+    "age_30_39": 23.4,
+    "age_40_49": 20.1,
+    "age_50_59": 15.6,
+    "age_60_plus": 12.0
   },
   "PHG_N26": {
     "malay": 96.1,
@@ -853,7 +1383,12 @@
     "indian": 0.8,
     "orang_asli": 1.6,
     "others": 1.0,
-    "total_voters": 19415
+    "total_voters": 19415,
+    "age_18_29": 27.9,
+    "age_30_39": 22.9,
+    "age_40_49": 20.6,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.5
   },
   "PHG_N27": {
     "malay": 67.7,
@@ -861,7 +1396,12 @@
     "indian": 3.7,
     "orang_asli": 21.1,
     "others": 1.0,
-    "total_voters": 13994
+    "total_voters": 13994,
+    "age_18_29": 30.7,
+    "age_30_39": 24.3,
+    "age_40_49": 19.6,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.7
   },
   "PHG_N28": {
     "malay": 88.1,
@@ -869,7 +1409,12 @@
     "indian": 2.5,
     "orang_asli": 4.7,
     "others": 1.0,
-    "total_voters": 15184
+    "total_voters": 15184,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.1,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "PHG_N29": {
     "malay": 98.3,
@@ -877,7 +1422,12 @@
     "indian": 1.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 31359
+    "total_voters": 31359,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 20.9,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.1
   },
   "PHG_N30": {
     "malay": 46.8,
@@ -885,7 +1435,12 @@
     "indian": 11.4,
     "orang_asli": 0.0,
     "others": 2.5,
-    "total_voters": 37269
+    "total_voters": 37269,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.2,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.6
   },
   "PHG_N31": {
     "malay": 74.4,
@@ -893,7 +1448,12 @@
     "indian": 11.0,
     "orang_asli": 2.7,
     "others": 3.5,
-    "total_voters": 32774
+    "total_voters": 32774,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "PHG_N32": {
     "malay": 79.0,
@@ -901,7 +1461,12 @@
     "indian": 2.2,
     "orang_asli": 1.6,
     "others": 3.7,
-    "total_voters": 36786
+    "total_voters": 36786,
+    "age_18_29": 27.9,
+    "age_30_39": 22.9,
+    "age_40_49": 20.5,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.6
   },
   "PHG_N33": {
     "malay": 37.3,
@@ -909,7 +1474,12 @@
     "indian": 9.6,
     "orang_asli": 0.9,
     "others": 0.9,
-    "total_voters": 24286
+    "total_voters": 24286,
+    "age_18_29": 29.5,
+    "age_30_39": 23.7,
+    "age_40_49": 19.9,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "PHG_N34": {
     "malay": 51.6,
@@ -917,7 +1487,12 @@
     "indian": 4.7,
     "orang_asli": 2.8,
     "others": 1.5,
-    "total_voters": 30758
+    "total_voters": 30758,
+    "age_18_29": 29.4,
+    "age_30_39": 23.6,
+    "age_40_49": 19.9,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.8
   },
   "PHG_N35": {
     "malay": 40.4,
@@ -925,7 +1500,12 @@
     "indian": 20.2,
     "orang_asli": 4.7,
     "others": 0.8,
-    "total_voters": 15643
+    "total_voters": 15643,
+    "age_18_29": 26.4,
+    "age_30_39": 22.3,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.4
   },
   "PHG_N36": {
     "malay": 72.1,
@@ -933,7 +1513,12 @@
     "indian": 5.7,
     "orang_asli": 3.3,
     "others": 0.6,
-    "total_voters": 16371
+    "total_voters": 16371,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "PHG_N37": {
     "malay": 86.1,
@@ -941,7 +1526,12 @@
     "indian": 2.0,
     "orang_asli": 4.3,
     "others": 0.6,
-    "total_voters": 24412
+    "total_voters": 24412,
+    "age_18_29": 26.4,
+    "age_30_39": 22.3,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.4
   },
   "PHG_N38": {
     "malay": 30.9,
@@ -949,7 +1539,12 @@
     "indian": 4.8,
     "orang_asli": 0.7,
     "others": 0.9,
-    "total_voters": 25891
+    "total_voters": 25891,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.7,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.5
   },
   "PHG_N39": {
     "malay": 71.5,
@@ -957,7 +1552,12 @@
     "indian": 3.9,
     "orang_asli": 10.0,
     "others": 2.9,
-    "total_voters": 27366
+    "total_voters": 27366,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.6,
+    "age_60_plus": 12.0
   },
   "PHG_N40": {
     "malay": 85.9,
@@ -965,7 +1565,12 @@
     "indian": 1.0,
     "orang_asli": 11.2,
     "others": 1.6,
-    "total_voters": 31003
+    "total_voters": 31003,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.4,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "PHG_N41": {
     "malay": 79.7,
@@ -973,7 +1578,12 @@
     "indian": 1.2,
     "orang_asli": 16.9,
     "others": 1.6,
-    "total_voters": 29663
+    "total_voters": 29663,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 19.8,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.4
   },
   "PHG_N42": {
     "malay": 83.9,
@@ -981,7 +1591,12 @@
     "indian": 0.4,
     "orang_asli": 7.9,
     "others": 1.2,
-    "total_voters": 28465
+    "total_voters": 28465,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.2,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.2
   },
   "PRK_N01": {
     "malay": 71.8,
@@ -989,7 +1604,12 @@
     "indian": 4.9,
     "orang_asli": 6.5,
     "others": 8.4,
-    "total_voters": 20157
+    "total_voters": 20157,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.1,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.1
   },
   "PRK_N02": {
     "malay": 63.2,
@@ -997,7 +1617,12 @@
     "indian": 1.6,
     "orang_asli": 16.5,
     "others": 1.7,
-    "total_voters": 27408
+    "total_voters": 27408,
+    "age_18_29": 30.1,
+    "age_30_39": 24.1,
+    "age_40_49": 20.1,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.8
   },
   "PRK_N03": {
     "malay": 83.6,
@@ -1005,7 +1630,12 @@
     "indian": 0.6,
     "orang_asli": 5.5,
     "others": 0.6,
-    "total_voters": 21596
+    "total_voters": 21596,
+    "age_18_29": 31.2,
+    "age_30_39": 24.6,
+    "age_40_49": 19.6,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.2
   },
   "PRK_N04": {
     "malay": 82.7,
@@ -1013,7 +1643,12 @@
     "indian": 2.4,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 15354
+    "total_voters": 15354,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.1,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.1
   },
   "PRK_N05": {
     "malay": 86.5,
@@ -1021,7 +1656,12 @@
     "indian": 5.8,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 22339
+    "total_voters": 22339,
+    "age_18_29": 33.1,
+    "age_30_39": 25.5,
+    "age_40_49": 19.0,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.9
   },
   "PRK_N06": {
     "malay": 94.8,
@@ -1029,7 +1669,12 @@
     "indian": 3.1,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 21358
+    "total_voters": 21358,
+    "age_18_29": 28.9,
+    "age_30_39": 23.5,
+    "age_40_49": 20.4,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "PRK_N07": {
     "malay": 89.0,
@@ -1037,7 +1682,12 @@
     "indian": 7.8,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 22022
+    "total_voters": 22022,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.3,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.9
   },
   "PRK_N08": {
     "malay": 73.3,
@@ -1045,7 +1695,12 @@
     "indian": 8.4,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 35900
+    "total_voters": 35900,
+    "age_18_29": 32.5,
+    "age_30_39": 25.2,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.3
   },
   "PRK_N09": {
     "malay": 63.3,
@@ -1053,7 +1708,12 @@
     "indian": 1.3,
     "orang_asli": 0.0,
     "others": 0.2,
-    "total_voters": 32602
+    "total_voters": 32602,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.4,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.4
   },
   "PRK_N10": {
     "malay": 75.7,
@@ -1061,7 +1721,12 @@
     "indian": 13.7,
     "orang_asli": 0.0,
     "others": 0.2,
-    "total_voters": 28656
+    "total_voters": 28656,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.4,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.8
   },
   "PRK_N11": {
     "malay": 86.7,
@@ -1069,7 +1734,12 @@
     "indian": 4.0,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 27396
+    "total_voters": 27396,
+    "age_18_29": 32.5,
+    "age_30_39": 25.2,
+    "age_40_49": 19.1,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.4
   },
   "PRK_N12": {
     "malay": 72.2,
@@ -1077,7 +1747,12 @@
     "indian": 8.9,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 24241
+    "total_voters": 24241,
+    "age_18_29": 29.0,
+    "age_30_39": 23.6,
+    "age_40_49": 20.5,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.4
   },
   "PRK_N13": {
     "malay": 67.8,
@@ -1085,7 +1760,12 @@
     "indian": 8.2,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 40222
+    "total_voters": 40222,
+    "age_18_29": 30.3,
+    "age_30_39": 24.2,
+    "age_40_49": 20.0,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.7
   },
   "PRK_N14": {
     "malay": 72.5,
@@ -1093,7 +1773,12 @@
     "indian": 9.9,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 37003
+    "total_voters": 37003,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.4
   },
   "PRK_N15": {
     "malay": 77.4,
@@ -1101,7 +1786,12 @@
     "indian": 8.9,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 17028
+    "total_voters": 17028,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.5,
+    "age_50_59": 15.7,
+    "age_60_plus": 11.7
   },
   "PRK_N16": {
     "malay": 67.1,
@@ -1109,7 +1799,12 @@
     "indian": 13.3,
     "orang_asli": 0.1,
     "others": 1.9,
-    "total_voters": 39850
+    "total_voters": 39850,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 19.9,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.9
   },
   "PRK_N17": {
     "malay": 23.9,
@@ -1117,7 +1812,12 @@
     "indian": 11.2,
     "orang_asli": 0.0,
     "others": 2.0,
-    "total_voters": 36513
+    "total_voters": 36513,
+    "age_18_29": 30.7,
+    "age_30_39": 24.3,
+    "age_40_49": 19.8,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.5
   },
   "PRK_N18": {
     "malay": 28.8,
@@ -1125,7 +1825,12 @@
     "indian": 18.1,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 45203
+    "total_voters": 45203,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.2,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.0
   },
   "PRK_N19": {
     "malay": 81.4,
@@ -1133,7 +1838,12 @@
     "indian": 5.0,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 17782
+    "total_voters": 17782,
+    "age_18_29": 29.9,
+    "age_30_39": 24.0,
+    "age_40_49": 20.1,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.0
   },
   "PRK_N20": {
     "malay": 75.3,
@@ -1141,7 +1851,12 @@
     "indian": 8.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 20904
+    "total_voters": 20904,
+    "age_18_29": 32.0,
+    "age_30_39": 25.0,
+    "age_40_49": 19.3,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.7
   },
   "PRK_N21": {
     "malay": 55.0,
@@ -1149,7 +1864,12 @@
     "indian": 12.6,
     "orang_asli": 16.1,
     "others": 0.3,
-    "total_voters": 33107
+    "total_voters": 33107,
+    "age_18_29": 29.6,
+    "age_30_39": 23.9,
+    "age_40_49": 20.3,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.0
   },
   "PRK_N22": {
     "malay": 16.8,
@@ -1157,7 +1877,12 @@
     "indian": 28.3,
     "orang_asli": 4.3,
     "others": 0.5,
-    "total_voters": 39288
+    "total_voters": 39288,
+    "age_18_29": 29.7,
+    "age_30_39": 23.9,
+    "age_40_49": 20.2,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.0
   },
   "PRK_N23": {
     "malay": 70.8,
@@ -1165,7 +1890,12 @@
     "indian": 11.7,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 86266
+    "total_voters": 86266,
+    "age_18_29": 30.9,
+    "age_30_39": 24.4,
+    "age_40_49": 19.6,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.5
   },
   "PRK_N24": {
     "malay": 57.7,
@@ -1173,7 +1903,12 @@
     "indian": 13.3,
     "orang_asli": 2.1,
     "others": 1.9,
-    "total_voters": 74292
+    "total_voters": 74292,
+    "age_18_29": 29.9,
+    "age_30_39": 24.0,
+    "age_40_49": 20.1,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.0
   },
   "PRK_N25": {
     "malay": 9.3,
@@ -1181,7 +1916,12 @@
     "indian": 9.9,
     "orang_asli": 0.0,
     "others": 1.3,
-    "total_voters": 41021
+    "total_voters": 41021,
+    "age_18_29": 31.1,
+    "age_30_39": 24.6,
+    "age_40_49": 19.7,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.2
   },
   "PRK_N26": {
     "malay": 57.8,
@@ -1189,7 +1929,12 @@
     "indian": 9.4,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 37223
+    "total_voters": 37223,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.6,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.7
   },
   "PRK_N27": {
     "malay": 5.7,
@@ -1197,7 +1942,12 @@
     "indian": 3.2,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 39934
+    "total_voters": 39934,
+    "age_18_29": 31.4,
+    "age_30_39": 24.6,
+    "age_40_49": 19.5,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.2
   },
   "PRK_N28": {
     "malay": 15.2,
@@ -1205,7 +1955,12 @@
     "indian": 14.3,
     "orang_asli": 0.1,
     "others": 0.6,
-    "total_voters": 52750
+    "total_voters": 52750,
+    "age_18_29": 31.3,
+    "age_30_39": 24.7,
+    "age_40_49": 19.6,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.1
   },
   "PRK_N29": {
     "malay": 21.2,
@@ -1213,7 +1968,12 @@
     "indian": 16.6,
     "orang_asli": 0.1,
     "others": 1.1,
-    "total_voters": 25190
+    "total_voters": 25190,
+    "age_18_29": 31.4,
+    "age_30_39": 24.7,
+    "age_40_49": 19.6,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.0
   },
   "PRK_N30": {
     "malay": 5.8,
@@ -1221,7 +1981,12 @@
     "indian": 52.0,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 36714
+    "total_voters": 36714,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.5,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.8
   },
   "PRK_N31": {
     "malay": 5.3,
@@ -1229,7 +1994,12 @@
     "indian": 27.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 35088
+    "total_voters": 35088,
+    "age_18_29": 31.8,
+    "age_30_39": 24.8,
+    "age_40_49": 19.3,
+    "age_50_59": 14.1,
+    "age_60_plus": 10.0
   },
   "PRK_N32": {
     "malay": 6.1,
@@ -1237,7 +2007,12 @@
     "indian": 11.6,
     "orang_asli": 0.1,
     "others": 0.5,
-    "total_voters": 38689
+    "total_voters": 38689,
+    "age_18_29": 32.3,
+    "age_30_39": 25.1,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.6
   },
   "PRK_N33": {
     "malay": 26.7,
@@ -1245,7 +2020,12 @@
     "indian": 15.0,
     "orang_asli": 0.2,
     "others": 0.6,
-    "total_voters": 38119
+    "total_voters": 38119,
+    "age_18_29": 30.1,
+    "age_30_39": 24.1,
+    "age_40_49": 20.1,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.8
   },
   "PRK_N34": {
     "malay": 69.1,
@@ -1253,7 +2033,12 @@
     "indian": 6.3,
     "orang_asli": 2.5,
     "others": 0.5,
-    "total_voters": 22194
+    "total_voters": 22194,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.5,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.7
   },
   "PRK_N35": {
     "malay": 71.9,
@@ -1261,7 +2046,12 @@
     "indian": 6.7,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 24791
+    "total_voters": 24791,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.4
   },
   "PRK_N36": {
     "malay": 69.4,
@@ -1269,7 +2059,12 @@
     "indian": 10.3,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 22573
+    "total_voters": 22573,
+    "age_18_29": 30.9,
+    "age_30_39": 24.4,
+    "age_40_49": 19.7,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.4
   },
   "PRK_N37": {
     "malay": 17.4,
@@ -1277,7 +2072,12 @@
     "indian": 19.2,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 44432
+    "total_voters": 44432,
+    "age_18_29": 31.7,
+    "age_30_39": 24.8,
+    "age_40_49": 19.4,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.9
   },
   "PRK_N38": {
     "malay": 14.6,
@@ -1285,7 +2085,12 @@
     "indian": 13.5,
     "orang_asli": 0.0,
     "others": 1.5,
-    "total_voters": 41244
+    "total_voters": 41244,
+    "age_18_29": 32.8,
+    "age_30_39": 25.4,
+    "age_40_49": 19.0,
+    "age_50_59": 13.6,
+    "age_60_plus": 9.2
   },
   "PRK_N39": {
     "malay": 85.9,
@@ -1293,7 +2098,12 @@
     "indian": 6.0,
     "orang_asli": 2.5,
     "others": 0.8,
-    "total_voters": 17767
+    "total_voters": 17767,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.4
   },
   "PRK_N40": {
     "malay": 96.3,
@@ -1301,7 +2111,12 @@
     "indian": 0.5,
     "orang_asli": 2.1,
     "others": 0.9,
-    "total_voters": 30148
+    "total_voters": 30148,
+    "age_18_29": 30.8,
+    "age_30_39": 24.4,
+    "age_40_49": 19.7,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.5
   },
   "PRK_N41": {
     "malay": 24.0,
@@ -1309,7 +2124,12 @@
     "indian": 9.7,
     "orang_asli": 0.1,
     "others": 0.5,
-    "total_voters": 29701
+    "total_voters": 29701,
+    "age_18_29": 31.9,
+    "age_30_39": 24.9,
+    "age_40_49": 19.3,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.8
   },
   "PRK_N42": {
     "malay": 15.2,
@@ -1317,7 +2137,12 @@
     "indian": 11.7,
     "orang_asli": 1.7,
     "others": 0.8,
-    "total_voters": 28248
+    "total_voters": 28248,
+    "age_18_29": 32.4,
+    "age_30_39": 25.1,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.5
   },
   "PRK_N43": {
     "malay": 62.0,
@@ -1325,7 +2150,12 @@
     "indian": 9.1,
     "orang_asli": 4.1,
     "others": 0.6,
-    "total_voters": 31945
+    "total_voters": 31945,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 20.1,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.7
   },
   "PRK_N44": {
     "malay": 61.1,
@@ -1333,7 +2163,12 @@
     "indian": 11.5,
     "orang_asli": 0.1,
     "others": 1.2,
-    "total_voters": 47931
+    "total_voters": 47931,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.3,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.1
   },
   "PRK_N45": {
     "malay": 31.4,
@@ -1341,7 +2176,12 @@
     "indian": 7.7,
     "orang_asli": 0.2,
     "others": 0.6,
-    "total_voters": 62756
+    "total_voters": 62756,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.4
   },
   "PRK_N46": {
     "malay": 38.0,
@@ -1349,7 +2189,12 @@
     "indian": 10.4,
     "orang_asli": 8.8,
     "others": 0.5,
-    "total_voters": 32970
+    "total_voters": 32970,
+    "age_18_29": 31.3,
+    "age_30_39": 24.6,
+    "age_40_49": 19.5,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.3
   },
   "PRK_N47": {
     "malay": 34.9,
@@ -1357,7 +2202,12 @@
     "indian": 13.3,
     "orang_asli": 24.3,
     "others": 1.0,
-    "total_voters": 30006
+    "total_voters": 30006,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.1,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.1
   },
   "PRK_N48": {
     "malay": 55.6,
@@ -1365,7 +2215,12 @@
     "indian": 14.3,
     "orang_asli": 6.8,
     "others": 1.3,
-    "total_voters": 31940
+    "total_voters": 31940,
+    "age_18_29": 30.0,
+    "age_30_39": 24.0,
+    "age_40_49": 20.1,
+    "age_50_59": 15.0,
+    "age_60_plus": 10.9
   },
   "PRK_N49": {
     "malay": 66.5,
@@ -1373,7 +2228,12 @@
     "indian": 4.9,
     "orang_asli": 3.2,
     "others": 0.4,
-    "total_voters": 35520
+    "total_voters": 35520,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.5,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.7
   },
   "PRK_N50": {
     "malay": 94.2,
@@ -1381,7 +2241,12 @@
     "indian": 1.8,
     "orang_asli": 3.1,
     "others": 0.4,
-    "total_voters": 39241
+    "total_voters": 39241,
+    "age_18_29": 31.7,
+    "age_30_39": 24.8,
+    "age_40_49": 19.4,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.9
   },
   "PRK_N51": {
     "malay": 75.2,
@@ -1389,7 +2254,12 @@
     "indian": 14.0,
     "orang_asli": 0.0,
     "others": 1.8,
-    "total_voters": 62418
+    "total_voters": 62418,
+    "age_18_29": 30.5,
+    "age_30_39": 24.3,
+    "age_40_49": 20.0,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.4
   },
   "PRK_N52": {
     "malay": 67.1,
@@ -1397,7 +2267,12 @@
     "indian": 5.7,
     "orang_asli": 0.1,
     "others": 3.4,
-    "total_voters": 30554
+    "total_voters": 30554,
+    "age_18_29": 30.4,
+    "age_30_39": 24.2,
+    "age_40_49": 19.9,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.7
   },
   "PRK_N53": {
     "malay": 67.1,
@@ -1405,7 +2280,12 @@
     "indian": 7.8,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 19670
+    "total_voters": 19670,
+    "age_18_29": 31.4,
+    "age_30_39": 24.7,
+    "age_40_49": 19.6,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.0
   },
   "PRK_N54": {
     "malay": 50.8,
@@ -1413,7 +2293,12 @@
     "indian": 28.8,
     "orang_asli": 0.0,
     "others": 1.6,
-    "total_voters": 38513
+    "total_voters": 38513,
+    "age_18_29": 29.8,
+    "age_30_39": 24.0,
+    "age_40_49": 20.2,
+    "age_50_59": 15.1,
+    "age_60_plus": 10.9
   },
   "PRK_N55": {
     "malay": 16.7,
@@ -1421,7 +2306,12 @@
     "indian": 14.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 39117
+    "total_voters": 39117,
+    "age_18_29": 30.1,
+    "age_30_39": 24.1,
+    "age_40_49": 20.1,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.8
   },
   "PRK_N56": {
     "malay": 62.6,
@@ -1429,7 +2319,12 @@
     "indian": 22.2,
     "orang_asli": 0.5,
     "others": 1.0,
-    "total_voters": 48105
+    "total_voters": 48105,
+    "age_18_29": 30.4,
+    "age_30_39": 24.2,
+    "age_40_49": 20.0,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.6
   },
   "PRK_N57": {
     "malay": 20.8,
@@ -1437,7 +2332,12 @@
     "indian": 17.6,
     "orang_asli": 6.7,
     "others": 0.7,
-    "total_voters": 23375
+    "total_voters": 23375,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.1,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.1
   },
   "PRK_N58": {
     "malay": 74.5,
@@ -1445,7 +2345,12 @@
     "indian": 12.9,
     "orang_asli": 2.0,
     "others": 0.5,
-    "total_voters": 30581
+    "total_voters": 30581,
+    "age_18_29": 30.3,
+    "age_30_39": 24.1,
+    "age_40_49": 20.0,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.7
   },
   "PRK_N59": {
     "malay": 60.2,
@@ -1453,7 +2358,12 @@
     "indian": 10.2,
     "orang_asli": 11.6,
     "others": 1.9,
-    "total_voters": 39917
+    "total_voters": 39917,
+    "age_18_29": 30.8,
+    "age_30_39": 24.4,
+    "age_40_49": 19.8,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.4
   },
   "PLS_N01": {
     "malay": 78.5,
@@ -1461,7 +2371,12 @@
     "indian": 1.9,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 13403
+    "total_voters": 13403,
+    "age_18_29": 28.9,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 12.0
   },
   "PLS_N02": {
     "malay": 82.4,
@@ -1469,7 +2384,12 @@
     "indian": 0.7,
     "orang_asli": 0.0,
     "others": 1.8,
-    "total_voters": 12128
+    "total_voters": 12128,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "PLS_N03": {
     "malay": 83.4,
@@ -1477,7 +2397,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 14.0,
-    "total_voters": 14248
+    "total_voters": 14248,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.5
   },
   "PLS_N04": {
     "malay": 91.0,
@@ -1485,7 +2410,12 @@
     "indian": 0.9,
     "orang_asli": 0.1,
     "others": 5.7,
-    "total_voters": 9662
+    "total_voters": 9662,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 20.0,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "PLS_N05": {
     "malay": 99.0,
@@ -1493,7 +2423,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 10751
+    "total_voters": 10751,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "PLS_N06": {
     "malay": 95.4,
@@ -1501,7 +2436,12 @@
     "indian": 1.0,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 16366
+    "total_voters": 16366,
+    "age_18_29": 27.0,
+    "age_30_39": 22.6,
+    "age_40_49": 21.0,
+    "age_50_59": 16.5,
+    "age_60_plus": 12.9
   },
   "PLS_N07": {
     "malay": 84.4,
@@ -1509,7 +2449,12 @@
     "indian": 2.7,
     "orang_asli": 0.0,
     "others": 4.0,
-    "total_voters": 15870
+    "total_voters": 15870,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "PLS_N08": {
     "malay": 53.8,
@@ -1517,7 +2462,12 @@
     "indian": 3.4,
     "orang_asli": 0.0,
     "others": 2.9,
-    "total_voters": 14465
+    "total_voters": 14465,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 19.9,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.3
   },
   "PLS_N09": {
     "malay": 77.8,
@@ -1525,7 +2475,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 14717
+    "total_voters": 14717,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "PLS_N10": {
     "malay": 95.8,
@@ -1533,7 +2488,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 1.8,
-    "total_voters": 13441
+    "total_voters": 13441,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.5,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.3
   },
   "PLS_N11": {
     "malay": 77.8,
@@ -1541,7 +2501,12 @@
     "indian": 5.3,
     "orang_asli": 0.0,
     "others": 2.4,
-    "total_voters": 14797
+    "total_voters": 14797,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "PLS_N12": {
     "malay": 82.7,
@@ -1549,7 +2514,12 @@
     "indian": 0.7,
     "orang_asli": 0.0,
     "others": 11.4,
-    "total_voters": 13451
+    "total_voters": 13451,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.5,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "PLS_N13": {
     "malay": 96.9,
@@ -1557,7 +2527,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 11510
+    "total_voters": 11510,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.9,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.0
   },
   "PLS_N14": {
     "malay": 90.6,
@@ -1565,7 +2540,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 10697
+    "total_voters": 10697,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "PLS_N15": {
     "malay": 92.6,
@@ -1573,7 +2553,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 10421
+    "total_voters": 10421,
+    "age_18_29": 28.7,
+    "age_30_39": 23.3,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.0
   },
   "PNG_N01": {
     "malay": 92.9,
@@ -1581,7 +2566,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 25229
+    "total_voters": 25229,
+    "age_18_29": 32.1,
+    "age_30_39": 25.1,
+    "age_40_49": 19.6,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.3
   },
   "PNG_N02": {
     "malay": 68.7,
@@ -1589,7 +2579,12 @@
     "indian": 8.8,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 23881
+    "total_voters": 23881,
+    "age_18_29": 33.8,
+    "age_30_39": 25.9,
+    "age_40_49": 19.0,
+    "age_50_59": 13.1,
+    "age_60_plus": 8.2
   },
   "PNG_N03": {
     "malay": 78.5,
@@ -1597,7 +2592,12 @@
     "indian": 3.7,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 33971
+    "total_voters": 33971,
+    "age_18_29": 33.7,
+    "age_30_39": 25.9,
+    "age_40_49": 19.1,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.1
   },
   "PNG_N04": {
     "malay": 86.5,
@@ -1605,7 +2605,12 @@
     "indian": 6.7,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 28229
+    "total_voters": 28229,
+    "age_18_29": 32.5,
+    "age_30_39": 25.3,
+    "age_40_49": 19.5,
+    "age_50_59": 13.7,
+    "age_60_plus": 9.0
   },
   "PNG_N05": {
     "malay": 81.2,
@@ -1613,7 +2618,12 @@
     "indian": 2.4,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 27840
+    "total_voters": 27840,
+    "age_18_29": 35.0,
+    "age_30_39": 26.5,
+    "age_40_49": 18.5,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.5
   },
   "PNG_N06": {
     "malay": 64.9,
@@ -1621,7 +2631,12 @@
     "indian": 10.1,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 24799
+    "total_voters": 24799,
+    "age_18_29": 32.8,
+    "age_30_39": 25.5,
+    "age_40_49": 19.5,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.6
   },
   "PNG_N07": {
     "malay": 8.3,
@@ -1629,7 +2644,12 @@
     "indian": 8.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 35765
+    "total_voters": 35765,
+    "age_18_29": 33.1,
+    "age_30_39": 25.5,
+    "age_40_49": 19.2,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.7
   },
   "PNG_N08": {
     "malay": 15.9,
@@ -1637,7 +2657,12 @@
     "indian": 16.8,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 32403
+    "total_voters": 32403,
+    "age_18_29": 33.2,
+    "age_30_39": 25.6,
+    "age_40_49": 19.3,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.5
   },
   "PNG_N09": {
     "malay": 23.0,
@@ -1645,7 +2670,12 @@
     "indian": 26.5,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 21279
+    "total_voters": 21279,
+    "age_18_29": 35.0,
+    "age_30_39": 26.5,
+    "age_40_49": 18.6,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.4
   },
   "PNG_N10": {
     "malay": 68.4,
@@ -1653,7 +2683,12 @@
     "indian": 12.1,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 48832
+    "total_voters": 48832,
+    "age_18_29": 32.9,
+    "age_30_39": 25.5,
+    "age_40_49": 19.4,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.6
   },
   "PNG_N11": {
     "malay": 75.2,
@@ -1661,7 +2696,12 @@
     "indian": 2.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 30380
+    "total_voters": 30380,
+    "age_18_29": 31.4,
+    "age_30_39": 24.8,
+    "age_40_49": 19.9,
+    "age_50_59": 14.3,
+    "age_60_plus": 9.6
   },
   "PNG_N12": {
     "malay": 79.7,
@@ -1669,7 +2709,12 @@
     "indian": 1.7,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 27974
+    "total_voters": 27974,
+    "age_18_29": 33.1,
+    "age_30_39": 25.6,
+    "age_40_49": 19.2,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.7
   },
   "PNG_N13": {
     "malay": 5.1,
@@ -1677,7 +2722,12 @@
     "indian": 10.7,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 29059
+    "total_voters": 29059,
+    "age_18_29": 32.6,
+    "age_30_39": 25.3,
+    "age_40_49": 19.6,
+    "age_50_59": 13.7,
+    "age_60_plus": 8.8
   },
   "PNG_N14": {
     "malay": 35.1,
@@ -1685,7 +2735,12 @@
     "indian": 12.7,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 55803
+    "total_voters": 55803,
+    "age_18_29": 33.9,
+    "age_30_39": 26.0,
+    "age_40_49": 18.9,
+    "age_50_59": 13.0,
+    "age_60_plus": 8.2
   },
   "PNG_N15": {
     "malay": 12.9,
@@ -1693,7 +2748,12 @@
     "indian": 8.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 35957
+    "total_voters": 35957,
+    "age_18_29": 33.9,
+    "age_30_39": 25.9,
+    "age_40_49": 18.9,
+    "age_50_59": 13.1,
+    "age_60_plus": 8.2
   },
   "PNG_N16": {
     "malay": 13.2,
@@ -1701,7 +2761,12 @@
     "indian": 35.7,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 20567
+    "total_voters": 20567,
+    "age_18_29": 32.7,
+    "age_30_39": 25.4,
+    "age_40_49": 19.5,
+    "age_50_59": 13.7,
+    "age_60_plus": 8.7
   },
   "PNG_N17": {
     "malay": 36.1,
@@ -1709,7 +2774,12 @@
     "indian": 16.8,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 31213
+    "total_voters": 31213,
+    "age_18_29": 32.0,
+    "age_30_39": 25.1,
+    "age_40_49": 19.8,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.1
   },
   "PNG_N18": {
     "malay": 17.3,
@@ -1717,7 +2787,12 @@
     "indian": 19.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 37032
+    "total_voters": 37032,
+    "age_18_29": 34.9,
+    "age_30_39": 26.4,
+    "age_40_49": 18.6,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.6
   },
   "PNG_N19": {
     "malay": 21.2,
@@ -1725,7 +2800,12 @@
     "indian": 25.6,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 36350
+    "total_voters": 36350,
+    "age_18_29": 32.8,
+    "age_30_39": 25.4,
+    "age_40_49": 19.3,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.9
   },
   "PNG_N20": {
     "malay": 59.5,
@@ -1733,7 +2813,12 @@
     "indian": 17.4,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 37781
+    "total_voters": 37781,
+    "age_18_29": 34.8,
+    "age_30_39": 26.3,
+    "age_40_49": 18.6,
+    "age_50_59": 12.6,
+    "age_60_plus": 7.7
   },
   "PNG_N21": {
     "malay": 64.0,
@@ -1741,7 +2826,12 @@
     "indian": 7.6,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 25931
+    "total_voters": 25931,
+    "age_18_29": 32.0,
+    "age_30_39": 25.0,
+    "age_40_49": 19.7,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.3
   },
   "PNG_N22": {
     "malay": 26.0,
@@ -1749,7 +2839,12 @@
     "indian": 12.1,
     "orang_asli": 0.0,
     "others": 2.5,
-    "total_voters": 29289
+    "total_voters": 29289,
+    "age_18_29": 34.5,
+    "age_30_39": 26.2,
+    "age_40_49": 18.7,
+    "age_50_59": 12.8,
+    "age_60_plus": 7.8
   },
   "PNG_N23": {
     "malay": 9.8,
@@ -1757,7 +2852,12 @@
     "indian": 9.3,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 15379
+    "total_voters": 15379,
+    "age_18_29": 34.6,
+    "age_30_39": 26.3,
+    "age_40_49": 18.7,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.7
   },
   "PNG_N24": {
     "malay": 7.1,
@@ -1765,7 +2865,12 @@
     "indian": 16.9,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 24528
+    "total_voters": 24528,
+    "age_18_29": 35.6,
+    "age_30_39": 26.7,
+    "age_40_49": 18.3,
+    "age_50_59": 12.2,
+    "age_60_plus": 7.2
   },
   "PNG_N25": {
     "malay": 13.7,
@@ -1773,7 +2878,12 @@
     "indian": 8.6,
     "orang_asli": 0.0,
     "others": 2.4,
-    "total_voters": 23325
+    "total_voters": 23325,
+    "age_18_29": 35.3,
+    "age_30_39": 26.6,
+    "age_40_49": 18.4,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.4
   },
   "PNG_N26": {
     "malay": 7.9,
@@ -1781,7 +2891,12 @@
     "indian": 18.4,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 15373
+    "total_voters": 15373,
+    "age_18_29": 34.6,
+    "age_30_39": 26.3,
+    "age_40_49": 18.8,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.6
   },
   "PNG_N27": {
     "malay": 2.0,
@@ -1789,7 +2904,12 @@
     "indian": 8.0,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 21743
+    "total_voters": 21743,
+    "age_18_29": 33.9,
+    "age_30_39": 26.0,
+    "age_40_49": 19.0,
+    "age_50_59": 13.0,
+    "age_60_plus": 8.1
   },
   "PNG_N28": {
     "malay": 11.5,
@@ -1797,7 +2917,12 @@
     "indian": 9.0,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 15687
+    "total_voters": 15687,
+    "age_18_29": 34.2,
+    "age_30_39": 26.1,
+    "age_40_49": 18.9,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.9
   },
   "PNG_N29": {
     "malay": 26.6,
@@ -1805,7 +2930,12 @@
     "indian": 16.6,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 26886
+    "total_voters": 26886,
+    "age_18_29": 35.0,
+    "age_30_39": 26.5,
+    "age_40_49": 18.6,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.4
   },
   "PNG_N30": {
     "malay": 30.8,
@@ -1813,7 +2943,12 @@
     "indian": 20.1,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 33995
+    "total_voters": 33995,
+    "age_18_29": 32.7,
+    "age_30_39": 25.4,
+    "age_40_49": 19.5,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.8
   },
   "PNG_N31": {
     "malay": 6.6,
@@ -1821,7 +2956,12 @@
     "indian": 8.3,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 33108
+    "total_voters": 33108,
+    "age_18_29": 33.7,
+    "age_30_39": 25.9,
+    "age_40_49": 19.0,
+    "age_50_59": 13.1,
+    "age_60_plus": 8.3
   },
   "PNG_N32": {
     "malay": 22.2,
@@ -1829,7 +2969,12 @@
     "indian": 12.4,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 31562
+    "total_voters": 31562,
+    "age_18_29": 34.1,
+    "age_30_39": 26.0,
+    "age_40_49": 19.0,
+    "age_50_59": 13.0,
+    "age_60_plus": 7.9
   },
   "PNG_N33": {
     "malay": 23.2,
@@ -1837,7 +2982,12 @@
     "indian": 11.0,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 23098
+    "total_voters": 23098,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.4,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.6
   },
   "PNG_N34": {
     "malay": 7.7,
@@ -1845,7 +2995,12 @@
     "indian": 13.7,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 62474
+    "total_voters": 62474,
+    "age_18_29": 32.2,
+    "age_30_39": 25.1,
+    "age_40_49": 19.6,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.2
   },
   "PNG_N35": {
     "malay": 25.5,
@@ -1853,7 +3008,12 @@
     "indian": 14.7,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 43132
+    "total_voters": 43132,
+    "age_18_29": 32.6,
+    "age_30_39": 25.3,
+    "age_40_49": 19.4,
+    "age_50_59": 13.7,
+    "age_60_plus": 9.0
   },
   "PNG_N36": {
     "malay": 35.8,
@@ -1861,7 +3021,12 @@
     "indian": 12.5,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 29730
+    "total_voters": 29730,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.6,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.0
   },
   "PNG_N37": {
     "malay": 53.1,
@@ -1869,7 +3034,12 @@
     "indian": 9.6,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 46778
+    "total_voters": 46778,
+    "age_18_29": 33.9,
+    "age_30_39": 25.9,
+    "age_40_49": 18.9,
+    "age_50_59": 13.1,
+    "age_60_plus": 8.2
   },
   "PNG_N38": {
     "malay": 63.6,
@@ -1877,7 +3047,12 @@
     "indian": 5.7,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 38866
+    "total_voters": 38866,
+    "age_18_29": 32.3,
+    "age_30_39": 25.2,
+    "age_40_49": 19.7,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.0
   },
   "PNG_N39": {
     "malay": 66.2,
@@ -1885,7 +3060,12 @@
     "indian": 4.2,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 23578
+    "total_voters": 23578,
+    "age_18_29": 33.6,
+    "age_30_39": 25.8,
+    "age_40_49": 19.1,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.3
   },
   "PNG_N40": {
     "malay": 67.8,
@@ -1893,7 +3073,12 @@
     "indian": 3.6,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 17820
+    "total_voters": 17820,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.6,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.0
   },
   "SGR_N01": {
     "malay": 84.3,
@@ -1901,7 +3086,12 @@
     "indian": 2.7,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 19961
+    "total_voters": 19961,
+    "age_18_29": 35.5,
+    "age_30_39": 26.7,
+    "age_40_49": 18.4,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.1
   },
   "SGR_N02": {
     "malay": 79.6,
@@ -1909,7 +3099,12 @@
     "indian": 6.2,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 31648
+    "total_voters": 31648,
+    "age_18_29": 35.0,
+    "age_30_39": 26.5,
+    "age_40_49": 18.6,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.4
   },
   "SGR_N03": {
     "malay": 81.3,
@@ -1917,7 +3112,12 @@
     "indian": 1.6,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 40465
+    "total_voters": 40465,
+    "age_18_29": 35.7,
+    "age_30_39": 26.8,
+    "age_40_49": 18.4,
+    "age_50_59": 12.2,
+    "age_60_plus": 6.9
   },
   "SGR_N04": {
     "malay": 43.9,
@@ -1925,7 +3125,12 @@
     "indian": 2.9,
     "orang_asli": 0.0,
     "others": 1.5,
-    "total_voters": 23917
+    "total_voters": 23917,
+    "age_18_29": 32.2,
+    "age_30_39": 25.2,
+    "age_40_49": 19.7,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.0
   },
   "SGR_N05": {
     "malay": 70.1,
@@ -1933,7 +3138,12 @@
     "indian": 13.1,
     "orang_asli": 0.7,
     "others": 1.3,
-    "total_voters": 30189
+    "total_voters": 30189,
+    "age_18_29": 34.9,
+    "age_30_39": 26.4,
+    "age_40_49": 18.6,
+    "age_50_59": 12.6,
+    "age_60_plus": 7.5
   },
   "SGR_N06": {
     "malay": 46.1,
@@ -1941,7 +3151,12 @@
     "indian": 18.1,
     "orang_asli": 2.9,
     "others": 1.9,
-    "total_voters": 39808
+    "total_voters": 39808,
+    "age_18_29": 36.3,
+    "age_30_39": 27.1,
+    "age_40_49": 18.2,
+    "age_50_59": 11.9,
+    "age_60_plus": 6.5
   },
   "SGR_N07": {
     "malay": 68.7,
@@ -1949,7 +3164,12 @@
     "indian": 14.2,
     "orang_asli": 1.8,
     "others": 2.4,
-    "total_voters": 84320
+    "total_voters": 84320,
+    "age_18_29": 35.0,
+    "age_30_39": 26.5,
+    "age_40_49": 18.6,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.4
   },
   "SGR_N08": {
     "malay": 83.2,
@@ -1957,7 +3177,12 @@
     "indian": 2.5,
     "orang_asli": 0.0,
     "others": 1.3,
-    "total_voters": 31570
+    "total_voters": 31570,
+    "age_18_29": 34.6,
+    "age_30_39": 26.3,
+    "age_40_49": 18.8,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.6
   },
   "SGR_N09": {
     "malay": 63.0,
@@ -1965,7 +3190,12 @@
     "indian": 14.0,
     "orang_asli": 0.0,
     "others": 1.4,
-    "total_voters": 30624
+    "total_voters": 30624,
+    "age_18_29": 32.8,
+    "age_30_39": 25.4,
+    "age_40_49": 19.5,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.7
   },
   "SGR_N10": {
     "malay": 60.2,
@@ -1973,7 +3203,12 @@
     "indian": 22.0,
     "orang_asli": 0.0,
     "others": 2.3,
-    "total_voters": 37649
+    "total_voters": 37649,
+    "age_18_29": 32.4,
+    "age_30_39": 25.3,
+    "age_40_49": 19.6,
+    "age_50_59": 13.8,
+    "age_60_plus": 8.9
   },
   "SGR_N11": {
     "malay": 61.4,
@@ -1981,7 +3216,12 @@
     "indian": 24.4,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 30344
+    "total_voters": 30344,
+    "age_18_29": 34.6,
+    "age_30_39": 26.3,
+    "age_40_49": 18.8,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.6
   },
   "SGR_N12": {
     "malay": 79.8,
@@ -1989,7 +3229,12 @@
     "indian": 12.1,
     "orang_asli": 0.0,
     "others": 1.3,
-    "total_voters": 34958
+    "total_voters": 34958,
+    "age_18_29": 32.9,
+    "age_30_39": 25.5,
+    "age_40_49": 19.5,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.5
   },
   "SGR_N13": {
     "malay": 76.6,
@@ -1997,7 +3242,12 @@
     "indian": 8.5,
     "orang_asli": 0.8,
     "others": 4.1,
-    "total_voters": 44424
+    "total_voters": 44424,
+    "age_18_29": 32.8,
+    "age_30_39": 25.4,
+    "age_40_49": 19.5,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.7
   },
   "SGR_N14": {
     "malay": 31.4,
@@ -2005,7 +3255,12 @@
     "indian": 25.9,
     "orang_asli": 0.0,
     "others": 3.7,
-    "total_voters": 75145
+    "total_voters": 75145,
+    "age_18_29": 32.7,
+    "age_30_39": 25.4,
+    "age_40_49": 19.6,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.7
   },
   "SGR_N15": {
     "malay": 59.1,
@@ -2013,7 +3268,12 @@
     "indian": 14.7,
     "orang_asli": 0.1,
     "others": 4.0,
-    "total_voters": 61970
+    "total_voters": 61970,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 18.9,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.8
   },
   "SGR_N16": {
     "malay": 57.2,
@@ -2021,7 +3281,12 @@
     "indian": 23.3,
     "orang_asli": 0.1,
     "others": 6.9,
-    "total_voters": 48640
+    "total_voters": 48640,
+    "age_18_29": 34.0,
+    "age_30_39": 26.0,
+    "age_40_49": 18.9,
+    "age_50_59": 13.0,
+    "age_60_plus": 8.1
   },
   "SGR_N17": {
     "malay": 67.4,
@@ -2029,7 +3294,12 @@
     "indian": 9.4,
     "orang_asli": 1.1,
     "others": 10.5,
-    "total_voters": 86963
+    "total_voters": 86963,
+    "age_18_29": 33.5,
+    "age_30_39": 25.8,
+    "age_40_49": 19.1,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.4
   },
   "SGR_N18": {
     "malay": 82.0,
@@ -2037,7 +3307,12 @@
     "indian": 4.0,
     "orang_asli": 0.1,
     "others": 5.2,
-    "total_voters": 71141
+    "total_voters": 71141,
+    "age_18_29": 33.1,
+    "age_30_39": 25.6,
+    "age_40_49": 19.3,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.6
   },
   "SGR_N19": {
     "malay": 46.7,
@@ -2045,7 +3320,12 @@
     "indian": 7.2,
     "orang_asli": 0.0,
     "others": 5.0,
-    "total_voters": 68503
+    "total_voters": 68503,
+    "age_18_29": 33.2,
+    "age_30_39": 25.6,
+    "age_40_49": 19.3,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.5
   },
   "SGR_N20": {
     "malay": 56.8,
@@ -2053,7 +3333,12 @@
     "indian": 12.2,
     "orang_asli": 0.0,
     "others": 8.0,
-    "total_voters": 64991
+    "total_voters": 64991,
+    "age_18_29": 34.1,
+    "age_30_39": 26.1,
+    "age_40_49": 19.0,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.9
   },
   "SGR_N21": {
     "malay": 55.3,
@@ -2061,7 +3346,12 @@
     "indian": 7.5,
     "orang_asli": 0.0,
     "others": 6.3,
-    "total_voters": 70260
+    "total_voters": 70260,
+    "age_18_29": 35.7,
+    "age_30_39": 26.8,
+    "age_40_49": 18.4,
+    "age_50_59": 12.1,
+    "age_60_plus": 7.0
   },
   "SGR_N22": {
     "malay": 26.8,
@@ -2069,7 +3359,12 @@
     "indian": 8.2,
     "orang_asli": 0.0,
     "others": 3.5,
-    "total_voters": 78470
+    "total_voters": 78470,
+    "age_18_29": 32.3,
+    "age_30_39": 25.2,
+    "age_40_49": 19.6,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.1
   },
   "SGR_N23": {
     "malay": 57.2,
@@ -2077,7 +3372,12 @@
     "indian": 7.5,
     "orang_asli": 1.2,
     "others": 5.6,
-    "total_voters": 73049
+    "total_voters": 73049,
+    "age_18_29": 33.6,
+    "age_30_39": 25.8,
+    "age_40_49": 19.1,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.3
   },
   "SGR_N24": {
     "malay": 68.8,
@@ -2085,7 +3385,12 @@
     "indian": 13.1,
     "orang_asli": 0.7,
     "others": 2.6,
-    "total_voters": 93853
+    "total_voters": 93853,
+    "age_18_29": 34.4,
+    "age_30_39": 26.2,
+    "age_40_49": 19.0,
+    "age_50_59": 12.8,
+    "age_60_plus": 7.6
   },
   "SGR_N25": {
     "malay": 39.1,
@@ -2093,7 +3398,12 @@
     "indian": 14.4,
     "orang_asli": 0.0,
     "others": 3.2,
-    "total_voters": 107100
+    "total_voters": 107100,
+    "age_18_29": 35.4,
+    "age_30_39": 26.7,
+    "age_40_49": 18.5,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.1
   },
   "SGR_N26": {
     "malay": 76.3,
@@ -2101,7 +3411,12 @@
     "indian": 9.3,
     "orang_asli": 0.0,
     "others": 4.8,
-    "total_voters": 94255
+    "total_voters": 94255,
+    "age_18_29": 35.3,
+    "age_30_39": 26.6,
+    "age_40_49": 18.5,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.3
   },
   "SGR_N27": {
     "malay": 33.3,
@@ -2109,7 +3424,12 @@
     "indian": 9.2,
     "orang_asli": 0.0,
     "others": 2.2,
-    "total_voters": 102075
+    "total_voters": 102075,
+    "age_18_29": 33.8,
+    "age_30_39": 25.9,
+    "age_40_49": 19.2,
+    "age_50_59": 13.1,
+    "age_60_plus": 8.0
   },
   "SGR_N28": {
     "malay": 11.1,
@@ -2117,7 +3437,12 @@
     "indian": 8.9,
     "orang_asli": 0.0,
     "others": 1.4,
-    "total_voters": 61996
+    "total_voters": 61996,
+    "age_18_29": 32.3,
+    "age_30_39": 25.2,
+    "age_40_49": 19.6,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.0
   },
   "SGR_N29": {
     "malay": 55.5,
@@ -2125,7 +3450,12 @@
     "indian": 12.3,
     "orang_asli": 0.3,
     "others": 2.7,
-    "total_voters": 90865
+    "total_voters": 90865,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 18.8,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.9
   },
   "SGR_N30": {
     "malay": 25.3,
@@ -2133,7 +3463,12 @@
     "indian": 19.5,
     "orang_asli": 0.0,
     "others": 2.3,
-    "total_voters": 120415
+    "total_voters": 120415,
+    "age_18_29": 33.3,
+    "age_30_39": 25.7,
+    "age_40_49": 19.3,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.3
   },
   "SGR_N31": {
     "malay": 27.6,
@@ -2141,7 +3476,12 @@
     "indian": 13.8,
     "orang_asli": 0.0,
     "others": 3.5,
-    "total_voters": 110525
+    "total_voters": 110525,
+    "age_18_29": 35.4,
+    "age_30_39": 26.7,
+    "age_40_49": 18.5,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.1
   },
   "SGR_N32": {
     "malay": 52.1,
@@ -2149,7 +3489,12 @@
     "indian": 23.7,
     "orang_asli": 0.0,
     "others": 3.8,
-    "total_voters": 79246
+    "total_voters": 79246,
+    "age_18_29": 34.1,
+    "age_30_39": 26.0,
+    "age_40_49": 18.9,
+    "age_50_59": 13.0,
+    "age_60_plus": 8.0
   },
   "SGR_N33": {
     "malay": 65.0,
@@ -2157,7 +3502,12 @@
     "indian": 19.9,
     "orang_asli": 0.0,
     "others": 3.0,
-    "total_voters": 61585
+    "total_voters": 61585,
+    "age_18_29": 33.2,
+    "age_30_39": 25.6,
+    "age_40_49": 19.4,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.4
   },
   "SGR_N34": {
     "malay": 16.8,
@@ -2165,7 +3515,12 @@
     "indian": 17.1,
     "orang_asli": 0.0,
     "others": 3.5,
-    "total_voters": 54317
+    "total_voters": 54317,
+    "age_18_29": 36.3,
+    "age_30_39": 27.1,
+    "age_40_49": 18.2,
+    "age_50_59": 11.9,
+    "age_60_plus": 6.5
   },
   "SGR_N35": {
     "malay": 14.9,
@@ -2173,7 +3528,12 @@
     "indian": 10.0,
     "orang_asli": 0.0,
     "others": 2.3,
-    "total_voters": 58510
+    "total_voters": 58510,
+    "age_18_29": 31.9,
+    "age_30_39": 25.0,
+    "age_40_49": 19.8,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.3
   },
   "SGR_N36": {
     "malay": 15.1,
@@ -2181,7 +3541,12 @@
     "indian": 8.6,
     "orang_asli": 0.0,
     "others": 3.7,
-    "total_voters": 72269
+    "total_voters": 72269,
+    "age_18_29": 34.6,
+    "age_30_39": 26.3,
+    "age_40_49": 18.8,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.6
   },
   "SGR_N37": {
     "malay": 27.7,
@@ -2189,7 +3554,12 @@
     "indian": 10.8,
     "orang_asli": 0.6,
     "others": 2.8,
-    "total_voters": 108324
+    "total_voters": 108324,
+    "age_18_29": 34.5,
+    "age_30_39": 26.3,
+    "age_40_49": 18.9,
+    "age_50_59": 12.8,
+    "age_60_plus": 7.5
   },
   "SGR_N38": {
     "malay": 66.2,
@@ -2197,7 +3567,12 @@
     "indian": 9.2,
     "orang_asli": 0.1,
     "others": 9.1,
-    "total_voters": 70729
+    "total_voters": 70729,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.5,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.5
   },
   "SGR_N39": {
     "malay": 60.2,
@@ -2205,7 +3580,12 @@
     "indian": 11.2,
     "orang_asli": 0.0,
     "others": 3.7,
-    "total_voters": 87361
+    "total_voters": 87361,
+    "age_18_29": 34.9,
+    "age_30_39": 26.5,
+    "age_40_49": 18.7,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.4
   },
   "SGR_N40": {
     "malay": 72.4,
@@ -2213,7 +3593,12 @@
     "indian": 8.6,
     "orang_asli": 0.2,
     "others": 1.8,
-    "total_voters": 90996
+    "total_voters": 90996,
+    "age_18_29": 34.6,
+    "age_30_39": 26.3,
+    "age_40_49": 18.7,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.7
   },
   "SGR_N41": {
     "malay": 74.8,
@@ -2221,7 +3606,12 @@
     "indian": 15.6,
     "orang_asli": 0.0,
     "others": 2.1,
-    "total_voters": 74748
+    "total_voters": 74748,
+    "age_18_29": 35.1,
+    "age_30_39": 26.5,
+    "age_40_49": 18.7,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.2
   },
   "SGR_N42": {
     "malay": 56.9,
@@ -2229,7 +3619,12 @@
     "indian": 24.7,
     "orang_asli": 0.0,
     "others": 1.5,
-    "total_voters": 64367
+    "total_voters": 64367,
+    "age_18_29": 35.4,
+    "age_30_39": 26.6,
+    "age_40_49": 18.4,
+    "age_50_59": 12.3,
+    "age_60_plus": 7.3
   },
   "SGR_N43": {
     "malay": 74.3,
@@ -2237,7 +3632,12 @@
     "indian": 10.2,
     "orang_asli": 0.0,
     "others": 2.0,
-    "total_voters": 67782
+    "total_voters": 67782,
+    "age_18_29": 34.1,
+    "age_30_39": 26.0,
+    "age_40_49": 19.1,
+    "age_50_59": 13.0,
+    "age_60_plus": 7.8
   },
   "SGR_N44": {
     "malay": 73.8,
@@ -2245,7 +3645,12 @@
     "indian": 6.8,
     "orang_asli": 0.2,
     "others": 4.0,
-    "total_voters": 57220
+    "total_voters": 57220,
+    "age_18_29": 33.6,
+    "age_30_39": 25.8,
+    "age_40_49": 19.2,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.2
   },
   "SGR_N45": {
     "malay": 15.9,
@@ -2253,7 +3658,12 @@
     "indian": 15.1,
     "orang_asli": 0.0,
     "others": 1.1,
-    "total_voters": 82340
+    "total_voters": 82340,
+    "age_18_29": 33.6,
+    "age_30_39": 25.8,
+    "age_40_49": 19.2,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.2
   },
   "SGR_N46": {
     "malay": 61.9,
@@ -2261,7 +3671,12 @@
     "indian": 16.5,
     "orang_asli": 0.4,
     "others": 3.2,
-    "total_voters": 50913
+    "total_voters": 50913,
+    "age_18_29": 35.9,
+    "age_30_39": 26.9,
+    "age_40_49": 18.4,
+    "age_50_59": 12.1,
+    "age_60_plus": 6.7
   },
   "SGR_N47": {
     "malay": 15.3,
@@ -2269,7 +3684,12 @@
     "indian": 22.6,
     "orang_asli": 0.0,
     "others": 2.7,
-    "total_voters": 75660
+    "total_voters": 75660,
+    "age_18_29": 35.3,
+    "age_30_39": 26.6,
+    "age_40_49": 18.4,
+    "age_50_59": 12.4,
+    "age_60_plus": 7.3
   },
   "SGR_N48": {
     "malay": 15.0,
@@ -2277,7 +3697,12 @@
     "indian": 41.0,
     "orang_asli": 0.0,
     "others": 2.9,
-    "total_voters": 88435
+    "total_voters": 88435,
+    "age_18_29": 35.6,
+    "age_30_39": 26.7,
+    "age_40_49": 18.4,
+    "age_50_59": 12.2,
+    "age_60_plus": 7.1
   },
   "SGR_N49": {
     "malay": 68.9,
@@ -2285,7 +3710,12 @@
     "indian": 15.3,
     "orang_asli": 0.0,
     "others": 2.8,
-    "total_voters": 76676
+    "total_voters": 76676,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 19.0,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.7
   },
   "SGR_N50": {
     "malay": 39.9,
@@ -2293,7 +3723,12 @@
     "indian": 23.3,
     "orang_asli": 0.0,
     "others": 3.6,
-    "total_voters": 79601
+    "total_voters": 79601,
+    "age_18_29": 36.2,
+    "age_30_39": 27.0,
+    "age_40_49": 18.2,
+    "age_50_59": 11.9,
+    "age_60_plus": 6.7
   },
   "SGR_N51": {
     "malay": 71.1,
@@ -2301,7 +3736,12 @@
     "indian": 14.5,
     "orang_asli": 4.1,
     "others": 2.4,
-    "total_voters": 60902
+    "total_voters": 60902,
+    "age_18_29": 35.0,
+    "age_30_39": 26.5,
+    "age_40_49": 18.6,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.4
   },
   "SGR_N52": {
     "malay": 18.0,
@@ -2309,7 +3749,12 @@
     "indian": 22.4,
     "orang_asli": 0.6,
     "others": 1.4,
-    "total_voters": 44454
+    "total_voters": 44454,
+    "age_18_29": 34.2,
+    "age_30_39": 26.1,
+    "age_40_49": 19.0,
+    "age_50_59": 12.9,
+    "age_60_plus": 7.8
   },
   "SGR_N53": {
     "malay": 71.1,
@@ -2317,7 +3762,12 @@
     "indian": 15.5,
     "orang_asli": 0.6,
     "others": 2.2,
-    "total_voters": 43281
+    "total_voters": 43281,
+    "age_18_29": 34.9,
+    "age_30_39": 26.4,
+    "age_40_49": 18.6,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.6
   },
   "SGR_N54": {
     "malay": 57.7,
@@ -2325,7 +3775,12 @@
     "indian": 11.8,
     "orang_asli": 3.4,
     "others": 0.8,
-    "total_voters": 32114
+    "total_voters": 32114,
+    "age_18_29": 35.1,
+    "age_30_39": 26.5,
+    "age_40_49": 18.5,
+    "age_50_59": 12.5,
+    "age_60_plus": 7.4
   },
   "SGR_N55": {
     "malay": 69.0,
@@ -2333,7 +3788,12 @@
     "indian": 10.9,
     "orang_asli": 2.7,
     "others": 3.1,
-    "total_voters": 89739
+    "total_voters": 89739,
+    "age_18_29": 33.2,
+    "age_30_39": 25.6,
+    "age_40_49": 19.4,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.4
   },
   "SGR_N56": {
     "malay": 56.1,
@@ -2341,7 +3801,12 @@
     "indian": 17.8,
     "orang_asli": 0.1,
     "others": 2.9,
-    "total_voters": 46186
+    "total_voters": 46186,
+    "age_18_29": 33.8,
+    "age_30_39": 25.9,
+    "age_40_49": 19.2,
+    "age_50_59": 13.1,
+    "age_60_plus": 8.0
   },
   "TRG_N01": {
     "malay": 98.5,
@@ -2349,7 +3814,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 26745
+    "total_voters": 26745,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.1
   },
   "TRG_N02": {
     "malay": 98.7,
@@ -2357,7 +3827,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 32303
+    "total_voters": 32303,
+    "age_18_29": 26.3,
+    "age_30_39": 22.2,
+    "age_40_49": 21.2,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.5
   },
   "TRG_N03": {
     "malay": 96.0,
@@ -2365,7 +3840,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 28927
+    "total_voters": 28927,
+    "age_18_29": 27.5,
+    "age_30_39": 22.8,
+    "age_40_49": 20.8,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.7
   },
   "TRG_N04": {
     "malay": 98.8,
@@ -2373,7 +3853,12 @@
     "indian": 0.0,
     "orang_asli": 0.1,
     "others": 0.3,
-    "total_voters": 23675
+    "total_voters": 23675,
+    "age_18_29": 28.9,
+    "age_30_39": 23.4,
+    "age_40_49": 20.1,
+    "age_50_59": 15.6,
+    "age_60_plus": 12.0
   },
   "TRG_N05": {
     "malay": 99.1,
@@ -2381,7 +3866,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 24919
+    "total_voters": 24919,
+    "age_18_29": 29.4,
+    "age_30_39": 23.6,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.7
   },
   "TRG_N06": {
     "malay": 99.1,
@@ -2389,7 +3879,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 30464
+    "total_voters": 30464,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.7,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.5
   },
   "TRG_N07": {
     "malay": 99.4,
@@ -2397,7 +3892,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 22269
+    "total_voters": 22269,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.0,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.9
   },
   "TRG_N08": {
     "malay": 99.4,
@@ -2405,7 +3905,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 29642
+    "total_voters": 29642,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.3,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.3
   },
   "TRG_N09": {
     "malay": 98.6,
@@ -2413,7 +3918,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 30120
+    "total_voters": 30120,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.9
   },
   "TRG_N10": {
     "malay": 98.1,
@@ -2421,7 +3931,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.2,
-    "total_voters": 27587
+    "total_voters": 27587,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "TRG_N11": {
     "malay": 99.0,
@@ -2429,7 +3944,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 27303
+    "total_voters": 27303,
+    "age_18_29": 29.3,
+    "age_30_39": 23.6,
+    "age_40_49": 20.0,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "TRG_N12": {
     "malay": 97.5,
@@ -2437,7 +3957,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 20942
+    "total_voters": 20942,
+    "age_18_29": 26.6,
+    "age_30_39": 22.3,
+    "age_40_49": 21.0,
+    "age_50_59": 16.7,
+    "age_60_plus": 13.4
   },
   "TRG_N13": {
     "malay": 99.2,
@@ -2445,7 +3970,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.3,
-    "total_voters": 34303
+    "total_voters": 34303,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.7,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.5
   },
   "TRG_N14": {
     "malay": 66.3,
@@ -2453,7 +3983,12 @@
     "indian": 1.2,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 22215
+    "total_voters": 22215,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.5,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.3
   },
   "TRG_N15": {
     "malay": 89.2,
@@ -2461,7 +3996,12 @@
     "indian": 1.0,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 26268
+    "total_voters": 26268,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.5,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "TRG_N16": {
     "malay": 96.7,
@@ -2469,7 +4009,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 40519
+    "total_voters": 40519,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "TRG_N17": {
     "malay": 96.8,
@@ -2477,7 +4022,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 35638
+    "total_voters": 35638,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.7,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.5
   },
   "TRG_N18": {
     "malay": 99.1,
@@ -2485,7 +4035,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 28553
+    "total_voters": 28553,
+    "age_18_29": 26.4,
+    "age_30_39": 22.3,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.4
   },
   "TRG_N19": {
     "malay": 99.0,
@@ -2493,7 +4048,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 32587
+    "total_voters": 32587,
+    "age_18_29": 26.4,
+    "age_30_39": 22.2,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.5
   },
   "TRG_N20": {
     "malay": 95.8,
@@ -2501,7 +4061,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 34978
+    "total_voters": 34978,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "TRG_N21": {
     "malay": 98.3,
@@ -2509,7 +4074,12 @@
     "indian": 0.0,
     "orang_asli": 1.3,
     "others": 0.3,
-    "total_voters": 21369
+    "total_voters": 21369,
+    "age_18_29": 26.7,
+    "age_30_39": 22.4,
+    "age_40_49": 21.0,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.3
   },
   "TRG_N22": {
     "malay": 99.5,
@@ -2517,7 +4087,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.2,
-    "total_voters": 20531
+    "total_voters": 20531,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.1,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.9
   },
   "TRG_N23": {
     "malay": 98.9,
@@ -2525,7 +4100,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.4,
-    "total_voters": 21308
+    "total_voters": 21308,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "TRG_N24": {
     "malay": 98.8,
@@ -2533,7 +4113,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 24709
+    "total_voters": 24709,
+    "age_18_29": 26.4,
+    "age_30_39": 22.3,
+    "age_40_49": 21.1,
+    "age_50_59": 16.8,
+    "age_60_plus": 13.4
   },
   "TRG_N25": {
     "malay": 99.1,
@@ -2541,7 +4126,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 18102
+    "total_voters": 18102,
+    "age_18_29": 26.8,
+    "age_30_39": 22.4,
+    "age_40_49": 21.0,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.2
   },
   "TRG_N26": {
     "malay": 98.0,
@@ -2549,7 +4139,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 1.5,
-    "total_voters": 32922
+    "total_voters": 32922,
+    "age_18_29": 25.9,
+    "age_30_39": 22.0,
+    "age_40_49": 21.3,
+    "age_50_59": 17.0,
+    "age_60_plus": 13.8
   },
   "TRG_N27": {
     "malay": 93.0,
@@ -2557,7 +4152,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 0.5,
-    "total_voters": 30130
+    "total_voters": 30130,
+    "age_18_29": 27.4,
+    "age_30_39": 22.7,
+    "age_40_49": 20.8,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.8
   },
   "TRG_N28": {
     "malay": 94.3,
@@ -2565,7 +4165,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 34405
+    "total_voters": 34405,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "TRG_N29": {
     "malay": 96.2,
@@ -2573,7 +4178,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 28315
+    "total_voters": 28315,
+    "age_18_29": 27.1,
+    "age_30_39": 22.6,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 13.0
   },
   "TRG_N30": {
     "malay": 96.8,
@@ -2581,7 +4191,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 1.3,
-    "total_voters": 29046
+    "total_voters": 29046,
+    "age_18_29": 28.7,
+    "age_30_39": 23.3,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.0
   },
   "TRG_N31": {
     "malay": 86.7,
@@ -2589,7 +4204,12 @@
     "indian": 0.8,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 38776
+    "total_voters": 38776,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "TRG_N32": {
     "malay": 94.9,
@@ -2597,7 +4217,12 @@
     "indian": 0.6,
     "orang_asli": 0.7,
     "others": 1.0,
-    "total_voters": 43286
+    "total_voters": 43286,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.5,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.6
   },
   "JHR_N01": {
     "malay": 56.0,
@@ -2605,7 +4230,12 @@
     "indian": 10.9,
     "orang_asli": 0.4,
     "others": 1.2,
-    "total_voters": 28479
+    "total_voters": 28479,
+    "age_18_29": 29.1,
+    "age_30_39": 23.6,
+    "age_40_49": 20.5,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.4
   },
   "JHR_N02": {
     "malay": 40.4,
@@ -2613,7 +4243,12 @@
     "indian": 8.1,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 40881
+    "total_voters": 40881,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.6,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.6
   },
   "JHR_N03": {
     "malay": 62.6,
@@ -2621,7 +4256,12 @@
     "indian": 2.4,
     "orang_asli": 0.0,
     "others": 1.7,
-    "total_voters": 29969
+    "total_voters": 29969,
+    "age_18_29": 31.3,
+    "age_30_39": 24.7,
+    "age_40_49": 19.7,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.0
   },
   "JHR_N04": {
     "malay": 53.7,
@@ -2629,7 +4269,12 @@
     "indian": 5.5,
     "orang_asli": 0.6,
     "others": 0.9,
-    "total_voters": 34012
+    "total_voters": 34012,
+    "age_18_29": 31.1,
+    "age_30_39": 24.5,
+    "age_40_49": 19.7,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.2
   },
   "JHR_N05": {
     "malay": 48.5,
@@ -2637,7 +4282,12 @@
     "indian": 11.3,
     "orang_asli": 1.7,
     "others": 0.8,
-    "total_voters": 22560
+    "total_voters": 22560,
+    "age_18_29": 29.3,
+    "age_30_39": 23.7,
+    "age_40_49": 20.4,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.3
   },
   "JHR_N06": {
     "malay": 28.8,
@@ -2645,7 +4295,12 @@
     "indian": 18.7,
     "orang_asli": 2.9,
     "others": 1.2,
-    "total_voters": 27286
+    "total_voters": 27286,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 20.0,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.4
   },
   "JHR_N07": {
     "malay": 69.7,
@@ -2653,7 +4308,12 @@
     "indian": 2.7,
     "orang_asli": 1.1,
     "others": 0.6,
-    "total_voters": 37509
+    "total_voters": 37509,
+    "age_18_29": 30.5,
+    "age_30_39": 24.3,
+    "age_40_49": 20.1,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.4
   },
   "JHR_N08": {
     "malay": 62.1,
@@ -2661,7 +4321,12 @@
     "indian": 4.2,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 32430
+    "total_voters": 32430,
+    "age_18_29": 32.0,
+    "age_30_39": 25.0,
+    "age_40_49": 19.5,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.5
   },
   "JHR_N09": {
     "malay": 59.2,
@@ -2669,7 +4334,12 @@
     "indian": 3.7,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 29548
+    "total_voters": 29548,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 20.0,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.4
   },
   "JHR_N10": {
     "malay": 39.9,
@@ -2677,7 +4347,12 @@
     "indian": 10.0,
     "orang_asli": 1.2,
     "others": 1.0,
-    "total_voters": 35887
+    "total_voters": 35887,
+    "age_18_29": 31.1,
+    "age_30_39": 24.5,
+    "age_40_49": 19.8,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.1
   },
   "JHR_N11": {
     "malay": 66.7,
@@ -2685,7 +4360,12 @@
     "indian": 1.0,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 39142
+    "total_voters": 39142,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.4
   },
   "JHR_N12": {
     "malay": 26.3,
@@ -2693,7 +4373,12 @@
     "indian": 2.3,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 34571
+    "total_voters": 34571,
+    "age_18_29": 31.2,
+    "age_30_39": 24.6,
+    "age_40_49": 19.8,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.0
   },
   "JHR_N13": {
     "malay": 52.0,
@@ -2701,7 +4386,12 @@
     "indian": 2.5,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 40197
+    "total_voters": 40197,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.5,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "JHR_N14": {
     "malay": 63.1,
@@ -2709,7 +4399,12 @@
     "indian": 0.9,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 22567
+    "total_voters": 22567,
+    "age_18_29": 33.2,
+    "age_30_39": 25.5,
+    "age_40_49": 19.0,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.9
   },
   "JHR_N15": {
     "malay": 61.1,
@@ -2717,7 +4412,12 @@
     "indian": 2.2,
     "orang_asli": 0.1,
     "others": 1.1,
-    "total_voters": 38750
+    "total_voters": 38750,
+    "age_18_29": 29.7,
+    "age_30_39": 23.9,
+    "age_40_49": 20.2,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.1
   },
   "JHR_N16": {
     "malay": 73.2,
@@ -2725,7 +4425,12 @@
     "indian": 0.2,
     "orang_asli": 0.2,
     "others": 0.8,
-    "total_voters": 30175
+    "total_voters": 30175,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 20.1,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.7
   },
   "JHR_N17": {
     "malay": 73.9,
@@ -2733,7 +4438,12 @@
     "indian": 0.5,
     "orang_asli": 0.1,
     "others": 0.8,
-    "total_voters": 46652
+    "total_voters": 46652,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.4,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.4
   },
   "JHR_N18": {
     "malay": 89.6,
@@ -2741,7 +4451,12 @@
     "indian": 0.3,
     "orang_asli": 0.7,
     "others": 1.0,
-    "total_voters": 32832
+    "total_voters": 32832,
+    "age_18_29": 30.3,
+    "age_30_39": 24.2,
+    "age_40_49": 20.0,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.7
   },
   "JHR_N19": {
     "malay": 34.3,
@@ -2749,7 +4464,12 @@
     "indian": 6.9,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 33186
+    "total_voters": 33186,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 20.0,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.4
   },
   "JHR_N20": {
     "malay": 85.7,
@@ -2757,7 +4477,12 @@
     "indian": 0.8,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 27855
+    "total_voters": 27855,
+    "age_18_29": 31.6,
+    "age_30_39": 24.8,
+    "age_40_49": 19.5,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.9
   },
   "JHR_N21": {
     "malay": 55.0,
@@ -2765,7 +4490,12 @@
     "indian": 1.0,
     "orang_asli": 0.1,
     "others": 1.1,
-    "total_voters": 42267
+    "total_voters": 42267,
+    "age_18_29": 31.3,
+    "age_30_39": 24.7,
+    "age_40_49": 19.7,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.0
   },
   "JHR_N22": {
     "malay": 74.0,
@@ -2773,7 +4503,12 @@
     "indian": 1.8,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 36335
+    "total_voters": 36335,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.0,
+    "age_50_59": 13.5,
+    "age_60_plus": 9.0
   },
   "JHR_N23": {
     "malay": 36.1,
@@ -2781,7 +4516,12 @@
     "indian": 2.3,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 69241
+    "total_voters": 69241,
+    "age_18_29": 32.1,
+    "age_30_39": 25.0,
+    "age_40_49": 19.4,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.5
   },
   "JHR_N24": {
     "malay": 61.1,
@@ -2789,7 +4529,12 @@
     "indian": 0.7,
     "orang_asli": 1.2,
     "others": 1.6,
-    "total_voters": 37547
+    "total_voters": 37547,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.0,
+    "age_50_59": 13.5,
+    "age_60_plus": 9.0
   },
   "JHR_N25": {
     "malay": 80.1,
@@ -2797,7 +4542,12 @@
     "indian": 0.2,
     "orang_asli": 1.2,
     "others": 1.6,
-    "total_voters": 27122
+    "total_voters": 27122,
+    "age_18_29": 31.3,
+    "age_30_39": 24.6,
+    "age_40_49": 19.7,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.0
   },
   "JHR_N26": {
     "malay": 65.1,
@@ -2805,7 +4555,12 @@
     "indian": 5.3,
     "orang_asli": 0.0,
     "others": 1.7,
-    "total_voters": 33941
+    "total_voters": 33941,
+    "age_18_29": 32.9,
+    "age_30_39": 25.4,
+    "age_40_49": 19.1,
+    "age_50_59": 13.6,
+    "age_60_plus": 9.0
   },
   "JHR_N27": {
     "malay": 55.0,
@@ -2813,7 +4568,12 @@
     "indian": 12.9,
     "orang_asli": 0.3,
     "others": 2.4,
-    "total_voters": 25092
+    "total_voters": 25092,
+    "age_18_29": 30.1,
+    "age_30_39": 24.1,
+    "age_40_49": 20.2,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.7
   },
   "JHR_N28": {
     "malay": 28.3,
@@ -2821,7 +4581,12 @@
     "indian": 13.1,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 66589
+    "total_voters": 66589,
+    "age_18_29": 30.0,
+    "age_30_39": 24.0,
+    "age_40_49": 20.1,
+    "age_50_59": 15.0,
+    "age_60_plus": 10.9
   },
   "JHR_N29": {
     "malay": 54.8,
@@ -2829,7 +4594,12 @@
     "indian": 7.7,
     "orang_asli": 0.2,
     "others": 3.2,
-    "total_voters": 65753
+    "total_voters": 65753,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.5,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "JHR_N30": {
     "malay": 45.9,
@@ -2837,7 +4607,12 @@
     "indian": 15.6,
     "orang_asli": 1.2,
     "others": 1.7,
-    "total_voters": 25646
+    "total_voters": 25646,
+    "age_18_29": 29.5,
+    "age_30_39": 23.8,
+    "age_40_49": 20.3,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.2
   },
   "JHR_N31": {
     "malay": 73.1,
@@ -2845,7 +4620,12 @@
     "indian": 2.8,
     "orang_asli": 2.1,
     "others": 1.2,
-    "total_voters": 29336
+    "total_voters": 29336,
+    "age_18_29": 32.2,
+    "age_30_39": 25.1,
+    "age_40_49": 19.3,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.5
   },
   "JHR_N32": {
     "malay": 79.4,
@@ -2853,7 +4633,12 @@
     "indian": 0.7,
     "orang_asli": 4.8,
     "others": 1.2,
-    "total_voters": 27993
+    "total_voters": 27993,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.5,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "JHR_N33": {
     "malay": 82.7,
@@ -2861,7 +4646,12 @@
     "indian": 1.5,
     "orang_asli": 0.2,
     "others": 2.1,
-    "total_voters": 38282
+    "total_voters": 38282,
+    "age_18_29": 29.7,
+    "age_30_39": 23.9,
+    "age_40_49": 20.3,
+    "age_50_59": 15.2,
+    "age_60_plus": 10.9
   },
   "JHR_N34": {
     "malay": 76.7,
@@ -2869,7 +4659,12 @@
     "indian": 5.8,
     "orang_asli": 1.0,
     "others": 1.9,
-    "total_voters": 38758
+    "total_voters": 38758,
+    "age_18_29": 30.3,
+    "age_30_39": 24.2,
+    "age_40_49": 20.0,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.6
   },
   "JHR_N35": {
     "malay": 68.2,
@@ -2877,7 +4672,12 @@
     "indian": 8.6,
     "orang_asli": 0.1,
     "others": 4.4,
-    "total_voters": 28536
+    "total_voters": 28536,
+    "age_18_29": 30.0,
+    "age_30_39": 24.0,
+    "age_40_49": 20.1,
+    "age_50_59": 15.0,
+    "age_60_plus": 10.9
   },
   "JHR_N36": {
     "malay": 96.1,
@@ -2885,7 +4685,12 @@
     "indian": 0.8,
     "orang_asli": 0.3,
     "others": 1.3,
-    "total_voters": 28674
+    "total_voters": 28674,
+    "age_18_29": 32.3,
+    "age_30_39": 25.1,
+    "age_40_49": 19.2,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.5
   },
   "JHR_N37": {
     "malay": 82.4,
@@ -2893,7 +4698,12 @@
     "indian": 2.6,
     "orang_asli": 0.0,
     "others": 1.5,
-    "total_voters": 32617
+    "total_voters": 32617,
+    "age_18_29": 32.0,
+    "age_30_39": 25.0,
+    "age_40_49": 19.5,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.5
   },
   "JHR_N38": {
     "malay": 97.3,
@@ -2901,7 +4711,12 @@
     "indian": 0.8,
     "orang_asli": 0.9,
     "others": 0.7,
-    "total_voters": 30101
+    "total_voters": 30101,
+    "age_18_29": 33.6,
+    "age_30_39": 25.8,
+    "age_40_49": 18.8,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.6
   },
   "JHR_N39": {
     "malay": 80.2,
@@ -2909,7 +4724,12 @@
     "indian": 0.7,
     "orang_asli": 0.1,
     "others": 1.8,
-    "total_voters": 25215
+    "total_voters": 25215,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 20.0,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.4
   },
   "JHR_N40": {
     "malay": 55.1,
@@ -2917,7 +4737,12 @@
     "indian": 12.3,
     "orang_asli": 0.2,
     "others": 7.0,
-    "total_voters": 107523
+    "total_voters": 107523,
+    "age_18_29": 31.5,
+    "age_30_39": 24.7,
+    "age_40_49": 19.5,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.0
   },
   "JHR_N41": {
     "malay": 35.7,
@@ -2925,7 +4750,12 @@
     "indian": 10.4,
     "orang_asli": 0.0,
     "others": 2.5,
-    "total_voters": 115778
+    "total_voters": 115778,
+    "age_18_29": 31.7,
+    "age_30_39": 24.8,
+    "age_40_49": 19.5,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.8
   },
   "JHR_N42": {
     "malay": 39.1,
@@ -2933,7 +4763,12 @@
     "indian": 7.9,
     "orang_asli": 0.0,
     "others": 6.8,
-    "total_voters": 93122
+    "total_voters": 93122,
+    "age_18_29": 30.6,
+    "age_30_39": 24.4,
+    "age_40_49": 20.0,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.3
   },
   "JHR_N43": {
     "malay": 52.7,
@@ -2941,7 +4776,12 @@
     "indian": 12.1,
     "orang_asli": 0.2,
     "others": 7.7,
-    "total_voters": 105363
+    "total_voters": 105363,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.5,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "JHR_N44": {
     "malay": 62.6,
@@ -2949,7 +4789,12 @@
     "indian": 6.7,
     "orang_asli": 0.0,
     "others": 2.9,
-    "total_voters": 75978
+    "total_voters": 75978,
+    "age_18_29": 29.7,
+    "age_30_39": 23.9,
+    "age_40_49": 20.3,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.0
   },
   "JHR_N45": {
     "malay": 38.0,
@@ -2957,7 +4802,12 @@
     "indian": 4.9,
     "orang_asli": 0.0,
     "others": 3.7,
-    "total_voters": 60390
+    "total_voters": 60390,
+    "age_18_29": 30.4,
+    "age_30_39": 24.2,
+    "age_40_49": 20.0,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.6
   },
   "JHR_N46": {
     "malay": 37.7,
@@ -2965,7 +4815,12 @@
     "indian": 13.1,
     "orang_asli": 0.3,
     "others": 2.7,
-    "total_voters": 102621
+    "total_voters": 102621,
+    "age_18_29": 32.7,
+    "age_30_39": 25.3,
+    "age_40_49": 19.1,
+    "age_50_59": 13.6,
+    "age_60_plus": 9.3
   },
   "JHR_N47": {
     "malay": 55.7,
@@ -2973,7 +4828,12 @@
     "indian": 10.8,
     "orang_asli": 0.0,
     "others": 2.9,
-    "total_voters": 62692
+    "total_voters": 62692,
+    "age_18_29": 31.7,
+    "age_30_39": 24.8,
+    "age_40_49": 19.5,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.8
   },
   "JHR_N48": {
     "malay": 22.0,
@@ -2981,7 +4841,12 @@
     "indian": 13.9,
     "orang_asli": 0.0,
     "others": 2.4,
-    "total_voters": 103487
+    "total_voters": 103487,
+    "age_18_29": 32.5,
+    "age_30_39": 25.2,
+    "age_40_49": 19.1,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.4
   },
   "JHR_N49": {
     "malay": 48.9,
@@ -2989,7 +4854,12 @@
     "indian": 14.2,
     "orang_asli": 0.4,
     "others": 2.0,
-    "total_voters": 118950
+    "total_voters": 118950,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.5,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "JHR_N50": {
     "malay": 52.8,
@@ -2997,7 +4867,12 @@
     "indian": 13.3,
     "orang_asli": 0.0,
     "others": 2.0,
-    "total_voters": 40348
+    "total_voters": 40348,
+    "age_18_29": 30.5,
+    "age_30_39": 24.3,
+    "age_40_49": 20.0,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.4
   },
   "JHR_N51": {
     "malay": 36.5,
@@ -3005,7 +4880,12 @@
     "indian": 8.4,
     "orang_asli": 0.0,
     "others": 1.6,
-    "total_voters": 46729
+    "total_voters": 46729,
+    "age_18_29": 32.6,
+    "age_30_39": 25.3,
+    "age_40_49": 19.1,
+    "age_50_59": 13.7,
+    "age_60_plus": 9.3
   },
   "JHR_N52": {
     "malay": 27.9,
@@ -3013,7 +4893,12 @@
     "indian": 12.8,
     "orang_asli": 0.0,
     "others": 2.7,
-    "total_voters": 64170
+    "total_voters": 64170,
+    "age_18_29": 31.1,
+    "age_30_39": 24.6,
+    "age_40_49": 19.7,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.2
   },
   "JHR_N53": {
     "malay": 80.5,
@@ -3021,7 +4906,12 @@
     "indian": 0.2,
     "orang_asli": 0.8,
     "others": 1.7,
-    "total_voters": 28243
+    "total_voters": 28243,
+    "age_18_29": 32.5,
+    "age_30_39": 25.2,
+    "age_40_49": 19.3,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.2
   },
   "JHR_N54": {
     "malay": 61.1,
@@ -3029,7 +4919,12 @@
     "indian": 1.6,
     "orang_asli": 0.6,
     "others": 2.2,
-    "total_voters": 46969
+    "total_voters": 46969,
+    "age_18_29": 30.9,
+    "age_30_39": 24.5,
+    "age_40_49": 19.8,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.3
   },
   "JHR_N55": {
     "malay": 54.9,
@@ -3037,7 +4932,12 @@
     "indian": 1.1,
     "orang_asli": 0.0,
     "others": 1.7,
-    "total_voters": 36078
+    "total_voters": 36078,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 20.0,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.8
   },
   "JHR_N56": {
     "malay": 59.5,
@@ -3045,7 +4945,12 @@
     "indian": 0.9,
     "orang_asli": 0.0,
     "others": 1.9,
-    "total_voters": 34601
+    "total_voters": 34601,
+    "age_18_29": 32.0,
+    "age_30_39": 25.0,
+    "age_40_49": 19.4,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.6
   },
   "MLK_N01": {
     "malay": 71.4,
@@ -3053,7 +4958,12 @@
     "indian": 1.5,
     "orang_asli": 0.0,
     "others": 5.9,
-    "total_voters": 14791
+    "total_voters": 14791,
+    "age_18_29": 31.7,
+    "age_30_39": 24.9,
+    "age_40_49": 19.7,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.6
   },
   "MLK_N02": {
     "malay": 92.5,
@@ -3061,7 +4971,12 @@
     "indian": 1.9,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 14019
+    "total_voters": 14019,
+    "age_18_29": 34.0,
+    "age_30_39": 26.0,
+    "age_40_49": 18.8,
+    "age_50_59": 13.0,
+    "age_60_plus": 8.2
   },
   "MLK_N03": {
     "malay": 90.5,
@@ -3069,7 +4984,12 @@
     "indian": 4.4,
     "orang_asli": 0.1,
     "others": 1.1,
-    "total_voters": 15001
+    "total_voters": 15001,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.1,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.9
   },
   "MLK_N04": {
     "malay": 76.6,
@@ -3077,7 +4997,12 @@
     "indian": 4.9,
     "orang_asli": 0.0,
     "others": 1.8,
-    "total_voters": 14262
+    "total_voters": 14262,
+    "age_18_29": 33.6,
+    "age_30_39": 25.7,
+    "age_40_49": 18.9,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.6
   },
   "MLK_N05": {
     "malay": 78.5,
@@ -3085,7 +5010,12 @@
     "indian": 6.0,
     "orang_asli": 2.7,
     "others": 0.7,
-    "total_voters": 11101
+    "total_voters": 11101,
+    "age_18_29": 31.6,
+    "age_30_39": 24.8,
+    "age_40_49": 19.7,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.7
   },
   "MLK_N06": {
     "malay": 66.6,
@@ -3093,7 +5023,12 @@
     "indian": 14.7,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 21894
+    "total_voters": 21894,
+    "age_18_29": 32.1,
+    "age_30_39": 25.0,
+    "age_40_49": 19.5,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.4
   },
   "MLK_N07": {
     "malay": 60.9,
@@ -3101,7 +5036,12 @@
     "indian": 17.1,
     "orang_asli": 0.2,
     "others": 1.0,
-    "total_voters": 16344
+    "total_voters": 16344,
+    "age_18_29": 31.0,
+    "age_30_39": 24.5,
+    "age_40_49": 20.0,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.0
   },
   "MLK_N08": {
     "malay": 45.6,
@@ -3109,7 +5049,12 @@
     "indian": 14.0,
     "orang_asli": 1.9,
     "others": 1.0,
-    "total_voters": 15880
+    "total_voters": 15880,
+    "age_18_29": 34.6,
+    "age_30_39": 26.3,
+    "age_40_49": 18.6,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.8
   },
   "MLK_N09": {
     "malay": 66.8,
@@ -3117,7 +5062,12 @@
     "indian": 8.6,
     "orang_asli": 0.1,
     "others": 1.3,
-    "total_voters": 19189
+    "total_voters": 19189,
+    "age_18_29": 31.0,
+    "age_30_39": 24.5,
+    "age_40_49": 20.0,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.0
   },
   "MLK_N10": {
     "malay": 64.1,
@@ -3125,7 +5075,12 @@
     "indian": 11.4,
     "orang_asli": 1.7,
     "others": 0.9,
-    "total_voters": 20004
+    "total_voters": 20004,
+    "age_18_29": 32.9,
+    "age_30_39": 25.4,
+    "age_40_49": 19.3,
+    "age_50_59": 13.6,
+    "age_60_plus": 8.8
   },
   "MLK_N11": {
     "malay": 77.4,
@@ -3133,7 +5088,12 @@
     "indian": 2.8,
     "orang_asli": 0.2,
     "others": 10.7,
-    "total_voters": 28257
+    "total_voters": 28257,
+    "age_18_29": 32.7,
+    "age_30_39": 25.4,
+    "age_40_49": 19.3,
+    "age_50_59": 13.6,
+    "age_60_plus": 9.0
   },
   "MLK_N12": {
     "malay": 78.7,
@@ -3141,7 +5101,12 @@
     "indian": 0.8,
     "orang_asli": 0.0,
     "others": 4.1,
-    "total_voters": 20174
+    "total_voters": 20174,
+    "age_18_29": 33.3,
+    "age_30_39": 25.6,
+    "age_40_49": 19.0,
+    "age_50_59": 13.4,
+    "age_60_plus": 8.7
   },
   "MLK_N13": {
     "malay": 61.0,
@@ -3149,7 +5114,12 @@
     "indian": 6.4,
     "orang_asli": 0.0,
     "others": 2.5,
-    "total_voters": 41144
+    "total_voters": 41144,
+    "age_18_29": 32.2,
+    "age_30_39": 25.1,
+    "age_40_49": 19.6,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.2
   },
   "MLK_N14": {
     "malay": 66.9,
@@ -3157,7 +5127,12 @@
     "indian": 2.3,
     "orang_asli": 0.0,
     "others": 2.1,
-    "total_voters": 26423
+    "total_voters": 26423,
+    "age_18_29": 32.1,
+    "age_30_39": 25.0,
+    "age_40_49": 19.5,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.4
   },
   "MLK_N15": {
     "malay": 64.1,
@@ -3165,7 +5140,12 @@
     "indian": 5.8,
     "orang_asli": 0.0,
     "others": 1.7,
-    "total_voters": 25559
+    "total_voters": 25559,
+    "age_18_29": 33.0,
+    "age_30_39": 25.5,
+    "age_40_49": 19.2,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.8
   },
   "MLK_N16": {
     "malay": 42.4,
@@ -3173,7 +5153,12 @@
     "indian": 8.3,
     "orang_asli": 0.0,
     "others": 1.6,
-    "total_voters": 36058
+    "total_voters": 36058,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 18.7,
+    "age_50_59": 12.9,
+    "age_60_plus": 8.0
   },
   "MLK_N17": {
     "malay": 63.5,
@@ -3181,7 +5166,12 @@
     "indian": 4.8,
     "orang_asli": 0.0,
     "others": 1.7,
-    "total_voters": 33563
+    "total_voters": 33563,
+    "age_18_29": 33.1,
+    "age_30_39": 25.5,
+    "age_40_49": 19.1,
+    "age_50_59": 13.5,
+    "age_60_plus": 8.8
   },
   "MLK_N18": {
     "malay": 87.4,
@@ -3189,7 +5179,12 @@
     "indian": 4.4,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 23313
+    "total_voters": 23313,
+    "age_18_29": 33.8,
+    "age_30_39": 25.9,
+    "age_40_49": 18.8,
+    "age_50_59": 13.1,
+    "age_60_plus": 8.4
   },
   "MLK_N19": {
     "malay": 36.9,
@@ -3197,7 +5192,12 @@
     "indian": 5.1,
     "orang_asli": 0.0,
     "others": 1.7,
-    "total_voters": 52151
+    "total_voters": 52151,
+    "age_18_29": 33.6,
+    "age_30_39": 25.7,
+    "age_40_49": 18.9,
+    "age_50_59": 13.2,
+    "age_60_plus": 8.6
   },
   "MLK_N20": {
     "malay": 18.8,
@@ -3205,7 +5205,12 @@
     "indian": 3.5,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 34949
+    "total_voters": 34949,
+    "age_18_29": 31.4,
+    "age_30_39": 24.7,
+    "age_40_49": 19.8,
+    "age_50_59": 14.3,
+    "age_60_plus": 9.8
   },
   "MLK_N21": {
     "malay": 61.8,
@@ -3213,7 +5218,12 @@
     "indian": 4.9,
     "orang_asli": 0.0,
     "others": 1.3,
-    "total_voters": 24506
+    "total_voters": 24506,
+    "age_18_29": 34.3,
+    "age_30_39": 26.1,
+    "age_40_49": 18.7,
+    "age_50_59": 12.9,
+    "age_60_plus": 8.0
   },
   "MLK_N22": {
     "malay": 12.9,
@@ -3221,7 +5231,12 @@
     "indian": 6.4,
     "orang_asli": 0.0,
     "others": 7.4,
-    "total_voters": 24421
+    "total_voters": 24421,
+    "age_18_29": 31.1,
+    "age_30_39": 24.6,
+    "age_40_49": 19.9,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.0
   },
   "MLK_N23": {
     "malay": 71.7,
@@ -3229,7 +5244,12 @@
     "indian": 2.2,
     "orang_asli": 0.0,
     "others": 1.7,
-    "total_voters": 28113
+    "total_voters": 28113,
+    "age_18_29": 31.9,
+    "age_30_39": 25.0,
+    "age_40_49": 19.6,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.5
   },
   "MLK_N24": {
     "malay": 60.5,
@@ -3237,7 +5257,12 @@
     "indian": 17.3,
     "orang_asli": 0.1,
     "others": 0.9,
-    "total_voters": 24689
+    "total_voters": 24689,
+    "age_18_29": 32.6,
+    "age_30_39": 25.3,
+    "age_40_49": 19.3,
+    "age_50_59": 13.7,
+    "age_60_plus": 9.1
   },
   "MLK_N25": {
     "malay": 66.2,
@@ -3245,7 +5270,12 @@
     "indian": 13.4,
     "orang_asli": 0.6,
     "others": 0.9,
-    "total_voters": 17256
+    "total_voters": 17256,
+    "age_18_29": 31.7,
+    "age_30_39": 24.9,
+    "age_40_49": 19.7,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.6
   },
   "MLK_N26": {
     "malay": 90.1,
@@ -3253,7 +5283,12 @@
     "indian": 3.0,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 20440
+    "total_voters": 20440,
+    "age_18_29": 32.7,
+    "age_30_39": 25.3,
+    "age_40_49": 19.2,
+    "age_50_59": 13.7,
+    "age_60_plus": 9.1
   },
   "MLK_N27": {
     "malay": 70.0,
@@ -3261,7 +5296,12 @@
     "indian": 11.8,
     "orang_asli": 0.0,
     "others": 0.9,
-    "total_voters": 18469
+    "total_voters": 18469,
+    "age_18_29": 31.5,
+    "age_30_39": 24.8,
+    "age_40_49": 19.8,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.7
   },
   "MLK_N28": {
     "malay": 84.2,
@@ -3269,7 +5309,12 @@
     "indian": 2.0,
     "orang_asli": 0.0,
     "others": 0.6,
-    "total_voters": 15354
+    "total_voters": 15354,
+    "age_18_29": 31.1,
+    "age_30_39": 24.6,
+    "age_40_49": 20.0,
+    "age_50_59": 14.4,
+    "age_60_plus": 9.9
   },
   "NSN_N01": {
     "malay": 46.3,
@@ -3277,7 +5322,12 @@
     "indian": 2.1,
     "orang_asli": 5.9,
     "others": 1.3,
-    "total_voters": 14561
+    "total_voters": 14561,
+    "age_18_29": 31.7,
+    "age_30_39": 24.8,
+    "age_40_49": 19.5,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.8
   },
   "NSN_N02": {
     "malay": 65.5,
@@ -3285,7 +5335,12 @@
     "indian": 6.6,
     "orang_asli": 7.1,
     "others": 0.6,
-    "total_voters": 12854
+    "total_voters": 12854,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 19.9,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.5
   },
   "NSN_N03": {
     "malay": 79.1,
@@ -3293,7 +5348,12 @@
     "indian": 8.3,
     "orang_asli": 5.9,
     "others": 0.6,
-    "total_voters": 19115
+    "total_voters": 19115,
+    "age_18_29": 32.0,
+    "age_30_39": 25.0,
+    "age_40_49": 19.3,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.7
   },
   "NSN_N04": {
     "malay": 65.2,
@@ -3301,7 +5361,12 @@
     "indian": 3.9,
     "orang_asli": 1.8,
     "others": 0.8,
-    "total_voters": 13031
+    "total_voters": 13031,
+    "age_18_29": 31.3,
+    "age_30_39": 24.6,
+    "age_40_49": 19.7,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.0
   },
   "NSN_N05": {
     "malay": 77.6,
@@ -3309,7 +5374,12 @@
     "indian": 8.7,
     "orang_asli": 0.2,
     "others": 0.9,
-    "total_voters": 30248
+    "total_voters": 30248,
+    "age_18_29": 29.9,
+    "age_30_39": 24.0,
+    "age_40_49": 20.0,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "NSN_N06": {
     "malay": 92.1,
@@ -3317,7 +5387,12 @@
     "indian": 5.8,
     "orang_asli": 0.1,
     "others": 0.3,
-    "total_voters": 23546
+    "total_voters": 23546,
+    "age_18_29": 32.1,
+    "age_30_39": 25.0,
+    "age_40_49": 19.3,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.6
   },
   "NSN_N07": {
     "malay": 51.1,
@@ -3325,7 +5400,12 @@
     "indian": 33.7,
     "orang_asli": 4.6,
     "others": 0.7,
-    "total_voters": 16284
+    "total_voters": 16284,
+    "age_18_29": 30.9,
+    "age_30_39": 24.5,
+    "age_40_49": 19.8,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.3
   },
   "NSN_N08": {
     "malay": 29.4,
@@ -3333,7 +5413,12 @@
     "indian": 10.5,
     "orang_asli": 0.0,
     "others": 0.8,
-    "total_voters": 25735
+    "total_voters": 25735,
+    "age_18_29": 30.5,
+    "age_30_39": 24.2,
+    "age_40_49": 19.9,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.6
   },
   "NSN_N09": {
     "malay": 75.4,
@@ -3341,7 +5426,12 @@
     "indian": 5.4,
     "orang_asli": 2.5,
     "others": 1.5,
-    "total_voters": 26993
+    "total_voters": 26993,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 19.9,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.5
   },
   "NSN_N10": {
     "malay": 42.5,
@@ -3349,7 +5439,12 @@
     "indian": 21.9,
     "orang_asli": 0.7,
     "others": 2.3,
-    "total_voters": 41123
+    "total_voters": 41123,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.3,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.1
   },
   "NSN_N11": {
     "malay": 4.2,
@@ -3357,7 +5452,12 @@
     "indian": 21.4,
     "orang_asli": 1.0,
     "others": 1.0,
-    "total_voters": 23264
+    "total_voters": 23264,
+    "age_18_29": 32.3,
+    "age_30_39": 25.1,
+    "age_40_49": 19.2,
+    "age_50_59": 13.9,
+    "age_60_plus": 9.5
   },
   "NSN_N12": {
     "malay": 37.6,
@@ -3365,7 +5465,12 @@
     "indian": 14.8,
     "orang_asli": 0.3,
     "others": 2.5,
-    "total_voters": 13121
+    "total_voters": 13121,
+    "age_18_29": 31.1,
+    "age_30_39": 24.5,
+    "age_40_49": 19.6,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.3
   },
   "NSN_N13": {
     "malay": 70.3,
@@ -3373,7 +5478,12 @@
     "indian": 8.0,
     "orang_asli": 0.1,
     "others": 1.8,
-    "total_voters": 31821
+    "total_voters": 31821,
+    "age_18_29": 32.1,
+    "age_30_39": 25.0,
+    "age_40_49": 19.3,
+    "age_50_59": 14.0,
+    "age_60_plus": 9.6
   },
   "NSN_N14": {
     "malay": 72.1,
@@ -3381,7 +5491,12 @@
     "indian": 8.5,
     "orang_asli": 0.0,
     "others": 3.3,
-    "total_voters": 20922
+    "total_voters": 20922,
+    "age_18_29": 32.4,
+    "age_30_39": 25.2,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.4
   },
   "NSN_N15": {
     "malay": 79.4,
@@ -3389,7 +5504,12 @@
     "indian": 5.4,
     "orang_asli": 2.1,
     "others": 1.0,
-    "total_voters": 13299
+    "total_voters": 13299,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.2,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.0
   },
   "NSN_N16": {
     "malay": 91.6,
@@ -3397,7 +5517,12 @@
     "indian": 0.3,
     "orang_asli": 4.8,
     "others": 0.7,
-    "total_voters": 10052
+    "total_voters": 10052,
+    "age_18_29": 31.9,
+    "age_30_39": 24.9,
+    "age_40_49": 19.4,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "NSN_N17": {
     "malay": 79.9,
@@ -3405,7 +5530,12 @@
     "indian": 3.6,
     "orang_asli": 0.1,
     "others": 0.7,
-    "total_voters": 9896
+    "total_voters": 9896,
+    "age_18_29": 29.4,
+    "age_30_39": 23.8,
+    "age_40_49": 20.4,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.1
   },
   "NSN_N18": {
     "malay": 65.2,
@@ -3413,7 +5543,12 @@
     "indian": 8.8,
     "orang_asli": 0.0,
     "others": 1.0,
-    "total_voters": 17679
+    "total_voters": 17679,
+    "age_18_29": 30.5,
+    "age_30_39": 24.2,
+    "age_40_49": 19.8,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.7
   },
   "NSN_N19": {
     "malay": 72.7,
@@ -3421,7 +5556,12 @@
     "indian": 5.2,
     "orang_asli": 5.1,
     "others": 0.5,
-    "total_voters": 12321
+    "total_voters": 12321,
+    "age_18_29": 33.0,
+    "age_30_39": 25.4,
+    "age_40_49": 19.0,
+    "age_50_59": 13.5,
+    "age_60_plus": 9.1
   },
   "NSN_N20": {
     "malay": 74.3,
@@ -3429,7 +5569,12 @@
     "indian": 14.1,
     "orang_asli": 1.7,
     "others": 1.8,
-    "total_voters": 29651
+    "total_voters": 29651,
+    "age_18_29": 30.7,
+    "age_30_39": 24.4,
+    "age_40_49": 19.9,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.4
   },
   "NSN_N21": {
     "malay": 26.2,
@@ -3437,7 +5582,12 @@
     "indian": 22.3,
     "orang_asli": 0.2,
     "others": 1.8,
-    "total_voters": 45177
+    "total_voters": 45177,
+    "age_18_29": 30.5,
+    "age_30_39": 24.2,
+    "age_40_49": 19.8,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.7
   },
   "NSN_N22": {
     "malay": 29.3,
@@ -3445,7 +5595,12 @@
     "indian": 22.5,
     "orang_asli": 0.1,
     "others": 3.2,
-    "total_voters": 20359
+    "total_voters": 20359,
+    "age_18_29": 30.9,
+    "age_30_39": 24.5,
+    "age_40_49": 19.8,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.3
   },
   "NSN_N23": {
     "malay": 13.6,
@@ -3453,7 +5608,12 @@
     "indian": 25.5,
     "orang_asli": 0.0,
     "others": 2.0,
-    "total_voters": 28804
+    "total_voters": 28804,
+    "age_18_29": 32.3,
+    "age_30_39": 25.1,
+    "age_40_49": 19.2,
+    "age_50_59": 13.8,
+    "age_60_plus": 9.6
   },
   "NSN_N24": {
     "malay": 24.0,
@@ -3461,7 +5621,12 @@
     "indian": 27.0,
     "orang_asli": 0.0,
     "others": 1.6,
-    "total_voters": 31905
+    "total_voters": 31905,
+    "age_18_29": 31.0,
+    "age_30_39": 24.5,
+    "age_40_49": 19.6,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.4
   },
   "NSN_N25": {
     "malay": 77.4,
@@ -3469,7 +5634,12 @@
     "indian": 15.0,
     "orang_asli": 0.0,
     "others": 1.2,
-    "total_voters": 59554
+    "total_voters": 59554,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.1,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.1
   },
   "NSN_N26": {
     "malay": 81.1,
@@ -3477,7 +5647,12 @@
     "indian": 10.1,
     "orang_asli": 1.4,
     "others": 1.0,
-    "total_voters": 25376
+    "total_voters": 25376,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 19.9,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.9
   },
   "NSN_N27": {
     "malay": 54.8,
@@ -3485,7 +5660,12 @@
     "indian": 27.7,
     "orang_asli": 0.0,
     "others": 1.6,
-    "total_voters": 32139
+    "total_voters": 32139,
+    "age_18_29": 31.8,
+    "age_30_39": 24.8,
+    "age_40_49": 19.4,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.9
   },
   "NSN_N28": {
     "malay": 86.1,
@@ -3493,7 +5673,12 @@
     "indian": 5.1,
     "orang_asli": 1.1,
     "others": 0.9,
-    "total_voters": 16486
+    "total_voters": 16486,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.6,
+    "age_50_59": 15.7,
+    "age_60_plus": 11.8
   },
   "NSN_N29": {
     "malay": 23.4,
@@ -3501,7 +5686,12 @@
     "indian": 21.5,
     "orang_asli": 0.0,
     "others": 0.7,
-    "total_voters": 15039
+    "total_voters": 15039,
+    "age_18_29": 31.6,
+    "age_30_39": 24.8,
+    "age_40_49": 19.5,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.9
   },
   "NSN_N30": {
     "malay": 22.7,
@@ -3509,7 +5699,12 @@
     "indian": 26.2,
     "orang_asli": 0.0,
     "others": 1.6,
-    "total_voters": 26466
+    "total_voters": 26466,
+    "age_18_29": 31.7,
+    "age_30_39": 24.8,
+    "age_40_49": 19.4,
+    "age_50_59": 14.2,
+    "age_60_plus": 9.9
   },
   "NSN_N31": {
     "malay": 74.0,
@@ -3517,7 +5712,12 @@
     "indian": 11.7,
     "orang_asli": 0.1,
     "others": 6.1,
-    "total_voters": 23184
+    "total_voters": 23184,
+    "age_18_29": 29.9,
+    "age_30_39": 24.0,
+    "age_40_49": 20.0,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "NSN_N32": {
     "malay": 60.4,
@@ -3525,7 +5725,12 @@
     "indian": 17.9,
     "orang_asli": 1.4,
     "others": 2.8,
-    "total_voters": 20387
+    "total_voters": 20387,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.3,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.3
   },
   "NSN_N33": {
     "malay": 37.1,
@@ -3533,7 +5738,12 @@
     "indian": 28.4,
     "orang_asli": 0.0,
     "others": 2.9,
-    "total_voters": 19374
+    "total_voters": 19374,
+    "age_18_29": 31.0,
+    "age_30_39": 24.5,
+    "age_40_49": 19.6,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.4
   },
   "NSN_N34": {
     "malay": 83.3,
@@ -3541,7 +5751,12 @@
     "indian": 4.9,
     "orang_asli": 0.1,
     "others": 3.9,
-    "total_voters": 29346
+    "total_voters": 29346,
+    "age_18_29": 31.8,
+    "age_30_39": 24.9,
+    "age_40_49": 19.5,
+    "age_50_59": 14.1,
+    "age_60_plus": 9.7
   },
   "NSN_N35": {
     "malay": 61.8,
@@ -3549,7 +5764,12 @@
     "indian": 15.2,
     "orang_asli": 0.1,
     "others": 0.6,
-    "total_voters": 24587
+    "total_voters": 24587,
+    "age_18_29": 29.9,
+    "age_30_39": 24.0,
+    "age_40_49": 20.1,
+    "age_50_59": 15.1,
+    "age_60_plus": 10.9
   },
   "NSN_N36": {
     "malay": 39.6,
@@ -3557,7 +5777,12 @@
     "indian": 17.5,
     "orang_asli": 0.4,
     "others": 1.0,
-    "total_voters": 27166
+    "total_voters": 27166,
+    "age_18_29": 30.7,
+    "age_30_39": 24.3,
+    "age_40_49": 19.8,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.5
   },
   "SBH_N01": {
     "malay": 0.9,
@@ -3565,7 +5790,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 98.9,
-    "total_voters": 9127
+    "total_voters": 9127,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.4,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.9
   },
   "SBH_N02": {
     "malay": 1.4,
@@ -3573,7 +5803,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 97.9,
-    "total_voters": 17355
+    "total_voters": 17355,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.4
   },
   "SBH_N03": {
     "malay": 4.7,
@@ -3581,7 +5816,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 94.3,
-    "total_voters": 16374
+    "total_voters": 16374,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.5
   },
   "SBH_N04": {
     "malay": 5.0,
@@ -3589,7 +5829,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 79.7,
-    "total_voters": 32868
+    "total_voters": 32868,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.7,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.5
   },
   "SBH_N05": {
     "malay": 1.0,
@@ -3597,7 +5842,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 97.7,
-    "total_voters": 27546
+    "total_voters": 27546,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.2,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.6
   },
   "SBH_N06": {
     "malay": 4.5,
@@ -3605,7 +5855,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 91.9,
-    "total_voters": 25265
+    "total_voters": 25265,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.4,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.8
   },
   "SBH_N07": {
     "malay": 1.6,
@@ -3613,7 +5868,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 97.0,
-    "total_voters": 27924
+    "total_voters": 27924,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.9,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.0
   },
   "SBH_N08": {
     "malay": 2.9,
@@ -3621,7 +5881,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 96.8,
-    "total_voters": 15103
+    "total_voters": 15103,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.3,
+    "age_50_59": 15.6,
+    "age_60_plus": 12.0
   },
   "SBH_N09": {
     "malay": 3.5,
@@ -3629,7 +5894,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 96.0,
-    "total_voters": 16393
+    "total_voters": 16393,
+    "age_18_29": 30.0,
+    "age_30_39": 24.0,
+    "age_40_49": 19.9,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "SBH_N10": {
     "malay": 3.9,
@@ -3637,7 +5907,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 92.9,
-    "total_voters": 23145
+    "total_voters": 23145,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.3,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.2
   },
   "SBH_N11": {
     "malay": 0.6,
@@ -3645,7 +5920,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 98.8,
-    "total_voters": 25244
+    "total_voters": 25244,
+    "age_18_29": 30.3,
+    "age_30_39": 24.1,
+    "age_40_49": 19.7,
+    "age_50_59": 14.9,
+    "age_60_plus": 11.0
   },
   "SBH_N12": {
     "malay": 7.6,
@@ -3653,7 +5933,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 90.0,
-    "total_voters": 16944
+    "total_voters": 16944,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.5
   },
   "SBH_N13": {
     "malay": 7.8,
@@ -3661,7 +5946,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 85.4,
-    "total_voters": 24278
+    "total_voters": 24278,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "SBH_N14": {
     "malay": 2.0,
@@ -3669,7 +5959,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 92.4,
-    "total_voters": 25726
+    "total_voters": 25726,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.1,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.5
   },
   "SBH_N15": {
     "malay": 0.6,
@@ -3677,7 +5972,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 98.9,
-    "total_voters": 16471
+    "total_voters": 16471,
+    "age_18_29": 29.9,
+    "age_30_39": 23.9,
+    "age_40_49": 19.9,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "SBH_N16": {
     "malay": 19.1,
@@ -3685,7 +5985,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 73.0,
-    "total_voters": 34670
+    "total_voters": 34670,
+    "age_18_29": 30.3,
+    "age_30_39": 24.1,
+    "age_40_49": 19.8,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.9
   },
   "SBH_N17": {
     "malay": 15.3,
@@ -3693,7 +5998,12 @@
     "indian": 0.7,
     "orang_asli": 0.0,
     "others": 71.6,
-    "total_voters": 30711
+    "total_voters": 30711,
+    "age_18_29": 30.5,
+    "age_30_39": 24.2,
+    "age_40_49": 19.7,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.8
   },
   "SBH_N18": {
     "malay": 6.8,
@@ -3701,7 +6011,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 65.3,
-    "total_voters": 42989
+    "total_voters": 42989,
+    "age_18_29": 28.3,
+    "age_30_39": 23.2,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "SBH_N19": {
     "malay": 3.7,
@@ -3709,7 +6024,12 @@
     "indian": 1.1,
     "orang_asli": 0.0,
     "others": 29.1,
-    "total_voters": 19567
+    "total_voters": 19567,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.2,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.8
   },
   "SBH_N20": {
     "malay": 7.0,
@@ -3717,7 +6037,12 @@
     "indian": 0.8,
     "orang_asli": 0.0,
     "others": 48.6,
-    "total_voters": 19301
+    "total_voters": 19301,
+    "age_18_29": 27.6,
+    "age_30_39": 22.9,
+    "age_40_49": 20.8,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.5
   },
   "SBH_N21": {
     "malay": 3.1,
@@ -3725,7 +6050,12 @@
     "indian": 1.0,
     "orang_asli": 0.0,
     "others": 30.2,
-    "total_voters": 35191
+    "total_voters": 35191,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "SBH_N22": {
     "malay": 9.1,
@@ -3733,7 +6063,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 69.3,
-    "total_voters": 20738
+    "total_voters": 20738,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 21.0,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.0
   },
   "SBH_N23": {
     "malay": 17.6,
@@ -3741,7 +6076,12 @@
     "indian": 0.7,
     "orang_asli": 0.0,
     "others": 75.5,
-    "total_voters": 19191
+    "total_voters": 19191,
+    "age_18_29": 30.6,
+    "age_30_39": 24.2,
+    "age_40_49": 19.6,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.9
   },
   "SBH_N24": {
     "malay": 28.7,
@@ -3749,7 +6089,12 @@
     "indian": 1.0,
     "orang_asli": 0.0,
     "others": 62.8,
-    "total_voters": 23244
+    "total_voters": 23244,
+    "age_18_29": 30.3,
+    "age_30_39": 24.1,
+    "age_40_49": 19.7,
+    "age_50_59": 14.8,
+    "age_60_plus": 11.1
   },
   "SBH_N25": {
     "malay": 6.7,
@@ -3757,7 +6102,12 @@
     "indian": 0.9,
     "orang_asli": 0.0,
     "others": 53.4,
-    "total_voters": 47605
+    "total_voters": 47605,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "SBH_N26": {
     "malay": 1.6,
@@ -3765,7 +6115,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 91.9,
-    "total_voters": 29609
+    "total_voters": 29609,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.2,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.6
   },
   "SBH_N27": {
     "malay": 3.8,
@@ -3773,7 +6128,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 87.6,
-    "total_voters": 19123
+    "total_voters": 19123,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.8,
+    "age_50_59": 14.9,
+    "age_60_plus": 11.2
   },
   "SBH_N28": {
     "malay": 11.8,
@@ -3781,7 +6141,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 84.9,
-    "total_voters": 21651
+    "total_voters": 21651,
+    "age_18_29": 27.2,
+    "age_30_39": 22.6,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.9
   },
   "SBH_N29": {
     "malay": 10.4,
@@ -3789,7 +6154,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 81.9,
-    "total_voters": 19168
+    "total_voters": 19168,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.7,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.1
   },
   "SBH_N30": {
     "malay": 10.2,
@@ -3797,7 +6167,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 86.6,
-    "total_voters": 22919
+    "total_voters": 22919,
+    "age_18_29": 30.8,
+    "age_30_39": 24.4,
+    "age_40_49": 19.6,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.6
   },
   "SBH_N31": {
     "malay": 7.1,
@@ -3805,7 +6180,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 90.2,
-    "total_voters": 17844
+    "total_voters": 17844,
+    "age_18_29": 30.9,
+    "age_30_39": 24.4,
+    "age_40_49": 19.5,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.6
   },
   "SBH_N32": {
     "malay": 10.1,
@@ -3813,7 +6193,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 80.9,
-    "total_voters": 21840
+    "total_voters": 21840,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 19.7,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.7
   },
   "SBH_N33": {
     "malay": 3.9,
@@ -3821,7 +6206,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 94.1,
-    "total_voters": 21408
+    "total_voters": 21408,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.4
   },
   "SBH_N34": {
     "malay": 6.6,
@@ -3829,7 +6219,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 90.0,
-    "total_voters": 21296
+    "total_voters": 21296,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.4,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.4
   },
   "SBH_N35": {
     "malay": 8.7,
@@ -3837,7 +6232,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 87.9,
-    "total_voters": 24575
+    "total_voters": 24575,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.1,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.5
   },
   "SBH_N36": {
     "malay": 1.4,
@@ -3845,7 +6245,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 98.2,
-    "total_voters": 23254
+    "total_voters": 23254,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.1,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.5
   },
   "SBH_N37": {
     "malay": 2.9,
@@ -3853,7 +6258,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 93.8,
-    "total_voters": 18267
+    "total_voters": 18267,
+    "age_18_29": 30.9,
+    "age_30_39": 24.4,
+    "age_40_49": 19.6,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.5
   },
   "SBH_N38": {
     "malay": 2.0,
@@ -3861,7 +6271,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 97.2,
-    "total_voters": 24996
+    "total_voters": 24996,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.8,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.8
   },
   "SBH_N39": {
     "malay": 0.6,
@@ -3869,7 +6284,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 98.6,
-    "total_voters": 27768
+    "total_voters": 27768,
+    "age_18_29": 29.5,
+    "age_30_39": 23.7,
+    "age_40_49": 19.9,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "SBH_N40": {
     "malay": 3.6,
@@ -3877,7 +6297,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 89.8,
-    "total_voters": 29387
+    "total_voters": 29387,
+    "age_18_29": 30.4,
+    "age_30_39": 24.2,
+    "age_40_49": 19.7,
+    "age_50_59": 14.8,
+    "age_60_plus": 10.9
   },
   "SBH_N41": {
     "malay": 10.9,
@@ -3885,7 +6310,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 76.0,
-    "total_voters": 30433
+    "total_voters": 30433,
+    "age_18_29": 26.8,
+    "age_30_39": 22.4,
+    "age_40_49": 21.0,
+    "age_50_59": 16.6,
+    "age_60_plus": 13.2
   },
   "SBH_N42": {
     "malay": 6.5,
@@ -3893,7 +6323,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 80.8,
-    "total_voters": 20246
+    "total_voters": 20246,
+    "age_18_29": 30.8,
+    "age_30_39": 24.3,
+    "age_40_49": 19.6,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.7
   },
   "SBH_N43": {
     "malay": 5.0,
@@ -3901,7 +6336,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 90.7,
-    "total_voters": 21799
+    "total_voters": 21799,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.5,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.3
   },
   "SBH_N44": {
     "malay": 0.9,
@@ -3909,7 +6349,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 98.6,
-    "total_voters": 15636
+    "total_voters": 15636,
+    "age_18_29": 29.9,
+    "age_30_39": 23.9,
+    "age_40_49": 19.8,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.3
   },
   "SBH_N45": {
     "malay": 2.1,
@@ -3917,7 +6362,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 95.9,
-    "total_voters": 18252
+    "total_voters": 18252,
+    "age_18_29": 28.5,
+    "age_30_39": 23.2,
+    "age_40_49": 20.4,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "SBH_N46": {
     "malay": 0.7,
@@ -3925,7 +6375,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 98.9,
-    "total_voters": 21784
+    "total_voters": 21784,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.5
   },
   "SBH_N47": {
     "malay": 5.1,
@@ -3933,7 +6388,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 93.7,
-    "total_voters": 13666
+    "total_voters": 13666,
+    "age_18_29": 28.1,
+    "age_30_39": 23.1,
+    "age_40_49": 20.5,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.4
   },
   "SBH_N48": {
     "malay": 3.9,
@@ -3941,7 +6401,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 95.6,
-    "total_voters": 17389
+    "total_voters": 17389,
+    "age_18_29": 29.9,
+    "age_30_39": 23.9,
+    "age_40_49": 19.9,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.3
   },
   "SBH_N49": {
     "malay": 7.4,
@@ -3949,7 +6414,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 91.4,
-    "total_voters": 13672
+    "total_voters": 13672,
+    "age_18_29": 29.1,
+    "age_30_39": 23.6,
+    "age_40_49": 20.3,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.6
   },
   "SBH_N50": {
     "malay": 28.4,
@@ -3957,7 +6427,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 54.8,
-    "total_voters": 18685
+    "total_voters": 18685,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.7,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "SBH_N51": {
     "malay": 25.2,
@@ -3965,7 +6440,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 59.9,
-    "total_voters": 17451
+    "total_voters": 17451,
+    "age_18_29": 27.2,
+    "age_30_39": 22.6,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.9
   },
   "SBH_N52": {
     "malay": 29.7,
@@ -3973,7 +6453,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 55.9,
-    "total_voters": 36196
+    "total_voters": 36196,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.4,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "SBH_N53": {
     "malay": 11.9,
@@ -3981,7 +6466,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 66.6,
-    "total_voters": 25216
+    "total_voters": 25216,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.8,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.5
   },
   "SBH_N54": {
     "malay": 16.5,
@@ -3989,7 +6479,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 47.8,
-    "total_voters": 18700
+    "total_voters": 18700,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.4,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "SBH_N55": {
     "malay": 14.6,
@@ -3997,7 +6492,12 @@
     "indian": 0.7,
     "orang_asli": 0.0,
     "others": 42.3,
-    "total_voters": 38302
+    "total_voters": 38302,
+    "age_18_29": 30.7,
+    "age_30_39": 24.3,
+    "age_40_49": 19.6,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.8
   },
   "SBH_N56": {
     "malay": 14.1,
@@ -4005,7 +6505,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 44.3,
-    "total_voters": 17240
+    "total_voters": 17240,
+    "age_18_29": 28.9,
+    "age_30_39": 23.4,
+    "age_40_49": 20.2,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.9
   },
   "SBH_N57": {
     "malay": 0.7,
@@ -4013,7 +6518,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 98.7,
-    "total_voters": 17089
+    "total_voters": 17089,
+    "age_18_29": 30.6,
+    "age_30_39": 24.2,
+    "age_40_49": 19.6,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.9
   },
   "SBH_N58": {
     "malay": 17.2,
@@ -4021,7 +6531,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 81.6,
-    "total_voters": 12359
+    "total_voters": 12359,
+    "age_18_29": 28.2,
+    "age_30_39": 23.1,
+    "age_40_49": 20.5,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.3
   },
   "SBH_N59": {
     "malay": 27.0,
@@ -4029,7 +6544,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 72.1,
-    "total_voters": 15325
+    "total_voters": 15325,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 21.0,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.0
   },
   "SBH_N60": {
     "malay": 16.9,
@@ -4037,7 +6557,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 81.8,
-    "total_voters": 22944
+    "total_voters": 22944,
+    "age_18_29": 29.1,
+    "age_30_39": 23.6,
+    "age_40_49": 20.2,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "SBH_N61": {
     "malay": 26.7,
@@ -4045,7 +6570,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 57.3,
-    "total_voters": 27967
+    "total_voters": 27967,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.0,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.4
   },
   "SBH_N62": {
     "malay": 24.3,
@@ -4053,7 +6583,12 @@
     "indian": 0.7,
     "orang_asli": 0.0,
     "others": 60.1,
-    "total_voters": 26154
+    "total_voters": 26154,
+    "age_18_29": 27.2,
+    "age_30_39": 22.6,
+    "age_40_49": 21.0,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.8
   },
   "SBH_N63": {
     "malay": 38.0,
@@ -4061,7 +6596,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 59.2,
-    "total_voters": 23191
+    "total_voters": 23191,
+    "age_18_29": 28.3,
+    "age_30_39": 23.2,
+    "age_40_49": 20.6,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.0
   },
   "SBH_N64": {
     "malay": 1.3,
@@ -4069,7 +6609,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 98.6,
-    "total_voters": 19419
+    "total_voters": 19419,
+    "age_18_29": 28.5,
+    "age_30_39": 23.2,
+    "age_40_49": 20.3,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.2
   },
   "SBH_N65": {
     "malay": 11.3,
@@ -4077,7 +6622,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 84.9,
-    "total_voters": 19989
+    "total_voters": 19989,
+    "age_18_29": 29.1,
+    "age_30_39": 23.5,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.9
   },
   "SBH_N66": {
     "malay": 6.2,
@@ -4085,7 +6635,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 92.5,
-    "total_voters": 32761
+    "total_voters": 32761,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.8,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.9
   },
   "SBH_N67": {
     "malay": 43.7,
@@ -4093,7 +6648,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 49.8,
-    "total_voters": 20744
+    "total_voters": 20744,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.4,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.9
   },
   "SBH_N68": {
     "malay": 42.1,
@@ -4101,7 +6661,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 46.2,
-    "total_voters": 29728
+    "total_voters": 29728,
+    "age_18_29": 29.8,
+    "age_30_39": 23.8,
+    "age_40_49": 19.9,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.4
   },
   "SBH_N69": {
     "malay": 22.2,
@@ -4109,7 +6674,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 20.6,
-    "total_voters": 37005
+    "total_voters": 37005,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.0,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "SBH_N70": {
     "malay": 48.3,
@@ -4117,7 +6687,12 @@
     "indian": 0.7,
     "orang_asli": 0.0,
     "others": 35.2,
-    "total_voters": 18507
+    "total_voters": 18507,
+    "age_18_29": 26.9,
+    "age_30_39": 22.5,
+    "age_40_49": 21.0,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.1
   },
   "SBH_N71": {
     "malay": 66.0,
@@ -4125,7 +6700,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 30.4,
-    "total_voters": 25446
+    "total_voters": 25446,
+    "age_18_29": 27.2,
+    "age_30_39": 22.7,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.8
   },
   "SBH_N72": {
     "malay": 48.2,
@@ -4133,7 +6713,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 38.4,
-    "total_voters": 24207
+    "total_voters": 24207,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.9,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.8
   },
   "SBH_N73": {
     "malay": 25.1,
@@ -4141,7 +6726,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 74.1,
-    "total_voters": 15810
+    "total_voters": 15810,
+    "age_18_29": 29.2,
+    "age_30_39": 23.5,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.8
   },
   "SWK_N01": {
     "malay": 3.7,
@@ -4149,7 +6739,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 89.1,
-    "total_voters": 18525
+    "total_voters": 18525,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "SWK_N02": {
     "malay": 6.4,
@@ -4157,7 +6752,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 70.2,
-    "total_voters": 28646
+    "total_voters": 28646,
+    "age_18_29": 27.3,
+    "age_30_39": 22.7,
+    "age_40_49": 20.9,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.8
   },
   "SWK_N03": {
     "malay": 52.5,
@@ -4165,7 +6765,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 29.9,
-    "total_voters": 16081
+    "total_voters": 16081,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "SWK_N04": {
     "malay": 86.2,
@@ -4173,7 +6778,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 10.9,
-    "total_voters": 37841
+    "total_voters": 37841,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.2
   },
   "SWK_N05": {
     "malay": 83.0,
@@ -4181,7 +6791,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 7.7,
-    "total_voters": 25618
+    "total_voters": 25618,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "SWK_N06": {
     "malay": 58.5,
@@ -4189,7 +6804,12 @@
     "indian": 0.8,
     "orang_asli": 0.0,
     "others": 21.8,
-    "total_voters": 51773
+    "total_voters": 51773,
+    "age_18_29": 28.9,
+    "age_30_39": 23.4,
+    "age_40_49": 20.3,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.8
   },
   "SWK_N07": {
     "malay": 86.7,
@@ -4197,7 +6817,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 11.6,
-    "total_voters": 37898
+    "total_voters": 37898,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.7,
+    "age_50_59": 15.8,
+    "age_60_plus": 11.9
   },
   "SWK_N08": {
     "malay": 67.2,
@@ -4205,7 +6830,12 @@
     "indian": 0.8,
     "orang_asli": 0.0,
     "others": 11.0,
-    "total_voters": 20138
+    "total_voters": 20138,
+    "age_18_29": 31.1,
+    "age_30_39": 24.5,
+    "age_40_49": 19.5,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.5
   },
   "SWK_N09": {
     "malay": 5.4,
@@ -4213,7 +6843,12 @@
     "indian": 0.6,
     "orang_asli": 0.0,
     "others": 4.7,
-    "total_voters": 25043
+    "total_voters": 25043,
+    "age_18_29": 29.3,
+    "age_30_39": 23.6,
+    "age_40_49": 20.2,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.5
   },
   "SWK_N10": {
     "malay": 5.4,
@@ -4221,7 +6856,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 7.3,
-    "total_voters": 38375
+    "total_voters": 38375,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.6,
+    "age_50_59": 15.8,
+    "age_60_plus": 11.8
   },
   "SWK_N11": {
     "malay": 3.5,
@@ -4229,7 +6869,12 @@
     "indian": 1.1,
     "orang_asli": 0.0,
     "others": 14.1,
-    "total_voters": 46292
+    "total_voters": 46292,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.3,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "SWK_N12": {
     "malay": 9.1,
@@ -4237,7 +6882,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 17.4,
-    "total_voters": 45712
+    "total_voters": 45712,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "SWK_N13": {
     "malay": 20.4,
@@ -4245,7 +6895,12 @@
     "indian": 0.4,
     "orang_asli": 0.0,
     "others": 26.1,
-    "total_voters": 37250
+    "total_voters": 37250,
+    "age_18_29": 28.4,
+    "age_30_39": 23.3,
+    "age_40_49": 20.6,
+    "age_50_59": 15.8,
+    "age_60_plus": 11.9
   },
   "SWK_N14": {
     "malay": 15.5,
@@ -4253,7 +6908,12 @@
     "indian": 1.1,
     "orang_asli": 0.0,
     "others": 27.8,
-    "total_voters": 38047
+    "total_voters": 38047,
+    "age_18_29": 29.2,
+    "age_30_39": 23.6,
+    "age_40_49": 20.1,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.7
   },
   "SWK_N15": {
     "malay": 79.5,
@@ -4261,7 +6921,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 11.1,
-    "total_voters": 18439
+    "total_voters": 18439,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "SWK_N16": {
     "malay": 67.5,
@@ -4269,7 +6934,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 26.7,
-    "total_voters": 31919
+    "total_voters": 31919,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "SWK_N17": {
     "malay": 30.8,
@@ -4277,7 +6947,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 46.0,
-    "total_voters": 31871
+    "total_voters": 31871,
+    "age_18_29": 30.9,
+    "age_30_39": 24.4,
+    "age_40_49": 19.5,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.7
   },
   "SWK_N18": {
     "malay": 5.2,
@@ -4285,7 +6960,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 74.5,
-    "total_voters": 15906
+    "total_voters": 15906,
+    "age_18_29": 29.3,
+    "age_30_39": 23.6,
+    "age_40_49": 20.2,
+    "age_50_59": 15.4,
+    "age_60_plus": 11.5
   },
   "SWK_N19": {
     "malay": 4.2,
@@ -4293,7 +6973,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 71.8,
-    "total_voters": 33577
+    "total_voters": 33577,
+    "age_18_29": 28.1,
+    "age_30_39": 23.1,
+    "age_40_49": 20.7,
+    "age_50_59": 15.9,
+    "age_60_plus": 12.2
   },
   "SWK_N20": {
     "malay": 5.5,
@@ -4301,7 +6986,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 66.1,
-    "total_voters": 30486
+    "total_voters": 30486,
+    "age_18_29": 31.0,
+    "age_30_39": 24.4,
+    "age_40_49": 19.6,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.5
   },
   "SWK_N21": {
     "malay": 1.4,
@@ -4309,7 +6999,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 96.7,
-    "total_voters": 20539
+    "total_voters": 20539,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 19.7,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.7
   },
   "SWK_N22": {
     "malay": 1.0,
@@ -4317,7 +7012,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 92.1,
-    "total_voters": 19128
+    "total_voters": 19128,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.5,
+    "age_50_59": 15.7,
+    "age_60_plus": 11.7
   },
   "SWK_N23": {
     "malay": 17.6,
@@ -4325,7 +7025,12 @@
     "indian": 0.3,
     "orang_asli": 0.0,
     "others": 62.9,
-    "total_voters": 25606
+    "total_voters": 25606,
+    "age_18_29": 28.3,
+    "age_30_39": 23.2,
+    "age_40_49": 20.6,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "SWK_N24": {
     "malay": 89.7,
@@ -4333,7 +7038,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 2.7,
-    "total_voters": 10432
+    "total_voters": 10432,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.3,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "SWK_N25": {
     "malay": 63.2,
@@ -4341,7 +7051,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 30.4,
-    "total_voters": 12141
+    "total_voters": 12141,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.8,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.4
   },
   "SWK_N26": {
     "malay": 60.5,
@@ -4349,7 +7064,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 38.3,
-    "total_voters": 10067
+    "total_voters": 10067,
+    "age_18_29": 29.9,
+    "age_30_39": 23.9,
+    "age_40_49": 19.9,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "SWK_N27": {
     "malay": 64.2,
@@ -4357,7 +7077,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 33.0,
-    "total_voters": 13780
+    "total_voters": 13780,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.7,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "SWK_N28": {
     "malay": 64.5,
@@ -4365,7 +7090,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 31.8,
-    "total_voters": 13955
+    "total_voters": 13955,
+    "age_18_29": 28.4,
+    "age_30_39": 23.3,
+    "age_40_49": 20.6,
+    "age_50_59": 15.8,
+    "age_60_plus": 11.9
   },
   "SWK_N29": {
     "malay": 89.5,
@@ -4373,7 +7103,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 8.8,
-    "total_voters": 15337
+    "total_voters": 15337,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.6,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.0
   },
   "SWK_N30": {
     "malay": 4.9,
@@ -4381,7 +7116,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 87.8,
-    "total_voters": 15892
+    "total_voters": 15892,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 20.0,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "SWK_N31": {
     "malay": 12.9,
@@ -4389,7 +7129,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 81.1,
-    "total_voters": 13685
+    "total_voters": 13685,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 20.0,
+    "age_50_59": 15.0,
+    "age_60_plus": 10.9
   },
   "SWK_N32": {
     "malay": 12.9,
@@ -4397,7 +7142,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 56.0,
-    "total_voters": 20587
+    "total_voters": 20587,
+    "age_18_29": 29.7,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.3
   },
   "SWK_N33": {
     "malay": 1.8,
@@ -4405,7 +7155,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 86.1,
-    "total_voters": 14725
+    "total_voters": 14725,
+    "age_18_29": 27.8,
+    "age_30_39": 22.9,
+    "age_40_49": 20.8,
+    "age_50_59": 16.1,
+    "age_60_plus": 12.4
   },
   "SWK_N34": {
     "malay": 1.9,
@@ -4413,7 +7168,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 94.6,
-    "total_voters": 14270
+    "total_voters": 14270,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "SWK_N35": {
     "malay": 81.1,
@@ -4421,7 +7181,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 16.0,
-    "total_voters": 16406
+    "total_voters": 16406,
+    "age_18_29": 31.1,
+    "age_30_39": 24.5,
+    "age_40_49": 19.5,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.4
   },
   "SWK_N36": {
     "malay": 15.3,
@@ -4429,7 +7194,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 72.2,
-    "total_voters": 12615
+    "total_voters": 12615,
+    "age_18_29": 31.4,
+    "age_30_39": 24.7,
+    "age_40_49": 19.4,
+    "age_50_59": 14.3,
+    "age_60_plus": 10.2
   },
   "SWK_N37": {
     "malay": 30.4,
@@ -4437,7 +7207,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 65.1,
-    "total_voters": 12722
+    "total_voters": 12722,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.3,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.7
   },
   "SWK_N38": {
     "malay": 59.2,
@@ -4445,7 +7220,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 29.9,
-    "total_voters": 11928
+    "total_voters": 11928,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 11.9
   },
   "SWK_N39": {
     "malay": 1.8,
@@ -4453,7 +7233,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 93.9,
-    "total_voters": 18195
+    "total_voters": 18195,
+    "age_18_29": 28.6,
+    "age_30_39": 23.3,
+    "age_40_49": 20.5,
+    "age_50_59": 15.7,
+    "age_60_plus": 11.9
   },
   "SWK_N40": {
     "malay": 64.4,
@@ -4461,7 +7246,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 29.7,
-    "total_voters": 14408
+    "total_voters": 14408,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.8,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "SWK_N41": {
     "malay": 26.8,
@@ -4469,7 +7259,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 65.1,
-    "total_voters": 18223
+    "total_voters": 18223,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 19.8,
+    "age_50_59": 14.9,
+    "age_60_plus": 11.0
   },
   "SWK_N42": {
     "malay": 19.7,
@@ -4477,7 +7272,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 76.7,
-    "total_voters": 14725
+    "total_voters": 14725,
+    "age_18_29": 30.6,
+    "age_30_39": 24.3,
+    "age_40_49": 19.7,
+    "age_50_59": 14.7,
+    "age_60_plus": 10.7
   },
   "SWK_N43": {
     "malay": 7.0,
@@ -4485,7 +7285,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 89.3,
-    "total_voters": 14116
+    "total_voters": 14116,
+    "age_18_29": 31.6,
+    "age_30_39": 24.8,
+    "age_40_49": 19.3,
+    "age_50_59": 14.2,
+    "age_60_plus": 10.1
   },
   "SWK_N44": {
     "malay": 5.1,
@@ -4493,7 +7298,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 90.9,
-    "total_voters": 14174
+    "total_voters": 14174,
+    "age_18_29": 30.3,
+    "age_30_39": 24.1,
+    "age_40_49": 19.9,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.8
   },
   "SWK_N45": {
     "malay": 5.2,
@@ -4501,7 +7311,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 27.0,
-    "total_voters": 31110
+    "total_voters": 31110,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.8,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.3
   },
   "SWK_N46": {
     "malay": 4.0,
@@ -4509,7 +7324,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 45.1,
-    "total_voters": 23908
+    "total_voters": 23908,
+    "age_18_29": 31.2,
+    "age_30_39": 24.6,
+    "age_40_49": 19.5,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.3
   },
   "SWK_N47": {
     "malay": 0.6,
@@ -4517,7 +7337,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 92.8,
-    "total_voters": 14615
+    "total_voters": 14615,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.7,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "SWK_N48": {
     "malay": 0.5,
@@ -4525,7 +7350,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 95.8,
-    "total_voters": 20235
+    "total_voters": 20235,
+    "age_18_29": 29.0,
+    "age_30_39": 23.5,
+    "age_40_49": 20.4,
+    "age_50_59": 15.5,
+    "age_60_plus": 11.6
   },
   "SWK_N49": {
     "malay": 0.3,
@@ -4533,7 +7363,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 93.4,
-    "total_voters": 14109
+    "total_voters": 14109,
+    "age_18_29": 27.4,
+    "age_30_39": 22.7,
+    "age_40_49": 20.9,
+    "age_50_59": 16.3,
+    "age_60_plus": 12.7
   },
   "SWK_N50": {
     "malay": 3.2,
@@ -4541,7 +7376,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 81.0,
-    "total_voters": 16879
+    "total_voters": 16879,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 19.9,
+    "age_50_59": 14.9,
+    "age_60_plus": 10.9
   },
   "SWK_N51": {
     "malay": 2.5,
@@ -4549,7 +7389,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 13.1,
-    "total_voters": 34972
+    "total_voters": 34972,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.7,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "SWK_N52": {
     "malay": 5.4,
@@ -4557,7 +7402,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 42.8,
-    "total_voters": 52384
+    "total_voters": 52384,
+    "age_18_29": 27.9,
+    "age_30_39": 23.0,
+    "age_40_49": 20.8,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.3
   },
   "SWK_N53": {
     "malay": 1.6,
@@ -4565,7 +7415,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 51.5,
-    "total_voters": 22520
+    "total_voters": 22520,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.5,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.8
   },
   "SWK_N54": {
     "malay": 2.3,
@@ -4573,7 +7428,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 6.7,
-    "total_voters": 50276
+    "total_voters": 50276,
+    "age_18_29": 28.7,
+    "age_30_39": 23.4,
+    "age_40_49": 20.4,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.9
   },
   "SWK_N55": {
     "malay": 28.9,
@@ -4581,7 +7441,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 42.9,
-    "total_voters": 33079
+    "total_voters": 33079,
+    "age_18_29": 30.0,
+    "age_30_39": 24.0,
+    "age_40_49": 19.9,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "SWK_N56": {
     "malay": 2.7,
@@ -4589,7 +7454,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 89.0,
-    "total_voters": 17822
+    "total_voters": 17822,
+    "age_18_29": 30.0,
+    "age_30_39": 24.0,
+    "age_40_49": 20.0,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.0
   },
   "SWK_N57": {
     "malay": 4.3,
@@ -4597,7 +7467,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 82.2,
-    "total_voters": 15933
+    "total_voters": 15933,
+    "age_18_29": 27.2,
+    "age_30_39": 22.6,
+    "age_40_49": 20.9,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.9
   },
   "SWK_N58": {
     "malay": 3.0,
@@ -4605,7 +7480,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 89.7,
-    "total_voters": 13209
+    "total_voters": 13209,
+    "age_18_29": 29.3,
+    "age_30_39": 23.7,
+    "age_40_49": 20.1,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.6
   },
   "SWK_N59": {
     "malay": 0.4,
@@ -4613,7 +7493,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 96.8,
-    "total_voters": 23320
+    "total_voters": 23320,
+    "age_18_29": 28.8,
+    "age_30_39": 23.4,
+    "age_40_49": 20.4,
+    "age_50_59": 15.6,
+    "age_60_plus": 11.8
   },
   "SWK_N60": {
     "malay": 1.6,
@@ -4621,7 +7506,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 93.7,
-    "total_voters": 22423
+    "total_voters": 22423,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "SWK_N61": {
     "malay": 0.3,
@@ -4629,7 +7519,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 99.0,
-    "total_voters": 11538
+    "total_voters": 11538,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.5,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.0
   },
   "SWK_N62": {
     "malay": 2.5,
@@ -4637,7 +7532,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 92.7,
-    "total_voters": 15866
+    "total_voters": 15866,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.6,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.0
   },
   "SWK_N63": {
     "malay": 4.1,
@@ -4645,7 +7545,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 78.7,
-    "total_voters": 17806
+    "total_voters": 17806,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.5,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.0
   },
   "SWK_N64": {
     "malay": 0.2,
@@ -4653,7 +7558,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 99.1,
-    "total_voters": 15555
+    "total_voters": 15555,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.3
   },
   "SWK_N65": {
     "malay": 3.1,
@@ -4661,7 +7571,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 93.7,
-    "total_voters": 12185
+    "total_voters": 12185,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.7,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.3
   },
   "SWK_N66": {
     "malay": 0.3,
@@ -4669,7 +7584,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 97.9,
-    "total_voters": 15698
+    "total_voters": 15698,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.0,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.4
   },
   "SWK_N67": {
     "malay": 17.5,
@@ -4677,7 +7597,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 76.2,
-    "total_voters": 22534
+    "total_voters": 22534,
+    "age_18_29": 28.0,
+    "age_30_39": 23.0,
+    "age_40_49": 20.6,
+    "age_50_59": 16.0,
+    "age_60_plus": 12.4
   },
   "SWK_N68": {
     "malay": 8.1,
@@ -4685,7 +7610,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 31.1,
-    "total_voters": 37819
+    "total_voters": 37819,
+    "age_18_29": 27.7,
+    "age_30_39": 22.9,
+    "age_40_49": 20.8,
+    "age_50_59": 16.2,
+    "age_60_plus": 12.4
   },
   "SWK_N69": {
     "malay": 1.4,
@@ -4693,7 +7623,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 95.0,
-    "total_voters": 22402
+    "total_voters": 22402,
+    "age_18_29": 28.4,
+    "age_30_39": 23.2,
+    "age_40_49": 20.5,
+    "age_50_59": 15.8,
+    "age_60_plus": 12.1
   },
   "SWK_N70": {
     "malay": 12.9,
@@ -4701,7 +7636,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 76.5,
-    "total_voters": 30844
+    "total_voters": 30844,
+    "age_18_29": 29.6,
+    "age_30_39": 23.8,
+    "age_40_49": 20.0,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.4
   },
   "SWK_N71": {
     "malay": 24.0,
@@ -4709,7 +7649,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 64.1,
-    "total_voters": 19987
+    "total_voters": 19987,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.4,
+    "age_50_59": 15.7,
+    "age_60_plus": 12.1
   },
   "SWK_N72": {
     "malay": 15.9,
@@ -4717,7 +7662,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 55.5,
-    "total_voters": 38535
+    "total_voters": 38535,
+    "age_18_29": 29.7,
+    "age_30_39": 23.8,
+    "age_40_49": 20.1,
+    "age_50_59": 15.2,
+    "age_60_plus": 11.2
   },
   "SWK_N73": {
     "malay": 17.8,
@@ -4725,7 +7675,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 28.1,
-    "total_voters": 30781
+    "total_voters": 30781,
+    "age_18_29": 31.0,
+    "age_30_39": 24.5,
+    "age_40_49": 19.6,
+    "age_50_59": 14.5,
+    "age_60_plus": 10.4
   },
   "SWK_N74": {
     "malay": 17.9,
@@ -4733,7 +7688,12 @@
     "indian": 0.5,
     "orang_asli": 0.0,
     "others": 21.7,
-    "total_voters": 43884
+    "total_voters": 43884,
+    "age_18_29": 30.1,
+    "age_30_39": 24.0,
+    "age_40_49": 19.8,
+    "age_50_59": 15.0,
+    "age_60_plus": 11.1
   },
   "SWK_N75": {
     "malay": 16.0,
@@ -4741,7 +7701,12 @@
     "indian": 0.2,
     "orang_asli": 0.0,
     "others": 50.0,
-    "total_voters": 68564
+    "total_voters": 68564,
+    "age_18_29": 27.0,
+    "age_30_39": 22.5,
+    "age_40_49": 21.0,
+    "age_50_59": 16.5,
+    "age_60_plus": 13.0
   },
   "SWK_N76": {
     "malay": 9.9,
@@ -4749,7 +7714,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 76.8,
-    "total_voters": 25413
+    "total_voters": 25413,
+    "age_18_29": 31.3,
+    "age_30_39": 24.6,
+    "age_40_49": 19.5,
+    "age_50_59": 14.4,
+    "age_60_plus": 10.2
   },
   "SWK_N77": {
     "malay": 0.3,
@@ -4757,7 +7727,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 96.5,
-    "total_voters": 18062
+    "total_voters": 18062,
+    "age_18_29": 29.8,
+    "age_30_39": 23.9,
+    "age_40_49": 20.0,
+    "age_50_59": 15.1,
+    "age_60_plus": 11.2
   },
   "SWK_N78": {
     "malay": 0.8,
@@ -4765,7 +7740,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 96.4,
-    "total_voters": 16060
+    "total_voters": 16060,
+    "age_18_29": 29.4,
+    "age_30_39": 23.7,
+    "age_40_49": 20.2,
+    "age_50_59": 15.3,
+    "age_60_plus": 11.4
   },
   "SWK_N79": {
     "malay": 38.7,
@@ -4773,7 +7753,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 36.0,
-    "total_voters": 26864
+    "total_voters": 26864,
+    "age_18_29": 27.1,
+    "age_30_39": 22.6,
+    "age_40_49": 21.0,
+    "age_50_59": 16.4,
+    "age_60_plus": 12.9
   },
   "SWK_N80": {
     "malay": 4.2,
@@ -4781,7 +7766,12 @@
     "indian": 0.0,
     "orang_asli": 0.0,
     "others": 92.3,
-    "total_voters": 15135
+    "total_voters": 15135,
+    "age_18_29": 30.2,
+    "age_30_39": 24.1,
+    "age_40_49": 19.8,
+    "age_50_59": 14.9,
+    "age_60_plus": 11.0
   },
   "SWK_N81": {
     "malay": 3.1,
@@ -4789,7 +7779,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 91.9,
-    "total_voters": 13793
+    "total_voters": 13793,
+    "age_18_29": 30.8,
+    "age_30_39": 24.4,
+    "age_40_49": 19.6,
+    "age_50_59": 14.6,
+    "age_60_plus": 10.6
   },
   "SWK_N82": {
     "malay": 59.8,
@@ -4797,7 +7792,12 @@
     "indian": 0.1,
     "orang_asli": 0.0,
     "others": 27.9,
-    "total_voters": 19862
+    "total_voters": 19862,
+    "age_18_29": 28.5,
+    "age_30_39": 23.3,
+    "age_40_49": 20.6,
+    "age_50_59": 15.7,
+    "age_60_plus": 11.9
   },
   "WPK_WPK01": {
     "malay": 94.0,
@@ -4805,6 +7805,11 @@
     "indian": 2.7,
     "others": 2.3,
     "total_voters": 42881,
-    "orang_asli": 0
+    "orang_asli": 0,
+    "age_18_29": 34.5,
+    "age_30_39": 26.3,
+    "age_40_49": 19.0,
+    "age_50_59": 12.7,
+    "age_60_plus": 7.5
   }
 }

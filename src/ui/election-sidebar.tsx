@@ -80,7 +80,9 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
   const hasIncumbent = candidates.some(c => c.role === 'penyandang')
   // Fallback: use last historical winner if no incumbent
   const lastWinner = !hasIncumbent ? history?.elections?.slice().reverse().find(e => e.winnerParty) : null
-  const { malay, chinese, indian, others, orang_asli, medianIncome, gini, poverty } = demographics
+  const { malay, chinese, indian, others, orang_asli, medianIncome, gini, poverty,
+    age_18_29, age_30_39, age_40_49, age_50_59, age_60_plus } = demographics
+  const hasAgeData = age_18_29 != null
 
   return (
   <div className="border border-gray-200 bg-white rounded">
@@ -124,7 +126,26 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
   </div>
   ))}
   </div>
-  {medianIncome != null && medianIncome > 0 && (
+  {hasAgeData && (
+  <div className="mt-3 pt-2 border-t border-gray-100">
+    <h4 className="text-[9px] font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Pengundi Mengikut Umur</h4>
+    {[
+      { label: '18-29', value: age_18_29, color: 'bg-blue-500' },
+      { label: '30-39', value: age_30_39, color: 'bg-teal-500' },
+      { label: '40-49', value: age_40_49, color: 'bg-amber-500' },
+      { label: '50-59', value: age_50_59, color: 'bg-orange-500' },
+      { label: '60+', value: age_60_plus, color: 'bg-red-400' },
+    ].map((d) => (
+      <div key={d.label} className="flex items-center gap-2">
+        <span className="text-[10px] text-gray-500 w-7 text-right">{d.label}</span>
+        <div className="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">
+          <div className={`h-full rounded-full ${d.color}`} style={{ width: `${d.value}%` }} />
+        </div>
+        <span className="text-[10px] font-bold text-gray-600 w-8">{d.value}%</span>
+      </div>
+    ))}
+  </div>
+  )}
   <div className="mt-3 pt-2 border-t border-gray-100 grid grid-cols-2 gap-x-4 gap-y-1 text-[10px] text-gray-500">
   <div>Pendapatan Median</div>
   <div className="text-right font-bold text-gray-700">RM{medianIncome.toLocaleString()}</div>

@@ -115,6 +115,11 @@ export class RegionService {
           indian: dunData.indian ?? 10,
           others: (dunData.orang_asli ?? 0) + (dunData.others ?? 5),
           totalElectors: dunData.total_voters ?? undefined,
+          age_18_29: dunData.age_18_29 ?? undefined,
+          age_30_39: dunData.age_30_39 ?? undefined,
+          age_40_49: dunData.age_40_49 ?? undefined,
+          age_50_59: dunData.age_50_59 ?? undefined,
+          age_60_plus: dunData.age_60_plus ?? undefined,
         }
       } else {
         // Fallback: parliament-level data (split per DUN)
@@ -130,6 +135,11 @@ export class RegionService {
           totalElectors: parlDemo?.totalElectors
             ? Math.round(parlDemo.totalElectors / dunCount)
             : undefined,
+          age_18_29: parlDemo?.age_18_29 ?? undefined,
+          age_30_39: parlDemo?.age_30_39 ?? undefined,
+          age_40_49: parlDemo?.age_40_49 ?? undefined,
+          age_50_59: parlDemo?.age_50_59 ?? undefined,
+          age_60_plus: parlDemo?.age_60_plus ?? undefined,
         }
       }
 

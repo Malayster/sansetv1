@@ -135,6 +135,11 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
           others: (dunData.orang_asli ?? 0) + (dunData.others ?? 5),
           orang_asli: dunData.orang_asli ?? undefined,
           totalElectors: dunData.total_voters ?? undefined,
+          age_18_29: dunData.age_18_29 ?? undefined,
+          age_30_39: dunData.age_30_39 ?? undefined,
+          age_40_49: dunData.age_40_49 ?? undefined,
+          age_50_59: dunData.age_50_59 ?? undefined,
+          age_60_plus: dunData.age_60_plus ?? undefined,
         }
       } else {
         // Fallback: parliament-level data (split per DUN)
@@ -148,6 +153,11 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
             indian: parlData.indian ?? 10,
             others: parlData.others ?? 5,
             totalElectors: parlData.totalElectors ? Math.round(parlData.totalElectors / dunCount) : undefined,
+            age_18_29: parlData.age_18_29 ?? undefined,
+            age_30_39: parlData.age_30_39 ?? undefined,
+            age_40_49: parlData.age_40_49 ?? undefined,
+            age_50_59: parlData.age_50_59 ?? undefined,
+            age_60_plus: parlData.age_60_plus ?? undefined,
           }
         } else {
           demographics = { malay: 60, chinese: 25, indian: 10, others: 5 }

@@ -132,6 +132,11 @@ export interface RegionWithData extends ElectionRegion {
     maleElectors?: number
     femaleElectors?: number
     ethnicity?: string
+    age_18_29?: number
+    age_30_39?: number
+    age_40_49?: number
+    age_50_59?: number
+    age_60_plus?: number
   }
   history?: SeatHistory
 }

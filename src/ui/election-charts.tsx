@@ -10,13 +10,14 @@ import type { RegionWithData } from '@/types/election'
 
 interface Props { regions: RegionWithData[] }
 
-type ChartView = 'income-malay' | 'income-chinese' | 'composition' | 'poverty'
+type ChartView = 'income-malay' | 'income-chinese' | 'composition' | 'poverty' | 'age'
 
 const CHART_LABELS: Record<ChartView, string> = {
   'income-malay': 'Pendapatan vs % Melayu',
   'income-chinese': 'Pendapatan vs % Cina',
   'composition': 'Komposisi Kaum mengikut Parti',
   'poverty': 'Kemiskinan vs Pendapatan',
+  'age': 'Umur Pengundi',
 }
 
 const partyHex = PARTY_COLOR_HEX
@@ -135,7 +136,65 @@ export default function ElectionCharts({ regions }: Props) {
 
   {/* Chart content */}
   <div className="p-4" style={{ height: 380 }}>
-  {view === 'composition' ? (
+  {view === 'age' ? (
+  <div className="h-full overflow-y-auto space-y-2 pr-1">
+    {parlGrouped.map(p => {
+      // Find a DUN in this parliament for age data
+      const sampleDun = p.duns.length > 0 ? regions.find(r => r.code === p.duns[0]) : null
+      const age = sampleDun?.demographics
+      if (!age?.age_18_29) return null
+      const youngPct = age.age_18_29 + age.age_30_39
+      return (
+        <div key={p.parlCode} className="flex items-center gap-2 py-1.5 border-b border-gray-50 last:border-0">
+          <div className="w-10 shrink-0 text-[10px] font-bold text-gray-700">{p.parlCode}</div>
+          <div className="flex-1 space-y-0.5">
+            <div className="flex items-center gap-1 text-[9px] text-gray-400">
+              <span>18-29</span>
+              <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-full rounded-full bg-blue-500" style={{ width: `${age.age_18_29}%` }} />
+              </div>
+              <span className="w-7 text-right font-semibold text-gray-600">{age.age_18_29}%</span>
+            </div>
+            <div className="flex items-center gap-1 text-[9px] text-gray-400">
+              <span>30-39</span>
+              <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-full rounded-full bg-teal-500" style={{ width: `${age.age_30_39}%` }} />
+              </div>
+              <span className="w-7 text-right font-semibold text-gray-600">{age.age_30_39}%</span>
+            </div>
+            <div className="flex items-center gap-1 text-[9px] text-gray-400">
+              <span>40-49</span>
+              <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-full rounded-full bg-amber-500" style={{ width: `${age.age_40_49}%` }} />
+              </div>
+              <span className="w-7 text-right font-semibold text-gray-600">{age.age_40_49}%</span>
+            </div>
+            <div className="flex items-center gap-1 text-[9px] text-gray-400">
+              <span>50-59</span>
+              <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-full rounded-full bg-orange-500" style={{ width: `${age.age_50_59}%` }} />
+              </div>
+              <span className="w-7 text-right font-semibold text-gray-600">{age.age_50_59}%</span>
+            </div>
+            <div className="flex items-center gap-1 text-[9px] text-gray-400">
+              <span>60+</span>
+              <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                <div className="h-full rounded-full bg-red-400" style={{ width: `${age.age_60_plus}%` }} />
+              </div>
+              <span className="w-7 text-right font-semibold text-gray-600">{age.age_60_plus}%</span>
+            </div>
+          </div>
+          <div className="w-16 shrink-0 text-right">
+            <span className={`text-[10px] font-bold ${youngPct >= 55 ? 'text-blue-600' : 'text-gray-600'}`}>
+              {Math.round(youngPct)}%<br/>
+              <span className="text-[8px] font-normal text-gray-400">Muda</span>
+            </span>
+          </div>
+        </div>
+      )
+    })}
+  </div>
+  ) : view === 'composition' ? (
   <ResponsiveContainer width="100%" height="100%">
   <BarChart data={compData} margin={{ top: 10, right: 20, left: 0, bottom: 30 }}>
   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
