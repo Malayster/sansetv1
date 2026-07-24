@@ -1,0 +1,87 @@
+{
+  "electionId": "prn-ns-2026",
+  "name": "PRN Negeri Sembilan 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_nsn_dun.json",
+  "state": "Negeri Sembilan",
+  "dunToParlimen": {
+    "N01": "P126",
+    "N02": "P126",
+    "N03": "P126",
+    "N04": "P126",
+    "N05": "P127",
+    "N06": "P127",
+    "N07": "P127",
+    "N08": "P127",
+    "N09": "P128",
+    "N10": "P128",
+    "N11": "P128",
+    "N12": "P128",
+    "N13": "P128",
+    "N14": "P128",
+    "N15": "P129",
+    "N16": "P129",
+    "N17": "P129",
+    "N18": "P129",
+    "N19": "P129",
+    "N20": "P130",
+    "N21": "P130",
+    "N22": "P130",
+    "N23": "P130",
+    "N24": "P130",
+    "N25": "P131",
+    "N26": "P131",
+    "N27": "P131",
+    "N28": "P131",
+    "N29": "P132",
+    "N30": "P132",
+    "N31": "P132",
+    "N32": "P132",
+    "N33": "P132",
+    "N34": "P133",
+    "N35": "P133",
+    "N36": "P133"
+  },
+  "parlimenInfo": {
+    "P126": {
+      "name": "Jelebu",
+      "dunCount": 4
+    },
+    "P127": {
+      "name": "Jempol",
+      "dunCount": 4
+    },
+    "P128": {
+      "name": "Seremban",
+      "dunCount": 6
+    },
+    "P129": {
+      "name": "Kuala Pilah",
+      "dunCount": 5
+    },
+    "P130": {
+      "name": "Rasah",
+      "dunCount": 5
+    },
+    "P131": {
+      "name": "Rembau",
+      "dunCount": 4
+    },
+    "P132": {
+      "name": "Port Dickson",
+      "dunCount": 5
+    },
+    "P133": {
+      "name": "Tampin",
+      "dunCount": 3
+    }
+  },
+  "demographicsSource": "parlimen",
+  "createdAt": "2026-07-18",
+  "dataSources": {
+    "demographics": "Tindak Malaysia / DOSM — data peringkat Parlimen",
+    "historicalResults": "ElectionData.MY / SPR Open Data",
+    "candidates": "ElectionData.MY + Portal Berita"
+  }
+}

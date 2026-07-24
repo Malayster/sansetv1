@@ -9,11 +9,8 @@
     "N01": "P140",
     "N02": "P140",
     "N03": "P153",
-    "N035": "JO16",
     "N04": "P141",
-    "N040": "JO19",
     "N05": "P142",
-    "N051": "JO24",
     "N06": "P142",
     "N07": "P143",
     "N08": "P143",
@@ -66,18 +63,6 @@
     "N56": "P165"
   },
   "parlimenInfo": {
-    "JO16": {
-      "name": "None",
-      "dunCount": 1
-    },
-    "JO19": {
-      "name": "None",
-      "dunCount": 1
-    },
-    "JO24": {
-      "name": "None",
-      "dunCount": 1
-    },
     "P140": {
       "name": "Segamat",
       "dunCount": 2

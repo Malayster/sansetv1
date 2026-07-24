@@ -8,10 +8,8 @@
   "dunToParlimen": {
     "N01": "P167",
     "N02": "P167",
-    "N024": "SBH10",
     "N03": "P167",
     "N04": "P167",
-    "N047": "SBH20",
     "N05": "P168",
     "N06": "P168",
     "N07": "P168",
@@ -182,14 +180,6 @@
     "P191": {
       "name": "Kalabakan",
       "dunCount": 4
-    },
-    "SBH10": {
-      "name": "None",
-      "dunCount": 1
-    },
-    "SBH20": {
-      "name": "None",
-      "dunCount": 1
     }
   },
   "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
