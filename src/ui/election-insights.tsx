@@ -107,64 +107,109 @@ export function MajorityTracker({ regions }: { regions: RegionWithData[] }) {
 }
 
 export function KeyRaces({ regions }: { regions: RegionWithData[] }) {
-  const hotSeats = useMemo(() => {
-  return regions
-  .map(r => {
-  const last = r.history?.elections?.filter(e => e.candidates?.some(c => (c.votes || 0) > 0)).slice(-1)[0]
-  const inc = r.candidates?.find(c => c.role === 'penyandang')
-  const fallbackParty = r.history?.elections?.slice().reverse().find(e => e.winnerParty)
-  const party = inc?.party || fallbackParty?.winnerParty || ''
-  const incumbent = inc?.name || fallbackParty?.winner || ''
-  if (!last || !party) return null
-  return {
-  code: r.code,
-  name: r.name,
-  party,
-  incumbent,
-  majority: last.majority || 0,
-  year: last.year,
-  flag: PARTY_FLAGS[party] || '/flags/bebas.svg',
-  }
-  })
-  .filter((s): s is NonNullable<typeof s> => s !== null)
-  .sort((a, b) => a.majority - b.majority)
-  .slice(0, 6)
+  const { hotSeats, breakdown } = useMemo(() => {
+    const seats = regions
+      .map(r => {
+        const last = r.history?.elections?.filter(e => e.candidates?.some(c => (c.votes || 0) > 0)).slice(-1)[0]
+        const inc = r.candidates?.find(c => c.role === 'penyandang')
+        const fallbackParty = r.history?.elections?.slice().reverse().find(e => e.winnerParty)
+        const hot = (r.history as any)?._hotSeat
+        const party = inc?.party || fallbackParty?.winnerParty || ''
+        const incumbent = inc?.name || fallbackParty?.winner || ''
+        if (!last || !party) return null
+        return {
+          code: r.code, name: r.name, party, incumbent,
+          majority: last.majority || 0, year: last.year,
+          flag: PARTY_FLAGS[party] || '/flags/bebas.svg',
+          hotSeat: hot,
+        }
+      })
+      .filter((s): s is NonNullable<typeof s> => s !== null)
+      .sort((a, b) => a.majority - b.majority)
+
+    // Count by category
+    const bd = { sangatPanas: 0, panas: 0, marginal: 0, selamat: 0 }
+    for (const s of seats) {
+      if (s.hotSeat === 'sangat_panas') bd.sangatPanas++
+      else if (s.hotSeat === 'panas') bd.panas++
+      else if (s.hotSeat === 'marginal') bd.marginal++
+      else bd.selamat++
+    }
+
+    return { hotSeats: seats.slice(0, 6), breakdown: bd }
   }, [regions])
 
   if (!hotSeats.length) return null
 
+  const total = breakdown.sangatPanas + breakdown.panas + breakdown.marginal + breakdown.selamat
+  const barPanas = total > 0 ? (breakdown.sangatPanas + breakdown.panas) / total * 100 : 0
+  const barMarginal = total > 0 ? breakdown.marginal / total * 100 : 0
+  const barSelamat = total > 0 ? breakdown.selamat / total * 100 : 0
+
   return (
   <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
-  <div className="flex items-center justify-between mb-3">
-  <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
-  🔥 Kerusi Panas
-  </h3>
-  <span className="text-[10px] text-gray-400">Majoriti paling tipis</span>
-  </div>
-  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-  {hotSeats.map(s => {
-  const isTight = s.majority < 1000
-  const isWarning = s.majority < 3000
-  return (
-  <div key={s.code} className={`rounded-lg border p-2.5 ${isTight ? 'border-red-300 bg-red-50/60' : isWarning ? 'border-amber-300 bg-amber-50/40' : 'border-gray-100 bg-gray-50/50'}`}>
-  <div className="flex items-center justify-between mb-1">
-  <span className="font-bold text-[11px] text-gray-800">{s.code}</span>
-  {isTight && <span className="text-[9px] bg-red-600 text-white font-bold px-1.5 py-0.5 rounded">TIGHT</span>}
-  {!isTight && isWarning && <span className="text-[9px] bg-amber-500 text-white font-bold px-1.5 py-0.5 rounded">WATCH</span>}
-  </div>
-  <div className="text-[11px] font-medium text-gray-700 truncate">{s.name}</div>
-  <div className="flex items-center gap-1.5 mt-1.5">
-  <img src={s.flag} alt={s.party} className="w-5 h-auto rounded border border-gray-300" />
-  <span className={`text-[10px] font-bold ${PARTY_COLORS[s.party] || 'text-gray-500'}`}>{s.party}</span>
-  </div>
-  <div className="mt-1 text-[10px] text-gray-500">
-  Majoriti: <span className={`font-bold ${isTight ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-gray-700'}`}>{s.majority.toLocaleString()}</span>
-  </div>
-  <div className="text-[9px] text-gray-400">PRN {s.year}</div>
-  </div>
-  )
-  })}
-  </div>
+    <div className="flex items-center justify-between mb-3">
+      <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
+        🔥 Kerusi Panas
+      </h3>
+      <span className="text-[10px] text-gray-400">{total} kerusi</span>
+    </div>
+
+    {/* Hotness Breakdown Bar */}
+    <div className="mb-3">
+      <div className="h-4 bg-gray-100 rounded-full overflow-hidden flex text-[9px] font-bold">
+        {breakdown.sangatPanas > 0 && (
+          <div className="bg-red-600 text-white flex items-center justify-center" style={{ width: `${Math.max(barPanas * 0.6, 4)}%` }}>
+            🔥{breakdown.sangatPanas}
+          </div>
+        )}
+        {breakdown.panas > 0 && (
+          <div className="bg-orange-500 text-white flex items-center justify-center" style={{ width: `${Math.max(barPanas * 0.4, 4)}%` }}>
+            ⚡{breakdown.panas}
+          </div>
+        )}
+        {breakdown.marginal > 0 && (
+          <div className="bg-amber-400 text-white flex items-center justify-center" style={{ width: `${Math.max(barMarginal, 4)}%` }}>
+            🔶{breakdown.marginal}
+          </div>
+        )}
+        <div className="bg-green-500 text-white flex items-center justify-center flex-1" style={{ width: `${Math.max(barSelamat, 4)}%` }}>
+          🟢{breakdown.selamat}
+        </div>
+      </div>
+      <div className="flex justify-between text-[9px] text-gray-400 mt-1">
+        <span>🔥 Sangat Panas</span>
+        <span>⚡ Panas</span>
+        <span>🔶 Marginal</span>
+        <span>🟢 Selamat</span>
+      </div>
+    </div>
+
+    {/* Top 6 Hottest */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+      {hotSeats.map(s => {
+        const isTight = s.majority < 1000
+        const isWarning = s.majority < 3000
+        return (
+          <div key={s.code} className={`rounded-lg border p-2.5 ${isTight ? 'border-red-300 bg-red-50/60' : isWarning ? 'border-amber-300 bg-amber-50/40' : 'border-gray-100 bg-gray-50/50'}`}>
+            <div className="flex items-center justify-between mb-1">
+              <span className="font-bold text-[11px] text-gray-800">{s.code}</span>
+              {isTight && <span className="text-[9px] bg-red-600 text-white font-bold px-1.5 py-0.5 rounded">TIGHT</span>}
+              {!isTight && isWarning && <span className="text-[9px] bg-amber-500 text-white font-bold px-1.5 py-0.5 rounded">WATCH</span>}
+            </div>
+            <div className="text-[11px] font-medium text-gray-700 truncate">{s.name}</div>
+            <div className="flex items-center gap-1.5 mt-1.5">
+              <img src={s.flag} alt={s.party} className="w-5 h-auto rounded border border-gray-300" />
+              <span className={`text-[10px] font-bold ${PARTY_COLORS[s.party] || 'text-gray-500'}`}>{s.party}</span>
+            </div>
+            <div className="mt-1 text-[10px] text-gray-500">
+              Majoriti: <span className={`font-bold ${isTight ? 'text-red-600' : isWarning ? 'text-amber-600' : 'text-gray-700'}`}>{s.majority.toLocaleString()}</span>
+            </div>
+            <div className="text-[9px] text-gray-400">PRN {s.year}</div>
+          </div>
+        )
+      })}
+    </div>
   </div>
   )
 }
