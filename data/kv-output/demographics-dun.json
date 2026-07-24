@@ -1,0 +1,2602 @@
+{
+  "KDH_N01": {
+    "malay": 95.1,
+    "chinese": 1.3,
+    "indian": 2.6,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 32521
+  },
+  "KDH_N02": {
+    "malay": 84.6,
+    "chinese": 11.9,
+    "indian": 2.1,
+    "orang_asli": 0.0,
+    "others": 1.4,
+    "total_voters": 34256
+  },
+  "KDH_N03": {
+    "malay": 91.6,
+    "chinese": 6.9,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.4,
+    "total_voters": 29785
+  },
+  "KDH_N04": {
+    "malay": 90.2,
+    "chinese": 6.6,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 3.1,
+    "total_voters": 37816
+  },
+  "KDH_N05": {
+    "malay": 89.1,
+    "chinese": 6.7,
+    "indian": 2.1,
+    "orang_asli": 0.0,
+    "others": 2.1,
+    "total_voters": 45801
+  },
+  "KDH_N06": {
+    "malay": 83.8,
+    "chinese": 10.1,
+    "indian": 4.3,
+    "orang_asli": 0.0,
+    "others": 1.8,
+    "total_voters": 62416
+  },
+  "KDH_N07": {
+    "malay": 96.8,
+    "chinese": 1.5,
+    "indian": 0.2,
+    "orang_asli": 0.0,
+    "others": 1.5,
+    "total_voters": 31329
+  },
+  "KDH_N08": {
+    "malay": 86.0,
+    "chinese": 1.0,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 12.9,
+    "total_voters": 28477
+  },
+  "KDH_N09": {
+    "malay": 89.9,
+    "chinese": 7.2,
+    "indian": 1.9,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 40563
+  },
+  "KDH_N10": {
+    "malay": 93.1,
+    "chinese": 5.4,
+    "indian": 0.9,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 36667
+  },
+  "KDH_N11": {
+    "malay": 60.9,
+    "chinese": 33.3,
+    "indian": 4.6,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 37608
+  },
+  "KDH_N12": {
+    "malay": 72.2,
+    "chinese": 23.3,
+    "indian": 4.0,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 41917
+  },
+  "KDH_N13": {
+    "malay": 35.6,
+    "chinese": 56.8,
+    "indian": 6.7,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 26102
+  },
+  "KDH_N14": {
+    "malay": 72.6,
+    "chinese": 23.9,
+    "indian": 2.7,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 37975
+  },
+  "KDH_N15": {
+    "malay": 88.7,
+    "chinese": 9.5,
+    "indian": 1.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 36325
+  },
+  "KDH_N16": {
+    "malay": 70.4,
+    "chinese": 27.9,
+    "indian": 1.0,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 50078
+  },
+  "KDH_N17": {
+    "malay": 72.1,
+    "chinese": 26.2,
+    "indian": 1.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 46097
+  },
+  "KDH_N18": {
+    "malay": 91.5,
+    "chinese": 7.8,
+    "indian": 0.2,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 45265
+  },
+  "KDH_N19": {
+    "malay": 85.7,
+    "chinese": 1.9,
+    "indian": 0.7,
+    "orang_asli": 0.0,
+    "others": 11.6,
+    "total_voters": 49282
+  },
+  "KDH_N20": {
+    "malay": 94.0,
+    "chinese": 5.7,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.2,
+    "total_voters": 34312
+  },
+  "KDH_N21": {
+    "malay": 89.8,
+    "chinese": 9.2,
+    "indian": 0.6,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 29983
+  },
+  "KDH_N22": {
+    "malay": 62.4,
+    "chinese": 21.8,
+    "indian": 14.9,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 40706
+  },
+  "KDH_N23": {
+    "malay": 93.1,
+    "chinese": 1.6,
+    "indian": 0.2,
+    "orang_asli": 0.0,
+    "others": 5.2,
+    "total_voters": 28147
+  },
+  "KDH_N24": {
+    "malay": 92.2,
+    "chinese": 1.2,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 6.5,
+    "total_voters": 34979
+  },
+  "KDH_N25": {
+    "malay": 61.1,
+    "chinese": 17.6,
+    "indian": 20.3,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 78353
+  },
+  "KDH_N26": {
+    "malay": 81.0,
+    "chinese": 11.9,
+    "indian": 5.7,
+    "orang_asli": 0.0,
+    "others": 1.4,
+    "total_voters": 54091
+  },
+  "KDH_N27": {
+    "malay": 91.1,
+    "chinese": 6.1,
+    "indian": 2.4,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 51218
+  },
+  "KDH_N28": {
+    "malay": 47.5,
+    "chinese": 37.2,
+    "indian": 14.6,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 57589
+  },
+  "KDH_N29": {
+    "malay": 48.7,
+    "chinese": 31.3,
+    "indian": 18.9,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 60040
+  },
+  "KDH_N30": {
+    "malay": 92.9,
+    "chinese": 3.7,
+    "indian": 0.7,
+    "orang_asli": 0.4,
+    "others": 2.4,
+    "total_voters": 47471
+  },
+  "KDH_N31": {
+    "malay": 92.3,
+    "chinese": 3.4,
+    "indian": 2.5,
+    "orang_asli": 0.0,
+    "others": 1.8,
+    "total_voters": 42615
+  },
+  "KDH_N32": {
+    "malay": 82.3,
+    "chinese": 5.8,
+    "indian": 11.1,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 42013
+  },
+  "KDH_N33": {
+    "malay": 76.4,
+    "chinese": 6.9,
+    "indian": 16.0,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 52601
+  },
+  "KDH_N34": {
+    "malay": 53.2,
+    "chinese": 24.6,
+    "indian": 21.4,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 81266
+  },
+  "KDH_N35": {
+    "malay": 63.2,
+    "chinese": 19.6,
+    "indian": 16.6,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 54003
+  },
+  "KDH_N36": {
+    "malay": 79.8,
+    "chinese": 13.5,
+    "indian": 6.4,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 36138
+  },
+  "KTN_N01": {
+    "malay": 92.7,
+    "chinese": 0.9,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 6.3,
+    "total_voters": 36278
+  },
+  "KTN_N02": {
+    "malay": 92.5,
+    "chinese": 2.0,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 5.3,
+    "total_voters": 38082
+  },
+  "KTN_N03": {
+    "malay": 97.1,
+    "chinese": 2.4,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 38876
+  },
+  "KTN_N04": {
+    "malay": 86.8,
+    "chinese": 9.5,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 3.6,
+    "total_voters": 36135
+  },
+  "KTN_N05": {
+    "malay": 95.3,
+    "chinese": 2.6,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 2.0,
+    "total_voters": 30265
+  },
+  "KTN_N06": {
+    "malay": 98.7,
+    "chinese": 0.8,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 34385
+  },
+  "KTN_N07": {
+    "malay": 96.8,
+    "chinese": 2.2,
+    "indian": 0.2,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 42332
+  },
+  "KTN_N08": {
+    "malay": 90.4,
+    "chinese": 7.8,
+    "indian": 0.4,
+    "orang_asli": 0.0,
+    "others": 1.4,
+    "total_voters": 45385
+  },
+  "KTN_N09": {
+    "malay": 66.1,
+    "chinese": 31.2,
+    "indian": 1.4,
+    "orang_asli": 0.0,
+    "others": 1.3,
+    "total_voters": 33114
+  },
+  "KTN_N10": {
+    "malay": 93.8,
+    "chinese": 5.2,
+    "indian": 0.5,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 36951
+  },
+  "KTN_N11": {
+    "malay": 97.9,
+    "chinese": 1.6,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 31645
+  },
+  "KTN_N12": {
+    "malay": 95.4,
+    "chinese": 3.9,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 33033
+  },
+  "KTN_N13": {
+    "malay": 99.1,
+    "chinese": 0.1,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 29866
+  },
+  "KTN_N14": {
+    "malay": 95.1,
+    "chinese": 4.4,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 28976
+  },
+  "KTN_N15": {
+    "malay": 97.2,
+    "chinese": 1.2,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.5,
+    "total_voters": 35814
+  },
+  "KTN_N16": {
+    "malay": 98.0,
+    "chinese": 0.3,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.6,
+    "total_voters": 28458
+  },
+  "KTN_N17": {
+    "malay": 98.1,
+    "chinese": 1.5,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 36133
+  },
+  "KTN_N18": {
+    "malay": 98.1,
+    "chinese": 1.2,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 37175
+  },
+  "KTN_N19": {
+    "malay": 96.1,
+    "chinese": 3.2,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 40332
+  },
+  "KTN_N20": {
+    "malay": 98.8,
+    "chinese": 0.8,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 43101
+  },
+  "KTN_N21": {
+    "malay": 97.4,
+    "chinese": 1.4,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 40216
+  },
+  "KTN_N22": {
+    "malay": 98.6,
+    "chinese": 1.0,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 39866
+  },
+  "KTN_N23": {
+    "malay": 97.2,
+    "chinese": 1.6,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 28285
+  },
+  "KTN_N24": {
+    "malay": 97.9,
+    "chinese": 1.4,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 21636
+  },
+  "KTN_N25": {
+    "malay": 95.4,
+    "chinese": 2.5,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 2.0,
+    "total_voters": 35360
+  },
+  "KTN_N26": {
+    "malay": 90.9,
+    "chinese": 7.6,
+    "indian": 0.2,
+    "orang_asli": 0.0,
+    "others": 1.4,
+    "total_voters": 49934
+  },
+  "KTN_N27": {
+    "malay": 97.4,
+    "chinese": 0.7,
+    "indian": 1.4,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 25687
+  },
+  "KTN_N28": {
+    "malay": 98.7,
+    "chinese": 0.2,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 23161
+  },
+  "KTN_N29": {
+    "malay": 99.1,
+    "chinese": 0.4,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 28573
+  },
+  "KTN_N30": {
+    "malay": 97.3,
+    "chinese": 2.0,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 35270
+  },
+  "KTN_N31": {
+    "malay": 97.5,
+    "chinese": 0.4,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 2.0,
+    "total_voters": 26580
+  },
+  "KTN_N32": {
+    "malay": 98.6,
+    "chinese": 0.3,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 22647
+  },
+  "KTN_N33": {
+    "malay": 97.0,
+    "chinese": 2.7,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 28088
+  },
+  "KTN_N34": {
+    "malay": 94.9,
+    "chinese": 4.3,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 25935
+  },
+  "KTN_N35": {
+    "malay": 97.0,
+    "chinese": 2.4,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 34802
+  },
+  "KTN_N36": {
+    "malay": 98.2,
+    "chinese": 0.2,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.5,
+    "total_voters": 21748
+  },
+  "KTN_N37": {
+    "malay": 96.8,
+    "chinese": 0.2,
+    "indian": 0.1,
+    "orang_asli": 2.1,
+    "others": 0.8,
+    "total_voters": 22382
+  },
+  "KTN_N38": {
+    "malay": 98.6,
+    "chinese": 0.1,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.2,
+    "total_voters": 15668
+  },
+  "KTN_N39": {
+    "malay": 96.0,
+    "chinese": 2.3,
+    "indian": 1.3,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 26774
+  },
+  "KTN_N40": {
+    "malay": 86.0,
+    "chinese": 11.2,
+    "indian": 2.1,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 27781
+  },
+  "KTN_N41": {
+    "malay": 98.9,
+    "chinese": 0.2,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 22546
+  },
+  "KTN_N42": {
+    "malay": 98.7,
+    "chinese": 0.1,
+    "indian": 0.2,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 15234
+  },
+  "KTN_N43": {
+    "malay": 86.1,
+    "chinese": 0.2,
+    "indian": 0.0,
+    "orang_asli": 13.1,
+    "others": 0.5,
+    "total_voters": 19968
+  },
+  "KTN_N44": {
+    "malay": 97.3,
+    "chinese": 0.1,
+    "indian": 0.0,
+    "orang_asli": 2.2,
+    "others": 0.4,
+    "total_voters": 21064
+  },
+  "KTN_N45": {
+    "malay": 59.6,
+    "chinese": 13.7,
+    "indian": 1.1,
+    "orang_asli": 24.7,
+    "others": 0.9,
+    "total_voters": 29222
+  },
+  "PHG_N01": {
+    "malay": 15.2,
+    "chinese": 46.0,
+    "indian": 20.0,
+    "orang_asli": 17.6,
+    "others": 1.2,
+    "total_voters": 26838
+  },
+  "PHG_N02": {
+    "malay": 52.9,
+    "chinese": 0.4,
+    "indian": 0.8,
+    "orang_asli": 45.1,
+    "others": 0.7,
+    "total_voters": 19182
+  },
+  "PHG_N03": {
+    "malay": 91.8,
+    "chinese": 2.9,
+    "indian": 2.9,
+    "orang_asli": 1.6,
+    "others": 0.8,
+    "total_voters": 19407
+  },
+  "PHG_N04": {
+    "malay": 72.4,
+    "chinese": 20.5,
+    "indian": 4.9,
+    "orang_asli": 1.4,
+    "others": 0.9,
+    "total_voters": 16822
+  },
+  "PHG_N05": {
+    "malay": 63.6,
+    "chinese": 26.9,
+    "indian": 8.7,
+    "orang_asli": 0.1,
+    "others": 0.7,
+    "total_voters": 10895
+  },
+  "PHG_N06": {
+    "malay": 76.3,
+    "chinese": 8.2,
+    "indian": 4.2,
+    "orang_asli": 10.8,
+    "others": 0.5,
+    "total_voters": 19683
+  },
+  "PHG_N07": {
+    "malay": 27.7,
+    "chinese": 61.0,
+    "indian": 8.8,
+    "orang_asli": 1.6,
+    "others": 0.9,
+    "total_voters": 38329
+  },
+  "PHG_N08": {
+    "malay": 79.1,
+    "chinese": 14.1,
+    "indian": 2.6,
+    "orang_asli": 3.3,
+    "others": 0.9,
+    "total_voters": 17052
+  },
+  "PHG_N09": {
+    "malay": 92.9,
+    "chinese": 0.7,
+    "indian": 0.7,
+    "orang_asli": 4.8,
+    "others": 0.9,
+    "total_voters": 20895
+  },
+  "PHG_N10": {
+    "malay": 61.4,
+    "chinese": 28.8,
+    "indian": 5.1,
+    "orang_asli": 3.4,
+    "others": 1.3,
+    "total_voters": 34967
+  },
+  "PHG_N11": {
+    "malay": 98.4,
+    "chinese": 0.1,
+    "indian": 0.6,
+    "orang_asli": 0.5,
+    "others": 0.4,
+    "total_voters": 31189
+  },
+  "PHG_N12": {
+    "malay": 74.4,
+    "chinese": 20.9,
+    "indian": 2.7,
+    "orang_asli": 0.1,
+    "others": 1.9,
+    "total_voters": 59370
+  },
+  "PHG_N13": {
+    "malay": 60.9,
+    "chinese": 29.6,
+    "indian": 8.3,
+    "orang_asli": 0.1,
+    "others": 1.1,
+    "total_voters": 61179
+  },
+  "PHG_N14": {
+    "malay": 37.6,
+    "chinese": 55.4,
+    "indian": 5.9,
+    "orang_asli": 0.1,
+    "others": 1.1,
+    "total_voters": 30854
+  },
+  "PHG_N15": {
+    "malay": 83.6,
+    "chinese": 13.0,
+    "indian": 2.1,
+    "orang_asli": 0.2,
+    "others": 1.1,
+    "total_voters": 38185
+  },
+  "PHG_N16": {
+    "malay": 92.6,
+    "chinese": 4.4,
+    "indian": 1.0,
+    "orang_asli": 0.5,
+    "others": 1.5,
+    "total_voters": 18558
+  },
+  "PHG_N17": {
+    "malay": 86.7,
+    "chinese": 9.7,
+    "indian": 0.3,
+    "orang_asli": 2.7,
+    "others": 0.6,
+    "total_voters": 19130
+  },
+  "PHG_N18": {
+    "malay": 80.8,
+    "chinese": 13.2,
+    "indian": 2.3,
+    "orang_asli": 2.6,
+    "others": 1.1,
+    "total_voters": 25728
+  },
+  "PHG_N19": {
+    "malay": 85.1,
+    "chinese": 10.0,
+    "indian": 2.5,
+    "orang_asli": 0.2,
+    "others": 2.2,
+    "total_voters": 34886
+  },
+  "PHG_N20": {
+    "malay": 90.4,
+    "chinese": 2.3,
+    "indian": 0.7,
+    "orang_asli": 1.9,
+    "others": 4.8,
+    "total_voters": 30113
+  },
+  "PHG_N21": {
+    "malay": 90.5,
+    "chinese": 2.8,
+    "indian": 1.0,
+    "orang_asli": 2.4,
+    "others": 3.3,
+    "total_voters": 41915
+  },
+  "PHG_N22": {
+    "malay": 62.4,
+    "chinese": 0.8,
+    "indian": 0.8,
+    "orang_asli": 32.4,
+    "others": 3.6,
+    "total_voters": 21294
+  },
+  "PHG_N23": {
+    "malay": 88.1,
+    "chinese": 0.3,
+    "indian": 0.1,
+    "orang_asli": 10.9,
+    "others": 0.7,
+    "total_voters": 26121
+  },
+  "PHG_N24": {
+    "malay": 81.0,
+    "chinese": 12.3,
+    "indian": 1.5,
+    "orang_asli": 3.5,
+    "others": 1.7,
+    "total_voters": 16279
+  },
+  "PHG_N25": {
+    "malay": 89.7,
+    "chinese": 5.6,
+    "indian": 1.9,
+    "orang_asli": 2.2,
+    "others": 0.7,
+    "total_voters": 17434
+  },
+  "PHG_N26": {
+    "malay": 96.1,
+    "chinese": 0.5,
+    "indian": 0.8,
+    "orang_asli": 1.6,
+    "others": 1.0,
+    "total_voters": 19415
+  },
+  "PHG_N27": {
+    "malay": 67.7,
+    "chinese": 6.6,
+    "indian": 3.7,
+    "orang_asli": 21.1,
+    "others": 1.0,
+    "total_voters": 13994
+  },
+  "PHG_N28": {
+    "malay": 88.1,
+    "chinese": 3.6,
+    "indian": 2.5,
+    "orang_asli": 4.7,
+    "others": 1.0,
+    "total_voters": 15184
+  },
+  "PHG_N29": {
+    "malay": 98.3,
+    "chinese": 0.1,
+    "indian": 1.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 31359
+  },
+  "PHG_N30": {
+    "malay": 46.8,
+    "chinese": 39.3,
+    "indian": 11.4,
+    "orang_asli": 0.0,
+    "others": 2.5,
+    "total_voters": 37269
+  },
+  "PHG_N31": {
+    "malay": 74.4,
+    "chinese": 8.5,
+    "indian": 11.0,
+    "orang_asli": 2.7,
+    "others": 3.5,
+    "total_voters": 32774
+  },
+  "PHG_N32": {
+    "malay": 79.0,
+    "chinese": 13.5,
+    "indian": 2.2,
+    "orang_asli": 1.6,
+    "others": 3.7,
+    "total_voters": 36786
+  },
+  "PHG_N33": {
+    "malay": 37.3,
+    "chinese": 51.5,
+    "indian": 9.6,
+    "orang_asli": 0.9,
+    "others": 0.9,
+    "total_voters": 24286
+  },
+  "PHG_N34": {
+    "malay": 51.6,
+    "chinese": 39.4,
+    "indian": 4.7,
+    "orang_asli": 2.8,
+    "others": 1.5,
+    "total_voters": 30758
+  },
+  "PHG_N35": {
+    "malay": 40.4,
+    "chinese": 34.0,
+    "indian": 20.2,
+    "orang_asli": 4.7,
+    "others": 0.8,
+    "total_voters": 15643
+  },
+  "PHG_N36": {
+    "malay": 72.1,
+    "chinese": 18.2,
+    "indian": 5.7,
+    "orang_asli": 3.3,
+    "others": 0.6,
+    "total_voters": 16371
+  },
+  "PHG_N37": {
+    "malay": 86.1,
+    "chinese": 6.9,
+    "indian": 2.0,
+    "orang_asli": 4.3,
+    "others": 0.6,
+    "total_voters": 24412
+  },
+  "PHG_N38": {
+    "malay": 30.9,
+    "chinese": 62.7,
+    "indian": 4.8,
+    "orang_asli": 0.7,
+    "others": 0.9,
+    "total_voters": 25891
+  },
+  "PHG_N39": {
+    "malay": 71.5,
+    "chinese": 11.6,
+    "indian": 3.9,
+    "orang_asli": 10.0,
+    "others": 2.9,
+    "total_voters": 27366
+  },
+  "PHG_N40": {
+    "malay": 85.9,
+    "chinese": 0.3,
+    "indian": 1.0,
+    "orang_asli": 11.2,
+    "others": 1.6,
+    "total_voters": 31003
+  },
+  "PHG_N41": {
+    "malay": 79.7,
+    "chinese": 0.6,
+    "indian": 1.2,
+    "orang_asli": 16.9,
+    "others": 1.6,
+    "total_voters": 29663
+  },
+  "PHG_N42": {
+    "malay": 83.9,
+    "chinese": 6.6,
+    "indian": 0.4,
+    "orang_asli": 7.9,
+    "others": 1.2,
+    "total_voters": 28465
+  },
+  "PRK_N01": {
+    "malay": 71.8,
+    "chinese": 8.5,
+    "indian": 4.9,
+    "orang_asli": 6.5,
+    "others": 8.4,
+    "total_voters": 20157
+  },
+  "PRK_N02": {
+    "malay": 63.2,
+    "chinese": 17.0,
+    "indian": 1.6,
+    "orang_asli": 16.5,
+    "others": 1.7,
+    "total_voters": 27408
+  },
+  "PRK_N03": {
+    "malay": 83.6,
+    "chinese": 9.8,
+    "indian": 0.6,
+    "orang_asli": 5.5,
+    "others": 0.6,
+    "total_voters": 21596
+  },
+  "PRK_N04": {
+    "malay": 82.7,
+    "chinese": 14.5,
+    "indian": 2.4,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 15354
+  },
+  "PRK_N05": {
+    "malay": 86.5,
+    "chinese": 7.3,
+    "indian": 5.8,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 22339
+  },
+  "PRK_N06": {
+    "malay": 94.8,
+    "chinese": 1.6,
+    "indian": 3.1,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 21358
+  },
+  "PRK_N07": {
+    "malay": 89.0,
+    "chinese": 2.6,
+    "indian": 7.8,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 22022
+  },
+  "PRK_N08": {
+    "malay": 73.3,
+    "chinese": 17.4,
+    "indian": 8.4,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 35900
+  },
+  "PRK_N09": {
+    "malay": 63.3,
+    "chinese": 35.2,
+    "indian": 1.3,
+    "orang_asli": 0.0,
+    "others": 0.2,
+    "total_voters": 32602
+  },
+  "PRK_N10": {
+    "malay": 75.7,
+    "chinese": 10.3,
+    "indian": 13.7,
+    "orang_asli": 0.0,
+    "others": 0.2,
+    "total_voters": 28656
+  },
+  "PRK_N11": {
+    "malay": 86.7,
+    "chinese": 8.8,
+    "indian": 4.0,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 27396
+  },
+  "PRK_N12": {
+    "malay": 72.2,
+    "chinese": 18.7,
+    "indian": 8.9,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 24241
+  },
+  "PRK_N13": {
+    "malay": 67.8,
+    "chinese": 23.5,
+    "indian": 8.2,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 40222
+  },
+  "PRK_N14": {
+    "malay": 72.5,
+    "chinese": 16.9,
+    "indian": 9.9,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 37003
+  },
+  "PRK_N15": {
+    "malay": 77.4,
+    "chinese": 13.3,
+    "indian": 8.9,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 17028
+  },
+  "PRK_N16": {
+    "malay": 67.1,
+    "chinese": 17.7,
+    "indian": 13.3,
+    "orang_asli": 0.1,
+    "others": 1.9,
+    "total_voters": 39850
+  },
+  "PRK_N17": {
+    "malay": 23.9,
+    "chinese": 63.0,
+    "indian": 11.2,
+    "orang_asli": 0.0,
+    "others": 2.0,
+    "total_voters": 36513
+  },
+  "PRK_N18": {
+    "malay": 28.8,
+    "chinese": 52.5,
+    "indian": 18.1,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 45203
+  },
+  "PRK_N19": {
+    "malay": 81.4,
+    "chinese": 13.2,
+    "indian": 5.0,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 17782
+  },
+  "PRK_N20": {
+    "malay": 75.3,
+    "chinese": 16.1,
+    "indian": 8.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 20904
+  },
+  "PRK_N21": {
+    "malay": 55.0,
+    "chinese": 16.0,
+    "indian": 12.6,
+    "orang_asli": 16.1,
+    "others": 0.3,
+    "total_voters": 33107
+  },
+  "PRK_N22": {
+    "malay": 16.8,
+    "chinese": 50.1,
+    "indian": 28.3,
+    "orang_asli": 4.3,
+    "others": 0.5,
+    "total_voters": 39288
+  },
+  "PRK_N23": {
+    "malay": 70.8,
+    "chinese": 16.6,
+    "indian": 11.7,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 86266
+  },
+  "PRK_N24": {
+    "malay": 57.7,
+    "chinese": 25.0,
+    "indian": 13.3,
+    "orang_asli": 2.1,
+    "others": 1.9,
+    "total_voters": 74292
+  },
+  "PRK_N25": {
+    "malay": 9.3,
+    "chinese": 79.4,
+    "indian": 9.9,
+    "orang_asli": 0.0,
+    "others": 1.3,
+    "total_voters": 41021
+  },
+  "PRK_N26": {
+    "malay": 57.8,
+    "chinese": 31.6,
+    "indian": 9.4,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 37223
+  },
+  "PRK_N27": {
+    "malay": 5.7,
+    "chinese": 90.7,
+    "indian": 3.2,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 39934
+  },
+  "PRK_N28": {
+    "malay": 15.2,
+    "chinese": 69.8,
+    "indian": 14.3,
+    "orang_asli": 0.1,
+    "others": 0.6,
+    "total_voters": 52750
+  },
+  "PRK_N29": {
+    "malay": 21.2,
+    "chinese": 61.1,
+    "indian": 16.6,
+    "orang_asli": 0.1,
+    "others": 1.1,
+    "total_voters": 25190
+  },
+  "PRK_N30": {
+    "malay": 5.8,
+    "chinese": 41.5,
+    "indian": 52.0,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 36714
+  },
+  "PRK_N31": {
+    "malay": 5.3,
+    "chinese": 66.9,
+    "indian": 27.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 35088
+  },
+  "PRK_N32": {
+    "malay": 6.1,
+    "chinese": 81.8,
+    "indian": 11.6,
+    "orang_asli": 0.1,
+    "others": 0.5,
+    "total_voters": 38689
+  },
+  "PRK_N33": {
+    "malay": 26.7,
+    "chinese": 57.6,
+    "indian": 15.0,
+    "orang_asli": 0.2,
+    "others": 0.6,
+    "total_voters": 38119
+  },
+  "PRK_N34": {
+    "malay": 69.1,
+    "chinese": 21.6,
+    "indian": 6.3,
+    "orang_asli": 2.5,
+    "others": 0.5,
+    "total_voters": 22194
+  },
+  "PRK_N35": {
+    "malay": 71.9,
+    "chinese": 20.5,
+    "indian": 6.7,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 24791
+  },
+  "PRK_N36": {
+    "malay": 69.4,
+    "chinese": 19.8,
+    "indian": 10.3,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 22573
+  },
+  "PRK_N37": {
+    "malay": 17.4,
+    "chinese": 62.9,
+    "indian": 19.2,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 44432
+  },
+  "PRK_N38": {
+    "malay": 14.6,
+    "chinese": 70.4,
+    "indian": 13.5,
+    "orang_asli": 0.0,
+    "others": 1.5,
+    "total_voters": 41244
+  },
+  "PRK_N39": {
+    "malay": 85.9,
+    "chinese": 4.8,
+    "indian": 6.0,
+    "orang_asli": 2.5,
+    "others": 0.8,
+    "total_voters": 17767
+  },
+  "PRK_N40": {
+    "malay": 96.3,
+    "chinese": 0.3,
+    "indian": 0.5,
+    "orang_asli": 2.1,
+    "others": 0.9,
+    "total_voters": 30148
+  },
+  "PRK_N41": {
+    "malay": 24.0,
+    "chinese": 65.6,
+    "indian": 9.7,
+    "orang_asli": 0.1,
+    "others": 0.5,
+    "total_voters": 29701
+  },
+  "PRK_N42": {
+    "malay": 15.2,
+    "chinese": 70.7,
+    "indian": 11.7,
+    "orang_asli": 1.7,
+    "others": 0.8,
+    "total_voters": 28248
+  },
+  "PRK_N43": {
+    "malay": 62.0,
+    "chinese": 24.2,
+    "indian": 9.1,
+    "orang_asli": 4.1,
+    "others": 0.6,
+    "total_voters": 31945
+  },
+  "PRK_N44": {
+    "malay": 61.1,
+    "chinese": 26.1,
+    "indian": 11.5,
+    "orang_asli": 0.1,
+    "others": 1.2,
+    "total_voters": 47931
+  },
+  "PRK_N45": {
+    "malay": 31.4,
+    "chinese": 60.2,
+    "indian": 7.7,
+    "orang_asli": 0.2,
+    "others": 0.6,
+    "total_voters": 62756
+  },
+  "PRK_N46": {
+    "malay": 38.0,
+    "chinese": 42.2,
+    "indian": 10.4,
+    "orang_asli": 8.8,
+    "others": 0.5,
+    "total_voters": 32970
+  },
+  "PRK_N47": {
+    "malay": 34.9,
+    "chinese": 26.5,
+    "indian": 13.3,
+    "orang_asli": 24.3,
+    "others": 1.0,
+    "total_voters": 30006
+  },
+  "PRK_N48": {
+    "malay": 55.6,
+    "chinese": 22.0,
+    "indian": 14.3,
+    "orang_asli": 6.8,
+    "others": 1.3,
+    "total_voters": 31940
+  },
+  "PRK_N49": {
+    "malay": 66.5,
+    "chinese": 25.1,
+    "indian": 4.9,
+    "orang_asli": 3.2,
+    "others": 0.4,
+    "total_voters": 35520
+  },
+  "PRK_N50": {
+    "malay": 94.2,
+    "chinese": 0.5,
+    "indian": 1.8,
+    "orang_asli": 3.1,
+    "others": 0.4,
+    "total_voters": 39241
+  },
+  "PRK_N51": {
+    "malay": 75.2,
+    "chinese": 9.1,
+    "indian": 14.0,
+    "orang_asli": 0.0,
+    "others": 1.8,
+    "total_voters": 62418
+  },
+  "PRK_N52": {
+    "malay": 67.1,
+    "chinese": 23.7,
+    "indian": 5.7,
+    "orang_asli": 0.1,
+    "others": 3.4,
+    "total_voters": 30554
+  },
+  "PRK_N53": {
+    "malay": 67.1,
+    "chinese": 24.1,
+    "indian": 7.8,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 19670
+  },
+  "PRK_N54": {
+    "malay": 50.8,
+    "chinese": 18.8,
+    "indian": 28.8,
+    "orang_asli": 0.0,
+    "others": 1.6,
+    "total_voters": 38513
+  },
+  "PRK_N55": {
+    "malay": 16.7,
+    "chinese": 68.5,
+    "indian": 14.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 39117
+  },
+  "PRK_N56": {
+    "malay": 62.6,
+    "chinese": 13.8,
+    "indian": 22.2,
+    "orang_asli": 0.5,
+    "others": 1.0,
+    "total_voters": 48105
+  },
+  "PRK_N57": {
+    "malay": 20.8,
+    "chinese": 54.1,
+    "indian": 17.6,
+    "orang_asli": 6.7,
+    "others": 0.7,
+    "total_voters": 23375
+  },
+  "PRK_N58": {
+    "malay": 74.5,
+    "chinese": 10.1,
+    "indian": 12.9,
+    "orang_asli": 2.0,
+    "others": 0.5,
+    "total_voters": 30581
+  },
+  "PRK_N59": {
+    "malay": 60.2,
+    "chinese": 16.0,
+    "indian": 10.2,
+    "orang_asli": 11.6,
+    "others": 1.9,
+    "total_voters": 39917
+  },
+  "PLS_N01": {
+    "malay": 78.5,
+    "chinese": 18.3,
+    "indian": 1.9,
+    "orang_asli": 0.0,
+    "others": 1.2,
+    "total_voters": 13403
+  },
+  "PLS_N02": {
+    "malay": 82.4,
+    "chinese": 15.1,
+    "indian": 0.7,
+    "orang_asli": 0.0,
+    "others": 1.8,
+    "total_voters": 12128
+  },
+  "PLS_N03": {
+    "malay": 83.4,
+    "chinese": 2.0,
+    "indian": 0.5,
+    "orang_asli": 0.0,
+    "others": 14.0,
+    "total_voters": 14248
+  },
+  "PLS_N04": {
+    "malay": 91.0,
+    "chinese": 2.4,
+    "indian": 0.9,
+    "orang_asli": 0.1,
+    "others": 5.7,
+    "total_voters": 9662
+  },
+  "PLS_N05": {
+    "malay": 99.0,
+    "chinese": 0.5,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 10751
+  },
+  "PLS_N06": {
+    "malay": 95.4,
+    "chinese": 3.0,
+    "indian": 1.0,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 16366
+  },
+  "PLS_N07": {
+    "malay": 84.4,
+    "chinese": 8.9,
+    "indian": 2.7,
+    "orang_asli": 0.0,
+    "others": 4.0,
+    "total_voters": 15870
+  },
+  "PLS_N08": {
+    "malay": 53.8,
+    "chinese": 39.9,
+    "indian": 3.4,
+    "orang_asli": 0.0,
+    "others": 2.9,
+    "total_voters": 14465
+  },
+  "PLS_N09": {
+    "malay": 77.8,
+    "chinese": 20.8,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.2,
+    "total_voters": 14717
+  },
+  "PLS_N10": {
+    "malay": 95.8,
+    "chinese": 2.0,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 1.8,
+    "total_voters": 13441
+  },
+  "PLS_N11": {
+    "malay": 77.8,
+    "chinese": 14.5,
+    "indian": 5.3,
+    "orang_asli": 0.0,
+    "others": 2.4,
+    "total_voters": 14797
+  },
+  "PLS_N12": {
+    "malay": 82.7,
+    "chinese": 5.2,
+    "indian": 0.7,
+    "orang_asli": 0.0,
+    "others": 11.4,
+    "total_voters": 13451
+  },
+  "PLS_N13": {
+    "malay": 96.9,
+    "chinese": 2.3,
+    "indian": 0.4,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 11510
+  },
+  "PLS_N14": {
+    "malay": 90.6,
+    "chinese": 8.6,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 10697
+  },
+  "PLS_N15": {
+    "malay": 92.6,
+    "chinese": 6.8,
+    "indian": 0.2,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 10421
+  },
+  "PNG_N01": {
+    "malay": 92.9,
+    "chinese": 6.4,
+    "indian": 0.4,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 25229
+  },
+  "PNG_N02": {
+    "malay": 68.7,
+    "chinese": 21.9,
+    "indian": 8.8,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 23881
+  },
+  "PNG_N03": {
+    "malay": 78.5,
+    "chinese": 17.4,
+    "indian": 3.7,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 33971
+  },
+  "PNG_N04": {
+    "malay": 86.5,
+    "chinese": 6.3,
+    "indian": 6.7,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 28229
+  },
+  "PNG_N05": {
+    "malay": 81.2,
+    "chinese": 16.0,
+    "indian": 2.4,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 27840
+  },
+  "PNG_N06": {
+    "malay": 64.9,
+    "chinese": 23.7,
+    "indian": 10.1,
+    "orang_asli": 0.0,
+    "others": 1.2,
+    "total_voters": 24799
+  },
+  "PNG_N07": {
+    "malay": 8.3,
+    "chinese": 83.2,
+    "indian": 8.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 35765
+  },
+  "PNG_N08": {
+    "malay": 15.9,
+    "chinese": 66.8,
+    "indian": 16.8,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 32403
+  },
+  "PNG_N09": {
+    "malay": 23.0,
+    "chinese": 49.8,
+    "indian": 26.5,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 21279
+  },
+  "PNG_N10": {
+    "malay": 68.4,
+    "chinese": 18.4,
+    "indian": 12.1,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 48832
+  },
+  "PNG_N11": {
+    "malay": 75.2,
+    "chinese": 22.3,
+    "indian": 2.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 30380
+  },
+  "PNG_N12": {
+    "malay": 79.7,
+    "chinese": 17.9,
+    "indian": 1.7,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 27974
+  },
+  "PNG_N13": {
+    "malay": 5.1,
+    "chinese": 83.7,
+    "indian": 10.7,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 29059
+  },
+  "PNG_N14": {
+    "malay": 35.1,
+    "chinese": 51.5,
+    "indian": 12.7,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 55803
+  },
+  "PNG_N15": {
+    "malay": 12.9,
+    "chinese": 78.6,
+    "indian": 8.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 35957
+  },
+  "PNG_N16": {
+    "malay": 13.2,
+    "chinese": 49.9,
+    "indian": 35.7,
+    "orang_asli": 0.0,
+    "others": 1.2,
+    "total_voters": 20567
+  },
+  "PNG_N17": {
+    "malay": 36.1,
+    "chinese": 46.0,
+    "indian": 16.8,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 31213
+  },
+  "PNG_N18": {
+    "malay": 17.3,
+    "chinese": 62.9,
+    "indian": 19.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 37032
+  },
+  "PNG_N19": {
+    "malay": 21.2,
+    "chinese": 52.7,
+    "indian": 25.6,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 36350
+  },
+  "PNG_N20": {
+    "malay": 59.5,
+    "chinese": 22.4,
+    "indian": 17.4,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 37781
+  },
+  "PNG_N21": {
+    "malay": 64.0,
+    "chinese": 27.6,
+    "indian": 7.6,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 25931
+  },
+  "PNG_N22": {
+    "malay": 26.0,
+    "chinese": 59.4,
+    "indian": 12.1,
+    "orang_asli": 0.0,
+    "others": 2.5,
+    "total_voters": 29289
+  },
+  "PNG_N23": {
+    "malay": 9.8,
+    "chinese": 80.2,
+    "indian": 9.3,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 15379
+  },
+  "PNG_N24": {
+    "malay": 7.1,
+    "chinese": 75.1,
+    "indian": 16.9,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 24528
+  },
+  "PNG_N25": {
+    "malay": 13.7,
+    "chinese": 75.3,
+    "indian": 8.6,
+    "orang_asli": 0.0,
+    "others": 2.4,
+    "total_voters": 23325
+  },
+  "PNG_N26": {
+    "malay": 7.9,
+    "chinese": 73.0,
+    "indian": 18.4,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 15373
+  },
+  "PNG_N27": {
+    "malay": 2.0,
+    "chinese": 89.6,
+    "indian": 8.0,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 21743
+  },
+  "PNG_N28": {
+    "malay": 11.5,
+    "chinese": 78.6,
+    "indian": 9.0,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 15687
+  },
+  "PNG_N29": {
+    "malay": 26.6,
+    "chinese": 55.9,
+    "indian": 16.6,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 26886
+  },
+  "PNG_N30": {
+    "malay": 30.8,
+    "chinese": 48.3,
+    "indian": 20.1,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 33995
+  },
+  "PNG_N31": {
+    "malay": 6.6,
+    "chinese": 84.5,
+    "indian": 8.3,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 33108
+  },
+  "PNG_N32": {
+    "malay": 22.2,
+    "chinese": 64.5,
+    "indian": 12.4,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 31562
+  },
+  "PNG_N33": {
+    "malay": 23.2,
+    "chinese": 65.1,
+    "indian": 11.0,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 23098
+  },
+  "PNG_N34": {
+    "malay": 7.7,
+    "chinese": 77.8,
+    "indian": 13.7,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 62474
+  },
+  "PNG_N35": {
+    "malay": 25.5,
+    "chinese": 58.6,
+    "indian": 14.7,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 43132
+  },
+  "PNG_N36": {
+    "malay": 35.8,
+    "chinese": 50.5,
+    "indian": 12.5,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 29730
+  },
+  "PNG_N37": {
+    "malay": 53.1,
+    "chinese": 36.1,
+    "indian": 9.6,
+    "orang_asli": 0.0,
+    "others": 1.2,
+    "total_voters": 46778
+  },
+  "PNG_N38": {
+    "malay": 63.6,
+    "chinese": 29.8,
+    "indian": 5.7,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 38866
+  },
+  "PNG_N39": {
+    "malay": 66.2,
+    "chinese": 28.7,
+    "indian": 4.2,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 23578
+  },
+  "PNG_N40": {
+    "malay": 67.8,
+    "chinese": 27.9,
+    "indian": 3.6,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 17820
+  },
+  "SGR_N01": {
+    "malay": 84.3,
+    "chinese": 12.2,
+    "indian": 2.7,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 19961
+  },
+  "SGR_N02": {
+    "malay": 79.6,
+    "chinese": 13.6,
+    "indian": 6.2,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 31648
+  },
+  "SGR_N03": {
+    "malay": 81.3,
+    "chinese": 16.1,
+    "indian": 1.6,
+    "orang_asli": 0.0,
+    "others": 1.0,
+    "total_voters": 40465
+  },
+  "SGR_N04": {
+    "malay": 43.9,
+    "chinese": 51.7,
+    "indian": 2.9,
+    "orang_asli": 0.0,
+    "others": 1.5,
+    "total_voters": 23917
+  },
+  "SGR_N05": {
+    "malay": 70.1,
+    "chinese": 14.9,
+    "indian": 13.1,
+    "orang_asli": 0.7,
+    "others": 1.3,
+    "total_voters": 30189
+  },
+  "SGR_N06": {
+    "malay": 46.1,
+    "chinese": 30.9,
+    "indian": 18.1,
+    "orang_asli": 2.9,
+    "others": 1.9,
+    "total_voters": 39808
+  },
+  "SGR_N07": {
+    "malay": 68.7,
+    "chinese": 13.0,
+    "indian": 14.2,
+    "orang_asli": 1.8,
+    "others": 2.4,
+    "total_voters": 84320
+  },
+  "SGR_N08": {
+    "malay": 83.2,
+    "chinese": 12.9,
+    "indian": 2.5,
+    "orang_asli": 0.0,
+    "others": 1.3,
+    "total_voters": 31570
+  },
+  "SGR_N09": {
+    "malay": 63.0,
+    "chinese": 21.6,
+    "indian": 14.0,
+    "orang_asli": 0.0,
+    "others": 1.4,
+    "total_voters": 30624
+  },
+  "SGR_N10": {
+    "malay": 60.2,
+    "chinese": 15.5,
+    "indian": 22.0,
+    "orang_asli": 0.0,
+    "others": 2.3,
+    "total_voters": 37649
+  },
+  "SGR_N11": {
+    "malay": 61.4,
+    "chinese": 13.3,
+    "indian": 24.4,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 30344
+  },
+  "SGR_N12": {
+    "malay": 79.8,
+    "chinese": 6.9,
+    "indian": 12.1,
+    "orang_asli": 0.0,
+    "others": 1.3,
+    "total_voters": 34958
+  },
+  "SGR_N13": {
+    "malay": 76.6,
+    "chinese": 10.1,
+    "indian": 8.5,
+    "orang_asli": 0.8,
+    "others": 4.1,
+    "total_voters": 44424
+  },
+  "SGR_N14": {
+    "malay": 31.4,
+    "chinese": 39.0,
+    "indian": 25.9,
+    "orang_asli": 0.0,
+    "others": 3.7,
+    "total_voters": 75145
+  },
+  "SGR_N15": {
+    "malay": 59.1,
+    "chinese": 22.1,
+    "indian": 14.7,
+    "orang_asli": 0.1,
+    "others": 4.0,
+    "total_voters": 61970
+  },
+  "SGR_N16": {
+    "malay": 57.2,
+    "chinese": 12.5,
+    "indian": 23.3,
+    "orang_asli": 0.1,
+    "others": 6.9,
+    "total_voters": 48640
+  },
+  "SGR_N17": {
+    "malay": 67.4,
+    "chinese": 11.7,
+    "indian": 9.4,
+    "orang_asli": 1.1,
+    "others": 10.5,
+    "total_voters": 86963
+  },
+  "SGR_N18": {
+    "malay": 82.0,
+    "chinese": 8.6,
+    "indian": 4.0,
+    "orang_asli": 0.1,
+    "others": 5.2,
+    "total_voters": 71141
+  },
+  "SGR_N19": {
+    "malay": 46.7,
+    "chinese": 41.1,
+    "indian": 7.2,
+    "orang_asli": 0.0,
+    "others": 5.0,
+    "total_voters": 68503
+  },
+  "SGR_N20": {
+    "malay": 56.8,
+    "chinese": 22.9,
+    "indian": 12.2,
+    "orang_asli": 0.0,
+    "others": 8.0,
+    "total_voters": 64991
+  },
+  "SGR_N21": {
+    "malay": 55.3,
+    "chinese": 30.8,
+    "indian": 7.5,
+    "orang_asli": 0.0,
+    "others": 6.3,
+    "total_voters": 70260
+  },
+  "SGR_N22": {
+    "malay": 26.8,
+    "chinese": 61.5,
+    "indian": 8.2,
+    "orang_asli": 0.0,
+    "others": 3.5,
+    "total_voters": 78470
+  },
+  "SGR_N23": {
+    "malay": 57.2,
+    "chinese": 28.5,
+    "indian": 7.5,
+    "orang_asli": 1.2,
+    "others": 5.6,
+    "total_voters": 73049
+  },
+  "SGR_N24": {
+    "malay": 68.8,
+    "chinese": 14.9,
+    "indian": 13.1,
+    "orang_asli": 0.7,
+    "others": 2.6,
+    "total_voters": 93853
+  },
+  "SGR_N25": {
+    "malay": 39.1,
+    "chinese": 43.4,
+    "indian": 14.4,
+    "orang_asli": 0.0,
+    "others": 3.2,
+    "total_voters": 107100
+  },
+  "SGR_N26": {
+    "malay": 76.3,
+    "chinese": 9.5,
+    "indian": 9.3,
+    "orang_asli": 0.0,
+    "others": 4.8,
+    "total_voters": 94255
+  },
+  "SGR_N27": {
+    "malay": 33.3,
+    "chinese": 55.3,
+    "indian": 9.2,
+    "orang_asli": 0.0,
+    "others": 2.2,
+    "total_voters": 102075
+  },
+  "SGR_N28": {
+    "malay": 11.1,
+    "chinese": 78.7,
+    "indian": 8.9,
+    "orang_asli": 0.0,
+    "others": 1.4,
+    "total_voters": 61996
+  },
+  "SGR_N29": {
+    "malay": 55.5,
+    "chinese": 29.2,
+    "indian": 12.3,
+    "orang_asli": 0.3,
+    "others": 2.7,
+    "total_voters": 90865
+  },
+  "SGR_N30": {
+    "malay": 25.3,
+    "chinese": 53.0,
+    "indian": 19.5,
+    "orang_asli": 0.0,
+    "others": 2.3,
+    "total_voters": 120415
+  },
+  "SGR_N31": {
+    "malay": 27.6,
+    "chinese": 55.1,
+    "indian": 13.8,
+    "orang_asli": 0.0,
+    "others": 3.5,
+    "total_voters": 110525
+  },
+  "SGR_N32": {
+    "malay": 52.1,
+    "chinese": 20.4,
+    "indian": 23.7,
+    "orang_asli": 0.0,
+    "others": 3.8,
+    "total_voters": 79246
+  },
+  "SGR_N33": {
+    "malay": 65.0,
+    "chinese": 12.0,
+    "indian": 19.9,
+    "orang_asli": 0.0,
+    "others": 3.0,
+    "total_voters": 61585
+  },
+  "SGR_N34": {
+    "malay": 16.8,
+    "chinese": 62.6,
+    "indian": 17.1,
+    "orang_asli": 0.0,
+    "others": 3.5,
+    "total_voters": 54317
+  },
+  "SGR_N35": {
+    "malay": 14.9,
+    "chinese": 72.7,
+    "indian": 10.0,
+    "orang_asli": 0.0,
+    "others": 2.3,
+    "total_voters": 58510
+  },
+  "SGR_N36": {
+    "malay": 15.1,
+    "chinese": 72.5,
+    "indian": 8.6,
+    "orang_asli": 0.0,
+    "others": 3.7,
+    "total_voters": 72269
+  },
+  "SGR_N37": {
+    "malay": 27.7,
+    "chinese": 58.2,
+    "indian": 10.8,
+    "orang_asli": 0.6,
+    "others": 2.8,
+    "total_voters": 108324
+  },
+  "SGR_N38": {
+    "malay": 66.2,
+    "chinese": 15.4,
+    "indian": 9.2,
+    "orang_asli": 0.1,
+    "others": 9.1,
+    "total_voters": 70729
+  },
+  "SGR_N39": {
+    "malay": 60.2,
+    "chinese": 24.8,
+    "indian": 11.2,
+    "orang_asli": 0.0,
+    "others": 3.7,
+    "total_voters": 87361
+  },
+  "SGR_N40": {
+    "malay": 72.4,
+    "chinese": 17.1,
+    "indian": 8.6,
+    "orang_asli": 0.2,
+    "others": 1.8,
+    "total_voters": 90996
+  },
+  "SGR_N41": {
+    "malay": 74.8,
+    "chinese": 7.5,
+    "indian": 15.6,
+    "orang_asli": 0.0,
+    "others": 2.1,
+    "total_voters": 74748
+  },
+  "SGR_N42": {
+    "malay": 56.9,
+    "chinese": 16.9,
+    "indian": 24.7,
+    "orang_asli": 0.0,
+    "others": 1.5,
+    "total_voters": 64367
+  },
+  "SGR_N43": {
+    "malay": 74.3,
+    "chinese": 13.5,
+    "indian": 10.2,
+    "orang_asli": 0.0,
+    "others": 2.0,
+    "total_voters": 67782
+  },
+  "SGR_N44": {
+    "malay": 73.8,
+    "chinese": 15.2,
+    "indian": 6.8,
+    "orang_asli": 0.2,
+    "others": 4.0,
+    "total_voters": 57220
+  },
+  "SGR_N45": {
+    "malay": 15.9,
+    "chinese": 67.8,
+    "indian": 15.1,
+    "orang_asli": 0.0,
+    "others": 1.1,
+    "total_voters": 82340
+  },
+  "SGR_N46": {
+    "malay": 61.9,
+    "chinese": 18.1,
+    "indian": 16.5,
+    "orang_asli": 0.4,
+    "others": 3.2,
+    "total_voters": 50913
+  },
+  "SGR_N47": {
+    "malay": 15.3,
+    "chinese": 59.4,
+    "indian": 22.6,
+    "orang_asli": 0.0,
+    "others": 2.7,
+    "total_voters": 75660
+  },
+  "SGR_N48": {
+    "malay": 15.0,
+    "chinese": 41.1,
+    "indian": 41.0,
+    "orang_asli": 0.0,
+    "others": 2.9,
+    "total_voters": 88435
+  },
+  "SGR_N49": {
+    "malay": 68.9,
+    "chinese": 13.0,
+    "indian": 15.3,
+    "orang_asli": 0.0,
+    "others": 2.8,
+    "total_voters": 76676
+  },
+  "SGR_N50": {
+    "malay": 39.9,
+    "chinese": 33.1,
+    "indian": 23.3,
+    "orang_asli": 0.0,
+    "others": 3.6,
+    "total_voters": 79601
+  },
+  "SGR_N51": {
+    "malay": 71.1,
+    "chinese": 8.0,
+    "indian": 14.5,
+    "orang_asli": 4.1,
+    "others": 2.4,
+    "total_voters": 60902
+  },
+  "SGR_N52": {
+    "malay": 18.0,
+    "chinese": 57.6,
+    "indian": 22.4,
+    "orang_asli": 0.6,
+    "others": 1.4,
+    "total_voters": 44454
+  },
+  "SGR_N53": {
+    "malay": 71.1,
+    "chinese": 10.7,
+    "indian": 15.5,
+    "orang_asli": 0.6,
+    "others": 2.2,
+    "total_voters": 43281
+  },
+  "SGR_N54": {
+    "malay": 57.7,
+    "chinese": 26.3,
+    "indian": 11.8,
+    "orang_asli": 3.4,
+    "others": 0.8,
+    "total_voters": 32114
+  },
+  "SGR_N55": {
+    "malay": 69.0,
+    "chinese": 14.3,
+    "indian": 10.9,
+    "orang_asli": 2.7,
+    "others": 3.1,
+    "total_voters": 89739
+  },
+  "SGR_N56": {
+    "malay": 56.1,
+    "chinese": 23.2,
+    "indian": 17.8,
+    "orang_asli": 0.1,
+    "others": 2.9,
+    "total_voters": 46186
+  },
+  "TRG_N01": {
+    "malay": 98.5,
+    "chinese": 0.6,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 26745
+  },
+  "TRG_N02": {
+    "malay": 98.7,
+    "chinese": 0.5,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 32303
+  },
+  "TRG_N03": {
+    "malay": 96.0,
+    "chinese": 3.3,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 28927
+  },
+  "TRG_N04": {
+    "malay": 98.8,
+    "chinese": 0.8,
+    "indian": 0.0,
+    "orang_asli": 0.1,
+    "others": 0.3,
+    "total_voters": 23675
+  },
+  "TRG_N05": {
+    "malay": 99.1,
+    "chinese": 0.4,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 24919
+  },
+  "TRG_N06": {
+    "malay": 99.1,
+    "chinese": 0.4,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 30464
+  },
+  "TRG_N07": {
+    "malay": 99.4,
+    "chinese": 0.0,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 22269
+  },
+  "TRG_N08": {
+    "malay": 99.4,
+    "chinese": 0.2,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 29642
+  },
+  "TRG_N09": {
+    "malay": 98.6,
+    "chinese": 0.7,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 30120
+  },
+  "TRG_N10": {
+    "malay": 98.1,
+    "chinese": 1.6,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.2,
+    "total_voters": 27587
+  },
+  "TRG_N11": {
+    "malay": 99.0,
+    "chinese": 0.2,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 27303
+  },
+  "TRG_N12": {
+    "malay": 97.5,
+    "chinese": 1.9,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 20942
+  },
+  "TRG_N13": {
+    "malay": 99.2,
+    "chinese": 0.5,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.3,
+    "total_voters": 34303
+  },
+  "TRG_N14": {
+    "malay": 66.3,
+    "chinese": 32.0,
+    "indian": 1.2,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 22215
+  },
+  "TRG_N15": {
+    "malay": 89.2,
+    "chinese": 9.0,
+    "indian": 1.0,
+    "orang_asli": 0.0,
+    "others": 0.8,
+    "total_voters": 26268
+  },
+  "TRG_N16": {
+    "malay": 96.7,
+    "chinese": 2.4,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 40519
+  },
+  "TRG_N17": {
+    "malay": 96.8,
+    "chinese": 2.7,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 35638
+  },
+  "TRG_N18": {
+    "malay": 99.1,
+    "chinese": 0.3,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 28553
+  },
+  "TRG_N19": {
+    "malay": 99.0,
+    "chinese": 0.4,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 32587
+  },
+  "TRG_N20": {
+    "malay": 95.8,
+    "chinese": 3.6,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 34978
+  },
+  "TRG_N21": {
+    "malay": 98.3,
+    "chinese": 0.1,
+    "indian": 0.0,
+    "orang_asli": 1.3,
+    "others": 0.3,
+    "total_voters": 21369
+  },
+  "TRG_N22": {
+    "malay": 99.5,
+    "chinese": 0.3,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.2,
+    "total_voters": 20531
+  },
+  "TRG_N23": {
+    "malay": 98.9,
+    "chinese": 0.7,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.4,
+    "total_voters": 21308
+  },
+  "TRG_N24": {
+    "malay": 98.8,
+    "chinese": 0.6,
+    "indian": 0.0,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 24709
+  },
+  "TRG_N25": {
+    "malay": 99.1,
+    "chinese": 0.2,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.6,
+    "total_voters": 18102
+  },
+  "TRG_N26": {
+    "malay": 98.0,
+    "chinese": 0.5,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 1.5,
+    "total_voters": 32922
+  },
+  "TRG_N27": {
+    "malay": 93.0,
+    "chinese": 6.2,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 0.5,
+    "total_voters": 30130
+  },
+  "TRG_N28": {
+    "malay": 94.3,
+    "chinese": 4.6,
+    "indian": 0.1,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 34405
+  },
+  "TRG_N29": {
+    "malay": 96.2,
+    "chinese": 2.8,
+    "indian": 0.3,
+    "orang_asli": 0.0,
+    "others": 0.7,
+    "total_voters": 28315
+  },
+  "TRG_N30": {
+    "malay": 96.8,
+    "chinese": 1.7,
+    "indian": 0.2,
+    "orang_asli": 0.0,
+    "others": 1.3,
+    "total_voters": 29046
+  },
+  "TRG_N31": {
+    "malay": 86.7,
+    "chinese": 11.6,
+    "indian": 0.8,
+    "orang_asli": 0.0,
+    "others": 0.9,
+    "total_voters": 38776
+  },
+  "TRG_N32": {
+    "malay": 94.9,
+    "chinese": 2.8,
+    "indian": 0.6,
+    "orang_asli": 0.7,
+    "others": 1.0,
+    "total_voters": 43286
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "electionId": "prn-terengganu-2026",
+  "name": "PRN Terengganu 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_trg_dun.json",
+  "state": "Terengganu",
+  "dunToParlimen": {
+    "N01": "P033",
+    "N02": "P033",
+    "N20": "P037",
+    "N03": "P033",
+    "N04": "P033",
+    "N05": "P034",
+    "N06": "P034",
+    "N07": "P034",
+    "N08": "P034",
+    "N09": "P035",
+    "N10": "P035",
+    "N11": "P035",
+    "N12": "P035",
+    "N13": "P036",
+    "N14": "P036",
+    "N15": "P036",
+    "N16": "P036",
+    "N17": "P037",
+    "N18": "P037",
+    "N19": "P037",
+    "N21": "P038",
+    "N22": "P038",
+    "N23": "P038",
+    "N24": "P038",
+    "N25": "P039",
+    "N26": "P039",
+    "N27": "P039",
+    "N28": "P039",
+    "N29": "P040",
+    "N30": "P040",
+    "N31": "P040",
+    "N32": "P040"
+  },
+  "parlimenInfo": {
+    "P033": {
+      "name": "Besut",
+      "dunCount": 4
+    },
+    "P034": {
+      "name": "Setiu",
+      "dunCount": 4
+    },
+    "P035": {
+      "name": "Kuala Nerus",
+      "dunCount": 4
+    },
+    "P036": {
+      "name": "Marang",
+      "dunCount": 4
+    },
+    "P037": {
+      "name": "Marang",
+      "dunCount": 4
+    },
+    "P038": {
+      "name": "Hulu Terengganu",
+      "dunCount": 4
+    },
+    "P039": {
+      "name": "Dungun",
+      "dunCount": 4
+    },
+    "P040": {
+      "name": "Kemaman",
+      "dunCount": 4
+    },
+    "TG05": {
+      "name": "None",
+      "dunCount": 1
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Terengganu-Maps"
+  }
+}

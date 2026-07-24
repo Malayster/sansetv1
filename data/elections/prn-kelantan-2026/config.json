@@ -1,0 +1,119 @@
+{
+  "electionId": "prn-kelantan-2026",
+  "name": "PRN Kelantan 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_ktn_dun.json",
+  "state": "Kelantan",
+  "dunToParlimen": {
+    "N01": "P019",
+    "N02": "P019",
+    "N03": "P019",
+    "N04": "P019",
+    "N05": "P020",
+    "N06": "P020",
+    "N07": "P020",
+    "N08": "P021",
+    "N09": "P021",
+    "N10": "P021",
+    "N11": "P022",
+    "N12": "P022",
+    "N13": "P022",
+    "N14": "P023",
+    "N15": "P023",
+    "N16": "P023",
+    "N17": "P024",
+    "N18": "P024",
+    "N19": "P024",
+    "N20": "P025",
+    "N21": "P025",
+    "N22": "P025",
+    "N23": "P026",
+    "N24": "P026",
+    "N25": "P026",
+    "N26": "P027",
+    "N27": "P027",
+    "N28": "P027",
+    "N29": "P028",
+    "N30": "P028",
+    "N31": "P028",
+    "N32": "P028",
+    "N33": "P029",
+    "N34": "P029",
+    "N35": "P029",
+    "N36": "P030",
+    "N37": "P030",
+    "N38": "P030",
+    "N39": "P031",
+    "N40": "P031",
+    "N41": "P031",
+    "N42": "P031",
+    "N43": "P032",
+    "N44": "P032",
+    "N45": "P032"
+  },
+  "parlimenInfo": {
+    "P019": {
+      "name": "Tumpat",
+      "dunCount": 4
+    },
+    "P020": {
+      "name": "Pengkalan Chepa",
+      "dunCount": 3
+    },
+    "P021": {
+      "name": "Kota Bharu",
+      "dunCount": 3
+    },
+    "P022": {
+      "name": "Pasir Mas",
+      "dunCount": 3
+    },
+    "P023": {
+      "name": "Rantau Panjang",
+      "dunCount": 3
+    },
+    "P024": {
+      "name": "Kubang Kerian",
+      "dunCount": 3
+    },
+    "P025": {
+      "name": "Bachok",
+      "dunCount": 3
+    },
+    "P026": {
+      "name": "Ketereh",
+      "dunCount": 3
+    },
+    "P027": {
+      "name": "Tanah Merah",
+      "dunCount": 3
+    },
+    "P028": {
+      "name": "Pasir Puteh",
+      "dunCount": 4
+    },
+    "P029": {
+      "name": "Machang",
+      "dunCount": 3
+    },
+    "P030": {
+      "name": "Jeli",
+      "dunCount": 3
+    },
+    "P031": {
+      "name": "Kuala Krai",
+      "dunCount": 4
+    },
+    "P032": {
+      "name": "Gua Musang",
+      "dunCount": 3
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Kelantan-Maps"
+  }
+}

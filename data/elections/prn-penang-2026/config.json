@@ -1,0 +1,114 @@
+{
+  "electionId": "prn-penang-2026",
+  "name": "PRN Pulau Pinang 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_png_dun.json",
+  "state": "Pulau Pinang",
+  "dunToParlimen": {
+    "N01": "P041",
+    "N02": "P041",
+    "N03": "P041",
+    "N36": "P052",
+    "N04": "P042",
+    "N05": "P042",
+    "N06": "P042",
+    "N07": "P043",
+    "N08": "P043",
+    "N09": "P043",
+    "N10": "P044",
+    "N11": "P044",
+    "N12": "P044",
+    "N13": "P045",
+    "N14": "P045",
+    "N15": "P045",
+    "N16": "P046",
+    "N17": "P046",
+    "N18": "P046",
+    "N19": "P047",
+    "N20": "P047",
+    "N21": "P047",
+    "N22": "P048",
+    "N23": "P048",
+    "N24": "P048",
+    "N25": "P048",
+    "N26": "P049",
+    "N27": "P049",
+    "N28": "P049",
+    "N29": "P050",
+    "N30": "P050",
+    "N31": "P050",
+    "N32": "P051",
+    "N33": "P051",
+    "N34": "P051",
+    "N35": "P052",
+    "N37": "P052",
+    "N38": "P053",
+    "N39": "P053",
+    "N40": "P053"
+  },
+  "parlimenInfo": {
+    "P041": {
+      "name": "Kepala Batas",
+      "dunCount": 3
+    },
+    "P042": {
+      "name": "Tasek Gelugor",
+      "dunCount": 3
+    },
+    "P043": {
+      "name": "Bagan",
+      "dunCount": 3
+    },
+    "P044": {
+      "name": "Permatang Pauh",
+      "dunCount": 3
+    },
+    "P045": {
+      "name": "Bukit Mertajam",
+      "dunCount": 3
+    },
+    "P046": {
+      "name": "Batu Kawan",
+      "dunCount": 3
+    },
+    "P047": {
+      "name": "Nibong Tebal",
+      "dunCount": 3
+    },
+    "P048": {
+      "name": "Bukit Bendera",
+      "dunCount": 4
+    },
+    "P049": {
+      "name": "Tanjong",
+      "dunCount": 3
+    },
+    "P050": {
+      "name": "Jelutong",
+      "dunCount": 3
+    },
+    "P051": {
+      "name": "Bukit Gelugor",
+      "dunCount": 3
+    },
+    "P052": {
+      "name": "Bayan Baru",
+      "dunCount": 3
+    },
+    "P053": {
+      "name": "Balik Pulau",
+      "dunCount": 3
+    },
+    "PP12": {
+      "name": "None",
+      "dunCount": 1
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Pulau Pinang-Maps"
+  }
+}

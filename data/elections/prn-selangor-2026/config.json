@@ -1,0 +1,162 @@
+{
+  "electionId": "prn-selangor-2026",
+  "name": "PRN Selangor 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_sgr_dun.json",
+  "state": "Selangor",
+  "dunToParlimen": {
+    "N01": "P092",
+    "N02": "P092",
+    "N03": "P093",
+    "N04": "P093",
+    "N05": "P094",
+    "N06": "P094",
+    "N07": "P094",
+    "N08": "P095",
+    "N09": "P095",
+    "N10": "P096",
+    "N11": "P096",
+    "N12": "P096",
+    "N13": "P097",
+    "N14": "P097",
+    "N15": "P097",
+    "N16": "P098",
+    "N17": "P098",
+    "N18": "P098",
+    "N19": "P099",
+    "N20": "P099",
+    "N21": "P100",
+    "N22": "P100",
+    "N23": "P101",
+    "N24": "P101",
+    "N25": "P101",
+    "N26": "P102",
+    "N27": "P102",
+    "N28": "P102",
+    "N29": "P103",
+    "N30": "P104",
+    "N31": "P104",
+    "N32": "P105",
+    "N33": "P105",
+    "N34": "P105",
+    "N35": "P106",
+    "N36": "P106",
+    "N37": "P106",
+    "N38": "P107",
+    "N39": "P107",
+    "N40": "P108",
+    "N41": "P108",
+    "N42": "P109",
+    "N43": "P109",
+    "N44": "P109",
+    "N45": "P110",
+    "N46": "P110",
+    "N47": "P110",
+    "N48": "P111",
+    "N49": "P111",
+    "N50": "P111",
+    "N51": "P112",
+    "N52": "P112",
+    "N53": "P112",
+    "N54": "P113",
+    "N55": "P113",
+    "N56": "P113"
+  },
+  "parlimenInfo": {
+    "P092": {
+      "name": "Sabak Bernam",
+      "dunCount": 2
+    },
+    "P093": {
+      "name": "Sungai Besar",
+      "dunCount": 2
+    },
+    "P094": {
+      "name": "Hulu Selangor",
+      "dunCount": 3
+    },
+    "P095": {
+      "name": "Tanjong Karang",
+      "dunCount": 2
+    },
+    "P096": {
+      "name": "Kuala Selangor",
+      "dunCount": 3
+    },
+    "P097": {
+      "name": "Selayang",
+      "dunCount": 3
+    },
+    "P098": {
+      "name": "Gombak",
+      "dunCount": 3
+    },
+    "P099": {
+      "name": "Ampang",
+      "dunCount": 2
+    },
+    "P100": {
+      "name": "Pandan",
+      "dunCount": 2
+    },
+    "P101": {
+      "name": "Hulu Langat",
+      "dunCount": 3
+    },
+    "P102": {
+      "name": "Serdang",
+      "dunCount": 3
+    },
+    "P103": {
+      "name": "Puchong",
+      "dunCount": 1
+    },
+    "P104": {
+      "name": "Subang",
+      "dunCount": 2
+    },
+    "P105": {
+      "name": "Petaling Jaya",
+      "dunCount": 3
+    },
+    "P106": {
+      "name": "Damansara",
+      "dunCount": 3
+    },
+    "P107": {
+      "name": "Sungai Buloh",
+      "dunCount": 2
+    },
+    "P108": {
+      "name": "Shah Alam",
+      "dunCount": 2
+    },
+    "P109": {
+      "name": "Kapar",
+      "dunCount": 3
+    },
+    "P110": {
+      "name": "Klang",
+      "dunCount": 3
+    },
+    "P111": {
+      "name": "Kota Raja",
+      "dunCount": 3
+    },
+    "P112": {
+      "name": "Kuala Langat",
+      "dunCount": 3
+    },
+    "P113": {
+      "name": "Sepang",
+      "dunCount": 3
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Selangor-Maps"
+  }
+}

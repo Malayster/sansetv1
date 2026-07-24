@@ -1,0 +1,173 @@
+{
+  "electionId": "prn-perak-2026",
+  "name": "PRN Perak 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_prk_dun.json",
+  "state": "Perak",
+  "dunToParlimen": {
+    "N01": "P054",
+    "N02": "P054",
+    "N03": "P055",
+    "N04": "P055",
+    "N05": "P056",
+    "N06": "P056",
+    "N07": "P056",
+    "N08": "P057",
+    "N09": "P057",
+    "N10": "P058",
+    "N11": "P058",
+    "N12": "P058",
+    "N13": "P059",
+    "N14": "P059",
+    "N15": "P059",
+    "N16": "P060",
+    "N17": "P060",
+    "N18": "P060",
+    "N19": "P061",
+    "N20": "P061",
+    "N21": "P062",
+    "N22": "P062",
+    "N23": "P063",
+    "N24": "P063",
+    "N25": "P064",
+    "N26": "P064",
+    "N27": "P064",
+    "N28": "P065",
+    "N29": "P065",
+    "N30": "P065",
+    "N31": "P066",
+    "N32": "P066",
+    "N33": "P066",
+    "N34": "P067",
+    "N35": "P067",
+    "N36": "P068",
+    "N37": "P068",
+    "N38": "P068",
+    "N39": "P069",
+    "N40": "P069",
+    "N41": "P070",
+    "N42": "P070",
+    "N43": "P070",
+    "N44": "P071",
+    "N45": "P071",
+    "N46": "P071",
+    "N47": "P072",
+    "N48": "P072",
+    "N49": "P073",
+    "N50": "P073",
+    "N51": "P074",
+    "N52": "P074",
+    "N53": "P075",
+    "N54": "P075",
+    "N55": "P076",
+    "N56": "P076",
+    "N57": "P077",
+    "N58": "P077",
+    "N59": "P077"
+  },
+  "parlimenInfo": {
+    "P054": {
+      "name": "Gerik",
+      "dunCount": 2
+    },
+    "P055": {
+      "name": "Lenggong",
+      "dunCount": 2
+    },
+    "P056": {
+      "name": "Larut",
+      "dunCount": 3
+    },
+    "P057": {
+      "name": "Parit Buntar",
+      "dunCount": 2
+    },
+    "P058": {
+      "name": "Bagan Serai",
+      "dunCount": 3
+    },
+    "P059": {
+      "name": "Bukit Gantang",
+      "dunCount": 3
+    },
+    "P060": {
+      "name": "Taiping",
+      "dunCount": 3
+    },
+    "P061": {
+      "name": "Padang Rengas",
+      "dunCount": 2
+    },
+    "P062": {
+      "name": "Sungai Siput",
+      "dunCount": 2
+    },
+    "P063": {
+      "name": "Tambun",
+      "dunCount": 2
+    },
+    "P064": {
+      "name": "Ipoh Timor",
+      "dunCount": 3
+    },
+    "P065": {
+      "name": "Ipoh Barat",
+      "dunCount": 3
+    },
+    "P066": {
+      "name": "Batu Gajah",
+      "dunCount": 3
+    },
+    "P067": {
+      "name": "Kuala Kangsar",
+      "dunCount": 2
+    },
+    "P068": {
+      "name": "Ayer Tawar",
+      "dunCount": 3
+    },
+    "P069": {
+      "name": "Parit",
+      "dunCount": 2
+    },
+    "P070": {
+      "name": "Kampar",
+      "dunCount": 3
+    },
+    "P071": {
+      "name": "Gopeng",
+      "dunCount": 3
+    },
+    "P072": {
+      "name": "Tapah",
+      "dunCount": 2
+    },
+    "P073": {
+      "name": "Pasir Salak",
+      "dunCount": 2
+    },
+    "P074": {
+      "name": "Lumut",
+      "dunCount": 2
+    },
+    "P075": {
+      "name": "Bagan Datoh",
+      "dunCount": 2
+    },
+    "P076": {
+      "name": "Teluk Intan",
+      "dunCount": 2
+    },
+    "P077": {
+      "name": "Tanjong Malim",
+      "dunCount": 3
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Perak-Maps"
+  }
+}

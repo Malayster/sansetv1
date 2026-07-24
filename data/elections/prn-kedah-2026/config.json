@@ -1,0 +1,118 @@
+{
+  "electionId": "prn-kedah-2026",
+  "name": "PRN Kedah 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_kdh_dun.json",
+  "state": "Kedah",
+  "dunToParlimen": {
+    "N06": "P006",
+    "N01": "P004",
+    "N02": "P004",
+    "N03": "P005",
+    "N04": "P005",
+    "N05": "P006",
+    "N07": "P007",
+    "N08": "P007",
+    "N09": "P008",
+    "N10": "P008",
+    "N11": "P008",
+    "N12": "P009",
+    "N13": "P009",
+    "N14": "P009",
+    "N15": "P010",
+    "N16": "P010",
+    "N17": "P010",
+    "N18": "P011",
+    "N19": "P011",
+    "N20": "P012",
+    "N21": "P012",
+    "N22": "P012",
+    "N23": "P012",
+    "N24": "P013",
+    "N25": "P014",
+    "N26": "P014",
+    "N27": "P015",
+    "N28": "P015",
+    "N29": "P015",
+    "N30": "P016",
+    "N31": "P016",
+    "N32": "P016",
+    "N33": "P017",
+    "N34": "P017",
+    "N35": "P018",
+    "N36": "P018"
+  },
+  "parlimenInfo": {
+    "KDH03": {
+      "name": "None",
+      "dunCount": 1
+    },
+    "P004": {
+      "name": "Langkawi",
+      "dunCount": 2
+    },
+    "P005": {
+      "name": "Jerlun",
+      "dunCount": 2
+    },
+    "P006": {
+      "name": "Kubang Pasu",
+      "dunCount": 2
+    },
+    "P007": {
+      "name": "Padang Terap",
+      "dunCount": 2
+    },
+    "P008": {
+      "name": "Pokok Sena",
+      "dunCount": 3
+    },
+    "P009": {
+      "name": "Alor Star",
+      "dunCount": 3
+    },
+    "P010": {
+      "name": "Kuala Kedah",
+      "dunCount": 3
+    },
+    "P011": {
+      "name": "Pendang",
+      "dunCount": 2
+    },
+    "P012": {
+      "name": "Jerai",
+      "dunCount": 4
+    },
+    "P013": {
+      "name": "Sik",
+      "dunCount": 1
+    },
+    "P014": {
+      "name": "Merbok",
+      "dunCount": 2
+    },
+    "P015": {
+      "name": "Sungai Petani",
+      "dunCount": 3
+    },
+    "P016": {
+      "name": "Baling",
+      "dunCount": 3
+    },
+    "P017": {
+      "name": "Padang Serai",
+      "dunCount": 2
+    },
+    "P018": {
+      "name": "Kulim-Bandar Baharu",
+      "dunCount": 2
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Kedah-Maps"
+  }
+}

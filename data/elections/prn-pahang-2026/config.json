@@ -1,0 +1,120 @@
+{
+  "electionId": "prn-pahang-2026",
+  "name": "PRN Pahang 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_phg_dun.json",
+  "state": "Pahang",
+  "dunToParlimen": {
+    "N01": "P078",
+    "N02": "P078",
+    "N28": "P087",
+    "N03": "P079",
+    "N04": "P079",
+    "N05": "P079",
+    "N06": "P080",
+    "N07": "P080",
+    "N08": "P080",
+    "N09": "P081",
+    "N10": "P081",
+    "N11": "P081",
+    "N12": "P082",
+    "N13": "P082",
+    "N14": "P083",
+    "N15": "P083",
+    "N16": "P083",
+    "N17": "P084",
+    "N18": "P084",
+    "N19": "P084",
+    "N20": "P085",
+    "N21": "P085",
+    "N22": "P085",
+    "N23": "P085",
+    "N24": "P086",
+    "N25": "P086",
+    "N26": "P086",
+    "N27": "P087",
+    "N29": "P087",
+    "N30": "P088",
+    "N31": "P088",
+    "N32": "P088",
+    "N33": "P089",
+    "N34": "P089",
+    "N35": "P089",
+    "N36": "P089",
+    "N37": "P090",
+    "N38": "P090",
+    "N39": "P090",
+    "N40": "P091",
+    "N41": "P091",
+    "N42": "P091"
+  },
+  "parlimenInfo": {
+    "P078": {
+      "name": "Cameron Highlands",
+      "dunCount": 2
+    },
+    "P079": {
+      "name": "Lipis",
+      "dunCount": 3
+    },
+    "P080": {
+      "name": "Raub",
+      "dunCount": 3
+    },
+    "P081": {
+      "name": "Jerantut",
+      "dunCount": 3
+    },
+    "P082": {
+      "name": "Indera Mahkota",
+      "dunCount": 2
+    },
+    "P083": {
+      "name": "Kuantan",
+      "dunCount": 3
+    },
+    "P084": {
+      "name": "Paya Besar",
+      "dunCount": 3
+    },
+    "P085": {
+      "name": "Pekan",
+      "dunCount": 4
+    },
+    "P086": {
+      "name": "Maran",
+      "dunCount": 3
+    },
+    "P087": {
+      "name": "Kuala Krau",
+      "dunCount": 3
+    },
+    "P088": {
+      "name": "Temerloh",
+      "dunCount": 3
+    },
+    "P089": {
+      "name": "Bentong",
+      "dunCount": 4
+    },
+    "P090": {
+      "name": "Bera",
+      "dunCount": 3
+    },
+    "P091": {
+      "name": "Rompin",
+      "dunCount": 3
+    },
+    "PH10": {
+      "name": "None",
+      "dunCount": 1
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Pahang-Maps"
+  }
+}
