@@ -45,6 +45,10 @@ export default function ElectionDashboard({
     }
   }, [selected])
 
+  // Normalize geoJsonFile for map: Sanity may have invalid filename
+  const FE = { 'PRN Negeri Sembilan':'prn_nsn_dun.json','PRN Selangor':'prn_sgr_dun.json','PRN Pulau Pinang':'prn_png_dun.json','PRN Perak':'prn_prk_dun.json','PRN Pahang':'prn_phg_dun.json','PRN Kedah':'prn_kdh_dun.json','PRN Kelantan':'prn_ktn_dun.json','PRN Terengganu':'prn_trg_dun.json','PRN Perlis':'prn_pls_dun.json','PRN Melaka':'prn_mlk_dun.json','PRN Johor':'prn_jhr_dun.json','PRN Sabah':'prn_sbh_dun.json','PRN Sarawak':'prn_swk_dun.json','PRN Wilayah Persekutuan':'prn_wpk_dun.json' } as Record<string,string>
+  const mapGeoJson = election.geoJsonFile || FE[election.electionName] || ''
+
   // Party breakdown
   const partyBreakdown = useMemo(() => {
     const counts: Record<string, number> = {}
@@ -85,7 +89,7 @@ export default function ElectionDashboard({
           regions={regions}
           selected={selected}
           onSelect={setSelected}
-          geoJsonFile={election.geoJsonFile || ''}
+          geoJsonFile={mapGeoJson}
         />
       </div>
 

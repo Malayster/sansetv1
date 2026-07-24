@@ -85,39 +85,52 @@ const STATE_GEOJSON_FALLBACK: Record<string, string> = {
   'PRN Wilayah Persekutuan': 'prn_wpk_dun.json',
 }
 
-export async function getElectionRegions(geoJsonFile?: string, electionName?: string): Promise<ElectionRegion[]> {
-  const file = geoJsonFile || (electionName ? STATE_GEOJSON_FALLBACK[electionName] : undefined)
-  if (!file) return FALLBACK_PRU16_REGIONS
+/** Check if a geojson file exists on disk (either _polygon.json or base .json) */
+function geoJsonFileExists(file: string): boolean {
+  const base = path.join(process.cwd(), 'public', 'geojson')
+  return fs.existsSync(path.join(base, file.replace('.json', '_polygon.json')))
+    || fs.existsSync(path.join(base, file))
+}
 
-  const isoFile = file.replace('.json', '_polygon.json')
-  try {
-    const filePath = path.join(process.cwd(), 'public', 'geojson', isoFile)
-    if (!fs.existsSync(filePath)) {
-      const altPath = path.join(process.cwd(), 'public', 'geojson', file)
-      if (!fs.existsSync(altPath)) return FALLBACK_PRU16_REGIONS
-      const raw = fs.readFileSync(altPath, 'utf-8')
-      const data = JSON.parse(raw)
-      if (!data?.features) return FALLBACK_PRU16_REGIONS
-      return data.features.map((f: any) => {
-        const [clng, clat] = centroid(f.geometry.coordinates)
-        return {
-          code: f.properties.code,
-          name: f.properties.name,
-          state: f.properties.state,
-          lat: f.properties.lat ?? clat,
-          lng: f.properties.lng ?? clng,
-        }
-      })
+/** Normalize an election's geoJsonFile: if the Sanity value doesn't exist on disk, fall back to state map */
+export function normalizeGeoJsonFile(election: { electionName: string; geoJsonFile?: string }): string | undefined {
+  const fromSanity = election.geoJsonFile
+  if (fromSanity && geoJsonFileExists(fromSanity)) return fromSanity
+  const fallback = election.electionName ? STATE_GEOJSON_FALLBACK[election.electionName] : undefined
+  if (fallback && geoJsonFileExists(fallback)) return fallback
+  return fromSanity || fallback
+}
+
+export async function getElectionRegions(geoJsonFile?: string, electionName?: string): Promise<ElectionRegion[]> {
+  // Try Sanity geoJsonFile first; if missing, use fallback lookup
+  const candidateFiles = [
+    geoJsonFile,
+    electionName ? STATE_GEOJSON_FALLBACK[electionName] : undefined,
+  ].filter(Boolean) as string[]
+
+  for (const file of candidateFiles) {
+    const isoFile = file.replace('.json', '_polygon.json')
+    for (const tryName of [isoFile, file]) {
+      try {
+        const fp = path.join(process.cwd(), 'public', 'geojson', tryName)
+        if (!fs.existsSync(fp)) continue
+        const raw = fs.readFileSync(fp, 'utf-8')
+        const data = JSON.parse(raw)
+        if (!data?.features) continue
+        return data.features.map((f: any) => {
+          const [clng, clat] = centroid(f.geometry.coordinates)
+          return {
+            code: f.properties.code,
+            name: f.properties.name,
+            state: f.properties.state,
+            lat: f.properties.lat ?? clat,
+            lng: f.properties.lng ?? clng,
+          }
+        })
+      } catch { continue }
     }
-    const raw = fs.readFileSync(filePath, 'utf-8')
-    const data = JSON.parse(raw)
-    if (!data?.features) return FALLBACK_PRU16_REGIONS
-    return data.features.map((f: any) => ({
-      code: f.properties.code,
-      name: f.properties.name,
-      state: f.properties.state,
-      lat: f.properties.lat ?? centroid(f.geometry.coordinates)[1],
-      lng: f.properties.lng ?? centroid(f.geometry.coordinates)[0],
-    }))
-  } catch { return FALLBACK_PRU16_REGIONS }
+  }
+
+  // Ultimate fallback for PRU (Parliament) elections
+  return FALLBACK_PRU16_REGIONS
 }

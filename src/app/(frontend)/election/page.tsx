@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Suspense } from 'react'
 import fs from 'fs'
 import path from 'path'
-import { getActiveElections, getElectionRegions } from '@/lib/election-server'
+import { getActiveElections, getElectionRegions, normalizeGeoJsonFile } from '@/lib/election-server'
 import { getKVValue, getHistoricalResults } from '@/lib/kv'
 import ElectionPageClient from './ElectionPageClient'
 import type { ElectionInfo, RegionWithData } from '@/types/election'
@@ -102,7 +102,7 @@ function loadHotSeats(): Record<string, any> {
 }
 
 async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithData[]> {
-  const regions = await getElectionRegions(election.geoJsonFile, election.electionName)
+  const regions = await getElectionRegions(normalizeGeoJsonFile(election) || undefined, election.electionName)
   const historicalData = getHistoricalResults()
   const dunDemo = loadDunDemographics()
   const parlDemo = loadParlimenDemographics()
@@ -210,11 +210,14 @@ export default async function ElectionPage() {
 
   // Pre-load regions for all active elections
   let electionsWithRegions = await Promise.all(
-    elections.map(async (el) => ({
-      election: el,
-      regions: await loadRegionsWithData(el),
-      electionPack: loadElectionPackConfig(el),
-    })),
+    elections.map(async (el) => {
+      const normalizedGeo = normalizeGeoJsonFile(el)
+      return {
+        election: normalizedGeo ? { ...el, geoJsonFile: normalizedGeo } : el,
+        regions: await loadRegionsWithData(el),
+        electionPack: loadElectionPackConfig(el),
+      }
+    }),
   )
 
   // Sort: PRN (state elections) before PRU (general elections) so Negeri Sembilan is default
