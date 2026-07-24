@@ -119,7 +119,7 @@ data/elections/
 | Melaka | 28 | 6 | prn_mlk_dun.json | prn-melaka-template | — |
 | Johor | 58 | 29 | prn_jhr_dun.json | prn-johor-template | — |
 | Sabah | 75 | 27 | prn_sbh_dun.json | prn-sabah-template | — |
-| Sarawak | ❌ | ❌ | 404 Not Found | ❌ | — |
+| **Sarawak** | **82** | **31** | **prn_swk_dun.json** | **prn-sarawak-2026** | ✅ 82 DUNs (GE-15) |
 | WP KL/Putra/Labuan | 1 | 1 | prn_wpk_dun.json | prn-wp-template | — |
 
 **Data Location:**
