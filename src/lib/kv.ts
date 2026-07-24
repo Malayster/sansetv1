@@ -87,11 +87,26 @@ const mockSentiment: Record<string, any> = {
   'N36': { score: 48, label: 'neutral', source: 'Composite AI', summary: 'Repah — kawasan campuran, BN vs PN. PH berpotensi jadi kingmaker.', topIssue: 'Guna tanah & industri', partySentiment: { BN: 46, PN: 40, PH: 32 }, updatedAt: new Date().toISOString() },
 }
 
-// Real candidate data from ElectionData.MY (SPR Open Data)
-// PRU 2022 (GE15) + PRN 2023 results + PRN 2026 candidates
-import realCandidatesData from '../../data/kv-output/candidates-real.json'
-import realDemographicsData from '../../data/kv-output/demographics-real.json'
-import realHistoricalResults from '../../data/kv-output/historical-results.json'
+// ─── ElectionData.MY enrichment (dynamic, production-safe) ───
+// Load from filesystem at runtime (not bundled at build time).
+// Falls back to empty/mock when files don't exist (e.g. Vercel build).
+import fs from 'fs'
+import path from 'path'
+
+function loadJSON<T>(relPath: string, fallback: T): T {
+  try {
+    const fp = path.join(process.cwd(), relPath)
+    if (!fs.existsSync(fp)) return fallback
+    return JSON.parse(fs.readFileSync(fp, 'utf-8'))
+  } catch {
+    return fallback
+  }
+}
+
+const KV_DATA_DIR = 'data/kv-output'
+const realCandidatesData   = loadJSON<Record<string, any[]>>(`${KV_DATA_DIR}/candidates-real.json`, {})
+const realDemographicsData = loadJSON<Record<string, any>>(`${KV_DATA_DIR}/demographics-real.json`, {})
+const realHistoricalResults = loadJSON<Record<string, any>>(`${KV_DATA_DIR}/historical-results.json`, {})
 
 const defaultCandidates = [
   { name: 'Calon A', party: 'BN', partyLogo: '/flags/bn.webp', role: 'penyandang' as const },

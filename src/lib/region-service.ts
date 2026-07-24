@@ -14,10 +14,21 @@
 
 import fs from 'fs'
 import path from 'path'
-import realHistoricalResults from '../../data/kv-output/historical-results.json'
-import realDemographicsData from '../../data/kv-output/demographics-real.json'
-import realCandidatesData from '../../data/kv-output/candidates-real.json'
 import type { RegionWithData, CandidateData, HistoricalElectionResult } from '@/types/election'
+
+// ─── ElectionData.MY enrichment (dynamic, production-safe) ───
+function loadJSON<T>(relPath: string, fallback: T): T {
+  try {
+    const fp = path.join(process.cwd(), relPath)
+    if (!fs.existsSync(fp)) return fallback
+    return JSON.parse(fs.readFileSync(fp, 'utf-8'))
+  } catch {
+    return fallback
+  }
+}
+const realHistoricalResults = loadJSON<Record<string, any>>('data/kv-output/historical-results.json', {})
+const realDemographicsData   = loadJSON<Record<string, any>>('data/kv-output/demographics-real.json', {})
+const realCandidatesData     = loadJSON<Record<string, any[]>>('data/kv-output/candidates-real.json', {})
 
 // ─── Types ─────────────────────────────────────────────
 

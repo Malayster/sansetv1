@@ -54,3 +54,8 @@ dist/
 .unlighthouse/
 data/
 data/*.csv
+
+# Track election data files needed by the dashboard in production
+!data/kv-output/candidates-real.json
+!data/kv-output/demographics-real.json
+!data/kv-output/historical-results.json
