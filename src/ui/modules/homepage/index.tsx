@@ -22,7 +22,7 @@ function ago(d?: string) {
   return new Date(d).toLocaleDateString('ms', { day:'numeric', month:'short' })
 }
 
-function Pi({ w, h, pr, p }: { w: number; h: number; pr?: boolean; p: P }) {
+function Img({ p, w, h, pr }: { p: P; w: number; h: number; pr?: boolean }) {
   return p.img
     ? <Image src={urlFor(p.img).width(w).height(h).url()} alt="" width={w} height={h} className="w-full h-full object-cover" priority={pr} />
     : <div className="w-full h-full bg-gray-200" />
@@ -41,76 +41,80 @@ export default async function Homepage() {
   if (!posts.length) return <div className="max-w-[1180px] mx-auto px-4 py-16 text-center text-gray-400">Tiada Berita</div>
   const [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, ...tail] = posts
 
-  const sideCol = [b, c]
-
   return (
   <div className="mx-auto" style={{maxWidth:1180}}>
 
-    {/* ===== TRENDING TOPIK BAR ===== */}
-    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-gray-200 overflow-x-auto text-[11px]">
-      <span className="shrink-0 font-bold uppercase tracking-wider text-gray-400">🔥 Trending</span>
+    {/* ===== TRENDING TOPIK BAR (red bg) ===== */}
+    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-gray-200 overflow-x-auto text-[11px]" style={{background:'#C41E3A'}}>
+      <span className="shrink-0 font-bold uppercase tracking-wider text-white/80">🔥 Trending</span>
       {['Dunia','Politik','Ekonomi','Sukan','Hiburan','Teknologi'].map(t => (
         <Link key={t} href={`${bp}?category=${t.toLowerCase()}`}
-          className="shrink-0 px-3 py-1 bg-gray-100 text-gray-600 hover:bg-[#C41E3A] hover:text-white rounded-sm font-medium transition-colors"
+          className="shrink-0 px-3 py-1 text-white/90 hover:text-white font-medium transition-colors"
+          style={{borderRight:'1px solid rgba(255,255,255,0.3)'}}
         >{t}</Link>
       ))}
     </div>
 
-    {/* ===== HERO ===== */}
-    <section className="grid lg:grid-cols-[1fr_340px] gap-5 px-4 py-5">
-      {/* Feature */}
-      <article>
-        <Link href={`${bp}${a.slug}`} className="block relative overflow-hidden mb-3" style={{aspectRatio:'740/420'}}>
-          <Pi p={a} w={740} h={420} pr />
-          <span className="absolute bottom-3 left-3"><Cat c={a.cat?.title} /></span>
-        </Link>
-        <Link href={`${bp}${a.slug}`}>
-          <h1 className="font-serif text-[22px] sm:text-[28px] lg:text-[32px] font-bold leading-tight text-[#1a1a1a] hover:text-[#C41E3A] transition-colors">{a.title}</h1>
-        </Link>
-        {a.excerpt && <p className="text-[12px] text-gray-500 mt-1.5 leading-relaxed line-clamp-2">{a.excerpt}</p>}
-        <span className="text-[10px] text-gray-400 mt-2 block">{ago(a.publishDate)}</span>
-      </article>
-      {/* Side: 2 stacked */}
-      <aside className="space-y-5">
-        {sideCol.map(x => (
-          <article key={x._id}>
-            <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2" style={{aspectRatio:'340/200'}}>
-              <Pi p={x} w={340} h={200} />
-              <span className="absolute bottom-2 left-2"><Cat c={x.cat?.title} s="text-[9px]" /></span>
-            </Link>
-            <Link href={`${bp}${x.slug}`} className="block font-serif text-[14px] font-bold leading-snug text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2">{x.title}</Link>
-            <span className="text-[9px] text-gray-400 mt-1 block">{ago(x.publishDate)}</span>
-          </article>
-        ))}
-      </aside>
-    </section>
+    {/* ===== HERO: Feature + 2 stacked + Most Read sidebar ===== */}
+    <div className="grid lg:grid-cols-[1fr_340px] gap-5 px-4 py-5">
+      <section className="grid lg:grid-cols-[1fr_340px] gap-5">
+        {/* Feature large */}
+        <article>
+          <Link href={`${bp}${a.slug}`} className="block relative overflow-hidden mb-3 rounded-sm" style={{aspectRatio:'740/420'}}>
+            <Img p={a} w={740} h={420} pr />
+            <span className="absolute bottom-3 left-3"><Cat c={a.cat?.title} /></span>
+          </Link>
+          <Cat c={a.cat?.title} />
+          <Link href={`${bp}${a.slug}`}>
+            <h1 className="font-serif text-[22px] sm:text-[28px] lg:text-[32px] font-bold leading-tight text-[#1a1a1a] hover:text-[#C41E3A] transition-colors mt-2">{a.title}</h1>
+          </Link>
+          {a.excerpt && <p className="text-[12px] text-gray-500 mt-1.5 leading-relaxed line-clamp-2">{a.excerpt}</p>}
+          <span className="text-[10px] text-gray-400 mt-2 block">{ago(a.publishDate)}</span>
+        </article>
 
-    {/* ===== MOST READ ===== */}
-    <section className="border-y border-gray-200 py-4 px-4 mb-5">
-      <div className="flex items-center gap-1 mb-3">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">📊 Paling Dibaca</span>
-      </div>
-      <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-5 gap-y-2">
-        {[d, e, f, g, h, i].filter(Boolean).map((x, idx) => (
-          <div key={x._id} className="flex items-start gap-2">
-            <span className="shrink-0 font-serif text-[22px] font-bold text-[#C41E3A]/30 leading-none w-5">{String(idx+1).padStart(2,'0')}</span>
-            <Link href={`${bp}${x.slug}`} className="text-[10px] leading-snug text-gray-700 hover:text-[#C41E3A] transition-colors line-clamp-2 font-medium">{x.title}</Link>
-          </div>
-        ))}
-      </div>
-    </section>
+        {/* 2 stacked */}
+        <aside className="space-y-5">
+          {[b, c].map(x => (
+            <article key={x._id}>
+              <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2 rounded-sm" style={{aspectRatio:'340/200'}}>
+                <Img p={x} w={340} h={200} />
+                <span className="absolute bottom-2 left-2"><Cat c={x.cat?.title} s="text-[9px]" /></span>
+              </Link>
+              <Link href={`${bp}${x.slug}`} className="block font-serif text-[14px] font-bold leading-snug text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2">{x.title}</Link>
+              <span className="text-[9px] text-gray-400 mt-1 block">{ago(x.publishDate)}</span>
+            </article>
+          ))}
+        </aside>
+      </section>
+
+      {/* Most Read sidebar */}
+      <aside>
+        <h3 className="text-[14px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Paling Dibaca</h3>
+        <div className="space-y-0">
+          {[d, e, f, g, h, i].filter(Boolean).map((x, idx) => (
+            <div key={x._id} className="flex items-start gap-3 py-3 border-b border-gray-100 last:border-0">
+              <span className="shrink-0 w-7 h-7 rounded-full bg-[#C41E3A] text-white text-[11px] font-bold flex items-center justify-center">{idx+1}</span>
+              <div className="min-w-0">
+                <Link href={`${bp}${x.slug}`} className="text-[11px] leading-snug font-bold text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2 block">{x.title}</Link>
+                <span className="text-[9px] text-gray-400 mt-0.5 block">{ago(x.publishDate)}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </aside>
+    </div>
 
     {/* ===== Pilihan Editor ===== */}
-    <section className="px-4 mb-6">
+    <section className="px-4 mb-6 border-t border-gray-200 pt-6">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-[14px] font-bold uppercase tracking-wide text-[#1a1a1a]">Pilihan Editor</h2>
+        <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a]">Pilihan Editor</h2>
         <Link href={bp} className="text-[10px] font-bold text-[#C41E3A] hover:underline uppercase tracking-wider">Lebih &rarr;</Link>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {[j, k, l, m].filter(Boolean).map(x => (
           <article key={x._id}>
             <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2 rounded-sm" style={{aspectRatio:'360/220'}}>
-              <Pi p={x} w={360} h={220} />
+              <Img p={x} w={360} h={220} />
               <span className="absolute bottom-2 left-2"><Cat c={x.cat?.title} s="text-[8px]" /></span>
             </Link>
             <Link href={`${bp}${x.slug}`} className="block font-serif text-[13px] font-bold leading-snug text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2">{x.title}</Link>
@@ -126,21 +130,21 @@ export default async function Homepage() {
       {/* LEFT COL */}
       <div className="space-y-6">
 
-        {/* Dynamic category sections ala Foxiz */}
+        {/* Dynamic category sections */}
         {cats.slice(0,4).map(c => {
           const arts = posts.filter(x => x.cat?.title === c.title)
           if (!arts.length) return null
           return (
-            <section key={c._id}>
+            <section key={c._id} className="border-t border-gray-200 pt-6">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="text-[14px] font-bold uppercase tracking-wide text-[#1a1a1a]">{c.title}</h2>
+                <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a]">{c.title}</h2>
                 <Link href={`${bp}?category=${c.slug}`} className="text-[10px] font-bold text-[#C41E3A] hover:underline uppercase tracking-wider">Lebih &rarr;</Link>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {arts.slice(0,4).map(x => (
                   <article key={x._id}>
                     <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2 rounded-sm" style={{aspectRatio:'360/220'}}>
-                      <Pi p={x} w={360} h={220} />
+                      <Img p={x} w={360} h={220} />
                       <span className="absolute bottom-2 left-2"><Cat c={x.cat?.title} s="text-[8px]" /></span>
                     </Link>
                     <Link href={`${bp}${x.slug}`} className="block font-serif text-[13px] font-bold leading-snug text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2">{x.title}</Link>
@@ -153,10 +157,8 @@ export default async function Homepage() {
         })}
 
         {/* Berita Mengikut Negeri */}
-        <section>
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-[14px] font-bold uppercase tracking-wide text-[#1a1a1a]">Mengikut Negeri</h2>
-          </div>
+        <section className="border-t border-gray-200 pt-6">
+          <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Mengikut Negeri</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {['KL','Selangor','Johor','Sabah','Sarawak','N.Sembilan'].map(state => {
               const arts = posts.filter(x => x.cat?.title === state || x.title?.toLowerCase().includes(state.toLowerCase())).slice(0,2)
@@ -176,10 +178,10 @@ export default async function Homepage() {
       </div>
 
       {/* RIGHT SIDEBAR */}
-      <aside className="space-y-6">
+      <aside className="space-y-6 pt-6">
         {/* Popular numbered */}
         <div>
-          <h2 className="text-[14px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Popular</h2>
+          <h3 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Popular</h3>
           <div className="space-y-0">
             {[n, o, ...tail.slice(0,4)].filter(Boolean).map((x, idx) => (
               <div key={x._id} className="flex items-start gap-3 py-3 border-b border-gray-100 last:border-0">
@@ -193,10 +195,10 @@ export default async function Homepage() {
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="bg-[#1a1a1a] rounded-sm p-5 text-white">
+        {/* Newsletter ala Foxiz */}
+        <div className="rounded-sm p-5 text-white" style={{background:'linear-gradient(180deg, #000098 0%, #000008 100%)'}}>
           <h3 className="font-bold text-[15px]">Surat Berita</h3>
-          <p className="text-[10px] text-gray-400 mt-1 leading-relaxed">Langgan untuk dapatkan berita terkini terus ke peti masuk anda.</p>
+          <p className="text-[10px] text-gray-300 mt-1 leading-relaxed">Langgan untuk dapatkan berita terkini terus ke peti masuk anda.</p>
           <div className="mt-3">
             <input type="email" placeholder="Alamat e-mel" className="w-full px-3 py-2 text-[11px] text-[#1a1a1a] rounded-sm outline-none mb-2" />
             <label className="flex items-start gap-2 text-[9px] text-gray-400 mb-2">
@@ -214,14 +216,14 @@ export default async function Homepage() {
           <Link href="/election" className="inline-block mt-2 px-4 py-1.5 bg-[#F5C842] text-[#1a1a1a] text-[9px] font-bold rounded-sm hover:bg-white transition-colors">Lihat &rarr;</Link>
         </div>
 
-        {/* Thumbnail sidebar */}
+        {/* More articles with thumbnail */}
         <div>
-          <h2 className="text-[14px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Berita Lain</h2>
+          <h3 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Berita Lain</h3>
           <div className="space-y-0">
             {tail.slice(4,8).filter(Boolean).map(x => (
               <div key={x._id} className="flex gap-3 py-3 border-b border-gray-100 last:border-0">
                 <Link href={`${bp}${x.slug}`} className="shrink-0 w-20 h-14 overflow-hidden rounded-sm" style={{aspectRatio:'80/56'}}>
-                  <Pi p={x} w={80} h={56} />
+                  <Img p={x} w={80} h={56} />
                 </Link>
                 <div className="min-w-0">
                   <Link href={`${bp}${x.slug}`} className="text-[11px] leading-snug font-bold text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2 block">{x.title}</Link>
@@ -234,11 +236,9 @@ export default async function Homepage() {
       </aside>
     </div>
 
-    {/* ===== TRENDING TAGS FOOTER ===== */}
+    {/* ===== KATEGORI FOOTER ===== */}
     <section className="border-t border-gray-200 py-6 px-4 mt-6">
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-[14px] font-bold uppercase tracking-wide text-[#1a1a1a]">Kategori</h2>
-      </div>
+      <h3 className="text-[14px] font-bold uppercase tracking-wide text-gray-500 pb-3">Kategori</h3>
       <div className="flex flex-wrap gap-2">
         {cats.map(c => (
           <Link key={c._id} href={`${bp}?category=${c.slug}`}
