@@ -72,36 +72,45 @@ Setiap pilihan raya (PRN/PRU) ada **Election Pack** — satu folder dalam `data/
 data/elections/
   prn-ns-2026/
     config.json       ← mapping DUN→PAR, GeoJSON, metadata
-    (future: results.json, candidates.json)
 ```
 
-**RegionService** (`src/lib/region-service.ts`) — abstraction layer yang auto-handle DUN↔PAR:
+**Dashboard layout (wireframe):**
 
 ```
-┌──────────────────────────────────────┐
-│    UI Components                     │
-│  (map, swing, compare, charts...)    │
-├──────────────────────────────────────┤
-│         RegionService                │
-│  .getRegions('dun')                  │  ← DUN-level (N01-N36)
-│  .getRegions('parlimen')             │  ← PAR-level, auto-aggregated
-│  .loadConfig() → ElectionPackConfig  │
-├──────────────────────────────────────┤
-│  data/elections/{id}/config.json     │
-│  data/kv-output/*.json               │
-│  Sanity (future adapter)             │
-└──────────────────────────────────────┘
+[Header: Flag + Nama Negeri]      [Switcher Negeri █ █ █]
+[Party Breakdown: ● PH 21 ● PN 8 ● BN 3 ...]
+[Map — click DUN → sidebar muncul]
+[Sidebar — candidates, ethnicity bars, age bars]
+[DUN List — jadual ringkas]
 ```
 
-## Level Switcher (Client-side)
+Tiada tabs, tiada view level, tiada chart berasingan. Semua data terus dalam sidebar + list.
 
-`election-dashboard.tsx` ada toggle **DUN** ↔ **Parlimen**:
-- **DUN**: data asal per-DUN (N01-N36)
-- **Parlimen**: aggregation dari DUN → kumpul ikut parlimen
-  - `seatCounts`: parti dengan penyandang terbanyak
-  - `dominantParty`: parti dominan
-  - `lat/lng`: centroid purata
-  - Tuang semua candidates ke PAR level
+## Dashboard Architecture (Simplified — commit b83629f)
+
+The election dashboard follows a **flat wireframe layout**:
+
+```
+Header: [Flag] [Title] [PRN badge]  [State switcher buttons]
+Party breakdown:  ● PH 21  ● PN 8  ● BN 3  ...
+Map → click DUN → Sidebar shows: candidates, ethnicity, age bars
+DUN List below map
+```
+
+**What was removed (simplification):**
+- 6 tabs (senarai/analisis/swing/banding/dewan/simulasi) → gone
+- 7 component files (election-charts, swing, compare, semicycle, swingometer, insights, postal-vote) → deleted
+- Map search bar, party filter, year selector, hotseat toggle → removed
+- DUN↔Parlimen view level toggle → removed
+- Dark mode theme provider → removed
+- Big dropdown switcher with flags → replaced with flat button row
+
+**What stayed:**
+- Interactive map with party-color regions + legend + hover tooltip
+- Sidebar with candidates, ethnicity bars, age bars, hot seat, history
+- DUN list table below map
+- State switcher buttons (compact flat row)
+- Party breakdown bar (colored dots + counts)
 
 ## Status GeoJSON & Election Pack
 
