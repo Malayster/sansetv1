@@ -16457,7 +16457,7 @@
       "party": "PN",
       "partyLogo": "/flags/pn.webp",
       "role": "penyandang",
-      "profile": "",
+      "profile": "Umno Paroi ikrar sokong calon PN Kamarol Ridzuan",
       "wikipediaUrl": "",
       "lastElection": {
         "year": 2023,
@@ -16466,7 +16466,9 @@
         "percentage": 55.3,
         "totalVoters": 0,
         "turnout": 0
-      }
+      },
+      "newsSource": "Harakahdaily",
+      "newsUrl": "https://harakahdaily.net/2026/07/22/umno-paroi-ikrar-sokong-calon-pn-kamarol-ridzuan/"
     }
   ],
   "N26": [
@@ -23352,7 +23354,10 @@
       "name": "Kamarol Ridzuan bin Mohd Zain",
       "party": "PN",
       "partyLogo": "",
-      "role": "penyandang"
+      "role": "penyandang",
+      "profile": "Umno Paroi ikrar sokong calon PN Kamarol Ridzuan",
+      "newsSource": "Harakahdaily",
+      "newsUrl": "https://harakahdaily.net/2026/07/22/umno-paroi-ikrar-sokong-calon-pn-kamarol-ridzuan/"
     }
   ],
   "NSN_N26": [
@@ -23399,6 +23404,374 @@
     {
       "name": "Abdul Fatah bin Zakaria",
       "party": "PN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N37": [
+    {
+      "name": "Norlizah binti Noh",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N38": [
+    {
+      "name": "Fauziah binti Misri",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N39": [
+    {
+      "name": "Aznan bin Tamin",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N40": [
+    {
+      "name": "Abdul Halim bin Suleiman",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N41": [
+    {
+      "name": "Maszlee bin Malik",
+      "party": "PH",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N42": [
+    {
+      "name": "Chan San San",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N43": [
+    {
+      "name": "Baharudin bin Mohamed Taib",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N44": [
+    {
+      "name": "Mohd Hairi bin Mad Shah",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N45": [
+    {
+      "name": "Andrew Chen Kah Eng",
+      "party": "PH",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N46": [
+    {
+      "name": "Pannir Selvam",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N47": [
+    {
+      "name": "Ramlee bin Bohani",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N48": [
+    {
+      "name": "Kartiyaini a/p Jeyapalan",
+      "party": "PH",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N49": [
+    {
+      "name": "Pandak bin Ahmad",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N50": [
+    {
+      "name": "Mohd Jafni bin Md Shukor",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N51": [
+    {
+      "name": "Kumaran a/l Rama Krishnan",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N52": [
+    {
+      "name": "Wong Bor Yang",
+      "party": "PH",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N53": [
+    {
+      "name": "Mohd Sumali bin Reduan",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N54": [
+    {
+      "name": "Hasrunizah binti Hassan",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N55": [
+    {
+      "name": "Tan Eng Meng",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N56": [
+    {
+      "name": "Md Israk bin Abdullah",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N57": [
+    {
+      "name": "Sivanesan a/l Achalingam",
+      "party": "PH",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N58": [
+    {
+      "name": "Muhammad Zulfadli bin Zainal",
+      "party": "PN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N59": [
+    {
+      "name": "Salina binti Samsudin",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N60": [
+    {
+      "name": "Assaffal bin P. Alian",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N66": [
+    {
+      "name": "Jamil bin Hamzah",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N61": [
+    {
+      "name": "Muhammad bin Abdul Karim",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N62": [
+    {
+      "name": "Mohammad Yusof bin Apdal",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N63": [
+    {
+      "name": "Anil Jeet Singh",
+      "party": "BN",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N64": [
+    {
+      "name": "Jaujan bin Sambakong",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N65": [
+    {
+      "name": "Mohd Shafie bin Apdal",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N67": [
+    {
+      "name": "Syed Ahmad bin Syed Abas",
+      "party": "GRS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N68": [
+    {
+      "name": "Nizam bin Abu Bakar Titingan",
+      "party": "GRS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N69": [
+    {
+      "name": "Justin Wong Yung Bin",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N70": [
+    {
+      "name": "Rina binti Jainal",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N71": [
+    {
+      "name": "Andi Md Shamsureezal bin Mohd Sainal",
+      "party": "GRS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N72": [
+    {
+      "name": "Sarifuddin bin Hata",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N73": [
+    {
+      "name": "Manahing Tinggilani @ Tanggilani",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N74": [
+    {
+      "name": "Yii Siew Sang",
+      "party": "GPS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N75": [
+    {
+      "name": "Lee Kim Shin",
+      "party": "GPS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N76": [
+    {
+      "name": "Penguang anak Manggil",
+      "party": "GPS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N77": [
+    {
+      "name": "Dennis Ngau",
+      "party": "GPS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N78": [
+    {
+      "name": "Gerawat Gala",
+      "party": "GPS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N79": [
+    {
+      "name": "Abdul Rahman bin Ismail",
+      "party": "GPS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N80": [
+    {
+      "name": "Palu @ Paulus Palu anak Gumbang",
+      "party": "GPS",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N81": [
+    {
+      "name": "Baru Bian",
+      "party": "ALONE",
+      "partyLogo": "",
+      "role": "penyandang"
+    }
+  ],
+  "N82": [
+    {
+      "name": "Awang Tengah bin Ali Hasan",
+      "party": "GPS",
       "partyLogo": "",
       "role": "penyandang"
     }

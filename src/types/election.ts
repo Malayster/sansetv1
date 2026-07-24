@@ -123,6 +123,7 @@ export interface RegionWithData extends ElectionRegion {
     chinese: number
     indian: number
     others: number
+    orang_asli?: number
     medianIncome?: number
     meanIncome?: number
     gini?: number

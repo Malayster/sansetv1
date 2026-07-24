@@ -91,11 +91,21 @@ function loadParlimenDemographics(): Record<string, any> {
   return {}
 }
 
+/** Load hot-seats.json for Kerusi Panas analysis */
+function loadHotSeats(): Record<string, any> {
+  try {
+    const fp = path.join(process.cwd(), 'data', 'kv-output', 'hot-seats.json')
+    if (fs.existsSync(fp)) return JSON.parse(fs.readFileSync(fp, 'utf-8'))
+  } catch {}
+  return {}
+}
+
 async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithData[]> {
   const regions = await getElectionRegions(election.geoJsonFile)
   const historicalData = getHistoricalResults()
   const dunDemo = loadDunDemographics()
   const parlDemo = loadParlimenDemographics()
+  const hotSeatsData = loadHotSeats()
 
   // Determine state prefix for this election
   const stateName = extractStateName(election.electionName)
@@ -122,13 +132,14 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
           chinese: dunData.chinese ?? 25,
           indian: dunData.indian ?? 10,
           others: (dunData.orang_asli ?? 0) + (dunData.others ?? 5),
+          orang_asli: dunData.orang_asli ?? undefined,
           totalElectors: dunData.total_voters ?? undefined,
         }
       } else {
         // Fallback: parliament-level data (split per DUN)
         const parlCode = pack?.dunToParlimen?.[region.code]
-        const parlData = parlCode ? parlDemo[parlCode] : null
-        if (parlData) {
+        const parlData = parlCode ? parlDemo[parlCode] as Record<string, any> | undefined : null
+        if (parlData && parlCode) {
           const dunCount = pack?.parlimenInfo?.[parlCode]?.dunCount || 1
           demographics = {
             malay: parlData.malay ?? 55,
@@ -136,11 +147,29 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
             indian: parlData.indian ?? 10,
             others: parlData.others ?? 5,
             totalElectors: parlData.totalElectors ? Math.round(parlData.totalElectors / dunCount) : undefined,
-
           }
         } else {
           demographics = { malay: 60, chinese: 25, indian: 10, others: 5 }
         }
+      }
+
+      // Historical + hot seat data: try STATE_CODE and simple code
+      const prefixedCode = prefix ? `${prefix}_${region.code}` : null
+      const history = (historicalData as Record<string, any>)[region.code]
+        || (prefixedCode && (historicalData as Record<string, any>)[prefixedCode])
+        || undefined
+
+      const hotSeat = (hotSeatsData as Record<string, any>)[region.code]
+        || (prefixedCode && (hotSeatsData as Record<string, any>)[prefixedCode])
+        || undefined
+
+      // Attach hot seat classification
+      const enhancedHistory = history ? { ...history } : undefined
+      if (enhancedHistory && hotSeat) {
+        enhancedHistory._hotSeat = hotSeat.status || null
+        enhancedHistory._hotSeatLabel = hotSeat.label || null
+        enhancedHistory._hotSeatRecentMajority = hotSeat.majority || null
+        enhancedHistory._hotSeatRecentYear = hotSeat.year || null
       }
 
       return {
@@ -148,7 +177,7 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
         sentiment,
         candidates: candidates || [],
         demographics,
-        history: (historicalData as Record<string, any>)[region.code] || undefined,
+        history: enhancedHistory,
       }
     }),
   )
