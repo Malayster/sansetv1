@@ -27,6 +27,7 @@ const STATE_FLAGS: Record<string, string> = {
   'PRN Johor':           '/flags/johor.svg',
   'PRN Sabah':           '/flags/sabah.svg',
   'PRN Sarawak':         '/flags/sarawak.svg',
+  'PRN Wilayah Persekutuan': '/flags/wilayah-persekutuan.svg',
 }
 
 function getFlagPath(name: string): string | undefined {
@@ -46,9 +47,9 @@ export default function ElectionPageClient({
   // Compute per-election seat stats for switcher preview
   const electionSummaries = useMemo(() =>
     electionsWithRegions.map((el) => {
-      const duns = el.electionPack?.parlimenInfo
+      const duns = el.electionPack?.dunToParlimen
         ? Object.keys(el.electionPack.dunToParlimen).length
-        : el.regions.filter(r => r.code.startsWith('N')).length
+        : el.regions.length
 
       // Count hot seats
       const panas = el.regions.filter(r =>

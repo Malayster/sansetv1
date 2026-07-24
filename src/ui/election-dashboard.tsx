@@ -111,7 +111,7 @@ export default function ElectionDashboard({
 
   const activeRegions = viewLevel === 'parlimen' && parlimenRegions.length > 0
     ? parlimenRegions
-    : regions.filter(r => r.code.startsWith('N')).sort((a, b) => a.code.localeCompare(b.code))
+    : regions.sort((a, b) => a.code.localeCompare(b.code))
 
   const containerClass = theme === 'dark'
   ? 'dark bg-gray-900 text-gray-100 min-h-screen'
@@ -137,7 +137,7 @@ export default function ElectionDashboard({
               : 'text-gray-500 hover:text-gray-700'
           }`}
         >
-          🗳️ DUN {regions.filter(r => r.code.startsWith('N')).length}
+          🗳️ DUN {regions.length}
         </button>
         <button onClick={() => setViewLevel('parlimen')}
           className={`px-3 py-1.5 text-[11px] font-medium rounded-md transition-all ${

@@ -1,0 +1,23 @@
+{
+  "electionId": "prn-wp-template",
+  "name": "PRN Wp (Template)",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_wpk_dun.json",
+  "state": "Wilayah Persekutuan",
+  "dunToParlimen": {
+    "WPK01": "P125"
+  },
+  "parlimenInfo": {
+    "P125": {
+      "name": "Putrajaya",
+      "dunCount": 1
+    }
+  },
+  "demographicsSource": "parlimen",
+  "dataSources": {
+    "demographics": "Tindak Malaysia / DOSM",
+    "historicalResults": "ElectionData.MY (fetch on-demand)",
+    "geoJson": "TindakMalaysia/Federal-Territories-Maps"
+  }
+}

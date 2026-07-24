@@ -4798,5 +4798,13 @@
     "orang_asli": 0.0,
     "others": 27.9,
     "total_voters": 19862
+  },
+  "WPK_WPK01": {
+    "malay": 94.0,
+    "chinese": 0.9,
+    "indian": 2.7,
+    "others": 2.3,
+    "total_voters": 42881,
+    "orang_asli": 0
   }
 }

@@ -1,0 +1,191 @@
+{
+  "electionId": "prn-sabah-template",
+  "name": "PRN Sabah (Template)",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_sbh_dun.json",
+  "state": "Sabah",
+  "dunToParlimen": {
+    "N01": "P167",
+    "N02": "P167",
+    "N03": "P167",
+    "N04": "P167",
+    "N05": "P168",
+    "N06": "P168",
+    "N07": "P168",
+    "N08": "P169",
+    "N09": "P169",
+    "N10": "P169",
+    "N11": "P169",
+    "N12": "P170",
+    "N13": "P170",
+    "N14": "P170",
+    "N15": "P170",
+    "N16": "P171",
+    "N17": "P171",
+    "N18": "P171",
+    "N19": "P172",
+    "N20": "P172",
+    "N21": "P172",
+    "N22": "P173",
+    "N23": "P173",
+    "N24": "P173",
+    "N25": "P174",
+    "N26": "P174",
+    "N27": "P175",
+    "N28": "P175",
+    "N29": "P175",
+    "N30": "P176",
+    "N31": "P176",
+    "N32": "P177",
+    "N33": "P177",
+    "N34": "P178",
+    "N35": "P178",
+    "N36": "P179",
+    "N37": "P179",
+    "N38": "P179",
+    "N39": "P180",
+    "N40": "P180",
+    "N41": "P180",
+    "N42": "P181",
+    "N43": "P181",
+    "N44": "P182",
+    "N45": "P182",
+    "N46": "P182",
+    "N47": "P183",
+    "N48": "P183",
+    "N49": "P183",
+    "N50": "P184",
+    "N51": "P184",
+    "N52": "P184",
+    "N53": "P185",
+    "N54": "P185",
+    "N55": "P186",
+    "N56": "P186",
+    "N57": "P187",
+    "N58": "P187",
+    "N59": "P187",
+    "N60": "P188",
+    "N61": "P188",
+    "N62": "P188",
+    "N63": "P188",
+    "N64": "P189",
+    "N65": "P189",
+    "N66": "P189",
+    "N67": "P190",
+    "N68": "P190",
+    "N69": "P190",
+    "N70": "P191",
+    "N71": "P191",
+    "N72": "P191",
+    "N73": "P191"
+  },
+  "parlimenInfo": {
+    "P167": {
+      "name": "Kudat",
+      "dunCount": 4
+    },
+    "P168": {
+      "name": "Kota Marudu",
+      "dunCount": 3
+    },
+    "P169": {
+      "name": "Kota Belud",
+      "dunCount": 4
+    },
+    "P170": {
+      "name": "Tuaran",
+      "dunCount": 4
+    },
+    "P171": {
+      "name": "Sepanggar",
+      "dunCount": 3
+    },
+    "P172": {
+      "name": "Kota Kinabalu",
+      "dunCount": 3
+    },
+    "P173": {
+      "name": "Putatan",
+      "dunCount": 3
+    },
+    "P174": {
+      "name": "Penampang",
+      "dunCount": 2
+    },
+    "P175": {
+      "name": "Papar",
+      "dunCount": 3
+    },
+    "P176": {
+      "name": "Kimanis",
+      "dunCount": 2
+    },
+    "P177": {
+      "name": "Beaufort",
+      "dunCount": 2
+    },
+    "P178": {
+      "name": "Sipitang",
+      "dunCount": 2
+    },
+    "P179": {
+      "name": "Ranau",
+      "dunCount": 3
+    },
+    "P180": {
+      "name": "Keningau",
+      "dunCount": 3
+    },
+    "P181": {
+      "name": "Tenom",
+      "dunCount": 2
+    },
+    "P182": {
+      "name": "Pensiangan",
+      "dunCount": 3
+    },
+    "P183": {
+      "name": "Beluran",
+      "dunCount": 3
+    },
+    "P184": {
+      "name": "Libaran",
+      "dunCount": 3
+    },
+    "P185": {
+      "name": "Batu Sapi",
+      "dunCount": 2
+    },
+    "P186": {
+      "name": "Sandakan",
+      "dunCount": 2
+    },
+    "P187": {
+      "name": "Kinabatangan",
+      "dunCount": 3
+    },
+    "P188": {
+      "name": "Silam",
+      "dunCount": 4
+    },
+    "P189": {
+      "name": "Semporna",
+      "dunCount": 3
+    },
+    "P190": {
+      "name": "Tawau",
+      "dunCount": 3
+    },
+    "P191": {
+      "name": "Kalabakan",
+      "dunCount": 4
+    }
+  },
+  "demographicsSource": "parlimen",
+  "dataSources": {
+    "demographics": "Tindak Malaysia / DOSM",
+    "historicalResults": "ElectionData.MY (fetch on-demand)",
+    "geoJson": "TindakMalaysia/Sabah-Maps"
+  }
+}

@@ -30,6 +30,7 @@ const STATE_FOLDER_MAP: Record<string, string> = {
   'Johor':           'prn-johor-2026',
   'Sabah':           'prn-sabah-2026',
   'Sarawak':         'prn-sarawak-2026',
+  'Wilayah Persekutuan': 'prn-wp-2026',
 }
 
 // ─── Lookup: state name → short prefix for demographics-dun.json keys (e.g. "NSN_N01") ───

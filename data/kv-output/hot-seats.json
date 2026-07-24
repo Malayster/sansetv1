@@ -7198,5 +7198,11 @@
     "totalVoters": 13054,
     "status": "selamat",
     "label": "🟢 Selamat"
+  },
+  "WPK01": {
+    "status": "selamat",
+    "label": "Selamat",
+    "majority": 5000,
+    "year": 2022
   }
 }
