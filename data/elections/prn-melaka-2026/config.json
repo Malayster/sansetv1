@@ -1,0 +1,70 @@
+{
+  "electionId": "prn-melaka-2026",
+  "name": "PRN Melaka 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_mlk_dun.json",
+  "state": "Melaka",
+  "dunToParlimen": {
+    "N01": "P134",
+    "N02": "P134",
+    "N03": "P134",
+    "N04": "P134",
+    "N05": "P134",
+    "N06": "P135",
+    "N07": "P135",
+    "N08": "P135",
+    "N09": "P135",
+    "N10": "P135",
+    "N11": "P136",
+    "N12": "P136",
+    "N13": "P136",
+    "N14": "P136",
+    "N15": "P137",
+    "N16": "P137",
+    "N17": "P137",
+    "N18": "P137",
+    "N19": "P138",
+    "N20": "P138",
+    "N21": "P138",
+    "N22": "P138",
+    "N23": "P138",
+    "N24": "P139",
+    "N25": "P139",
+    "N26": "P139",
+    "N27": "P139",
+    "N28": "P139"
+  },
+  "parlimenInfo": {
+    "P134": {
+      "name": "Masjid Tanah",
+      "dunCount": 5
+    },
+    "P135": {
+      "name": "Alor Gajah",
+      "dunCount": 5
+    },
+    "P136": {
+      "name": "Tangga Batu",
+      "dunCount": 4
+    },
+    "P137": {
+      "name": "Bukit Katil",
+      "dunCount": 4
+    },
+    "P138": {
+      "name": "Kota Melaka",
+      "dunCount": 5
+    },
+    "P139": {
+      "name": "Jasin",
+      "dunCount": 5
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Melaka-Maps"
+  }
+}

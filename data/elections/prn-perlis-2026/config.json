@@ -1,0 +1,45 @@
+{
+  "electionId": "prn-perlis-2026",
+  "name": "PRN Perlis 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_pls_dun.json",
+  "state": "Perlis",
+  "dunToParlimen": {
+    "N01": "P001",
+    "N02": "P001",
+    "N03": "P001",
+    "N04": "P001",
+    "N05": "P001",
+    "N06": "P002",
+    "N07": "P002",
+    "N08": "P002",
+    "N09": "P002",
+    "N10": "P002",
+    "N11": "P003",
+    "N12": "P003",
+    "N13": "P003",
+    "N14": "P003",
+    "N15": "P003"
+  },
+  "parlimenInfo": {
+    "P001": {
+      "name": "Padang Besar",
+      "dunCount": 5
+    },
+    "P002": {
+      "name": "Kangar",
+      "dunCount": 5
+    },
+    "P003": {
+      "name": "Arau",
+      "dunCount": 5
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Perlis-Maps"
+  }
+}

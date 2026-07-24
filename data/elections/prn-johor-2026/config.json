@@ -1,0 +1,192 @@
+{
+  "electionId": "prn-johor-2026",
+  "name": "PRN Johor 2026",
+  "level": "dun",
+  "parentLevel": "parlimen",
+  "geoJson": "prn_jhr_dun.json",
+  "state": "Johor",
+  "dunToParlimen": {
+    "N01": "P140",
+    "N02": "P140",
+    "N03": "P153",
+    "N035": "JO16",
+    "N04": "P141",
+    "N040": "JO19",
+    "N05": "P142",
+    "N051": "JO24",
+    "N06": "P142",
+    "N07": "P143",
+    "N08": "P143",
+    "N09": "P144",
+    "N10": "P144",
+    "N11": "P144",
+    "N12": "P145",
+    "N13": "P145",
+    "N14": "P145",
+    "N15": "P146",
+    "N16": "P146",
+    "N17": "P147",
+    "N18": "P147",
+    "N19": "P148",
+    "N20": "P148",
+    "N21": "P149",
+    "N22": "P149",
+    "N23": "P150",
+    "N24": "P150",
+    "N25": "P150",
+    "N26": "P151",
+    "N27": "P151",
+    "N28": "P152",
+    "N29": "P152",
+    "N30": "P153",
+    "N32": "P154",
+    "N33": "P154",
+    "N34": "P155",
+    "N35": "P155",
+    "N36": "P156",
+    "N37": "P156",
+    "N38": "P157",
+    "N39": "P157",
+    "N40": "P158",
+    "N41": "P158",
+    "N42": "P159",
+    "N43": "P159",
+    "N44": "P160",
+    "N45": "P160",
+    "N46": "P161",
+    "N47": "P161",
+    "N48": "P162",
+    "N49": "P162",
+    "N50": "P163",
+    "N51": "P163",
+    "N52": "P163",
+    "N53": "P164",
+    "N54": "P164",
+    "N55": "P165",
+    "N56": "P165"
+  },
+  "parlimenInfo": {
+    "JO16": {
+      "name": "None",
+      "dunCount": 1
+    },
+    "JO19": {
+      "name": "None",
+      "dunCount": 1
+    },
+    "JO24": {
+      "name": "None",
+      "dunCount": 1
+    },
+    "P140": {
+      "name": "Segamat",
+      "dunCount": 2
+    },
+    "P141": {
+      "name": "Sekijang",
+      "dunCount": 1
+    },
+    "P142": {
+      "name": "Labis",
+      "dunCount": 2
+    },
+    "P143": {
+      "name": "Pagoh",
+      "dunCount": 2
+    },
+    "P144": {
+      "name": "Ledang",
+      "dunCount": 3
+    },
+    "P145": {
+      "name": "Bakri",
+      "dunCount": 3
+    },
+    "P146": {
+      "name": "Muar",
+      "dunCount": 2
+    },
+    "P147": {
+      "name": "Parit Sulong",
+      "dunCount": 2
+    },
+    "P148": {
+      "name": "Ayer Hitam",
+      "dunCount": 2
+    },
+    "P149": {
+      "name": "Sri Gading",
+      "dunCount": 2
+    },
+    "P150": {
+      "name": "Batu Pahat",
+      "dunCount": 3
+    },
+    "P151": {
+      "name": "Simpang Renggam",
+      "dunCount": 2
+    },
+    "P152": {
+      "name": "Kluang",
+      "dunCount": 2
+    },
+    "P153": {
+      "name": "Sembrong",
+      "dunCount": 2
+    },
+    "P154": {
+      "name": "Mersing",
+      "dunCount": 2
+    },
+    "P155": {
+      "name": "Tenggara",
+      "dunCount": 2
+    },
+    "P156": {
+      "name": "Kota Tinggi",
+      "dunCount": 2
+    },
+    "P157": {
+      "name": "Pengerang",
+      "dunCount": 2
+    },
+    "P158": {
+      "name": "Tebrau",
+      "dunCount": 2
+    },
+    "P159": {
+      "name": "Pasir Gudang",
+      "dunCount": 2
+    },
+    "P160": {
+      "name": "Johor Bahru",
+      "dunCount": 2
+    },
+    "P161": {
+      "name": "Pulai",
+      "dunCount": 2
+    },
+    "P162": {
+      "name": "Gelang Patah",
+      "dunCount": 2
+    },
+    "P163": {
+      "name": "Kulai",
+      "dunCount": 3
+    },
+    "P164": {
+      "name": "Pontian",
+      "dunCount": 2
+    },
+    "P165": {
+      "name": "Tanjung Piai",
+      "dunCount": 2
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "TindakMalaysia/Johor-Maps"
+  }
+}
