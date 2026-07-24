@@ -224,6 +224,9 @@ function getMockValue(key: string) {
 }
 
 export function getMockDemographics(code: string) {
+  // DUN-level data takes priority — use estimates for individual DUNs
+  if (mockDemographics[code]) return mockDemographics[code]
+
   // Map DUN codes to parent Parliament codes for demographics lookup
   const dunToParlimen: Record<string, string> = {
     // P126 Jelebu: N01-N04
@@ -265,7 +268,7 @@ export function getMockDemographics(code: string) {
       _parlCode: parlCode,
     }
   }
-  return mockDemographics[code] || defaultDemographics
+  return defaultDemographics
 }
 
 export function getHistoricalResults() {
