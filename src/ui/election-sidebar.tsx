@@ -80,7 +80,7 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
   const hasIncumbent = candidates.some(c => c.role === 'penyandang')
   // Fallback: use last historical winner if no incumbent
   const lastWinner = !hasIncumbent ? history?.elections?.slice().reverse().find(e => e.winnerParty) : null
-  const { malay, chinese, indian, others, medianIncome, gini, poverty } = demographics
+  const { malay, chinese, indian, others, orang_asli, medianIncome, gini, poverty } = demographics
 
   return (
   <div className="border border-gray-200 bg-white rounded">
@@ -112,6 +112,7 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
   { label: 'Melayu', value: malay, color: 'bg-[#C41E3A]' },
   { label: 'Cina', value: chinese, color: 'bg-amber-500' },
   { label: 'India', value: indian, color: 'bg-gray-500' },
+  ...(orang_asli != null && orang_asli > 0 ? [{ label: 'Orang Asli', value: orang_asli, color: 'bg-emerald-500' }] : []),
   { label: 'Lain-lain', value: others, color: 'bg-gray-400' },
   ].map((d) => (
   <div key={d.label} className="flex items-center gap-2">

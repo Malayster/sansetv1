@@ -128,6 +128,7 @@ function ExpandedRow({ region }: { region: RegionWithData }) {
   <span className="text-red-600">Melayu: {region.demographics.malay}%</span>
   <span className="text-amber-600">Cina: {region.demographics.chinese}%</span>
   <span className="text-gray-600">India: {region.demographics.indian}%</span>
+  {region.demographics.orang_asli > 0 && <span className="text-emerald-600">OA: {region.demographics.orang_asli}%</span>}
   <span className="text-gray-400">Lain: {region.demographics.others}%</span>
   </div>
   <div className="flex gap-3 text-[11px]">
