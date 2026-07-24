@@ -106,15 +106,15 @@ export default function ElectionCompare({ regions }: { regions: RegionWithData[]
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-        <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
+      <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a]">
+        <h3 className="font-bold text-[13px] text-white flex items-center gap-1.5">
           ⚖️ Perbandingan DUN
         </h3>
       </div>
 
-      <div className="p-4">
+      <div className="p-3 sm:p-4">
         {/* Picker */}
-        <div className="grid grid-cols-2 gap-4 mb-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
           <div>
             <label className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider block mb-1">DUN A</label>
             <select value={a} onChange={e => setA(e.target.value)} className="w-full text-[12px] border border-gray-300 rounded-lg px-3 py-2 bg-white">

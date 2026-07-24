@@ -228,36 +228,36 @@ const ElectionMap = memo(function ElectionMap({
     )}
 
     {/* ═══ Map Controls Bar ═══ */}
-    <div className="flex items-center gap-2 px-3 py-2 border-b border-gray-100 flex-wrap">
-      <h2 className="font-serif text-[13px] font-bold text-gray-800 flex items-center gap-1.5 mr-auto">
-        <svg className="w-3.5 h-3.5 text-[#C41E3A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div className="flex items-center gap-2 px-3 sm:px-4 py-2.5 bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a] flex-wrap">
+      <h2 className="font-serif text-[13px] font-bold text-white flex items-center gap-1.5 mr-auto">
+        <svg className="w-3.5 h-3.5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
         </svg>
         Peta
       </h2>
 
-      {/* Search */}
-      <div className="relative">
+      {/* Search — full width on mobile */}
+      <div className="relative order-last sm:order-none w-full sm:w-auto mt-1 sm:mt-0">
         <input type="text" value={search} onChange={e => setSearch(e.target.value)}
           placeholder="Cari DUN..."
-          className="w-[120px] sm:w-[160px] text-[11px] px-2.5 py-1.5 border border-gray-200 rounded-lg bg-gray-50 focus:bg-white focus:ring-1 focus:ring-[#C41E3A] focus:border-[#C41E3A] outline-none"
+          className="w-full sm:w-[160px] text-[11px] px-2.5 py-1.5 border border-white/20 rounded-lg bg-white/10 focus:bg-white/20 focus:ring-1 focus:ring-white/50 focus:border-white/50 outline-none text-white placeholder:text-white/50"
         />
-        {search && <button onClick={() => setSearch('')} className="absolute right-1.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-[10px]">✕</button>}
+        {search && <button onClick={() => setSearch('')} className="absolute right-1.5 top-1/2 -translate-y-1/2 text-white/60 hover:text-white text-[10px]">✕</button>}
       </div>
 
       {/* View mode toggle */}
-      <div className="flex bg-gray-100 rounded p-0.5">
+      <div className="flex bg-white/20 rounded p-0.5">
         <button onClick={() => setViewMode('party')}
-          className={`px-2 py-1 text-[9px] font-medium rounded transition-all ${viewMode === 'party' ? 'bg-white text-gray-800 shadow-sm' : 'text-gray-500'}`}
+          className={`px-2 py-1 text-[9px] font-medium rounded transition-all ${viewMode === 'party' ? 'bg-white text-[#1a1a1a] shadow-sm' : 'text-white/80 hover:text-white'}`}
         >Parti</button>
         <button onClick={() => setViewMode('hotseat')}
-          className={`px-2 py-1 text-[9px] font-medium rounded transition-all ${viewMode === 'hotseat' ? 'bg-white text-gray-800 shadow-sm' : 'text-gray-500'}`}
+          className={`px-2 py-1 text-[9px] font-medium rounded transition-all ${viewMode === 'hotseat' ? 'bg-white text-[#1a1a1a] shadow-sm' : 'text-white/80 hover:text-white'}`}
         >🔥</button>
       </div>
 
       {viewMode === 'party' && availableYears.length > 0 && (
         <select value={histYear || ''} onChange={e => setHistYear(e.target.value ? Number(e.target.value) : null)}
-          className="text-[10px] border border-gray-200 rounded px-2 py-1 bg-white max-w-[100px]"
+          className="text-[10px] border border-white/20 rounded px-2 py-1 bg-white/10 text-white max-w-[100px]"
         >
           <option value="">Penyandang</option>
           {availableYears.map(y => <option key={y} value={y}>PRN {y}</option>)}

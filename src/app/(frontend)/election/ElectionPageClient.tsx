@@ -51,11 +51,11 @@ export default function ElectionPageClient({
   <div className="max-w-7xl mx-auto px-4 py-6">
     {/* ═══════ BIG TITLE ═══════ */}
     <div className="text-center mb-6">
-      <h1 className="font-serif text-[28px] sm:text-[34px] font-black text-gray-900 tracking-tight">
+      <h1 className="font-serif text-[28px] sm:text-[34px] font-black text-[#1a1a1a] tracking-tight">
         PUSAT PILIHAN RAYA
       </h1>
-      <p className="text-[11px] text-gray-400 mt-1">
-        Data dianalisis selari dengan <a href="https://electiondata.my" target="_blank" className="text-red-600 hover:underline">electiondata.my</a>
+      <p className="text-[11px] text-[#1a1a1a]/40 mt-1">
+        Data dianalisis selari dengan <a href="https://electiondata.my" target="_blank" className="text-[#C41E3A] hover:underline">electiondata.my</a>
       </p>
     </div>
 
@@ -70,13 +70,13 @@ export default function ElectionPageClient({
             onClick={() => setIndex(i)}
             className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-medium transition-all ${
               active
-                ? 'bg-[#C41E3A] text-white shadow-sm ring-1 ring-red-300'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-gray-800'
+                ? 'bg-[#C41E3A] text-white shadow-sm ring-1 ring-[#C41E3A]/30'
+                : 'bg-[#1a1a1a]/5 text-[#1a1a1a]/60 hover:bg-[#1a1a1a]/10 hover:text-[#1a1a1a]'
             }`}
           >
             {flag && (
               <img src={flag} alt=""
-                className="w-5 h-3.5 rounded object-cover border border-gray-200 shrink-0" />
+                className="w-5 h-3.5 rounded object-cover border border-[#1a1a1a]/10 shrink-0" />
             )}
             {summaries[i].short}
           </button>

@@ -67,11 +67,11 @@ export function MajorityTracker({ regions }: { regions: RegionWithData[] }) {
 
   return (
   <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
-  <div className="flex items-center justify-between mb-3">
-  <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
+  <div className="flex items-center justify-between mb-3 bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a] -mx-4 px-4 py-2.5">
+  <h3 className="font-bold text-[13px] text-white flex items-center gap-1.5">
   🏛️ Matematik Dewan
   </h3>
-  <span className="text-[10px] bg-red-600 text-white font-semibold px-2 py-0.5 rounded-full">
+  <span className="text-[10px] bg-white text-[#C41E3A] font-semibold px-2 py-0.5 rounded-full">
   {maxCount}/{total} — perlu {needed - maxCount > 0 ? `${needed - maxCount} lagi` : '✅ Capai'}
   </span>
   </div>
@@ -148,11 +148,11 @@ export function KeyRaces({ regions }: { regions: RegionWithData[] }) {
 
   return (
   <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
-    <div className="flex items-center justify-between mb-3">
-      <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
+    <div className="flex items-center justify-between mb-3 bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a] -mx-4 px-4 py-2.5">
+      <h3 className="font-bold text-[13px] text-white flex items-center gap-1.5">
         🔥 Kerusi Panas
       </h3>
-      <span className="text-[10px] text-gray-400">{total} kerusi</span>
+      <span className="text-[10px] text-white/80">{total} kerusi</span>
     </div>
 
     {/* Hotness Breakdown Bar */}

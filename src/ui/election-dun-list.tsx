@@ -49,8 +49,8 @@ export default function ElectionDunList({ regions }: { regions: RegionWithData[]
   return (
   <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
     {/* Header + Filter */}
-    <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100">
-      <h3 className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider">Senarai DUN</h3>
+    <div className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a]">
+      <h3 className="text-[11px] font-semibold text-white uppercase tracking-wider">Senarai DUN</h3>
       <input value={search} onChange={e => setSearch(e.target.value)}
         placeholder="Cari..."
         className="ml-auto w-[140px] px-2 h-7 text-[11px] bg-gray-50 border border-gray-200 rounded outline-none focus:border-red-300 placeholder:text-gray-400" />
@@ -64,7 +64,7 @@ export default function ElectionDunList({ regions }: { regions: RegionWithData[]
 
     {/* Table — 3 columns: Kod | Nama | Penyandang / Parti */}
     <div className="overflow-x-auto">
-      <table className="w-full text-left">
+      <table className="w-full text-left min-w-[300px]">
         <thead>
           <tr className="border-b border-gray-100">
             <th className="px-4 py-2 text-[10px] font-semibold text-gray-400 uppercase tracking-wider w-16">Kod</th>

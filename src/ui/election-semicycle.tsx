@@ -53,15 +53,15 @@ export default function SemiCircleView({ regions }: { regions: RegionWithData[] 
 
   return (
   <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-  <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-  <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
+  <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a]">
+  <h3 className="font-bold text-[13px] text-white flex items-center gap-1.5">
   🏛️ Dewan Undangan Negeri
   </h3>
-  <span className="text-[10px] text-gray-400">{regions.length} kerusi</span>
+  <span className="text-[10px] text-white/80">{regions.length} kerusi</span>
   </div>
 
-  <div className="p-6 overflow-x-auto">
-  <div className="flex flex-col items-center gap-1 min-w-[400px]">
+  <div className="p-4 sm:p-6 overflow-x-auto">
+  <div className="flex flex-col items-center gap-1 min-w-[340px] sm:min-w-[400px]">
   {Array.from({ length: maxRow + 1 }).map((_, row) => {
   const rowSeats = seatData.filter(s => s.row === row)
   if (!rowSeats.length) return null

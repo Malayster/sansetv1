@@ -20,11 +20,14 @@ export default function PostalVotePanel() {
   const total = typeof ns.absent === 'number' ? ns.cat1A + ns.cat1B + ns.cat1C + ns.absent : ns.cat1A + ns.cat1B + ns.cat1C
 
   return (
-  <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
-  <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5 mb-3">
+  <div className="bg-white border border-[#1a1a1a]/10 rounded-xl shadow-sm overflow-hidden">
+  <div className="px-4 py-2.5 bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a]">
+  <h3 className="font-bold text-[13px] text-white flex items-center gap-1.5">
   📬 Undi Pos — N. Sembilan (2026)
   </h3>
+  </div>
 
+  <div className="p-4">
   <div className="grid grid-cols-3 gap-3 mb-3">
   <div className="bg-red-50 rounded-lg px-3 py-2.5 text-center">
   <div className="text-[18px] font-bold text-red-700">{ns.cat1A.toLocaleString()}</div>
@@ -34,37 +37,38 @@ export default function PostalVotePanel() {
   <div className="text-[18px] font-bold text-amber-700">{ns.cat1B.toLocaleString()}</div>
   <div className="text-[9px] text-amber-500 mt-0.5 leading-tight">Kategori 1B<br/><span className="text-[8px] opacity-70">Pengundi Luar Negara</span></div>
   </div>
-  <div className="bg-gray-100 rounded-lg px-3 py-2.5 text-center">
-  <div className="text-[18px] font-bold text-gray-700">{ns.cat1C.toLocaleString()}</div>
-  <div className="text-[9px] text-gray-500 mt-0.5 leading-tight">Kategori 1C<br/><span className="text-[8px] opacity-70">Agensi Kerajaan</span></div>
+  <div className="bg-[#1a1a1a]/5 rounded-lg px-3 py-2.5 text-center">
+  <div className="text-[18px] font-bold text-[#1a1a1a]">{ns.cat1C.toLocaleString()}</div>
+  <div className="text-[9px] text-[#1a1a1a]/50 mt-0.5 leading-tight">Kategori 1C<br/><span className="text-[8px] opacity-70">Agensi Kerajaan</span></div>
   </div>
   </div>
 
   <div className="flex items-center justify-between px-1 mb-3">
-  <span className="text-[11px] text-gray-500">Jumlah Pengundi Pos</span>
-  <span className="text-[15px] font-bold text-gray-800">{total.toLocaleString()}</span>
+  <span className="text-[11px] text-[#1a1a1a]/60">Jumlah Pengundi Pos</span>
+  <span className="text-[15px] font-bold text-[#1a1a1a]">{total.toLocaleString()}</span>
   </div>
 
   <details className="group">
-  <summary className="text-[10px] text-gray-400 cursor-pointer hover:text-gray-600:text-gray-300 transition-colors list-none flex items-center gap-1">
+  <summary className="text-[10px] text-[#1a1a1a]/40 cursor-pointer hover:text-[#1a1a1a]/60 transition-colors list-none flex items-center gap-1">
   <span className="group-open:rotate-90 transition-transform">▶</span> Perbandingan Pilihan Raya Lain
   </summary>
   <div className="mt-2 space-y-1">
   {POSTAL_DATA.slice(1).map(d => {
   const t = typeof d.absent === 'number' ? d.cat1A + d.cat1B + d.cat1C + d.absent : d.cat1A + d.cat1B + d.cat1C
   return (
-  <div key={d.election} className="flex items-center justify-between text-[10px] text-gray-500 py-1 px-1.5 hover:bg-gray-50:bg-gray-700/30 rounded">
+  <div key={d.election} className="flex items-center justify-between text-[10px] text-[#1a1a1a]/50 py-1 px-1.5 hover:bg-[#1a1a1a]/5 rounded">
   <span>{d.election}</span>
-  <span className="font-medium text-gray-600">{t.toLocaleString()}</span>
+  <span className="font-medium text-[#1a1a1a]/60">{t.toLocaleString()}</span>
   </div>
   )
   })}
   </div>
   </details>
 
-  <p className="text-[9px] text-gray-400 mt-2 leading-tight">
-  Sumber: <a href="https://github.com/TindakMalaysia/General-Election-Data" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600:text-gray-300">TindakMalaysia</a> · SPR
+  <p className="text-[9px] text-[#1a1a1a]/40 mt-2 leading-tight">
+  Sumber: <a href="https://github.com/TindakMalaysia/General-Election-Data" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#1a1a1a]/60">TindakMalaysia</a> · SPR
   </p>
+  </div>
   </div>
   )
 }

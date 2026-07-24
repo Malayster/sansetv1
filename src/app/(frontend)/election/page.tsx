@@ -122,6 +122,9 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
         getKVValue(process.env.CF_KV_NAMESPACE_ID || 'mock', `candidates:${region.code}`),
       ])
 
+      // Determine parent parliament code for grouping
+      const parlCode = pack?.dunToParlimen?.[region.code] || null
+
       // Lookup DUN-level demographics
       let demographics: RegionWithData['demographics']
       const dunKey = prefix ? `${prefix}_${region.code}` : null
@@ -129,11 +132,15 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
 
       if (dunData) {
         demographics = {
+          _parlCode: parlCode,
           malay: dunData.malay ?? 55,
           chinese: dunData.chinese ?? 25,
           indian: dunData.indian ?? 10,
           others: (dunData.orang_asli ?? 0) + (dunData.others ?? 5),
           orang_asli: dunData.orang_asli ?? undefined,
+          medianIncome: dunData.median_income ?? undefined,
+          poverty: dunData.poverty ?? undefined,
+          gini: dunData.gini ?? undefined,
           totalElectors: dunData.total_voters ?? undefined,
           age_18_29: dunData.age_18_29 ?? undefined,
           age_30_39: dunData.age_30_39 ?? undefined,
@@ -143,15 +150,18 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
         }
       } else {
         // Fallback: parliament-level data (split per DUN)
-        const parlCode = pack?.dunToParlimen?.[region.code]
         const parlData = parlCode ? parlDemo[parlCode] as Record<string, any> | undefined : null
         if (parlData && parlCode) {
           const dunCount = pack?.parlimenInfo?.[parlCode]?.dunCount || 1
           demographics = {
+            _parlCode: parlCode,
             malay: parlData.malay ?? 55,
             chinese: parlData.chinese ?? 25,
             indian: parlData.indian ?? 10,
             others: parlData.others ?? 5,
+            medianIncome: parlData.medianIncome ?? undefined,
+            poverty: parlData.poverty ?? undefined,
+            gini: parlData.gini ?? undefined,
             totalElectors: parlData.totalElectors ? Math.round(parlData.totalElectors / dunCount) : undefined,
             age_18_29: parlData.age_18_29 ?? undefined,
             age_30_39: parlData.age_30_39 ?? undefined,
@@ -160,7 +170,7 @@ async function loadRegionsWithData(election: ElectionInfo): Promise<RegionWithDa
             age_60_plus: parlData.age_60_plus ?? undefined,
           }
         } else {
-          demographics = { malay: 60, chinese: 25, indian: 10, others: 5 }
+          demographics = { _parlCode: parlCode, malay: 60, chinese: 25, indian: 10, others: 5 }
         }
       }
 

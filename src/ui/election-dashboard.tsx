@@ -61,30 +61,30 @@ export default function ElectionDashboard({
   }, [regions])
 
   return (
-  <div>
+  <div className="px-3 sm:px-4 md:px-6 max-w-7xl mx-auto">
     {/* Tarikh */}
     {election.electionDate && (
-      <p className="text-[11px] text-gray-400 mb-3">
+      <p className="text-[11px] text-[#1a1a1a]/40 mb-3 sm:mb-4">
         📅 Mengundi: {new Date(election.electionDate).toLocaleDateString('ms', { year: 'numeric', month: 'long', day: 'numeric' })}
       </p>
     )}
 
-    {/* Party breakdown */}
-    <div className="flex items-center gap-3 mb-4 flex-wrap">
+    {/* Party breakdown — horizontal scroll on mobile */}
+    <div className="flex items-center gap-3 mb-4 overflow-x-auto pb-1 -mx-3 sm:mx-0 px-3 sm:px-0">
       {partyBreakdown.map(([party, count]) => (
-        <div key={party} className="flex items-center gap-1.5">
+        <div key={party} className="flex items-center gap-1.5 shrink-0">
           <span className="w-2.5 h-2.5 rounded-sm shrink-0 inline-block" style={{ background: PARTY_COLOR_HEX[party] || '#6b7280' }} />
-          <span className="text-[11px] font-semibold text-gray-700">{party}</span>
-          <span className="text-[11px] text-gray-500">{count}</span>
+          <span className="text-[11px] font-semibold text-[#1a1a1a]">{party}</span>
+          <span className="text-[11px] text-[#1a1a1a]/50">{count}</span>
         </div>
       ))}
-      <span className="text-[11px] text-gray-400 ml-auto">{regions.length} DUN</span>
+      <span className="text-[11px] text-[#1a1a1a]/40 ml-auto shrink-0">{regions.length} DUN</span>
     </div>
 
-    {/* ═══════ Map + Panel layout (electiondata.my style) ═══════ */}
-    <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-6">
-      {/* Map — left 40% */}
-      <div className="lg:col-span-2">
+    {/* ═══════ Map + Panel — stack on mobile, side-by-side from tablet ═══════ */}
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-3 sm:gap-4 mb-6">
+      {/* Map */}
+      <div className="md:col-span-2">
         <ElectionMap
           regions={regions}
           selected={selected}
@@ -93,50 +93,70 @@ export default function ElectionDashboard({
         />
       </div>
 
-      {/* Panel — right 60%, always visible */}
+      {/* DUN Panel */}
       {selected ? (
-        <div className="lg:col-span-3">
+        <div className="md:col-span-3">
+          <div className="mb-2 flex items-center justify-between">
+            <span className="text-[11px] font-bold text-[#1a1a1a]">{selected.code} — {selected.name}</span>
+            <button onClick={() => setSelected(null)} className="text-[10px] text-[#1a1a1a]/40 hover:text-[#1a1a1a]/60 transition-colors">✕ tutup</button>
+          </div>
           <ElectionSidebar region={selected} />
         </div>
       ) : (
-        <div className="lg:col-span-3 border border-gray-200 rounded bg-white p-6 flex flex-col items-center justify-center text-center">
-          <div className="text-4xl mb-3">🗳️</div>
-          <p className="text-[13px] font-semibold text-gray-600">Klik mana-mana DUN pada peta</p>
-          <p className="text-[11px] text-gray-400 mt-1">untuk melihat analisa terperinci</p>
-          <div className="mt-4">
+        <div className="md:col-span-3 border border-[#1a1a1a]/10 rounded-lg bg-white shadow-sm">
+          <div className="p-3 border-b border-[#1a1a1a]/10">
+            <select
+              value=""
+              onChange={(e) => {
+                const r = regions.find(x => x.code === e.target.value)
+                if (r) setSelected(r)
+              }}
+              className="w-full text-[12px] rounded-lg border border-[#1a1a1a]/10 px-3 py-2.5 bg-white text-[#1a1a1a] focus:outline-none focus:ring-2 focus:ring-[#C41E3A]/30 focus:border-[#C41E3A] appearance-none"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231a1a1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
+                backgroundRepeat: 'no-repeat', backgroundPosition: 'right 10px center', backgroundSize: '14px',
+              }}
+            >
+              <option value="">Pilih DUN...</option>
+              {regions.map(r => (
+                <option key={r.code} value={r.code}>{r.code} — {r.name}</option>
+              ))}
+            </select>
+          </div>
+          <div className="max-h-[280px] sm:max-h-[320px] overflow-y-auto">
             <ElectionDunList regions={regions} />
           </div>
         </div>
       )}
     </div>
 
-    {/* ═══════ Komponen tambahan (sentiasa nampak, scroll) ═══════ */}
-    <div className="space-y-4">
+    {/* ═══════ Additional widgets — n8n-style responsive grid ═══════ */}
+    <div className="space-y-3 sm:space-y-4">
       {/* Charts + PostalVote */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <div className="lg:col-span-2 space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+        <div className="md:col-span-2 space-y-3 sm:space-y-4">
           <ElectionCharts regions={regions} />
         </div>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           <PostalVotePanel />
         </div>
       </div>
 
       {/* Swing + Banding */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         <ElectionSwing regions={regions} />
         <ElectionCompare regions={regions} />
       </div>
 
       {/* SemiCircle + Swingometer */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         <SemiCircleView regions={regions} />
         <Swingometer regions={regions} />
       </div>
 
       {/* Insights */}
       <ExecutiveSummary regions={regions} />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         <MajorityTracker regions={regions} />
         <KeyRaces regions={regions} />
       </div>

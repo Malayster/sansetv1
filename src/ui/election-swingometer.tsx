@@ -75,12 +75,12 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
   const needed = Math.floor(regions.length / 2) + 1
 
   return (
-  <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-  <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-  <h3 className="font-bold text-[13px] text-gray-800 flex items-center gap-1.5">
-  🎯 Swingometer
+  <div className="bg-white border border-[#1a1a1a]/10 rounded-xl shadow-sm overflow-hidden">
+  <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a]">
+  <h3 className="font-bold text-[13px] text-white flex items-center gap-1.5">
+  <span className="text-white/80">🎯</span> Swingometer
   </h3>
-  <span className="text-[10px] text-gray-400">Simulasi: {swing}% undi beralih dari parti sasaran</span>
+  <span className="text-[10px] text-white/70">Simulasi: {swing}% undi beralih dari parti sasaran</span>
   </div>
 
   <div className="p-4 space-y-4">
@@ -89,7 +89,7 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
   {(['all', 'BN', 'PH', 'PN'] as SwingTarget[]).map(t => (
   <button key={t} onClick={() => setTarget(t)}
   className={`text-[10px] font-medium px-3 py-1.5 rounded-full transition-colors ${
-  target === t ? 'bg-gray-800 text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+  target === t ? 'bg-[#C41E3A] text-white shadow-sm' : 'bg-[#1a1a1a]/5 text-[#1a1a1a]/60 hover:bg-[#1a1a1a]/10'
   }`}
   >
   {t === 'all' ? 'Semua Parti' : t}
@@ -99,65 +99,61 @@ export default function Swingometer({ regions }: { regions: RegionWithData[] }) 
 
   {/* Slider */}
   <div>
-  <div className="flex justify-between text-[10px] text-gray-500 mb-1">
+  <div className="flex justify-between text-[10px] text-[#1a1a1a]/50 mb-1">
   <span>0%</span>
-  <span className="font-semibold text-gray-700">Ayunan: {swing}%</span>
+  <span className="font-semibold text-[#1a1a1a]">Ayunan: {swing}%</span>
   <span>30%</span>
   </div>
   <input type="range" min={0} max={30} step={0.5} value={swing}
   onChange={e => setSwing(parseFloat(e.target.value))}
-  className="w-full h-2 rounded-full appearance-none cursor-pointer
-  [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4
-  [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gray-800 [&::-webkit-slider-thumb]:shadow-md
-  [&::-webkit-slider-thumb]:cursor-pointer
-  bg-gray-200 accent-gray-800"
+  className="w-full h-2 rounded-full appearance-none cursor-pointer bg-[#1a1a1a]/10 accent-[#C41E3A] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#C41E3A] [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:cursor-pointer"
   />
   </div>
 
   {/* Seat projection */}
-  <div className="grid grid-cols-3 gap-2">
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
   {Object.entries(result.seats).sort(([, a], [, b]) => b - a).map(([party, count]) => {
   const isGov = party === result.maxParty && count >= needed
   return (
   <div key={party} className={`rounded-lg border p-3 text-center ${
-  isGov ? 'border-red-300 bg-red-50' : 'border-gray-200 bg-gray-50'
+  isGov ? 'border-[#C41E3A] bg-[#C41E3A]/5' : 'border-[#1a1a1a]/10 bg-[#1a1a1a]/[0.02]'
   }`}>
   <div className="flex justify-center mb-1">
-  <img src={PARTY_FLAGS[party] || '/flags/bebas.svg'} className="w-6 h-auto rounded border border-gray-300" />
+  <img src={PARTY_FLAGS[party] || '/flags/bebas.svg'} className="w-6 h-auto rounded border border-[#1a1a1a]/10" />
   </div>
   <div className="font-bold text-[14px]" style={{ color: hex[party] || '#6b7280' }}>{count}</div>
-  <div className="text-[10px] text-gray-500">{party}</div>
-  {isGov && <div className="text-[9px] text-red-600 font-bold mt-0.5">MAJORITI</div>}
+  <div className="text-[10px] text-[#1a1a1a]/50">{party}</div>
+  {isGov && <div className="text-[9px] text-[#C41E3A] font-bold mt-0.5 uppercase tracking-wider">MAJORITI</div>}
   </div>
   )
   })}
   </div>
 
   {/* Status */}
-  <div className="text-center text-[11px] text-gray-500 bg-gray-50 rounded-lg py-2">
+  <div className="text-center text-[11px] text-[#1a1a1a]/50 bg-[#1a1a1a]/[0.02] rounded-lg py-2">
   {result.maxCount >= needed ? (
-  <span className="text-red-600 font-bold">
+  <span className="text-[#C41E3A] font-bold">
   ✅ {result.maxParty} capai majoriti dengan {result.maxCount}/{result.total} kerusi
   </span>
   ) : (
   <span>
-  🏛️ {result.maxParty} perlu <strong>{needed - result.maxCount} lagi</strong> untuk majoriti ({result.maxCount}/{result.total})
+  🏛️ {result.maxParty} perlu <strong className="text-[#1a1a1a]">{needed - result.maxCount} lagi</strong> untuk majoriti ({result.maxCount}/{result.total})
   </span>
   )}
   </div>
 
   {/* Flipped seats */}
   {result.flipped.length > 0 && (
-  <div className="border-t border-gray-100 pt-3">
-  <div className="text-[10px] font-semibold text-gray-500 uppercase tracking-wider mb-2">
+  <div className="border-t border-[#1a1a1a]/10 pt-3">
+  <div className="text-[10px] font-semibold text-[#1a1a1a]/50 uppercase tracking-wider mb-2">
   🔄 Kerusi bertukar ({result.flipped.length})
   </div>
   <div className="flex flex-wrap gap-1.5">
   {result.flipped.map(f => (
-  <span key={f.code} className="inline-flex items-center gap-1 text-[9px] bg-amber-50 border border-amber-200 rounded-full px-2 py-0.5">
+  <span key={f.code} className="inline-flex items-center gap-1 text-[9px] bg-[#FFC107]/10 border border-[#FFC107]/30 rounded-full px-2 py-0.5">
   {f.code}
   <span className="font-bold" style={{ color: hex[f.from] }}>{f.from}</span>
-  <span className="text-gray-400">→</span>
+  <span className="text-[#1a1a1a]/40">→</span>
   <span className="font-bold" style={{ color: hex[f.to] }}>{f.to}</span>
   </span>
   ))}

@@ -85,14 +85,14 @@ export default function ElectionSidebar({ region }: { region: RegionWithData | n
   const hasAgeData = age_18_29 != null
 
   return (
-  <div className="border border-gray-200 bg-white rounded">
+  <div className="border border-[#1a1a1a]/10 bg-white rounded-lg shadow-sm overflow-hidden">
   {/* Header */}
-  <div className="bg-[#C41E3A] text-white px-4 py-3 rounded-t">
-  <h2 className="font-serif text-[16px] font-bold">{name}</h2>
+  <div className="bg-gradient-to-r from-[#C41E3A] via-[#FFC107] to-[#1a1a1a] text-white px-3 sm:px-4 py-3">
+  <h2 className="font-serif text-[15px] sm:text-[16px] font-bold">{name}</h2>
   <p className="text-[10px] text-white/70">{code} — {state}</p>
   </div>
 
-  <div className="divide-y divide-gray-100">
+  <div className="divide-y divide-[#1a1a1a]/5 px-3 sm:px-4">
   {/* ── 1. Calon Bertanding ── */}
   <div className="p-4">
   <h3 className="text-[10px] font-bold uppercase text-gray-400 tracking-wider mb-3">Calon Bertanding</h3>
