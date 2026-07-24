@@ -1,0 +1,1809 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.889513,
+          1.55922
+        ]
+      },
+      "properties": {
+        "code": "N01",
+        "name": "Opar",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P192",
+        "parlimen": "P.192 Mas Gading",
+        "type": "dun",
+        "lat": 1.55922,
+        "lng": 109.889513,
+        "total_voters": 18525
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.104797,
+          1.423202
+        ]
+      },
+      "properties": {
+        "code": "N02",
+        "name": "Tasik Biru",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P192",
+        "parlimen": "P.192 Mas Gading",
+        "type": "dun",
+        "lat": 1.423202,
+        "lng": 110.104797,
+        "total_voters": 28646
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.826229,
+          1.773162
+        ]
+      },
+      "properties": {
+        "code": "N03",
+        "name": "Tanjong Datu",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P193",
+        "parlimen": "P.193 Santubong",
+        "type": "dun",
+        "lat": 1.773162,
+        "lng": 109.826229,
+        "total_voters": 16081
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.297425,
+          1.662035
+        ]
+      },
+      "properties": {
+        "code": "N04",
+        "name": "Pantai Damai",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P193",
+        "parlimen": "P.193 Santubong",
+        "type": "dun",
+        "lat": 1.662035,
+        "lng": 110.297425,
+        "total_voters": 37841
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.45102,
+          1.634912
+        ]
+      },
+      "properties": {
+        "code": "N05",
+        "name": "Demak Laut",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P193",
+        "parlimen": "P.193 Santubong",
+        "type": "dun",
+        "lat": 1.634912,
+        "lng": 110.45102,
+        "total_voters": 25618
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.261725,
+          1.563887
+        ]
+      },
+      "properties": {
+        "code": "N06",
+        "name": "Tupong",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P194",
+        "parlimen": "P.194 Petra Jaya",
+        "type": "dun",
+        "lat": 1.563887,
+        "lng": 110.261725,
+        "total_voters": 51773
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.345235,
+          1.593362
+        ]
+      },
+      "properties": {
+        "code": "N07",
+        "name": "Samariang",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P194",
+        "parlimen": "P.194 Petra Jaya",
+        "type": "dun",
+        "lat": 1.593362,
+        "lng": 110.345235,
+        "total_voters": 37898
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.313215,
+          1.543924
+        ]
+      },
+      "properties": {
+        "code": "N08",
+        "name": "Satok",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P194",
+        "parlimen": "P.194 Petra Jaya",
+        "type": "dun",
+        "lat": 1.543924,
+        "lng": 110.313215,
+        "total_voters": 20138
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.349462,
+          1.550981
+        ]
+      },
+      "properties": {
+        "code": "N09",
+        "name": "Padungan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P195",
+        "parlimen": "P.195 Bandar Kuching",
+        "type": "dun",
+        "lat": 1.550981,
+        "lng": 110.349462,
+        "total_voters": 25043
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.379187,
+          1.551412
+        ]
+      },
+      "properties": {
+        "code": "N10",
+        "name": "Pending",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P195",
+        "parlimen": "P.195 Bandar Kuching",
+        "type": "dun",
+        "lat": 1.551412,
+        "lng": 110.379187,
+        "total_voters": 38375
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.357089,
+          1.526493
+        ]
+      },
+      "properties": {
+        "code": "N11",
+        "name": "Batu Lintang",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P195",
+        "parlimen": "P.195 Bandar Kuching",
+        "type": "dun",
+        "lat": 1.526493,
+        "lng": 110.357089,
+        "total_voters": 46292
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.353923,
+          1.490931
+        ]
+      },
+      "properties": {
+        "code": "N12",
+        "name": "Kota Sentosa",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P196",
+        "parlimen": "P.196 Stampin",
+        "type": "dun",
+        "lat": 1.490931,
+        "lng": 110.353923,
+        "total_voters": 45712
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.312555,
+          1.4568
+        ]
+      },
+      "properties": {
+        "code": "N13",
+        "name": "Batu Kitang",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P196",
+        "parlimen": "P.196 Stampin",
+        "type": "dun",
+        "lat": 1.4568,
+        "lng": 110.312555,
+        "total_voters": 37250
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.280506,
+          1.509067
+        ]
+      },
+      "properties": {
+        "code": "N14",
+        "name": "Batu Kawah",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P196",
+        "parlimen": "P.196 Stampin",
+        "type": "dun",
+        "lat": 1.509067,
+        "lng": 110.280506,
+        "total_voters": 38047
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.538855,
+          1.547954
+        ]
+      },
+      "properties": {
+        "code": "N15",
+        "name": "Asajaya",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P197",
+        "parlimen": "P.197 Kota Samarahan",
+        "type": "dun",
+        "lat": 1.547954,
+        "lng": 110.538855,
+        "total_voters": 18439
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.4903,
+          1.406637
+        ]
+      },
+      "properties": {
+        "code": "N16",
+        "name": "Muara Tuang",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P197",
+        "parlimen": "P.197 Kota Samarahan",
+        "type": "dun",
+        "lat": 1.406637,
+        "lng": 110.4903,
+        "total_voters": 31919
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.367643,
+          1.440094
+        ]
+      },
+      "properties": {
+        "code": "N17",
+        "name": "Stakan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P197",
+        "parlimen": "P.197 Kota Samarahan",
+        "type": "dun",
+        "lat": 1.440094,
+        "lng": 110.367643,
+        "total_voters": 31871
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.162426,
+          1.345775
+        ]
+      },
+      "properties": {
+        "code": "N18",
+        "name": "Serembu",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P198",
+        "parlimen": "P.198 Puncak Borneo",
+        "type": "dun",
+        "lat": 1.345775,
+        "lng": 110.162426,
+        "total_voters": 15906
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.300185,
+          1.241679
+        ]
+      },
+      "properties": {
+        "code": "N19",
+        "name": "Mambong",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P198",
+        "parlimen": "P.198 Puncak Borneo",
+        "type": "dun",
+        "lat": 1.241679,
+        "lng": 110.300185,
+        "total_voters": 33577
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.437443,
+          1.211514
+        ]
+      },
+      "properties": {
+        "code": "N20",
+        "name": "Tarat",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P198",
+        "parlimen": "P.198 Puncak Borneo",
+        "type": "dun",
+        "lat": 1.211514,
+        "lng": 110.437443,
+        "total_voters": 30486
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.425598,
+          1.05793
+        ]
+      },
+      "properties": {
+        "code": "N21",
+        "name": "Tebedu",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P199",
+        "parlimen": "P.199 Serian",
+        "type": "dun",
+        "lat": 1.05793,
+        "lng": 110.425598,
+        "total_voters": 20539
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.652717,
+          0.962451
+        ]
+      },
+      "properties": {
+        "code": "N22",
+        "name": "Kedup",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P199",
+        "parlimen": "P.199 Serian",
+        "type": "dun",
+        "lat": 0.962451,
+        "lng": 110.652717,
+        "total_voters": 19128
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.60724,
+          1.140226
+        ]
+      },
+      "properties": {
+        "code": "N23",
+        "name": "Bukit Semuja",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P199",
+        "parlimen": "P.199 Serian",
+        "type": "dun",
+        "lat": 1.140226,
+        "lng": 110.60724,
+        "total_voters": 25606
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.708437,
+          1.52906
+        ]
+      },
+      "properties": {
+        "code": "N24",
+        "name": "Sadong Jaya",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P200",
+        "parlimen": "P.200 Batang Sadong",
+        "type": "dun",
+        "lat": 1.52906,
+        "lng": 110.708437,
+        "total_voters": 10432
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.769485,
+          1.371101
+        ]
+      },
+      "properties": {
+        "code": "N25",
+        "name": "Simunjan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P200",
+        "parlimen": "P.200 Batang Sadong",
+        "type": "dun",
+        "lat": 1.371101,
+        "lng": 110.769485,
+        "total_voters": 12141
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.793015,
+          1.291481
+        ]
+      },
+      "properties": {
+        "code": "N26",
+        "name": "Gedong",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P200",
+        "parlimen": "P.200 Batang Sadong",
+        "type": "dun",
+        "lat": 1.291481,
+        "lng": 110.793015,
+        "total_voters": 10067
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.908643,
+          1.440853
+        ]
+      },
+      "properties": {
+        "code": "N27",
+        "name": "Sebuyau",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P201",
+        "parlimen": "P.201 Batang Lupar",
+        "type": "dun",
+        "lat": 1.440853,
+        "lng": 110.908643,
+        "total_voters": 13780
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.251651,
+          1.405142
+        ]
+      },
+      "properties": {
+        "code": "N28",
+        "name": "Lingga",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P201",
+        "parlimen": "P.201 Batang Lupar",
+        "type": "dun",
+        "lat": 1.405142,
+        "lng": 111.251651,
+        "total_voters": 13955
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.2247,
+          1.657829
+        ]
+      },
+      "properties": {
+        "code": "N29",
+        "name": "Beting Maro",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P201",
+        "parlimen": "P.201 Batang Lupar",
+        "type": "dun",
+        "lat": 1.657829,
+        "lng": 111.2247,
+        "total_voters": 15337
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          110.991825,
+          1.146729
+        ]
+      },
+      "properties": {
+        "code": "N30",
+        "name": "Balai Ringin",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P202",
+        "parlimen": "P.202 Sri Aman",
+        "type": "dun",
+        "lat": 1.146729,
+        "lng": 110.991825,
+        "total_voters": 15892
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.29227,
+          1.182814
+        ]
+      },
+      "properties": {
+        "code": "N31",
+        "name": "Bukit Begunan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P202",
+        "parlimen": "P.202 Sri Aman",
+        "type": "dun",
+        "lat": 1.182814,
+        "lng": 111.29227,
+        "total_voters": 13685
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.560129,
+          1.085998
+        ]
+      },
+      "properties": {
+        "code": "N32",
+        "name": "Simanggang",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P202",
+        "parlimen": "P.202 Sri Aman",
+        "type": "dun",
+        "lat": 1.085998,
+        "lng": 111.560129,
+        "total_voters": 20587
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.744549,
+          1.364656
+        ]
+      },
+      "properties": {
+        "code": "N33",
+        "name": "Engkilili",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P203",
+        "parlimen": "P.203 Lubok Antu",
+        "type": "dun",
+        "lat": 1.364656,
+        "lng": 111.744549,
+        "total_voters": 14725
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.908943,
+          1.229049
+        ]
+      },
+      "properties": {
+        "code": "N34",
+        "name": "Batang Ai",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P203",
+        "parlimen": "P.203 Lubok Antu",
+        "type": "dun",
+        "lat": 1.229049,
+        "lng": 111.908943,
+        "total_voters": 14270
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.405144,
+          1.535184
+        ]
+      },
+      "properties": {
+        "code": "N35",
+        "name": "Saribas",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P204",
+        "parlimen": "P.204 Betong",
+        "type": "dun",
+        "lat": 1.535184,
+        "lng": 111.405144,
+        "total_voters": 16406
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.623553,
+          1.463957
+        ]
+      },
+      "properties": {
+        "code": "N36",
+        "name": "Layar",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P204",
+        "parlimen": "P.204 Betong",
+        "type": "dun",
+        "lat": 1.463957,
+        "lng": 111.623553,
+        "total_voters": 12615
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.583149,
+          1.580294
+        ]
+      },
+      "properties": {
+        "code": "N37",
+        "name": "Bukit Saban",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P204",
+        "parlimen": "P.204 Betong",
+        "type": "dun",
+        "lat": 1.580294,
+        "lng": 111.583149,
+        "total_voters": 12722
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.28675,
+          1.791476
+        ]
+      },
+      "properties": {
+        "code": "N38",
+        "name": "Kalaka",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P205",
+        "parlimen": "P.205 Saratok",
+        "type": "dun",
+        "lat": 1.791476,
+        "lng": 111.28675,
+        "total_voters": 11928
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.45019,
+          1.793908
+        ]
+      },
+      "properties": {
+        "code": "N39",
+        "name": "Krian",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P205",
+        "parlimen": "P.205 Saratok",
+        "type": "dun",
+        "lat": 1.793908,
+        "lng": 111.45019,
+        "total_voters": 18195
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.242358,
+          1.923811
+        ]
+      },
+      "properties": {
+        "code": "N40",
+        "name": "Kabong",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P205",
+        "parlimen": "P.205 Saratok",
+        "type": "dun",
+        "lat": 1.923811,
+        "lng": 111.242358,
+        "total_voters": 14408
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.389386,
+          2.135609
+        ]
+      },
+      "properties": {
+        "code": "N41",
+        "name": "Kuala Rajang",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P206",
+        "parlimen": "P.206 Tanjong Manis",
+        "type": "dun",
+        "lat": 2.135609,
+        "lng": 111.389386,
+        "total_voters": 18223
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.416748,
+          2.338631
+        ]
+      },
+      "properties": {
+        "code": "N42",
+        "name": "Semop",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P206",
+        "parlimen": "P.206 Tanjong Manis",
+        "type": "dun",
+        "lat": 2.338631,
+        "lng": 111.416748,
+        "total_voters": 14725
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.594765,
+          2.428438
+        ]
+      },
+      "properties": {
+        "code": "N43",
+        "name": "Daro",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P207",
+        "parlimen": "P.207 Igan",
+        "type": "dun",
+        "lat": 2.428438,
+        "lng": 111.594765,
+        "total_voters": 14116
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.671764,
+          2.726134
+        ]
+      },
+      "properties": {
+        "code": "N44",
+        "name": "Jemoreng",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P207",
+        "parlimen": "P.207 Igan",
+        "type": "dun",
+        "lat": 2.726134,
+        "lng": 111.671764,
+        "total_voters": 14174
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.505228,
+          2.069781
+        ]
+      },
+      "properties": {
+        "code": "N45",
+        "name": "Repok",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P208",
+        "parlimen": "P.208 Sarikei",
+        "type": "dun",
+        "lat": 2.069781,
+        "lng": 111.505228,
+        "total_voters": 31110
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.644037,
+          2.102472
+        ]
+      },
+      "properties": {
+        "code": "N46",
+        "name": "Meradong",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P208",
+        "parlimen": "P.208 Sarikei",
+        "type": "dun",
+        "lat": 2.102472,
+        "lng": 111.644037,
+        "total_voters": 23908
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.617239,
+          1.861211
+        ]
+      },
+      "properties": {
+        "code": "N47",
+        "name": "Pakan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P209",
+        "parlimen": "P.209 Julau",
+        "type": "dun",
+        "lat": 1.861211,
+        "lng": 111.617239,
+        "total_voters": 14615
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.912345,
+          1.797239
+        ]
+      },
+      "properties": {
+        "code": "N48",
+        "name": "Meluan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P209",
+        "parlimen": "P.209 Julau",
+        "type": "dun",
+        "lat": 1.797239,
+        "lng": 111.912345,
+        "total_voters": 20235
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.298761,
+          1.924783
+        ]
+      },
+      "properties": {
+        "code": "N49",
+        "name": "Ngemah",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P210",
+        "parlimen": "P.210 Kanowit",
+        "type": "dun",
+        "lat": 1.924783,
+        "lng": 112.298761,
+        "total_voters": 14109
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.134263,
+          1.948532
+        ]
+      },
+      "properties": {
+        "code": "N50",
+        "name": "Machan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P210",
+        "parlimen": "P.210 Kanowit",
+        "type": "dun",
+        "lat": 1.948532,
+        "lng": 112.134263,
+        "total_voters": 16879
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.875926,
+          2.251326
+        ]
+      },
+      "properties": {
+        "code": "N51",
+        "name": "Bukit Assek",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P211",
+        "parlimen": "P.211 Lanang",
+        "type": "dun",
+        "lat": 2.251326,
+        "lng": 111.875926,
+        "total_voters": 34972
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.943438,
+          2.188204
+        ]
+      },
+      "properties": {
+        "code": "N52",
+        "name": "Dudong",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P211",
+        "parlimen": "P.211 Lanang",
+        "type": "dun",
+        "lat": 2.188204,
+        "lng": 111.943438,
+        "total_voters": 52384
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.833419,
+          2.37809
+        ]
+      },
+      "properties": {
+        "code": "N53",
+        "name": "Bawang Assan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P212",
+        "parlimen": "P.212 Sibu",
+        "type": "dun",
+        "lat": 2.37809,
+        "lng": 111.833419,
+        "total_voters": 22520
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.842788,
+          2.319003
+        ]
+      },
+      "properties": {
+        "code": "N54",
+        "name": "Pelawan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P212",
+        "parlimen": "P.212 Sibu",
+        "type": "dun",
+        "lat": 2.319003,
+        "lng": 111.842788,
+        "total_voters": 50276
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.982965,
+          2.301963
+        ]
+      },
+      "properties": {
+        "code": "N55",
+        "name": "Nangka",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P212",
+        "parlimen": "P.212 Sibu",
+        "type": "dun",
+        "lat": 2.301963,
+        "lng": 111.982965,
+        "total_voters": 33079
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          111.975824,
+          2.715565
+        ]
+      },
+      "properties": {
+        "code": "N56",
+        "name": "Dalat",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P213",
+        "parlimen": "P.213 Mukah",
+        "type": "dun",
+        "lat": 2.715565,
+        "lng": 111.975824,
+        "total_voters": 17822
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.149936,
+          2.651824
+        ]
+      },
+      "properties": {
+        "code": "N57",
+        "name": "Tellian",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P213",
+        "parlimen": "P.213 Mukah",
+        "type": "dun",
+        "lat": 2.651824,
+        "lng": 112.149936,
+        "total_voters": 15933
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.433763,
+          2.873588
+        ]
+      },
+      "properties": {
+        "code": "N58",
+        "name": "Balingian",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P213",
+        "parlimen": "P.213 Mukah",
+        "type": "dun",
+        "lat": 2.873588,
+        "lng": 112.433763,
+        "total_voters": 13209
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.417354,
+          2.406465
+        ]
+      },
+      "properties": {
+        "code": "N59",
+        "name": "Tamin",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P214",
+        "parlimen": "P.214 Selangau",
+        "type": "dun",
+        "lat": 2.406465,
+        "lng": 112.417354,
+        "total_voters": 23320
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.89323,
+          2.603038
+        ]
+      },
+      "properties": {
+        "code": "N60",
+        "name": "Kakus",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P214",
+        "parlimen": "P.214 Selangau",
+        "type": "dun",
+        "lat": 2.603038,
+        "lng": 112.89323,
+        "total_voters": 22423
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.077746,
+          2.092377
+        ]
+      },
+      "properties": {
+        "code": "N61",
+        "name": "Pelagus",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P215",
+        "parlimen": "P.215 Kapit",
+        "type": "dun",
+        "lat": 2.092377,
+        "lng": 113.077746,
+        "total_voters": 11538
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.503383,
+          1.761672
+        ]
+      },
+      "properties": {
+        "code": "N62",
+        "name": "Katibas",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P215",
+        "parlimen": "P.215 Kapit",
+        "type": "dun",
+        "lat": 1.761672,
+        "lng": 112.503383,
+        "total_voters": 15866
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.813325,
+          2.032791
+        ]
+      },
+      "properties": {
+        "code": "N63",
+        "name": "Bukit Goram",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P215",
+        "parlimen": "P.215 Kapit",
+        "type": "dun",
+        "lat": 2.032791,
+        "lng": 112.813325,
+        "total_voters": 17806
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.663277,
+          1.702789
+        ]
+      },
+      "properties": {
+        "code": "N64",
+        "name": "Baleh",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P216",
+        "parlimen": "P.216 Hulu Rajang",
+        "type": "dun",
+        "lat": 1.702789,
+        "lng": 113.663277,
+        "total_voters": 15555
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.95425,
+          2.317281
+        ]
+      },
+      "properties": {
+        "code": "N65",
+        "name": "Belaga",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P216",
+        "parlimen": "P.216 Hulu Rajang",
+        "type": "dun",
+        "lat": 2.317281,
+        "lng": 113.95425,
+        "total_voters": 12185
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.296069,
+          2.795999
+        ]
+      },
+      "properties": {
+        "code": "N66",
+        "name": "Murum",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P216",
+        "parlimen": "P.216 Hulu Rajang",
+        "type": "dun",
+        "lat": 2.795999,
+        "lng": 114.296069,
+        "total_voters": 15698
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.964433,
+          3.024899
+        ]
+      },
+      "properties": {
+        "code": "N67",
+        "name": "Jepak",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P217",
+        "parlimen": "P.217 Bintulu",
+        "type": "dun",
+        "lat": 3.024899,
+        "lng": 112.964433,
+        "total_voters": 22534
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.069764,
+          3.193317
+        ]
+      },
+      "properties": {
+        "code": "N68",
+        "name": "Tanjong Batu",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P217",
+        "parlimen": "P.217 Bintulu",
+        "type": "dun",
+        "lat": 3.193317,
+        "lng": 113.069764,
+        "total_voters": 37819
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.547101,
+          3.226508
+        ]
+      },
+      "properties": {
+        "code": "N69",
+        "name": "Kemena",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P217",
+        "parlimen": "P.217 Bintulu",
+        "type": "dun",
+        "lat": 3.226508,
+        "lng": 113.547101,
+        "total_voters": 22402
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.397485,
+          3.420905
+        ]
+      },
+      "properties": {
+        "code": "N70",
+        "name": "Samalaju",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P217",
+        "parlimen": "P.217 Bintulu",
+        "type": "dun",
+        "lat": 3.420905,
+        "lng": 113.397485,
+        "total_voters": 30844
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.88852,
+          3.903964
+        ]
+      },
+      "properties": {
+        "code": "N71",
+        "name": "Bekenu",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P218",
+        "parlimen": "P.218 Sibuti",
+        "type": "dun",
+        "lat": 3.903964,
+        "lng": 113.88852,
+        "total_voters": 19987
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.972725,
+          4.074426
+        ]
+      },
+      "properties": {
+        "code": "N72",
+        "name": "Lambir",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P218",
+        "parlimen": "P.218 Sibuti",
+        "type": "dun",
+        "lat": 4.074426,
+        "lng": 113.972725,
+        "total_voters": 38535
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.985055,
+          4.387271
+        ]
+      },
+      "properties": {
+        "code": "N73",
+        "name": "Piasau",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P219",
+        "parlimen": "P.219 Miri",
+        "type": "dun",
+        "lat": 4.387271,
+        "lng": 113.985055,
+        "total_voters": 30781
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.010876,
+          4.435185
+        ]
+      },
+      "properties": {
+        "code": "N74",
+        "name": "Pujut",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P219",
+        "parlimen": "P.219 Miri",
+        "type": "dun",
+        "lat": 4.435185,
+        "lng": 114.010876,
+        "total_voters": 43884
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.069877,
+          4.384243
+        ]
+      },
+      "properties": {
+        "code": "N75",
+        "name": "Senadin",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P219",
+        "parlimen": "P.219 Miri",
+        "type": "dun",
+        "lat": 4.384243,
+        "lng": 114.069877,
+        "total_voters": 68564
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.184069,
+          3.840197
+        ]
+      },
+      "properties": {
+        "code": "N76",
+        "name": "Marudi",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P220",
+        "parlimen": "P.220 Baram",
+        "type": "dun",
+        "lat": 3.840197,
+        "lng": 114.184069,
+        "total_voters": 25413
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.601032,
+          3.439236
+        ]
+      },
+      "properties": {
+        "code": "N77",
+        "name": "Telang Usan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P220",
+        "parlimen": "P.220 Baram",
+        "type": "dun",
+        "lat": 3.439236,
+        "lng": 114.601032,
+        "total_voters": 18062
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.055304,
+          3.516639
+        ]
+      },
+      "properties": {
+        "code": "N78",
+        "name": "Mulu",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P220",
+        "parlimen": "P.220 Baram",
+        "type": "dun",
+        "lat": 3.516639,
+        "lng": 115.055304,
+        "total_voters": 16060
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.95135,
+          4.720886
+        ]
+      },
+      "properties": {
+        "code": "N79",
+        "name": "Bukit Kota",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P221",
+        "parlimen": "P.221 Limbang",
+        "type": "dun",
+        "lat": 4.720886,
+        "lng": 114.95135,
+        "total_voters": 26864
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.070633,
+          4.306182
+        ]
+      },
+      "properties": {
+        "code": "N80",
+        "name": "Batu Danau",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P221",
+        "parlimen": "P.221 Limbang",
+        "type": "dun",
+        "lat": 4.306182,
+        "lng": 115.070633,
+        "total_voters": 15135
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.527928,
+          4.409923
+        ]
+      },
+      "properties": {
+        "code": "N81",
+        "name": "Ba'kelalan",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P222",
+        "parlimen": "P.222 Lawas",
+        "type": "dun",
+        "lat": 4.409923,
+        "lng": 115.527928,
+        "total_voters": 13793
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.304821,
+          4.915496
+        ]
+      },
+      "properties": {
+        "code": "N82",
+        "name": "Bukit Sari",
+        "state_name": "Sarawak",
+        "state": "SWK",
+        "code_parlimen": "P222",
+        "parlimen": "P.222 Lawas",
+        "type": "dun",
+        "lat": 4.915496,
+        "lng": 115.304821,
+        "total_voters": 19862
+      }
+    }
+  ]
+}

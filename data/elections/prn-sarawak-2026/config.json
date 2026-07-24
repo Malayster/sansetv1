@@ -1,0 +1,224 @@
+{
+  "electionId": "prn-sarawak-2026",
+  "name": "PRN Sarawak 2026",
+  "level": "DUN",
+  "parentLevel": "PARLIMEN",
+  "geoJson": "prn_swk_dun.json",
+  "state": "Sarawak",
+  "dunToParlimen": {
+    "N01": "P192",
+    "N02": "P192",
+    "N03": "P193",
+    "N04": "P193",
+    "N05": "P193",
+    "N06": "P194",
+    "N07": "P194",
+    "N08": "P194",
+    "N09": "P195",
+    "N10": "P195",
+    "N11": "P195",
+    "N12": "P196",
+    "N13": "P196",
+    "N14": "P196",
+    "N15": "P197",
+    "N16": "P197",
+    "N17": "P197",
+    "N18": "P198",
+    "N19": "P198",
+    "N20": "P198",
+    "N21": "P199",
+    "N22": "P199",
+    "N23": "P199",
+    "N24": "P200",
+    "N25": "P200",
+    "N26": "P200",
+    "N27": "P201",
+    "N28": "P201",
+    "N29": "P201",
+    "N30": "P202",
+    "N31": "P202",
+    "N32": "P202",
+    "N33": "P203",
+    "N34": "P203",
+    "N35": "P204",
+    "N36": "P204",
+    "N37": "P204",
+    "N38": "P205",
+    "N39": "P205",
+    "N40": "P205",
+    "N41": "P206",
+    "N42": "P206",
+    "N43": "P207",
+    "N44": "P207",
+    "N45": "P208",
+    "N46": "P208",
+    "N47": "P209",
+    "N48": "P209",
+    "N49": "P210",
+    "N50": "P210",
+    "N51": "P211",
+    "N52": "P211",
+    "N53": "P212",
+    "N54": "P212",
+    "N55": "P212",
+    "N56": "P213",
+    "N57": "P213",
+    "N58": "P213",
+    "N59": "P214",
+    "N60": "P214",
+    "N61": "P215",
+    "N62": "P215",
+    "N63": "P215",
+    "N64": "P216",
+    "N65": "P216",
+    "N66": "P216",
+    "N67": "P217",
+    "N68": "P217",
+    "N69": "P217",
+    "N70": "P217",
+    "N71": "P218",
+    "N72": "P218",
+    "N73": "P219",
+    "N74": "P219",
+    "N75": "P219",
+    "N76": "P220",
+    "N77": "P220",
+    "N78": "P220",
+    "N79": "P221",
+    "N80": "P221",
+    "N81": "P222",
+    "N82": "P222"
+  },
+  "parlimenInfo": {
+    "P192": {
+      "name": "P.192 Mas Gading",
+      "dunCount": 2
+    },
+    "P193": {
+      "name": "P.193 Santubong",
+      "dunCount": 3
+    },
+    "P194": {
+      "name": "P.194 Petra Jaya",
+      "dunCount": 3
+    },
+    "P195": {
+      "name": "P.195 Bandar Kuching",
+      "dunCount": 3
+    },
+    "P196": {
+      "name": "P.196 Stampin",
+      "dunCount": 3
+    },
+    "P197": {
+      "name": "P.197 Kota Samarahan",
+      "dunCount": 3
+    },
+    "P198": {
+      "name": "P.198 Puncak Borneo",
+      "dunCount": 3
+    },
+    "P199": {
+      "name": "P.199 Serian",
+      "dunCount": 3
+    },
+    "P200": {
+      "name": "P.200 Batang Sadong",
+      "dunCount": 3
+    },
+    "P201": {
+      "name": "P.201 Batang Lupar",
+      "dunCount": 3
+    },
+    "P202": {
+      "name": "P.202 Sri Aman",
+      "dunCount": 3
+    },
+    "P203": {
+      "name": "P.203 Lubok Antu",
+      "dunCount": 2
+    },
+    "P204": {
+      "name": "P.204 Betong",
+      "dunCount": 3
+    },
+    "P205": {
+      "name": "P.205 Saratok",
+      "dunCount": 3
+    },
+    "P206": {
+      "name": "P.206 Tanjong Manis",
+      "dunCount": 2
+    },
+    "P207": {
+      "name": "P.207 Igan",
+      "dunCount": 2
+    },
+    "P208": {
+      "name": "P.208 Sarikei",
+      "dunCount": 2
+    },
+    "P209": {
+      "name": "P.209 Julau",
+      "dunCount": 2
+    },
+    "P210": {
+      "name": "P.210 Kanowit",
+      "dunCount": 2
+    },
+    "P211": {
+      "name": "P.211 Lanang",
+      "dunCount": 2
+    },
+    "P212": {
+      "name": "P.212 Sibu",
+      "dunCount": 3
+    },
+    "P213": {
+      "name": "P.213 Mukah",
+      "dunCount": 3
+    },
+    "P214": {
+      "name": "P.214 Selangau",
+      "dunCount": 2
+    },
+    "P215": {
+      "name": "P.215 Kapit",
+      "dunCount": 3
+    },
+    "P216": {
+      "name": "P.216 Hulu Rajang",
+      "dunCount": 3
+    },
+    "P217": {
+      "name": "P.217 Bintulu",
+      "dunCount": 4
+    },
+    "P218": {
+      "name": "P.218 Sibuti",
+      "dunCount": 2
+    },
+    "P219": {
+      "name": "P.219 Miri",
+      "dunCount": 3
+    },
+    "P220": {
+      "name": "P.220 Baram",
+      "dunCount": 3
+    },
+    "P221": {
+      "name": "P.221 Limbang",
+      "dunCount": 2
+    },
+    "P222": {
+      "name": "P.222 Lawas",
+      "dunCount": 2
+    }
+  },
+  "demographicsSource": "ElectionData.MY GE-15 Voter Roll",
+  "dataSources": {
+    "demographics": "ElectionData.MY GE-15 Voter Roll (SPR-DOSM)",
+    "historicalResults": "ElectionData.MY + Tindak Malaysia",
+    "geoJson": "ElectionData.MY Data Catalogue (2015 Delimitation)"
+  }
+}
