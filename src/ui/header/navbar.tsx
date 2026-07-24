@@ -32,6 +32,7 @@ const menuItems: MenuItem[] = [
     { title: 'Tekno', items: [{ label: 'Gajet', href: '/tag/gajet' },{ label: 'AI & Sains', href: '/tag/sains' },{ label: 'Media Sosial', href: '/tag/media-sosial' }] },
   ]},
   { label: 'Rencana', href: '/kategori/rencana' },
+  { label: '🗳️ PRU16', href: '/election' },
 ]
 
 export default function NavBar() {

@@ -52,6 +52,7 @@ export default async function Footer() {
           {site?.footerText && <p className="text-gray-600 text-xs text-center mb-4 italic">{site.footerText}</p>}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-gray-500">
             <a href="/" className="hover:text-white transition-colors">Beranda</a>
+            <a href="/election" className="hover:text-white transition-colors">🗳️ Pilihan Raya</a>
             <a href="/tentang" className="hover:text-white transition-colors">Tentang</a>
             <a href="/redaksi" className="hover:text-white transition-colors">Redaksi</a>
             <a href="/pedoman-media-siber" className="hover:text-white transition-colors">Pedoman Media Siber</a>
