@@ -11,6 +11,7 @@ const Q = groq`*[_type=='blog.post' && status in ['published','approved']]|order
 }`
 const CQ = groq`*[_type=='blog.category']|order(title)[0...12]{_id,title,'slug':slug.current,color}`
 const bp = `/${ROUTES.blog}/`
+const R = '#f51416'
 type P = any
 
 function ago(d?: string) {
@@ -28,9 +29,16 @@ function Img({ p, w, h, pr }: { p: P; w: number; h: number; pr?: boolean }) {
     : <div className="w-full h-full bg-gray-200" />
 }
 
-function Cat({ c, s }: { c?: string; s?: string }) {
+/** For image overlays — red bg pill */
+function CatBadge({ c }: { c?: string }) {
   if (!c) return null
-  return <span className={`${s||'text-[10px]'} font-bold uppercase tracking-wide px-2 py-0.5 rounded-sm text-white bg-[#C41E3A]`}>{c}</span>
+  return <span className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 text-white" style={{background:R}}>{c}</span>
+}
+
+/** For inline text — red text only */
+function CatText({ c }: { c?: string }) {
+  if (!c) return null
+  return <span className="text-[10px] font-bold uppercase tracking-wide" style={{color:R}}>{c}</span>
 }
 
 export default async function Homepage() {
@@ -44,43 +52,43 @@ export default async function Homepage() {
   return (
   <div className="mx-auto" style={{maxWidth:1180}}>
 
-    {/* ===== TRENDING TOPIK BAR (red bg) ===== */}
-    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-gray-200 overflow-x-auto text-[11px]" style={{background:'#C41E3A'}}>
-      <span className="shrink-0 font-bold uppercase tracking-wider text-white/80">🔥 Trending</span>
+    {/* ===== TRENDING BAR (red bg) ===== */}
+    <div className="flex items-center gap-3 px-4 py-2.5 overflow-x-auto text-[11px] text-white" style={{background:R}}>
+      <span className="shrink-0 font-bold uppercase tracking-wider text-white/70">🔥 Trending</span>
       {['Dunia','Politik','Ekonomi','Sukan','Hiburan','Teknologi'].map(t => (
         <Link key={t} href={`${bp}?category=${t.toLowerCase()}`}
-          className="shrink-0 px-3 py-1 text-white/90 hover:text-white font-medium transition-colors"
-          style={{borderRight:'1px solid rgba(255,255,255,0.3)'}}
+          className="shrink-0 text-white/80 hover:text-white font-medium transition-colors"
+          style={{borderRight:'1px solid rgba(255,255,255,0.25)'}}
         >{t}</Link>
       ))}
     </div>
 
-    {/* ===== HERO: Feature + 2 stacked + Most Read sidebar ===== */}
-    <div className="grid lg:grid-cols-[1fr_340px] gap-5 px-4 py-5">
-      <section className="grid lg:grid-cols-[1fr_340px] gap-5">
-        {/* Feature large */}
+    {/* ===== HERO ===== */}
+    <div className="grid lg:grid-cols-[1fr_340px] gap-6 px-4 py-6">
+      <section className="grid lg:grid-cols-[1fr_340px] gap-6">
+        {/* Feature */}
         <article>
-          <Link href={`${bp}${a.slug}`} className="block relative overflow-hidden mb-3 rounded-sm" style={{aspectRatio:'740/420'}}>
+          <Link href={`${bp}${a.slug}`} className="block relative overflow-hidden mb-3" style={{aspectRatio:'740/420'}}>
             <Img p={a} w={740} h={420} pr />
-            <span className="absolute bottom-3 left-3"><Cat c={a.cat?.title} /></span>
+            <span className="absolute bottom-3 left-3"><CatBadge c={a.cat?.title} /></span>
           </Link>
-          <Cat c={a.cat?.title} />
+          <CatText c={a.cat?.title} />
           <Link href={`${bp}${a.slug}`}>
-            <h1 className="font-serif text-[22px] sm:text-[28px] lg:text-[32px] font-bold leading-tight text-[#1a1a1a] hover:text-[#C41E3A] transition-colors mt-2">{a.title}</h1>
+            <h1 className="text-[22px] sm:text-[28px] lg:text-[32px] font-bold leading-tight text-[#031934] mt-1.5 hover:opacity-70 transition-opacity">{a.title}</h1>
           </Link>
           {a.excerpt && <p className="text-[12px] text-gray-500 mt-1.5 leading-relaxed line-clamp-2">{a.excerpt}</p>}
           <span className="text-[10px] text-gray-400 mt-2 block">{ago(a.publishDate)}</span>
         </article>
-
         {/* 2 stacked */}
-        <aside className="space-y-5">
+        <aside className="space-y-6">
           {[b, c].map(x => (
             <article key={x._id}>
-              <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2 rounded-sm" style={{aspectRatio:'340/200'}}>
+              <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2" style={{aspectRatio:'340/200'}}>
                 <Img p={x} w={340} h={200} />
-                <span className="absolute bottom-2 left-2"><Cat c={x.cat?.title} s="text-[9px]" /></span>
+                <span className="absolute bottom-2 left-2"><CatBadge c={x.cat?.title} /></span>
               </Link>
-              <Link href={`${bp}${x.slug}`} className="block font-serif text-[14px] font-bold leading-snug text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2">{x.title}</Link>
+              <CatText c={x.cat?.title} />
+              <Link href={`${bp}${x.slug}`} className="block text-[14px] font-bold leading-snug text-[#031934] hover:opacity-70 transition-opacity line-clamp-2 mt-1">{x.title}</Link>
               <span className="text-[9px] text-gray-400 mt-1 block">{ago(x.publishDate)}</span>
             </article>
           ))}
@@ -89,13 +97,13 @@ export default async function Homepage() {
 
       {/* Most Read sidebar */}
       <aside>
-        <h3 className="text-[14px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Paling Dibaca</h3>
+        <h3 className="text-[14px] font-bold uppercase tracking-wide text-[#031934] mb-4">Paling Dibaca</h3>
         <div className="space-y-0">
           {[d, e, f, g, h, i].filter(Boolean).map((x, idx) => (
-            <div key={x._id} className="flex items-start gap-3 py-3 border-b border-gray-100 last:border-0">
-              <span className="shrink-0 w-7 h-7 rounded-full bg-[#C41E3A] text-white text-[11px] font-bold flex items-center justify-center">{idx+1}</span>
+            <div key={x._id} className="flex items-start gap-3 py-3 border-b border-gray-200 last:border-0">
+              <span className="shrink-0 w-6 h-6 flex items-center justify-center text-[11px] font-bold text-white" style={{background:R, borderRadius:9999}}>{idx+1}</span>
               <div className="min-w-0">
-                <Link href={`${bp}${x.slug}`} className="text-[11px] leading-snug font-bold text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2 block">{x.title}</Link>
+                <Link href={`${bp}${x.slug}`} className="text-[11px] leading-snug font-bold text-[#031934] hover:opacity-70 transition-opacity line-clamp-2 block">{x.title}</Link>
                 <span className="text-[9px] text-gray-400 mt-0.5 block">{ago(x.publishDate)}</span>
               </div>
             </div>
@@ -104,50 +112,50 @@ export default async function Homepage() {
       </aside>
     </div>
 
-    {/* ===== Pilihan Editor ===== */}
-    <section className="px-4 mb-6 border-t border-gray-200 pt-6">
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a]">Pilihan Editor</h2>
-        <Link href={bp} className="text-[10px] font-bold text-[#C41E3A] hover:underline uppercase tracking-wider">Lebih &rarr;</Link>
+    {/* ===== FEATURED / Pilihan Editor ===== */}
+    <section className="px-4 mb-6">
+      <div className="flex items-center justify-between mb-4 pb-2" style={{borderBottom:'1px solid #e5e7eb'}}>
+        <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#031934]">Pilihan Editor</h2>
+        <Link href={bp} className="text-[10px] font-bold uppercase tracking-wider" style={{color:R}}>Lebih &rarr;</Link>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {[j, k, l, m].filter(Boolean).map(x => (
           <article key={x._id}>
-            <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2 rounded-sm" style={{aspectRatio:'360/220'}}>
+            <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2" style={{aspectRatio:'360/220'}}>
               <Img p={x} w={360} h={220} />
-              <span className="absolute bottom-2 left-2"><Cat c={x.cat?.title} s="text-[8px]" /></span>
+              <span className="absolute bottom-2 left-2"><CatBadge c={x.cat?.title} /></span>
             </Link>
-            <Link href={`${bp}${x.slug}`} className="block font-serif text-[13px] font-bold leading-snug text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2">{x.title}</Link>
+            <CatText c={x.cat?.title} />
+            <Link href={`${bp}${x.slug}`} className="block text-[13px] font-bold leading-snug text-[#031934] hover:opacity-70 transition-opacity line-clamp-2 mt-1">{x.title}</Link>
             <span className="text-[9px] text-gray-400 mt-1 block">{ago(x.publishDate)}</span>
           </article>
         ))}
       </div>
     </section>
 
-    {/* ===== MAIN 2-COL LAYOUT ===== */}
+    {/* ===== MAIN 2-COL ===== */}
     <div className="grid lg:grid-cols-[1fr_300px] gap-8 px-4">
 
-      {/* LEFT COL */}
+      {/* LEFT */}
       <div className="space-y-6">
-
-        {/* Dynamic category sections */}
         {cats.slice(0,4).map(c => {
           const arts = posts.filter(x => x.cat?.title === c.title)
           if (!arts.length) return null
           return (
-            <section key={c._id} className="border-t border-gray-200 pt-6">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a]">{c.title}</h2>
-                <Link href={`${bp}?category=${c.slug}`} className="text-[10px] font-bold text-[#C41E3A] hover:underline uppercase tracking-wider">Lebih &rarr;</Link>
+            <section key={c._id}>
+              <div className="flex items-center justify-between mb-4 pb-2" style={{borderBottom:'1px solid #e5e7eb'}}>
+                <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#031934]">{c.title}</h2>
+                <Link href={`${bp}?category=${c.slug}`} className="text-[10px] font-bold uppercase tracking-wider" style={{color:R}}>Lebih &rarr;</Link>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {arts.slice(0,4).map(x => (
                   <article key={x._id}>
-                    <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2 rounded-sm" style={{aspectRatio:'360/220'}}>
+                    <Link href={`${bp}${x.slug}`} className="block relative overflow-hidden mb-2" style={{aspectRatio:'360/220'}}>
                       <Img p={x} w={360} h={220} />
-                      <span className="absolute bottom-2 left-2"><Cat c={x.cat?.title} s="text-[8px]" /></span>
+                      <span className="absolute bottom-2 left-2"><CatBadge c={x.cat?.title} /></span>
                     </Link>
-                    <Link href={`${bp}${x.slug}`} className="block font-serif text-[13px] font-bold leading-snug text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2">{x.title}</Link>
+                    <CatText c={x.cat?.title} />
+                    <Link href={`${bp}${x.slug}`} className="block text-[13px] font-bold leading-snug text-[#031934] hover:opacity-70 transition-opacity line-clamp-2 mt-1">{x.title}</Link>
                     <span className="text-[9px] text-gray-400 mt-1 block">{ago(x.publishDate)}</span>
                   </article>
                 ))}
@@ -157,17 +165,17 @@ export default async function Homepage() {
         })}
 
         {/* Berita Mengikut Negeri */}
-        <section className="border-t border-gray-200 pt-6">
-          <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Mengikut Negeri</h2>
+        <section>
+          <h2 className="text-[15px] font-bold uppercase tracking-wide text-[#031934] mb-4 pb-2" style={{borderBottom:'1px solid #e5e7eb'}}>Mengikut Negeri</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {['KL','Selangor','Johor','Sabah','Sarawak','N.Sembilan'].map(state => {
               const arts = posts.filter(x => x.cat?.title === state || x.title?.toLowerCase().includes(state.toLowerCase())).slice(0,2)
               return (
                 <div key={state}>
-                  <Link href={`${bp}?location=${state.toLowerCase()}`} className="font-serif text-[13px] font-bold text-[#1a1a1a] hover:text-[#C41E3A] transition-colors">{state}</Link>
+                  <Link href={`${bp}?location=${state.toLowerCase()}`} className="text-[13px] font-bold text-[#031934] hover:opacity-70 transition-opacity">{state}</Link>
                   <div className="mt-1.5 space-y-1">
                     {arts.length > 0 ? arts.map(x => (
-                      <Link key={x._id} href={`${bp}${x.slug}`} className="block text-[10px] leading-snug text-gray-600 hover:text-[#C41E3A] transition-colors line-clamp-2">{x.title}</Link>
+                      <Link key={x._id} href={`${bp}${x.slug}`} className="block text-[10px] leading-snug text-gray-600 hover:opacity-70 transition-opacity line-clamp-2">{x.title}</Link>
                     )) : <p className="text-[9px] text-gray-400 italic">Tiada berita</p>}
                   </div>
                 </div>
@@ -177,17 +185,17 @@ export default async function Homepage() {
         </section>
       </div>
 
-      {/* RIGHT SIDEBAR */}
-      <aside className="space-y-6 pt-6">
-        {/* Popular numbered */}
+      {/* RIGHT */}
+      <aside className="space-y-6">
+        {/* Popular */}
         <div>
-          <h3 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Popular</h3>
+          <h3 className="text-[15px] font-bold uppercase tracking-wide text-[#031934] mb-4">Popular</h3>
           <div className="space-y-0">
             {[n, o, ...tail.slice(0,4)].filter(Boolean).map((x, idx) => (
-              <div key={x._id} className="flex items-start gap-3 py-3 border-b border-gray-100 last:border-0">
-                <span className="shrink-0 font-serif text-[26px] font-bold text-[#C41E3A]/25 leading-none w-7">{String(idx+1).padStart(2,'0')}</span>
+              <div key={x._id} className="flex items-start gap-3 py-3 border-b border-gray-200 last:border-0">
+                <span className="shrink-0 text-[26px] font-bold leading-none w-7" style={{color:R+'40'}}>{String(idx+1).padStart(2,'0')}</span>
                 <div className="min-w-0">
-                  <Link href={`${bp}${x.slug}`} className="text-[11px] leading-snug font-bold text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2 block">{x.title}</Link>
+                  <Link href={`${bp}${x.slug}`} className="text-[11px] leading-snug font-bold text-[#031934] hover:opacity-70 transition-opacity line-clamp-2 block">{x.title}</Link>
                   <span className="text-[9px] text-gray-400 mt-0.5 block">{ago(x.publishDate)}</span>
                 </div>
               </div>
@@ -195,38 +203,38 @@ export default async function Homepage() {
           </div>
         </div>
 
-        {/* Newsletter ala Foxiz */}
-        <div className="rounded-sm p-5 text-white" style={{background:'linear-gradient(180deg, #000098 0%, #000008 100%)'}}>
+        {/* Newsletter */}
+        <div className="p-5 text-white" style={{background:'linear-gradient(180deg,#000098 0%,#000008 100%)'}}>
           <h3 className="font-bold text-[15px]">Surat Berita</h3>
           <p className="text-[10px] text-gray-300 mt-1 leading-relaxed">Langgan untuk dapatkan berita terkini terus ke peti masuk anda.</p>
           <div className="mt-3">
-            <input type="email" placeholder="Alamat e-mel" className="w-full px-3 py-2 text-[11px] text-[#1a1a1a] rounded-sm outline-none mb-2" />
+            <input type="email" placeholder="Alamat e-mel" className="w-full px-3 py-2 text-[11px] text-[#031934] outline-none mb-2" />
             <label className="flex items-start gap-2 text-[9px] text-gray-400 mb-2">
               <input type="checkbox" className="mt-0.5" />
-              <span>Saya telah membaca dan bersetuju dengan <a href="#" className="text-[#C41E3A] underline">Dasar Privasi</a>.</span>
+              <span>Saya telah membaca dan bersetuju dengan <a href="#" style={{color:R, textDecoration:'underline'}}>Dasar Privasi</a>.</span>
             </label>
-            <button className="w-full py-2 bg-[#C41E3A] text-white text-[10px] font-bold rounded-sm hover:bg-[#A01830] transition-colors">Langgan</button>
+            <button className="w-full py-2 text-white text-[10px] font-bold" style={{background:R}}>Langgan</button>
           </div>
         </div>
 
-        {/* #PILIHANRAYA widget */}
-        <div className="bg-gradient-to-br from-[#C41E3A] to-[#1a1a1a] rounded-sm p-4 text-center">
-          <span className="font-serif text-[20px] font-bold text-white">#<span className="text-[#F5C842]">PILIHAN</span>RAYA</span>
-          <p className="text-[9px] text-white/70 mt-1">Dashboard PRU16 — data DUN Negeri Sembilan</p>
-          <Link href="/election" className="inline-block mt-2 px-4 py-1.5 bg-[#F5C842] text-[#1a1a1a] text-[9px] font-bold rounded-sm hover:bg-white transition-colors">Lihat &rarr;</Link>
+        {/* #PILIHANRAYA */}
+        <div className="p-4 text-center text-white" style={{background:'linear-gradient(135deg,#f51416,#1a1a1a)'}}>
+          <span className="text-[20px] font-bold">#<span className="text-[#F5C842]">PILIHAN</span>RAYA</span>
+          <p className="text-[9px] text-white/70 mt-1">Dashboard PRU16</p>
+          <Link href="/election" className="inline-block mt-2 px-4 py-1.5 bg-[#F5C842] text-[#1a1a1a] text-[9px] font-bold" style={{borderRadius:3}}>Lihat &rarr;</Link>
         </div>
 
-        {/* More articles with thumbnail */}
+        {/* Berita Lain */}
         <div>
-          <h3 className="text-[15px] font-bold uppercase tracking-wide text-[#1a1a1a] mb-4">Berita Lain</h3>
+          <h3 className="text-[15px] font-bold uppercase tracking-wide text-[#031934] mb-4">Berita Lain</h3>
           <div className="space-y-0">
             {tail.slice(4,8).filter(Boolean).map(x => (
-              <div key={x._id} className="flex gap-3 py-3 border-b border-gray-100 last:border-0">
-                <Link href={`${bp}${x.slug}`} className="shrink-0 w-20 h-14 overflow-hidden rounded-sm" style={{aspectRatio:'80/56'}}>
+              <div key={x._id} className="flex gap-3 py-3 border-b border-gray-200 last:border-0">
+                <Link href={`${bp}${x.slug}`} className="shrink-0 w-20 h-14 overflow-hidden" style={{aspectRatio:'80/56'}}>
                   <Img p={x} w={80} h={56} />
                 </Link>
                 <div className="min-w-0">
-                  <Link href={`${bp}${x.slug}`} className="text-[11px] leading-snug font-bold text-[#1a1a1a] hover:text-[#C41E3A] transition-colors line-clamp-2 block">{x.title}</Link>
+                  <Link href={`${bp}${x.slug}`} className="text-[11px] leading-snug font-bold text-[#031934] hover:opacity-70 transition-opacity line-clamp-2 block">{x.title}</Link>
                   <span className="text-[9px] text-gray-400 mt-0.5 block">{ago(x.publishDate)}</span>
                 </div>
               </div>
@@ -236,25 +244,27 @@ export default async function Homepage() {
       </aside>
     </div>
 
-    {/* ===== KATEGORI FOOTER ===== */}
+    {/* ===== KATEGORI ===== */}
     <section className="border-t border-gray-200 py-6 px-4 mt-6">
       <h3 className="text-[14px] font-bold uppercase tracking-wide text-gray-500 pb-3">Kategori</h3>
       <div className="flex flex-wrap gap-2">
         {cats.map(c => (
           <Link key={c._id} href={`${bp}?category=${c.slug}`}
-            className="px-3 py-1.5 bg-gray-100 text-gray-600 hover:bg-[#C41E3A] hover:text-white rounded-sm text-[10px] font-medium transition-colors"
+            className="px-3 py-1.5 text-gray-600 text-[10px] font-medium transition-colors category-pill"
+            style={{background:'#f3f4f6', borderRadius:3}}
           >{c.title}</Link>
         ))}
       </div>
+      <style>{`.category-pill:hover{background:${R}!important;color:#fff!important}`}</style>
     </section>
 
     {/* ===== CTA ===== */}
     <section className="py-8 text-center border-t border-gray-200 px-4">
-      <h2 className="font-serif text-[18px] font-bold text-[#1a1a1a]">Suara Rakyat, Disampaikan Tanpa Tapisan</h2>
+      <h2 className="text-[18px] font-bold text-[#031934]">Suara Rakyat, Disampaikan Tanpa Tapisan</h2>
       <p className="text-[11px] text-gray-500 mt-1 max-w-md mx-auto">Ikuti berita terkini, analisis mendalam, dan laporan eksklusif dari seluruh pelosok negeri.</p>
       <div className="flex items-center justify-center gap-2 mt-3">
-        <Link href={bp} className="px-4 py-2 text-[11px] font-semibold text-white bg-[#C41E3A] rounded-sm hover:bg-[#A01830] transition-colors">Baca Berita</Link>
-        <Link href="/tentang" className="px-4 py-2 text-[11px] font-semibold text-[#C41E3A] border border-[#C41E3A] rounded-sm hover:bg-[#C41E3A] hover:text-white transition-colors">Tentang Kami</Link>
+        <Link href={bp} className="px-4 py-2 text-[11px] font-semibold text-white" style={{background:R, borderRadius:3}}>Baca Berita</Link>
+        <Link href="/tentang" className="px-4 py-2 text-[11px] font-semibold" style={{color:R, border:'1px solid '+R, borderRadius:3}}>Tentang Kami</Link>
       </div>
     </section>
 
